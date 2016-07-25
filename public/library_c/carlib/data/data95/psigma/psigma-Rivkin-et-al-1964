@@ -1,0 +1,19 @@
+Rivkin, S. L., G. V. Troyanovskaya, and T. S. Akhundov, Teplofiz. Vys. Temp. 2, 219 (1964); High Temp. 2, 194 (1964).
+
+13 of 18 psigma data were selected to develop the IAPWS-95 Formulation.
+Temperatures were converted to the ITS-90 scale.
+ 
+ T / K           psigma / MPa  Author                             No.
+  645.9535        21.763898340 RIVKIN et al. (1964)               001
+  645.9835        21.771743660 RIVKIN et al. (1964)               002
+  646.0735        21.794298960 RIVKIN et al. (1964)               003
+  646.0935        21.799202280 RIVKIN et al. (1964)               004
+  646.1035        21.803124940 RIVKIN et al. (1964)               005
+  646.1035        21.804105610 RIVKIN et al. (1964)               006
+  646.1635        21.816854250 RIVKIN et al. (1964)               007
+  646.1735        21.819796250 RIVKIN et al. (1964)               008
+  646.1735        21.820776910 RIVKIN et al. (1964)               009
+  646.1935        21.826660910 RIVKIN et al. (1964)               010
+  646.2235        21.833525560 RIVKIN et al. (1964)               011
+  646.2235        21.834506230 RIVKIN et al. (1964)               012
+  647.0834        22.061039840 RIVKIN et al. (1964)               013

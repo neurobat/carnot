@@ -1,0 +1,6629 @@
+Model {
+  Name			  "closed_circuited_cooling_tower_V2011"
+  Version		  7.0
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.259"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "windows-1252"
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Tue Nov 24 16:21:16 2009"
+  Creator		  "Mario"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Sandra"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Tue Mar 22 13:21:34 2011"
+  RTWModifiedTimeStamp	  0
+  ModelVersionFormat	  "1.%<AutoIncrement:259>"
+  ConfigurationManager	  "None"
+  SimulationMode	  "accelerator"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.3.0"
+      Array {
+	Type			"Handle"
+	Dimension		8
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.3.0"
+	  StartTime		  "3600*24*250"
+	  StopTime		  "3600*24*260"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  RateTranMode		  "Deterministic"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.3.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    5
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "InitFltsAndDblsToZero"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.3.0"
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  on
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.3.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  ModelReferenceSimTargetVerbose off
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  StrictBusMsg		  "Warning"
+	  LoggingUnavailableSignals "error"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.3.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.3.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  8
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    2
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.3.0"
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  RTWCompilerOptimization "Off"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      9
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.3.0"
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      10
+	      Array {
+		Type			"Cell"
+		Dimension		15
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.3.0"
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      GenFloatMathFcnCalls    "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	hdlcoderui.hdlcc {
+	  $ObjectID		  11
+	  Description		  "HDL Coder custom configuration component"
+	  Version		  "1.3.0"
+	  Name			  "HDL Coder"
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      BusCreator
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      EnablePort
+      StatesWhenEnabling      "held"
+      ShowOutputPort	      off
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Integrator
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "0"
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+      IgnoreLimit	      off
+      ZeroCross		      on
+      ContinuousStateAttributes	"''"
+    }
+    Block {
+      BlockType		      Lookup2D
+      RowIndex		      "[0 1]"
+      ColumnIndex	      "[0 1]"
+      Table		      "[0 0;0 0]"
+      LookUpMeth	      "Interpolation-Extrapolation"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+      LUTDesignTableMode      "Redesign Table"
+      LUTDesignDataSource     "Block Dialog"
+      LUTDesignFunctionName   "sqrt(x)"
+      LUTDesignUseExistingBP  on
+      LUTDesignRelError	      "0.01"
+      LUTDesignAbsError	      "1e-6"
+    }
+    Block {
+      BlockType		      Math
+      Operator		      "exp"
+      OutputSignalType	      "auto"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      DataType		      "auto"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Product
+      Inputs		      "2"
+      Multiplication	      "Element-wise(.*)"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      LockScale		      off
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Reference
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Terminator
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "fixdt(1,16,0)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "[]"
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+    }
+    Block {
+      BlockType		      Lookup
+      InputValues	      "[-4:5]"
+      Table		      " rand(1,10)-0.5"
+      LookUpMeth	      "Interpolation-Extrapolation"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+      LUTDesignTableMode      "Redesign Table"
+      LUTDesignDataSource     "Block Dialog"
+      LUTDesignFunctionName   "sqrt(x)"
+      LUTDesignUseExistingBP  on
+      LUTDesignRelError	      "0.01"
+      LUTDesignAbsError	      "1e-6"
+    }
+    Block {
+      BlockType		      Saturate
+      UpperLimit	      "0.5"
+      LowerLimit	      "-0.5"
+      LinearizeAsGain	      on
+      ZeroCross		      on
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "fixdt(1,16,0)"
+      OutScaling	      "[]"
+      LockScale		      off
+      RndMeth		      "Floor"
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "closed_circuited_cooling_tower_V2011"
+    Location		    [2, 82, 1270, 1000]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "closed circuit cooling tower"
+      Ports		      [4, 2]
+      Position		      [215, 122, 435, 358]
+      BackgroundColor	      "lightBlue"
+      AncestorBlock	      "carnot/misc/THV_template"
+      FontSize		      12
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskType		      "Closed Circuit Cooling Tower "
+      MaskDescription	      "performance data \nwet-bulb temperature - 15°C ... 24°C\nrpm fan - 248 1/min (30%) ... 824 1/min (100%)\nfluid temperature - 26°C ... 44°C\nfluid flow rate - 1,07 l/s ... 3,03 l/s\nwater/glykol - 0 % ... 100%\n\ndata logging:\nwet-bulb temperature....[°C]   (ambient air)\nrpm fan.........................[%]\nv_dot fan......................[m³/s]\nrpm fan.........................[1/min]\nrel_hum.........................[%]     (ambient air)\nt_air..............................[°C]    (ambient air)\nenergy ct......................[kJ]    (fan motor + recirculating spray pump)\npower ct.......................[kW]    (fan motor + recirculating spray pump)\nwater consumption.......[kg]\nTnodes.........................[°C]    (inactivity modul)\nTHVout                  \n"
+      MaskHelp		      "\n"
+      MaskDisplay	      "plot(-20,5,140,80,[20 90 90 20 20],[20 20 70 70 20])\nplot([30 35],[62 65],[40 35],[62 65],[35 35],[62 65],[80 80],[62 65],[75 80],[62 65],[85 80],[62 65],[57 57],[62 65],[52 57],[62 65],[62 57],[62 65])\nplot([15 20],[22 22],[15 80],[65 65],[15 15],[22 65],[20 90],[24 24])\nplot([25 100],[58 58],[25 100],[44 44],[60 25],[51 58],[60 25],[51 44])\nplot([87 93],[36 36],[87 93],[28 28],[87 82],[36 34],[93 98],[36 34],[87 82],[28 30],[93 98],[28 30],[82 82],[34 30],[98 98],[34 30],[82 95],[34 35],[82 95],[30 29])\nplot([86 90],[32 32],[90 93],[32 33.5],[90 93],[32 30.5])"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"closed circuit cooling tower"
+	Location		[2, 74, 1590, 1124]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "THVin"
+	  Position		  [355, 598, 385, 612]
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "weather"
+	  Position		  [190, 43, 220, 57]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "rpm_fan"
+	  Position		  [840, 273, 870, 287]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "rpm fan [1/min]"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "control_fan"
+	  Position		  [240, 348, 270, 362]
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	}
+	Block {
+	  BlockType		  BusCreator
+	  Name			  "Bus\nCreator"
+	  Ports			  [11, 1]
+	  Position		  [1855, 48, 1865, 362]
+	  ShowName		  off
+	  Inputs		  "11"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  Ports			  [1, 7]
+	  Position		  [425, 510, 430, 700]
+	  BackgroundColor	  "black"
+	  ShowName		  off
+	  Outputs		  "[1 1 1 1 1 1 14]"
+	  Port {
+	    PortNumber		    1
+	    Name		    "ID"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "T"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    3
+	    Name		    "mdot"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    4
+	    Name		    "p"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    5
+	    Name		    "fluid"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    6
+	    Name		    "mix"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Fan"
+	  Ports			  [1, 3]
+	  Position		  [900, 242, 1010, 318]
+	  AncestorBlock		  "carnot/misc/THV_template"
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Port {
+	    PortNumber		    1
+	    Name		    "rpm fan [%] "
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "v_dot_fan"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "Fan"
+	    Location		    [110, 200, 883, 526]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "n_fan"
+	      Position		      [25, 133, 55, 147]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Divide1"
+	      Ports		      [2, 1]
+	      Position		      [650, 87, 680, 118]
+	      ShowName		      off
+	      Inputs		      "*/"
+	      CollapseMode	      "All dimensions"
+	      InputSameDT	      off
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^-10"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Divide2"
+	      Ports		      [3, 1]
+	      Position		      [655, 228, 675, 272]
+	      ShowName		      off
+	      Inputs		      "*/*"
+	      CollapseMode	      "All dimensions"
+	      InputSameDT	      off
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^-10"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Divide3"
+	      Ports		      [2, 1]
+	      Position		      [650, 162, 680, 193]
+	      ShowName		      off
+	      Inputs		      "/*"
+	      CollapseMode	      "All dimensions"
+	      InputSameDT	      off
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^-10"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Divide4"
+	      Ports		      [2, 1]
+	      Position		      [410, 126, 425, 184]
+	      NamePlacement	      "alternate"
+	      ShowName		      off
+	      Inputs		      "/*"
+	      CollapseMode	      "All dimensions"
+	      InputSameDT	      off
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^-10"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Input Leistung"
+	      Position		      [545, 179, 610, 211]
+	      Value		      "1.8"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Math
+	      Name		      "Math\nFunction"
+	      Ports		      [2, 1]
+	      Position		      [500, 143, 530, 192]
+	      ShowName		      off
+	      Operator		      "pow"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Pw1"
+	      Position		      [440, 165, 470, 195]
+	      ShowName		      off
+	      Value		      "3"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "max. Drehzahl"
+	      Position		      [85, 156, 145, 184]
+	      Value		      "824"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "max. Vdot_Lüfter"
+	      Position		      [80, 250, 145, 280]
+	      Value		      "2.2"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "n_fan [%]"
+	      Position		      [720, 98, 750, 112]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      InitialOutput	      "0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "vdot_fan"
+	      Position		      [720, 243, 750, 257]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      InitialOutput	      "0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "P_fan"
+	      Position		      [720, 173, 750, 187]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      InitialOutput	      "0"
+	    }
+	    Line {
+	      SrcBlock		      "n_fan"
+	      SrcPort		      1
+	      Points		      [190, 0]
+	      Branch {
+		Points			[105, 0]
+		Branch {
+		  Points		  [0, 95]
+		  DstBlock		  "Divide2"
+		  DstPort		  1
+		}
+		Branch {
+		  DstBlock		  "Divide4"
+		  DstPort		  1
+		}
+	      }
+	      Branch {
+		Points			[0, -45]
+		DstBlock		"Divide1"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "max. Drehzahl"
+	      SrcPort		      1
+	      Points		      [25, 0]
+	      Branch {
+		Points			[0, 80]
+		DstBlock		"Divide2"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[95, 0]
+		Branch {
+		  Points		  [0, -60]
+		  DstBlock		  "Divide1"
+		  DstPort		  2
+		}
+		Branch {
+		  DstBlock		  "Divide4"
+		  DstPort		  2
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Divide1"
+	      SrcPort		      1
+	      DstBlock		      "n_fan [%]"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Input Leistung"
+	      SrcPort		      1
+	      Points		      [20, 0]
+	      DstBlock		      "Divide3"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "max. Vdot_Lüfter"
+	      SrcPort		      1
+	      DstBlock		      "Divide2"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Divide2"
+	      SrcPort		      1
+	      DstBlock		      "vdot_fan"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Divide3"
+	      SrcPort		      1
+	      DstBlock		      "P_fan"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Divide4"
+	      SrcPort		      1
+	      DstBlock		      "Math\nFunction"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Math\nFunction"
+	      SrcPort		      1
+	      DstBlock		      "Divide3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Pw1"
+	      SrcPort		      1
+	      DstBlock		      "Math\nFunction"
+	      DstPort		      2
+	    }
+	    Annotation {
+	      Name		      "Grundlage zur Berechnung\nbei Drehzahländerung eines bestimmten Lüfters\n\nProportionalitätsgesetz\nV1/V2 = n1/n2\nP1/P2 = (n1/n2)^3\n\nWirkungsgrad Elektromotor\nP = Pm/eta"
+	      Position		      [126, 62]
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Feuchtkugel-\ntemperatureinfluss /\nwet-bulb temperature effect"
+	  Ports			  [3, 3, 1]
+	  Position		  [470, 31, 555, 139]
+	  AncestorBlock		  "carnot/misc/THV_template"
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Port {
+	    PortNumber		    1
+	    Name		    "wet-bulb temperature"
+	    PropagatedSignals	    "t_fk"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "Feuchtkugel-\ntemperatureinfluss /\nwet-bulb temperature effect"
+	    Location		    [388, 594, 1467, 1135]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "t_le"
+	      Position		      [15, 18, 45, 32]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "phi_le"
+	      Position		      [15, 48, 45, 62]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "t_ie"
+	      Position		      [15, 268, 45, 282]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      EnablePort
+	      Name		      "Enable"
+	      Ports		      []
+	      Position		      [135, 210, 155, 230]
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Abgleich "
+	      Ports		      [3, 1]
+	      Position		      [870, 42, 960, 118]
+	      AncestorBlock	      "carnot/misc/THV_template"
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      System {
+		Name			"Abgleich "
+		Location		[442, 106, 945, 495]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "t_FK"
+		  Position		  [45, 118, 75, 132]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "t_ie"
+		  Position		  [45, 178, 75, 192]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "t_ia_FK15"
+		  Position		  [45, 148, 75, 162]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "Embedded\nMATLAB Function"
+		  Ports			  [3, 1]
+		  Position		  [200, 113, 295, 177]
+		  ShowName		  off
+		  PermitHierarchicalResolution "ExplicitOnly"
+		  MinAlgLoopOccurrences	  off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  MaskType		  "Stateflow"
+		  MaskDescription	  "Embedded MATLAB block"
+		  MaskDisplay		  "disp('fcn');"
+		  MaskSelfModifiable	  on
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  off
+		  MaskIconRotate	  "none"
+		  MaskIconUnits		  "autoscale"
+		  System {
+		    Name		    "Embedded\nMATLAB Function"
+		    Location		    [257, 457, 812, 717]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "t_fk"
+		    Position		    [20, 101, 40, 119]
+		    IconDisplay		    "Port number"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^0"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "t_ia_fk15"
+		    Position		    [20, 136, 40, 154]
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "t_ie"
+		    Position		    [20, 171, 40, 189]
+		    Port		    "3"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Demux
+		    Name		    " Demux "
+		    Ports		    [1, 1]
+		    Position		    [270, 180, 320, 220]
+		    Outputs		    "1"
+		    }
+		    Block {
+		    BlockType		    "S-Function"
+		    Name		    " SFunction "
+		    Tag			    "Stateflow S-Function closed_circuited_cooling_tower_V2011 4"
+		    Ports		    [3, 2]
+		    Position		    [180, 100, 230, 180]
+		    FunctionName	    "sf_sfun"
+		    PortCounts		    "[3 2]"
+		    EnableBusSupport	    on
+		    Port {
+		    PortNumber		    2
+		    Name		    "y"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    Terminator
+		    Name		    " Terminator "
+		    Position		    [460, 191, 480, 209]
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "y"
+		    Position		    [460, 101, 480, 119]
+		    IconDisplay		    "Port number"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^0"
+		    }
+		    Line {
+		    SrcBlock		    " SFunction "
+		    SrcPort		    1
+		    Points		    [0, 80]
+		    DstBlock		    " Demux "
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    " Demux "
+		    SrcPort		    1
+		    DstBlock		    " Terminator "
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "t_fk"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "y"
+		    Labels		    [0, 0]
+		    SrcBlock		    " SFunction "
+		    SrcPort		    2
+		    DstBlock		    "y"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "t_ia_fk15"
+		    SrcPort		    1
+		    Points		    [120, 0]
+		    DstBlock		    " SFunction "
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "t_ie"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    3
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "t_ia_FK"
+		  Position		  [365, 138, 395, 152]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		  InitialOutput		  "0"
+		}
+		Line {
+		  SrcBlock		  "Embedded\nMATLAB Function"
+		  SrcPort		  1
+		  DstBlock		  "t_ia_FK"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "t_FK"
+		  SrcPort		  1
+		  DstBlock		  "Embedded\nMATLAB Function"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "t_ia_FK15"
+		  SrcPort		  1
+		  Points		  [35, 0; 0, -10]
+		  DstBlock		  "Embedded\nMATLAB Function"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "t_ie"
+		  SrcPort		  1
+		  Points		  [50, 0; 0, -20]
+		  DstBlock		  "Embedded\nMATLAB Function"
+		  DstPort		  3
+		}
+		Annotation {
+		  Name			  "\nDurch den Abgleich der vorliegenden Datensätze\nwierd die Annahme getroffen \ndas bei einer reduzierung der Feuchtkugeltemp um 1K\n sich die Kaltwassertemp um 0.27K sinkt.\n\ny = ((t_FK-15)*0.27)+t_ia_100\n\nAb eine Eintritstemperatur von 41 °C wierd mit\ndem Faktor 0,25 K gerechnet.\n\ny = ((t_FK-15)*0.25)+t_ia_100"
+		  Position		  [266, 253]
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Add"
+	      Ports		      [2, 1]
+	      Position		      [880, 372, 910, 403]
+	      CollapseMode	      "All dimensions"
+	      InputSameDT	      off
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^-10"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant"
+	      Position		      [920, 393, 945, 417]
+	      ShowName		      off
+	      Value		      "2"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Divide"
+	      Ports		      [2, 1]
+	      Position		      [965, 382, 995, 413]
+	      Inputs		      "*/"
+	      CollapseMode	      "All dimensions"
+	      InputSameDT	      off
+	      OutDataTypeMode	      "Inherit via internal rule"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^-10"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Luft"
+	      Position		      [345, 143, 370, 167]
+	      Value		      "2"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Saturate
+	      Name		      "Saturation"
+	      Position		      [135, 40, 165, 70]
+	      UpperLimit	      "99.0"
+	      LowerLimit	      "0"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "Taupunkt"
+	      Ports		      [4, 1]
+	      Position		      [475, 117, 570, 178]
+	      SourceBlock	      "carnot/materials/saturationtemperature"
+	      SourceType	      "saturationtemperature"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData "off"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "absolute humidity"
+	      Ports		      [3, 1]
+	      Position		      [330, 200, 390, 250]
+	      SourceBlock	      "carnot/basics/rel_hum2x"
+	      SourceType	      "relative humidity to x"
+	      ShowPortLabels	      "FromPortIcon"
+	      SystemSampleTime	      "-1"
+	      FunctionWithSeparateData "off"
+	      RTWMemSecFuncInitTerm   "Inherit from model"
+	      RTWMemSecFuncExecute    "Inherit from model"
+	      RTWMemSecDataConstants  "Inherit from model"
+	      RTWMemSecDataInternal   "Inherit from model"
+	      RTWMemSecDataParameters "Inherit from model"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "pressure"
+	      Position		      [225, 128, 250, 152]
+	      Value		      "1e5"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "wet-bulb 15 °C"
+	      Ports		      [1, 1]
+	      Position		      [140, 287, 230, 363]
+	      AncestorBlock	      "carnot/misc/THV_template"
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      System {
+		Name			"wet-bulb 15 °C"
+		Location		[725, 248, 1228, 780]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "t_ie"
+		  Position		  [25, 33, 55, 47]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Lookup
+		  Name			  "Lookup Table"
+		  Position		  [230, 15, 280, 65]
+		  InputValues		  "[26 28 30 32 34 36 38 40 42 44 79.2]"
+		  Table			  "[22.6 23.9 25.2 26.4 27.7 28.9 30.1 31.2 32.4 33.5 49.25]"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "t_ia_FK15"
+		  Position		  [440, 33, 470, 47]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		  InitialOutput		  "0"
+		}
+		Line {
+		  SrcBlock		  "t_ie"
+		  SrcPort		  1
+		  DstBlock		  "Lookup Table"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Lookup Table"
+		  SrcPort		  1
+		  DstBlock		  "t_ia_FK15"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "wet-bulb temperature"
+	      Ports		      [3, 1]
+	      Position		      [650, 12, 760, 98]
+	      PermitHierarchicalResolution "ExplicitOnly"
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskType		      "Stateflow"
+	      MaskDescription	      "Embedded MATLAB block"
+	      MaskDisplay	      "disp('fcn');"
+	      MaskSelfModifiable      on
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      off
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"wet-bulb temperature"
+		Location		[257, 457, 812, 717]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "t_luftein"
+		  Position		  [20, 101, 40, 119]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "phi_luftein"
+		  Position		  [20, 136, 40, 154]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "t_tau"
+		  Position		  [20, 171, 40, 189]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  " Demux "
+		  Ports			  [1, 1]
+		  Position		  [270, 180, 320, 220]
+		  Outputs		  "1"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  " SFunction "
+		  Tag			  "Stateflow S-Function closed_circuited_cooling_tower_V2011 7"
+		  Ports			  [3, 2]
+		  Position		  [180, 100, 230, 180]
+		  FunctionName		  "sf_sfun"
+		  PortCounts		  "[3 2]"
+		  EnableBusSupport	  on
+		  Port {
+		    PortNumber		    2
+		    Name		    "t_fk"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  " Terminator "
+		  Position		  [460, 191, 480, 209]
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "t_fk"
+		  Position		  [460, 101, 480, 119]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Line {
+		  SrcBlock		  " SFunction "
+		  SrcPort		  1
+		  Points		  [0, 80]
+		  DstBlock		  " Demux "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  " Demux "
+		  SrcPort		  1
+		  DstBlock		  " Terminator "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "t_luftein"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "t_fk"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  2
+		  DstBlock		  "t_fk"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "phi_luftein"
+		  SrcPort		  1
+		  Points		  [120, 0]
+		  DstBlock		  " SFunction "
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "t_tau"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  3
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "t_FK"
+	      Position		      [1020, 13, 1050, 27]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      InitialOutput	      "0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "t_ia_FK"
+	      Position		      [1020, 73, 1050, 87]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      InitialOutput	      "0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "dt"
+	      Position		      [1020, 393, 1050, 407]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      InitialOutput	      "0"
+	    }
+	    Line {
+	      SrcBlock		      "wet-bulb 15 °C"
+	      SrcPort		      1
+	      Points		      [610, 0; 0, -220]
+	      DstBlock		      "Abgleich "
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "wet-bulb temperature"
+	      SrcPort		      1
+	      Points		      [65, 0]
+	      Branch {
+		DstBlock		"Abgleich "
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -35]
+		DstBlock		"t_FK"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "t_ie"
+	      SrcPort		      1
+	      Points		      [45, 0]
+	      Branch {
+		Points			[0, 120]
+		DstBlock		"Add"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[30, 0]
+		Branch {
+		  DstBlock		  "wet-bulb 15 °C"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [700, 0; 0, -195]
+		  DstBlock		  "Abgleich "
+		  DstPort		  2
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "phi_le"
+	      SrcPort		      1
+	      DstBlock		      "Saturation"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "t_le"
+	      SrcPort		      1
+	      Points		      [255, 0]
+	      Branch {
+		Points			[135, 0]
+		Branch {
+		  Points		  [0, 100]
+		  DstBlock		  "Taupunkt"
+		  DstPort		  1
+		}
+		Branch {
+		  DstBlock		  "wet-bulb temperature"
+		  DstPort		  1
+		}
+	      }
+	      Branch {
+		Points			[0, 185]
+		DstBlock		"absolute humidity"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Abgleich "
+	      SrcPort		      1
+	      Points		      [10, 0]
+	      Branch {
+		Points			[0, 280; -125, 0; 0, 20]
+		DstBlock		"Add"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"t_ia_FK"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Add"
+	      SrcPort		      1
+	      DstBlock		      "Divide"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      DstBlock		      "Divide"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Divide"
+	      SrcPort		      1
+	      DstBlock		      "dt"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Saturation"
+	      SrcPort		      1
+	      Points		      [105, 0]
+	      Branch {
+		Points			[0, 185]
+		DstBlock		"absolute humidity"
+		DstPort			3
+	      }
+	      Branch {
+		DstBlock		"wet-bulb temperature"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "absolute humidity"
+	      SrcPort		      1
+	      Points		      [30, 0; 0, -55]
+	      DstBlock		      "Taupunkt"
+	      DstPort		      4
+	    }
+	    Line {
+	      SrcBlock		      "Luft"
+	      SrcPort		      1
+	      DstBlock		      "Taupunkt"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "pressure"
+	      SrcPort		      1
+	      Points		      [35, 0]
+	      Branch {
+		DstBlock		"Taupunkt"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, 85]
+		DstBlock		"absolute humidity"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Taupunkt"
+	      SrcPort		      1
+	      Points		      [30, 0; 0, -65]
+	      DstBlock		      "wet-bulb temperature"
+	      DstPort		      3
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Leistungseinflüsse / \ninfluence on coolingpower"
+	  Ports			  [7, 2, 1]
+	  Position		  [1055, 69, 1170, 221]
+	  AncestorBlock		  "carnot/misc/THV_template"
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Port {
+	    PortNumber		    1
+	    Name		    "Q_i_ist"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "Leistungseinflüsse / \ninfluence on coolingpower"
+	    Location		    [56, 82, 1132, 738]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "t_ia_FK"
+	      Position		      [15, 28, 45, 42]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "cp_i"
+	      Position		      [15, 313, 45, 327]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "t_ie"
+	      Position		      [15, 283, 45, 297]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "mdot_i"
+	      Position		      [205, 193, 235, 207]
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Fluid_Type"
+	      Position		      [110, 98, 140, 112]
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Fluid_mix"
+	      Position		      [205, 163, 235, 177]
+	      Port		      "6"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "n_fan [%]"
+	      Position		      [205, 128, 235, 142]
+	      Port		      "7"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      EnablePort
+	      Name		      "Enable"
+	      Ports		      []
+	      Position		      [700, 135, 720, 155]
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Qdot_i_FK"
+	      Ports		      [3, 1]
+	      Position		      [205, 20, 315, 120]
+	      AncestorBlock	      "carnot/misc/THV_template"
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      System {
+		Name			"Qdot_i_FK"
+		Location		[235, 202, 1096, 635]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "t_ia_FK"
+		  Position		  [75, 53, 105, 67]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "t_ie"
+		  Position		  [15, 38, 45, 52]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "Fluid_Type"
+		  Position		  [15, 258, 45, 272]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Add"
+		  Ports			  [2, 1]
+		  Position		  [155, 62, 185, 93]
+		  CollapseMode		  "All dimensions"
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^-10"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant"
+		  Position		  [60, 273, 85, 297]
+		  Value			  "0.3"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant1"
+		  Position		  [505, 183, 530, 207]
+		  Value			  "2.4"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant2"
+		  Position		  [195, 85, 220, 105]
+		  Value			  "2"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Divide1"
+		  Ports			  [2, 1]
+		  Position		  [240, 72, 270, 103]
+		  Inputs		  "*/"
+		  CollapseMode		  "All dimensions"
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^-10"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Divide2"
+		  Ports			  [2, 1]
+		  Position		  [490, 247, 520, 278]
+		  Inputs		  "*/"
+		  CollapseMode		  "All dimensions"
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^-10"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Divide3"
+		  Ports			  [2, 1]
+		  Position		  [505, 107, 535, 138]
+		  Inputs		  "*/"
+		  CollapseMode		  "All dimensions"
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^-10"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product"
+		  Ports			  [4, 1]
+		  Position		  [580, 21, 600, 299]
+		  Inputs		  "4"
+		  CollapseMode		  "All dimensions"
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Subtract"
+		  Ports			  [2, 1]
+		  Position		  [490, 37, 520, 68]
+		  Inputs		  "+-"
+		  CollapseMode		  "All dimensions"
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^-10"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "density1"
+		  Ports			  [4, 1]
+		  Position		  [340, 215, 435, 295]
+		  SourceBlock		  "carnot/materials/density"
+		  SourceType		  "Density"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData "off"
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "heat_capacity [W/kgK]"
+		  Ports			  [4, 1]
+		  Position		  [340, 83, 435, 142]
+		  AncestorBlock		  "carnot/materials/heat_capacity"
+		  MinAlgLoopOccurrences	  off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  MaskType		  "heat capacity"
+		  MaskDescription	  "Calculates the  heat_capacity of fluids [J/(kg*K)].\nCalls calls the function \"hcap\" in the CARNOT library \"carlib\".\nDefinition of the fluid types                                            \nfluid-ID  material           remarks on fluid mix                                            \n1           water              vapourcontent in the 2-phase region\n2           air                   is (kg water) / (kg air)\n3           cotton oil                                           \n4           silicone oil                                         \n5           water-glycol    gives the volume partition [0..1] of glycol"
+		  MaskHelp		  "eval('htmlhelp (''chap_4_2h.htm#heat_capacity'')')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskIconUnits		  "autoscale"
+		  System {
+		    Name		    "heat_capacity [W/kgK]"
+		    Location		    [158, 82, 593, 241]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "T"
+		    Position		    [125, 70, 145, 90]
+		    IconDisplay		    "Port number"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^0"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "p"
+		    Position		    [160, 90, 180, 110]
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^0"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "Fluid_Type"
+		    Position		    [35, 30, 55, 50]
+		    Port		    "3"
+		    IconDisplay		    "Port number"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^0"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "Fluid_Mix"
+		    Position		    [80, 50, 100, 70]
+		    Port		    "4"
+		    IconDisplay		    "Port number"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^0"
+		    }
+		    Block {
+		    BlockType		    "S-Function"
+		    Name		    "S-Function"
+		    Ports		    [4, 1]
+		    Position		    [235, 29, 310, 111]
+		    FunctionName	    "capfluid"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "cp_i"
+		    Position		    [355, 60, 375, 80]
+		    IconDisplay		    "Port number"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^0"
+		    InitialOutput	    "0"
+		    }
+		    Line {
+		    SrcBlock		    "S-Function"
+		    SrcPort		    1
+		    DstBlock		    "cp_i"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Fluid_Type"
+		    SrcPort		    1
+		    DstBlock		    "S-Function"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Fluid_Mix"
+		    SrcPort		    1
+		    DstBlock		    "S-Function"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "T"
+		    SrcPort		    1
+		    DstBlock		    "S-Function"
+		    DstPort		    3
+		    }
+		    Line {
+		    SrcBlock		    "p"
+		    SrcPort		    1
+		    DstBlock		    "S-Function"
+		    DstPort		    4
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "phi_Le1"
+		  Position		  [445, 259, 470, 281]
+		  ShowName		  off
+		  Value			  "1000"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "phi_Le2"
+		  Position		  [455, 119, 480, 141]
+		  ShowName		  off
+		  Value			  "1000"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "phi_Le3"
+		  Position		  [60, 234, 85, 256]
+		  ShowName		  off
+		  Value			  "1e5"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Qdot_i_FK"
+		  Position		  [645, 153, 675, 167]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		  InitialOutput		  "0"
+		}
+		Line {
+		  SrcBlock		  "t_ia_FK"
+		  SrcPort		  1
+		  Points		  [10, 0]
+		  Branch {
+		    DstBlock		    "Subtract"
+		    DstPort		    2
+		  }
+		  Branch {
+		    Points		    [0, 25]
+		    DstBlock		    "Add"
+		    DstPort		    2
+		  }
+		}
+		Line {
+		  SrcBlock		  "Product"
+		  SrcPort		  1
+		  DstBlock		  "Qdot_i_FK"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Subtract"
+		  SrcPort		  1
+		  DstBlock		  "Product"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "t_ie"
+		  SrcPort		  1
+		  Points		  [10, 0]
+		  Branch {
+		    Points		    [0, 180]
+		    DstBlock		    "density1"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [70, 0]
+		    Branch {
+		    DstBlock		    "Subtract"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, 25]
+		    DstBlock		    "Add"
+		    DstPort		    1
+		    }
+		  }
+		}
+		Line {
+		  SrcBlock		  "Constant"
+		  SrcPort		  1
+		  Points		  [220, 0]
+		  Branch {
+		    DstBlock		    "density1"
+		    DstPort		    4
+		  }
+		  Branch {
+		    Points		    [0, -150]
+		    DstBlock		    "heat_capacity [W/kgK]"
+		    DstPort		    4
+		  }
+		}
+		Line {
+		  SrcBlock		  "density1"
+		  SrcPort		  1
+		  DstBlock		  "Divide2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "phi_Le3"
+		  SrcPort		  1
+		  Points		  [190, 0]
+		  Branch {
+		    DstBlock		    "density1"
+		    DstPort		    2
+		  }
+		  Branch {
+		    Points		    [0, -140]
+		    DstBlock		    "heat_capacity [W/kgK]"
+		    DstPort		    2
+		  }
+		}
+		Line {
+		  SrcBlock		  "Fluid_Type"
+		  SrcPort		  1
+		  Points		  [245, 0]
+		  Branch {
+		    DstBlock		    "density1"
+		    DstPort		    3
+		  }
+		  Branch {
+		    Points		    [0, -145]
+		    DstBlock		    "heat_capacity [W/kgK]"
+		    DstPort		    3
+		  }
+		}
+		Line {
+		  SrcBlock		  "phi_Le1"
+		  SrcPort		  1
+		  DstBlock		  "Divide2"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Divide2"
+		  SrcPort		  1
+		  DstBlock		  "Product"
+		  DstPort		  4
+		}
+		Line {
+		  SrcBlock		  "Constant1"
+		  SrcPort		  1
+		  DstBlock		  "Product"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "heat_capacity [W/kgK]"
+		  SrcPort		  1
+		  DstBlock		  "Divide3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant2"
+		  SrcPort		  1
+		  DstBlock		  "Divide1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Divide1"
+		  SrcPort		  1
+		  DstBlock		  "heat_capacity [W/kgK]"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Add"
+		  SrcPort		  1
+		  DstBlock		  "Divide1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "phi_Le2"
+		  SrcPort		  1
+		  DstBlock		  "Divide3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Divide3"
+		  SrcPort		  1
+		  DstBlock		  "Product"
+		  DstPort		  2
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Qdot_i_ist "
+	      Ports		      [6, 1]
+	      Position		      [390, 106, 505, 259]
+	      AncestorBlock	      "carnot/misc/THV_template"
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      System {
+		Name			"Qdot_i_ist "
+		Location		[83, 82, 1061, 776]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "Qdot_i_FK"
+		  Position		  [55, 173, 85, 187]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "n_Fan [%]"
+		  Position		  [55, 213, 85, 227]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "Fluid_mix"
+		  Position		  [40, 528, 70, 542]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "mdot_i"
+		  Position		  [45, 308, 75, 322]
+		  Port			  "4"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "Fluid_Type"
+		  Position		  [45, 418, 75, 432]
+		  Port			  "5"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "t_ie"
+		  Position		  [45, 378, 75, 392]
+		  Port			  "6"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		  Port {
+		    PortNumber		    1
+		    Name		    "column"
+		    PropagatedSignals	    "T"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant"
+		  Position		  [330, 248, 370, 272]
+		  Value			  "92"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant2"
+		  Position		  [330, 213, 370, 237]
+		  Value			  "100"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Divide"
+		  Ports			  [3, 1]
+		  Position		  [395, 175, 410, 275]
+		  Inputs		  "**/"
+		  CollapseMode		  "All dimensions"
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^-10"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Divide1"
+		  Ports			  [2, 1]
+		  Position		  [390, 307, 420, 338]
+		  Inputs		  "*/"
+		  CollapseMode		  "All dimensions"
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^-10"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow off
+		  Port {
+		    PortNumber		    1
+		    Name		    "row"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Divide2"
+		  Ports			  [2, 1]
+		  Position		  [320, 407, 350, 438]
+		  Inputs		  "*/"
+		  CollapseMode		  "All dimensions"
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^-10"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Lookup2D
+		  Name			  "Lookup\nTable (2-D)\nVolumenstromänderung"
+		  Position		  [475, 313, 530, 362]
+		  RowIndex		  "[1.07 1.77 2.4 2.65 3.03] "
+		  ColumnIndex		  "[25 30 35 40 45 50 55 60 65]"
+		  Table			  "[0.7248 0.7054 0.6860 0.6666 0.6472 0.6278 0.6084 0.5890 0.5696; 0.9493 0.9294 0.9096 0.8897 0.8698 0.8500 0.8301 0.8103 0.7904; 1 1 1 1 1 1 1 1 1; 1.1191 1.1295 1.0956 1.0674 1.0450 1.0284 1.0175 1.0123 1.0129; 1.2370 1.1910 1.1526 1.1219 1.0988 1.0833 1.0754 1.0752 1.0826]"
+		  InputSameDT		  off
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Lookup
+		  Name			  "Lookup Table\nLüfterdrehzahl"
+		  Position		  [175, 195, 225, 245]
+		  InputValues		  "[0 0.2 0.3 0.5 0.7 0.9 1]"
+		  Table			  "[0 0.37 0.482 0.625 0.786 0.928 1]"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Lookup
+		  Name			  "Lookup Table1\nGlykol"
+		  Position		  [170, 510, 220, 560]
+		  InputValues		  "[0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1]"
+		  Table			  "[1 0.98 0.95 0.92 0.875 0.83 0.78 0.73 0.68 0.63 0.57]"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product"
+		  Ports			  [2, 1]
+		  Position		  [275, 172, 305, 203]
+		  CollapseMode		  "All dimensions"
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product1"
+		  Ports			  [2, 1]
+		  Position		  [605, 217, 635, 248]
+		  CollapseMode		  "All dimensions"
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product2"
+		  Ports			  [2, 1]
+		  Position		  [725, 227, 755, 258]
+		  CollapseMode		  "All dimensions"
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "density1"
+		  Ports			  [4, 1]
+		  Position		  [165, 375, 260, 455]
+		  SourceBlock		  "carnot/materials/density"
+		  SourceType		  "Density"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData "off"
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "phi_Le1"
+		  Position		  [280, 419, 305, 441]
+		  ShowName		  off
+		  Value			  "1000"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "phi_Le3"
+		  Position		  [90, 394, 115, 416]
+		  ShowName		  off
+		  Value			  "1e5"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Qdot_i_ist"
+		  Position		  [805, 238, 835, 252]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		  InitialOutput		  "0"
+		}
+		Line {
+		  SrcBlock		  "n_Fan [%]"
+		  SrcPort		  1
+		  DstBlock		  "Lookup Table\nLüfterdrehzahl"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Lookup Table\nLüfterdrehzahl"
+		  SrcPort		  1
+		  Points		  [15, 0; 0, -25]
+		  DstBlock		  "Product"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Qdot_i_FK"
+		  SrcPort		  1
+		  DstBlock		  "Product"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Product"
+		  SrcPort		  1
+		  DstBlock		  "Divide"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Product1"
+		  SrcPort		  1
+		  DstBlock		  "Product2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Lookup Table1\nGlykol"
+		  SrcPort		  1
+		  Points		  [440, 0; 0, -285]
+		  DstBlock		  "Product2"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Fluid_mix"
+		  SrcPort		  1
+		  Points		  [50, 0]
+		  Branch {
+		    Points		    [0, -90]
+		    DstBlock		    "density1"
+		    DstPort		    4
+		  }
+		  Branch {
+		    Points		    [0, 0]
+		    DstBlock		    "Lookup Table1\nGlykol"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Divide"
+		  SrcPort		  1
+		  DstBlock		  "Product1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Constant"
+		  SrcPort		  1
+		  DstBlock		  "Divide"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "mdot_i"
+		  SrcPort		  1
+		  DstBlock		  "Divide1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Product2"
+		  SrcPort		  1
+		  DstBlock		  "Qdot_i_ist"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "density1"
+		  SrcPort		  1
+		  DstBlock		  "Divide2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "phi_Le3"
+		  SrcPort		  1
+		  DstBlock		  "density1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Fluid_Type"
+		  SrcPort		  1
+		  DstBlock		  "density1"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "phi_Le1"
+		  SrcPort		  1
+		  DstBlock		  "Divide2"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Divide2"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -95]
+		  DstBlock		  "Divide1"
+		  DstPort		  2
+		}
+		Line {
+		  Name			  "column"
+		  SrcBlock		  "t_ie"
+		  SrcPort		  1
+		  Points		  [45, 0]
+		  Branch {
+		    DstBlock		    "density1"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Labels		    [2, 0]
+		    Points		    [0, -35]
+		    DstBlock		    "Lookup\nTable (2-D)\nVolumenstromänderung"
+		    DstPort		    2
+		  }
+		}
+		Line {
+		  Name			  "row"
+		  Labels		  [1, 0]
+		  SrcBlock		  "Divide1"
+		  SrcPort		  1
+		  DstBlock		  "Lookup\nTable (2-D)\nVolumenstromänderung"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Lookup\nTable (2-D)\nVolumenstromänderung"
+		  SrcPort		  1
+		  Points		  [30, 0; 0, -100]
+		  DstBlock		  "Product1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Constant2"
+		  SrcPort		  1
+		  DstBlock		  "Divide"
+		  DstPort		  2
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "t_ia_ist "
+	      Ports		      [4, 1]
+	      Position		      [575, 243, 660, 367]
+	      AncestorBlock	      "carnot/misc/THV_template"
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      System {
+		Name			"t_ia_ist "
+		Location		[357, 154, 1196, 643]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "Qdot_i_ist"
+		  Position		  [15, 38, 45, 52]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "t_ie"
+		  Position		  [610, 113, 640, 127]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "cp_i"
+		  Position		  [15, 88, 45, 102]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "mdot"
+		  Position		  [15, 158, 45, 172]
+		  Port			  "4"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Add"
+		  Ports			  [2, 1]
+		  Position		  [685, 97, 715, 128]
+		  Inputs		  "-+"
+		  CollapseMode		  "All dimensions"
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^-10"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Divide"
+		  Ports			  [3, 1]
+		  Position		  [255, 16, 275, 194]
+		  Inputs		  "*//"
+		  CollapseMode		  "All dimensions"
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^-10"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Divide1"
+		  Ports			  [2, 1]
+		  Position		  [195, 87, 225, 118]
+		  Inputs		  "*/"
+		  CollapseMode		  "All dimensions"
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^-10"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "isinf"
+		  Ports			  [1, 1]
+		  Position		  [480, 82, 550, 128]
+		  PermitHierarchicalResolution "ExplicitOnly"
+		  MinAlgLoopOccurrences	  off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  MaskType		  "Stateflow"
+		  MaskDescription	  "Embedded MATLAB block"
+		  MaskDisplay		  "disp('fcn');"
+		  MaskSelfModifiable	  on
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  off
+		  MaskIconRotate	  "none"
+		  MaskIconUnits		  "autoscale"
+		  System {
+		    Name		    "isinf"
+		    Location		    [257, 457, 812, 717]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "u"
+		    Position		    [20, 101, 40, 119]
+		    IconDisplay		    "Port number"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^0"
+		    }
+		    Block {
+		    BlockType		    Demux
+		    Name		    " Demux "
+		    Ports		    [1, 1]
+		    Position		    [270, 160, 320, 200]
+		    Outputs		    "1"
+		    }
+		    Block {
+		    BlockType		    "S-Function"
+		    Name		    " SFunction "
+		    Tag			    "Stateflow S-Function closed_circuited_cooling_tower_V2011 8"
+		    Ports		    [1, 2]
+		    Position		    [180, 100, 230, 160]
+		    FunctionName	    "sf_sfun"
+		    PortCounts		    "[1 2]"
+		    EnableBusSupport	    on
+		    Port {
+		    PortNumber		    2
+		    Name		    "y"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    Terminator
+		    Name		    " Terminator "
+		    Position		    [460, 171, 480, 189]
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "y"
+		    Position		    [460, 101, 480, 119]
+		    IconDisplay		    "Port number"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^0"
+		    }
+		    Line {
+		    SrcBlock		    " SFunction "
+		    SrcPort		    1
+		    Points		    [0, 65]
+		    DstBlock		    " Demux "
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    " Demux "
+		    SrcPort		    1
+		    DstBlock		    " Terminator "
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "u"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "y"
+		    Labels		    [0, 0]
+		    SrcBlock		    " SFunction "
+		    SrcPort		    2
+		    DstBlock		    "y"
+		    DstPort		    1
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "isnan"
+		  Ports			  [1, 1]
+		  Position		  [355, 82, 425, 128]
+		  PermitHierarchicalResolution "ExplicitOnly"
+		  MinAlgLoopOccurrences	  off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  MaskType		  "Stateflow"
+		  MaskDescription	  "Embedded MATLAB block"
+		  MaskDisplay		  "disp('fcn');"
+		  MaskSelfModifiable	  on
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  off
+		  MaskIconRotate	  "none"
+		  MaskIconUnits		  "autoscale"
+		  System {
+		    Name		    "isnan"
+		    Location		    [257, 457, 812, 717]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "u"
+		    Position		    [20, 101, 40, 119]
+		    IconDisplay		    "Port number"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^0"
+		    }
+		    Block {
+		    BlockType		    Demux
+		    Name		    " Demux "
+		    Ports		    [1, 1]
+		    Position		    [270, 160, 320, 200]
+		    Outputs		    "1"
+		    }
+		    Block {
+		    BlockType		    "S-Function"
+		    Name		    " SFunction "
+		    Tag			    "Stateflow S-Function closed_circuited_cooling_tower_V2011 9"
+		    Ports		    [1, 2]
+		    Position		    [180, 100, 230, 160]
+		    FunctionName	    "sf_sfun"
+		    PortCounts		    "[1 2]"
+		    EnableBusSupport	    on
+		    Port {
+		    PortNumber		    2
+		    Name		    "y"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    Terminator
+		    Name		    " Terminator "
+		    Position		    [460, 171, 480, 189]
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "y"
+		    Position		    [460, 101, 480, 119]
+		    IconDisplay		    "Port number"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^0"
+		    }
+		    Line {
+		    SrcBlock		    " SFunction "
+		    SrcPort		    1
+		    Points		    [0, 65]
+		    DstBlock		    " Demux "
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    " Demux "
+		    SrcPort		    1
+		    DstBlock		    " Terminator "
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "u"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "y"
+		    Labels		    [0, 0]
+		    SrcBlock		    " SFunction "
+		    SrcPort		    2
+		    DstBlock		    "y"
+		    DstPort		    1
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "phi_Le2"
+		  Position		  [150, 99, 175, 121]
+		  ShowName		  off
+		  Value			  "1000"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "t_ia_ist"
+		  Position		  [785, 108, 815, 122]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		  InitialOutput		  "0"
+		}
+		Line {
+		  SrcBlock		  "Add"
+		  SrcPort		  1
+		  DstBlock		  "t_ia_ist"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Qdot_i_ist"
+		  SrcPort		  1
+		  DstBlock		  "Divide"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "t_ie"
+		  SrcPort		  1
+		  DstBlock		  "Add"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Divide"
+		  SrcPort		  1
+		  DstBlock		  "isnan"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "cp_i"
+		  SrcPort		  1
+		  DstBlock		  "Divide1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "isnan"
+		  SrcPort		  1
+		  DstBlock		  "isinf"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "phi_Le2"
+		  SrcPort		  1
+		  DstBlock		  "Divide1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Divide1"
+		  SrcPort		  1
+		  DstBlock		  "Divide"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "mdot"
+		  SrcPort		  1
+		  DstBlock		  "Divide"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "isinf"
+		  SrcPort		  1
+		  DstBlock		  "Add"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Qdot_i_ist"
+	      Position		      [715, 178, 745, 192]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      InitialOutput	      "0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "t_ia_ist"
+	      Position		      [710, 298, 740, 312]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      InitialOutput	      "0"
+	    }
+	    Line {
+	      SrcBlock		      "Qdot_i_ist "
+	      SrcPort		      1
+	      Points		      [15, 0]
+	      Branch {
+		DstBlock		"Qdot_i_ist"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 75]
+		DstBlock		"t_ia_ist "
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Qdot_i_FK"
+	      SrcPort		      1
+	      Points		      [25, 0; 0, 50]
+	      DstBlock		      "Qdot_i_ist "
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "t_ie"
+	      SrcPort		      1
+	      Points		      [35, 0]
+	      Branch {
+		Points			[0, -220]
+		DstBlock		"Qdot_i_FK"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[260, 0]
+		Branch {
+		  DstBlock		  "t_ia_ist "
+		  DstPort		  2
+		}
+		Branch {
+		  Points		  [0, -45]
+		  DstBlock		  "Qdot_i_ist "
+		  DstPort		  6
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "t_ia_FK"
+	      SrcPort		      1
+	      DstBlock		      "Qdot_i_FK"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "n_fan [%]"
+	      SrcPort		      1
+	      Points		      [135, 0]
+	      DstBlock		      "Qdot_i_ist "
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "t_ia_ist "
+	      SrcPort		      1
+	      DstBlock		      "t_ia_ist"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "cp_i"
+	      SrcPort		      1
+	      DstBlock		      "t_ia_ist "
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Fluid_Type"
+	      SrcPort		      1
+	      Points		      [30, 0]
+	      Branch {
+		DstBlock		"Qdot_i_FK"
+		DstPort			3
+	      }
+	      Branch {
+		Points			[0, 160; 160, 0; 0, -45]
+		DstBlock		"Qdot_i_ist "
+		DstPort			5
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "mdot_i"
+	      SrcPort		      1
+	      Points		      [35, 0]
+	      Branch {
+		Points			[55, 0; 0, -5]
+		DstBlock		"Qdot_i_ist "
+		DstPort			4
+	      }
+	      Branch {
+		Points			[0, 150]
+		DstBlock		"t_ia_ist "
+		DstPort			4
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Fluid_mix"
+	      SrcPort		      1
+	      DstBlock		      "Qdot_i_ist "
+	      DstPort		      3
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  Ports			  [7, 1]
+	  Position		  [1525, 508, 1530, 702]
+	  BackgroundColor	  "black"
+	  ShowName		  off
+	  Inputs		  "7"
+	  Port {
+	    PortNumber		    1
+	    Name		    "THV out"
+	    PropagatedSignals	    "ID, , mdot, p, fluid, mix, "
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Trägheit"
+	  Ports			  [2, 2]
+	  Position		  [1580, 520, 1730, 635]
+	  BackgroundColor	  "red"
+	  AncestorBlock		  "carnot/storage/storage_multiport_2"
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskType		  "storage with heat exchangers"
+	  MaskDescription	  "Storage is a standing cylinder. It can be divided in several nodes.\nOutputs can be refined up to nodes temperature sensors.\n(See mask of storage in subsystem by <look under mask - command> for details of numerical properties).\n\nAxial conductivity includes the fluid and wall conductivity.\nHeat losses are calculated also for top and bottom surfaces."
+	  MaskHelp		  "eval('man(''storage_multiport'')')"
+	  MaskPromptString	  "diameter [m]|volume [m³]|position|heat loss coefficient wall [W/(m²*K)]|heat loss coefficient bottom [W/(m²*K)]|effective axial conductivity in [W/(m*K)]|initial temperature [degree centigrade]"
+	  MaskStyleString	  "edit,edit,popup(lying cylinder|standing cylinder),edit,edit,edit,edit"
+	  MaskTunableValueString  "on,on,on,on,on,on,on"
+	  MaskCallbackString	  "||||||"
+	  MaskEnableString	  "on,on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,on,on,on"
+	  MaskToolTipString	  "on,on,on,on,on,on,on"
+	  MaskVarAliasString	  ",,,,,,"
+	  MaskVariables		  "diameter=@1;vol=@2;pos=@3;heatloss=@4;hlossbot=@5;axialcond=@6;tinitial=@7;"
+	  MaskDisplay		  "plot(0,0,100,100,[36,36,40,50,54,54,50,40,36],[90,50,45,45,50,90,93,93,90],[36,51,40,51,36],[74,74,79,85,85],[36,51,44,51,36],[54,54,56,58,58])"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  off
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "0.1|0.04|standing cylinder|7|7|1.1|21"
+	  MaskTabNameString	  ",,,,,,"
+	  Port {
+	    PortNumber		    1
+	    Name		    "Tnodes"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "THV out"
+	    PropagatedSignals	    "ID, Tport, mdot, p_port, fluid_mix, , clq, "
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "Trägheit"
+	    Location		    [47, 110, 510, 553]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Tamb"
+	      Position		      [35, 38, 65, 52]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "pipe_in"
+	      Position		      [35, 318, 65, 332]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator"
+	      Position		      [295, 60, 315, 80]
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "multiport\nstorage"
+	      Ports		      [2, 3]
+	      Position		      [170, 14, 245, 126]
+	      BackgroundColor	      "yellow"
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskType		      "internal mask of storage for numerical values"
+	      MaskDescription	      "Model is one dimesional with <nodes> horizontal  slices. Output sensor-temperatures are in equal distances over the storage (first output is lowest node)."
+	      MaskHelp		      "The flow is calculated by the upwind scheme heat conduction between nodes by central diffenences (Patankar 1980).\nHeat exchanger does not have any capacity for the fluid. Heat transfer to storage is calculated per stroage node by an energy balance. Heat transfer coefficient for heat exchanger is calculated from Nu = 0.5*(Gr*Pr)^0.25.\nCan be charged and discharged by ports (straight incomming pipe, heat exchanger). For the moment You have to add the inports and outports yourself in  the subsystem when changing the number of ports. Be sure to keep the size of the demux after the s-funtion as [sensors 2  2  2] (repeat 2 as many ports as You have).\n"
+	      MaskPromptString	      "number of nodes|number of temperature sensors (first is at bottom)|number of ports|geometry (DO NOT CHANGE HERE)|heat losses (DO NOT CHANGE HERE)|effecive axial conductivity W/(m*K) (DO NOT CHANGE HERE)|initial temperature in °C (DO NOT CHANGE HERE)|position (DO NOT CHANGE HERE)"
+	      MaskStyleString	      "edit,edit,popup(1|2|3|4|5|6|7|8|9|10),edit,edit,edit,edit,edit"
+	      MaskTunableValueString  "on,on,on,on,on,on,on,on"
+	      MaskCallbackString      "|||||||"
+	      MaskEnableString	      "on,on,on,on,on,on,on,on"
+	      MaskVisibilityString    "on,on,on,on,on,on,on,on"
+	      MaskToolTipString	      "on,on,on,on,on,on,on,on"
+	      MaskVarAliasString      ",,,,,,,"
+	      MaskVariables	      "nodes=@1;sensors=@2;nport=@3;d=@4;u=@5;axialcond=@6;tinitial=@7;pos=@8;"
+	      MaskInitialization      "nodes = max(nodes, 1);\nsensors = max(sensors, 1);\nd(1) = max(d(1), 0.001);\nd(2) = max(d(2), 0.001);\npos = pos-1;\n"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      MaskValueString	      "10|10|1|[diameter vol]|[heatloss hlossbot]|axialcond|tinitial|pos"
+	      MaskTabNameString	      ",,,,,,,"
+	      System {
+		Name			"multiport\nstorage"
+		Location		[224, 102, 627, 317]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "Tamb"
+		  Position		  [45, 58, 75, 72]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "port1"
+		  Position		  [40, 123, 70, 137]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  "S-Function"
+		  Ports			  [2, 3]
+		  Position		  [165, 31, 235, 159]
+		  FunctionName		  "store_hx"
+		  Parameters		  "d(1), d(2),  pos, u(1), u(2),  axialcond,  tinitial,  nodes, nport, sensors"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Tnodes"
+		  Position		  [340, 38, 370, 52]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		  InitialOutput		  "0"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Energy"
+		  Position		  [335, 88, 365, 102]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		  InitialOutput		  "0"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "[T p]1"
+		  Position		  [335, 128, 365, 142]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		  InitialOutput		  "0"
+		}
+		Line {
+		  SrcBlock		  "S-Function"
+		  SrcPort		  2
+		  DstBlock		  "Energy"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "S-Function"
+		  SrcPort		  3
+		  DstBlock		  "[T p]1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "S-Function"
+		  SrcPort		  1
+		  Points		  [0, -10]
+		  DstBlock		  "Tnodes"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "port1"
+		  SrcPort		  1
+		  DstBlock		  "S-Function"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Tamb"
+		  SrcPort		  1
+		  DstBlock		  "S-Function"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "pipe connection\nto store1"
+	      Ports		      [2, 2]
+	      Position		      [155, 296, 245, 334]
+	      BackgroundColor	      "lightBlue"
+	      AncestorBlock	      "carnot/storage/ports for your storage construction/pipe connection\nto store"
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      MaskType		      "pipe connection to storage"
+	      MaskDescription	      "The block transforms the incoming THV vector to a vector which the storage interprets as a flow into the storage fluid.\nGive inlet- and outlet-height as a relative position from 0 (= bottom) to 1 (= top)."
+	      MaskHelp		      "eval('man(''pipe_connection_to_store'')')"
+	      MaskPromptString	      "relative height of inlet|relative height of outlet"
+	      MaskStyleString	      "edit,edit"
+	      MaskTunableValueString  "on,on"
+	      MaskCallbackString      "|"
+	      MaskEnableString	      "on,on"
+	      MaskVisibilityString    "on,on"
+	      MaskToolTipString	      "on,on"
+	      MaskVarAliasString      ","
+	      MaskVariables	      "hin=@1;hout=@2;"
+	      MaskInitialization      "hin = min(1, max(0, hin));\nhout = min(1, max(0, hout));\n"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      MaskValueString	      "0|1"
+	      MaskTabNameString	      ","
+	      System {
+		Name			"pipe connection\nto store1"
+		Location		[103, 74, 588, 391]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "from store"
+		  Position		  [35, 43, 65, 57]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "THVin"
+		  Position		  [20, 203, 50, 217]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  "Demux"
+		  Ports			  [1, 6]
+		  Position		  [120, 132, 125, 258]
+		  BackgroundColor	  "black"
+		  ShowName		  off
+		  Outputs		  "[1 1 1 1 2 4]"
+		  Port {
+		    PortNumber		    1
+		    Name		    "ID"
+		    PropagatedSignals	    "ID"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    2
+		    Name		    "T"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    3
+		    Name		    "mdot"
+		    PropagatedSignals	    "mdot"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    4
+		    Name		    "p"
+		    PropagatedSignals	    "p"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    5
+		    Name		    "fluid_mix"
+		    PropagatedSignals	    "fluid, mix"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    6
+		    Name		    "d clq"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  "Demux1"
+		  Ports			  [1, 3]
+		  Position		  [100, 19, 105, 81]
+		  BackgroundColor	  "black"
+		  ShowName		  off
+		  Outputs		  "[1 1 3]"
+		  Port {
+		    PortNumber		    1
+		    Name		    "Tport"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    2
+		    Name		    "p_port"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    3
+		    Name		    "clq"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  "Demux2"
+		  Ports			  [1, 2]
+		  Position		  [85, 179, 90, 241]
+		  BackgroundColor	  "black"
+		  ShowName		  off
+		  Outputs		  "[10 -1]"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux"
+		  Ports			  [7, 1]
+		  Position		  [395, 26, 400, 114]
+		  BackgroundColor	  "black"
+		  ShowName		  off
+		  Inputs		  "7"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux2"
+		  Ports			  [8, 1]
+		  Position		  [395, 142, 400, 288]
+		  BackgroundColor	  "black"
+		  ShowName		  off
+		  Inputs		  "8"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "const"
+		  Position		  [185, 31, 260, 49]
+		  ShowName		  off
+		  Value			  "[1 hin hout]"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "d"
+		  Position		  [310, 235, 330, 255]
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "to store"
+		  Position		  [425, 63, 455, 77]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		  InitialOutput		  "0"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "THVout"
+		  Position		  [430, 208, 460, 222]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		  InitialOutput		  "0"
+		}
+		Line {
+		  Name			  "ID"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Demux"
+		  SrcPort		  1
+		  Points		  [140, 0]
+		  Branch {
+		    Points		    [0, -95]
+		    DstBlock		    "Mux"
+		    DstPort		    2
+		  }
+		  Branch {
+		    DstBlock		    "Mux2"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "from store"
+		  SrcPort		  1
+		  DstBlock		  "Demux1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Demux2"
+		  SrcPort		  1
+		  DstBlock		  "Demux"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "THVin"
+		  SrcPort		  1
+		  DstBlock		  "Demux2"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "d clq"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Demux"
+		  SrcPort		  6
+		  Points		  [165, 0; 0, -145]
+		  DstBlock		  "Mux"
+		  DstPort		  7
+		}
+		Line {
+		  Name			  "fluid_mix"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Demux"
+		  SrcPort		  5
+		  Points		  [160, 0]
+		  Branch {
+		    Points		    [0, -135]
+		    DstBlock		    "Mux"
+		    DstPort		    6
+		  }
+		  Branch {
+		    DstBlock		    "Mux2"
+		    DstPort		    5
+		  }
+		}
+		Line {
+		  Name			  "p"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Demux"
+		  SrcPort		  4
+		  Points		  [155, 0; 0, -125]
+		  DstBlock		  "Mux"
+		  DstPort		  5
+		}
+		Line {
+		  Name			  "mdot"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Demux"
+		  SrcPort		  3
+		  Points		  [150, 0]
+		  Branch {
+		    DstBlock		    "Mux2"
+		    DstPort		    3
+		  }
+		  Branch {
+		    Points		    [0, -115]
+		    DstBlock		    "Mux"
+		    DstPort		    4
+		  }
+		}
+		Line {
+		  Name			  "T"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Demux"
+		  SrcPort		  2
+		  Points		  [145, 0; 0, -105]
+		  DstBlock		  "Mux"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "d"
+		  SrcPort		  1
+		  DstBlock		  "Mux2"
+		  DstPort		  6
+		}
+		Line {
+		  SrcBlock		  "const"
+		  SrcPort		  1
+		  DstBlock		  "Mux"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "p_port"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Demux1"
+		  SrcPort		  2
+		  Points		  [45, 0; 0, 75; 210, 0; 0, 80]
+		  DstBlock		  "Mux2"
+		  DstPort		  4
+		}
+		Line {
+		  Name			  "Tport"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Demux1"
+		  SrcPort		  1
+		  Points		  [50, 0; 0, 90; 210, 0; 0, 45]
+		  DstBlock		  "Mux2"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Demux2"
+		  SrcPort		  2
+		  Points		  [10, 0; 0, 60]
+		  DstBlock		  "Mux2"
+		  DstPort		  8
+		}
+		Line {
+		  Name			  "clq"
+		  Labels		  [0, 0]
+		  SrcBlock		  "Demux1"
+		  SrcPort		  3
+		  Points		  [40, 0; 0, 60; 210, 0; 0, 135]
+		  DstBlock		  "Mux2"
+		  DstPort		  7
+		}
+		Line {
+		  SrcBlock		  "Mux"
+		  SrcPort		  1
+		  DstBlock		  "to store"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Mux2"
+		  SrcPort		  1
+		  DstBlock		  "THVout"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Tnodes"
+	      Position		      [340, 28, 370, 42]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      InitialOutput	      "0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "pipe_out"
+	      Position		      [340, 318, 370, 332]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      InitialOutput	      "0"
+	    }
+	    Line {
+	      SrcBlock		      "multiport\nstorage"
+	      SrcPort		      2
+	      DstBlock		      "Terminator"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pipe_in"
+	      SrcPort		      1
+	      DstBlock		      "pipe connection\nto store1"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "pipe connection\nto store1"
+	      SrcPort		      2
+	      DstBlock		      "pipe_out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Tamb"
+	      SrcPort		      1
+	      DstBlock		      "multiport\nstorage"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "multiport\nstorage"
+	      SrcPort		      1
+	      DstBlock		      "Tnodes"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "multiport\nstorage"
+	      SrcPort		      3
+	      Points		      [15, 0; 0, 50; -130, 0; 0, 150]
+	      DstBlock		      "pipe connection\nto store1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "pipe connection\nto store1"
+	      SrcPort		      1
+	      Points		      [15, 0; 0, -145; -115, 0; 0, -60]
+	      DstBlock		      "multiport\nstorage"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Verbrauch / consumption"
+	  Ports			  [7, 3]
+	  Position		  [1230, 378, 1360, 512]
+	  AncestorBlock		  "carnot/misc/THV_template"
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Port {
+	    PortNumber		    1
+	    Name		    "energy ct"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "power ct"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    3
+	    Name		    "water consumption"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "Verbrauch / consumption"
+	    Location		    [4, 74, 1276, 798]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Qdot"
+	      Position		      [70, 288, 100, 302]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "vdot_fan"
+	      Position		      [120, 263, 150, 277]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "P_fan"
+	      Position		      [120, 133, 150, 147]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "control_fan"
+	      Position		      [120, 103, 150, 117]
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "phi_le"
+	      Position		      [70, 248, 100, 262]
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "t_le"
+	      Position		      [120, 228, 150, 242]
+	      Port		      "6"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "t_ie"
+	      Position		      [120, 303, 150, 317]
+	      Port		      "7"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Strom"
+	      Ports		      [2, 2]
+	      Position		      [305, 93, 435, 157]
+	      AncestorBlock	      "carnot/misc/THV_template"
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      System {
+		Name			"Strom"
+		Location		[264, 135, 1084, 394]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "control_Fan"
+		  Position		  [65, 68, 95, 82]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "P_Fan"
+		  Position		  [65, 163, 95, 177]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Add"
+		  Ports			  [2, 1]
+		  Position		  [215, 112, 245, 143]
+		  CollapseMode		  "All dimensions"
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^-10"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Integrator
+		  Name			  "Integrator1"
+		  Ports			  [1, 1]
+		  Position		  [455, 106, 485, 144]
+		  ShowName		  off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product"
+		  Ports			  [2, 1]
+		  Position		  [330, 107, 360, 138]
+		  CollapseMode		  "All dimensions"
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product2"
+		  Ports			  [2, 1]
+		  Position		  [560, 115, 605, 150]
+		  ShowName		  off
+		  Inputs		  "*/"
+		  CollapseMode		  "All dimensions"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Rieselwasserpumpe [kW]"
+		  Position		  [60, 106, 120, 134]
+		  Value			  "0.25"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "factor1"
+		  Position		  [495, 131, 535, 149]
+		  ShowName		  off
+		  Value			  "3600"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "energy"
+		  Position		  [695, 128, 725, 142]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		  InitialOutput		  "0"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "power"
+		  Position		  [695, 163, 725, 177]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		  InitialOutput		  "0"
+		}
+		Line {
+		  SrcBlock		  "Rieselwasserpumpe [kW]"
+		  SrcPort		  1
+		  DstBlock		  "Add"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Product"
+		  SrcPort		  1
+		  Points		  [45, 0]
+		  Branch {
+		    Points		    [0, 45]
+		    DstBlock		    "power"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "Integrator1"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "control_Fan"
+		  SrcPort		  1
+		  Points		  [190, 0; 0, 40]
+		  DstBlock		  "Product"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Add"
+		  SrcPort		  1
+		  DstBlock		  "Product"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "P_Fan"
+		  SrcPort		  1
+		  Points		  [70, 0; 0, -35]
+		  DstBlock		  "Add"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Integrator1"
+		  SrcPort		  1
+		  DstBlock		  "Product2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "factor1"
+		  SrcPort		  1
+		  DstBlock		  "Product2"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Product2"
+		  SrcPort		  1
+		  DstBlock		  "energy"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Verdunstung"
+	      Ports		      [6, 1]
+	      Position		      [305, 208, 435, 307]
+	      AncestorBlock	      "carnot/misc/THV_template"
+	      MinAlgLoopOccurrences   off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      System {
+		Name			"Verdunstung"
+		Location		[187, 127, 1455, 590]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "control_Fan"
+		  Position		  [765, 178, 795, 192]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "t_le"
+		  Position		  [15, 28, 45, 42]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "phi_le"
+		  Position		  [90, 58, 120, 72]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "Vdot_Fan"
+		  Position		  [315, 138, 345, 152]
+		  Port			  "4"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "Qdot"
+		  Position		  [435, 188, 465, 202]
+		  Port			  "5"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "t_ie"
+		  Position		  [435, 218, 465, 232]
+		  Port			  "6"
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "Enthalpie "
+		  Ports			  [2, 1]
+		  Position		  [375, 28, 430, 117]
+		  AncestorBlock		  "carnot/misc/THV_template"
+		  MinAlgLoopOccurrences	  off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  System {
+		    Name		    "Enthalpie "
+		    Location		    [440, 126, 1073, 686]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "x_le"
+		    Position		    [30, 243, 60, 257]
+		    IconDisplay		    "Port number"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^0"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "t_le"
+		    Position		    [30, 203, 60, 217]
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^0"
+		    }
+		    Block {
+		    BlockType		    Sum
+		    Name		    "Add"
+		    Ports		    [2, 1]
+		    Position		    [495, 187, 525, 218]
+		    CollapseMode	    "All dimensions"
+		    InputSameDT		    off
+		    OutDataTypeMode	    "Inherit via internal rule"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^-10"
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Sum
+		    Name		    "Add1"
+		    Ports		    [2, 1]
+		    Position		    [315, 267, 345, 298]
+		    CollapseMode	    "All dimensions"
+		    InputSameDT		    off
+		    OutDataTypeMode	    "Inherit via internal rule"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^-10"
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product"
+		    Ports		    [2, 1]
+		    Position		    [200, 157, 230, 188]
+		    CollapseMode	    "All dimensions"
+		    InputSameDT		    off
+		    OutDataTypeMode	    "Inherit via internal rule"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^0"
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product1"
+		    Ports		    [2, 1]
+		    Position		    [390, 217, 420, 248]
+		    CollapseMode	    "All dimensions"
+		    InputSameDT		    off
+		    OutDataTypeMode	    "Inherit via internal rule"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^0"
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product2"
+		    Ports		    [2, 1]
+		    Position		    [250, 257, 280, 288]
+		    CollapseMode	    "All dimensions"
+		    InputSameDT		    off
+		    OutDataTypeMode	    "Inherit via internal rule"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^0"
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "cp_d"
+		    Position		    [35, 285, 65, 315]
+		    Value		    "1.861"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^0"
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "cp_lt"
+		    Position		    [30, 150, 60, 180]
+		    Value		    "1.006"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^0"
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "dhv0"
+		    Position		    [35, 340, 65, 370]
+		    Value		    "2500"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^0"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "h_le"
+		    Position		    [565, 198, 595, 212]
+		    IconDisplay		    "Port number"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^0"
+		    InitialOutput	    "0"
+		    }
+		    Line {
+		    SrcBlock		    "Add"
+		    SrcPort		    1
+		    DstBlock		    "h_le"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "cp_lt"
+		    SrcPort		    1
+		    DstBlock		    "Product"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "t_le"
+		    SrcPort		    1
+		    Points		    [50, 0]
+		    Branch {
+		    Points		    [0, -30]
+		    DstBlock		    "Product"
+		    DstPort		    2
+		    }
+		    Branch {
+		    Points		    [0, 55]
+		    DstBlock		    "Product2"
+		    DstPort		    1
+		    }
+		    }
+		    Line {
+		    SrcBlock		    "Product"
+		    SrcPort		    1
+		    Points		    [110, 0; 0, 20]
+		    DstBlock		    "Add"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "Product1"
+		    SrcPort		    1
+		    Points		    [20, 0; 0, -25]
+		    DstBlock		    "Add"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "x_le"
+		    SrcPort		    1
+		    Points		    [155, 0; 0, -25]
+		    DstBlock		    "Product1"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "cp_d"
+		    SrcPort		    1
+		    Points		    [80, 0; 0, -20]
+		    DstBlock		    "Product2"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Add1"
+		    SrcPort		    1
+		    Points		    [10, 0; 0, -45]
+		    DstBlock		    "Product1"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "Product2"
+		    SrcPort		    1
+		    DstBlock		    "Add1"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "dhv0"
+		    SrcPort		    1
+		    Points		    [225, 0; 0, -65]
+		    DstBlock		    "Add1"
+		    DstPort		    2
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  Integrator
+		  Name			  "Integrator1"
+		  Ports			  [1, 1]
+		  Position		  [895, 211, 925, 249]
+		  ShowName		  off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product"
+		  Ports			  [2, 1]
+		  Position		  [430, 137, 460, 168]
+		  CollapseMode		  "All dimensions"
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product1"
+		  Ports			  [2, 1]
+		  Position		  [840, 212, 870, 243]
+		  CollapseMode		  "All dimensions"
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product2"
+		  Ports			  [2, 1]
+		  Position		  [1000, 220, 1045, 255]
+		  ShowName		  off
+		  Inputs		  "*/"
+		  CollapseMode		  "All dimensions"
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product3"
+		  Ports			  [2, 1]
+		  Position		  [685, 207, 715, 238]
+		  CollapseMode		  "All dimensions"
+		  InputSameDT		  off
+		  OutDataTypeMode	  "Inherit via internal rule"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Taupunkttemperatur"
+		  Ports			  [4, 1]
+		  Position		  [370, 255, 465, 350]
+		  SourceBlock		  "carnot/materials/saturationtemperature"
+		  SourceType		  "saturationtemperature"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData "off"
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "Verdunstungsmenge"
+		  Ports			  [7, 1]
+		  Position		  [570, 172, 650, 288]
+		  PermitHierarchicalResolution "ExplicitOnly"
+		  MinAlgLoopOccurrences	  off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  MaskType		  "Stateflow"
+		  MaskDescription	  "Embedded MATLAB block"
+		  MaskDisplay		  "disp('fcn');"
+		  MaskSelfModifiable	  on
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  off
+		  MaskIconRotate	  "none"
+		  MaskIconUnits		  "autoscale"
+		  System {
+		    Name		    "Verdunstungsmenge"
+		    Location		    [257, 457, 812, 717]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "h_le"
+		    Position		    [20, 101, 40, 119]
+		    IconDisplay		    "Port number"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^0"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "mdot"
+		    Position		    [20, 136, 40, 154]
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "qdot"
+		    Position		    [20, 171, 40, 189]
+		    Port		    "3"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "t_ie"
+		    Position		    [20, 206, 40, 224]
+		    Port		    "4"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "x_le"
+		    Position		    [20, 246, 40, 264]
+		    Port		    "5"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "t_tau"
+		    Position		    [20, 281, 40, 299]
+		    Port		    "6"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "p"
+		    Position		    [20, 316, 40, 334]
+		    Port		    "7"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Demux
+		    Name		    " Demux "
+		    Ports		    [1, 1]
+		    Position		    [270, 270, 320, 310]
+		    Outputs		    "1"
+		    }
+		    Block {
+		    BlockType		    "S-Function"
+		    Name		    " SFunction "
+		    Tag			    "Stateflow S-Function closed_circuited_cooling_tower_V2011 10"
+		    Ports		    [7, 2]
+		    Position		    [180, 108, 230, 272]
+		    FunctionName	    "sf_sfun"
+		    PortCounts		    "[7 2]"
+		    EnableBusSupport	    on
+		    Port {
+		    PortNumber		    2
+		    Name		    "x_fl"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    Terminator
+		    Name		    " Terminator "
+		    Position		    [460, 281, 480, 299]
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "x_fl"
+		    Position		    [460, 101, 480, 119]
+		    IconDisplay		    "Port number"
+		    OutDataType		    "sfix(16)"
+		    OutScaling		    "2^0"
+		    }
+		    Line {
+		    SrcBlock		    " SFunction "
+		    SrcPort		    1
+		    Points		    [0, 140]
+		    DstBlock		    " Demux "
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    " Demux "
+		    SrcPort		    1
+		    DstBlock		    " Terminator "
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "h_le"
+		    SrcPort		    1
+		    Points		    [120, 0]
+		    DstBlock		    " SFunction "
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "x_fl"
+		    Labels		    [0, 0]
+		    SrcBlock		    " SFunction "
+		    SrcPort		    2
+		    DstBlock		    "x_fl"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "mdot"
+		    SrcPort		    1
+		    Points		    [120, 0]
+		    DstBlock		    " SFunction "
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "qdot"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    3
+		    }
+		    Line {
+		    SrcBlock		    "t_ie"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    4
+		    }
+		    Line {
+		    SrcBlock		    "x_le"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    5
+		    }
+		    Line {
+		    SrcBlock		    "t_tau"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    6
+		    }
+		    Line {
+		    SrcBlock		    "p"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    7
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "air"
+		  Position		  [315, 304, 335, 326]
+		  Value			  "2"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "factor1"
+		  Position		  [935, 236, 975, 254]
+		  ShowName		  off
+		  Value			  "3600"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "p"
+		  Position		  [55, 40, 85, 60]
+		  Value			  "1e5"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "rel_hum2x"
+		  Ports			  [3, 1]
+		  Position		  [180, 25, 240, 75]
+		  SourceBlock		  "carnot/basics/rel_hum2x"
+		  SourceType		  "relative humidity to x"
+		  ShowPortLabels	  "FromPortIcon"
+		  SystemSampleTime	  "-1"
+		  FunctionWithSeparateData "off"
+		  RTWMemSecFuncInitTerm	  "Inherit from model"
+		  RTWMemSecFuncExecute	  "Inherit from model"
+		  RTWMemSecDataConstants  "Inherit from model"
+		  RTWMemSecDataInternal	  "Inherit from model"
+		  RTWMemSecDataParameters "Inherit from model"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "roh_air"
+		  Position		  [370, 149, 395, 171]
+		  Value			  "1.29"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Wasserverbrauch"
+		  Position		  [1100, 233, 1130, 247]
+		  IconDisplay		  "Port number"
+		  OutDataType		  "sfix(16)"
+		  OutScaling		  "2^0"
+		  InitialOutput		  "0"
+		}
+		Line {
+		  SrcBlock		  "t_le"
+		  SrcPort		  1
+		  Points		  [85, 0]
+		  Branch {
+		    DstBlock		    "rel_hum2x"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 60]
+		    Branch {
+		    Points		    [0, 170]
+		    DstBlock		    "Taupunkttemperatur"
+		    DstPort		    1
+		    }
+		    Branch {
+		    DstBlock		    "Enthalpie "
+		    DstPort		    2
+		    }
+		  }
+		}
+		Line {
+		  SrcBlock		  "p"
+		  SrcPort		  1
+		  Points		  [65, 0]
+		  Branch {
+		    DstBlock		    "rel_hum2x"
+		    DstPort		    2
+		  }
+		  Branch {
+		    Points		    [0, 240]
+		    Branch {
+		    DstBlock		    "Taupunkttemperatur"
+		    DstPort		    2
+		    }
+		    Branch {
+		    Points		    [0, 90; 375, 0; 0, -105]
+		    DstBlock		    "Verdunstungsmenge"
+		    DstPort		    7
+		    }
+		  }
+		}
+		Line {
+		  SrcBlock		  "phi_le"
+		  SrcPort		  1
+		  DstBlock		  "rel_hum2x"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "Vdot_Fan"
+		  SrcPort		  1
+		  DstBlock		  "Product"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "roh_air"
+		  SrcPort		  1
+		  DstBlock		  "Product"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Enthalpie "
+		  SrcPort		  1
+		  Points		  [95, 0; 0, 110]
+		  DstBlock		  "Verdunstungsmenge"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "rel_hum2x"
+		  SrcPort		  1
+		  Points		  [50, 0]
+		  Branch {
+		    DstBlock		    "Enthalpie "
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 195]
+		    Branch {
+		    Points		    [0, 95]
+		    DstBlock		    "Taupunkttemperatur"
+		    DstPort		    4
+		    }
+		    Branch {
+		    DstBlock		    "Verdunstungsmenge"
+		    DstPort		    5
+		    }
+		  }
+		}
+		Line {
+		  SrcBlock		  "Qdot"
+		  SrcPort		  1
+		  Points		  [35, 0; 0, 20]
+		  DstBlock		  "Verdunstungsmenge"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "Taupunkttemperatur"
+		  SrcPort		  1
+		  Points		  [40, 0; 0, -45]
+		  DstBlock		  "Verdunstungsmenge"
+		  DstPort		  6
+		}
+		Line {
+		  SrcBlock		  "air"
+		  SrcPort		  1
+		  DstBlock		  "Taupunkttemperatur"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "Integrator1"
+		  SrcPort		  1
+		  DstBlock		  "Product2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "factor1"
+		  SrcPort		  1
+		  DstBlock		  "Product2"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Product2"
+		  SrcPort		  1
+		  DstBlock		  "Wasserverbrauch"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Product1"
+		  SrcPort		  1
+		  DstBlock		  "Integrator1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "control_Fan"
+		  SrcPort		  1
+		  Points		  [15, 0; 0, 35]
+		  DstBlock		  "Product1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Product3"
+		  SrcPort		  1
+		  Points		  [50, 0; 0, 10]
+		  DstBlock		  "Product1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Product"
+		  SrcPort		  1
+		  Points		  [50, 0]
+		  Branch {
+		    Points		    [0, 45]
+		    DstBlock		    "Verdunstungsmenge"
+		    DstPort		    2
+		  }
+		  Branch {
+		    Points		    [150, 0; 0, 60]
+		    DstBlock		    "Product3"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "t_ie"
+		  SrcPort		  1
+		  Points		  [30, 0; 0, 5]
+		  DstBlock		  "Verdunstungsmenge"
+		  DstPort		  4
+		}
+		Line {
+		  SrcBlock		  "Verdunstungsmenge"
+		  SrcPort		  1
+		  DstBlock		  "Product3"
+		  DstPort		  2
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "energy"
+	      Position		      [560, 103, 590, 117]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      InitialOutput	      "0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "power"
+	      Position		      [560, 133, 590, 147]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      InitialOutput	      "0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Wasserverbrauch"
+	      Position		      [560, 253, 590, 267]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      InitialOutput	      "0"
+	    }
+	    Line {
+	      SrcBlock		      "control_fan"
+	      SrcPort		      1
+	      Points		      [55, 0]
+	      Branch {
+		DstBlock		"Strom"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 110]
+		DstBlock		"Verdunstung"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "P_fan"
+	      SrcPort		      1
+	      DstBlock		      "Strom"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Strom"
+	      SrcPort		      2
+	      DstBlock		      "power"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "t_le"
+	      SrcPort		      1
+	      DstBlock		      "Verdunstung"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Verdunstung"
+	      SrcPort		      1
+	      DstBlock		      "Wasserverbrauch"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "phi_le"
+	      SrcPort		      1
+	      Points		      [100, 0; 0, -5]
+	      DstBlock		      "Verdunstung"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "vdot_fan"
+	      SrcPort		      1
+	      Points		      [55, 0; 0, -5]
+	      DstBlock		      "Verdunstung"
+	      DstPort		      4
+	    }
+	    Line {
+	      SrcBlock		      "Qdot"
+	      SrcPort		      1
+	      Points		      [110, 0; 0, -15]
+	      DstBlock		      "Verdunstung"
+	      DstPort		      5
+	    }
+	    Line {
+	      SrcBlock		      "t_ie"
+	      SrcPort		      1
+	      Points		      [70, 0; 0, -15]
+	      DstBlock		      "Verdunstung"
+	      DstPort		      6
+	    }
+	    Line {
+	      SrcBlock		      "Strom"
+	      SrcPort		      1
+	      DstBlock		      "energy"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "display_weather"
+	  Ports			  [1, 1]
+	  Position		  [265, 35, 355, 65]
+	  ShowName		  off
+	  SourceBlock		  "carnot/outputs/display_weather"
+	  SourceType		  "display weather data"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  pos			  "off"
+	  rad			  "off"
+	  ta			  "on"
+	  ts			  "off"
+	  pre			  "off"
+	  rh			  "off"
+	  ci			  "off"
+	  p			  "off"
+	  ws			  "off"
+	  wd			  "off"
+	  col			  "off"
+	  Port {
+	    PortNumber		    1
+	    Name		    "t_air"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "display_weather1"
+	  Ports			  [1, 1]
+	  Position		  [265, 70, 355, 100]
+	  ShowName		  off
+	  SourceBlock		  "carnot/outputs/display_weather"
+	  SourceType		  "display weather data"
+	  ShowPortLabels	  "FromPortIcon"
+	  SystemSampleTime	  "-1"
+	  FunctionWithSeparateData "off"
+	  RTWMemSecFuncInitTerm	  "Inherit from model"
+	  RTWMemSecFuncExecute	  "Inherit from model"
+	  RTWMemSecDataConstants  "Inherit from model"
+	  RTWMemSecDataInternal	  "Inherit from model"
+	  RTWMemSecDataParameters "Inherit from model"
+	  pos			  "off"
+	  rad			  "off"
+	  ta			  "off"
+	  ts			  "off"
+	  pre			  "off"
+	  rh			  "on"
+	  ci			  "off"
+	  p			  "off"
+	  ws			  "off"
+	  wd			  "off"
+	  col			  "off"
+	  Port {
+	    PortNumber		    1
+	    Name		    "rel_hum"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "heat_capacity [W/kgK]"
+	  Ports			  [4, 1]
+	  Position		  [600, 388, 695, 447]
+	  AncestorBlock		  "carnot/materials/heat_capacity"
+	  MinAlgLoopOccurrences	  off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  MaskType		  "heat capacity"
+	  MaskDescription	  "Calculates the  heat_capacity of fluids [J/(kg*K)].\nCalls calls the function \"hcap\" in the CARNOT library \"carlib\".\nDefinition of the fluid types                                            \nfluid-ID  material           remarks on fluid mix                                            \n1           water              vapourcontent in the 2-phase region\n2           air                   is (kg water) / (kg air)\n3           cotton oil                                           \n4           silicone oil                                         \n5           water-glycol    gives the volume partition [0..1] of glycol"
+	  MaskHelp		  "eval('htmlhelp (''chap_4_2h.htm#heat_capacity'')')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "heat_capacity [W/kgK]"
+	    Location		    [158, 82, 593, 241]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "dT_cp"
+	      Position		      [125, 70, 145, 90]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "p"
+	      Position		      [160, 90, 180, 110]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Fluid_Type"
+	      Position		      [35, 30, 55, 50]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Fluid_Mix"
+	      Position		      [80, 50, 100, 70]
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      "S-Function"
+	      Ports		      [4, 1]
+	      Position		      [235, 29, 310, 111]
+	      FunctionName	      "capfluid"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "cp_i"
+	      Position		      [355, 60, 375, 80]
+	      IconDisplay	      "Port number"
+	      OutDataType	      "sfix(16)"
+	      OutScaling	      "2^0"
+	      InitialOutput	      "0"
+	    }
+	    Line {
+	      SrcBlock		      "S-Function"
+	      SrcPort		      1
+	      DstBlock		      "cp_i"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Fluid_Type"
+	      SrcPort		      1
+	      DstBlock		      "S-Function"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Fluid_Mix"
+	      SrcPort		      1
+	      DstBlock		      "S-Function"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "dT_cp"
+	      SrcPort		      1
+	      DstBlock		      "S-Function"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "p"
+	      SrcPort		      1
+	      DstBlock		      "S-Function"
+	      DstPort		      4
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "THVout"
+	  Position		  [1825, 598, 1855, 612]
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  InitialOutput		  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "data logging"
+	  Position		  [1890, 198, 1920, 212]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  OutDataType		  "sfix(16)"
+	  OutScaling		  "2^0"
+	  InitialOutput		  "0"
+	}
+	Line {
+	  SrcBlock		  "THVin"
+	  SrcPort		  1
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "mdot"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Demux"
+	  SrcPort		  3
+	  Points		  [350, 0]
+	  Branch {
+	    Points		    [0, -435]
+	    DstBlock		    "Leistungseinflüsse / \ninfluence on coolingpower"
+	    DstPort		    4
+	  }
+	  Branch {
+	    DstBlock		    "Mux"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  7
+	  DstBlock		  "Mux"
+	  DstPort		  7
+	}
+	Line {
+	  Name			  "fluid"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Demux"
+	  SrcPort		  5
+	  Points		  [45, 0]
+	  Branch {
+	    Points		    [0, -205]
+	    DstBlock		    "heat_capacity [W/kgK]"
+	    DstPort		    3
+	  }
+	  Branch {
+	    Points		    [320, 0]
+	    Branch {
+	      DstBlock		      "Mux"
+	      DstPort		      5
+	    }
+	    Branch {
+	      Points		      [0, -465]
+	      DstBlock		      "Leistungseinflüsse / \ninfluence on coolingpower"
+	      DstPort		      5
+	    }
+	  }
+	}
+	Line {
+	  Name			  "THV out"
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "Trägheit"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "p"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Demux"
+	  SrcPort		  4
+	  Points		  [30, 0]
+	  Branch {
+	    Points		    [0, -195]
+	    DstBlock		    "heat_capacity [W/kgK]"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "Mux"
+	    DstPort		    4
+	  }
+	}
+	Line {
+	  Name			  "rpm fan [1/min]"
+	  SrcBlock		  "rpm_fan"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    DstBlock		    "Fan"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [-1, 1]
+	    Points		    [0, 55; 795, 0; 0, -190]
+	    DstBlock		    "Bus\nCreator"
+	    DstPort		    4
+	  }
+	}
+	Line {
+	  SrcBlock		  "Feuchtkugel-\ntemperatureinfluss /\nwet-bulb temperature effect"
+	  SrcPort		  3
+	  Points		  [20, 0; 0, 275]
+	  DstBlock		  "heat_capacity [W/kgK]"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Feuchtkugel-\ntemperatureinfluss /\nwet-bulb temperature effect"
+	  SrcPort		  2
+	  DstBlock		  "Leistungseinflüsse / \ninfluence on coolingpower"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "T"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  Points		  [10, 0]
+	  Branch {
+	    Points		    [0, -435]
+	    DstBlock		    "Feuchtkugel-\ntemperatureinfluss /\nwet-bulb temperature effect"
+	    DstPort		    3
+	  }
+	  Branch {
+	    Points		    [325, 0; 0, -50]
+	    Branch {
+	      Points		      [0, -380]
+	      DstBlock		      "Leistungseinflüsse / \ninfluence on coolingpower"
+	      DstPort		      3
+	    }
+	    Branch {
+	      DstBlock		      "Verbrauch / consumption"
+	      DstPort		      7
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "Leistungseinflüsse / \ninfluence on coolingpower"
+	  SrcPort		  2
+	  Points		  [280, 0; 0, 370]
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "heat_capacity [W/kgK]"
+	  SrcPort		  1
+	  Points		  [55, 0; 0, -315]
+	  DstBlock		  "Leistungseinflüsse / \ninfluence on coolingpower"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "v_dot_fan"
+	  SrcBlock		  "Fan"
+	  SrcPort		  2
+	  Points		  [30, 0]
+	  Branch {
+	    Points		    [0, 125]
+	    DstBlock		    "Verbrauch / consumption"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Labels		    [-1, 1]
+	    Points		    [615, 0; 0, -165]
+	    DstBlock		    "Bus\nCreator"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  Name			  "power ct"
+	  Labels		  [-1, 1]
+	  SrcBlock		  "Verbrauch / consumption"
+	  SrcPort		  2
+	  Points		  [370, 0; 0, -180]
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  8
+	}
+	Line {
+	  SrcBlock		  "Fan"
+	  SrcPort		  3
+	  Points		  [15, 0; 0, 120]
+	  DstBlock		  "Verbrauch / consumption"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "control_fan"
+	  SrcPort		  1
+	  Points		  [125, 0]
+	  Branch {
+	    Points		    [530, 0]
+	    Branch {
+	      Points		      [0, 90]
+	      DstBlock		      "Verbrauch / consumption"
+	      DstPort		      4
+	    }
+	    Branch {
+	      Points		      [285, 0; 0, -301]
+	      DstBlock		      "Leistungseinflüsse / \ninfluence on coolingpower"
+	      DstPort		      enable
+	    }
+	  }
+	  Branch {
+	    Points		    [0, -339]
+	    DstBlock		    "Feuchtkugel-\ntemperatureinfluss /\nwet-bulb temperature effect"
+	    DstPort		    enable
+	  }
+	}
+	Line {
+	  Name			  "ID"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "wet-bulb temperature"
+	  Labels		  [-1, 1]
+	  SrcBlock		  "Feuchtkugel-\ntemperatureinfluss /\nwet-bulb temperature effect"
+	  SrcPort		  1
+	  Points		  [315, 0; 0, -10; 770, 0; 0, 15]
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "Q_i_ist"
+	  SrcBlock		  "Leistungseinflüsse / \ninfluence on coolingpower"
+	  SrcPort		  1
+	  Points		  [30, 0; 0, 275]
+	  DstBlock		  "Verbrauch / consumption"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "rpm fan [%] "
+	  SrcBlock		  "Fan"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    Points		    [0, -50]
+	    DstBlock		    "Leistungseinflüsse / \ninfluence on coolingpower"
+	    DstPort		    7
+	  }
+	  Branch {
+	    Labels		    [-1, 1]
+	    Points		    [615, 0; 0, -170]
+	    DstBlock		    "Bus\nCreator"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  Name			  "rel_hum"
+	  Labels		  [0, 0]
+	  SrcBlock		  "display_weather1"
+	  SrcPort		  1
+	  Points		  [70, 0]
+	  Branch {
+	    DstBlock		    "Feuchtkugel-\ntemperatureinfluss /\nwet-bulb temperature effect"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 260; 415, 0]
+	    Branch {
+	      Points		      [0, 120]
+	      DstBlock		      "Verbrauch / consumption"
+	      DstPort		      5
+	    }
+	    Branch {
+	      Labels		      [-1, 1]
+	      Points		      [845, 0; 0, -170]
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      5
+	    }
+	  }
+	}
+	Line {
+	  Name			  "t_air"
+	  Labels		  [0, 0]
+	  SrcBlock		  "display_weather"
+	  SrcPort		  1
+	  Points		  [55, 0]
+	  Branch {
+	    DstBlock		    "Feuchtkugel-\ntemperatureinfluss /\nwet-bulb temperature effect"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 315; 415, 0]
+	    Branch {
+	      Points		      [0, 120]
+	      DstBlock		      "Verbrauch / consumption"
+	      DstPort		      6
+	    }
+	    Branch {
+	      Points		      [715, 0]
+	      Branch {
+		Points			[0, 185]
+		DstBlock		"Trägheit"
+		DstPort			1
+	      }
+	      Branch {
+		Labels			[-1, 1]
+		Points			[160, 0; 0, -160]
+		DstBlock		"Bus\nCreator"
+		DstPort			6
+	      }
+	    }
+	  }
+	}
+	Line {
+	  Name			  "water consumption"
+	  Labels		  [-1, 1]
+	  SrcBlock		  "Verbrauch / consumption"
+	  SrcPort		  3
+	  Points		  [385, 0; 0, -195]
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  9
+	}
+	Line {
+	  Name			  "Tnodes"
+	  Labels		  [-1, 1]
+	  SrcBlock		  "Trägheit"
+	  SrcPort		  1
+	  Points		  [30, 0; 0, -225]
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  10
+	}
+	Line {
+	  Name			  "THV out"
+	  SrcBlock		  "Trägheit"
+	  SrcPort		  2
+	  Points		  [45, 0]
+	  Branch {
+	    DstBlock		    "THVout"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [-1, 1]
+	    Points		    [0, -250]
+	    DstBlock		    "Bus\nCreator"
+	    DstPort		    11
+	  }
+	}
+	Line {
+	  Name			  "mix"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Demux"
+	  SrcPort		  6
+	  Points		  [60, 0]
+	  Branch {
+	    Points		    [0, -215]
+	    DstBlock		    "heat_capacity [W/kgK]"
+	    DstPort		    4
+	  }
+	  Branch {
+	    Points		    [320, 0]
+	    Branch {
+	      Points		      [0, -470]
+	      DstBlock		      "Leistungseinflüsse / \ninfluence on coolingpower"
+	      DstPort		      6
+	    }
+	    Branch {
+	      DstBlock		      "Mux"
+	      DstPort		      6
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "weather"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    DstBlock		    "display_weather"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 35]
+	    DstBlock		    "display_weather1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Bus\nCreator"
+	  SrcPort		  1
+	  DstBlock		  "data logging"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "energy ct"
+	  Labels		  [-1, 1]
+	  SrcBlock		  "Verbrauch / consumption"
+	  SrcPort		  1
+	  Points		  [355, 0; 0, -165]
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  7
+	}
+	Annotation {
+	  Name			  "Kaltwassertemperatur bei\n100% Luftdurchsatz\n30% Glykolgehalt\n2,4 l/s Prozessfluid-Volumenstrom"
+	  Position		  [670, 125]
+	}
+	Annotation {
+	  Name			  "--Indizes--\nFK - Feuchtkugel\nl - Luft\ni - Prozessfluid\ne - ein\na - aus\n\n\n--Abkürzungen--\ncp - spezifische Wärmekapazität\nn/rpm - Drehzahl\np - Druck\nP - Leistung\nt - Temperatur\nphi - relative Feuchte\nx - absolute Feuchte\ncontrol - Steuersignal\nmdot - Massenstrom\nQdot - Rückkühlleistung\nvdot - Volumenstrom"
+	  Position		  [104, 131]
+	}
+      }
+    }
+  }
+}
+# Finite State Machines
+#
+#    Stateflow Version 6.7 (R2007b) dated Aug  7 2007, 16:48:14
+#
+#
+
+
+Stateflow {
+  machine {
+    id			    1
+    name		    "closed_circuited_cooling_tower_V2011"
+    created		    "24-Nov-2009 16:49:10"
+    isLibrary		    0
+    firstTarget		    47
+    sfVersion		    67014000.000001
+  }
+  chart {
+    id			    2
+    name		    "closed circuit cooling tower/Feuchtkugel-\ntemperatureinfluss /\nwet-bulb temperature effect/Abgleich /Embedded\nMATLAB Function"
+    windowPosition	    [386.813 93.53 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1600 1200 1.333333333333333]
+    treeNode		    [0 3 0 0]
+    firstTransition	    5
+    firstJunction	    4
+    viewObj		    2
+    machine		    1
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    6
+    chartFileNumber	    4
+    disableImplicitCasting  1
+    eml {
+      name		      "fcn"
+    }
+  }
+  state {
+    id			    3
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 0 0 0]
+    superState		    SUBCHART
+    subviewer		    2
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "%Festlegung der Eingänge\nfunction y = fcn(t_fk, t_ia_fk15, t_ie)\n\n%Änderung des Faktors\nif t_ie < 41\n    \n    y = ((t_fk-15)*0.27)+t_ia_fk15;\n    \nelse\n    \n    y = ((t_fk-15)*0.25)+t_ia_fk15;\n    \nend"
+      editorLayout	      "100 M4x1[366 140 671 364]"
+    }
+  }
+  junction {
+    id			    4
+    position		    [23.5747 49.5747 7]
+    chart		    2
+    linkNode		    [2 0 0]
+    subviewer		    2
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    5
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      4
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    2
+    linkNode		    [2 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+  }
+  data {
+    id			    6
+    name		    "t_fk"
+    linkNode		    [2 0 7]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "inherited"
+    fixptType {
+      slope		      1
+      baseType		      SF_INT16_TYPE
+    }
+    complexity		    SF_COMPLEX_INHERITED
+  }
+  data {
+    id			    7
+    name		    "y"
+    linkNode		    [2 6 8]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "inherited"
+    fixptType {
+      slope		      1
+      baseType		      SF_INT16_TYPE
+    }
+    complexity		    SF_COMPLEX_INHERITED
+  }
+  data {
+    id			    8
+    name		    "t_ia_fk15"
+    linkNode		    [2 7 9]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "inherited"
+    complexity		    SF_COMPLEX_INHERITED
+  }
+  data {
+    id			    9
+    name		    "t_ie"
+    linkNode		    [2 8 0]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "inherited"
+    complexity		    SF_COMPLEX_INHERITED
+  }
+  instance {
+    id			    10
+    name		    "closed circuit cooling tower/Feuchtkugel-\ntemperatureinfluss //\nwet-bulb temperature effect/Abgleich /Embedded\nMATLAB Function"
+    machine		    1
+    chart		    2
+  }
+  chart {
+    id			    11
+    name		    "closed circuit cooling tower/Feuchtkugel-\ntemperatureinfluss /\nwet-bulb temperature effect/wet-bulb temperature"
+    windowPosition	    [416.813 55.13 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1600 1200 1.333333333333333]
+    treeNode		    [0 12 0 0]
+    firstTransition	    14
+    firstJunction	    13
+    viewObj		    11
+    machine		    1
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    15
+    chartFileNumber	    7
+    disableImplicitCasting  1
+    eml {
+      name		      "fcn"
+    }
+  }
+  state {
+    id			    12
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    11
+    treeNode		    [11 0 0 0]
+    superState		    SUBCHART
+    subviewer		    11
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "%Festlegung der Eingänge\nfunction t_fk = fcn(t_luftein, phi_luftein, t_tau)\n\n%Konstante/Variable\ncp_luft = 1.006;        %[kJ/kgK]\ncp_dampf = 1.861;       %[kJ/kgK]\ncp_wasser = 4.19;       %[kJ/kgK]\ndh_v0 = 2500;           %[kJ/kg]\nphi_feuchtkugel = 100;  %[%]\np = 10^5;               %[Pa]\nm = 1;\ntmax = t_luftein;       %[°C]\ntmin = t_tau;           %[°C]\n\n% Absolute Feuchte-Berechnung Lufteintritt Bereich 0°C < t < 100°C [1]\nps_luftein = 611*exp((-1.91275)*10^(-4)+7.258*10^(-2)*t_luftein-2.939*10^(-4)*t_luftein^2+9.841*10^(-7)*t_luftein^3-1.92*10^(-9)*t_luftein^4);\nx_luftein = (0.622*(phi_luftein/100)*ps_luftein)/(p-(phi_luftein/100)*ps_luftein);\n\n% Enthalpieberechnung Lufteintritt\nh_luftein = cp_luft*t_luftein+x_luftein*(cp_dampf*t_luftein+dh_v0);\n\n% Feuchtkugeltemperaturberechnung, Halbierungsverfahren\nt_feuchtkugel = (tmax+tmin)/2;\n\n% Absolute Feuchteberechnung Feuchtkugel Bereich 0°C < t < 100°C [1]\nps_feuchtkugel = 611*exp((-1.91275)*10^(-4)+7.258*10^(-2)*t_feuchtkugel-2.939*10^(-4)*t_feuchtkugel^2+9.841*10^(-7)*t_feuchtkugel^3-1.92*10^(-9)*t_feuchtkugel^4);\nx_feuchtkugel = (0.622*(phi_feuchtkugel/100)*ps_feuchtkugel)/(p-(phi_feuchtkugel/100)*ps_feuchtkugel);\n\n% Enthalpieberechnung Feuchtkugel\nh_feuchtkugel = cp_luft*t_feuchtkugel+x_feuchtkugel*(cp_dampf*t_feuchtkugel+dh_v0);\n\n% Berechnung der Werte u1 und u2,; Formel aus VDI-Wärmeatlas\nu1 = (h_luftein-h_feuchtkugel)/(x_luftein-x_feuchtkugel);\nu2 = cp_wasser*t_feuchtkugel;\n\n% Bewertung von u1 und u2 Beginn der Schleife\n%            (u1-u2)<=0.001 ist die Feuchtkugeltemperatur gefunden\n%            u1>u2 tmax = tFk\n%            u1<u2 tmin = tFk\n while (u1-u2)>0.001 || (u1-u2)< 0 \n    \n    if u1>u2\n        tmax = t_feuchtkugel;\n        \n    else \n        tmin = t_feuchtkugel;\n        \n    end\n  \n% Feuchtkugeltemperaturberechnung\nt_feuchtkugel = (tmax+tmin)/2;\n\n% Absolute Feuchteberechnung Feuchtkugel\nps_feuchtkugel = 611*exp((-1.91275)*10^(-4)+7.258*10^(-2)*t_feuchtkugel-2.939*10^(-4)*t_feuchtkugel^2+9.841*10^(-7)*t_feuchtkugel^3-1.92*10^(-9)*t_feuchtkugel^4);\nx_feuchtkugel = (0.622*(phi_feuchtkugel/100)*ps_feuchtkugel)/(p-(phi_feuchtkugel/100)*ps_feuchtkugel);\n\n% Enthalpieberechnung Feuchtkugel\nh_feuchtkugel = cp_luft*t_feuchtkugel+x_feuchtkugel*(cp_dampf*t_feuchtkugel+dh_v0);\n\n% Berechnung der Werte u1 und u2\nu1 = (h_luftein-h_feuchtkugel)/(x_luftein-x_feuchtkugel);\nu2 = cp_wasser*t_feuchtkugel;\n\n% Schleifenzähler\nm = m+1;\n \nend\n\n% Feuchtkugeltemperatur gefunden - Ausgabe\nt_fk = t_feuchtkugel;"
+      editorLayout	      "100 M4x1[2 3 1288 778]"
+    }
+  }
+  junction {
+    id			    13
+    position		    [23.5747 49.5747 7]
+    chart		    11
+    linkNode		    [11 0 0]
+    subviewer		    11
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    14
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      13
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    11
+    linkNode		    [11 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    11
+    drawStyle		    SMART
+    executionOrder	    1
+  }
+  data {
+    id			    15
+    name		    "t_luftein"
+    linkNode		    [11 0 16]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "inherited"
+    fixptType {
+      slope		      1
+      baseType		      SF_INT16_TYPE
+    }
+    complexity		    SF_COMPLEX_INHERITED
+  }
+  data {
+    id			    16
+    name		    "t_fk"
+    linkNode		    [11 15 17]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "inherited"
+    fixptType {
+      slope		      1
+      baseType		      SF_INT16_TYPE
+    }
+    complexity		    SF_COMPLEX_INHERITED
+  }
+  data {
+    id			    17
+    name		    "phi_luftein"
+    linkNode		    [11 16 18]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "inherited"
+    complexity		    SF_COMPLEX_INHERITED
+  }
+  data {
+    id			    18
+    name		    "t_tau"
+    linkNode		    [11 17 0]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "inherited"
+    complexity		    SF_COMPLEX_INHERITED
+  }
+  instance {
+    id			    19
+    name		    "closed circuit cooling tower/Feuchtkugel-\ntemperatureinfluss //\nwet-bulb temperature effect/wet-bulb temperature"
+    machine		    1
+    chart		    11
+  }
+  chart {
+    id			    20
+    name		    "closed circuit cooling tower/Leistungseinflüsse / \ninfluence on coolingpower/t_ia_ist /isinf"
+    windowPosition	    [356.813 131.93 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1600 1200 1.333333333333333]
+    treeNode		    [0 21 0 0]
+    firstTransition	    23
+    firstJunction	    22
+    viewObj		    20
+    machine		    1
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    24
+    chartFileNumber	    8
+    disableImplicitCasting  1
+    eml {
+      name		      "fcn"
+    }
+  }
+  state {
+    id			    21
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    20
+    treeNode		    [20 0 0 0]
+    superState		    SUBCHART
+    subviewer		    20
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "\nfunction y = fcn(u)\n\n%Verhindert die Fehlerausgabe bei Teilen mit dem Wert 0 \n%Dieser Zustand tritt ein wenn der Volumenstrom 0 l/s gesetzt wird.\n\nv = isinf (u);\n\nif v == 0\n    \n    y = u;\n\nelse \n    \n    y = 0;\n    \nend"
+      editorLayout	      "100 M4x1[288 38 713 438]"
+    }
+  }
+  junction {
+    id			    22
+    position		    [23.5747 49.5747 7]
+    chart		    20
+    linkNode		    [20 0 0]
+    subviewer		    20
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    23
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      22
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    20
+    linkNode		    [20 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    20
+    drawStyle		    SMART
+    executionOrder	    1
+  }
+  data {
+    id			    24
+    name		    "u"
+    linkNode		    [20 0 25]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "inherited"
+    fixptType {
+      slope		      1
+      baseType		      SF_INT16_TYPE
+    }
+    complexity		    SF_COMPLEX_INHERITED
+  }
+  data {
+    id			    25
+    name		    "y"
+    linkNode		    [20 24 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "inherited"
+    fixptType {
+      slope		      1
+      baseType		      SF_INT16_TYPE
+    }
+    complexity		    SF_COMPLEX_INHERITED
+  }
+  instance {
+    id			    26
+    name		    "closed circuit cooling tower/Leistungseinflüsse // \ninfluence on coolingpower/t_ia_ist /isinf"
+    machine		    1
+    chart		    20
+  }
+  chart {
+    id			    27
+    name		    "closed circuit cooling tower/Leistungseinflüsse / \ninfluence on coolingpower/t_ia_ist /isnan"
+    windowPosition	    [341.813 151.13 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1600 1200 1.333333333333333]
+    treeNode		    [0 28 0 0]
+    firstTransition	    30
+    firstJunction	    29
+    viewObj		    27
+    machine		    1
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    31
+    chartFileNumber	    9
+    disableImplicitCasting  1
+    eml {
+      name		      "fcn"
+    }
+  }
+  state {
+    id			    28
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    27
+    treeNode		    [27 0 0 0]
+    superState		    SUBCHART
+    subviewer		    27
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "\nfunction y = fcn(u)\n\n%Verhindert die Fehlerausgabe bei Teilen durch den Wert 0 \n%Dieser Zustand tritt ein wenn der Volumenstrom 0 l/s gesetzt wird.\n\nv = isnan (u);\n\nif v == 0\n    \n    y = u;\n\nelse \n    \n    y = 0;\n    \nend"
+      editorLayout	      "100 M4x1[288 38 713 438]"
+    }
+  }
+  junction {
+    id			    29
+    position		    [23.5747 49.5747 7]
+    chart		    27
+    linkNode		    [27 0 0]
+    subviewer		    27
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    30
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      29
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    27
+    linkNode		    [27 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    27
+    drawStyle		    SMART
+    executionOrder	    1
+  }
+  data {
+    id			    31
+    name		    "u"
+    linkNode		    [27 0 32]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "inherited"
+    fixptType {
+      slope		      1
+      baseType		      SF_INT16_TYPE
+    }
+    complexity		    SF_COMPLEX_INHERITED
+  }
+  data {
+    id			    32
+    name		    "y"
+    linkNode		    [27 31 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "inherited"
+    fixptType {
+      slope		      1
+      baseType		      SF_INT16_TYPE
+    }
+    complexity		    SF_COMPLEX_INHERITED
+  }
+  instance {
+    id			    33
+    name		    "closed circuit cooling tower/Leistungseinflüsse // \ninfluence on coolingpower/t_ia_ist /isnan"
+    machine		    1
+    chart		    27
+  }
+  chart {
+    id			    34
+    name		    "closed circuit cooling tower/Verbrauch / consumption/Verdunstung/Verdunstungsmenge"
+    windowPosition	    [371.813 112.73 200.25 189.75]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1600 1200 1.333333333333333]
+    treeNode		    [0 35 0 0]
+    firstTransition	    37
+    firstJunction	    36
+    viewObj		    34
+    machine		    1
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    38
+    chartFileNumber	    10
+    disableImplicitCasting  1
+    eml {
+      name		      "fcn"
+    }
+  }
+  state {
+    id			    35
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    34
+    treeNode		    [34 0 0 0]
+    superState		    SUBCHART
+    subviewer		    34
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function x_fl = fcn(h_le, mdot, qdot, t_ie, x_le, t_tau, p)\n\ncp_lt = 1.006;\ncp_d = 1.861;\ncp_w = 4.19;\ndhv0 = 2500;\ntmax = t_ie;\ntmin = t_tau;\nt_zw = 15;\nphi_luftaus = 100;\nm = 1;\n\n\n% Vorbedingung qdot muss positiv sein um eine Verdunstung zu gewährleisten ansonsten ist es ein Kondensation\nif qdot < 0\n    \n    x_luftaus = 0;\n    \nelse\n    % Luftaustrittstemperaturberechnung, Halbierungsverfahren\n        t_luftaus = (tmax+tmin)/2;\n    \n    % Absolute Feuchte-Berechnung Lufteintritt\n        ps_luftaus = 611*exp((-1.91275)*10^(-4)+7.258*10^(-2)*t_luftaus-2.939*10^(-4)*t_luftaus^2+9.841*10^(-7)*t_luftaus^3-1.92*10^(-9)*t_luftaus^4);\n        x_luftaus = (0.622*(phi_luftaus/100)*ps_luftaus)/(p-(phi_luftaus/100)*ps_luftaus);\n\n    % Enthalpie Luftaustritt mit dem schon berechneten Qpkt\n        h_la = qdot/mdot + (x_luftaus-x_le)*cp_w*t_zw + h_le;\n    \n    % Austrittstemperatur \n        tlab = (h_la - x_luftaus*dhv0)/(cp_lt + x_luftaus*cp_d);\n\n    % Beginn der Schleife \n    % (t_luftaus - tlab) < 0,001 und > -0,001 ist die Austrittstemperatur gefunden\n    %  t_luftaus < tlab  tmin = t_luftaus\n    %  t_luftaus > tlab  tmax = t_luftaus\n        while (t_luftaus - tlab)>0.001 || (t_luftaus - tlab) < -0.001 && m < 30\n    \n            if t_luftaus < tlab\n        \n                tmin = t_luftaus;\n    \n            else\n        \n                tmax = t_luftaus;\n    \n            end\n    \n            % Luftaustrittstemperaturberechnung, Halbierungsverfahren\n                t_luftaus = (tmax+tmin)/2;\n    \n            % Absolute Feuchte-Berechnung Lufteintritt\n                ps_luftaus = 611*exp((-1.91275)*10^(-4)+7.258*10^(-2)*t_luftaus-2.939*10^(-4)*t_luftaus^2+9.841*10^(-7)*t_luftaus^3-1.92*10^(-9)*t_luftaus^4);\n                x_luftaus = (0.622*(phi_luftaus/100)*ps_luftaus)/(p-(phi_luftaus/100)*ps_luftaus);\n        \n            % Enthalpie Luftaustritt mit dem schon berechneten Qpkt\n                h_la = qdot/mdot + (x_luftaus-x_le)*cp_w*t_zw + h_le;\n        \n            % Austrittstemperatur \n                tlab = (h_la - x_luftaus*dhv0)/(cp_lt + x_luftaus*cp_d);\n        \n            % Schleifenzähler\n                m = m + 1;\n    \n        end\n\nend\n\nx_fl = x_luftaus-x_le;\n"
+      editorLayout	      "100 M4x1[12 20 1288 778]"
+    }
+  }
+  junction {
+    id			    36
+    position		    [23.5747 49.5747 7]
+    chart		    34
+    linkNode		    [34 0 0]
+    subviewer		    34
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    37
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      36
+      intersection	      [7 0 -1 -1 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    34
+    linkNode		    [34 0 0]
+    dataLimits		    [23.575 23.575 14.625 34.575]
+    subviewer		    34
+    drawStyle		    SMART
+    executionOrder	    1
+  }
+  data {
+    id			    38
+    name		    "h_le"
+    linkNode		    [34 0 39]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "inherited"
+    fixptType {
+      slope		      1
+      baseType		      SF_INT16_TYPE
+    }
+    complexity		    SF_COMPLEX_INHERITED
+  }
+  data {
+    id			    39
+    name		    "mdot"
+    linkNode		    [34 38 40]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "inherited"
+    complexity		    SF_COMPLEX_INHERITED
+  }
+  data {
+    id			    40
+    name		    "x_fl"
+    linkNode		    [34 39 41]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "inherited"
+    fixptType {
+      slope		      1
+      baseType		      SF_INT16_TYPE
+    }
+    complexity		    SF_COMPLEX_INHERITED
+  }
+  data {
+    id			    41
+    name		    "qdot"
+    linkNode		    [34 40 42]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "inherited"
+    complexity		    SF_COMPLEX_INHERITED
+  }
+  data {
+    id			    42
+    name		    "t_ie"
+    linkNode		    [34 41 43]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "inherited"
+    complexity		    SF_COMPLEX_INHERITED
+  }
+  data {
+    id			    43
+    name		    "x_le"
+    linkNode		    [34 42 44]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "inherited"
+    complexity		    SF_COMPLEX_INHERITED
+  }
+  data {
+    id			    44
+    name		    "t_tau"
+    linkNode		    [34 43 45]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "inherited"
+    complexity		    SF_COMPLEX_INHERITED
+  }
+  data {
+    id			    45
+    name		    "p"
+    linkNode		    [34 44 0]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "inherited"
+    complexity		    SF_COMPLEX_INHERITED
+  }
+  instance {
+    id			    46
+    name		    "closed circuit cooling tower/Verbrauch // consumption/Verdunstung/Verdunstungsmenge"
+    machine		    1
+    chart		    34
+  }
+  target {
+    id			    47
+    name		    "sfun"
+    description		    "Default Simulink S-Function Target."
+    machine		    1
+    linkNode		    [1 0 0]
+  }
+}

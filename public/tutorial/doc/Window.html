@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="de-at" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>window</title>
+<style type="text/css">
+ div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+p
+	{margin-right:0cm;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ a:link
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;
+}
+</style>
+</head>
+
+<body>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+"Times New Roman"'>
+
+<hr size=10 width="100%" noshade style='color:#A0A0A0' align=center>
+
+</span></span></span></div>
+
+<p><!--[if gte vml 1]><v:shape id="Bild_x0020_305" o:spid="_x0000_s1340"
+ type="#_x0000_t75" style='position:absolute;left:0;text-align:left;
+ margin-left:56pt;margin-top:0;width:96pt;height:58.5pt;z-index:303;
+ visibility:visible;mso-wrap-style:square;mso-wrap-distance-left:0;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:0;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:right;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line'
+ o:allowoverlap="f">
+ <v:imagedata src="Figures/window.jpg" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <w:wrap type="square" anchory="line" xmlns:w="urn:schemas-microsoft-com:office:word"/>
+</v:shape><![endif]--><![if !vml]><img width=128 height=78
+src="Figures/window.jpg" align=right v:shapes="Bild_x0020_305"><![endif]><span class=GramE><span style='mso-bookmark:
+Window'><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><b><span
+lang=EN-US style='font-size:18.0pt;line-height:120%'>window</span></b></span></span></span></span><span
+style='mso-bookmark:Window'><span style='mso-bookmark:literature'><span
+style='mso-bookmark:schwamberger'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> <br>
+<b>Path: CARNOT/loads/wall_floor</b> <br clear=all style='mso-special-character:
+line-break'>
+<o:p></o:p></span></span></span></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:Window'><span style='mso-bookmark:literature'><span
+style='mso-bookmark:schwamberger'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;mso-fareast-font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></span></span></span></div>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Purpose</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+Window model for houses. </span><span lang=EN-US style='font-size:12.0pt;
+line-height:120%'><o:p></o:p></span></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Description</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+The window model is the same as the wall model (see wall_out). The number of
+nodes i is identical to the number of glass panes. The transmission, reflection
+and absorption are functions of the incoming radiation, thickness, refractive
+index and extinction coefficient of the glass material (</span></span></span><a
+href="carnot_manual.htm#duffie_beckman"><span style='mso-bookmark:literature'><span
+style='mso-bookmark:schwamberger'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>DUFFIE-BECKMAN, 1991</span></span></span></a><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>). The transmittance for
+direct irradiation on a window glass </span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;font-family:Symbol'>t</span><sub><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>b</span></sub><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> depends on the incidence
+angle </span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;font-family:Symbol'>T</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> as shown in the figure. </span></span></span></p>
+
+<p><!--[if gte vml 1]><v:shape id="Bild_x0020_306" o:spid="_x0000_s1339"
+ type="#_x0000_t75" style='position:absolute;left:0;text-align:left;
+ margin-left:0;margin-top:0;width:169.5pt;height:124.5pt;z-index:304;
+ visibility:visible;mso-wrap-style:square;mso-wrap-distance-left:0;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:0;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:left;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line'
+ o:allowoverlap="f">
+ <v:imagedata src="Figures/window_characteristic.jpg" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <w:wrap type="square" anchory="line" xmlns:w="urn:schemas-microsoft-com:office:word"/>
+</v:shape><![endif]--><![if !vml]><img width=226 height=166
+src="Figures/window_characteristic.jpg" align=left v:shapes="Bild_x0020_306"><![endif]><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><a
+name="figure_1_1"></a><span style='mso-bookmark:figure_1_1'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'><br clear=all>
+Figure<span class=GramE>:normalized</span> transmittance of glass as a function
+of incidence angle </span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;font-family:Symbol'>T</span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> (with </span><span lang=EN-US style='font-size:13.5pt;line-height:120%;
+font-family:Symbol'>a</span><span lang=EN-US style='font-size:13.5pt;line-height:120%'> = 0° if
+vertical on window) <br>
+The transmittance for diffuse irradiation is </span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;font-family:Symbol'>t</span><sub><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>d</span></sub><span lang=EN-US style='font-size:13.5pt;line-height:120%'> = </span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;font-family:Symbol'>a</span><sub><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>b</span></sub><span lang=EN-US style='font-size:13.5pt;line-height:120%'>(</span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;font-family:Symbol'>T</span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>=60°). This allows calculation of solar gain into the room
+behind the glass <span class=GramE>pane :</span> </span></span></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+class=GramE><span lang=EN-US style='font-size:13.5pt;line-height:120%'>dq<sub>sol</sub>/dt</span></span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> = </span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;font-family:Symbol'>t</span><sub><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>b</span></sub><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> (</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;font-family:Symbol'>T</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>)*I<sub>T,b</sub> + </span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;font-family:Symbol'>t</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>d*I<sub>T,b</sub>[W/<sup>2</sup>]
+</span></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Incoming solar radiation
+is exclusively absorbed by the floor and converted into heat at the floor
+surface. All other structural components of the room communicate with this
+solar heated surface via the radiative and convective node. </span></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Solar radiation absorbed
+by the window results in heating of the pane(s), which can be calculated with </span></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+class=GramE><span lang=EN-US style='font-size:13.5pt;line-height:120%'>dq<sub>abs</sub>/dt</span></span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> = g*</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;font-family:Symbol'>t</span><sub><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>b</span></sub><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> (</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;font-family:Symbol'>T</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>)*(1/</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;font-family:Symbol'>t</span><sub><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>b</span></sub><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> (</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;font-family:Symbol'>t</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>=0) - 1)*I<sub>T,b</sub> +
+(g - </span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;font-family:Symbol'>t</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>d)*I<sub>T,b</sub>[W/<sup>2</sup>]
+</span></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>For simplification an
+equal distribution across all panes of the window is assumed. </span></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Parameters and Dialog Box</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'><br>
+</span></span></span><!--[if gte vml 1]><v:shape id="Bild_x0020_307" o:spid="_x0000_s1338"
+ type="#_x0000_t75" style='position:absolute;left:0;text-align:left;
+ margin-left:0;margin-top:0;width:282pt;height:484.5pt;z-index:305;
+ visibility:visible;mso-wrap-style:square;mso-wrap-distance-left:0;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:0;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:left;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line'
+ o:allowoverlap="f">
+ <v:imagedata src="Figures/windowSHOT.jpg" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <w:wrap type="square" anchory="line" xmlns:w="urn:schemas-microsoft-com:office:word"/>
+</v:shape><![endif]--><![if !vml]><img width=376 height=646
+src="Figures/windowSHOT.jpg" align=left v:shapes="Bild_x0020_307"><![endif]><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'><br clear=all
+style='mso-special-character:line-break'>
+</span></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Characteristics</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+Direct Feedthrough&nbsp;&nbsp;&nbsp;Yes <br>
+Sample
+time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size:13.5pt;line-height:120%'>&nbsp;
+</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> Inherited
+from driving block <br>
+States
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size:13.5pt;line-height:120%'>&nbsp;&nbsp;&nbsp;
+</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> corresponding
+to the number of nodes <br>
+Vectorized&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size:13.5pt;line-height:120%'>&nbsp;&nbsp;
+</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> No
+</span></span></span></p>
+
+</body>
+
+</html>

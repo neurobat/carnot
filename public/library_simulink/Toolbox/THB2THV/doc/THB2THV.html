@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head id="h1">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="../css/default.css" type="text/css" media="screen" /> 
+	
+	
+	<title>THB2THV</title>
+	<style type="text/css">
+	h1{
+		margin-left: 145px;
+		font-family: Calibri, sans-serif;
+		font-size: 18pt;
+		color:#5A5A5A;
+	}
+	h2{
+		margin-left: 145px;
+		font-family: Calibri, sans-serif;
+		font-size: 13.5pt;
+		color:#5A5A5A;
+	}
+	p {
+		margin-left: 145px;
+		font-family: Calibri, sans-serif;
+		font-size: 13.5pt;
+		color:#5A5A5A;
+	}
+	table {
+		margin-left: 145px;
+		font-family: Calibri, sans-serif;
+		font-size: 13.5pt;
+		color:#5A5A5A;
+	}
+	hr {margin-left: 145px;
+	    color:#A0A0A0}
+	</style>
+</head>
+
+<body>
+	
+<!--	<div id='header'></div>-->
+        <hr size=10 noshade> </hr>
+		<h1>THB2THV </h1>
+		<hr size=2 ></hr>
+
+
+			
+		<h2>Description</h2>
+		
+		<p>
+		This block THB2THV converts the Thermo Hydraulic Bus (THB) into a Thermo Hydraulic Vector (THV). 
+		</p>
+		
+		
+		<h2 class="style_h2">Inputs</h2>
+		<table class='tabelle'>
+			<tr>
+				<th align=center style="width: 60px" >Input</th>	
+				<th align=center style="width: 70px" >Unit</th> 
+				<th align=center style="width: 80px" >Used for</th>	
+				<th align=center style="width: 150px" >Expected values</th>
+			</tr>
+			<tr>
+			<td align=center  style="width: 60px" >THB</td> 
+				<td align=center  style="width: 70px" >see <a href='BasicsTHB.html'>THB</td>	
+				<td align=center  style="width: 80px">fluid data</td>	
+				<td align=center style="width: 150px" >-</td>
+			</tr>
+		</table>
+		
+		
+		<h2 class="style_h2">Outputs</h2>
+		<table class='tabelle'>
+			<tr>
+				<th align=center style="width: 60px" >Output</th>	
+				<th align=center style="width: 70px" >Unit</th>
+			</tr>
+			<tr >
+				<td align=center style="width: 60px" >THV</td> 
+				<td align=center style="width: 70px"> see <a href='BasicsTHV.html'> THV </td>
+			</tr>
+		</table>
+		
+		<h2 class="style_h2">Function</h2>
+		<p>
+		This block converts the Thermo-Hydraulic-Bus to the old Thermo-Hydraulic-Vector from Carnot. The bus elements of the THB are converted to a Vector.
+		The THV consists of 20 elemtens. The first 10 elements are defined in Carnot. The second set of 10 elements is free to be used.
+		In VCarnot e.g. element 11 is the hydraulic inductance. Old Carnot blocks can handle this by ignoring the elements 11 to 20.
+		</p>
+		<p>
+		The elements of the THB and THB are described in the corresponding sections (see below).
+		</p>
+	
+	</div>
+	
+	
+</body>
+</html>

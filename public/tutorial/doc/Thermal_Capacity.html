@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>capacity</title>
+<style type="text/css">
+p
+	{margin-right:0cm;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ul
+	{margin-bottom:0cm;}
+ li.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+a:link
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;
+}
+.auto-style1 {
+	margin-left: 120px;
+}
+</style>
+</head>
+
+<body>
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;mso-fareast-font-family:"Times New Roman"'>
+<hr size=10 width="100%" noshade style='color:#A0A0A0' align=center>
+</span></span></div>
+
+
+<p><span class=GramE><span style='mso-bookmark:capacity'>
+<span
+style='mso-bookmark:literature'><b>
+<span style='font-size:18.0pt;
+line-height:120%'>Thermal C</span><span lang=EN-US style='font-size:18.0pt;
+line-height:120%'>apacity</span></b></span></span></span><span
+style='mso-bookmark:capacity'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+<b>Path: CARNOT/<span lang="de">B</span>asic<span lang="de">/Thermal_Model</span>s</b> <br clear=all style='mso-special-character:line-break'>
+<o:p></o:p></span></span></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:capacity'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></span></span></div>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Purpose</span></b><span lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+</span><span style='font-size:13.5pt;line-height:120%'> One node model of a 
+thermal capacity with entering massflow and losses to ambien. </span><span lang=EN-US style='font-size:13.5pt;line-height:120%'> This block breaks the direct feedthrough of any incoming temperature vector. </span><span lang=EN-US style='font-size:12.0pt;
+line-height:120%'><o:p></o:p></span></span></p>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Description</span></b><span lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+The block breaks the incoming temperature vector and integrates it according
+to: </span></span><font size="4"><br />
+<br />
+mcap</font><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>
+* <span class=GramE>dT/dt</span> =</span><span style='font-size:13.5pt;line-height:120%'> </span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>UA</span><span style='font-size:13.5pt;line-height:120%'>_loss</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> * (T</span><span style='font-size:13.5pt;line-height:120%'>amb</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>
+- T</span><span style='font-size:13.5pt;line-height:120%'>node</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>) 
++ m</span><span style='font-size:13.5pt;line-height:120%'>dot</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> * </span><span style='font-size:13.5pt;line-height:120%'>cp</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>
+* (T</span><span style='font-size:13.5pt;line-height:120%'>in</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>- T</span><span style='font-size:13.5pt;line-height:120%'>node</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>) <br />
+</span></span></span></span><span style='mso-bookmark:literature'>
+<span lang=EN-US style='font-size:13.5pt;line-height:120%'> <br />
+where </span></span></p>
+
+<ul type=disc class="auto-style1">
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l13 level1 lfo53;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>U</span><span style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>A </span>
+ <span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>is the </span>
+ <span style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>loss coefficent 
+ to ambient</span><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'> </span>
+ <span style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>in </span>
+ <span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>W/K </span><span lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></li>
+    <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l13 level1 lfo53;tab-stops:list 36.0pt'>
+	<span
+     style='mso-bookmark:literature'>
+	<span style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>mcap is the 
+	thermal capacity = mass in kg *</span><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'> heat
+     capacity </span>
+	<span style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>in </span>
+	<span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>J/(kg*K)</span></span></li>
+	<li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l13 level1 lfo53;tab-stops:list 36.0pt; font-size: 13.5pt;'>
+	cp is the heat capacity of the entering fluid flow in J/(kg*K)</li>
+	<li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l13 level1 lfo53;tab-stops:list 36.0pt; font-size: 13.5pt;'>
+	mdot is the massflow rate in kg/s</li>
+	<li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l13 level1 lfo53;tab-stops:list 36.0pt; font-size: 13.5pt;'>
+	Tamb is the ambient temperature in °C</li>
+</ul>
+
+<p><br />
+<span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'><a href="carnot_manual.htm#examples">Example:</a></span></span><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> </span></span><a href="carnot_manual.htm#example3"><span style='mso-bookmark:
+literature'><span lang=EN-US style='font-size:13.5pt;line-height:120%'>see
+sdhws3.mdl</span></span></a><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> </span></span></p>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Characteristics </span></b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'><br>
+Direct Feedthrough</span><span style='font-size:13.5pt;
+line-height:120%'>&nbsp; </span>
+<span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>No <br>
+Sample time</span><span style='font-size:13.5pt;
+line-height:120%'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>Inherited from driving block <br>
+Vectorized</span><span style='font-size:13.5pt;
+line-height:120%'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>No</span></span></p>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Parameters and Dialog Box</span></b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'><br>
+</span></span><br />
+<!--[if gte vml 1]><v:shape id="Bild_x0020_19" o:spid="_x0000_s1626"
+ type="#_x0000_t75" style='position:absolute;left:0;text-align:left;
+ margin-left:0;margin-top:0;width:322.5pt;height:238.5pt;z-index:17;
+ visibility:visible;mso-wrap-style:square;mso-wrap-distance-left:0;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:0;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:left;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line'
+ o:allowoverlap="f">
+ <v:imagedata src="Figures/capacitySHOT.jpg" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <w:wrap type="square" anchory="line" xmlns:w="urn:schemas-microsoft-com:office:word"/>
+</v:shape><![endif]--><img alt="" src="Figures/imgThermalCapacityMask.jpg" /><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'><br clear=all
+style='mso-special-character:line-break'>
+</span></span></p>
+
+</body>
+
+</html>

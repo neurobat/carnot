@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="de-at" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>weather from file</title>
+<style type="text/css">
+ div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+p
+	{margin-right:0cm;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ a:link
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;
+}
+tt
+	{font-family:"Courier New";
+	}
+ .auto-style1 {
+	font-family: Calibri;
+}
+.auto-style2 {
+	font-size: 13.5pt;
+}
+ </style>
+</head>
+
+<body>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+"Times New Roman"'>
+
+<hr size=10 width="100%" noshade style='color:#A0A0A0' align=center>
+
+</span></span></span></div>
+
+<p><!--[if gte vml 1]><v:shape id="Bild_x0020_297" o:spid="_x0000_s1348"
+ type="#_x0000_t75" style='position:absolute;left:0;text-align:left;
+ margin-left:50pt;margin-top:0;width:90pt;height:35.25pt;z-index:295;
+ visibility:visible;mso-wrap-style:square;mso-wrap-distance-left:0;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:0;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:right;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line'
+ o:allowoverlap="f">
+ <v:imagedata src="Figures/weather_from_file.jpg" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <w:wrap type="square" anchory="line" xmlns:w="urn:schemas-microsoft-com:office:word"/>
+</v:shape><![endif]--><![if !vml]><img width=120 height=47
+src="Figures/weather_from_file.jpg" align=right v:shapes="Bild_x0020_297"><![endif]><span class=GramE><span
+style='mso-bookmark:weather_from_file'><span style='mso-bookmark:literature'><span
+style='mso-bookmark:schwamberger'><b><span lang=EN-US style='font-size:18.0pt;
+line-height:120%'>weather</span></b></span></span></span></span><span
+style='mso-bookmark:weather_from_file'><span style='mso-bookmark:literature'><span
+style='mso-bookmark:schwamberger'><b><span lang=EN-US style='font-size:18.0pt;
+line-height:120%'> from file</span></b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> <br>
+<b>Path: CARNOT/weather</b> </span></span></span></span><span style='mso-bookmark:
+literature'><span style='mso-bookmark:schwamberger'><span lang=EN-US
+style='font-size:13.5pt;line-height:120%'><br clear=all style='mso-special-character:
+line-break'>
+<o:p></o:p></span></span></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></span></span></div>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Purpose</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+Input block for external </span></span></span><a
+href="carnot_manual.htm#weather_data_vector"><span style='mso-bookmark:literature'><span
+style='mso-bookmark:schwamberger'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>weather data</span></span></span></a><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> files. </span><span
+lang=EN-US style='font-size:12.0pt;line-height:120%'><o:p></o:p></span></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Description</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+This block corresponds to the simulink block &quot;From File&quot;. You can
+read in weather data from external files, like TRY (Test Reference Years) <span
+class=GramE>The</span> data files have to be in a Matlab readable form, i.e. in
+the first column the time has to appear. To bring Test Reference Years in the
+Weather data format of CARNOT the m-file </span><tt><span
+lang=EN-US style='font-size:10.0pt;line-height:120%'>Wprepro.m</span></tt><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>, which is located in the
+CARNOT root <span class=GramE>directory</span> can be used. The m-files </span></span></span><a
+href="carnot_manual.htm#Meteonorm2wformat"><span style='mso-bookmark:literature'><span
+style='mso-bookmark:schwamberger'><tt class="auto-style1">
+<span lang=EN-US style='line-height:120%' class="auto-style2">Meteonorm2wformat.m</span></tt></span></span></a><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+lang=EN-US style='line-height:120%' class="auto-style2"> and</span><tt><span
+lang=EN-US style='line-height:120%' class="auto-style2"> </span></tt></span></span><a
+href="carnot_manual.htm#MeteonormMinute2wformat"><span style='mso-bookmark:literature'><span
+style='mso-bookmark:schwamberger'><tt class="auto-style1">
+<span lang=EN-US style='line-height:120%' class="auto-style2">MeteonormMinute2wformat.m</span></tt></span></span></a><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> can be used for Meteonorm
+files. To get more information about the </span></span></span><a
+href="carnot_manual.htm#utility_functions"><span style='mso-bookmark:literature'><span
+style='mso-bookmark:schwamberger'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>utility functions</span></span></span></a><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> you can type </span></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+class=GramE><tt><span lang=EN-US style='font-size:10.0pt;line-height:120%'>help</span></tt></span><tt><span
+lang=EN-US style='font-size:10.0pt;line-height:120%'> write_try</span></tt><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> </span></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+class=GramE><span lang=EN-US style='font-size:13.5pt;line-height:120%'>to</span></span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> the workspace, like as
+for any other MATLAB function. For weather input data files of a different
+format the Wprepro.m has to be adapted to the suitable format.</span></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Parameters and Dialog Box</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'><br>
+<br clear=all style='mso-special-character:line-break'>
+</span></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Characteristics</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+Direct Feedthrough&nbsp;&nbsp;&nbsp;</span><span style='font-size:13.5pt;line-height:120%'>
+</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> Yes <br>
+Sample time specify 
+</span><span style='font-size:13.5pt;line-height:120%'> &nbsp;
+</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> -1 (although weather data usually have 3600 s) <br>
+Vectorized&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size:13.5pt;line-height:120%'>&nbsp;&nbsp;
+</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> No
+</span></span></span></p>
+
+</body>
+
+</html>

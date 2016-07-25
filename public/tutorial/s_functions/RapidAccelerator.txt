@@ -1,0 +1,45 @@
+Rapid Accelerator Mode
+
+Simulink support code generation and compilation of simulation models. The more parts are compiled and consequently not interpreted, the faster the calculation becomes.
+There are three different modes, which can be used with most Carnot blocks out of the box: normal, accelerator and rapid accelerator mode.
+In normal mode C-code S-functions are pre-compiled and consequently very fast. In accelerator mode Simulink blocks will executed faster.
+In rapid accelerator mode additionally (embedded) Matlab functions will accelerated.
+
+***INCLUDE PICTURE CHOOSEMODE.PNG ***
+
+Standard setting is the normal mode. Here most of the functionality is done by Matlab / Simulink. It has the highest compability to other Mathworks toolboxes
+and allows most debugging, but is the slowest mode. If only plain Simulink blocks are used, no compiler is needed.
+
+The accelerator mode compiles the model partially.
+In theory, most functionality of Mathworks products should be useable. However, there are some restrictions in practise. For example, the "Data Display in Simulation"
+does not work properly. The advantage of this mode is the acceleration of the Simulink blocks. Since Simulink blocks often consist of standard blocks, the compilation runs automatically.
+SO the accelerator mode is a quite easy method to accelerate simulations.
+
+As the name indicates, the rapid accelerator mode is the fastest mode.
+In this mode, the model will be compiled completely and run as an .exe. In the Windows task manager a new process with the model's name will appear. Since the rapid accelerator mode
+is linked to code generation, there are several implications:
+- All blocks used must support code generation. For example, interpreted Matlab functions or algebraic loops are not supported.
+- Several functionalities can not be used, in spite of the fact that the model will compile and execute. For example, no messages can be printed on the Matlab prompt.
+Data logging in the Matlab workspace (e.g. via To Workspace blocks) is not supported.
+- While in normal or accelerator mode S-functions are links as .mex-files (which are actually DLLs), the C-code of S-functions will be completely re-compiled.
+This implies that Simulink needs information about the source code (see below). If own S-functions are used, it might be a good idea to check if the results are
+identical in normal and rapid accelerator mode. If there is a bug in the C-code, the behaviour might be completely different, because due to the re-compilation the
+addresses in memory may change. For example, a pointer (array), which is not used properly, may lead to another address in memory. So a different result in two different modes
+may indicate a bug in a C-S-function.
+- Other functionalities can be used, but are very complicated to implement. For example Matlab S-functions for S-functions in ForEach-Subsystems need knowledge of the Target Language Compiler (TLC).
+Although the Legacy Code Tool and the S-Function Builder support generating TLC-files, most Carnot S-function are not supported by these tools.
+
+There are different possibilities to give Simulink information about the C-code. A very simple way is to enter the source files in the model's configuration parameters
+
+*** INCLUDE PICTURE CUSTOMCODE.PNG ***
+
+Simulink shows a very strange behaviour concerning the information needed: All .c-library files must be entered here (in most Carnot simulations carlib.c only).
+Furthermore, at least one file of each directory, where .c source files are located, must be entered. Since all public .c files in Carnot are located in one directory,
+it is sufficient to enter "carlib.c". If own S-functions and own libraries are used, the corresponding files must be entered here.
+
+If only public Carnot files are used, no further information must be entered. In the directory of the binary .mex files, a file named rtwmakecfg.m can be found.
+This file provides all information to Simulink for compiling a model in rapid accelerator mode. If an internal version of Carnot in generation by the version manager,
+this file will be created for the internal C-code as well. It is important that this file is in the same directory as the .mex files and that this directory is in the Matlab path.
+
+To put it in a nutshell, the rapid accelerator mode is a very powerful method to accelerate code. However, it should be considered, which functionality can be used from the beginning of modelling.
+

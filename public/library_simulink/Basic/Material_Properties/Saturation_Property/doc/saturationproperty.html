@@ -1,0 +1,365 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="de-at" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>saturation property</title>
+<style type="text/css">
+ div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+p
+	{margin-right:0cm;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ table.MsoNormalTable
+	{line-height:120%;
+	font-size:10.0pt;
+	font-family:"Calibri","sans-serif";
+	}
+ul
+	{margin-bottom:0cm;}
+ li.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ a:link
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;
+}
+tt
+	{font-family:"Courier New";
+	}
+ p.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+.auto-style1 {
+	margin-left: 120px;
+}
+</style>
+</head>
+
+<body>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:room_radiator'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;mso-fareast-font-family:"Times New Roman"'>
+
+<hr size=10 width="100%" noshade style='color:#A0A0A0' align=center>
+
+</span></span></span></span></div>
+
+<p><!--[if gte vml 1]><v:shape id="Bild_x0020_195" o:spid="_x0000_s1450"
+ type="#_x0000_t75" style='position:absolute;left:0;text-align:left;
+ margin-left:44pt;margin-top:0;width:84pt;height:60.75pt;z-index:193;
+ visibility:visible;mso-wrap-style:square;mso-wrap-distance-left:0;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:0;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:right;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line'
+ o:allowoverlap="f">
+ <v:imagedata src="Figures/saturationproperty.jpg" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <w:wrap type="square" anchory="line" xmlns:w="urn:schemas-microsoft-com:office:word"/>
+</v:shape><![endif]--><![if !vml]><img width=112 height=81
+src="Figures/saturationproperty.jpg" align=right v:shapes="Bild_x0020_195"><![endif]><span
+class=GramE><span style='mso-bookmark:saturationproperty'><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:room_radiator'><b><span lang=EN-US style='font-size:18.0pt;
+line-height:120%'>saturationproperty</span></b></span></span></span></span></span><span style='mso-bookmark:literature'><span
+style='mso-bookmark:schwamberger'><span style='mso-bookmark:room_radiator'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+<b>Path: CARNOT/materials</b> <br clear=all style='mso-special-character:line-break'>
+<o:p></o:p></span></span></span></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:room_radiator'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;mso-fareast-font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></span></span></span></div>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:room_radiator'><b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>Purpose</span></b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> <br>
+The block calculates the saturation properties at the specified conditions. </span><span lang=EN-US style='font-size:12.0pt;
+line-height:120%'><o:p></o:p></span></span></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:room_radiator'><b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>Description</span></b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> <br>
+The block calculates the saturation properties of the (') state and the
+(&quot;) state, i.e. the property of boiling fluid or saturated steam according
+to the equation </span></span></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:room_radiator'><span class=GramE><span lang=EN-US
+style='font-size:13.5pt;line-height:120%'>prop(</span></span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>x) = x*prop&quot; + (1-x)*prop' </span></span></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:room_radiator'><span class=GramE><span lang=EN-US
+style='font-size:13.5pt;line-height:120%'>with</span></span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> </span></span></span></span></p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 style='mso-cellspacing:1.5pt;
+ mso-yfti-tbllook:1184'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  style='mso-bookmark:room_radiator'><span lang=EN-US style='font-size:13.5pt;
+  line-height:120%'>prop </span></span></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  style='mso-bookmark:room_radiator'><span lang=EN-US style='font-size:13.5pt;
+  line-height:120%'>specified property </span></span></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  style='mso-bookmark:room_radiator'><span lang=EN-US style='font-size:13.5pt;
+  line-height:120%'>x </span></span></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  style='mso-bookmark:room_radiator'><span lang=EN-US style='font-size:13.5pt;
+  line-height:120%'>vapurcontent </span></span></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  style='mso-bookmark:room_radiator'><span lang=EN-US style='font-size:13.5pt;
+  line-height:120%'>prop' </span></span></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  style='mso-bookmark:room_radiator'><span lang=EN-US style='font-size:13.5pt;
+  line-height:120%'>boiling fluid state </span></span></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;mso-yfti-lastrow:yes'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  style='mso-bookmark:room_radiator'><span lang=EN-US style='font-size:13.5pt;
+  line-height:120%'>prop&quot; </span></span></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  style='mso-bookmark:room_radiator'><span lang=EN-US style='font-size:13.5pt;
+  line-height:120%'>saturated steam state </span></span></span></span></p>
+  </td>
+ </tr>
+</table>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:room_radiator'><b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>Inputs:</span></b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> </span></span></span></span></p>
+
+<ul type=disc class="auto-style1">
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l156 level1 lfo175;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     style='mso-bookmark:room_radiator'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>temperature in
+     [°C] </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l156 level1 lfo175;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     style='mso-bookmark:room_radiator'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>pressure in
+     [Pa] </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l156 level1 lfo175;tab-stops:list 36.0pt'><a href="carnot_manual.htm#fluid_ID"><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     style='mso-bookmark:room_radiator'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>fluid types</span></span></span></span></a><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     style='mso-bookmark:room_radiator'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'> see above
+     definition </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l156 level1 lfo175;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     style='mso-bookmark:room_radiator'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>fluid-mix
+     [Unit dependents on fluid_type, see definition above] </span><span lang=EN-US style='mso-fareast-font-family:
+     "Times New Roman"'><o:p></o:p></span></span></span></span></li>
+</ul>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:room_radiator'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>The block calls the function &quot;satuprop&quot; in the
+CARNOT </span></span></span></span><a href="carnot_manual.htm#carlib"><span style='mso-bookmark:
+literature'><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:
+room_radiator'><span lang=EN-US style='font-size:13.5pt;line-height:120%'>Carlib
+Library</span></span></span></span></a><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:room_radiator'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> where the calculation is carried out. The material
+properties functions can also be called directly from the command window by
+typing </span></span></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:room_radiator'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class=GramE><tt><span lang=EN-US
+style='font-size:10.0pt;line-height:120%'>saturationproperty(</span></tt></span><tt><span lang=EN-US style='font-size:10.0pt;
+line-height:120%'>temperature, pressure, fluidtype, fluidmix, propertyvalue)</span></tt><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> </span></span></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:room_radiator'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>Instead of the italic variables the actual value of the
+respective property has to be entered. This is possible for the Carlib
+functions density, thermal_conductivity, heat_capacity, kinematic_viscosity,
+prandtl, vapourpressure, saturationtemperature, enthalpy, entropy,
+evaporation_enthalpy, specific_volume. For more information about the function
+type help saturationproperty to the workspace as for any other MATLAB function.
+<br>
+In the case of pure water (</span></span></span></span><a href="carnot_manual.htm#fluid_id"><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:room_radiator'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>fluid ID 1</span></span></span></span></a><span style='mso-bookmark:literature'><span
+style='mso-bookmark:schwamberger'><span style='mso-bookmark:room_radiator'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>) the function
+saturationtemperature calculates the values of saturated steam. <br>
+In the case of moist air (</span></span></span></span><a href="carnot_manual.htm#fluid_id"><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:room_radiator'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>fluid ID 2</span></span></span></span></a><span style='mso-bookmark:literature'><span
+style='mso-bookmark:schwamberger'><span style='mso-bookmark:room_radiator'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>) the function
+saturationtemperature calculates the partial pressure of the water in the moist
+air. </span></span></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:room_radiator'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>The property is specified by entering a </span></span></span></span><a
+href="carnot_manual.htm#property_id"><span style='mso-bookmark:literature'><span
+style='mso-bookmark:schwamberger'><span style='mso-bookmark:room_radiator'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>property_ID</span></span></span></span></a><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:room_radiator'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>. In the same way the </span></span></span></span><a
+href="carnot_manual.htm#phase_id"><span style='mso-bookmark:literature'><span style='mso-bookmark:
+schwamberger'><span style='mso-bookmark:room_radiator'><span lang=EN-US
+style='font-size:13.5pt;line-height:120%'>phase ID</span></span></span></span></a><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:room_radiator'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> has to be entered in the mask of the block to determine
+which saturationproperty, water or steam, should be calculated. The phase_ID is
+defined by the following table: </span></span></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:room_radiator'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>The valid range of the saturation temperature function is </span></span></span></span></p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 style='mso-cellspacing:1.5pt;
+ mso-yfti-tbllook:1184'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  style='mso-bookmark:room_radiator'><span lang=EN-US style='font-size:13.5pt;
+  line-height:120%'>Temperature </span></span></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  style='mso-bookmark:room_radiator'><span lang=EN-US style='font-size:13.5pt;
+  line-height:120%'>result of the function </span></span></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  style='mso-bookmark:room_radiator'><span lang=EN-US style='font-size:13.5pt;
+  line-height:120%'>Pressure </span></span></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  style='mso-bookmark:room_radiator'><span lang=EN-US style='font-size:13.5pt;
+  line-height:120%'>103 Pa to 1555100 Pa </span></span></span></span></p>
+  </td>
+ </tr>
+</table>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:room_radiator'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;mso-fareast-font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></span></span></span></div>
+
+<p class=MsoNormal><span style='mso-bookmark:literature'><span
+style='mso-bookmark:schwamberger'><span style='mso-bookmark:room_radiator'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+"Times New Roman"'>NOTE:</span></b><span lang=EN-US style='font-size:13.5pt;line-height:120%;
+mso-fareast-font-family:"Times New Roman"'> At the moment the saturation
+properties are only available for water <o:p></o:p></span></span></span></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:room_radiator'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;mso-fareast-font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></span></span></span></div>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:room_radiator'><b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>Characteristics</span></b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> <br>
+Direct Feedthrough&nbsp;&nbsp;&nbsp;Yes <br>
+Sample
+time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size:13.5pt;
+line-height:120%'>&nbsp;
+</span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> Inherited
+from driving block <br>
+Vectorized&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size:13.5pt;
+line-height:120%'>&nbsp;&nbsp;
+</span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> Yes
+</span><span
+lang=EN-US style='font-size:12.0pt;line-height:120%'><o:p></o:p></span></span></span></span></p>
+
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>cloudindex</title>
+<style type="text/css">
+ div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+p
+	{margin-right:0cm;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+a:link
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;
+}
+ul
+	{margin-bottom:0cm;}
+ li.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+.auto-style1 {
+	margin-left: 120px;
+}
+.auto-style2 {
+	background-color: #FF0000;
+}
+</style>
+</head>
+
+<body>
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;mso-fareast-font-family:"Times New Roman"'>
+<hr size=10 width="100%" noshade style='color:#A0A0A0' align=center>
+</span></span></div>
+
+
+<p><!--[if gte vml 1]><v:shape id="Bild_x0020_20" o:spid="_x0000_s1625" type="#_x0000_t75"
+ alt="symbol" style='position:absolute;left:0;text-align:left;margin-left:41.75pt;
+ margin-top:0;width:81.75pt;height:42.75pt;z-index:18;visibility:visible;
+ mso-wrap-style:square;mso-wrap-distance-left:0;mso-wrap-distance-top:0;
+ mso-wrap-distance-right:0;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:right;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line'
+ o:allowoverlap="f">
+ <v:imagedata src="Figures/cloudindex.jpg" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <w:wrap type="square" anchory="line" xmlns:w="urn:schemas-microsoft-com:office:word"/>
+</v:shape><![endif]--><![if !vml]>
+<img width=109 height=57
+src="Figures/cloudindex.jpg" align=right alt=symbol v:shapes="Bild_x0020_20"><![endif]><span
+style='mso-bookmark:literature'><a name=cloudindex></a><span style='mso-bookmark:cloudindex'><span
+class=GramE><b><span lang=EN-US style='font-size:18.0pt;line-height:120%'>cloudindex</span></b></span></span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+<b>Path: CARNOT/weather</b><o:p></o:p></span></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;mso-fareast-font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></span></div>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Purpose</span></b><span lang=EN-US style='font-size:13.5pt;line-height:120%'><br>
+<span class=GramE>Calculates</span> the index of cloud. </span><span lang=EN-US style='font-size:12.0pt;
+line-height:120%'><o:p></o:p></span></span></p>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Description</span></b><span lang=EN-US style='font-size:13.5pt;line-height:120%'><br>
+The index of cloud is calculated by comparison of the actual radiation with the
+calculated radiation of a very clear day. For this radiation it is very
+important, to choose the right SkyType. During the night, when there is no
+radiation, the cloud index is linear interpolated.<br>
+This block is also available as workspace function </span></span>
+<a
+href="manualchap_4_3.htm#cloudindex_function"><span style='mso-bookmark:literature'>
+<span
+lang=EN-US style='font-size:13.5pt;line-height:120%' class="auto-style2">cloudindex</span></span></a><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>. </span></span></p>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Inputs:</span></b><span lang=EN-US style='font-size:13.5pt;line-height:120%'> </span></span></p>
+
+<ul type=disc class="auto-style1">
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l33 level1 lfo54;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>time : real
+     time or simulation time [s] </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l33 level1 lfo54;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>Iglob : global
+     radiation on horizontal surface (W/m²) </span><span lang=EN-US style='mso-fareast-font-family:
+     "Times New Roman"'><o:p></o:p></span></span></li>
+</ul>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Outputs:</span></b><span lang=EN-US style='font-size:13.5pt;line-height:120%'> </span></span></p>
+
+<ul type=disc class="auto-style1">
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l234 level1 lfo55;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>cloud :
+     cloudindex [0;1] </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></li>
+</ul>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Literature:</span></b><span lang=EN-US style='font-size:13.5pt;line-height:120%'> </span></span>
+<a
+href="carnot_manual.htm#duffie_beckman"><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Duffie, J., Beckman, W.:
+Solar Engineering of thermal processes, John Wiley &amp; Sons, Inc. 1991</span></span></a><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> </span></span></p>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Parameters and Dialog Box</span></b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> <br>
+</span></span><!--[if gte vml 1]><v:shape id="Bild_x0020_21" o:spid="_x0000_s1624"
+ type="#_x0000_t75" alt="mask" style='position:absolute;left:0;text-align:left;
+ margin-left:0;margin-top:0;width:282pt;height:277.5pt;z-index:19;visibility:visible;
+ mso-wrap-style:square;mso-wrap-distance-left:0;mso-wrap-distance-top:0;
+ mso-wrap-distance-right:0;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:left;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line'
+ o:allowoverlap="f">
+ <v:imagedata src="Figures/cloudindexSHOT.jpg" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <w:wrap type="square" anchory="line" xmlns:w="urn:schemas-microsoft-com:office:word"/>
+</v:shape><![endif]--><![if !vml]>
+<img width=376 height=370
+src="Figures/cloudindexSHOT.jpg" align=left alt=mask v:shapes="Bild_x0020_21"><![endif]><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'><br clear=all
+style='mso-special-character:line-break'>
+</span></span></p>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>&nbsp;</span></span></p>
+
+</body>
+
+</html>

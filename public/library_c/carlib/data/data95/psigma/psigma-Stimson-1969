@@ -1,0 +1,13 @@
+Stimson, H. F., J. Res. Natl. Bur. Stand. 73A, 483 (1969).
+
+7 of 7 psigma data were selected to develop the IAPWS-95 Formulation.
+Temperatures were converted to the ITS-90 scale.
+ 
+ T / K           psigma / MPa  Author                             No.
+  298.1437         0.003168600 STIMSON (1969)                     001
+  313.1398         0.007381300 STIMSON (1969)                     002
+  323.1371         0.012344600 STIMSON (1969)                     003
+  333.1344         0.019933000 STIMSON (1969)                     004
+  343.1318         0.031177000 STIMSON (1969)                     005
+  353.1292         0.047375200 STIMSON (1969)                     006
+  373.1244         0.101325000 STIMSON (1969)                     007

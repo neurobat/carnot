@@ -1,0 +1,313 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>flow mixer</title>
+<style type="text/css">
+ div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+p
+	{margin-right:0cm;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ul
+	{margin-bottom:0cm;}
+ li.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ p.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+a:link
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;
+}
+.auto-style1 {
+	margin-left: 120px;
+}
+</style>
+</head>
+
+<body>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;mso-fareast-font-family:"Times New Roman"'>
+
+<hr size=10 width="100%" noshade style='color:#A0A0A0' align=center>
+
+</span></span></div>
+
+<p><!--[if gte vml 1]><v:shape id="Bild_x0020_84" o:spid="_x0000_s1561" type="#_x0000_t75"
+ style='position:absolute;left:0;text-align:left;margin-left:32pt;margin-top:0;
+ width:1in;height:70.5pt;z-index:82;visibility:visible;mso-wrap-style:square;
+ mso-wrap-distance-left:0;mso-wrap-distance-top:0;mso-wrap-distance-right:0;
+ mso-wrap-distance-bottom:0;mso-position-horizontal:right;
+ mso-position-horizontal-relative:text;mso-position-vertical:absolute;
+ mso-position-vertical-relative:line' o:allowoverlap="f">
+ <v:imagedata src="Figures/flow_mixer.jpg" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <w:wrap type="square" anchory="line" xmlns:w="urn:schemas-microsoft-com:office:word"/>
+</v:shape><![endif]--><![if !vml]>
+<img width=96 height=94
+src="Figures/flow_mixer.jpg" align=right v:shapes="Bild_x0020_84"><![endif]><span class=GramE><span
+style='mso-bookmark:flow_mixer'><span style='mso-bookmark:literature'><b><span
+lang=EN-US style='font-size:18.0pt;line-height:120%'>flow</span></b></span></span></span><span
+style='mso-bookmark:flow_mixer'><span style='mso-bookmark:literature'><b><span
+lang=EN-US style='font-size:18.0pt;line-height:120%'> mixer</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+<b>Path: CARNOT/hydraulics</b> <br clear=all style='mso-special-character:line-break'>
+<o:p></o:p></span></span></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:flow_mixer'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></span></span></div>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Purpose</span></b><span lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+The block calculates the mixture of two incoming flows. </span><span lang=EN-US style='font-size:12.0pt;
+line-height:120%'><o:p></o:p></span></span></p>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Description</span></b><span lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+The block mixes two mass flows. The new temperature is calculated by an energy
+balance. For moist air the temperature and moisture content are calculated by
+an enthalpy balance and a mass balance. In the mixer, the pressure drop of the
+two branches is calculated and added to the pressure drop of the main cycle. </span></span></p>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Method to calculate the pressure drop of the two <span
+class=GramE>branches :</span></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>The pressure drop of the whole flow diversion subcycle
+is calculated with a quadratic term of the form </span></span></p>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;font-family:Symbol'>D</span><span lang=EN-US style='font-size:13.5pt;line-height:120%'>p = c +
+l * m<sub>dot</sub> + q * m<sub>dot</sub><sup>2</sup> </span></span></p>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>The mixer calculates the diversion of the two branches
+under the condition, that the pressure drop in both branches must be the same </span></span></p>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;font-family:Symbol'>D</span><span lang=EN-US style='font-size:13.5pt;line-height:120%'>p<sub>1</sub>
+= </span><span lang=EN-US
+style='font-size:13.5pt;line-height:120%;font-family:Symbol'>D</span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>p<sub>2</sub>= </span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;font-family:Symbol'>D</span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>p</span></span></p>
+
+<p><span style='mso-bookmark:literature'><span class=GramE><span lang=EN-US
+style='font-size:13.5pt;line-height:120%'>or</span></span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> </span></span></p>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c<sub>1</sub> + l<sub>1</sub>m<sub>dot1</sub>
++ q<sub>1</sub>m<sub>dot1</sub><sup>2</sup> = c<sub>2</sub> + l<sub>2</sub>m<sub>dot2</sub>2
++q<sub>2</sub>m<sub>dot2</sub><sup>2</sup></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>A further condition is that the mass balance has to be
+fulfilled </span></span></p>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=GramE>m<sub>dottotal</sub></span>
+= m<sub>dot1</sub> + m<sub>dot2</sub> </span></span></p>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>With these three equations, the quadratic equation is
+solved for three mass <span class=GramE>flows :</span> full mass flow m<sub>dottotal</sub>,
+half of the entire mass flow and 25% of the total mass flow. With these three
+values, the parabola of the quadratic pressure drop equation is defined and can
+be calculated.&nbsp;</span></span></p>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Moreover, the flow diversion rate is calculated <span
+class=GramE>as :</span> f<sub>div</sub> = m<sub>dot1</sub> / m<sub>dottotal</sub>&nbsp;&nbsp;and
+is fed back to the corresponding flow diverter upwards in flow direction. This
+is necessary to give the information on how to divide the mass flow in the
+diverter to the block upstream, because physically the mass flow is divided
+according to the flow resistance in each branch. The mixer also receives a
+branch ID. If the mass flow through one branch is zero (for example because of
+a closed valve) the ID becomes negative and the mass flow through that branch
+is set to zero.</span></span></p>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Inputs:</span></b><span lang=EN-US style='font-size:13.5pt;line-height:120%'> </span></span></p>
+
+<ul type=disc class="auto-style1">
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l87 level1 lfo94;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>Thermo-Hydraulic
+     Vector of the first branch </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l87 level1 lfo94;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>Thermo-Hydraulic
+     Vector of the second branch </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l87 level1 lfo94;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>clq-vector of
+     the main subcycle entering in the flow diversion subcycle </span><span lang=EN-US style='mso-fareast-font-family:
+     "Times New Roman"'><o:p></o:p></span></span></li>
+</ul>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Outputs:</span></b><span lang=EN-US style='font-size:13.5pt;line-height:120%'> </span></span></p>
+
+<ul type=disc class="auto-style1">
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l7 level1 lfo95;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>Thermo-Hydraulic
+     Vector </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l7 level1 lfo95;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>fraction f<sub>div
+     </sub>used for mixing the entering two mass flows in one mass flow </span><span lang=EN-US style='mso-fareast-font-family:
+     "Times New Roman"'><o:p></o:p></span></span></li>
+</ul>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Warning:</span></b><span lang=EN-US style='font-size:13.5pt;line-height:120%'> If you
+have a hydraulic subcycle that contains sub cycles with flow diverters itself,
+you have to take care to build up the cycle in such a way, that the branch with
+more diverting elements is connected to the input THV<sub>2</sub> of the mixer.
+This branch must also be connected to the output THV<sub>2</sub> of the
+corresponding diverter upstream to feed back the right information. </span></span></p>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Warning:</span></b><span lang=EN-US style='font-size:13.5pt;line-height:120%'> connect
+f<sub>div</sub> to the corresponding flow-diverter. Otherwise the massflow-
+diversion is not correct. <o:p></o:p></span></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;mso-fareast-font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></span></div>
+
+<p class=MsoNormal><span style='mso-bookmark:literature'><b><span lang=EN-US
+style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:"Times New Roman"'>NOTE:</span></b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;mso-fareast-font-family:"Times New Roman"'> To speed up the
+simulation, avoid the f<sub>div</sub>-feedback. If you know the rate flowing
+through each branch, short f<sub>div</sub> to ground for flow-mixers and use
+the flow-diverter with a fixed rate. <o:p></o:p></span></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;mso-fareast-font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></span></div>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Parameters and Dialog Box</span></b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'><br>
+</span></span><!--[if gte vml 1]><v:shape id="Bild_x0020_85" o:spid="_x0000_s1560"
+ type="#_x0000_t75" style='position:absolute;left:0;text-align:left;
+ margin-left:0;margin-top:0;width:330.75pt;height:221.25pt;z-index:83;
+ visibility:visible;mso-wrap-style:square;mso-wrap-distance-left:0;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:0;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:left;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line'
+ o:allowoverlap="f">
+ <v:imagedata src="Figures/flow_mixerSHOT.JPG" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <w:wrap type="square" anchory="line" xmlns:w="urn:schemas-microsoft-com:office:word"/>
+</v:shape><![endif]--><![if !vml]>
+<img width=441 height=295
+src="Figures/flow_mixerSHOT.JPG" align=left v:shapes="Bild_x0020_85"><![endif]><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'><br clear=all
+style='mso-special-character:line-break'>
+</span><span lang=EN-US
+style='font-size:12.0pt;line-height:120%'><o:p></o:p></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>&nbsp; </span></span></p>
+
+<ul type=disc class="auto-style1">
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l12 level1 lfo96;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>time-constant
+     in s for the delay of f<sub>div</sub> </span><span lang=EN-US style='mso-fareast-font-family:
+     "Times New Roman"'><o:p></o:p></span></span></li>
+</ul>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>&nbsp;</span></span></p>
+
+<p><a href="carnot_manual.htm#examples"><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>Example:</span></span></a><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> </span></span><a href="carnot_manual.htm#example3"><span style='mso-bookmark:
+literature'><span lang=EN-US style='font-size:13.5pt;line-height:120%'>see
+parallel.mdl</span></span></a><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> </span></span></p>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Characteristics</span></b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> <br>
+Direct Feedthrough&nbsp;&nbsp;&nbsp;Yes <br>
+Sample
+time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size:13.5pt;
+line-height:120%'>&nbsp;
+</span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> Inherited
+from driving block <br>
+Vectorized&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size:13.5pt;
+line-height:120%'>&nbsp;&nbsp;
+</span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> No
+</span></span></p>
+
+</body>
+
+</html>

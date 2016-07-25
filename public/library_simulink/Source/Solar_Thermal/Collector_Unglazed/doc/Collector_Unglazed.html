@@ -1,0 +1,497 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>collector flat plate&nbsp; Path</title>
+<style type="text/css">
+ div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:13.5pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+p
+	{margin-right:0cm;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:13.5pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ table.MsoNormalTable
+	{line-height:120%;
+	font-size:10.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+a:link
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;
+}
+ul
+	{margin-bottom:0cm;}
+ li.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+.auto-style3 {
+	margin-left: 120px;
+}
+</style>
+</head>
+
+<body>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;mso-fareast-font-family:"Times New Roman"'>
+
+<hr size=10 width="100%" noshade style='color:#A0A0A0' align=center>
+
+</span></span></div>
+
+<p><!--[if gte vml 1]><v:shape id="Bild_x0020_25" o:spid="_x0000_s1620" type="#_x0000_t75"
+ style='position:absolute;left:0;text-align:left;margin-left:74.75pt;
+ margin-top:0;width:114.75pt;height:110.25pt;z-index:23;visibility:visible;
+ mso-wrap-style:square;mso-wrap-distance-left:0;mso-wrap-distance-top:0;
+ mso-wrap-distance-right:0;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:right;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line'
+ o:allowoverlap="f">
+ <v:imagedata src="Figures/collector_flat_plate.jpg" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <w:wrap type="square" anchory="line" xmlns:w="urn:schemas-microsoft-com:office:word"/>
+</v:shape><![endif]--><span class=GramE><span
+style='mso-bookmark:collector_flat_plate'><span style='mso-bookmark:literature'><b><span
+lang=EN-US style='font-size:18.0pt;line-height:120%'>collector</span></b></span></span></span><span
+style='mso-bookmark:collector_flat_plate'><span style='mso-bookmark:literature'><b><span
+lang=EN-US style='font-size:18.0pt;line-height:120%'> </span>
+<span style='font-size:18.0pt;line-height:120%'> unglazed</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+<b>Path: CARNOT/<span lang="de">S</span>ource</b></span><b><span style='font-size:13.5pt;line-height:120%'>/Solar_Thermal</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> </span></span></span><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:12.0pt;line-height:120%'><o:p></o:p></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>&nbsp;</span></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;mso-fareast-font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></span></div>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Purpose</span></b><span lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+</span><span style='font-size:13.5pt;line-height:120%'> M</span><span lang=EN-US style='font-size:13.5pt;line-height:120%'><span class=GramE>odel<span lang="de"> 
+for unglazed solar thermal collectors including condensation effects for 
+temperatures below dewpoint</span></span>. </span><span lang=EN-US
+style='font-size:12.0pt;line-height:120%'><o:p></o:p></span></span></p>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Description</span></b><span lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+The collector model is a </span><span style='font-size:13.5pt;line-height:120%'> 
+2 x N</span><span lang=EN-US style='font-size:13.5pt;line-height:120%'> multinode model for thermal
+collectors. The model is based on parameters obtained from measurement, i.e.
+collector-test results. The energy balance for every node
+is a differential <span class=GramE>equation, that</span> is calculated in the
+S-function </span><span style='font-size:13.5pt;line-height:120%'> 
+solarcollector_unglazed.</span></span></p>
+<p><font size="4">For the absorber the energy balance is:</font></p>
+<p><font size="4"><span lang="en-us">c_abs * dTp/dt = qdot_solar - qdot_conv<br />
+&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span lang="en-us">- qdot_cond - qdot_sky - qdot_fluid</span></font></p>
+<p><font size="4"><span lang="en-us">qdot_solar = absorbed_solar_radiation - 
+uc1_eta0*Iglb*vwind</span></font></p>
+<p><font size="4"><span lang="en-us">qdot_conv = qdot_conv_gain + qdot_conv_loss</span></font></p>
+<p><font size="4"><span lang="en-us">qdot_conv_gain = fconv * (Uc0_gain + 
+Uc1_gain * vwind)<br />
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span lang="en-us">* (Tplast + fconv * (Tp - Tplast) - Tamb)</span></font></p>
+<p><font size="4"><span lang="en-us">qdot_conv_loss = (1 - fconv) * (Uc0_loss + 
+Uc1_loss * vwind) <br />
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span lang="en-us">* (Tpo + fconv * (Tp - Tpo) - Tamb)</span></font></p>
+<p><font size="4"><span lang="en-us">qdot_cond = fcond * (Uc0_cond + Uc1_cond * 
+vwind) * Ccond<br />
+&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span lang="en-us">* (ps(Tdew) - ps(Tp_cond))</span></font></p>
+<p><font size="4"><span lang="en-us">qdot_sky = epsilon * sigma * (Tp^4 - 
+Tsky^4)</span></font></p>
+<p><font size="4"><span lang="en-us">qdot_fluid = hi * (Tp - Tf)<br />
+</span></font></p>
+<p><font size="4"><span lang="en-us">where :<br />
+fconv = ( min( Tpo , max(Tamb,Tplast) ) - Tplast ) / ( Tpo - Tplast )<br />
+</span>f<span lang="en-us">cond = ( min( Tpo , max(Tdew,Tplast) ) - Tplast ) / ( 
+Tpo - Tplast )<br />
+Tp_cond = Tplast + fcond * ( Tp - Tplast )<br />
+Tpo = 2*Tp - Tplast</span></font></p>
+<p><font size="4"><span lang="en-us">The fluid's node is devided into "NODES" 
+nodes.<br />
+The energy-balance for every node is a differential equation:</span></font></p>
+<p><font size="4"><span lang="en-us">c_fluid * dTf/dt = hi * (Tp - Tf)<br />
+</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span lang="en-us">+ mdot * cp / Acoll * (Tlastnode - Tnode)</span></font></p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 style='mso-cellspacing:1.5pt;margin-left:108pt;
+ mso-yfti-tbllook:1184'>
+ 
+ <tr style='mso-bookmark:literature;font-weight:bold;text-decoration:underline'>
+  <td style='padding:.75pt .75pt .75pt .75pt; height: 19px; width: 90px;'>
+  <font size="4"><span lang="en-us">Symbol</span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt; height: 19px; width: 630px;'>
+  <font size="4"><span lang="en-us">used for</span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt; height: 19px;'>
+  <font size="4"><span lang="en-us">unit</span></font></td>
+ </tr>
+
+ <tr style='mso-yfti-irow:1'>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 90px;'>
+  <font size="4"><span lang="en-us">Acoll</span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 630px;'>
+  <font size="4"><span lang="en-us">absorber surface area</span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <font size="4"><span lang="en-us">m</span>²</font></td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 90px;'>
+  <font size="4"><span lang="en-us">Ccond </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 630px;'>
+  <font size="4"><span lang="en-us">coefficient for pression in temperature conversion</span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <font size="4"><span lang="en-us">K/Pa</span></font></td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 90px;'>
+  <font size="4"><span lang="en-us">cp </span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 630px;'>
+  <font size="4"><span lang="en-us">heat capacity of fluid </span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <font size="4"><span lang="en-us">J/(kg*K)</span></font></td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 90px;'>
+  &nbsp;</td>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 630px;'>
+  &nbsp;</td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  &nbsp;</td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 90px;'>
+  &nbsp;</td>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 630px;'>
+  &nbsp;</td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  &nbsp;</td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 90px;'>
+  &nbsp;</td>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 630px;'>
+  &nbsp;</td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  &nbsp;</td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 90px;'>
+  <font size="4"><span lang="en-us">c_abs </span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 630px;'>
+  <font size="4"><span lang="en-us">heat capacity of absorber per surface </span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <font size="4"><span lang="en-us">J/(m^2*K)</span></font></td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 90px;'>
+  <font size="4"><span lang="en-us">c_fluid </span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 630px;'>
+  <font size="4"><span lang="en-us">&nbsp;heat capacity of fluid per surface</span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <font size="4"><span lang="en-us">J/(m^2*K)</span></font></td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 90px;'>
+  <font size="4"><span lang="en-us">epsilon </span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 630px;'>
+  <font size="4"><span lang="en-us">effective emission coefficient of the 
+  absorber surface</span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  -</td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 90px;'>
+  <font size="4"><span lang="en-us">fcond </span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 630px;'>
+  <font size="4"><span lang="en-us">share of the collector aperture area where 
+  condensation takes place</span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  -</td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 90px;'>
+  <font size="4"><span lang="en-us">fconv </span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 630px;'>
+  <font size="4"><span lang="en-us">share of the collector aperture area where</span>
+  <span lang="en-us">convection takes place</span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  -</td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 90px;'>
+  <font size="4"><span lang="en-us">hi </span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 630px;'>
+  <font size="4"><span lang="en-us">heat transfer coefficent between absorber <br />
+  and fluid </span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <font size="4"><span lang="en-us">W/(m^2*K)</span></font></td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 90px;'>
+  <font size="4"><span lang="en-us">mdot </span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 630px;'>
+  <font size="4"><span lang="en-us">mass flow rate </span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <font size="4"><span lang="en-us">kg/s</span></font></td>
+ </tr>
+    <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 90px;'>
+  <font size="4"><span lang="en-us">ps </span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 630px;'>
+  <font size="4"><span lang="en-us">satured vapour pressure of water</span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  Pa</td>
+    </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 90px;'>
+  <font size="4"><span lang="en-us">qdot_solar </span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 630px;'>
+  <font size="4"><span lang="en-us">power input per surface from sun</span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <font size="4"><span lang="en-us">W/m^2</span></font></td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 90px;'>
+  <font size="4"><span lang="en-us">sigma </span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 630px;'>
+  <font size="4"><span lang="en-us">Stefan-Boltzmann constant </span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <font size="4"><span lang="en-us">W/(m^2*K^4)</span></font></td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 90px;'>
+  Tamb</td>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 630px;'>
+  <font size="4"><span lang="en-us">ambient temperature</span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  K</td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 90px;'>
+  Tdew</td>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 630px;'>
+  <font size="4"><span lang="en-us">dew point temperature</span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  K</td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 90px;'>
+  Tf</td>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 630px;'>
+  <font size="4"><span lang="en-us">fluid temperature</span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  K</td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 90px;'>
+  Tp</td>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 630px;'>
+  <font size="4"><span lang="en-us">absorber temperature</span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  K</td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 90px;'>
+  t</td>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 630px;'>
+  time</td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  s</td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 90px;'>
+  <font size="4"><span lang="en-us">uc1_eta0 </span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 630px;'>
+  <font size="4"><span lang="en-us">wind dependance in optical efficiency </span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <font size="4"><span lang="en-us">W/(m^2*m/s)</span></font></td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 90px;'>
+  <font size="4"><span lang="en-us">Uc0_cond </span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 630px;'>
+  <font size="4"><span lang="en-us">wind speed independant part of the 
+  condensati</span>o<span lang="en-us">n heat transfer coefficient</span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <font size="4"><span lang="en-us">W/(m^2*Pa)</span></font></td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 90px;'>
+  <font size="4"><span lang="en-us">Uc1_cond </span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 630px;'>
+  <font size="4"><span lang="en-us">wind speed dependant part of the convection 
+  heat transfer coefficient </span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <font size="4"><span lang="en-us">&nbsp;W/((m/s)*m^2*Pa)</span></font></td>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 90px;'>
+  <font size="4"><span lang="en-us">Uc0_gain </span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 630px;'>
+  <font size="4"><span lang="en-us">wind speed independant part of the heat transfer coefficientfor the convective 
+  gains</span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <font size="4"><span lang="en-us">W/(m^2*K)</span></font></td>
+ </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 90px;'>
+  <font size="4"><span lang="en-us">Uc1_gain </span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 630px;'>
+  <font size="4"><span lang="en-us">wind speed dependant part of the heat transfer coefficientfor the convective 
+  gains</span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <font size="4"><span lang="en-us">W/((m/s)*m^2*K)</span></font></td>
+ </tr>
+ <tr style='mso-yfti-irow:11'>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 90px;'>
+  <font size="4"><span lang="en-us">Uc0_loss </span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 630px;'>
+  <font size="4"><span lang="en-us">wind speed independant part of the heat transfer coefficientfor the convective</span>
+  <span lang="en-us">losse</span>s<span lang="en-us"> </span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <font size="4"><span lang="en-us">W/(m^2*K)</span></font></td>
+ </tr>
+ <tr style='mso-yfti-irow:12'>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 90px;'>
+  <font size="4"><span lang="en-us">Uc1_loss </span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 630px;'>
+  <font size="4"><span lang="en-us">wind speed dependant part of the heat transfer coefficientfor the convective</span>
+  <span lang="en-us">losses </span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <font size="4"><span lang="en-us">W/((m/s)*m^2*K)</span></font></td>
+ </tr>
+ <tr style='mso-yfti-irow:13;mso-yfti-lastrow:yes'>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 90px;'>
+  <font size="4"><span lang="en-us">vwind </span></font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt; width: 630px;'>
+  <font size="4"><span lang="en-us">wind</span> speed</font></td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  m/s</td>
+ </tr>
+</table>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>The collector calculates friction losses in the
+massflow. This may be specified in the subsystem </span></span><a
+href="carnot_manual.htm#Pressure_drop_of_collector"><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>&quot;pressure drop&quot;</span></span></a><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> of the collector (see
+also subsystem &quot;pressure drop of collector&quot; in carnot/heat_source.
+Static pressure is calculated if necessary, i.e. for thermosyphon systems. <br>
+See chapter </span></span><a href="carnot_manual.htm#flow_ID">
+<span style='mso-bookmark:
+literature'><span lang=EN-US style='font-size:13.5pt;line-height:120%'>&quot;basics
+concepts, TH</span><span style='font-size:13.5pt;line-height:120%'>B</span><span lang=EN-US style='font-size:13.5pt;line-height:120%'>-Vector&quot;</span></span></a><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>. </span></span></p>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Inputs:</span></b><span lang=EN-US style='font-size:13.5pt;line-height:120%'> </span></span></p>
+
+<ul type=disc class="auto-style3">
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l78 level1 lfo57;tab-stops:list 36.0pt'><a href="carnot_manual.htm#weather_data_vector"><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>Weather data
+     vector</span></span></a><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'> </span><span lang=EN-US style='mso-fareast-font-family:
+     "Times New Roman"'><o:p></o:p></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l78 level1 lfo57;tab-stops:list 36.0pt'><a href="carnot_manual.htm#collector_position"><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>collector
+     position</span></span></a><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'> </span><span lang=EN-US style='mso-fareast-font-family:
+     "Times New Roman"'><o:p></o:p></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l78 level1 lfo57;tab-stops:list 36.0pt'><a href="carnot_manual.htm#thv"><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>Thermo-Hydraulic
+     </span>
+ <span style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>Bus</span></span></a><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'> collector
+     inlet </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></li>
+</ul>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Outputs:</span></b><span lang=EN-US style='font-size:13.5pt;line-height:120%'> </span></span></p>
+
+ 
+<ul type=disc class="auto-style3">
+<li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l78 level1 lfo57;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>Thermo-Hydraulic Bus collector output
+     </span>
+
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l78 level1 lfo57;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>Collector Data Bus (Cdat)</span></li>
+</ul>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Characteristics</span></b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> <br>
+Direct Feedthrough&nbsp;&nbsp;&nbsp;Yes <br>
+Sample
+time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size:13.5pt;
+line-height:120%'>&nbsp;
+</span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> Inherited
+from driving block <br>
+Vectorized&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size:13.5pt;
+line-height:120%'>&nbsp;&nbsp;
+</span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> No
+</span></span></p>
+
+<p><span lang=EN-US style="mso-bookmark: literature">&nbsp;</span></p>
+
+<p><strong>Literature<br />
+</strong>Frank, Elimar: Modellierung unabgedeckter Kollektoren, Dissertation Uni 
+Kassel, 2007<br />
+Vajen, Klaus; Frank, Elimar: Unverglaste Kollektoren, OTTI Solarthermie, 2009</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

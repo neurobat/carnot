@@ -1,0 +1,553 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>unit_conv</title>
+<style type="text/css">
+p
+	{margin-right:0cm;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+a:link
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;
+}
+ul
+	{margin-bottom:0cm;}
+ li.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ table.MsoNormalTable
+	{line-height:120%;
+	font-size:10.0pt;
+	font-family:"Calibri","sans-serif";
+	}
+tt
+	{font-family:"Courier New";
+	}
+ p.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+.auto-style1 {
+	margin-left: 120px;
+}
+.auto-style2 {
+	text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:THV_select'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;mso-fareast-font-family:"Times New Roman"'>
+
+<hr size=10 width="100%" noshade style='color:#A0A0A0' align=center>
+
+</span></span></span></span></div>
+
+<p><!--[if gte vml 1]><v:shape id="Bild_x0020_253" o:spid="_x0000_s1392"
+ type="#_x0000_t75" alt="symbol" style='position:absolute;left:0;text-align:left;
+ margin-left:14pt;margin-top:0;width:54pt;height:54.75pt;z-index:251;
+ visibility:visible;mso-wrap-style:square;mso-wrap-distance-left:0;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:0;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:right;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line'
+ o:allowoverlap="f">
+ <v:imagedata src="Figures/unitconv.jpg" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <w:wrap type="square" anchory="line" xmlns:w="urn:schemas-microsoft-com:office:word"/>
+</v:shape><![endif]--><![if !vml]><img width=72 height=73
+src="Figures/unitconv.jpg" align=right alt=symbol v:shapes="Bild_x0020_253"><![endif]><span class=GramE><span
+style='mso-bookmark:unit_conv_s'><span style='mso-bookmark:literature'><span
+style='mso-bookmark:schwamberger'><span style='mso-bookmark:THV_select'><b><span
+lang=EN-US style='font-size:18.0pt;line-height:120%'>unit</span></b></span></span></span></span></span><span
+style='mso-bookmark:unit_conv_s'><span style='mso-bookmark:literature'><span
+style='mso-bookmark:schwamberger'><span style='mso-bookmark:THV_select'><b><span
+lang=EN-US style='font-size:18.0pt;line-height:120%'> conv / unit conv
+temperature</span></b></span></span></span></span><span style='mso-bookmark:literature'><span
+style='mso-bookmark:schwamberger'><span style='mso-bookmark:THV_select'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+<b>Path: CARNOT/misc</b><o:p></o:p></span></span></span></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:THV_select'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;mso-fareast-font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></span></span></span></div>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:THV_select'><b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>Purpose</span></b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'><br>
+<span class=GramE>Converts</span> a value from a specified unit to another
+unit. </span><span
+lang=EN-US style='font-size:12.0pt;line-height:120%'><o:p></o:p></span></span></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:THV_select'><b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>Description</span></b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'><br>
+<span class=GramE>The</span> symbols in a specified unit have to be separated
+by * or /. So kWh has to be written as kW*h. The common signs are allowed, e.g.
+kW, mm, µJ<span class=GramE>.</span><br>
+Beside the units this functions knows some constants, e.g. when using the
+&quot;unit&quot; c, you get the lightspeed.<br>
+The known units and constants are: </span></span></span></span></p>
+<p>
+<table style="width: 70%" class="auto-style1">
+	<tr>
+		<td class="auto-style2">unit</td>
+		<td class="auto-style2">meaning</td>
+		<td class="auto-style2">used for</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">m</td>
+		<td class="auto-style2">meter</td>
+		<td class="auto-style2">length</td>
+	</tr>
+	<tr>
+		<td class="auto-style2" style="height: 22px">kg</td>
+		<td class="auto-style2" style="height: 22px">kilogramm</td>
+		<td class="auto-style2" style="height: 22px">mass</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">s</td>
+		<td class="auto-style2">second</td>
+		<td class="auto-style2">time</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">A</td>
+		<td class="auto-style2">ampere</td>
+		<td class="auto-style2">current</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">K</td>
+		<td class="auto-style2">Kelvin</td>
+		<td class="auto-style2">temperature</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">mol</td>
+		<td class="auto-style2">mole</td>
+		<td class="auto-style2">amount of subcstance</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">cd</td>
+		<td class="auto-style2">candela</td>
+		<td class="auto-style2">luminous intensity</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">a</td>
+		<td class="auto-style2">anno</td>
+		<td class="auto-style2">standard year</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">b</td>
+		<td class="auto-style2">barn</td>
+		<td class="auto-style2">area</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">c</td>
+		<td class="auto-style2">&nbsp;</td>
+		<td class="auto-style2">ligthspeed</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">g</td>
+		<td class="auto-style2">gramm</td>
+		<td class="auto-style2">mass</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">l</td>
+		<td class="auto-style2">liter</td>
+		<td class="auto-style2">volume</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">t</td>
+		<td class="auto-style2">ton</td>
+		<td class="auto-style2">mass</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">d</td>
+		<td class="auto-style2">day</td>
+		<td class="auto-style2">time</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">V</td>
+		<td class="auto-style2">volt</td>
+		<td class="auto-style2">voltage</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">F</td>
+		<td class="auto-style2">farad</td>
+		<td class="auto-style2">capacity</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">C</td>
+		<td class="auto-style2">coulomb</td>
+		<td class="auto-style2">electric charge</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">T</td>
+		<td class="auto-style2">tesla</td>
+		<td class="auto-style2">magnetic flux density</td>
+	</tr>
+	<tr>
+		<td class="auto-style2" style="height: 21px">S</td>
+		<td class="auto-style2" style="height: 21px">siemens</td>
+		<td class="auto-style2" style="height: 21px">electric conductance</td>
+	</tr>
+	<tr>
+		<td class="auto-style2" style="height: 22px">G</td>
+		<td class="auto-style2" style="height: 22px">&nbsp;</td>
+		<td class="auto-style2" style="height: 22px">gravitational constant</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">e</td>
+		<td class="auto-style2">&nbsp;</td>
+		<td class="auto-style2">elementary charge</td>
+	</tr>
+	<tr>
+		<td class="auto-style2" style="height: 22px">N</td>
+		<td class="auto-style2" style="height: 22px">newton</td>
+		<td class="auto-style2" style="height: 22px">force</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">W</td>
+		<td class="auto-style2">watt</td>
+		<td class="auto-style2">power</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">u</td>
+		<td class="auto-style2">unified atomic mass</td>
+		<td class="auto-style2">mass</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">J</td>
+		<td class="auto-style2">joule</td>
+		<td class="auto-style2">energy</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">h</td>
+		<td class="auto-style2">hour</td>
+		<td class="auto-style2">time</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">Pa</td>
+		<td class="auto-style2">pascal</td>
+		<td class="auto-style2">pressure</td>
+	</tr>
+	<tr>
+		<td class="auto-style2" style="height: 22px">AE</td>
+		<td class="auto-style2" style="height: 22px">astronomical unit</td>
+		<td class="auto-style2" style="height: 22px">length</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">lj</td>
+		<td class="auto-style2">lightyear</td>
+		<td class="auto-style2">length</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">pc</td>
+		<td class="auto-style2">parsec</td>
+		<td class="auto-style2">length</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">Hz</td>
+		<td class="auto-style2">hertz</td>
+		<td class="auto-style2">frequency</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">Wb</td>
+		<td class="auto-style2">weber</td>
+		<td class="auto-style2">magnetic flux</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">lb</td>
+		<td class="auto-style2">pound</td>
+		<td class="auto-style2">mass</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">Bq</td>
+		<td class="auto-style2">becquerel</td>
+		<td class="auto-style2">radioactivity</td>
+	</tr>
+	<tr>
+		<td class="auto-style2" style="height: 22px">yd</td>
+		<td class="auto-style2" style="height: 22px">yards</td>
+		<td class="auto-style2" style="height: 22px">length</td>
+	</tr>
+	<tr>
+		<td class="auto-style2" style="height: 23px">sm</td>
+		<td class="auto-style2" style="height: 23px">squaremeter</td>
+		<td class="auto-style2" style="height: 23px">area</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">gr</td>
+		<td class="auto-style2">grain</td>
+		<td class="auto-style2">mass</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">ha</td>
+		<td class="auto-style2">hectar</td>
+		<td class="auto-style2">area</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">NA</td>
+		<td class="auto-style2">&nbsp;</td>
+		<td class="auto-style2">avogadro's number</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">Rm</td>
+		<td class="auto-style2">&nbsp;</td>
+		<td class="auto-style2">ideal gas constant</td>
+	</tr>
+	<tr>
+		<td class="auto-style2" style="height: 22px">µ0</td>
+		<td class="auto-style2" style="height: 22px"></td>
+		<td class="auto-style2" style="height: 22px">permeability constant</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">hp</td>
+		<td class="auto-style2">brake horse power</td>
+		<td class="auto-style2">power</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">kb</td>
+		<td class="auto-style2">&nbsp;</td>
+		<td class="auto-style2">boltzman constant</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">eV</td>
+		<td class="auto-style2">electronvolt</td>
+		<td class="auto-style2">electric charge</td>
+	</tr>
+	<tr>
+		<td class="auto-style2" style="height: 22px">Btu</td>
+		<td class="auto-style2" style="height: 22px">british thermal unit</td>
+		<td class="auto-style2" style="height: 22px">energy</td>
+	</tr>
+	<tr>
+		<td class="auto-style2" style="height: 22px">bar</td>
+		<td class="auto-style2" style="height: 22px">bar</td>
+		<td class="auto-style2" style="height: 22px">pressure</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">dpt</td>
+		<td class="auto-style2">dioptr</td>
+		<td class="auto-style2">reciprocal focal length</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">erg</td>
+		<td class="auto-style2">ergon</td>
+		<td class="auto-style2">energy</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">Ohm</td>
+		<td class="auto-style2">ohm</td>
+		<td class="auto-style2">electric resistance</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">oz</td>
+		<td class="auto-style2">ounce</td>
+		<td class="auto-style2">mass</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">PS</td>
+		<td class="auto-style2">DIN - horsepower</td>
+		<td class="auto-style2">power</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">ft</td>
+		<td class="auto-style2">feet</td>
+		<td class="auto-style2">length</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">in</td>
+		<td class="auto-style2">inch</td>
+		<td class="auto-style2">length</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">mi</td>
+		<td class="auto-style2">mile</td>
+		<td class="auto-style2">length</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">galUK</td>
+		<td class="auto-style2">gallon in UK</td>
+		<td class="auto-style2">Volume</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">galUS</td>
+		<td class="auto-style2">gallon in US</td>
+		<td class="auto-style2">Volume</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">mmHg</td>
+		<td class="auto-style2">millimeters of mercury</td>
+		<td class="auto-style2">pressure</td>
+	</tr>
+	<tr>
+		<td class="auto-style2" style="height: 22px">knot</td>
+		<td class="auto-style2" style="height: 22px">knots</td>
+		<td class="auto-style2" style="height: 22px">speed</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">torr</td>
+		<td class="auto-style2">torr</td>
+		<td class="auto-style2">pressure</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">eps0</td>
+		<td class="auto-style2">&nbsp;</td>
+		<td class="auto-style2">dielectric constant</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">cal</td>
+		<td class="auto-style2">calories</td>
+		<td class="auto-style2">energy</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">min</td>
+		<td class="auto-style2">minute</td>
+		<td class="auto-style2">time</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">bbl</td>
+		<td class="auto-style2">barrel</td>
+		<td class="auto-style2">volume</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">atm</td>
+		<td class="auto-style2">atmosphere</td>
+		<td class="auto-style2">pressure</td>
+	</tr>
+</table>
+<br />
+</p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:THV_select'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>It</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;font-family:"Times New Roman","serif"'>&#146;s
+also possible to use this function from</span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> the workspace by typing the command unitconv: e.g. <span
+class=GramE>unitconv(</span>12,</span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;font-family:"Times New Roman","serif"'>&#146;ft/s&#146;,&#146;km/h&#146;,1)
+The last number</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> 1 is only flag. If this
+flag is 1, the basic SI-units are also printed out.<br>
+This block is also available as workspace function </span></span></span></span><a
+href="carnot_manual.htm#unit_conv_m"><span style='mso-bookmark:literature'><span
+style='mso-bookmark:schwamberger'><span style='mso-bookmark:THV_select'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>unitconv</span></span></span></span></a><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:THV_select'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>. <br>
+<b>Input:</b> </span></span></span></span></p>
+
+<ul type=disc class="auto-style1">
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l133 level1 lfo214;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     style='mso-bookmark:THV_select'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>value in old
+     unit </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></span></span></li>
+</ul>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:THV_select'><b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>Output</span></b></span></span></span><span style='mso-bookmark:
+literature'><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:
+THV_select'><span lang=EN-US style='font-size:13.5pt;line-height:120%'>: </span></span></span></span></p>
+
+<ul type=disc class="auto-style1">
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l245 level1 lfo215;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     style='mso-bookmark:THV_select'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>value in new
+     unit </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></span></span></li>
+</ul>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:THV_select'><b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>Note:</span></b></span></span></span><span style='mso-bookmark:
+literature'><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:
+THV_select'><span lang=EN-US style='font-size:13.5pt;line-height:120%'> </span></span></span></span></p>
+
+<ul type=disc class="auto-style1">
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l79 level1 lfo216;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     style='mso-bookmark:THV_select'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>a year is set
+     to 365 days </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></span></span></li>
+</ul>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:THV_select'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>The Block unitconv_temperature is a special case of unitconv,
+witch convert only temperatures between the three <span class=GramE>unity :</span>
+°C, °F and K.</span></span></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:THV_select'><b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>Parameters and Dialog Box</span></b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> <br>
+</span></span></span></span><!--[if gte vml 1]><v:shape id="Bild_x0020_254"
+ o:spid="_x0000_s1391" type="#_x0000_t75" alt="mask" style='position:absolute;
+ left:0;text-align:left;margin-left:0;margin-top:0;width:282pt;height:245.25pt;
+ z-index:252;visibility:visible;mso-wrap-style:square;mso-wrap-distance-left:0;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:0;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:left;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line'
+ o:allowoverlap="f">
+ <v:imagedata src="Figures/unitconvSHOT.jpg" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <w:wrap type="square" anchory="line" xmlns:w="urn:schemas-microsoft-com:office:word"/>
+</v:shape><![endif]--><![if !vml]><img width=376 height=327
+src="Figures/unitconvSHOT.jpg" align=left alt=mask v:shapes="Bild_x0020_254"><![endif]><span style='mso-bookmark:
+literature'><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:
+THV_select'><span lang=EN-US style='font-size:13.5pt;line-height:120%'><br
+clear=all style='mso-special-character:line-break'>
+</span></span></span></span></p>
+
+</body>
+
+</html>

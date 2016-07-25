@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="de-at" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>valve</title>
+<style type="text/css">
+ div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+p
+	{margin-right:0cm;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ </style>
+</head>
+
+<body>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+"Times New Roman"'>
+
+<hr size=10 width="100%" noshade style='color:#A0A0A0' align=center>
+
+</span></span></span></div>
+
+<p><span class=GramE><span style='mso-bookmark:Valve'><span
+style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><b><span
+lang=EN-US style='font-size:18.0pt;line-height:120%'>
+<img alt="" height="76" src="Figures/valve.JPG" style="float: right" width="89" />valve</span></b></span></span></span></span><span
+style='mso-bookmark:Valve'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> <br>
+<b>Path: CARNOT/hydraulics</b> <br />
+<br />
+</span></span></span></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:Valve'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;mso-fareast-font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></span></span></span></div>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Purpose</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+The block calculates the pressure drop at a valve. Keep a small pressure drop
+even if valve is completely open.</span><span lang=EN-US
+style='font-size:12.0pt;line-height:120%'><o:p></o:p></span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Description</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+The valve increases its pressure drop according to the position. One means
+completely open, zero means closed. A specific valve characteristic is used to
+compute the resistance coefficient f in: </span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+class=GramE><span lang=EN-US style='font-size:13.5pt;line-height:120%'>dp</span></span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> = f (Reynolds) * </span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;font-family:Symbol'>r</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>/2 * v<sup>2</sup> </span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+class=GramE><span lang=EN-US style='font-size:13.5pt;line-height:120%'>f</span></span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> increases at low Reynolds
+numbers. A maximum <span class=GramE>ceta</span> of 100 is set with a valve
+position close to 0. Minimum f is 1 at position = 1. Below valve position 0.01
+the valve sets the flow_ID to a negative value. The following flow mixer will
+interpret the branch to be closed. </span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>You may adapt the valve
+characteristics to your demand. See the look-up table &quot;valve
+characteristic&quot; in the subsystem valve/pressuredrop/c*</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;font-family:Symbol'>r</span><sup><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>2</span></sup><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>*v<sup>2</sup> </span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Characteristics</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+Direct Feedthrough&nbsp;&nbsp;&nbsp;Yes <br>
+Sample
+time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size:13.5pt;line-height:120%'>&nbsp;
+</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> Inherited
+from driving block <br>
+Vectorized&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size:13.5pt;line-height:120%'>&nbsp;&nbsp;
+</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> No
+</span></span></span></p>
+
+</body>
+
+</html>

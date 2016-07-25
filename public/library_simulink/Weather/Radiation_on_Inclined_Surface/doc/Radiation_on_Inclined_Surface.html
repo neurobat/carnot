@@ -1,0 +1,382 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="de-at" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>inclined surface</title>
+<style type="text/css">
+ div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+p
+	{margin-right:0cm;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ a:link
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;
+}
+ul
+	{margin-bottom:0cm;}
+ li.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ .auto-style1 {
+	margin-left: 120px;
+}
+.auto-style2 {
+	background-color: #FF0000;
+}
+</style>
+</head>
+
+<body>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+"Times New Roman"'>
+
+<hr size=10 width="100%" noshade style='color:#A0A0A0' align=center>
+
+</span></span></span></div>
+
+<p><!--[if gte vml 1]><v:shape id="Bild_x0020_115" o:spid="_x0000_s1530"
+ type="#_x0000_t75" style='position:absolute;left:0;text-align:left;
+ margin-left:57.5pt;margin-top:0;width:97.5pt;height:55.5pt;z-index:113;
+ visibility:visible;mso-wrap-style:square;mso-wrap-distance-left:0;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:0;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:right;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line'
+ o:allowoverlap="f">
+ <v:imagedata src="Figures/inclined_surface.jpg" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <w:wrap type="square" anchory="line" xmlns:w="urn:schemas-microsoft-com:office:word"/>
+</v:shape><![endif]--><![if !vml]><img width=130 height=74
+src="Figures/inclined_surface.jpg" align=right v:shapes="Bild_x0020_115"><![endif]><span class=GramE><span
+style='mso-bookmark:inclined_surface'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:18.0pt;
+line-height:120%'>inclined</span></b></span></span></span></span><span
+style='mso-bookmark:inclined_surface'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:18.0pt;
+line-height:120%'> surface</span></b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> <br>
+<b>Path: CARNOT/weather</b> <br clear=all style='mso-special-character:line-break'>
+<o:p></o:p></span></span></span></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:inclined_surface'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;mso-fareast-font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></span></span></span></div>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Purpose</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+This block calculates the radiation on the inclined collector surface. </span><span
+lang=EN-US style='font-size:12.0pt;line-height:120%'><o:p></o:p></span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Description</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+The block calculates the radiation on the inclined collector surface. You may
+delete this block when your weather data already contains the solar radiation
+on the inclined surface. In this case, feed the </span></span></span><a
+href="carnot_manual.htm#weather_data_vector"><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>weather data vector</span></span></span></a><span
+style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> through to the next Demux
+block and short out the position vector to a terminator-block. <br>
+<b>Sky models:</b> </span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>The solar radiation can be
+split into a direct and a diffuse part. The diffuse radiation can be further
+divided into a part of the sky called isotropic diffuse radiation, which is
+received from all over the sky dome, a part that appears close to the beam, the
+circumsolar diffuse radiation, and the so-called horizon brightening, that is
+situated in the area near the horizon. Moreover the total radiation on the
+tilted surface includes the part reflected from the ground and other
+surrounding surfaces. <br>
+Sky models are the mathematical representation of the diffuse part of the solar
+radiation. Depending on the model, the degree of consideration of the different
+parts of the diffuse radiation varies. In the CARNOT Toolbox, three different
+sky models can be specified, the isotropic sky, Hay - Davies and the Perez
+model. </span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><u><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Isotropic sky:</span></u><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> </span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>This model considers all
+the diffuse radiation as isotropic, so that the circumsolar radiation and the
+horizon brightening do not appear. The total radiation is calculated by three
+terms, the direct radiation, the isotropic diffuse radiation and the ground
+reflectance. </span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'>
+<span
+lang=EN-US style="mso-bookmark: literature">&nbsp;</span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><u><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Sky model by Hay-Davies:</span></u><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> </span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>This model is an
+anisotropic one that takes into account the circumsolar diffuse radiation.
+There is no treatment of horizon brightening, so the diffuse radiation consists
+of two parts, the isotropic and the circumsolar. The direction of the
+circumsolar radiation is assumed to be the same as the beam radiation. An
+anisotropy index is introduced which is a function of transmittance of the
+atmosphere for beam radiation and describes the portion of horizontal diffuse
+radiation that is to be treated as forward scattered. Under clear sky
+conditions the anisotropy index is high. If the sky is entirely covered, the
+anisotropy index is 0 and the model is equal to the isotropic sky model. <br>
+At its core lies the approach of Hay-Davies. They assumed an anisotropic sky.
+Radiation upon tilted surface I<sub>T</sub> consists of four parts: </span></span></span></p>
+
+<p><!--[if gte vml 1]><v:shape id="Bild_x0020_116" o:spid="_x0000_s1529"
+ type="#_x0000_t75" style='position:absolute;left:0;text-align:left;
+ margin-left:0;margin-top:0;width:341.25pt;height:9.75pt;z-index:114;
+ visibility:visible;mso-wrap-style:square;mso-wrap-distance-left:0;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:0;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:left;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line'
+ o:allowoverlap="f">
+ <v:imagedata src="Formulas/formel_inclined.jpg" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <w:wrap type="square" anchory="line" xmlns:w="urn:schemas-microsoft-com:office:word"/>
+</v:shape><![endif]--><![if !vml]><img width=455 height=13
+src="Formulas/formel_inclined.jpg" align=left v:shapes="Bild_x0020_116"><![endif]><span
+style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'><br clear=all
+style='mso-special-character:line-break'>
+</span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>There are: </span></span></span></p>
+
+<ul type=disc class="auto-style1">
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l57 level1 lfo117;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>I<sub>b</sub> : beam radiation </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l57 level1 lfo117;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>I<sub>d</sub> : diffuse isotropic sky </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l57 level1 lfo117;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>R<sub>b</sub> = cos</span><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;font-family:Symbol;
+     mso-fareast-font-family:"Times New Roman"'>T</span><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'> / cos</span><span lang=EN-US
+     style='font-size:13.5pt;line-height:120%;font-family:Symbol;mso-fareast-font-family:
+     "Times New Roman"'>T</span><sub><span lang=EN-US style='font-size:
+     13.5pt;line-height:120%;mso-fareast-font-family:"Times New Roman"'>z</span></sub><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'> </span><span lang=EN-US style='mso-fareast-font-family:
+     "Times New Roman"'><o:p></o:p></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l57 level1 lfo117;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;font-family:Symbol;
+     mso-fareast-font-family:"Times New Roman"'>T</span><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>: slope of surface, [degree] </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l57 level1 lfo117;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;font-family:Symbol;
+     mso-fareast-font-family:"Times New Roman"'>T</span><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'> : angle incidence to normal of surface, [degree] </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l57 level1 lfo117;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;font-family:Symbol;
+     mso-fareast-font-family:"Times New Roman"'>T</span><sub><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>z</span></sub><span lang=EN-US
+     style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:"Times New Roman"'>:
+     zenith angle of the sun, [degree] </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l57 level1 lfo117;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;font-family:Symbol;
+     mso-fareast-font-family:"Times New Roman"'>r</span><sub><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>ground</span></sub><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'> : reflection of ground, [0,1] </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></span></li>
+</ul>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>The Hay Davies model is
+not particularly more complex than the isotropic model and leads to slightly
+higher estimates of radiation. </span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'>
+<span
+lang=EN-US style="mso-bookmark: literature">&nbsp;</span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><u><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Sky model by Perez:</span></u><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> </span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>The anisotropic sky model
+is based on a more detailed analysis of three diffuse components: circumsolar,
+horizon brightening and the incidence angle of the cirumsolar.</span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'>
+<span
+lang=EN-US style="mso-bookmark: literature">&nbsp;</span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Literature: Duffie, J., Beckman,
+W.: Solar Engineering of thermal processes, John Wiley &amp; amp; Sons, Inc.
+2006 Sons, Inc. 2006</span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Inputs:</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> </span></span></span></p>
+
+<ul type=disc class="auto-style1">
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l229 level1 lfo118;tab-stops:list 36.0pt'><a
+     href="carnot_manual.htm#weather_data_vector"><span style='mso-bookmark:schwamberger'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>Weather data
+     vector</span></span></span></a><span style='mso-bookmark:
+     schwamberger'><span style='mso-bookmark:literature'><span lang=EN-US
+     style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:"Times New Roman"'>
+     (with the radiation on the horizontal <span class=GramE>surface !!)</span>
+     </span><span lang=EN-US style='mso-fareast-font-family:
+     "Times New Roman"'><o:p></o:p></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l229 level1 lfo118;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>Position vector </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></span></li>
+</ul>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Outputs:</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> </span></span></span></p>
+
+<ul type=disc class="auto-style1">
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l68 level1 lfo119;tab-stops:list 36.0pt'><a
+     href="carnot_manual.htm#weather_data_vector"><span style='mso-bookmark:schwamberger'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>Weather data
+     vector</span></span></span></a><span style='mso-bookmark:
+     schwamberger'><span style='mso-bookmark:literature'><span lang=EN-US
+     style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:"Times New Roman"'>
+     (with the radiation on the inclined surface) </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></span></li>
+</ul>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Parameters and Dialog Box</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'><br>
+</span></span></span><!--[if gte vml 1]><v:shape id="Bild_x0020_117" o:spid="_x0000_s1528"
+ type="#_x0000_t75" style='position:absolute;left:0;text-align:left;
+ margin-left:0;margin-top:0;width:282pt;height:167.25pt;z-index:115;
+ visibility:visible;mso-wrap-style:square;mso-wrap-distance-left:0;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:0;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:left;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line'
+ o:allowoverlap="f">
+ <v:imagedata src="Figures/inclined_surfaceSHOT.jpg" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <w:wrap type="square" anchory="line" xmlns:w="urn:schemas-microsoft-com:office:word"/>
+</v:shape><![endif]--><![if !vml]><img width=376 height=223
+src="Figures/inclined_surfaceSHOT.jpg" align=left v:shapes="Bild_x0020_117"><![endif]><span
+style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'><br clear=all
+style='mso-special-character:line-break'>
+</span></span></span></p>
+
+<ul type=disc class="auto-style1">
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l93 level1 lfo120;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>Sky Model (isotropic sky or Hay Davies Model) </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l93 level1 lfo120;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>Ground reflectance (0.2 for usual ground, 0.3..0.5 for
+     sand and snow) </span><span lang=EN-US style='mso-fareast-font-family:
+     "Times New Roman"'><o:p></o:p></span></span></span></li>
+</ul>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+class=GramE><b><span lang=EN-US style='font-size:13.5pt;line-height:120%'>Validation
+</span></b><span lang=EN-US style='font-size:13.5pt;line-height:120%'>see</span></span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> </span></span></span><a
+href="Validation/Validation_Report_inclined_surface.pdf"><span
+style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'>
+<span
+lang=EN-US style='font-size:13.5pt;line-height:120%' class="auto-style2">validation report</span></span></span></a></p>
+
+<p><span style='mso-bookmark:schwamberger'>
+<span
+lang=EN-US style="mso-bookmark: literature">&nbsp;</span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Characteristics</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+Direct Feedthrough&nbsp;&nbsp;&nbsp;Yes <br>
+Sample
+time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size:13.5pt;line-height:120%'>&nbsp;
+</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> &nbsp;Inherited
+from driving block <br>
+Vectorized&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size:13.5pt;line-height:120%'>&nbsp;&nbsp;
+</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> No
+</span></span></span></p>
+
+</body>
+
+</html>

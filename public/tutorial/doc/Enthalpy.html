@@ -1,0 +1,324 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>enthalpy</title>
+<style type="text/css">
+ div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+p
+	{margin-right:0cm;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ul
+	{margin-bottom:0cm;}
+ li.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+a:link
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;
+}
+tt
+	{font-family:"Courier New";
+	}
+ table.MsoNormalTable
+	{line-height:120%;
+	font-size:10.0pt;
+	font-family:"Calibri","sans-serif";
+	}
+.auto-style1 {
+	margin-left: 120px;
+}
+</style>
+</head>
+
+<body>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;mso-fareast-font-family:"Times New Roman"'>
+
+<hr size=10 width="100%" noshade style='color:#A0A0A0' align=center>
+
+</span></span></div>
+
+<p><!--[if gte vml 1]><v:shape id="Bild_x0020_60" o:spid="_x0000_s1585" type="#_x0000_t75"
+ style='position:absolute;left:0;text-align:left;margin-left:44.75pt;
+ margin-top:0;width:84.75pt;height:64.5pt;z-index:58;visibility:visible;
+ mso-wrap-style:square;mso-wrap-distance-left:0;mso-wrap-distance-top:0;
+ mso-wrap-distance-right:0;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:right;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line'
+ o:allowoverlap="f">
+ <v:imagedata src="Figures/enthalpy.jpg" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <w:wrap type="square" anchory="line" xmlns:w="urn:schemas-microsoft-com:office:word"/>
+</v:shape><![endif]--><![if !vml]>
+<img width=113 height=86
+src="Figures/enthalpy.jpg" align=right v:shapes="Bild_x0020_60"><![endif]><span class=GramE><span style='mso-bookmark:enthalpy'><span
+style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:18.0pt;
+line-height:120%'>enthalpy</span></b></span></span></span><span
+style='mso-bookmark:enthalpy'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+<b>Path: CARNOT/materials</b> <br clear=all style='mso-special-character:line-break'>
+<o:p></o:p></span></span></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:enthalpy'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></span></span></div>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Purpose</span></b><span lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+This block calculates the specific enthalpy [J/kg] of the specified material. </span><span lang=EN-US style='font-size:12.0pt;
+line-height:120%'><o:p></o:p></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'><br>
+<b>Description</b> This block calculates the specific enthalpy in [J/kg]
+according to the </span></span></p>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Inputs:</span></b><span lang=EN-US style='font-size:13.5pt;line-height:120%'> </span></span></p>
+
+<ul type=disc class="auto-style1">
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l211 level1 lfo82;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>temperature[°C]
+     </span><span lang=EN-US
+     style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l211 level1 lfo82;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>pressure </span><span lang=EN-US style='mso-fareast-font-family:
+     "Times New Roman"'><o:p></o:p></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l211 level1 lfo82;tab-stops:list 36.0pt'><a href="carnot_manual.htm#fluid_ID"><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>fluid types</span></span></a><span style='mso-bookmark:literature'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'> see above definition </span><span lang=EN-US style='mso-fareast-font-family:
+     "Times New Roman"'><o:p></o:p></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l211 level1 lfo82;tab-stops:list 36.0pt'><a href="carnot_manual.htm#fluid_ID"><span
+     style='mso-bookmark:literature'><span class=GramE><span lang=EN-US
+     style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:"Times New Roman"'>fluid</span></span><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'> mix</span></span></a><span style='mso-bookmark:literature'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'> percentage [0 ..1] </span><span lang=EN-US style='mso-fareast-font-family:
+     "Times New Roman"'><o:p></o:p></span></span></li>
+</ul>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>The block calls up the function &quot;</span></span><a
+href="carnot_manual.htm#enthalpy"><span style='mso-bookmark:literature'><span lang=EN-US
+style='font-size:13.5pt;line-height:120%'>enthalpy</span></span></a><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>&quot; in the CARNOT </span></span><a
+href="carnot_manual.htm#Carlib"><span style='mso-bookmark:literature'><span lang=EN-US
+style='font-size:13.5pt;line-height:120%'>Carlib Library</span></span></a><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> where the calculation is
+carried out. The material properties functions can also be called directly from
+the command window by typing </span></span></p>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class=GramE><tt><span lang=EN-US
+style='font-size:10.0pt;line-height:120%'>enthalpy(</span></tt></span><tt><span lang=EN-US style='font-size:10.0pt;
+line-height:120%'>temperature, pressure,fluid_type,fluid_mix)</span></tt><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> </span></span></p>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Instead of the italic variables the actual value of
+the respective property has to be entered. This is possible for the Carlib
+functions density, thermal conductivity, heat capacity, kinematic viscosity,
+prandtl number, vapour-pressure, saturation-temperature, enthalpy, entropy,
+evaporation-enthalpy and specific volume. For more information about the
+function type </span></span></p>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class=GramE><tt><span lang=EN-US
+style='font-size:10.0pt;line-height:120%'>help</span></tt></span><tt><span lang=EN-US style='font-size:10.0pt;
+line-height:120%'> enthalpy</span></tt><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> </span></span></p>
+
+<p><span style='mso-bookmark:literature'><span class=GramE><span lang=EN-US
+style='font-size:13.5pt;line-height:120%'>to</span></span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> the workspace as for any other MATLAB function. </span></span></p>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>For more information of the </span></span><a
+href="carnot_manual.htm#fluid_ID"><span style='mso-bookmark:literature'><span lang=EN-US
+style='font-size:13.5pt;line-height:120%'>fluid types</span></span></a><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> see above definition </span></span></p>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>For the calculation of steam, the properties are
+calculated according to the &quot;</span></span><a href="carnot_manual.htm#schmidt"><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>E.Schmidt: Properties of water and steam</span></span></a><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>&quot;. The steam
+properties can be calculated for a temperature range up to 800°C and a pressure
+range up to 49.055 MPa.<br>
+The calculations of the liquid phase and the saturation states are performed
+with the polynomials from &quot;</span></span><a href="carnot_manual.htm#glueck"><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>B.Glück: Stoffwerte und Zustandsgrößen</span></span></a><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>&quot;. The valid
+temperature range is up to 200°C and the pressure range is up to 2 MPa. The
+enthalpy of the liquid phase considers only the dependency of the temperature;
+the pressure dependency is neglected. </span></span></p>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>The enthalpy is only available for the fluids water
+(fluid type 1) and air (fluid type 2) </span></span></p>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>The valid range is for the respective value is </span></span></p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 style='mso-cellspacing:1.5pt;
+ mso-yfti-tbllook:1184'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><b><span lang=EN-US
+  style='font-size:13.5pt;line-height:120%'>fluid_ID </span><span lang=EN-US><o:p></o:p></span></b></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><b><span lang=EN-US
+  style='font-size:13.5pt;line-height:120%'>fluid </span><span lang=EN-US><o:p></o:p></span></b></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><b><span lang=EN-US
+  style='font-size:13.5pt;line-height:120%'>phase </span><span lang=EN-US><o:p></o:p></span></b></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><b><span lang=EN-US
+  style='font-size:13.5pt;line-height:120%'>temperature </span><span
+  lang=EN-US><o:p></o:p></span></b></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><b><span lang=EN-US
+  style='font-size:13.5pt;line-height:120%'>pressure </span><span lang=EN-US><o:p></o:p></span></b></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>1 </span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>water </span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>vaporous </span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>T &lt; 800°C </span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>p &lt; 490 bar </span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>&nbsp;</td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>&nbsp;</td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>liquid </span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>0°C &lt; T &lt; 200°C </span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>0.01 bar &lt; p &lt; 100 bar </span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>2 </span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>air </span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>dry </span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>-150°C &lt; T &lt; 1000°C </span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>1 bar &lt; p &lt; 100 bar </span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;mso-yfti-lastrow:yes'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>&nbsp;</td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>&nbsp;</td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>moist&nbsp;&nbsp;&nbsp;&nbsp; </span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>0°C &lt; T &lt; 800°C </span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>1 bar &lt; p &lt; 100 bar </span></span></p>
+  </td>
+ </tr>
+</table>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Characteristics</span></b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> <br>
+Direct Feedthrough&nbsp;&nbsp;&nbsp;Yes <br>
+Sample
+time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size:13.5pt;
+line-height:120%'>&nbsp;
+</span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> Inherited
+from driving block <br>
+Vectorized&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size:13.5pt;
+line-height:120%'>&nbsp;&nbsp;
+</span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> No
+</span></span></p>
+
+</body>
+
+</html>

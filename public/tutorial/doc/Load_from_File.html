@@ -1,0 +1,273 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<meta name="author" content="AuthorXY">
+<title>Carnot Manual - Load from File</title>
+
+<style type="text/css">
+body{margin-left:108.0pt;}
+
+p	{
+	margin-right:0cm;
+	line-height:120%;
+	font-size:13.5pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+
+ul
+	{
+	margin-bottom:0cm;
+	list-style-position: outside;
+	}
+
+
+ol
+	{
+	margin-bottom:0cm;
+	list-style-position: outside;
+	}
+
+li
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	line-height:120%;
+	font-size:13.5pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+
+a:link
+	{
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;
+	}
+
+
+p.toc1
+	{
+	margin-top: 1.0em;
+	margin-bottom: 0.0em;
+	}	
+
+
+p.toc2
+	{
+	margin-top: 0.0em;
+	margin-bottom: 0.0em;
+	margin-left:12.0pt;
+	}	
+
+p.toc3
+	{
+	margin-top: 0.0em;
+	margin-bottom: 0.0em;
+	margin-left:24.0pt;
+	}	
+
+p.blockname
+	{margin-top: 10px;
+	 margin-bottom: 0;
+	 font-size:18.0pt;
+	 line-height:120%;
+	 font-weight: bold;
+	}
+
+table
+	{
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:13.5pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+
+tt
+	{
+	font-family:"Courier New";
+	line-height:200%;
+	margin-left:20.0pt;
+	}
+
+
+h1
+	{
+	margin-right:0cm;
+	line-height:120%;
+	font-size: 18pt;
+	font-weight: bold;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+
+h2
+	{
+	margin-right:0cm;
+	line-height:120%;
+	font-size: 16pt;
+	font-weight: bold;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+
+h3
+	{
+	margin-right:0cm;
+	line-height:120%;
+	font-size: 13.5pt;
+	font-weight: bold;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+
+.eq 
+	{
+	width: 1000px;
+	margin-left:24.0pt;
+    font-family: "Times New Roman","sans-serif";
+	font-size: 13.5pt;
+	}
+
+.eq td 
+	{
+	width: 800px
+	text-align: left;
+	font-size: 13.5pt;
+	font-weight: normal;
+	color:#5A5A5A;
+	}
+
+hr	
+	{
+	border-width:0;
+	background-color:#A0A0A0;
+	color: #A0A0A0;
+	height: 2px;
+	}
+
+hr.large
+	{
+	height: 10px;
+	}
+
+.eq th 
+	{
+	width: 200px
+	text-align: right;
+	font-family: "Calibri","sans-serif";
+	font-size: 13.5pt;
+	font-weight: normal;
+	color:#5A5A5A;
+	}
+
+mathrm
+	{
+	font-family:"Times New Roman","sans-serif";
+	white-space: nowrap;
+	}
+
+.vectortable
+	{
+	border: 0;
+	}
+
+.vectortable th
+	{
+	padding: 6px;
+	text-align: left;
+	text-decoration: underline;
+	}
+
+.vectortable td
+	{
+	padding: 6px;
+	text-align: left;
+	vertical-align: top;
+	}
+
+.ref
+	{
+	padding: 0px;
+	/*list-style: none; 
+	counter-reset:array;
+*/	}
+
+.ref li:before
+	{
+	/*counter-increment:array;
+	content:"[" counter(array) "] ";*/
+	}
+	
+.auto-style1 {
+	border-width: 0px;
+}
+	
+</style>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="purple" alink="red">
+
+<hr class="large">
+<!--Insert Block Name, Path and Image here-->
+<a href="Figures/Repeating_Profile_shot.bmp">
+<img width=162 height=87 src="Figures/Load_from_File_SHOT.jpg" align=right class="auto-style1"></a>
+<p class="blockname">Load from File</p>
+<p style="margin-top:0px; margin-bottom:20px">Path: CARNOT/Load/General</p>
+<!--End of Insert-->
+<hr>
+
+<p><b>Purpose:</b><br>
+Read a load profile from a data file.</p>
+<p><b>Description:</b><br>
+The block uses the Simulink block &quot;From Workspace&quot;. The file is read to the 
+global workspace and the data is given to the From Workspace block. In 
+difference to the block &quot;From File&quot; the data must be in columns (first column is 
+the time in seconds).<br>The output can be a scalar (second column in the data 
+file) or a vector (when there are several columns in the data).<br>A Unit-Delay 
+with the timestep of the data forces the model to a maximum timestep equal to 
+the data acquisiton timestep. </p>
+<p><b>Parameters</b></p>
+
+<!--This is how we make lists-->
+<ul>
+ <li> Name of the file</li>
+ <li> Extension of the file (.mat, .txt, .dat)</li>
+</ul>
+
+<p><img alt="" src="Figures/Load_from_File_1.jpg"><p>&nbsp;<p style="margin-bottom:0;"><b>Input:</b>
+<!--Input and Output Variables are presented in tables
+	Do not change the column width!-->
+&nbsp;none
+
+<p style="margin-bottom:0;"><b>Output:</b>&nbsp; Signal of the load file.<br>&nbsp;<hr>
+
+<p><b>NOTE: -</b><br>
+<!--Insert Notes here-->
+<hr>
+
+<p style="margin-bottom:0;"><b>Characteristics:</b>
+<table>
+	<tr>
+		<td style="width: 150px;">Direct Feedthrough</td>
+		<td style="width: 10px;">:</td>
+        <td> No</td>
+    </tr>
+    <tr>
+    	<td>Sample Time</td>
+        <td>:</td>
+        <td>Continuous</td>
+    </tr>
+    <tr>
+    	<td>Vectorized</td>
+        <td>:</td>
+        <td>Yes</td>
+    </tr>
+</table>
+
+</body>
+
+</html>

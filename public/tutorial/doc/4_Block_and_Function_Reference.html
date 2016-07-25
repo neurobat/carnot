@@ -1,0 +1,1443 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Block and Function Reference</title>
+<meta name="author" content="wemhoene">
+<meta name="generator" content="Namo WebEditor v3.0">
+<style type="text/css">
+body{		
+		margin-left: 108pt;
+		font-family: Calibri, sans-serif;
+		color:#5A5A5A;
+	}
+h1
+	{
+	margin-top:1em;
+	margin-bottom:.5em;
+	margin-right:0cm;
+	line-height:120%;
+	font-size: 18pt;
+	font-weight: bold;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+
+h2
+	{
+	margin-top:2em;
+	margin-bottom:0px;
+	margin-right:0cm;
+	line-height:120%;
+	font-size: 16pt;
+	font-weight: bold;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+
+h3
+	{
+	margin-right:0cm;
+	line-height:120%;
+	font-size: 13.5pt;
+	font-weight: bold;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+	li{
+		font-family: Calibri, sans-serif;
+		font-size: 13.5pt;
+		color:#5A5A5A;
+	}
+	p {
+		font-family: Calibri, sans-serif;
+		font-size: 13.5pt;
+		color:#5A5A5A;
+	}
+	table {
+		font-family: Calibri, sans-serif;
+		font-size: 13.5pt;
+		color:#5A5A5A;
+	}
+
+</style>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="purple" alink="red">
+<hr size=2 width="100%" align=center>
+<h1 style="margin-top:0.5em"><a name="block_reference"><b>4 Block and Function Reference</b> </a></h1>
+<hr size=2 width="100%" align=center>
+
+<h2><a name="subsystems"><b>4.1 The Subsystems</b> </a></h2>
+<p>The CARNOT library contain different subsystems:
+<ul type="disc">
+    <li><a href="#materials">Materials</a> 
+    (material properties)
+    <li><a href="#basics">Basics</a> (basic 
+    elements)
+    <li><a href="#outputs">Outputs</a> 
+    (to show some results)
+    <li><a href="#weather">Weather</a> 
+    (radiation on inclined surface, ...)
+    <li><a href="#electricity">Electricity</a>
+    <li><a href="#heat_source">Heat Source</a> 
+    (heat pump, solar collector, ...)
+    <li><a href="#hydraulics">Hydraulics</a> 
+    (pipe, connections, Tee pieces, valves, pumps)
+    <li><a href="#storage_tank">Storage</a> 
+    (...)
+    <li><a href="#loads">Loads</a> (houses, 
+    water supply)
+    <li><a href="#control">Control</a> 
+    (controller, measurement sensors)
+    <li><a href="#misc">Misc</a> (miscellaneous 
+    blocks)
+    <li><a href="#electricity">Electricity</a> 
+    (PV generator, inverter)
+    <li>New Blocks (Every blocks waiting for <a href="#validation">validation process</a>)
+</ul>
+<p><a name="basics"><b>Basics</b> <br>
+Blockset of the library of CARNOT contains sub-libraries for the calculation of basic 
+values. The blockset contains the sub-libraries: </a>
+<ul type="disc">
+    <li>Material Properties
+    <li>Hydaulics<li>Pressure Drop<li>Thermal Models
+    <li>Weather and Sun
+    </ul>
+<p><a name="control"><b>Control</b> <br>
+Blockset of CARNOT Toolbox, that contains blocks of measurements sensors and 
+controllers. The Blockset contains the following blocks: </a>
+<ul type="disc">
+    <li><a href="Controller_Bang_Bang.html">controller_bang_bang 
+    </a>
+    <li><a href="Massflow_Sensor.html">Massflow_Sensor</a>
+    <li><a href="Solar_Radiation_Sensor.html">Solar_Radiation_Sensor</a>
+    <li><a href="T_Sensor.html">T_Sensor</a>
+    <li><a href="T_Sensor_Surface.html">T_Sensor_Surface</a>
+    <li><a href="EnergyMeter.html">EnergyMeter</a>
+    <li><a href="EnergyMeter_HC.html">EnergyMeter_Heating/Cooling</a>
+    <li><a href="PowerMeter.html">PowerMeter</a>
+    </ul>
+<p><a name="hydraulics"><b>Hydraulics</b> <br>
+Blockset of the CARNOT library that contains blocks for the hydraulic calculation. 
+The Blockset contains the functions </a>
+<ul type="disc">
+    <li><a href="Flow_Mixer.html">Flow_Mixer</a>
+    <li><a href="Flow_Mixer_Thermostatic.html">Flow Mixer thermostatic</a>
+    <li><a href="Valve_fn.html">Valve_fn</a><li><a href="Valve.html">Valve</a>
+    <li><a href="Valve_ThermoTset.html">Valve_ThermoTset</a>
+    <li><a href="Valve_Thermostatic.html">Valve_Thermostatic</a><li>
+	<a href="Flow_Diverter.html">Flow Diverter</a>
+    <li><a href="Pipe.html">Pipe, pressure drop from measurement</a>
+    <li><a href="Pipe_Geometry.html">Pipe, pressure drop calculated from 
+	geometry</a>
+    <li><a href="Pipe_Isolation.html">Pipe, isolation in % of diameter</a>
+    <li><a href="Pump_Const.html">Pump, constant Massflow</a><li>
+	<a href="Pump_Main.html">Pump, Main and Additional for pressure drop 
+	calculation</a>
+    <li><a href="Thermosyphon.html">Thermosyphon</a>
+</ul>
+<p><a name="heat_source"><b>Source</b> <br>
+The source Blockset contains the sub-libraries: </a>
+<ul type="disc">
+    <li>Boiler<li>Chiller<li>Heat Exchanger<li>Heat Pump<li>Simple<li>Solar 
+	Thermal<li>Electric Generator<li>Cogeneration<li>Energy (sources)<li>
+	Ventilation</ul>
+<p><a name="loads"><b>Loads</b> <br>
+The blockset contains the following sub-libaries for heating cycles or components of 
+heating cycles </a>
+<ul type="disc">
+    <li>Electric<li>General<li>Houses<li>Hot Water Tapping</ul>
+<p>Houses:<br>
+<ul type="disc">
+    <li>&nbsp;<a href="Simple_House.html">Simple_House</a><li>&nbsp;<a href="Room_Floor_Heating.html">Room_Floor_Heating.html</a><li>&nbsp;<a href="Room_Radiator.html">Room_Radiator.html</a></ul>
+<p>Underlying blocks for houses can be found in:<p>wall and floor<ul type="disc">
+    <li><a href="Wall_in.html">inner wall</a><li><a href="Wall_out.html">outer 
+	wall</a><li>&nbsp;<a href="Window.html">windows</a><li>
+	<a href="Floor_in.html">floor and ceiling</a></ul>
+<p>Room nodes
+<ul type="disc">
+    <li><a href="#room_node">room_node</a>
+</ul>
+<p>ventilation_heating
+<ul type="disc">
+    <li><a href="#ventilation">ventilation</a>
+    <li><a href="#THV_P_adapter">THV_P_adapter</a>
+</ul>
+<p>&nbsp;</p>
+<p><strong>Tools</strong><a name="misc"> 
+<br>
+The Blockset contains the following functions: </a>
+<ul type="disc">
+    <li><a href="Average.html">Average</a>
+    <li><a href="Count_Working_Time.html">Count_Working_Time</a>
+    <li><a href="Economy_Ecology.html">economy ecology</a>
+    <li><a href="SumTime.html">sumtime</a>
+    <li><a href="UnitConv.html">unit_conv</a>
+    <li><a href="UnitConv_Temperature.html">unit_conv_temperature</a>
+    <li><a href="write_txt_file.html">write_txt_file</a>
+    <li>Date2sec
+    <li>Sec2date
+</ul>
+<p><a name="Outputs"><b>Outputs</b> <br>
+Blockset of the library of CARNOT that contains blocks to output values. The 
+blockset contains the following functions </a>
+<ul type="disc">
+    <li><a href="Display_THB.html">display_THB</a>
+    <li><a href="display_weather.html">display_weather</a>
+    <li><a href="printer.html">printer</a>
+    <li><a href="Sensitive_room_temperature.html">Sensitive_room_temperature</a>
+    <li><a href="S_selector.html">S_selector</a>
+    <li><a href="AIV_selector.html">AIV_selector</a>
+</ul>
+<p><a name="storage_tank"><b>Storage</b> <br>
+Blockset of the library of CARNOT that contains blocks for the calculation of 
+different storage types. </a></p>
+<ul type="disc">
+    <li>Thermal<li>Electric</ul>
+<p><a name="storage_tank"> <br>
+</a><a name="water_storages"><b>Thermal (water) storages:</b> </a>
+</p>
+<ul type="disc">
+    <li><a href="Storage_Type_N.html">Storage_Type1 .. Storage_Type5</a> 
+	(different configurations of storage tanks)<li>
+	<a href="heat_exchanger_storage.html">heat_exchanger_storage.html</a>
+	(in subfolder &quot;detailed storage models&quot;)</ul>
+<p>There are different types of ports to construct your storage 
+model that are contained in the <a href="#Ports for storage construction">ports for your storage construction&quot;</a> 
+subset </p>
+<p>Moreover two types of ground storages are included:
+<ul type="disc">
+    <li><a href="ground_storage_U_tube.html">ground_storage_U-tube</a>
+    <li><a href="Ground_Storage.html">Ground_Storage.html</a>
+</ul>
+<p>The block contains a surface model which can be modified by 
+different ground type. The models are in the subset &quot;<a href="#surface_models_for_ground_storage">surface models for ground storage</a>&quot; 
+</p>
+<p><a name="surface models for ground storage"><b>Surface models 
+for ground storage</b> <br>
+The subsystem contains the following two models to specify the ground characteristics 
+for calculating the ground storage: </a>
+<ul type="disc">
+    <li><a href="Open_Surface.html">open surface model</a>
+    <li><a href="Isolated_Cover.html">isolated cover model</a>
+</ul>
+<p><a name="weather"><b>Weather</b> <br>
+Blockset of CARNOT toolbox that contains blocks for calculation and generation 
+of weather conditions. The Blockset contains the following blocks: </a>
+<ul type="disc">
+    <li><a href="Weather_Simple_Model.html">Weather_Simple_Model</a>
+    <li><a href="Weather_from_Workspace.html">Weather_from_Workspace</a>
+    <li><a href="Weather_from_File.html">Weather from File</a>
+    <li><a href="WDB2THB.html">weather 2 THB</a>
+    <li><a href="Solar_Position.html">sun position</a>
+    <li><a href="Fixed_Surface.html">fixed surface</a>
+    <li><a href="Tracked_Surface.html">tracked surface</a>
+    <li><a href="Radiation_on_Inclined_Surface.html">radiation on inclined surface</a>
+    <li><a href="Radiation_Divison.html">radiation division</a>
+    <li><a href="Cloudage.html">Cloudage</a>
+    <li><a href="Sky_Temperature.html">sky temperature</a>
+</ul>
+<h1><a name="utilities"><b>4.3 Utility Functions (m-files and 
+m-functions)</b> </a></h1>
+<p>In this chapter, the utility functions already mentioned in 
+chapter 2.4 are referenced. <br>
+This utility functions are m-files or m-functions, that can be called from the 
+workspace. Some utility function provide input values to specify the components 
+in your model (like &quot;taualfa&quot;), other facilitate operations like compiling 
+the underlaying C-Mex S_functions. </p>
+<p>&nbsp;</p>
+<hr> 
+<h1 ><b>fluid-property functions</b>  
+(m-functions)</h1>
+<hr> 
+<p><b>Purpose</b> Calculate material properties 
+from Command Window. </p>
+<p><b>Description</b> <br>
+All fluid property functions are accessible from the workspace. See description 
+of the corresponding CARNOT-block:
+<ul type="disc">
+    <li><a href="#density">density</a>
+    <li><a href="#thermal_conductivity">thermal conductivity</a>
+    <li><a href="#heat_capacity">heat capacity</a>
+    <li><a href="#Kinematic_viscosity">kinematic viscosity</a>
+    <li><a href="#enthalpy">enthalpy</a>
+    <li><a href="#entropy">entropy</a>
+    <li><a href="#Prandtl">prandtl</a>
+    <li><a href="#Specific_volume">specific volume</a>
+    <li><a href="#evaporation_enthalpy">evaporation enthalpy 
+    </a>
+    <li><a href="#vapour_pressure">vapourpressure</a>
+    <li><a href="#Saturationtemperature">saturationtemperature</a>
+    <li><a href="#satu">saturationproperty</a>
+</ul>
+<p>&nbsp;</p>
+<hr> 
+<h1><b>airmass (m-function)</b></h1>
+<hr>  
+<p><b>Purpose</b> Calculate the airmass 
+at a specific time and for a specific location.</p>
+<p><b>Function call:</b></p>
+<p>airmass(time, latitude, longitude, longitude0)<br>
+&nbsp;</p>
+<p><strong>Input</strong><br> &nbsp;&nbsp;&nbsp;&nbsp;time &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 
+second in the year (january, 1st, 0:00 = 0 s)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;latitude &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: &nbsp;&nbsp;[-90,90],north 
+positive<br>
+&nbsp;&nbsp;&nbsp;&nbsp;longitude &nbsp;&nbsp;&nbsp;&nbsp;: &nbsp;&nbsp;[-180,180],west 
+positive<br>
+&nbsp;&nbsp;&nbsp;&nbsp;longitude0 &nbsp;&nbsp;&nbsp;: &nbsp;&nbsp;reference 
+longitude (timezone)</p>
+<p>&nbsp;</p>
+<p><strong>Output</strong></p>
+<p>Airmass in multiples of the length for sunlight when the sun 
+is fully in the zenith position.</p>
+<p>&nbsp;</p>
+<p><b>Description</b></p>
+<p>The airmass is 1/sin(solar_altitude) as long as the altitude 
+is above 30 degrees. Otherwise the airmass is ((1229+(614*sin(solar_altitude)).^2).^(0.5)) 
+- 614.*sin(solar_altitude).</p>
+<p>&nbsp;</p>
+<hr> 
+<h1><a name="angles2time"><b>Angles2time (M-file)</b></a> </h1>
+<hr> 
+<p><b>Description</b> <br>
+This function finds the time to two specified angles. Angles can be declination 
+and zenith, azimuth and zentih or declination and azimuth</p>
+<p>The function call syntax is </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt>angles2time(latitude,longitude,longitude0,name1,angle1,name2,angle2)</tt> </p>
+<p><b>Inputs:</b>
+<ul type="disc">
+    <li>latitude : [-90;90], north positive
+    <li>longitude : [-180;180], west positive
+    <li>longitude0 : reference longitude (timezone)
+    <li>Temperature at outlet [&deg;C]
+    <li>name1, name2 : letter specifiying angle ('d' = declination, 
+    'z' = zenith, 'a' = azimuth, 's' = altitude of sun)
+    <li>angle1, angle2: values of specified angles
+</ul>
+<p>&nbsp;</p>
+<a name="costs0"><hr> </a>
+<h1><a name="costs"><b>annualcosts (M-file) </b></h1>
+<hr> </a>
+<p><b>Purpose</b> <br>
+Calculation of the annual costs for a system </p>
+<p><b>Description</b> <br>
+In the M-file annualcosts the annuity of a system is calculated. Call this function 
+with </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt>annualcosts(UseTime,IntRate,IncFuel,IncMat,InvestCosts,CompLifeTime,ContOpCosts,RunOpCosts,FuelCosts,RunTime,RunTimeDep);</tt> </p>
+<p>The calculation of the annuity considers investment costs, 
+continuous operation costs and operation costs which depend on the runtime and 
+also fuel costs. Interest rate and annual increase of permanent costs are also 
+taken into consideration. The output is calculated in the same currency as given 
+by the input. Remaining values of the components at the end of the use of the 
+system are calculated due to linear depreciation. 
+<table border="0">
+    <tr>
+        <th align="left"><p>Parameters </th>
+        <th align="left"><p>description </th>
+        <th align="left"><p>unit </th>
+    </tr>
+    <tr>
+        <td><p>Usetime </td>
+        <td><p>time of use of the complete system </td>
+        <td><p>[y] </td>
+    </tr>
+    <tr>
+        <td><p>IntRate </td>
+        <td><p>Interest rate per year </td>
+        <td><p>[1/y] </td>
+    </tr>
+    <tr>
+        <td><p>IncFuel </td>
+        <td><p>Expected annual increase of fuel costs </td>
+        <td><p>[1/y] </td>
+    </tr>
+    <tr>
+        <td><p>IncMat </td>
+        <td><p>Expected annual increase of permanent costs </td>
+        <td><p>[1/y] </td>
+    </tr>
+    <tr>
+        <td><p>CompLifeTime </td>
+        <td><p>lifetime of component </td>
+        <td><p>[y] </td>
+    </tr>
+    <tr>
+        <td><p>InvestCosts </td>
+        <td><p>Investment costs </td>
+        <td><p>[-] </td>
+    </tr>
+    <tr>
+        <td><p>ContOpCosts </td>
+        <td><p>Continuous operation costs </td>
+        <td><p>[-] </td>
+    </tr>
+    <tr>
+        <td><p>RunOpCosts </td>
+        <td><p>Operation costs depending on the run time </td>
+        <td><p>[1/s] </td>
+    </tr>
+    <tr>
+        <td><p>FuelCosts </td>
+        <td><p>Fuel costs within one year </td>
+        <td><p>[1/y] </td>
+    </tr>
+    <tr>
+        <td><p>RunTime </td>
+        <td><p>Run time of component </td>
+        <td><p>[s] </td>
+    </tr>
+    <tr>
+        <td><p>RunTimeDep </td>
+        <td><p>Dependence of the lifetime of the comp. on its 
+            run time (yes = 1, no = 0) </td>
+        <td><p>[-] </td>
+    </tr>
+</table>
+<p><b>Outputs</b>
+<ul type="disc">
+    <li>Annuity
+    <li>Annuity of the whole system
+    <li>[costs/y]
+</ul>
+<p>The parameters &quot;Usetime&quot;,&quot;IntRate&quot;,&quot;IncFuel&quot;,&quot;IncMat&quot; 
+are general for all of the components and have to be given as scalar values. 
+All of the other parameters are component specific. For each parameter you have 
+to give a vector which has as much elements as components you have. If you have 
+e.g. a furnace, a collector and a storage you would have to define for each 
+component its lifetime. This would result in a vector like: CompLifeTime = [ 
+20 10 20 ]; </p>
+<p>The definition of the parameters (CompLifeTime, InvestCosts, 
+ContOpCosts, RunOpCosts, FuelCosts, RunTime, RunTimeDep) has to be done for 
+all components. The operation costs are divided into operation costs which depend 
+on the run time (e.g. lubricants, maintenance) and fix operation costs (e.g. 
+continuous servicing to prevent failure). FuelCosts and RunTime depend on the 
+system behaviour during simulation, so they are set by the simulation model. 
+You can use the output of the economy_ecology block to get the values for the 
+parameters &quot;FuelCosts&quot; and RunTime&quot;. They are written to the 
+workspace with the name &quot;input_annual_costs&quot;. The lifetime of a component 
+can depend on its runtime (e.g. diesel generators). Therefore you have to specify 
+for each component if it depends on its runtime or not. </p>
+<p>To become familiar with the function &quot;annualcosts&quot; 
+open the m-script coststest.m. There the vectors for the costs are defined for 
+an example and the link to the economy_ecology block can be seen from the code. 
+</p>
+<p><a href="#literature">Literature:</a> 
+<br>
+<a href="#haubrich">Haubrich, Hans-J&uuml;rgen:</a> Elektrische Energieversorgungssysteme. ISBN 3-86073-204-8, 1994. 
+</p>
+<hr> 
+<hr> 
+<h1><a name="convert_weather"><b>convert_weather (M-function)</b></a> </h1>
+<hr> 
+<p align="left"><b>Description</b> <br>
+This function converts old weather Carnot-Format data file into the new Carnot-Format. 
+The function assumes that the direct irradiation is on a horizontal surface 
+(the data file is not yet modified by surfrad).</p>
+<p><b>Syntax</b> <br></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt> 
+</tt>outmat = convert_weather(infilename,outfilename) 
+</p>
+<p><b>Inputs:</b> </p>
+<p>The infilename is the name of the old file.<br> The format 
+of the file have to be as the following format:<br>
+&nbsp; 
+<table border="0">
+    <tr>
+        <th width="44" align="left"><p>col </th>
+        <th width="563" align="left"><p>description </th>
+        <th width="39" align="left"><p>unit </th>
+    </tr>
+    <tr>
+        <td width="44"><p>1</td>
+        <td width="563"><p>time </td>
+        <td width="39"><p>[s] </td>
+    </tr>
+    <tr>
+        <td width="44"><p>2 </td>
+        <td width="563"><p>timevalue (comment line) format YYYYMMDDHHMM. 
+            Y is the year, M the month, D the day, H the hour </td>
+        <td width="39"><p>[-] </td>
+    </tr>
+    <tr>
+        <td width="44"><p>3</td>
+        <td width="563"><p>zenith angle of sun (at time, not 
+            averaged) (continue at night to get time of sunrise by&nbsp;linear 
+            interpolation)</td>
+        <td width="39"><p>[degree] </td>
+    </tr>
+    <tr>
+        <td width="44"><p>4</td>
+        <td width="563"><p>azimuth angle of sun (0&deg;=south, 
+            east negative) (at time, not average in timestep)</td>
+        <td width="39"><p>[degree] </td>
+    </tr>
+    <tr>
+        <td width="44"><p>5</td>
+        <td width="563"><p>incidence angle on surface (0&deg; 
+            = vertical) </td>
+        <td width="39"><p>[degree] </td>
+    </tr>
+    <tr>
+        <td width="44"><p>6 </td>
+        <td width="563"><p>direct solar radiation on surface</td>
+        <td width="39"><p>[W/m^2] </td>
+    </tr>
+    <tr>
+        <td width="44"><p>7 </td>
+        <td width="563"><p>diffuse solar radiation on a horizontal 
+            surface </td>
+        <td width="39"><p>[W/m^2] </td>
+    </tr>
+    <tr>
+        <td width="44"><p>8 </td>
+        <td width="563"><p>ambient temperature</td>
+        <td width="39"><p>[&deg;C]</td>
+    </tr>
+    <tr>
+        <td width="44"><p>9</td>
+        <td width="563"><p>radiation temperature of sky</td>
+        <td width="39"><p>[&deg;C]</td>
+    </tr>
+    <tr>
+        <td width="44"><p>10</td>
+        <td width="563"><p>relative humidity</td>
+        <td width="39"><p>[%] </td>
+    </tr>
+    <tr>
+        <td width="44"><p>11 </td>
+        <td width="563"><p>precipitation</td>
+        <td width="39"><p>[m/s] </td>
+    </tr>
+    <tr>
+        <td width="44"><p>12</td>
+        <td width="563"><p>cloud index (0=no cloud, 1=covered 
+            sky)</td>
+        <td width="39"><p>[-]</td>
+    </tr>
+    <tr>
+        <td width="44"><p>13</td>
+        <td width="563"><p>station pressure</td>
+        <td width="39"><p>[Pa]</td>
+    </tr>
+    <tr>
+        <td width="44"><p>14</td>
+        <td width="563"><p>mean wind speed</td>
+        <td width="39"><p>[m/s]</td>
+    </tr>
+    <tr>
+        <td width="44"><p>15</td>
+        <td width="563"><p>wind direction (north=0&deg; west=270&deg;)</td>
+        <td width="39"><p>[degree]</td>
+    </tr>
+    <tr>
+        <td width="44"><p>16</td>
+        <td width="563"><p>incidence angle in a vertical plane 
+            on the collecor degree orientation of the plane is parallel to the 
+            risers, referred as longitudinal plane in EN 12975</td>
+        <td width="39"><p>[degree]</td>
+    </tr>
+    <tr>
+        <td width="44"><p>17</td>
+        <td width="563"><p>incidence angle in a vertical plane 
+            on the collecor degree orientation of the plane is parallel to the 
+            headers referred as transversal plane in EN 12975 (= -9999, if surface 
+            orientation is unknown)</td>
+        <td width="39"><p>[degree]</td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+<p><b>Outputs:</b> </p>
+<p>outfilename : character string of the output file name.<br> 
+The output file has the CARNOT form as described in &quot;wformat.txt&quot;.</p>
+<p><b>Characteristics</b> <br>
+Vectorized : No </p>
+<hr> 
+<h1><a name="colpdrop"><b>colpdrop</b></a> 
+</h1>
+<hr> <br clear="all">   
+<p><b>Description</b> <br>
+This function calculates the pressure drop in a collector per collector surface 
+area. </p>
+<p>The function </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt>colpdrop 
+(tin, tout, m<sub>dot</sub>, 
+p, fluid_id, fluid_mix, dhead, lhead, drise, lrise, nrise, Acol)</tt> </p>
+<p>calculates the pressure drop in a collector per collector 
+surface area in [Pa/m<sup>2</sup>] 
+from the </p>
+<p><b>Inputs:</b>
+<ul type="disc">
+    <li>tin
+    <li>Temperature at inlet [&deg;C]
+    <li>tout
+    <li>Temperature at outlet [&deg;C]
+    <li>m<sub>dot</sub>
+    <li>mass flow per collector surface [kg/(sm<sup>2</sup>)]
+    <li>p
+    <li>pressure [Pa]
+    <li>fluid_id
+    <li>identifier for fluid (1=water, 2=air, ...)
+    <li>fluid_mix
+    <li>percentage of mixing for water glycol (0 = pure water)
+    <li>dhead
+    <li>diameter of header [m]
+    <li>lhead
+    <li>length of header [m]
+    <li>drise
+    <li>diameter of riser [m]
+    <li>lrise
+    <li>length of riser [m]
+    <li>nrise
+    <li>number of risers
+    <li>Acol
+    <li>collector surface area in [m<sup>2</sup>]
+</ul>
+<p>Construction of the collector is a header - riser arrangement. 
+<br>
+An equation of Dunkle and Davey (1970) is used, who studied the problem of pressure 
+drop analytically and experimentally. The basic assumption is that the flow 
+is turbulent in the headers, and laminar in the risers, an assumption which 
+according to Duffie and Beckman (1991) is true for many collectors specially 
+in thermosyphon and low-flow systems. </p>
+<p><a href="#literature">Literature:</a> 
+<br>
+<a href="#dunkle">Dunkle, Davey:</a> 
+&quot;Flow distribution in absorber banks&quot;, ISES Conference, 1970 <br>
+<a href="#duffie_beckman">Duffie, Beckman:</a> Solar Engineering of Thermal Processes, 1991 </p>
+<p><b>Characteristics</b> <br>
+VectorizedNo </p>
+<p>&nbsp;</p>
+<hr> 
+<h1><a name="date2sec"><b>date2sec</b></a><b> 
+(m-function)</b> </h1>
+<hr> 
+<p><b>Purpose</b> <br>
+Transform a date to seconds of year </p>
+<p><b>Description</b> <br>
+date2sec transfroms the date to seconds of the year </p>
+<p>syntax: </p>
+<p><tt>date2sec(date)</tt> </p>
+<p>second 0 is 00:00:00 on first january date in vector [month 
+day hour minute second] </p>
+<hr> 
+<h1><b>fluidprop (C-MEX-function)</b> </h1>
+<hr> 
+<p><b>Purpose</b> <br>
+Interface to make the property functions from the Carlib Library accessible 
+from the matlab command window. </p>
+<p><b>Description</b> <br>
+fluidprop is a C-MEX function to make the property function of the Carlib Library 
+accessible from the MATLAB Command window. <br>
+In the Carnot main directory, m-function that are named like the SIMULINK material 
+blocks are contained. (density.m, heat_capacity.m.etc.) These m-functions use 
+fluidprop as interface to use the property functions of the Carlib Library. 
+The function call in the m-function is </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt>density 
+(temperature, pressure, fluid_type, fluid_mix)</tt> </p>
+<p>i.e. with the same variable as in the Simulink blocks. </p>
+<p>Internally the MEX-function fluidprop is called </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt>rho 
+= fluidprop (temperature, pressure, fluid_type, fluid_mix, property_ID)</tt> </p>
+<p>The property_ID defines the property, e.g the density, that 
+you want to be promted. For the definition of the property_ID see chapter 2.1 
+of the manual (Carnot vector definitions). The function call of can also be 
+performed directly from the MATLAB command window: </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt>fluidprop 
+(temperature, pressure, fluid_type, fluid_mix, property_ID)</tt> </p>
+<p>If you call fluidprop with a respective negative property_ID, 
+the function returns the saturationproperties of the respective property in 
+vectorial form. The first output component is the value for saturated steam 
+at the specified conditions, the second value the one of boiling fluid. To get 
+the saturationproperty the function call of fluidprop has to be effectuated 
+in the following way: </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt>fluidprop 
+(temp, pres, fluid_id, fluid_mix, property_type = -1)</tt> </p>
+<p>More detailed information about the function fluidprop are 
+contain in the <a href="#carlib">paragraph 3.2 &quot;The 
+Carlib Library&quot;</a>. </p>
+<p>All material functions are vectorised, they can be specified 
+with more than one fluid property, i.e. with a vector of temperatures. In this 
+case either all input vectors must be of the same length or they must be a scalar. 
+A scalar is interpreted as a vector, which contains the adequate number of components 
+of the specified value. </p>
+<p><b>Characteristics</b> <br>
+VectorizedYes </p>
+<hr> 
+<h1><a name="hp_param"><b>hp_param (m-function)</b></a> </h1>
+<hr> 
+<p><b>Purpose</b> <br>
+Calculate parameters for the heat pump model. </p>
+<p><b>Description</b> <br>
+HP_PARAM calculates the parameters K(1), K(2), K(3), K(4), K(5), K(6), K(7), 
+K(8) and K(9) for the <a href="#heatpump">heat-pump model</a> in the CARNOT library.<br> K(1), K(2) and K(3) are used to estimate 
+the heating power ; K(4), K(5) and K(6) enable to calculate electric power ; 
+K(7), K(8) and K(9) are used to obtain absorbing power.<br>
+The model works with a linear characteristics. Specify heating, absorbing and 
+electric power only at lowest and highest temperatures. Other values will be 
+interpolated.</p>
+<p><br>
+Linear model in primary and seconary temperature, used by the carnot heat_pump 
+model :<br>
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;heating_power = K1 * Tprimary + K2 * Tsecondary 
++ K3 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;electric_power = K4 * Tprimary + K5 
+* Tsecondary + K6<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;absorbing_power = K7 * Tprimary 
++ K8 * Tsecondary + K9</p>
+<p>hp_param uses the MATLAB-function fmins, a least square method, 
+to minimize the error between approximation and given values.</p>
+<p>syntax: &nbsp;&nbsp;hp_param(A)<br> </p>
+<p><b>Input</b></p>
+<p>A matrix A where each row has five elements : &nbsp;[qdot_hot 
+qdot_cold &nbsp;&nbsp;&nbsp;&nbsp;pel &nbsp;&nbsp;&nbsp;&nbsp;tcold &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thot]<br> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(specify at least two rows for A)
+<ul type="disc">
+    <li>first element is the heating power :<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;qdot_hot 
+    = A(:,1);
+</ul>
+<ul type="disc">
+    <li>second element is the absorbing power :<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;qdot_cold 
+    = A(:,2);
+    <li>third element is the electric power :<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pel 
+    = A(:,3);<br> 
+    <li>fourth element is the corresponding source temperature 
+    :<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(usually the source 
+    side inlet temperature)<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tcold 
+    = A(:,4);<br> 
+    <li>fifth element is the corresponding sink temperature :<br> 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(usually the outlet temperature 
+    of the house-heating)<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thot 
+    = A(:,5);<br>
+</ul>
+<p><a href="manual.htm#Literature">Literature:</a> <a name="schwamberger">K. Schwamberger: Modellbildung 
+und Regelung von Geb&auml;udeheizungsanlagen mit W&auml;rmepumpen, Fortschrittsberichte 
+VDI Reihe 6, Nr. 263, VDI Verlag D&uuml;sseldorf, 1991 </a></p>
+<p>&nbsp;</p>
+<hr> 
+<h1><a name="legaltime2solartime"><b>Legaltime2solartime (M-file)</b></a> </h1>
+<hr> 
+<p><b>Description</b> <br>
+Calculate legal time of a location on the base of the solar time. </p>
+<p><b>Syntax</b> <br></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt> 
+solartime = legaltime2solartime(time,longitude,longitudenull) </tt></p>
+<p><b>Inputs:</b>
+<ul type="disc">
+    <li>time : official time [s]
+    <li>longitude : [-180,180] , west positive
+    <li>longitudenull : reference longitude (timezone)
+</ul>
+<p><b>Outputs:</b>
+<ul type="disc">
+    <li>solartime : solar time [s]
+</ul>
+<p>&nbsp;</p>
+<hr> 
+<h1><a name="link_breaker"><b>Link Breaker (M-file)</b></a> </h1>
+<hr> 
+<p><b>Description</b> <br>
+open all systems in a directory and save without library links. The directory 
+is an input from the user </p>
+<p>&nbsp;</p>
+<hr> 
+<h1><a name="Meteonorm2wformat"><b>Meteonorm2wformat</b></a><b> (M-file)</b></h1>
+<hr> 
+<p><b>Description</b> </p>
+<p>Meteonorm2wformat converts weather data which is calculated 
+by METEONORM, into the Carnot-Format. The function takes solar position from 
+carlib &nbsp;ince Meteonorm puts solar altitude and azimuth angle to zero between 
+&nbsp;sunset and sunrise.</p>
+<p><b>Syntax</b> </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt> </tt>outmat 
+= Meteonorm2wformat(inmat,outfilename,lat,long,long0)<tt> </tt></p>
+<p><b>Inputs:</b> </p>
+<p>Use the &quot;user defined&quot; weather data format in Meteonorm. 
+For convenience &nbsp;the format file &quot;Meteonorm_carnot_format.muf&quot; 
+can be used in Meteonorm (created with Meteonorm 6.1). The input matrix is the 
+matrix, given from METEONORM.
+<ul type="disc">
+    <li>inmat : Matrix with the following values : 
+    <p>&nbsp;1 - time [h]<br> &nbsp;2 - hs : solar altitude angle [&deg;]<br> 
+    &nbsp;3 - gammas : solar azimuth angle [&deg;]<br> &nbsp;4 - G_Bn : direct 
+    beam radiation on a normal plane [W/m&sup2;]<br> &nbsp;5 - G_Gh global&nbsp;horizontal 
+    radiation in W/m&sup2;<br> &nbsp;6 - G_Dh : diffuse radiation on a horizontal 
+    plane [W/m&sup2;]<br> &nbsp;7 - Ta : air temperature [&deg;C]<br> &nbsp;8 
+    - RH : humidity [%]<br> &nbsp;9 - N : cloud index [0..8]<br> &nbsp;10 - 
+    p : air pressure [hPa]<br> &nbsp;11 - FF : wind speed [m/s]<br> &nbsp;12 
+    - DD : wind direction [&deg;]<br>
+</ul>
+<ul type="disc">
+    <li>outfilename : character string of the output file name 
+    
+    <li>lat &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 
+    [-90,90],north positive 
+    <li>long &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 
+    [-180,180],west positive 
+    <li>long0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 
+    reference longitude (timezone) 
+</ul>
+<p>&nbsp;</p>
+<p><b>Outputs:</b> </p>
+<p>The output matrix has the CARNOT form as described in &quot;wformat.txt&quot;. 
+As no collector position is defined, a horizontal plane is assumed.</p>
+<p>&nbsp;</p>
+<hr> 
+<h1><a name="MeteonormMinute2wformat"><b>MeteonormMinute2wformat</b></a><b> (M-file)</b></h1>
+<hr> 
+<p><b>Description</b> </p>
+<p>MeteonormMinute2wformat converts weather data in 1 minutes 
+time resolution which is calculated by METEONORM into the Carnot-Format. The 
+function takes solar position from carlib since Meteonorm values show some strange 
+movements of the sun.</p>
+<p><b>Syntax</b> </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt> </tt>outmat 
+= MeteonormMinute2wformat(inmat,outfilename,lat,long,long0,[wdata])<tt> </tt></p>
+<p><b>Inputs:</b> </p>
+<p>Use the &quot;user defined&quot; weather data format in Meteonorm. 
+For convenience &nbsp;the format file &quot;Meteonorm_carnot_format.muf&quot; 
+can be used in Meteonorm (created with Meteonorm 6.1). The input matrix is the 
+matrix, given from METEONORM.
+<ul type="disc">
+    <li>inmat: The input matrix is the matrix, given from METEONORM. 
+    The values of infilename have to be in following order (standard output 
+    format for Meteonorm minute values): 
+    <p>&nbsp;&nbsp;&nbsp;1 - month<br> &nbsp;&nbsp;&nbsp;2 - day of month<br> 
+    &nbsp;&nbsp;&nbsp;3 - day of year<br> &nbsp;&nbsp;&nbsp;4 - hour<br> &nbsp;&nbsp;&nbsp;5 
+    - minute<br> &nbsp;&nbsp;&nbsp;6 - G_Gh global horizontal radiation in W/m&sup2;<br> 
+    &nbsp;&nbsp;&nbsp;7 - hs solar altitude angle in degree<br> &nbsp;&nbsp;&nbsp;8 
+    - G_Gex extraterrestrial global horizontal solar radiation in W/m&sup2;<br> 
+    &nbsp;&nbsp;&nbsp;9 - G_Gh_hr hourly average of global horizontal radiation 
+    in W/m&sup2;<br> &nbsp;&nbsp;10 - G_Dh diffuse horizontal radiation in W/m&sup2;<br> 
+    &nbsp;&nbsp;11 - G_Gk global inclined radiation in W/m&sup2;<br> &nbsp;&nbsp;12 
+    - G_Dk diffuse inclined radiation in W/m&sup2;<br> &nbsp;&nbsp;13 - G_Bn 
+    direct normal radiation in W/m&sup2;<br> &nbsp;&nbsp;14 - Ta ambient temperature 
+    in degree C<br> &nbsp;&nbsp;15 - FF wind speed in m/s<br>
+</ul>
+<ul type="disc">
+    <li>outfilename : character string of the output file name 
+    
+    <li>lat &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 
+    [-90,90],north positive 
+    <li>long &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 
+    [-180,180],west positive 
+    <li>long0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 
+    reference longitude (timezone) 
+    <li>[wdata] &nbsp;&nbsp;&nbsp;&nbsp;: OPTIONAL: matrix with 
+    weather data of the same location in standard Carnot format with additional 
+    data (relative humitiy, cloud index, air pressure and wind direction) 
+    
+</ul>
+<p>&nbsp;</p>
+<p><b>Outputs:</b> </p>
+<p>The output matrix has the CARNOT form as described in &quot;wformat.txt&quot;. 
+As no collector position is defined, a horizontal plane is assumed.</p>
+<p>&nbsp;</p>
+<hr> 
+<h1><a name="ratiograph"><b>Ratiograph (M-file)</b></a> </h1>
+<hr> 
+<p><b>Description</b> <br>
+This function plots a graph to see the ratio of direct radiation on tilted surface 
+to that on horizontal surface depending on slope and surface azimuth angle. 
+</p>
+<p><b>Syntax</b> <br></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt> 
+ratiograph(month,latitude,longitude,longitude0,ClearIndex,Skymodel,Greflect,[location]) 
+</tt></p>
+<p><b>Inputs:</b>
+<ul type="disc">
+    <li>month : [1..12]
+    <li>latitude : [-90,90],North positive
+    <li>longitude : [-180,180],West positive
+    <li>longitude0 : reference longitude (timezone)
+    <li>ClearIndex : [0..1], index of clearness = ratio of extraterrestrial 
+    radiation to global radiation on horizontal
+    <li>Skymodel : 1 - isotropic sky, or 2 - Hay-Davies sky model
+    <li>Greflect : reflection of ground [0..1], 0.2 for usual 
+    ground, 0.3 .. 0.5 for sand or snow
+    <li>location : optional descriptive name of location
+</ul>
+<p>&nbsp;</p>
+<hr> 
+<h1><a name="sec2date"><b>sec2date</b></a><b> 
+(m-function)</b> </h1>
+<hr> 
+<p><b>Purpose</b> <br>
+Calculate material properties from Command Window. </p>
+<p><b>Description</b> <br>
+sec2date transforms seconds in a year to a date in the form [month day hour 
+minute second]. </p>
+<p>second = 0 for 00:00:00 on first January </p>
+<p><b>Characteristics</b> <br>
+VectorizedNo </p>
+<p>&nbsp;</p>
+<hr> 
+<h1><a name="solartime2legaltime"><b>Solartime2legaltime (M-file)</b></a> </h1>
+<hr> 
+<p><b>Description</b> <br>
+Calculates solar time on the base of the legal time. In the solar time the sun 
+is always in the south (Azimuth 0&deg;) at 12:00. </p>
+<p><b>Syntax</b> </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt> 
+time = solartime2legaltime(solartime, longitudenull, longitude) </tt></p>
+<p><b>Inputs:</b>
+<ul type="disc">
+    <li>solartime : solar time [s]
+    <li>longitudenull : reference longiture (timezone)
+    <li>longitude : [-180,180] , west positive
+</ul>
+<p><b>Outputs:</b>
+<ul type="disc">
+    <li>time : legal time [s]
+</ul>
+<p>&nbsp;</p>
+<hr> 
+<h1><a name="sumtime_m"><b>sumtime (M-file)</b></a><b> (m-function)</b></h1>
+<hr> </p>
+<p><b>Purpose</b><br>
+This Functions calculates for a given date the sum of seconds, minutes, ... 
+in the year. </p>
+<p><b>Description</b><br>
+The output of this function is real, so on March 6<sup>th</sup> the sum of year is 0.175, the sum of month is 2.13. This function 
+exists as S-function <a href="#sumtime_s">sumtime</a>.and as M-script. </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt>sumtime(year,month,day,hour,minute,second)</tt> </p>
+<p><b>Inputs:</b>
+<ul type="disc">
+    <li>date [month day hour minute second]
+</ul>
+<p><b>Outputs</b>:
+<ul type="disc">
+    <li>sum of [year month day hour minute second]
+</ul>
+<p>&nbsp;</p>
+<hr> 
+<h1><a name="sunangles"><b>Sunangles (M-file)</b></a> </h1>
+<hr> 
+<p><b>Description</b> <br>
+Calculates declination, altitude, zenith and azimuth of sun and the hourangle 
+</p>
+<p><b>Syntax</b> <br></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt> 
+[decl,altitude,zenith,azimuth,hourangle] = sunangles(time,lat,long,long0) </tt></p>
+<p><b>Inputs:</b>
+<ul type="disc">
+    <li>time : [s]
+    <li>latitude : [-90,90],north positive
+    <li>longitude : [-180,180],west positive
+    <li>longitude0 : reference longitude (timezone)
+</ul>
+<p><b>Outputs:</b>
+<ul type="disc">
+    <li>declination : [-23.4&deg;..23.4&deg;]
+    <li>Altitude : altitude of the sun in degree
+    <li>Zenith in degree
+    <li>Azimuth in degree
+    <li>Hourangle in degree
+</ul>
+<p>&nbsp;</p>
+<hr> 
+<h1><a name="sungraph"><b>Sungraph (M-file)</b></a> </h1>
+<hr> 
+<p><b>Description</b> <br>
+Plots a position diagram of the sun. </p>
+<p><b>Syntax</b> </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt> 
+sungraph(lat, long, long0, ['location']) </tt></p>
+<p><b>Inputs:</b>
+<ul type="disc">
+    <li>latitude : [-90,90],north positive
+    <li>longitude : [-180,180],west positive
+    <li>longitude0 : reference longitude (timezone)
+    <li>location : optional descriptive string
+</ul>
+<p>&nbsp;</p>
+<hr> 
+<h1><a name="taualfa"><b>taualf</b></a><b>a 
+(m-function)</b> </h1>
+<hr> 
+<p><b>Purpose</b> <br>
+Transmittance-absorbency product of the collector covers </p>
+<p><b>Description</b> <br>
+In the M-file taualpha, the transmittance - absorbency product for the collector 
+covers is calculated. The optical efficiency of the collector taualpha depends 
+on the the following values, that are parameters for the M-file: </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt>taualfa( 
+ncover, refin, teta, KL, alfa)</tt> </p>
+<p><b>Inputs:</b>
+<ul type="disc">
+    <li>ncover
+    <li>number of covers ( 0)
+    <li>refin
+    <li>refraction index (scalar or vector for each cover)
+    <li>teta incidence angle in [rad]
+    <li>KL extinction coefficient * thickness of cover (scalar 
+    or vector for each cover) <br> K = 4/m (extra white glass), K = 16/m (usual 
+    float glass)
+    <li>alfa
+    <li>absorption coefficient of absorber (0..1)
+</ul>
+<p>Output is a vector with taualfa for each incidence angle specified. 
+<br>
+For the calculation of the incidence angle modifier (IAM) divide the result 
+by taualfa (teta = 0) since by definition IAM = 1 for teta = 0. </p>
+<p><b>Characteristics</b> <br>
+VectorizedNo </p>
+<hr> 
+<h1><a name="unit_conv_m"><b>unitconv</b></a></h1>
+<hr> 
+<p><b>Purpose</b><br>
+Converts a value from a specified unit to another unit. </p>
+<p><b>Description</b><br>
+The symbols in a specified unit have to be separated by * or /. So kWh has to 
+be written as kW*h. The common signs are allowed, e.g. kW, mm, &micro;J.<br>
+Beside the units this functions knows some constants, e.g. when using the &quot;unit&quot; 
+c, you get the lightspeed.<br>
+The known units and constants are:
+<p>
+<table style="width: 70%" class="auto-style1">
+	<tr>
+		<td class="auto-style2">unit</td>
+		<td class="auto-style2">meaning</td>
+		<td class="auto-style2">used for</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">m</td>
+		<td class="auto-style2">meter</td>
+		<td class="auto-style2">length</td>
+	</tr>
+	<tr>
+		<td class="auto-style2" style="height: 22px">kg</td>
+		<td class="auto-style2" style="height: 22px">kilogramm</td>
+		<td class="auto-style2" style="height: 22px">mass</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">s</td>
+		<td class="auto-style2">second</td>
+		<td class="auto-style2">time</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">A</td>
+		<td class="auto-style2">ampere</td>
+		<td class="auto-style2">current</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">K</td>
+		<td class="auto-style2">Kelvin</td>
+		<td class="auto-style2">temperature</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">mol</td>
+		<td class="auto-style2">mole</td>
+		<td class="auto-style2">amount of subcstance</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">cd</td>
+		<td class="auto-style2">candela</td>
+		<td class="auto-style2">luminous intensity</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">a</td>
+		<td class="auto-style2">anno</td>
+		<td class="auto-style2">standard year</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">b</td>
+		<td class="auto-style2">barn</td>
+		<td class="auto-style2">area</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">c</td>
+		<td class="auto-style2">&nbsp;</td>
+		<td class="auto-style2">ligthspeed</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">g</td>
+		<td class="auto-style2">gramm</td>
+		<td class="auto-style2">mass</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">l</td>
+		<td class="auto-style2">liter</td>
+		<td class="auto-style2">volume</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">t</td>
+		<td class="auto-style2">ton</td>
+		<td class="auto-style2">mass</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">d</td>
+		<td class="auto-style2">day</td>
+		<td class="auto-style2">time</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">V</td>
+		<td class="auto-style2">volt</td>
+		<td class="auto-style2">voltage</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">F</td>
+		<td class="auto-style2">farad</td>
+		<td class="auto-style2">capacity</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">C</td>
+		<td class="auto-style2">coulomb</td>
+		<td class="auto-style2">electric charge</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">T</td>
+		<td class="auto-style2">tesla</td>
+		<td class="auto-style2">magnetic flux density</td>
+	</tr>
+	<tr>
+		<td class="auto-style2" style="height: 21px">S</td>
+		<td class="auto-style2" style="height: 21px">siemens</td>
+		<td class="auto-style2" style="height: 21px">electric conductance</td>
+	</tr>
+	<tr>
+		<td class="auto-style2" style="height: 22px">G</td>
+		<td class="auto-style2" style="height: 22px">&nbsp;</td>
+		<td class="auto-style2" style="height: 22px">gravitational constant</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">e</td>
+		<td class="auto-style2">&nbsp;</td>
+		<td class="auto-style2">elementary charge</td>
+	</tr>
+	<tr>
+		<td class="auto-style2" style="height: 22px">N</td>
+		<td class="auto-style2" style="height: 22px">newton</td>
+		<td class="auto-style2" style="height: 22px">force</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">W</td>
+		<td class="auto-style2">watt</td>
+		<td class="auto-style2">power</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">u</td>
+		<td class="auto-style2">unified atomic mass</td>
+		<td class="auto-style2">mass</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">J</td>
+		<td class="auto-style2">joule</td>
+		<td class="auto-style2">energy</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">h</td>
+		<td class="auto-style2">hour</td>
+		<td class="auto-style2">time</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">Pa</td>
+		<td class="auto-style2">pascal</td>
+		<td class="auto-style2">pressure</td>
+	</tr>
+	<tr>
+		<td class="auto-style2" style="height: 22px">AE</td>
+		<td class="auto-style2" style="height: 22px">astronomical unit</td>
+		<td class="auto-style2" style="height: 22px">length</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">lj</td>
+		<td class="auto-style2">lightyear</td>
+		<td class="auto-style2">length</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">pc</td>
+		<td class="auto-style2">parsec</td>
+		<td class="auto-style2">length</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">Hz</td>
+		<td class="auto-style2">hertz</td>
+		<td class="auto-style2">frequency</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">Wb</td>
+		<td class="auto-style2">weber</td>
+		<td class="auto-style2">magnetic flux</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">lb</td>
+		<td class="auto-style2">pound</td>
+		<td class="auto-style2">mass</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">Bq</td>
+		<td class="auto-style2">becquerel</td>
+		<td class="auto-style2">radioactivity</td>
+	</tr>
+	<tr>
+		<td class="auto-style2" style="height: 22px">yd</td>
+		<td class="auto-style2" style="height: 22px">yards</td>
+		<td class="auto-style2" style="height: 22px">length</td>
+	</tr>
+	<tr>
+		<td class="auto-style2" style="height: 23px">sm</td>
+		<td class="auto-style2" style="height: 23px">squaremeter</td>
+		<td class="auto-style2" style="height: 23px">area</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">gr</td>
+		<td class="auto-style2">grain</td>
+		<td class="auto-style2">mass</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">ha</td>
+		<td class="auto-style2">hectar</td>
+		<td class="auto-style2">area</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">NA</td>
+		<td class="auto-style2">&nbsp;</td>
+		<td class="auto-style2">avogadro's number</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">Rm</td>
+		<td class="auto-style2">&nbsp;</td>
+		<td class="auto-style2">ideal gas constant</td>
+	</tr>
+	<tr>
+		<td class="auto-style2" style="height: 22px">µ0</td>
+		<td class="auto-style2" style="height: 22px"></td>
+		<td class="auto-style2" style="height: 22px">permeability constant</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">hp</td>
+		<td class="auto-style2">brake horse power</td>
+		<td class="auto-style2">power</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">kb</td>
+		<td class="auto-style2">&nbsp;</td>
+		<td class="auto-style2">boltzman constant</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">eV</td>
+		<td class="auto-style2">electronvolt</td>
+		<td class="auto-style2">electric charge</td>
+	</tr>
+	<tr>
+		<td class="auto-style2" style="height: 22px">Btu</td>
+		<td class="auto-style2" style="height: 22px">british thermal unit</td>
+		<td class="auto-style2" style="height: 22px">energy</td>
+	</tr>
+	<tr>
+		<td class="auto-style2" style="height: 22px">bar</td>
+		<td class="auto-style2" style="height: 22px">bar</td>
+		<td class="auto-style2" style="height: 22px">pressure</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">dpt</td>
+		<td class="auto-style2">dioptr</td>
+		<td class="auto-style2">reciprocal focal length</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">erg</td>
+		<td class="auto-style2">ergon</td>
+		<td class="auto-style2">energy</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">Ohm</td>
+		<td class="auto-style2">ohm</td>
+		<td class="auto-style2">electric resistance</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">oz</td>
+		<td class="auto-style2">ounce</td>
+		<td class="auto-style2">mass</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">PS</td>
+		<td class="auto-style2">DIN - horsepower</td>
+		<td class="auto-style2">power</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">ft</td>
+		<td class="auto-style2">feet</td>
+		<td class="auto-style2">length</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">in</td>
+		<td class="auto-style2">inch</td>
+		<td class="auto-style2">length</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">mi</td>
+		<td class="auto-style2">mile</td>
+		<td class="auto-style2">length</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">galUK</td>
+		<td class="auto-style2">gallon in UK</td>
+		<td class="auto-style2">Volume</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">galUS</td>
+		<td class="auto-style2">gallon in US</td>
+		<td class="auto-style2">Volume</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">mmHg</td>
+		<td class="auto-style2">millimeters of mercury</td>
+		<td class="auto-style2">pressure</td>
+	</tr>
+	<tr>
+		<td class="auto-style2" style="height: 22px">knot</td>
+		<td class="auto-style2" style="height: 22px">knots</td>
+		<td class="auto-style2" style="height: 22px">speed</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">torr</td>
+		<td class="auto-style2">torr</td>
+		<td class="auto-style2">pressure</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">eps0</td>
+		<td class="auto-style2">&nbsp;</td>
+		<td class="auto-style2">dielectric constant</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">cal</td>
+		<td class="auto-style2">calories</td>
+		<td class="auto-style2">energy</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">min</td>
+		<td class="auto-style2">minute</td>
+		<td class="auto-style2">time</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">bbl</td>
+		<td class="auto-style2">barrel</td>
+		<td class="auto-style2">volume</td>
+	</tr>
+	<tr>
+		<td class="auto-style2">atm</td>
+		<td class="auto-style2">atmosphere</td>
+		<td class="auto-style2">pressure</td>
+	</tr>
+</table>
+<br />
+</p>
+
+<p>If the SI-flag is 1, the basic SI-units are also printed out.<br>
+This block is also available as simulink block <a href="#unit_conv_s">unitconv</a>.<br></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt>unitconv(12,&#8217;ft/s&#8217;,&#8217;km/h&#8217;,1)</tt><br>
+<br>
+<b>Input:</b>
+<ul type="disc">
+    <li>value in old unit
+    <li>source unit
+    <li>target unit
+    <li>SI-flag
+</ul>
+<p><b>Output</b>:
+<ul type="disc">
+    <li>value in new unit
+</ul>
+<p><b>Note:</b>
+<ul type="disc">
+    <li>a year is set to 365 day
+</ul>
+<br />
+<hr> 
+<h1><a name="unitconv_temperature_m"><b>unitconv_temperature_m&nbsp;(m-function)</b></a></h1>
+<hr> 
+<p><b>Purpose</b><br>
+This m-function converts a temperature form a unit to another. This function 
+also exists in a <a href="#unitconv_temperature">block</a>.</p>
+<p><b>Description</b><br> Syntax : temp_conv 
+= conv_temperatur(init_unit, final_unit, value)<br> &nbsp;&nbsp;where :<br> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;init_unit &nbsp;is the 
+initial unit<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;final_unit 
+is the final unit<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;is the temperature to convert<br></p>
+<p>init_unit and final_unit should be one of the following characters 
+:<br> &nbsp;- 'C' : Celsius<br> &nbsp;- 'K' : Kelvin<br> &nbsp;- 'F' : Farenheit<br>
+<br> Warning : a difference of temperature doesn't need to be convert from<br> 
+Kelvin to Celsius.<br>
+<br>
+<b>Input:</b>
+<ul type="disc">
+    <li>value in old unit
+    <li>source unit
+    <li>target unit
+</ul>
+<p><b>Output</b>:
+<ul type="disc">
+    <li>temperature in new unit
+</ul>
+<br/>
+<b> 
+<hr> </b>
+<h1><a name="write_try"><b>write_try</b></a><b> 
+(m-file) </h1>
+<hr> 
+</b>
+<p><b>Purpose</b> <br>
+M-file for transformation of Test reference year data to a MATLAB readable format. 
+</p>
+<p><b>Description</b> <br>
+The M-file is used to transform Test-Reference-Years of the &quot;Deutscher 
+Wetter Dienst&quot; to a MATLAB-readable format. The definition of the columns 
+is written with the comment-sign &quot;%&quot; as a header in the output file. 
+<br>
+Edit write_try.m to specify the name of the <a href="#weather_data_vector">weather data</a> file and the number of columns. 
+as default the name <tt>try.dat</tt> 
+is set. </p>
+<p><b>Characteristics</b> <br>
+VectorizedNo </p>
+<p>&nbsp;</p>
+<hr> 
+<h1><a name="year_average"><b>Year Average (M-file)</b></a> </h1>
+<hr> 
+<p><b>Description</b> <br>
+Function year_average calculates the average of a given weather data matrix 
+for a specified time interval. The first column from the input matrix has to 
+be the time in seconds. </p>
+<p><b>Syntax</b> </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt> 
+mat2 = year_average(data,timeclass) </tt></p>
+<p><b>Inputs:</b>
+<ul type="disc">
+    <li>data : input matrix, first column = time [s], column 
+    2 to n = data
+    <li>timeclass : time scale for the average calculs. 1=year, 
+    2=monthly, 3=weekly, 4=daily, 5=hourly
+</ul>
+<p><b>Outputs:</b>
+<ul type="disc">
+    <li>mat2 : output matrix, first column is the time interval, 
+    others column are the time average of the input data.
+</ul>
+<p>&nbsp;</p>
+<hr> 
+<h1><a name="year_sum"><b>Year Sum (M-file)</b></a></h1>
+<hr> 
+<p><b>Description</b> <br>
+Function year_sum calculates the sum and the average of a given weather data 
+matrix for a specified time interval. The first column from the input matrix 
+has to be the time in seconds. </p>
+<p><b>Syntax</b> </p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<tt> 
+[matrix_sum, matrix_mean] = year_sum(data,timeclass) </tt></p>
+<p><b>Inputs:</b>
+<ul type="disc">
+    <li>data : input matrix, first column = time [s], column 
+    2 to n = data
+    <li>timeclass : time scale for the average calculs. 1=year, 
+    2=monthly, 3=weekly, 4=daily, 5=hourly
+</ul>
+<p><b>Outputs:</b>
+<ul type="disc">
+    <li>matrix_sum : output matrix, first column is the time 
+    interval, others column are the sums of the input data.
+    <li>matrix_mean : output matrix, first column is the time 
+    interval, others column are the average of the input data.
+</ul>
+</body>
+
+</html>

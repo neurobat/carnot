@@ -1,0 +1,438 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="de-at" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>heatpump</title>
+<style type="text/css">
+ div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+p
+	{margin-right:0cm;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ a:link
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;
+}
+.auto-style1 {
+	margin-left: 120px;
+}
+ul
+	{margin-bottom:0cm;}
+ li.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ p.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ table.MsoNormalTable
+	{line-height:120%;
+	font-size:10.0pt;
+	font-family:"Calibri","sans-serif";
+	}
+.auto-style4 {
+	margin-left: 108pt;
+}
+.auto-style5 {
+	text-align: right;
+}
+.auto-style6 {
+	text-align: left;
+}
+</style>
+</head>
+
+<body>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;mso-fareast-font-family:"Times New Roman"'>
+
+<hr size=10 width="100%" noshade style='color:#A0A0A0' align=center>
+
+</span></span></div>
+
+<p><!--[if gte vml 1]><v:shape id="Bild_x0020_113" o:spid="_x0000_s1532"
+ type="#_x0000_t75" style='position:absolute;left:0;text-align:left;
+ margin-left:60.5pt;margin-top:0;width:100.5pt;height:95.25pt;z-index:111;
+ visibility:visible;mso-wrap-style:square;mso-wrap-distance-left:0;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:0;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:right;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line'
+ o:allowoverlap="f">
+ <v:imagedata src="Figures/heatpump.jpg" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <w:wrap type="square" anchory="line" xmlns:w="urn:schemas-microsoft-com:office:word"/>
+</v:shape><![endif]--><span class=GramE><span style='mso-bookmark:heatpump'>
+<span
+style='mso-bookmark:literature'><b>
+<span style='font-size:18.0pt;
+line-height:120%'>H</span><span lang=EN-US style='font-size:18.0pt;
+line-height:120%'>eat</span></b></span></span></span><span style='mso-bookmark:
+heatpump'><span style='mso-bookmark:literature'><b><span lang=EN-US
+style='font-size:18.0pt;line-height:120%'> </span>
+<span
+style='font-size:18.0pt;line-height:120%'> P</span><span lang=EN-US
+style='font-size:18.0pt;line-height:120%'>ump</span><span
+style='font-size:18.0pt;line-height:120%'> basic</span></b></span></span></p>
+<p class="auto-style5"><span style='mso-bookmark:
+heatpump'><span style='mso-bookmark:literature'>
+<span style='font-size:13.5pt;line-height:120%'> 
+<img alt="" src="Figures/imgHeatPumpbasic.gif" /></span></span></span></p>
+<p class="auto-style6"><span style='mso-bookmark:
+heatpump'><span style='mso-bookmark:literature'>
+<span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <b>Path: CARNOT/<span lang="de-at">Basic/</span></b></span><b><span style='font-size:13.5pt;line-height:120%'>Thermal_Models</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> </span></span></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:heatpump'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></span></span></div>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Purpose</span></b><span lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+Model for the calculation of a fluid to fluid heat pump system. </span><span lang=EN-US style='font-size:12.0pt;
+line-height:120%'><o:p></o:p></span></span></p>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Description</span></b><span lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+The dynamic behaviour of the heat pump is calculated using an empirical model (</span></span><a
+href="carnot_manual.htm#schwamberger"><span style='mso-bookmark:literature'><span lang=EN-US
+style='font-size:13.5pt;line-height:120%'>Schwamberger 1991</span></span></a><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>). The basis is the static
+characteristics of the heat pump according to the german standard DIN 8900. In
+the two-dimensional diagram the heating, source and electric powers are given
+for different temperatures in the primary and secondary cycles. The
+characteristics are approximated by linear equations: </span></span></p>
+
+<p><span
+     style='mso-bookmark:literature'>
+<span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>heating_power
+     = K</span><span style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>1 </span>
+<span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>* T<sub>primary,in</sub> + K</span><span style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>2 </span>
+<span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>* T<sub>secondary,out</sub>
+     + K</span><span style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>3</span><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'> <br />
+electric_power
+     = K4 * T<sub>primary,in</sub> + K5 * T<sub>secondary,out</sub> + K6 
+<span lang=EN-US style='mso-fareast-font-family:
+     "Times New Roman"'>
+<o:p></o:p>
+</span></span>
+<o:p><br />
+<span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>source_power =
+     -K7 * T<sub>primary,in</sub> - K8 * T<sub>secondary,out</sub> - K9</span></o:p></span></p>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>The outlet temperatures of the hot and cold branches
+are calculated by the differential equations:</span></span></p>
+
+<p class="auto-style4"><span style='mso-bookmark:literature'><span
+class=GramE><span lang=EN-US style='font-size:13.5pt;line-height:120%'>cap<sub>h</sub></span></span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> * dT<sub>h</sub>/dt = Qdot<sub>heating</sub> + mdot * cp *
+(T<sub>in,h</sub>-T) + UA * (Tamb-T<sub>h</sub>)<br>
+cap<sub>c</sub> * dT<sub>c</sub>/dt = Qdot<sub>source</sub> + mdot * cp * (T<sub>in,c</sub>-T)
++ UA * (Tamb-T<sub>c</sub>)<br>
+with: <br />
+cap = mass * heat_capactiy</span></span></p>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Inputs:</span></b><span lang=EN-US style='font-size:13.5pt;line-height:120%'> </span></span></p>
+
+<ul type=disc class="auto-style1">
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l174 level1 lfo113;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>Thermo-Hydraulic
+     </span>
+ <span style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>Bus</span><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>, inlet from </span></span><a
+     href="carnot_manual.htm#Heat_source"><span style='mso-bookmark:literature'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>heat_source</span></span></a><span style='mso-bookmark:literature'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'> </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l174 level1 lfo113;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>Thermo-Hydraulic
+     Vector, inlet from load </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l174 level1 lfo113;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>ambient
+     temperature in [°C] </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l174 level1 lfo113;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>command on/off
+     (0 or 1) </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></li>
+</ul>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Outputs:</span></b><span lang=EN-US style='font-size:13.5pt;line-height:120%'> </span></span></p>
+
+<ul type=disc class="auto-style1">
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l54 level1 lfo114;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>Thermo-Hydraulic
+     Vector, outlet to source </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l54 level1 lfo114;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>Thermo-Hydraulic
+     Vector, outlet to load </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l54 level1 lfo114;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>heatpump data
+     vector (which can be display with a </span></span><a href="carnot_manual.htm#display_data_hp"><span style='mso-bookmark:
+     literature'><span lang=EN-US style='font-size:13.5pt;line-height:120%;
+     mso-fareast-font-family:"Times New Roman"'>displaye_data_hp block</span></span></a><span style='mso-bookmark:literature'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>) </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></li>
+</ul>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;mso-fareast-font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></span></div>
+
+<p class=MsoNormal><span style='mso-bookmark:literature'><b><span lang=EN-US
+style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:"Times New Roman"'>NOTE:</span></b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;mso-fareast-font-family:"Times New Roman"'> The mass flows
+must be given by external pumps. <o:p></o:p></span></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;mso-fareast-font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></span></div>
+
+<p class=MsoNormal><span style='mso-bookmark:literature'><span lang=EN-US
+style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:"Times New Roman"'><br>
+Additional files: The parameters K<sub>1</sub><span class=GramE>..</span>K<sub>9</sub>
+can be determined by the M-file </span></span><a
+href="carnot_manual.htm#hp_param"><span style='mso-bookmark:literature'><span lang=EN-US
+style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:"Times New Roman"'>hp_param</span></span></a><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+"Times New Roman"'> which is automatically called by the heat pump block. The
+linear characteristics of the model need the powers only at lowest and highest
+temperature. Other values will be interpolated. </span><span lang=EN-US style='font-size:12.0pt;
+line-height:120%;mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></p>
+
+<form name=form>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Validation <span class=GramE>report :</span> </span></b></span><a
+href="../CArnot/Validation/heatpump.pdf"><span style='mso-bookmark:literature'><span
+style='font-size:13.5pt;line-height:120%;mso-ansi-language:DE;mso-fareast-language:
+DE;mso-bidi-language:AR-SA;mso-no-proof:yes;text-decoration:none;text-underline:
+none'><img border=0 width=21 height=30 id="_x0000_i1431"
+src="Figures/clipbrd.gif"></span></span></a><span
+style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>&nbsp;</span></b></span><a href="carnot_manual.htm#examples"><span
+style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'><br>
+Examples:</span></b></span></a><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> heat pump.mdl <br>
+</span></span><a href="carnot_manual.htm#Literature"><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Literature:</span></span></a><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <a name=schwamberger>K.
+Schwamberger: Modellbildung und Regelung von Gebäudeheizungsanlagen mit
+Wärmepumpen, Fortschrittsberichte VDI Reihe 6, Nr. 263, VDI Verlag Düsseldorf,
+1991</a></span></span></p>
+
+</form>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>&nbsp;</span></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Parameters and Dialog Box</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'><br>
+</span></span></span><img alt="" src="Figures/imgHeatPumpbasicMask1.jpg" /><br />
+<!--[if gte vml 1]><v:shape id="Bild_x0020_114" o:spid="_x0000_s1531"
+ type="#_x0000_t75" style='position:absolute;left:0;text-align:left;
+ margin-left:0;margin-top:0;width:333.75pt;height:472.5pt;z-index:112;
+ visibility:visible;mso-wrap-style:square;mso-wrap-distance-left:0;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:0;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:left;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line'
+ o:allowoverlap="f">
+ <v:imagedata src="Figures/heatpumpSHOT.jpg" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <w:wrap type="square" anchory="line" xmlns:w="urn:schemas-microsoft-com:office:word"/>
+</v:shape><![endif]--><br />
+<span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>
+<img alt="" src="Figures/imgimgHeatPumpbasicMask2.jpg" /><br clear=all
+style='mso-special-character:line-break'>
+</span></span></span></p>
+
+<ul type=disc class="auto-style1">
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l153 level1 lfo115;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>thermal capacity of hot loop : cap<sub>h</sub> = mass<sub>h</sub>
+     * heat_capactiy<sub>h</sub> &nbsp;[J/K] </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></span></li>
+</ul>
+
+<ul type=disc class="auto-style1">
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l239 level1 lfo116;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>thermal capacity of cold loop : cap<sub>c</sub> = mass<sub>c</sub>
+     * heat_capactiy<sub>c</sub> &nbsp;[J/K] </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></span></li>
+    <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l239 level1 lfo116;tab-stops:list 36.0pt'>
+	<span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'>
+	<span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>heat loss coefficient (UA) [W/K] </span>
+	<span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'>
+	<o:p></o:p>
+	</span></span></span></li>
+	<li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l239 level1 lfo116;tab-stops:list 36.0pt'>
+	<span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'>
+	<span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>vector</span><span style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'> K</span><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'> </span>
+	<span style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>with the elements</span><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'> </span>
+	<span style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>[</span><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>K1...K9</span><span style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>]</span><span
+      lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+      "Times New Roman"'> </span>
+	<span
+      lang=EN-US style='mso-fareast-font-family:"Times New Roman"'>
+	<o:p></o:p>
+	</span></span></span></li>
+</ul>
+
+<p class="auto-style4"><span style='mso-bookmark:literature'><span
+style='mso-bookmark:schwamberger'><span class=GramE><span lang=EN-US
+style='font-size:13.5pt;line-height:120%'>where</span></span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> vectors and matrix come
+from this kind of tables:<br>
+&nbsp; </span></span></span></p>
+
+<table class=MsoNormalTable border=1 cellpadding=0 style='mso-cellspacing:1.5pt;
+ mso-yfti-tbllook:1184'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=116 style='width:87.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p align=center style='text-align:center'><span style='mso-bookmark:literature'><span
+  style='mso-bookmark:schwamberger'><span lang=EN-US style='font-size:13.5pt;
+  line-height:120%'>&nbsp;</span></span></span></p>
+  </td>
+  <td width=548 style='width:411.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p align=center style='text-align:center'><span style='mso-bookmark:literature'><span
+  style='mso-bookmark:schwamberger'><span lang=EN-US style='font-size:13.5pt;
+  line-height:120%'>outlet load temperatures</span></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes'>
+  <td width=116 style='width:87.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p align=center style='text-align:center'><span style='mso-bookmark:literature'><span
+  style='mso-bookmark:schwamberger'><span lang=EN-US style='font-size:13.5pt;
+  line-height:120%'>transpose(inlet source temperatures)</span></span></span></p>
+  </td>
+  <td width=548 style='width:411.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p align=center style='text-align:center'><span style='mso-bookmark:literature'><span
+  style='mso-bookmark:schwamberger'><span lang=EN-US style='font-size:13.5pt;
+  line-height:120%'>heating/source/electric power</span></span></span></p>
+  </td>
+ </tr>
+</table>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>&nbsp;</span></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Characteristics</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+Direct Feedthrough&nbsp;&nbsp;&nbsp;Yes <br>
+Sample
+time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size:13.5pt;line-height:120%'>&nbsp;
+</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> Inherited
+from driving block <br>
+Vectorized&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size:13.5pt;line-height:120%'>&nbsp;&nbsp;
+</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> No
+</span></span></span></p>
+
+</body>
+
+</html>

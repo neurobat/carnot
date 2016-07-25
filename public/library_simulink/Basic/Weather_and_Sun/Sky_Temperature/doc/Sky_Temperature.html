@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>sky temperature</title>
+<style type="text/css">
+ div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+p
+	{margin-right:0cm;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ a:link
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;
+}
+ul
+	{margin-bottom:0cm;}
+ li.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ .auto-style1 {
+	margin-left: 120px;
+}
+.auto-style2 {
+	background-color: #FF0000;
+}
+</style>
+</head>
+
+<body>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+"Times New Roman"'>
+
+<hr size=10 width="100%" noshade style='color:#A0A0A0' align=center>
+
+</span></span></span></div>
+
+<p><!--[if gte vml 1]><v:shape id="Bild_x0020_209" o:spid="_x0000_s1436"
+ type="#_x0000_t75" alt="symbol" style='position:absolute;left:0;text-align:left;
+ margin-left:35.75pt;margin-top:0;width:75.75pt;height:55.5pt;z-index:207;
+ visibility:visible;mso-wrap-style:square;mso-wrap-distance-left:0;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:0;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:right;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line'
+ o:allowoverlap="f">
+ <v:imagedata src="Figures/skytemperature.jpg" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <w:wrap type="square" anchory="line" xmlns:w="urn:schemas-microsoft-com:office:word"/>
+</v:shape><![endif]--><![if !vml]><img width=101 height=74
+src="Figures/skytemperature.jpg" align=right alt=symbol v:shapes="Bild_x0020_209"><![endif]><span class=GramE><span
+style='mso-bookmark:skytemperature'><span style='mso-bookmark:literature'><span
+style='mso-bookmark:schwamberger'><b><span lang=EN-US style='font-size:18.0pt;
+line-height:120%'>sky</span></b></span></span></span></span><span
+style='mso-bookmark:skytemperature'><span style='mso-bookmark:literature'><span
+style='mso-bookmark:schwamberger'><b><span lang=EN-US style='font-size:18.0pt;
+line-height:120%'> temperature</span></b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> </span></span></span></span><span style='mso-bookmark:literature'><span
+style='mso-bookmark:schwamberger'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'><br>
+<b>Path: CARNOT/weather</b><o:p></o:p></span></span></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></span></span></div>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Purpose</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'><br>
+<span class=GramE>Calculates</span> the skytemperature. </span><span
+lang=EN-US style='font-size:12.0pt;line-height:120%'><o:p></o:p></span></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Description</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'><br>
+<span class=GramE>When</span> there is the index of cloudness, the sky
+temperature is calculated by the formula of BERDAHL. Otherwise the sky
+temperature is calculated by the formula of UNSWORTH.<br>
+This block is also available as workspace function </span></span></span><a
+href="chap_4_3.htm#skytemperature_function"><span style='mso-bookmark:literature'><span
+style='mso-bookmark:schwamberger'>
+<span lang=EN-US style='font-size:13.5pt;
+line-height:120%' class="auto-style2">skytemperature</span></span></span></a><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>. </span></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Inputs:</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> </span></span></span></p>
+
+<ul type=disc class="auto-style1">
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l63 level1 lfo181;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>tamb : ambient temperature (°C) </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l63 level1 lfo181;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     class=GramE><span lang=EN-US style='font-size:13.5pt;line-height:120%;
+     mso-fareast-font-family:"Times New Roman"'>hum :</span></span><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'> humidity (%) [0;100] </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l63 level1 lfo181;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>cloud : cloudindex [0;1] </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></span></li>
+</ul>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Outputs</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>: </span></span></span></p>
+
+<ul type=disc class="auto-style1">
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l254 level1 lfo182;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>tsky : sky temperature (°C) </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></span></li>
+</ul>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Literature:</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> </span></span></span><a
+href="carnot_manual.htm#duffie_beckman"><span style='mso-bookmark:literature'><span
+style='mso-bookmark:schwamberger'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>Duffie, J., Beckman, W.: Solar Engineering of thermal
+processes, John Wiley &amp; Sons, Inc. 2006</span></span></span></a><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> </span></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Parameters and Dialog Box</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+</span></span></span><!--[if gte vml 1]><v:shape id="Bild_x0020_210" o:spid="_x0000_s1435"
+ type="#_x0000_t75" alt="mask" style='position:absolute;left:0;text-align:left;
+ margin-left:0;margin-top:0;width:339pt;height:258pt;z-index:208;visibility:visible;
+ mso-wrap-style:square;mso-wrap-distance-left:0;mso-wrap-distance-top:0;
+ mso-wrap-distance-right:0;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:left;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line'
+ o:allowoverlap="f">
+ <v:imagedata src="Figures/skytemperatureSHOT.jpg" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <w:wrap type="square" anchory="line" xmlns:w="urn:schemas-microsoft-com:office:word"/>
+</v:shape><![endif]--><![if !vml]><img width=452 height=344
+src="Figures/skytemperatureSHOT.jpg" align=left alt=mask v:shapes="Bild_x0020_210"><![endif]><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'><br clear=all
+style='mso-special-character:line-break'>
+<o:p></o:p></span></span></span></p>
+
+</body>
+
+</html>

@@ -1,0 +1,436 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="de-at" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>vertical_ground_source_heat_exch</title>
+<style type="text/css">
+ div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+p
+	{margin-right:0cm;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ ul
+	{margin-bottom:0cm;}
+ li.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ table.MsoNormalTable
+	{line-height:120%;
+	font-size:10.0pt;
+	font-family:"Calibri","sans-serif";
+	}
+a:link
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;
+}
+.auto-style1 {
+	margin-left: 120px;
+}
+.auto-style2 {
+	background-color: #FF0000;
+}
+</style>
+</head>
+
+<body>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:Ventilation'><span style='mso-bookmark:literature'><span
+style='mso-bookmark:schwamberger'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;mso-fareast-font-family:"Times New Roman"'>
+
+<hr size=10 width="100%" noshade style='color:#A0A0A0' align=center>
+
+</span></span></span></span></div>
+
+<p><span style='mso-bookmark:Ventilation'><span style='mso-bookmark:literature'><span
+style='mso-bookmark:schwamberger'><a
+name="vertical_ground_source_heat_exchanger"><b><span lang=EN-US
+style='font-size:18.0pt;line-height:120%'>vertical_ground_source_heat_exchanger</span></b></a><b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> &nbsp;&nbsp;</span></b><span lang=EN-US style='font-size:12.0pt;
+line-height:120%'><o:p></o:p></span></span></span></span></p>
+
+<p><span style='mso-bookmark:Ventilation'><span style='mso-bookmark:literature'><span
+style='mso-bookmark:schwamberger'><b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>Path: CARNOT/heat_source</span></b></span></span></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:Ventilation'><span style='mso-bookmark:literature'><span
+style='mso-bookmark:schwamberger'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;mso-fareast-font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></span></span></span></div>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Purpose</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> </span><span
+lang=EN-US style='font-size:12.0pt;line-height:120%'><o:p></o:p></span></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+class=GramE><span lang=EN-US style='font-size:13.5pt;line-height:120%'>Model of
+a vertical ground source heat exchanger for heat pumps.</span></span></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Description</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+The CARNOT EWS model is a transient model for dynamic simulation of borehole
+heat exchangers or so-called vertical ground heat exchangers. The model is
+based on the equations described by [Huber97] and has been implemented using
+the state space model of Matlab/Simulink [Bianchi06].</span></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>The <b>input</b> is: </span></span></span></p>
+
+<ul type=disc class="auto-style1">
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l180 level1 lfo225;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>THV vector from the source side of the heat pump </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></span></li>
+</ul>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Output</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> is: </span></span></span></p>
+
+<ul type=disc class="auto-style1">
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l206 level1 lfo226;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>the THV vector to the heat pump</span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'> <o:p></o:p></span></span></span></li>
+</ul>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Parameters and Dialog Box</span></b><span
+lang=EN-US> </span></span></span></p>
+
+<ul type=disc class="auto-style1">
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l226 level1 lfo227;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>Average annual outdoor temperature in °C</span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'> <o:p></o:p></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l226 level1 lfo227;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>Temperature gradient in K/m, typical 0.025 to 0.04</span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'> <o:p></o:p></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l226 level1 lfo227;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>Thermal conductivity ground in W/m/K</span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'> <o:p></o:p></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l226 level1 lfo227;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>Heat capacity of the ground in J/kg/K</span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'> <o:p></o:p></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l226 level1 lfo227;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>Denstiy of the ground in kg/m³</span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'> <o:p></o:p></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l226 level1 lfo227;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>Thermal conductivity filling in W/m/K</span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'> <o:p></o:p></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l226 level1 lfo227;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>Heat capacity of the filling in J/kg/K</span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'> <o:p></o:p></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l226 level1 lfo227;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>Denstiy of the filling in kg/m³</span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'> <o:p></o:p></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l226 level1 lfo227;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>H: Length of earth probe in m</span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'> <o:p></o:p></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l226 level1 lfo227;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>B: probe distance in m</span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'> <o:p></o:p></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l226 level1 lfo227;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>Diameter of tube in m</span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'> <o:p></o:p></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l226 level1 lfo227;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>Diameter of drilled hole in m</span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'> <o:p></o:p></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l226 level1 lfo227;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>Field geometry (1 probe; 2 probes B/H = 0.1; 2 probes
+     B/H = 0.05; 3x6 probes B/H = 0.1; 5x10 probes B/H = 0.1)</span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'> <o:p></o:p></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l226 level1 lfo227;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>Number of parallel tubes (on the hydraulic side)</span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'> <o:p></o:p></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l226 level1 lfo227;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>No. of nodes in axial direction (typical 10)</span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'> <o:p></o:p></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l226 level1 lfo227;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>No. of nodes in radial direction (typical 10)</span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'> <o:p></o:p></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l226 level1 lfo227;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>grid factor (typical 2.5)</span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'> <o:p></o:p></span></span></span></li>
+</ul>
+
+<p><span style='mso-bookmark:literature'>
+<span
+lang=EN-US style="mso-bookmark: schwamberger">&nbsp;</span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Typical values are: </span></span></span></p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 style='mso-cellspacing:1.5pt;
+ mso-yfti-tbllook:1184'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=205 style='width:153.75pt;padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><b><u><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>material </span></u><span
+  lang=EN-US><o:p></o:p></span></b></span></span></p>
+  </td>
+  <td width=216 style='width:162.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><b><u><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>conductivity in W/(m*K)</span></u><span
+  lang=EN-US><o:p></o:p></span></b></span></span></p>
+  </td>
+  <td width=214 style='width:160.5pt;padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><b><u><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>Capacity in J/(kg*K)</span></u><span
+  lang=EN-US><o:p></o:p></span></b></span></span></p>
+  </td>
+  <td width=275 style='width:206.25pt;padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><b><u><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>Density in kg/m³</span></u><span
+  lang=EN-US><o:p></o:p></span></b></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=205 style='width:153.75pt;padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>sand (dry)</span></span></span></p>
+  </td>
+  <td width=216 style='width:162.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>0.3 </span></span></span></p>
+  </td>
+  <td width=214 style='width:160.5pt;padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>800</span></span></span></p>
+  </td>
+  <td width=275 style='width:206.25pt;padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>1650</span></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=205 style='width:153.75pt;padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>sand (humid)</span></span></span></p>
+  </td>
+  <td width=216 style='width:162.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>0.6</span></span></span></p>
+  </td>
+  <td width=214 style='width:160.5pt;padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>1000</span></span></span></p>
+  </td>
+  <td width=275 style='width:206.25pt;padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>1750</span></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td width=205 style='width:153.75pt;padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>clay (humid)</span></span></span></p>
+  </td>
+  <td width=216 style='width:162.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>1.3</span></span></span></p>
+  </td>
+  <td width=214 style='width:160.5pt;padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>880 </span></span></span></p>
+  </td>
+  <td width=275 style='width:206.25pt;padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>1450</span></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td width=205 style='width:153.75pt;padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>soil saturated with
+  water </span></span></span></p>
+  </td>
+  <td width=216 style='width:162.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>up to 3.0</span></span></span></p>
+  </td>
+  <td width=214 style='width:160.5pt;padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>2000 </span></span></span></p>
+  </td>
+  <td width=275 style='width:206.25pt;padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>1500</span></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td width=205 style='width:153.75pt;padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>bentonite filling</span></span></span></p>
+  </td>
+  <td width=216 style='width:162.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>1.0 </span></span></span></p>
+  </td>
+  <td width=214 style='width:160.5pt;padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>2000 </span></span></span></p>
+  </td>
+  <td width=275 style='width:206.25pt;padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>1000</span></span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;mso-yfti-lastrow:yes'>
+  <td width=205 style='width:153.75pt;padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>soil with gravel</span></span></span></p>
+  </td>
+  <td width=216 style='width:162.0pt;padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>0.59</span></span></span></p>
+  </td>
+  <td width=214 style='width:160.5pt;padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>1840</span></span></span></p>
+  </td>
+  <td width=275 style='width:206.25pt;padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>2040</span></span></span></p>
+  </td>
+ </tr>
+</table>
+
+<p><span style='mso-bookmark:literature'>
+<span
+lang=EN-US style="mso-bookmark: schwamberger">&nbsp;</span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Characteristics</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+Direct Feedthrough&nbsp;&nbsp;&nbsp;Yes <br>
+Sample
+time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size:13.5pt;line-height:120%'>&nbsp;
+</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> Inherited
+from driving block <br>
+Vectorized&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size:13.5pt;line-height:120%'>&nbsp;&nbsp;
+</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> &nbsp;No
+</span></span></span></p>
+
+<p><span style='mso-bookmark:literature'>
+<span
+lang=EN-US style="mso-bookmark: schwamberger">&nbsp;</span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Literature</span></b></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Bianchi M. A., Adaptive
+modellbasierte prädiktive Regelung einer Kleinwärmepumenanlage Diss. ETH
+Zuerich, No. 16892, 2006<br>
+Huber A, Schuler O., Berechnungsmodul für Erdwärmesonden (EWS). ENET Bericht
+Nr. 9658807-1, 1997</span></span></span></p>
+
+<p><span style='mso-bookmark:literature'>
+<span
+lang=EN-US style="mso-bookmark: schwamberger">&nbsp;</span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Validation</span></b></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+class=GramE><span lang=EN-US style='font-size:13.5pt;line-height:120%'>see</span></span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> </span></span></span><a
+href="../../../../../Validation/Report_CARNOT_ews.pdf"><span style='mso-bookmark:
+literature'><span style='mso-bookmark:schwamberger'>
+<span lang=EN-US
+style='font-size:13.5pt;line-height:120%' class="auto-style2">Report_CARNOT_ews</span></span></span></a></p>
+
+<p><span style='mso-bookmark:literature'>
+<span
+lang=EN-US style="mso-bookmark: schwamberger">&nbsp;</span></span></p>
+
+</body>
+
+</html>

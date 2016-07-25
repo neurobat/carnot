@@ -1,0 +1,406 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="de" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+<title>Verification of models and functions</title>
+<style type="text/css">
+body{		
+		margin-left: 108pt;
+		font-family: Calibri, sans-serif;
+		font-size: 13.5pt;
+		color:#5A5A5A;
+	}
+	h1{ 
+		font-family: Calibri, sans-serif;
+		font-size: 18pt;
+		color:#5A5A5A;
+	}
+	h2{
+	margin-top:2em;
+	margin-bottom:0px;
+	margin-right:0cm;
+	line-height:120%;
+	font-size: 16pt;
+	font-weight: bold;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+	h3
+	{
+	margin-right:0cm;
+	line-height:120%;
+	font-size: 13.5pt;
+	font-weight: bold;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+
+	li{
+		font-family: Calibri, sans-serif;
+		font-size: 13.5pt;
+		color:#5A5A5A;
+	}
+	p {
+		font-family: Calibri, sans-serif;
+		font-size: 13.5pt;
+		color:#5A5A5A;
+	}
+	table {
+		font-family: Calibri, sans-serif;
+		font-size: 13.5pt;
+		color:#5A5A5A;
+	}
+
+</style>
+</head>
+
+<body>
+
+<font size="4"><hr /></font>
+<h1>5<a name="validation"> Verification of the Models and 
+Functions</a></h1>
+<font size="4"><hr /></font>
+<p>GENERAL REMARK: Beside the verifcations, which are not 
+able to cover all possible applications of a model, a plausibility check should 
+be performed on each model (e.g. an energy balance). This is specially true if 
+components are used "just a bit" outside their initial verifcation.</p>
+<h2>5.1 Principle of the verifcation</h2>
+<p>The procedure implemented in Carnot version 6 has some 
+basic rules:</p>
+<ul>
+	<li>
+	<p>verifcations can be reproduced by any user</p>
+	</li>
+	<li>
+	<p>verifcations compare reference (literature) values to 
+	Carnot simulation results</p>
+	</li>
+	<li>
+	<p>verifcations compare Carnot simulation results of the 
+	author of a function or model to simulation resuts on your machine (which 
+	may not have the same Matlab or Windows version). </p>
+	</li>
+</ul>
+<p>Each 
+model or function must have a <a href="#validate_Function_or_Model_Name">verify_&lt;Function_or_Model_Name&gt;.m</a> function in 
+its verification folder (see also template_verify_Function.m in the folder&nbsp;<br />
+\public\tutorial\templates).<br />
+A general verification skript (verify_carnot) calls all 
+these functions during the verification process.
+</p>
+<p>In the verify_.m function the literature values and initial simulation result 
+are loaded and compared to the results of the call of the function or model. It 
+is recommended to compare several values. 
+</p>
+<p>Examples:<br />
+1) Temperature dependant functions like material properties should be evaluated over the full range of the valid temperatures. 
+The result of each temperature value should be compared. You may use the function calculate_verification_error 
+with a temperature vector and a result vector as input. The 
+parameter settings 'relative' and 'max' gives the relative error of the data point with 
+the highest difference.<br />
+2) For Simulink models a time-dependant behavior of the power or the temperatures 
+is often expected whereas the verification has also a criteria of energetic 
+differences. Create a timeseries output of your model and compare for example 
+the temperatures. Use calculate_verification_error, 'absolute' and 'average' to 
+find the mean difference in temperatures. Use calculate_verification_error, 
+'absolute' and 'last' to compare the energy difference at the end of the 
+simulation.</p>
+<h2>5.2. Functions used for the verification</h2>
+<p><strong>
+<a name="calculate_validation_error">calculate_verification_error</a></strong><br />
+Type: Matlab function<br />
+Folder: \public\src_m <br />
+This folder is on the Matlab path, the function is available directly in the 
+command window. <br />
+A development version is in the folder 
+\public\library_m\carnot_library_tools\calculate_verification_error<br />
+Use this version if you want to modify the function without affecting the 
+generally available function before a complete test.</p>
+<p>The function calculates the absolute or relative error between too simulation or 
+calculation results.</p>
+<p>[e ye] = calculate_verification_error(yref, ysim, r, s)
+</p>
+<p>inputs: <br />
+yref - scalar od vector with the reference ('correct') values for the result of 
+the function <br />
+ysim - scalar or vector (same length as yref) with the simulated or calculated 
+results of the function <br />
+r - 'relative' error or 'absolute' error <br />
+s - 'sum' - e is the sum of the individual errors of ysim <br />
+&nbsp;&nbsp;&nbsp;&nbsp; 'mean' - e is the mean of the individual errors of ysim
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp; 'max' - e is the maximum of the individual errors of 
+ysim <br />
+&nbsp;&nbsp;&nbsp;&nbsp; 'last' - e is the last value in ysim
+</p>
+<p>outputs: <br />
+e - scalar error (absolute or relative error over the total dataset) <br />
+ye - individual error (absolute or relative) of each value in y
+</p>
+<p>function calls: <br />
+function is used by: verify_&lt;Function_or_ModelName&gt;&gt;&nbsp; <br />
+this function calls: --
+</p>
+<p><br />
+</p>
+<p><strong>
+<a name="display_validation_error_">display_verification_error</a></strong>
+<br />
+Type: Matlab function<br />
+Folder: \public\src_m <br />
+This folder is on the Matlab path, the function is available directly in the 
+command window.<br />
+A development version is in the folder 
+\public\library_m\carnot_library_tools\display_verification_error<br />
+Use this version if you want to modify the function without affecting the 
+generally available function before a complete test.</p>
+<p>The function to plot the verification error creates a figure with 2 subplots 
+showing the values and the resulting error.
+</p>
+<p>display_verification_error(x, y, ye, st, sx, sy1, sleg1, sy2, sleg2, stxt)
+</p>
+<p>inputs:<br />
+x - vector with x values for the plot <br />
+y - matrix with y-values (reference values and result of the function call)
+<br />
+ye - matrix with error values for each y-value <br />
+st - string with title for upper window <br />
+sx - string for the x-axis label <br />
+sy1 - string for the y-axis label in the upper window <br />
+sleg1 - strings for the upper legend (number of strings must be equal to number 
+of columns in y-Matrix, e.g. {'firstline','secondline'} <br />
+sy2 - string for the y-label of the lower window <br />
+sleg2 - strings for the lower legend (number of strings must be equal to number 
+of columns in y-Matrix, e.g. {'firstline','secondline'} <br />
+stxt - string with the verification result information
+</p>
+<p>function calls: <br />
+function is used by: verify_&lt;Function_or_ModelName&gt;<br />
+this function calls: --
+</p>
+<p>&nbsp;</p>
+<p><strong>
+<a name="validate_Function_or_Model_Name">verify_&lt;Function_or_Model_Name&gt;</a><br />
+</strong>Type: Matlab function<br />
+Folder: \verification of each function 
+or model</p>
+<p>The function compares 3 results: Reference (literature) values of the function, 
+initial calculation and current calculation. The aim is to verify the function 
+with literature values and with the initial version of the function.
+</p>
+<p>[v, s] = verify_Function_or_ModelName([show])
+</p>
+<p>Inputs:<br />
+show - optional flag for display <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 
+: show results only if verification fails <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 
+: show results allways
+</p>
+<p>Outputs: <br />
+v - true if verification passed, false otherwise <br />
+s - text string with verification result
+</p>
+<p>Literature: specific to the verification function
+</p>
+<p>A template for the function is available <br />
+&nbsp;&nbsp;&nbsp; template_verify_Function.m <br />
+in the folder: <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+\public\tutorial\templates<br />
+This function shows a simple example of the verification of
+<br />
+&nbsp;&nbsp;&nbsp; myM_Function_verificationDemo.m <br />
+and a Simulink model <br />
+&nbsp;&nbsp;&nbsp; template_verify_SimulinkBlock_mdl.mdl.</p>
+<p><br />
+</p>
+<p><strong>
+<a name="verify_carnot">verify_carnot</a></strong><br />
+Type: Matlab function<br />
+Folder: \public\common\verification <br />
+The folder is not on the Matlab path, change to the folder manually and than run 
+the function.</p>
+<p>Calls all verify_*.m functions. It uses dir2 to search for all verification 
+functions (verify_*.m) and than calls the functions.
+</p>
+<p>v = verification_carnot
+</p>
+<p>Input: none
+</p>
+<p>Output: <br />
+v - True (1) if verification is ok, False (0) otherwise
+</p>
+<p>Function Calls: <br />
+function is used by: -- <br />
+this function calls: dir2, verify_*.m
+</p>
+<p>Literature: -- <br />
+</p>
+<p></p>
+<h2>5.3 Reports with Carnot Models</h2>
+<p>The following verification has been reported in papers, 
+theses or other documents:</p>
+<p>
+<a href="collector_flat_plate.html">collector model</a> 
+: </p>
+<ul type="disc">
+	<li>
+	<p>
+	<font size="4">A comparison of the model with test data 
+	of a flat plate collector has been done by
+	<a href="pdf/Faure_SolarThermal_FlatPlateCollectors_2011.pdf">Faure 2011</a></font>.
+	</p>
+	</li>
+</ul>
+<p>&nbsp;</p>
+<p><a href="heatpump.html"><font size="4">heat pump</font></a><font size="4"> 
+:</font></p>
+<ul type="disc">
+	<li>
+	<p><font size="4">The model was compared by
+	</font>
+	<a href="pdf/Middelbeck_Heatpump_Validation_2003.pdf"><font size="4">Middelbeck 2003</font></a> 
+	(in German language)&nbsp; with field measurements. 
+	</p>
+	</li>
+	<li>
+	<p>
+	<font size="4">The model has been verified by
+	<a href="pdf/Faure_Vitocal_Model_Comparison_2010.pdf">Faure 2010</a> with 
+	the </font>measurements 
+	of a brine-water heat pump. </p>
+	</li>
+</ul>
+<p>&nbsp;</p>
+<p>
+<a href="room_radiator.html"><font size="4">house models</font></a><font size="4">
+</font> :</p>
+<ul type="disc">
+	<li>
+	<p><font size="4">The Simple_House 
+	was tested by <a href="pdf/Wemhoener_et_al_Validierung_Gebaeude_2007.pdf">
+	Wemhoener et al. 2007</a> and compared to Besttest.</font></p>
+	</li>
+	<li>
+	<p>
+	<font size="4">A&nbsp; verification of the 
+	Simple_House_ISO_Groundmodel was done by
+	<a href="pdf/Peter_Wintler_Dott_IEA_Task_44_Building_2014.pdf">Peter et al. 
+	2014</a> for the work of the IEA Task 32 and 44.</font> </p>
+	</li>
+</ul>
+<p>&nbsp;</p>
+<p>
+<a href="storage_multiport.html"><font size="4">Storage_Type_N</font></a><font size="4"> :</font></p>
+<ul type="disc">
+	<li>
+	<p><font size="4">
+	The Storage_Type_1 (buffer tank with 2 connections) was verified according to 
+	EN 12977 by Lohmann 2012. The data and model 
+	test_EN12977_StorageType1_Strat.mdl is available in the folder 
+	\public\library_simulink\Storage\Thermal\Storage_Type_1\verification.<br />
+	</font></p>
+	</li>
+	<li>
+	<p><font size="4">The general 
+	function storage_Tnodes which is used by all Storage_Type_N models is 
+	verified according to the benchmark of EN 12977 Annex A (thermal losses and 
+	heat exchanger performance). See: <br />
+	verify_StorageTnodesDataFitHX &nbsp; in folder 
+	\public\library_simulink\Storage\Thermal\Storage_Type_2\verification<br />
+	verify_StorageTnodesEN12977hx&nbsp;&nbsp;&nbsp;&nbsp; 
+	in folder 
+	\public\library_simulink\Storage\Thermal\Storage_Type_2\verification<br />
+	verify_StorageTnodesEN12977losses in 
+	folder 
+	\public\library_simulink\Basic\Thermal_Models\sfun_storageTnodes\verification&nbsp;
+	</font></p>
+	</li>
+</ul>
+<p>&nbsp;</p>
+<p>
+<a href="inclined_surface.html">inclined_surface</a> 
+(function surfrad) </p>
+<ul type="disc">
+	<li>
+	<p><font size="4">The calculation 
+	of the radiation on an inclined surface was compared with Meteonorm by
+	<a href="pdf/Hafner_Validation_Report_inclined_surface_2012.pdf">Hafner 2012</a></font> </p>
+	</li>
+</ul>
+<p>&nbsp;</p>
+<p><a href="manual.htm#utility_functions">
+fluid property functions in Carlib</a> </p>
+<ul type="disc">
+	<li>
+	<p>The fluid properties were 
+	compared to data in the literature. ( <a href="#glueck">
+	Bernd Glueck</a>,
+	<a href="#VDI">VDI Wärmeatlas</a>,
+	<a href="#schmidt">Schmidttabelle</a>,
+	<a href="#Tyforop">Tyforop Data Tables</a>). 
+	See also the functions in the verification folder of Carlib 
+	(\public\library_c\carlib\verification). </p>
+	</li>
+</ul>
+<p>&nbsp;</p>
+<p>
+<a href="vertical_ground_source_heat_exchanger.html">vertical_ground_source_heat_exchanger</a><font size="4">
+</font> </p>
+<ul type="disc">
+	<li>
+	<p><font size="4">The EWS model of 
+	the vertical ground source heat exchanger for heat pumps was verified by
+	<a href="pdf/Ochs_Carnot_EWS_2012.pdf">Ochs 2012</a>.</font> </p>
+	</li>
+</ul>
+<p>&nbsp;</p>
+<p><font size="4">
+A template for verification reports is available
+<a href="../templates/Template_Validation_Report.doc">here</a>. </font>
+</p>
+<p>&nbsp;</p>
+<h2><a name="literature">5.4 Verification and Validation Literature</a></h2>
+<p><a href="pdf/Faure_Vitocal_Model_Comparison_2010.pdf">
+Faure: Validation of a new heat pump model for Carnot library, Viessmann 
+Faulquemont S.A.S, 2010</a></p>
+<p>
+<a href="pdf/Faure_SolarThermal_FlatPlateCollectors_2011.pdf">Faure: Validation 
+of the blocks for flat collector with measured data for power tests (EN 12975), 
+Viessmann Faulquemon S.A.S, 2011</a></p>
+<p>
+<a href="pdf/Hafner_Validation_Report_inclined_surface_2012.pdf">Hafner: 
+Validation of the block inclined_surface with Meteonorm data, Viessmann Werke, 
+2012</a></p>
+<p>
+<a href="pdf/Lohmann_Speichermodell_CarnotMeeting_Juelich2014.pdf">
+<font size="4">Lohmann: 
+Erstellung und Validierung eines Simulationsmodells für einen Wärmeerzeuger mit 
+solarer Unterstützung unter MATLAB® Simulink®&nbsp; CARNOT zur Durchführung von 
+Jahressimulationen mit dem Ziel der Ermittlung des Solaren Deckungsgrades, Master Thesis, FH Duesseldorf, 
+Beitrag zum Carnot Usertreffen, Jülich 24/02/2014</font></a><font size="4">
+</font> </p>
+<p><a href="pdf/Middelbeck_Heatpump_Validation_2003.pdf">
+Mittelbeck: Validierung einer Wärmepumpe mit Hilfe der MATLAB® Toolbox CARNOT, 
+Diplomarbeit FH Aachen, 2003</a></p>
+<p><a href="pdf/Ochs_Carnot_EWS_2012.pdf">Ochs: CARNOT EWS 
+model - Model for vertical ground heat exchanger, University of Innsbruck, 2012</a></p>
+<p>
+<a href="pdf/Peter_Wintler_Dott_IEA_Task_44_Building_2014.pdf">Peter, Wintler, 
+Dott: Implementation of the IEA SHC &amp; HPP T44/A38 Boundary Conditions in 
+Matlab/Simulink with CARNOT-blockset, IEA Solar Heating and Cooling Program, FH 
+Nordwestschweiz, 2014</a></p>
+<p>
+<a href="pdf/Wemhoener_et_al_Validierung_Gebaeude_2007.pdf">Wemhoener, Dott, 
+Afjei: Validierung des thermischen Gebäudemodells in der CARNOT toolbox, FH 
+Nordwestschweiz, 2007</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

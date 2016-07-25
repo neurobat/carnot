@@ -1,0 +1,921 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<style type="text/css">
+h1 {
+	margin-top: 1em;
+	margin-bottom: .5em;
+	margin-right: 0cm;
+	line-height: 120%;
+	font-size: 18pt;
+	font-weight: bold;
+	font-family: "Calibri","sans-serif";
+	color: #5A5A5A;
+}
+h2 {
+	margin-top: 2em;
+	margin-bottom: 0px;
+	margin-right: 0cm;
+	line-height: 120%;
+	font-size: 16pt;
+	font-weight: bold;
+	font-family: "Calibri","sans-serif";
+	color: #5A5A5A;
+}
+h3 {
+	margin-right: 0cm;
+	line-height: 120%;
+	font-size: 13.5pt;
+	font-weight: bold;
+	font-family: "Calibri","sans-serif";
+	color: #5A5A5A;
+}
+p {
+	font-family: Calibri, sans-serif;
+	font-size: 13.5pt;
+	color: #5A5A5A;
+}
+ul {
+	margin-bottom: 0cm;
+	list-style-position: outside;
+}
+ol {
+	margin-bottom: 0cm;
+	list-style-position: outside;
+}
+li {
+	margin-top: 0cm;
+	margin-right: 0cm;
+	margin-bottom: 8.0pt;
+	line-height: 120%;
+	font-size: 13.5pt;
+	font-family: "Calibri","sans-serif";
+	color: #5A5A5A;
+}
+table {
+	font-family: Calibri, sans-serif;
+	font-size: 13.5pt;
+	color: #5A5A5A;
+}
+.auto-style1 {
+	background-color: #FFFF00;
+}
+.auto-style3 {
+	background-color: #FFFFFF;
+}
+.auto-style4 {
+	font-weight: bold;
+	background-color: #FFFFFF;
+}
+.auto-style5 {
+	font-size: medium;
+	background-color: #FFFFFF;
+}
+.auto-style6 {
+	margin-left: 40px;
+}
+</style>
+</head>
+
+<body style="margin-left: 108pt">
+
+<a name="literature"><hr /></a>
+<h1 style="margin-top: 0.5em"><a name="advanced_topics"><b>3 Advanced Topics</b></a>
+</h1>
+<a name="literature0"><hr /></a>
+<h2>3.1 Creating your own C-S-functions</h2>
+<p>Simulink offers an interface to C code. <br />
+C code in Simulink has some advantages: </p>
+<ul>
+	<li>you can use legacy code</li>
+	<li>you can use loops and if conditions more easily than in Simulink</li>
+	<li>C code is much quicker than Simulink models in normal mode and quicker than 
+	embedded Matlab code in normal and accelerator mode.</li>
+	<li>there are more debugging possibilities</li>
+</ul>
+<p>Of course, there are some disadvantages as well: </p>
+<ul>
+	<li>the interface is very complicated</li>
+	<li>you are forced to use pointers, which increases the risk of crashes</li>
+</ul>
+<br />
+<p><strong>Preparation</strong></p>
+<p>In order to compile the C code, you need a compiler, e.g. the Microsoft SDK 7.1.
+<br/>If you face problems while installing the SDK, please visit the webpage
+<a href="http://msdn.microsoft.com/en-us/vstudio//gg697159">http://msdn.microsoft.com/en-us/vstudio//gg697159</a>.
+<br/>After installation, enter <br/>mex -setup <br/>at the Matlab prompt and choose 
+the right compiler. Now Matlab and Simulink are ready to use C code. </p>
+<p>Important differences between Matlab and C</p>
+<ul>
+	<li>In Matlab all indices start with 1, in C all indices start with 0.</li>
+	<li>In C code S-functions it is possible to access two dimensional inputs. Please 
+	consider that the first index in Matlab is the row and the second the column. 
+	In C it is the other way around.</li>
+	<li>In C code S-functions outputs and parameters are always one dimensional. 
+	Even if a two dimensional matrix is passed through, it must be accessed as a 
+	one dimensional array in C.</li>
+	<li>Similarly all derivatives and continuous states (i.e. integrators) are one 
+	dimensional in C.</li>
+	<li>Simulink defines several variable types. For example, real_T is equivalent 
+	to double if you run your code on an ordinary PC.</li>
+</ul>
+<br />
+<p><strong>Example S-Function</strong></p>
+<p>There are several S-function examples included in Simulink. Unfortunately, all 
+these examples are not self-explanatory. In order to find a good starting point, 
+consider the example S-function ExampleSFunction.c. Change to the directory of the 
+example. Type <br/>mex ExampleSFunction.c<br/>Please remember that Simulink is case 
+sensitive. If you do not consider this, the code will be compiled, because Windows 
+is not case sensitive. However, Simulink will crash if you run a model including 
+the S-function in this case. After compiling a file ExampleSFunction.mexw64 or ExampleSFunction.mexw32 
+will appear in your directory. This file is actually a dynamic link library (DLL), 
+which will be included by Simulink. <br/><br/>Now you can open the the Simulink example 
+model. In the upper part, the S-function is incorporated, in the lower part the 
+same functionality with Simulink is implemented. </p>
+<p>As you can see, there are two different outputs: </p>
+<ol>
+	<li>Two numbers (vector u0) are added and multiplied by another number (p0)</li>
+	<li>Two numbers (vector u1) are added and multiplied by another number (p0). 
+	Also the result of step 1 is added and everything is integrated.</li>
+</ol>
+<p>If you run the model, you can observe that the same numbers appear in the upper 
+and the lower part. <br/><br/>Please double click on the S-function block. Here the 
+S-function's parameters (here only one parameter &quot;1&quot;, which is p0) are 
+defined. If you click on &quot;edit&quot; the source code<br/>of the S-function will 
+opened. The code is well documented, so that only a brief description is given here.
+<br/><br/>In general, an S-function includes much information, which must be presented 
+to Simulink. The simple example has more than 200 lines of code. All information 
+is stored in a structure of type SimStruct. Do not access this structure directly. 
+There are access functions defined by Simulink. <br/></p>
+<p>Every S-Function has to have the following functions: </p>
+<ul>
+	<li>mdlInitializeSizes</li>
+	<li>mdlInitializeSampleTimes</li>
+	<li>mdlOutputs</li>
+	<li>mdlTerminate</li>
+</ul>
+<p>In our example you will find two other functions, mdlDerivatives, which is needed 
+for integration and mdlInitializeConditions, which defines the initial values of 
+the integrators.</p>
+<p>When programming an C code S-function, you have to follow these steps:</p>
+<ol>
+	<li>Tell Simulink about the C code's interface to Simulink:<br/>In the function 
+	mdlInitializeSizes Simulink is told about the interfaces. Here are defined
+	<ul>
+		<li>how many inports are used (in our example 2, u0 and u1)</li>
+		<li>the size of each inport (in our example 2 for both inports)</li>
+		<li>how many parameters are used (in our example 1, p0)</li>
+		<li>how many outports are used (in our example 2, y0 and y1)</li>
+		<li>the size of each outport (in our example 1 for each outport)</li>
+		<li>the size of the integrator (in Simulink called continuous state) (in 
+		our example 1)</li>
+		<li>the number and size of Work vectors (in our example 1 DWork vector of 
+		size 1)</li>
+		<li>other information (advanced options as e.g. SimState compliance, ...)</li>
+	</ul>
+	<br/>For the direct feed through flag see the description of mdlOutputs.</li>
+	<li>Tell Simulink about the sampling rate: <br/>In the function mdlInitializeSampleTimes 
+	Simulink gets information about the sample time. Normally, the sample time is 
+	continuous or inherited.</li>
+	<li>Set the outport: <br/>The function mdlOutputs will write the outputs to Simulink.
+	<br/>In our example two different steps are done:
+	<ol>
+		<li>The outport 0 is the sum of the two elements of inport 0 multiplied 
+		by the parameter 0.</li>
+		<li>The outport 1 is the continuous state 0, which is the integration of 
+		the derivative defined in mdlDerivative.</li>
+	</ol>
+	From the first step it can be derived that at least one outport (here outport 
+	0) is directly depended on the input 0. In Simulink this behaviour is called 
+	direct feed through. Consequently, the direct feed through flag for inport 0 
+	has to be activated in mdlInitializeSizes.</li>
+	<li>[optional] Calculate the derivatives with respect to time <br/>In the function 
+	mdlDerivatives the derivatives with respect to time are defined. The only derivative 
+	defined is the sum of the two elements of inport 1 multiplied by the parameter 
+	0.</li>
+	<li>[optional] Set the initial conditions of the continuous states (integrators):
+	<br/>In the function mdlInitializeConditions the continuous state, which has 
+	been registered in mdlInitializeSizes, is set. In our example the integration 
+	constant is zero.<br/>Furthermore, the initial values of the Work vectors can 
+	be set here.</li>
+	<li>Tell Simulink what to do when the simulation is finished: <br/>The last function 
+	is mdlTerminate. It is executed when the simulation stops. It can be used to 
+	free allocated memory. In our example the function is empty.</li>
+</ol>
+<br />
+<p><strong>Incorporating Carlib in C code</strong></p>
+<p>The C code library for S-functions is carlib.c (including the header file carlib.h). 
+In this file several functions as fluid properties are supplied (see next chapter). 
+Please use the file simplepipe.c and the corresponding model as an example. The 
+C code is well documented by comments, so here only a brief introduction is given.
+<br/>In order to compile the S-function, the carlib library, carlib.c, has to be 
+incorporated. First, you have to know where this library is located. Use the Carnot 
+command <br/>path_carnot('carlibsrc') <br/>This may return e.g. c:\carnot\src\libraries 
+. Now the simplepipe.c can be compiled by the command <br/>mex simplepipe.c c:\carnot\src\libraries\carlib.c 
+-Ic:\carnot\src\libraries <br/><br/>The S-function calculates a simple (straight) 
+pipe, which is divided into a given number of nodes. <br/>Heat transfer to the environment, 
+Q&#x0307;<sub>amb</sub> = UA &middot; (T<sub>amb</sub> - T<sub>node</sub>), and<br/>
+due to convection, Q&#x0307;<sub>conv</sub> = &#x1E41; &middot; c<sub>P</sub> &middot; 
+(T<sub>previous node</sub> - T<sub>node</sub>) are considered. The thermal mass 
+of the pipe wall and heat flow due to conduction within the fluid are neglected. 
+The basic differential equation is m<sub>node</sub> &middot; c<sub>P</sub> &middot; 
+dT/dt = Q&#x0307;<sub>conv</sub> + Q&#x0307;<sub>amb</sub>. <br/>As outputs, the 
+outlet temperature, the node temperatures and the heat flows to the environment 
+of each node are reported.<br/>Parameters are the number of nodes, the fluid volume, 
+the UA value and the initial temperature of each node.<br/>As input the ambient temperature 
+and data from the THB (fluid type, fluid mix, mass flow rate, pressure and temperature) 
+are needed. <br/><br/>The basic work to is to include the carlib.h in your S-function. 
+If you open the file carlib.h you will find the prototypes of the available function 
+in carlib.c. In the example the function heat_capacity and density are used to calculate 
+the specific heat capacity and density of the fluid. There are several other properties 
+for different fluids included in the Carlib.<br/>Most property function need the 
+fluid type, the fluid mix, the temperature and the pressure as input. <br/><br/>To 
+support developers there are enumerations available in carlib.h as well as in Simulink. 
+For example, FluidEnum in Simulink has the same elements as the enum FLUID in carlib.c.</p>
+<p>&nbsp;</p>
+<p>&nbsp;<a name="creating_s_functions"><span class="auto-style4">The boiler model 
+as an example</span></a></p>
+<p><span class="auto-style3">In the following section, the method used to get from 
+the differential equation to the S-function implementation is described using the
+</span><a href="#examples"><span class="auto-style3">examples</span></a><span class="auto-style3"> 
+of the boiler model in the </span><a href="#carnot">
+<span class="auto-style3">CARNOT Library</span></a><span class="auto-style3">. 
+The boiler model is a simple model, which considers the heat transfer only for a 
+constant nominal power, on the side of the furnace combustion chamber. A multinode 
+model is used to model the time dependent conditions on the water side . The differential 
+equation for the water temperature characteristic in the furnace is </span>
+</p>
+<p>
+<img align="left" border="0" class="auto-style1" src="Formulas/formel_furnace_a.jpg"><br class="auto-style1" clear="all">
+<span class="auto-style3">with the variables </span>
+<table border="0">
+	<tr>
+		<th align="left">
+		<p><u><span class="auto-style3">symbol</span></u></p>
+		</th>
+		<th align="left">
+		<p><u><span class="auto-style3">used for</span></u></p>
+		</th>
+		<th align="left">
+		<p><u><span class="auto-style3">unit</span></u></p>
+		</th>
+	</tr>
+	<tr>
+		<td>
+		<p><span class="auto-style3">m</span></p>
+		</td>
+		<td>
+		<p><span class="auto-style3">actual mass at node</span></p>
+		</td>
+		<td>
+		<p><span class="auto-style3">[kg]</span></p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<p><span class="auto-style3">c</span></p>
+		</td>
+		<td>
+		<p><span class="auto-style3">heat capacity of fluid</span></p>
+		</td>
+		<td>
+		<p><span class="auto-style3">[J/(kg*K)]</span></p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<p><span class="auto-style3">T</span></p>
+		</td>
+		<td>
+		<p><span class="auto-style3">temperature of boiler water</span></p>
+		</td>
+		<td>
+		<p><span class="auto-style3">[K]</span></p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<p><span class="auto-style3">t</span></p>
+		</td>
+		<td>
+		<p><span class="auto-style3">time</span></p>
+		</td>
+		<td>
+		<p><span class="auto-style3">[s]</span></p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<p>U<sub><span class="auto-style3">1</span></sub></p>
+		</td>
+		<td>
+		<p><span class="auto-style3">heat loss coefficient to environment</span></p>
+		</td>
+		<td>
+		<p><span class="auto-style3">[W/m</span><sup><span class="auto-style3">2</span></sup><span class="auto-style3">K]</span></p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<p><span class="auto-style3">Tamb</span></p>
+		</td>
+		<td>
+		<p><span class="auto-style3">ambient temperature</span></p>
+		</td>
+		<td>
+		<p><span class="auto-style3">[&deg;C]</span></p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<p><span class="auto-style3">Tnode</span></p>
+		</td>
+		<td>
+		<p><span class="auto-style3">node temperature</span></p>
+		</td>
+		<td>
+		<p><span class="auto-style3">[&deg;C]</span></p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<p>m<sub><span class="auto-style3">dot</span></sub></p>
+		</td>
+		<td>
+		<p><span class="auto-style3">mass flow rate</span></p>
+		</td>
+		<td>
+		<p><span class="auto-style3">[kg/s]</span></p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<p><span class="auto-style3">P</span></p>
+		</td>
+		<td>
+		<p><span class="auto-style3">nominal power of the furnace</span></p>
+		</td>
+		<td>
+		<p><span class="auto-style3">[W]</span></p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<p><span class="auto-style3">N</span></p>
+		</td>
+		<td>
+		<p><span class="auto-style3">number of nodes</span></p>
+		</td>
+		<td>
+		<p><span class="auto-style3">[-]</span></p>
+		</td>
+	</tr>
+</table>
+</p>
+<p><span class="auto-style3">To insert the differential equation into the template 
+S-function you have to transfer it to the form that only the differential term dT/dt 
+is on the left side and all the other terms are on the right hand side of the equation.
+</span><br class="auto-style3"><span class="auto-style3">The derivative term of 
+the state variable is edited in the S-function with the symbol dx, so that the equation 
+has to be added in the form </span></p>
+<p><img border="0" class="auto-style1" src="Formulas/formel_furnace_b.jpg">
+<br class="auto-style1" clear="all"></p>
+<p><span class="auto-style3">This would be the differential equation for one node, 
+but as the model is a multinode one, you have to calculate the derivative at every 
+node, so the calculation is carried out in a loop for every node. For the first 
+node, Tlastnode is the input temperature, for all other nodes, it is the temperature 
+of the preceding node. Therefore, the adaptation of tenter has to be performed within 
+the loop, so the full loop must be: </span></p>
+<p><span class="auto-style3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><tt><span class="auto-style3">for 
+(n = 0; n &lt; nodes; n++)</span></tt> <br class="auto-style3">
+<span class="auto-style3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><tt><span class="auto-style3">{</span></tt>
+<br class="auto-style3"><span class="auto-style3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><tt><span class="auto-style3">dx[n]=((Tamb-Tnode)*U1 
++ m</span><sub><span class="auto-style3">dot</span></sub><span class="auto-style3">*c*(Tenter-Tnode)+Pnom/nodes)/mnode/cp;</span></tt>
+<br class="auto-style3"><span class="auto-style3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><tt><span class="auto-style3">Tenter 
+= Tnode;</span></tt> <br class="auto-style3"><span class="auto-style3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><tt><span class="auto-style3">}</span></tt><span class="auto-style3">
+</span></p>
+<p><span class="auto-style3">The above equation is the appropriate form of the differential 
+equation for the multinode model in the S-function and has to be enter in the function 
+block mdlDerivatives (...) in the S-function template file. </span></p>
+<h2><a name="carlib_library">3.2 The Carlib Library</a></h2>
+<p><span class="auto-style3">The Carlib Library is built-up of functions that are 
+included in the CARNOT subdirectory &quot;library_c\carlib&quot;. It contains the 
+source code and corresponding header files of useful functions when creating your 
+own C-MEX-files. </span></p>
+<p class="auto-style5">Yo<span class="auto-style3">u can compile your s-function 
+and include the carlib libarary &quot;by hand&quot;:</span></p>
+<p><span class="auto-style3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><tt><span class="auto-style3">mex 
+file.c carlib.h</span></tt><span class="auto-style3"> </span></p>
+<p><span class="auto-style3">where &quot;file.c&quot; is the source code of the 
+S-function to be compiled.</span></p>
+<p>You may also take benefit of the build scripts included in Carnot (see MakeMEX.m).</p>
+<p><span class="auto-style3">To use the functions of the &quot;carlib&quot;, your 
+source code file has to include the Carlib Library by specifing the command
+</span></p>
+<p><span class="auto-style3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><tt><span class="auto-style3">#include &quot;carlib.h&quot;</span></tt><span class="auto-style3">,
+</span></p>
+<p><span class="auto-style3">the header file that contains the prototype function 
+declarations of the Carlib Library, for parameter type checking of the imported 
+C-code. </span><br class="auto-style3"><span class="auto-style3">You may use the 
+following CARNOT-Library functions, that are actually included in the Carlib source 
+code file: </span></p>
+<ul type="disc">
+	<li>density</li>
+	<li>density_solid </li>
+	<li>enthalpy </li>
+	<li>entropy </li>
+	<li>evaporation_enthalpy </li>
+	<li>enthalpy2temperature </li>
+	<li>extraterrestrial_radiation </li>
+	<li>grashof </li>
+	<li>heat_capacity </li>
+	<li>heat_capacity_solid </li>
+	<li>mixViscosity </li>
+	<li>thermal_conductivity </li>
+	<li>temperature_conductivity </li>
+	<li>prandtl </li>
+	<li>prmessage </li>
+	<li>rangecheck </li>
+	<li>relativeHumidity2waterContent </li>
+	<li>reynolds </li>
+	<li>saturationproperty </li>
+	<li>saturationtemperature </li>
+	<li>square </li>
+	<li>specific_volume </li>
+	<li>saturationproperty </li>
+	<li>solve_quadratic_equation</li>
+	<li>solar_declination </li>
+	<li>solar_time </li>
+	<li>thermal_conductivity_solid </li>
+	<li>unitconv_temp </li>
+	<li>vapourcontent </li>
+	<li>vapourpressure </li>
+	<li>viscosity </li>
+	<li>waterContent2relativeHumidity </li>
+</ul>
+<p><span class="auto-style3">If you want to extend or change the </span>
+<a href="#carlib_library"><span class="auto-style3">Carlib Library</span></a><span class="auto-style3">, 
+e.g. to add a new function to the server DLL (here carlib.dll) see chapter
+</span><a href="#adding_functions_to_carlib">
+<span class="auto-style3">3.8 Adding Functions to the Carlib</span></a></p>
+<p>&nbsp;</p>
+<p><a name="fluidprop"><strong>The Command-Window Interface fluidprop</strong></a>
+</p>
+<p><span class="auto-style3">To use the files of the Carlib Library directly from 
+the workspace of your MATLAB command window, an Interface C-MEX-file </span><tt>
+<span class="auto-style3">&quot;fluidprop.c&quot;</span></tt><span class="auto-style3"> 
+was build, which is called from m.file lying in the Carnot main directory. As the 
+m-file are named the same way as the respective fluid property you can directly 
+type the name of the desired value to the MATLAB command window at the desired flow 
+conditions. For example to resolve the value of the density, you can type to the 
+workspace </span></p>
+<p><span class="auto-style3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><tt><span class="auto-style3">density(&lt;temperature&gt;,&lt;pressure&gt;,fluid_type,fluidmix)</span></tt><span class="auto-style3">
+</span></p>
+<p><span class="auto-style3">as you would directly call the Carlib function.
+</span></p>
+<p><span class="auto-style3">This call evoke the m-file density.m in the carnot 
+main directory, where the functioncall </span></p>
+<p><span class="auto-style3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><tt><span class="auto-style3">fluidprop(&lt;temp&gt;,&lt;pres&gt;,&lt;fluid_type&gt;,&lt;fluidmix&gt;,&lt;propertytype&gt;)</span></tt><span class="auto-style3">
+</span></p>
+<p><span class="auto-style3">is effectuated. If you call fluidprop with a negative 
+property type the saurationvalues of the respective property is returned in vectorial 
+form. </span></p>
+<p><span class="auto-style3">More information about the fluidtype, the fluidmix 
+and the propertytype can be read in the paragraph of the THB vector definition.</span></p>
+<p><span class="auto-style3">The function fluidprop is a C-MEX (</span><span class="auto-style4">M</span><span class="auto-style3">atlab
+</span><span class="auto-style4">EX</span><span class="auto-style3">ecutable) that 
+can be call directly from the workspace. If you specify a negative fluid property 
+type, the values of saturated and boiling fluid, i. e. the values at saturation 
+are promted in vectorial form, first the value of saturated steam and then the value 
+of boiling fluid. </span></p>
+<h2>3.3 Rapid Accelerator Mode</h2>
+<p>Simulink support code generation and compilation of simulation models. The more 
+parts are compiled and consequently not interpreted, the faster the calculation 
+becomes. <br/>There are three different modes, which can be used with most Carnot 
+blocks out of the box: normal, accelerator and rapid accelerator mode. <br/>In normal 
+mode C-code S-functions are pre-compiled and consequently very fast. In accelerator 
+mode Simulink blocks will executed faster. In rapid accelerator mode additionally 
+(embedded) Matlab functions will accelerated.</p>
+<p><img alt="" height="205" src="Figures/ChooseMode.png" width="720"></p>
+<p>Standard setting is the normal mode. Here most of the functionality is done by 
+Matlab / Simulink. It has the highest compatibility to other Mathworks toolboxes 
+and allows most debugging, but is the slowest mode. If only plain Simulink blocks 
+are used, no compiler is needed. <br/>The accelerator mode compiles the model partially. 
+In theory, most functionality of Mathworks products should be usable. However, there 
+are some restrictions in practise. For example, the &quot;Data Display in Simulation&quot; 
+does not work properly. The advantage of this mode is the acceleration of the Simulink 
+blocks. Since Simulink blocks often consist of standard blocks, the compilation 
+runs automatically. So the accelerator mode is a quite easy method to accelerate 
+simulations. <br/>As the name indicates, the rapid accelerator mode is the fastest 
+mode. In this mode, the model will be compiled completely and run as an .exe. In 
+the Windows task manager a new process with the model's name will appear. Since 
+the rapid accelerator mode is linked to code generation, there are several implications:
+</p>
+<ul>
+	<li>All blocks used must support code generation. For example, interpreted Matlab 
+	functions or algebraic loops are not supported.</li>
+	<li>Several functionalities can not be used, in spite of the fact that the model 
+	will compile and execute. For example, no messages can be printed on the Matlab 
+	prompt. Data logging in the Matlab workspace (e.g. via To Workspace blocks) 
+	is not supported.</li>
+	<li>While in normal or accelerator mode S-functions are links as .mex-files 
+	(which are actually DLLs), the C-code of S-functions will be completely re-compiled. 
+	This implies that Simulink needs information about the source code (see below). 
+	If own S-functions are used, it might be a good idea to check if the results 
+	are identical in normal and rapid accelerator mode. If there is a bug in the 
+	C-code, the behaviour might be completely different, because due to the re-compilation 
+	the addresses in memory may change. For example, a pointer (array), which is 
+	not used properly, may lead to another address in memory. So a different result 
+	in two different modes may indicate a bug in a C-S-function.</li>
+	<li>Other functionalities can be used, but are very complicated to implement. 
+	For example Matlab S-functions for S-functions in ForEach-Subsystems need knowledge 
+	of the Target Language Compiler (TLC).<br/>Although the Legacy Code Tool and 
+	the S-Function Builder support generating TLC-files, most Carnot S-function 
+	are not supported by these tools.</li>
+</ul>
+<p>There are different possibilities to give Simulink information about the C-code. 
+A very simple way is to enter the source files in the model's configuration parameters.</p>
+<p><img alt="" height="924" src="Figures/CustomCode.png" width="1343"></p>
+<p><br/>Simulink shows a very strange behaviour concerning the information needed: 
+All .c-library files must be entered here (in most Carnot simulations carlib.c only).Furthermore, 
+at least one file of each directory, where .c source files are located, must be 
+entered. Since all public .c files in Carnot are located in one directory, it is 
+sufficient to enter &quot;carlib.c&quot;. If own S-functions and own libraries are 
+used, the corresponding files must be entered here. <br/>If only public Carnot files 
+are used, no further information must be entered. In the directory of the binary 
+.mex files, a file named rtwmakecfg.m can be found.This file provides all information 
+to Simulink for compiling a model in rapid accelerator mode. If an internal version 
+of Carnot in generation by the version manager, this file will be created for the 
+internal C-code as well. It is important that this file is in the same directory 
+as the .mex files and that this directory is in the Matlab path. <br/>To put it in 
+a nutshell, the rapid accelerator mode is a very powerful method to accelerate code. 
+However, it should be considered, which functionality can be used from the beginning 
+of modelling.</p>
+<h2>3.4 Messages and error handling</h2>
+<p>There is a message support in Carnot.<br/>In carlib.h and MessageLevelEnum.m different 
+levels of messages are defined:<table>
+	<tr>
+		<th>carlib.h</th>
+		<th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>MessageLevelEnum.m</th>
+	</tr>
+	<tr>
+		<td>enum MESSAGELEVEL</td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td>classdef MessageLevelEnum &lt; Simulink.IntEnumType</td>
+	</tr>
+	<tr>
+		<td>{</td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td>enumeration</td>
+	</tr>
+	<tr>
+		<td>&nbsp;&nbsp;MESSAGELEVELDEBUG = 1,</td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td>&nbsp;&nbsp;DEBUGLEVEL(1)</td>
+	</tr>
+	<tr>
+		<td>&nbsp;&nbsp;MESSAGELEVELINFO,</td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td>&nbsp;&nbsp;INFOLEVEL(2)</td>
+	</tr>
+	<tr>
+		<td>&nbsp;&nbsp;MESSAGELEVELWARNING,</td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td>&nbsp;&nbsp;WARNINGLEVEL(3)</td>
+	</tr>
+	<tr>
+		<td>&nbsp;&nbsp;MESSAGELEVELERROR,</td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td>&nbsp;&nbsp;ERRORLEVEL(4)</td>
+	</tr>
+	<tr>
+		<td>&nbsp;&nbsp;MESSAGELEVELFATAL,</td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td>&nbsp;&nbsp;FATALLEVEL(5)</td>
+	</tr>
+	<tr>
+		<td>&nbsp;&nbsp;MESSAGELEVELNONE</td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td>&nbsp;&nbsp;NOLEVEL(6)</td>
+	</tr>
+	<tr>
+		<td>}</td>
+		<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td>end</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td>end</td>
+	</tr>
+</table>
+</p>
+<p>There are five settings of a block or a model concerning the message (or debug) 
+management:</p>
+<ol>
+	<li>Level The idea is that different information have different importance. 
+	For a developer it might be very interesting to get some debug information, 
+	whereas a normal user is not interested in this. So a block must be told, which 
+	kind of information it should return. If for instance, the message level is 
+	set to warning, all information with the priority warning, error and fatal should 
+	be printed, whereas debug and info messages are suppressed. </li>
+	<li>Maximum number of total messages It is possible to limit the maximum number 
+	of printed messages. </li>
+	<li>Maximum number of consecutive messages This option limits the number of 
+	consecutive messages. If, for example, a problem causes messages in the following 
+	time steps, only the first message could be interesting. So the amount of useless 
+	messages can be reduced. </li>
+	<li>Write messages to file If there are many messages, it might be interesting 
+	to save the messages to a file. </li>
+	<li>Name of the messages file </li>
+</ol>
+<p><strong>Example SimplePipeMessagesMDL</strong></p>
+<p>Please open the model SimplePipeMessagesMDL. <br/>There are three different positions 
+in this model, where the message management is lined to: </p>
+<ol>
+	<li>Load callback The load callback can be found in the block's properties (right 
+	click on the block, properties). It is run once a model is loaded into memory. 
+	In this callback a function from the file CarnotCallbacks_SimplePipeMessages.m 
+	is called. </li>
+	<li>Mask initialisation callback In addition to the checks of the parameters, 
+	one function of the file CarnotCallbacks_SimplePipeMessages.m are called.
+	</li>
+	<li>Mask parameter callback In the first parameter a callback is used, which 
+	checks the visibility of the debug parameters. </li>
+	<li>S-Function simplepipe_messages.c In the S-function the messages are set.
+	</li>
+</ol>
+<p></p>
+<p><img alt="" height="621" src="Figures/BlockProperties.png" width="502"></p>
+<p><img alt="" height="647" src="Figures/BlockMask.png" width="1287"></p>
+<p><strong>File CarnotCallbacks_SimplePipeMessages.m</strong></p>
+<p>The code in the .m-file is documented, so only a brief overview is given here.
+<br/>This first function of the .m file consists of a wrapper. It calls the other 
+functions in this file depending on the first input argument. The advantage of this 
+approach is that only one file for all functions is needed. <br/>The function LoadFcn 
+is called in the Load Callback of the block. I reads the Enum MessageLevelEnum. 
+Each possible element of this Enum is copied as text in the fifth parameter of the 
+mask. This parameter is a popup menu, where the debug level of the block can be 
+chosen. Since this function is called every time, the block is loaded, a change 
+in the MessageLevelEnum will automatically change the popup menu of the block. It 
+is not necessary to change the mask manually. <br/>The function CheckDebugLevels 
+is called by the mask init callback. It checks if in the model the parameters</p>
+<ul>
+	<li>DEBUGGLOBALLEVEL,</li>
+	<li>DEBUGMAXTOTALWARNINGS,</li>
+	<li>DEBUGMAXCONSECUTIVEWARNINGS,</li>
+	<li>DEBUGWRITETOFILE,</li>
+	<li>DEBUGFILENAME and</li>
+	<li>DEBUGGLOBALLEVEL</li>
+</ul>
+<p>are present. These model parameters are set by the block GlobalMessageLevel. 
+If they are set, the local entered parameters about the messages are overwritten.
+</p>
+<p>The function MaskVisibilities checks as the function CheckDebugGlobalLevels the 
+existence of the global message model parameters. If they are present, the visibility 
+of the block's message parameters is suppressed. </p>
+<p><strong>File simplepipe_messages.c</strong></p>
+<p>This file is an extension of simplepipe.c, because message management is used 
+by this S-function: </p>
+<ol>
+	<li>There are five more parameters, which are the five above mentioned settings 
+	level, maximum number of total messages, maximum number of consecutive messages, 
+	write messages to file and filename. The corresponding defines are in lines 
+	100-105 and the number of parameters in line 106 is 9 now. </li>
+	<li>Four additional DWork vectors are included. These DWork vectors are introduced 
+	in lines 120-123 as defines and in mdlInitializeSizes in lines 241-257. These 
+	vectors consist of the name of the logging file "DWORK_FILENAME", the block's 
+	(and S-function's) name "DWORK_ORIGIN", the total number of printed messages 
+	"DWORK_TOTAL" and the number of consecutive printed messages "DWORK_CON". The 
+	first two DWork vectors are UINT_8 type arrays. They actually consist characters. 
+	Since characters are 8 bit variables, the same memory amount is used. The latter 
+	two DWork vectors are of type uint32. </li>
+	<li>In mdlInitialiszeSizes in lines 304-307, the new four DWork vectors are 
+	initialised. The filename from the parameter is copies to the DWork vector called 
+	"DWORK_FILENAME". The DWork Vector "DWORK_ORIGIN" will contain the block's name 
+	and the name of the S-function. These information is returned by the Simulink 
+	access functions ssGetPath(S) and ssGetModelName(S). By the function sprintf, 
+	these information is copies to the DWork vector. The counters for the total 
+	"DWORK_TOTAL" and consecutive "DWORK_CON" messages are set to 0. </li>
+	<li>In mdlDerivatives the message management is used finally. In line 365 a 
+	variable "messageset" is initialised with the enum "MESSAGEPRINTNONE". This 
+	is important later on. The if statements in lines 375 and 381 check if the input 
+	parameters for the Carlib functions heat_capacity() and density() are valid. 
+	There is a function called rangecheck() in carlib.c defined (see below), which 
+	returns "RANGEISCORRECT" if the range is valid or another value if not. Please 
+	refer to the enum definition of "RANGECHECKERRORS" in carlib.h. Depending on 
+	the procedure, this function return more information about the violation of 
+	the validity range. However, in this example it is checked, if the inputs are 
+	valid or not without considering further details. If the range is not valid 
+	a corresponding message is prepared and send to the Carlib function printmessage(). 
+	The input parameters of printmessage() are
+	<ol>
+		<li>the message (const char *)</li>
+		<li>the block's name, which is the DWORK_ORIGIN DWork-Vector (const char 
+		*)</li>
+		<li>the time stamp, which is returned by the Simulink function ssGetT(S) 
+		(double)</li>
+		<li>the level of this message (here warning) (int)</li>
+		<li>the level of the block, which is passed to the S-function as parameter 
+		(double)</li>
+		<li>the already printed total messages, which is the DWork-Vector DWORK_TOTAL 
+		(unsigned int*)</li>
+		<li>the maximum number of total messages, which is passed to the S-function 
+		as parameter (double)</li>
+		<li>the number of consecutively printed messages, which is the DWork-Vector 
+		DWORK_CON (unsigned int*)</li>
+		<li>the number of maximum consecutively printed messages, which is passed 
+		to the S-function as parameter (int)</li>
+		<li>a variable, which tells weather the message shall be written to a file, 
+		which is passed to the S-function as parameter (int)</li>
+		<li>the name of the logging file, which is the DWork-Vector "DWORK_FILENAME" 
+		(const char *)</li>
+	</ol>
+	Double type variable are used for the maximum number of total and consecutive 
+	messages, which are passed to the S-function via parameters, instead of integer 
+	values, because integer values do not support "inf" as value. <br/>The function 
+	return a enumerated value if the message was printed or not. </li>
+	<li>The return value of the function printmessage() is needed in lines in the 
+	if statement in line 409. If the return value is "MESSAGEPRINTNONE" or the function 
+	has not been called (remember that initial value of "messageset" is "MESSAGEPRINTNONE", 
+	the number of printed consecutive messages is set to zero. </li>
+</ol>
+<p><b>Please consider, that printing on the Matlab prompt from S-functions is not 
+supported in rapid accelerator mode! Please use a logfile if you run the model in 
+rapid accelerator mode.</b> </p>
+<br/>
+<p>Range Check for the Properties in Carlib</p>
+<p>The central function rangecheck() in Carlib allows to check if the input arguments 
+for the material property functions are valid. The function rangecheck() has the 
+inputs </p>
+<ol>
+	<li>property, that will be checked (int), see enum "PROPERTY"</li>
+	<li>fluid id (double)</li>
+	<li>fluid mix (double)</li>
+	<li>temperature (double)</li>
+	<li>pressure (double)</li>
+</ol>
+<p>The function returns an integer (int). According to the definition of the enum 
+"RANGECHECKERRORS", the range is valid if the return value is "RANGEISCORRECT", 
+which is zero. Since all violations of the range are connected by a binary or ("|") 
+operator, all violations can be analysed individually. </p>
+<h2>3.5 Floating point accuracy</h2>
+<p>In computer memory variables are represented by a sequence of bits, i.e. of zeros 
+and ones. Depending on the number of bits, more or less information can be stored. 
+It is quite obvious that it is impossible to represent every possible floating number 
+by a finite number of bits. Consequently, we face a maximum accuracy in floating 
+point operations. In Windows, a variable of type double is represented by 64 bits. 
+Consequently, there are 2<sup>64</sup>(about 1.89 &middot; 10<sup>19</sup>) different 
+values possible. Checking the commands <i>realmax</i> and <i>realmin</i> in Matlab 
+or the macros <i>DBL_MAX</i> (or <i>LDLB_MAX</i>) and <i>DBL_MIN</i> (or <i>LDBL_MIN</i>) 
+defined in float.h in C we find that double type variables can represent the range 
+between approximately -10<sup>308</sup> to 10<sup>308</sup>. The maximum accuracy 
+of floating point variables can be found by the eps command in Matlab or the macros
+<i>DLB_EPSILON</i> (or <i>LDB_EPSILON</i>) in C. <br />
+<br />
+Example (from
+<a href="http://uk.mathworks.com/help/matlab/matlab_prog/floating-point-numbers.html#bqxyrhp">
+http://uk.mathworks.com/help/matlab/matlab_prog/floating-point-numbers.html#bqxyrhp</a>):
+<br />
+<i>a = 0.0;</i> <br />
+<i>for i = 1:10</i> <br />
+<i>&nbsp;&nbsp;a = a + 0.1;</i> <br />
+<i>end</i> <br />
+<i>a == 1</i> <br />
+<br />
+The answer will be 0 (false). This might be considered to be strange, since a is 
+really 1.0000 if you check it in Matlab, but here we face the maximum accuracy of 
+floating point variables. <br />
+So, how can we check if the variable <i>a</i> equals 1? We have to incorporate the 
+accuracy of double type variables. We check if the variable <i>a</i> deviates from 
+1 by a small number, e.g. <br />
+<i>abs(a-1)&lt;1e-10</i> <br />
+or <br />
+<i>abs(a-1)&lt;eps(1)</i> <br />
+will both return 1 (true). <br />
+In carlib.h <i>NO_MASSFLOW</i> is defined to compare mass flow rates to zero. It 
+is recommended to use this value. <br />
+Since the pressure drop is represented by a quadratic equation in Carnot, it is 
+often necessary to solve quadratic equations. In carlib.c a function called <i>solve_quadratic_equation</i> 
+is implemented to do this. </p>
+<p>This function expects four input arguments:</p>
+<ol>
+	<li>a pointer of type double to the two solutions of the quadratic equation. 
+	It is important that the memory for the two data points has already been allocated.</li>
+	<li>a double variable for the coefficient of the quadratic term</li>
+	<li>a double variable for the coefficient of the linear term</li>
+	<li>a double variable for the coefficient of the constant term</li>
+</ol>
+<p>For further reading please refer to <br />
+<a href="http://uk.mathworks.com/help/matlab/matlab_prog/floating-point-numbers.html#bqxyrhp">
+http://uk.mathworks.com/help/matlab/matlab_prog/floating-point-numbers.html#bqxyrhp</a>
+<br />
+<a href="http://en.wikipedia.org/wiki/Loss_of_significance">http://en.wikipedia.org/wiki/Loss_of_significance</a>
+<br />
+<a href="https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html">https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html</a>
+<br />
+<a href="http://stackoverflow.com/questions/10011544/solve-in-matlab-a-quadratic-equation-with-very-small-coefficients">
+http://stackoverflow.com/questions/10011544/solve-in-matlab-a-quadratic-equation-with-very-small-coefficients</a>
+</p>
+<h2>3.6 Target Language Compiler (TLC)</h2>
+<p>The Target Language Compiler can be used to manipulate generated code. This is 
+interesting in embedded systems, but can be used in accelerator and rapid accelerator 
+mode as well. For the latter modes an S-function needs a .tlc file. For example, 
+this file will automatically be generated by the S-function builder of Simulink. 
+If this .tlc file shall be used in accelerator mode, this has to be activated in 
+the mdlInitializeSizes function of the S-function by <br/>ssSetOptions(S, SS_OPTION_USE_TLC_WITH_ACCELERATOR)
+<br/>In Carnot this option should be activated in carlib.h for all files by uncommenting 
+the line <br/><br/>&#160;&#160;&#160;#define CARNOT_USES_TLC_WITH_ACCELERATOR <br/>
+<br/>In the .c source files this preprocessor definition is evaluated. One example 
+is pump.c <br/><br/>#ifdef CARNOT_USES_TLC_WITH_ACCELERATOR<br/>&#160;&#160;&#160;ssSetOptions(S,<br/>&#160;&#160;&#160;&#160;&#160;SS_OPTION_WORKS_WITH_CODE_REUSE 
+|<br/>&#160;&#160;&#160;&#160;&#160;SS_OPTION_EXCEPTION_FREE_CODE |<br/>&#160;&#160;&#160;&#160;&#160;SS_OPTION_USE_TLC_WITH_ACCELERATOR);<br/>
+#else<br/>&#160;&#160;&#160;ssSetOptions(S,<br/>&#160;&#160;&#160;&#160;&#160;SS_OPTION_WORKS_WITH_CODE_REUSE 
+|<br/>&#160;&#160;&#160;&#160;&#160;SS_OPTION_EXCEPTION_FREE_CODE);<br/>#endif<br/>
+<br/>For normal use, this option should not be activated. </p>
+<h2>3.7 Version Management</h2>
+<p>The version manager is in the directory "version_manager" in the Carnot root 
+directory. It can be used to build the Carnot library. This includes the public 
+version as well as the internal version.
+<br> In order to develop Carnot, it is splitted into so called atomic libraries, which later become the
+blocks in the carnot library carnot.slx.
+So a developer can change one block without disturbing other developers working
+on other blocks. As a consequence all atomic libraries must be assembled to the Carnot
+library release in the end. This is done by the functions of the version manager.
+</p>
+<p>In order to compile the .c-files, use the commands MakeMEX or 
+MakeMEX_development, respectively. Both commands compile the .c-files from the 
+directories src, library_simulink, library_c and library_m. However, MakeMEX 
+will move all .c-files to the directory src whereas MakeMEX_development will 
+copy the files only.
+<br>Both files will create the rtwmakecfg.m. This file is used amongst others for the rapid accelerator mode.
+Is can be found in the directory of the .mex-files and tells Simulink where to look for the source files and
+the corresponding libraries.
+<br>In order to build carnot.slx, use the command CreateCarnotMDL. It will look for all atomic libraries
+in the public and internal directory and assembles them to file carnot.slx.
+<br>Afterwards use the function CopyRemainingFiles. This will copy e.g. .m-files (e.g. callbacks) and help files
+to the corresponding Carnot-directories.
+<br>The script CleanUp will delete non-used files. For example, the single atomic libraries will not be
+needed any more, because they can be found in the file carnot.slx.
+<br />
+</p>
+<h2><a name="extending_carnot">3.8 Extending the CARNOT block Library in SIMULINK 
+Environment </h2>
+<p><span class="auto-style3">Creating a new model block for the </span>
+</a><a href="#carnot"><span class="auto-style3">CARNOT Library</span></a><span class="auto-style3"> 
+in the graphical environment of SIMULINK has many of the features used in creating 
+a SIMULINK model. You can drag and drop other blocks from the CARNOT library or 
+the basic blocks from the SIMULINK Library, that are to be used in your new block.
+</span></p>
+<p><span class="auto-style3">In creating your model, the connections between the 
+blocks that you use in your subsystem are affected by the Thermo-Hydraulic-Bus. 
+It is recommended to use the &quot;Bus Assignment&quot; block to set the new values 
+in the bus.&nbsp; </span></p>
+<p><span class="auto-style3">As you do not necessarily need all of these components, 
+you can use a &quot;Bus Selector&quot; block to choose the vector into the components 
+that you need in your model. Examples of ways of splitting the vector can be seen 
+in many blocks and is shown for the block &quot;radiator&quot; in figure 3.2
+</span></p>
+<p><img alt="" src="Figures/chapt3_fig32_THBsplit.gif"><a name="figure_3_2"><br class="auto-style1" clear="all">
+<span class="auto-style3">Fig. 3.2: Splitting and Assembly of the THV in the Block &quot;Electric 
+Heater&quot; </span></a></p>
+<p><span class="auto-style3">After creating a new block for the </span>
+<a href="#carnot"><span class="auto-style3">CARNOT Library</span></a><span class="auto-style3">, 
+you first have to verify </span><span class="auto-style3">it and make the 
+process available for other users. It is recommended to use the </span>
+<a href="../carnot/Validation/Template_Validation_Report.doc">
+<span class="auto-style3">Verification template</span></a>s<span class="auto-style3">.
+<br/>Then you have to write the html help file. Remember that a new model is only 
+helpfull with a good verification and documentation.<br/></span></p>
+<h2><a name="adding_functions_to_carlib">3.9 Adding functions and fluids to the 
+carlib</a></h2>
+<p><span class="auto-style3">Standard functions as for example entropie, vaporpressure 
+or solartime and fluids are defined in the carlib.c file. These can be changed or 
+new ones can be added. </span></p>
+<ol>
+	<li><span class="auto-style3">add the function definition to the source file 
+	(carlib.c) </span></li>
+	<li><span class="auto-style3">add the corresponding prototype declaration to 
+	the header- file (carlib.h). This has to be done to enable parameter type checking 
+	for the importing C-code (client.c). </span></li>
+	<li><span class="auto-style3">add the public function name to the export region 
+	of the link-response-file, being created later from the batch file makecarlib.bat.
+	</span></li>
+</ol>
+<p><span class="auto-style3">If the functions or fluid is added and defined, the 
+compiler has to create new mex files. </span></p>
+<p><span class="auto-style3">This can be done by calling the script </span>
+</p>
+<p><font class="auto-style6" size="4"><tt><span class="auto-style3">MakeMEX.m</span></tt></p>
+<p>o<span class="auto-style3">r</span></p>
+<p><font class="auto-style6" size="4"><tt><span class="auto-style3">MakeMEX_development.m</span></tt><span class="auto-style3">
+</span></p>
+<p><strong><span class="auto-style3">ATTENTION</span></strong><span class="auto-style3">: 
+Be carefull to use MakeMEX. It creates a new Carnot library and &nbsp;delete some 
+of your development files. Use MakeMEX_development if you are not sure.</span></p>
+<p></p>
+
+</body>
+
+</html>

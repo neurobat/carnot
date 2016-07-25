@@ -1,0 +1,254 @@
+**********************************************************************
+*   G U I D E L I N E   F O R    C A R N O T    M O D E L S          *
+**********************************************************************
+Guideline for Simulink Blocks in the Carnot Library
+
+
+**********************************************************************
+1) Filenamens and folder structure
+-> see Carnot_Filenames_and_Folders.txt
+
+**********************************************************************
+2) BLOCK NAMES
+Use capital letters in the name to increase readability.
+  Example: BlockName instead of blockname
+Do not use blanks in the BlockName, use underscore instead.
+  Example: block_name instead of "block name"
+Do not use special characters, character set is limited to ASCII standard.
+
+
+**********************************************************************
+3) SOLVERS
+Carnot blocks should work at least with the following solvers:
+- Variable-step ode45 (Dormand-Prince)
+- Fixed-step ode4 (Runge-Kutta)
+If a block requires other solvers than these standards, it must be documented.
+Write it also in the "Mask Description" (under "Documentation" when editing the 
+mask of a block).
+
+
+**********************************************************************
+4) ACCELERATOR MODE
+Carnot blocks should work with all 3 accelerator modes (normal, accelerator, 
+rapid accelerator).
+If you want to use the rapid accelerator mode, be sure to place a copy of 
+the .c and .h files in the \public\src or \internal\src folder. The rtwmakecfg.m 
+file takes care to transfer the path information to the compiler.
+Hint: Fou your internal use, you may modify rtwmakecfg.m to add additional 
+folders or libraries.
+
+
+**********************************************************************
+5) CODE GENERATION (Simulink)
+Blocks and their s-functions must be compatible with the Simulink Coder. 
+If a block is not compatible, it must be documented. Write it also 
+in the "Mask Description" (under "Documentation" when editing the mask of a 
+block).
+
+
+**********************************************************************
+6) VERIFICATION OF THE MODEL OR FUNCTION
+For the energetic evaluation of the model, use the approach of EN 12977:
+A model and a parameter set is verified, if the maximum relative 
+error between model and measurement is below 5 % for:
+a) the energy exchanged during a test sequence
+b) the energy exchange during a 3 minutes' timestep
+Do not use the same sequences for verification and parameter identification.
+The verification sequence must cover all typical operation conditions.
+
+
+**********************************************************************
+7) FUNCTION verify_NN.m
+A function "verify_NN.m" must be in the folder <BlockName>\verification. 
+This function will be called by the script "verify_carnot.m" in the folder 
+public\common\version_manager. The script searches for all verify_*.m 
+functions and executes a function call.
+Result of the function must be "True" if verification is ok and "False" if 
+verification failed.
+verify_NN.m should compare the model to different scenarios: 
+a) measured data or other literature data
+b) initial simulation data (created during the model development), 
+   this is a reference to the Matlab version under which the model was developed
+c) current simulation call
+You find the "template_verify_SimulinkBlock.m" in the public\tutorial\guidelines 
+folder. This function calls the Simulink verification template model 
+"verify_SimulinkBlock_mdl.mdl". 
+The "template_verify_M_Function.m" for Matlab-functions is in the same folder.
+
+**********************************************************************
+8) EXAMPLES
+Examples of the model and its typical applications are stored in
+the <BlockName>\examples folder. Each model must have at least one
+example to demonstrate the purpose of the model. All files starting
+with "example_NN" will automatically be copied in the tutorial\exampels
+folder. These examples should be well documented in the html help-file.
+
+
+**********************************************************************
+9) Documentation
+The folder <BlockName>\doc must contain at least a html file with:
+- the description of the model and its parameters
+- the verification data, the verification conditions and the verification result
+- use of Memory blocks (or other measures against algebraic loops)
+- use of global variables and bus objects
+- use of From and Goto blocks and their variable names
+- description of the examples
+The help button of the block mask should open the html file (more precisely: 
+its copy in the \tutorial\doc folder).
+
+
+**********************************************************************
+10) Algebraic loops
+Any measures against algebraic loops (specially Memory-Blocks) must be 
+documented. The use of Memory blocks should be avoided. 
+Models with these blocks show sometimes a strange behaviour when using 
+a variable step solver (without a well defined maximum timestep).	
+Consider using UnitDelay.
+
+
+**********************************************************************
+11) From and Goto Blocks
+From and Goto block should not transfer information between different
+model layers (e.g. from the top layer into a subsystem). Use these blocks
+only to share data within one model layer. Do never transfer data 
+from one subsystem to another subsystem within the model!!
+
+
+**********************************************************************
+12) Global variables and bus objects
+Global variables and their purpose must clearly be defined and described.
+Any bus object used by the model must be documented and provided as .mat file
+in the folder \public\data.
+
+
+**********************************************************************
+13) Using other Matlab Toolboxes
+Blocks in the Carnot library may not include blocks from other Matlab toolboxes
+than Simulink. If the model uses other blocksets or functions (e.g. Stateflow) 
+it may not be part of the standard. This may create problems with the BSD licence 
+and makes work more difficult. (For example if Stateflow blocks are included 
+in the model, you are not allowed to save the model or library unless you have 
+a Stateflow licence.)
+Blocks using other toolboxes must be clearly identified by their block name. 
+When merging your own Carnot library these blocks will be excluded unless you 
+own the licence.
+xxx_StFlow - block uses Stateflow
+xxx_SimScp - block uses Simscape
+
+**********************************************************************
+14) New S-functions
+Use carnot_c_file_head.c in tutorial/template and the templates of the 
+current Matlab-Simulink version.
+
+**********************************************************************
+15) Parameters in masks
+Parameters can be used by in the underlying subsystems. You should 
+avoid to pass parameters over more than one hirarchy (subsystem). 
+If you intend to use a parameter in a subsystem in the subsytem, the 
+parameter should be redifined in the maks of the second subsystem. 
+To pass the value of the parameter, the parameter name can be written 
+in the mask dialog box.
+
+Parameters should not be changed or restricted in the value. If the 
+model requires a certain range (for example 0...1) this should clearly 
+be mentioned in the parameter dialog. Additionally any change 
+(for example p1 = max(0, min(1, p1)) ) should result in a warning 
+("parameter p1 allowed range is 0..1: changed to <new value>, intial 
+value <old value>"). 
+Best practice is to put all the changes in a mask callback.
+Example: Parameter testp is defined in the mask and must be limited to
+the intervall 0..1.
+function testp_saturated = CarnotCallbacks_TestBlockLimitParameter(testp)
+testp_saturated = testp;
+if testp_saturated < 0
+    testp_saturated = 0;
+    warning('Subsystem, parameter testp: value below minimum. ...
+        Calculating with minimum value 0')
+elseif testp_saturated > 1
+    testp_saturated = 1;
+    warning('Subsystem, parameter testp: value above maximum. ...
+        Calculating with maximum value 1')
+end    
+
+
+**********************************************************************
+16) Testing of models
+Beside the verfification scenario of the model (see chapter 6), the 
+model should be tested under extreme conditions. The minimum and 
+maximum tested value of each parameter and input value shall be 
+documented.
+
+**********************************************************************
+17) Modelling equations: equations for the energy balance
+Differential equation, example of a pipe element
+(density*cp)*dTnode/dt = U * Aloss / Vnode * (Tamb - Tnode) 
++ cond / dx^2 * (Tnode_before + Tnext_node - Tnode)
++ mdot * cp / Vnode * (Tnode_before - Tnode) 
++ QdotSource / Vnode
+
+Do:
+a) Use central differences for thermal conduction.
+b) Use upwind scheme for massflow
+c) Use node temperature for losses and/or gains
+d) Outlet temperature is node temperature
+e) Material properties can be temperature dependant. Use one temperature for all 
+   evaluations (for example cp at node temperature).
+
+Don't use models where the outlet temperature is calculated by a mean temperature
+(if the mean temperature is the node temperature for the energy balance):
+Tnode = Tmean = (Tin+Tout)/2
+Tout = 2*Tnode - Tin
+These type of modelling creates unexpected sources and sinks for energy.
+
+**********************************************************************
+18) Help Files
+Each Block must have a html help-file in the folder <Blockname>/doc.
+You may use the template "carnot_help_file.htlm" in the /tutorial/templates
+folder.
+
+******************** FILE TRAILER ************************************
+ * This file is part of the CARNOT Blockset.
+ * Copyright (c) 1998-2015, Solar-Institute Juelich of the FH Aachen.
+ * Additional Copyright for this file see list auf authors.
+ * All rights reserved.
+ * Redistribution and use in source and binary forms, with or without 
+ * modification, are permitted provided that the following conditions are 
+ * met:
+ * 1. Redistributions of source code must retain the above copyright notice, 
+ *    this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright 
+ *    notice, this list of conditions and the following disclaimer in the 
+ *    documentation and/or other materials provided with the distribution.
+ * 3. Neither the name of the copyright holder nor the names of its 
+ *    contributors may be used to endorse or promote products derived from 
+ *    this software without specific prior written permission.
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE 
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE 
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN 
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF 
+ * THE POSSIBILITY OF SUCH DAMAGE.
+**********************************************************************
+
+Matlab(C) and Simulink(C) are registered trademarks of The MathWorks, Inc.
+for a complete list see: 
+http://www.mathworks.com/company/aboutus/policies_statements/trademarks.html
+
+**********************************************************************
+* F I L E   D O C U M E N T A T I O N
+* author list:      hf -> Bernd Hafner
+*                   mp -> Marcel Paasche
+* version: CarnotVersion.MajorVersionOfFunction.SubversionOfFunction
+* Version  Author   Changes                                     Date
+* 6.1.0    hf       created, based on the 2014 user meeting     01apr2014
+* 6.1.1    hf       comments of mp and completed chapt.1        14apr2014
+* 6.1.2    hf       validate replaces by verify                 09jan2015
+* 6.1.3    hf       added chapter 15 and 16                     23mar2015
+* 6.1.4    hf       added chapter 18 				09jul2015
+* 6.1.5    hf       correctes path to \public\data		17sep2015
+********************************** E N D ************************************

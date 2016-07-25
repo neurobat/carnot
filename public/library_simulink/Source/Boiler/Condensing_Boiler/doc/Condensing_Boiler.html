@@ -1,0 +1,439 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="de-at" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Condensing Boiler</title>
+<style type="text/css">
+ div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+p
+	{margin-right:0cm;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ table.MsoNormalTable
+	{line-height:120%;
+	font-size:10.0pt;
+	font-family:"Calibri","sans-serif";
+	}
+a:link
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;
+}
+ul
+	{margin-bottom:0cm;}
+ li.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ .auto-style1 {
+	margin-left: 120px;
+}
+.auto-style2 {
+	font-size: 18pt;
+}
+.auto-style3 {
+	text-align: left;
+}
+.auto-style4 {
+	font-weight: bold;
+	text-align: left;
+}
+</style>
+</head>
+
+<body>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;mso-fareast-font-family:"Times New Roman"'>
+
+<hr size=10 width="100%" noshade style='color:#A0A0A0' align=center>
+
+</span></span></div>
+
+<p><!--[if gte vml 1]><v:shape id="Bild_x0020_90" o:spid="_x0000_s1555" type="#_x0000_t75"
+ style='position:absolute;left:0;text-align:left;margin-left:48.5pt;
+ margin-top:0;width:88.5pt;height:84.75pt;z-index:88;visibility:visible;
+ mso-wrap-style:square;mso-wrap-distance-left:0;mso-wrap-distance-top:0;
+ mso-wrap-distance-right:0;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:right;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line'
+ o:allowoverlap="f">
+ <v:imagedata src="Figures/furnace.jpg" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <w:wrap type="square" anchory="line" xmlns:w="urn:schemas-microsoft-com:office:word"/>
+</v:shape><![endif]--><![if !vml]><img width=118 height=113
+src="Figures/furnace.jpg" align=right v:shapes="Bild_x0020_90"><![endif]><a name=furnace><span style='mso-bookmark:
+literature' class="auto-style2"><strong>C</strong></span><font size="5"><strong>ondensing_Boiler</strong></font></a><span
+style='mso-bookmark:furnace'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+<b>Path: CARNOT/heat_source</b> <br clear=all style='mso-special-character:
+line-break'>
+<o:p></o:p></span></span></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:furnace'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></span></span></div>
+
+<p><span style='mso-bookmark:literature'><span class=GramE><b><span lang=EN-US
+style='font-size:13.5pt;line-height:120%'>Purpose</span></b><span lang=EN-US
+style='font-size:13.5pt;line-height:120%'> <br>
+Simple model of a </span><span
+style='font-size:13.5pt;line-height:120%'> condensing boiler</span><span lang=EN-US
+style='font-size:13.5pt;line-height:120%'>.</span></span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> </span><span lang=EN-US style='font-size:12.0pt;
+line-height:120%'><o:p></o:p></span></span></p>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Description</span></b><span lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+The </span><span style='font-size:13.5pt;line-height:120%'> boiler</span><span lang=EN-US style='font-size:13.5pt;line-height:120%'> model is a simple model which considers only the constant nominal
+power transfer on the combustion chamber side of the furnace. On the water side
+of the furnace, a multinode model is used to model the time dependent
+conditions. The differential equation for the water temperature </span></span></p>
+
+<p><span style='mso-bookmark:literature'><span class=GramE><span lang=EN-US
+style='font-size:13.5pt;line-height:120%'>characteristic</span></span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> of a node in the furnace is &nbsp;&nbsp;</span></span></p>
+<p><span style='mso-bookmark:literature'>
+<span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> (m*c/N)*dT<sub>Node</sub>/dt
+= U1/N*(T<sub>amb</sub>-T<sub>node</sub>) + m<sub>dot</sub>*cf(T<sub>in</sub>-T<sub>node</sub>)+P<sub><span lang="de-at">act</span></sub>/N
+</span></span></p>
+<p><font size="4">the actual power is</font></p>
+<p><font size="4">Pact = eta_lookup_table * Pnom * ctrl</font></p>
+
+<p><span style='mso-bookmark:literature'><span class=GramE><span lang=EN-US
+style='font-size:13.5pt;line-height:120%'>with</span></span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> the variables </span></span></p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 style='mso-cellspacing:1.5pt;
+ mso-yfti-tbllook:1184'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><b><span lang=EN-US
+  style='font-size:13.5pt;line-height:120%'>symbol</span><span lang=EN-US><o:p></o:p></span></b></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt' class="auto-style4">
+  <p><span style='mso-bookmark:literature'><span lang=EN-US
+  style='font-size:13.5pt;line-height:120%'>Used for</span><span lang=EN-US><o:p></o:p></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><b><span lang=EN-US
+  style='font-size:13.5pt;line-height:120%'>Unit</span><span lang=EN-US><o:p></o:p></span></b></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>m<sub>node</sub></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt' class="auto-style3">
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>mass of the furnace</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>[kg]</span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>c</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt' class="auto-style3">
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>heat capacity furnace</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>[J/(kg K)]</span></span></p>
+  </td>
+ </tr>
+    <tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>c</span><span style='font-size:
+  13.5pt;line-height:120%'>trl</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt' class="auto-style3">
+  <p><font size="4">control signal in [0...1]</font></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>[</span><span style='font-size:
+  13.5pt;line-height:120%'>-</span></span></p>
+  </td>
+    </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>cf</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt' class="auto-style3">
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>heat capacity of fluid</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>[J/(kg K)]</span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>T</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt' class="auto-style3">
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>Temperature of </span>
+  <span style='font-size:
+  13.5pt;line-height:120%'>boiler</span><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'> water</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>[K]</span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>t</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt' class="auto-style3">
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>Time</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>[s]</span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>U<sub>1</sub></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt' class="auto-style3">
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>heat loss coefficient to ambient </span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>[W/ K]</span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>T<sub>amb</sub></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt' class="auto-style3">
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>Ambient temperature</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>[°C]</span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>T<sub>node</sub></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt' class="auto-style3">
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>Node temperature</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>[°C]</span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>T<sub>in</sub></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt' class="auto-style3">
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>temperature of fluid entering node</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>[°C]</span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>m<sub>dot</sub></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt' class="auto-style3">
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>Mass flow rate</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>[kg/s]</span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>N</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt' class="auto-style3">
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>Number of nodes</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>[-]</span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12;mso-yfti-lastrow:yes'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>P<sub><span lang="de-at">act</span></sub></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt' class="auto-style3">
+  <p><font size="4">Actual</font><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'> power of the </span>
+  <span style='font-size:
+  13.5pt;line-height:120%'>boier</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>[W]</span></span></p>
+  </td>
+ </tr>
+	<tr>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>P<sub>nom</sub></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt' class="auto-style3">
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>Nominal power of the </span>
+  <span style='font-size:
+  13.5pt;line-height:120%'>boiler</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>[W]</span></span></p>
+  </td>
+    </tr>
+</table>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Creating the underlying S-function of the furnace
+block is described in </span></span><a href="carnot_manual.htm#creating_s_functions"><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>chapter 3.3</span></span></a><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> </span></span></p>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Parameters and Dialog Box</span></b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> <br>
+</span></span><!--[if gte vml 1]><v:shape id="Bild_x0020_91" o:spid="_x0000_s1554"
+ type="#_x0000_t75" style='position:absolute;left:0;text-align:left;
+ margin-left:0;margin-top:0;width:282pt;height:280.5pt;z-index:89;visibility:visible;
+ mso-wrap-style:square;mso-wrap-distance-left:0;mso-wrap-distance-top:0;
+ mso-wrap-distance-right:0;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:left;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line'
+ o:allowoverlap="f">
+ <v:imagedata src="Figures/furnaceSHOT.jpg" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <w:wrap type="square" anchory="line" xmlns:w="urn:schemas-microsoft-com:office:word"/>
+</v:shape><![endif]--><![if !vml]><img width=376 height=374
+src="Figures/furnaceSHOT.jpg" align=left v:shapes="Bild_x0020_91"><![endif]><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'><br clear=all
+style='mso-special-character:line-break'>
+</span></span></p>
+
+<ul type=disc class="auto-style1">
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l233 level1 lfo99;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>nominal power
+     [W] </span><span lang=EN-US
+     style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l233 level1 lfo99;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>heat loss
+     coefficient (k*A) [W/(m<sup>2</sup>*K)] </span><span lang=EN-US style='mso-fareast-font-family:
+     "Times New Roman"'><o:p></o:p></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l233 level1 lfo99;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>pressure drop
+     coefficient [lin qua] [Pa] </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l233 level1 lfo99;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>initial
+     temperature [°C] </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l233 level1 lfo99;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>number of
+     nodes </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></li>
+</ul>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Characteristics</span></b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> <br>
+Direct Feedthrough&nbsp;&nbsp;&nbsp;Yes <br>
+Sample
+time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size:13.5pt;
+line-height:120%'>&nbsp;&nbsp;
+</span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> Inherited
+from driving block <br>
+States &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size:13.5pt;
+line-height:120%'>&nbsp;&nbsp;&nbsp;
+</span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> corresponding
+to the number of nodes <br>
+Vectorized&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size:13.5pt;
+line-height:120%'>&nbsp;&nbsp;
+</span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> Yes
+</span></span></p>
+
+</body>
+
+</html>

@@ -1,0 +1,6833 @@
+Model {
+  Name			  "b_microCHP_modulating"
+  Version		  7.6
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.265"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "windows-1252"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  DataTypeOverrideAppliesTo "AllNumericTypes"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  MaxMDLFileLineLength	  120
+  Created		  "Mon Jan 10 10:39:34 2011"
+  Creator		  "Sebastian"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "fabian.ille"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Tue Feb 18 09:25:41 2014"
+  RTWModifiedTimeStamp	  314616341
+  ModelVersionFormat	  "1.%<AutoIncrement:265>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  off
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    2
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.10.0"
+      Array {
+	Type			"Handle"
+	Dimension		8
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.10.0"
+	  StartTime		  "0"
+	  StopTime		  "12000"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  ConcurrentTasks	  off
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.10.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Version		  "1.10.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    4
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    Cell		    "OptimizeModelRefInitCode"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  on
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.10.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "Warning"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.10.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.10.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  8
+	  Version		  "1.10.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  off
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  9
+	  Version		  "1.10.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    2
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  GenerateSLWebview	  off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      10
+	      Version		      "1.10.0"
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      11
+	      Version		      "1.10.0"
+	      Array {
+		Type			"Cell"
+		Dimension		14
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"PortableWordSizes"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTCodeCoverageTool     "None"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition    " [ 203, -12, 1164, 652 ] "
+    }
+    Simulink.ConfigSet {
+      $ObjectID		      12
+      Version		      "1.10.0"
+      Array {
+	Type			"Handle"
+	Dimension		8
+	Simulink.SolverCC {
+	  $ObjectID		  13
+	  Version		  "1.10.0"
+	  StartTime		  "0"
+	  StopTime		  "800000"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  ConcurrentTasks	  off
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  14
+	  Version		  "1.10.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  15
+	  Version		  "1.10.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    4
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    Cell		    "OptimizeModelRefInitCode"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  on
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero off
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  16
+	  Version		  "1.10.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "Warning"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  17
+	  Version		  "1.10.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Zero"
+	  TargetEndianess	  "LittleEndian"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "MATLAB Host"
+	  TargetUnknown		  off
+	  ProdEqTarget		  off
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  18
+	  Version		  "1.10.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  19
+	  Version		  "1.10.0"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  off
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  20
+	  Version		  "1.10.0"
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  GenerateSLWebview	  off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      21
+	      Version		      "1.10.0"
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      128
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      22
+	      Version		      "1.10.0"
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      TargetFunctionLibrary   "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTCodeCoverageTool     "None"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration1"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition    " [ 203, -12, 1164, 652 ] "
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    12
+  }
+  WSDataSource		  "MATLAB File"
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Arial"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+      PreserveConstantTs      off
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      DotProduct
+      SampleTime	      "-1"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParamMin		      "[]"
+      ParamMax		      "[]"
+      ParamDataTypeStr	      "Inherit: Same as input"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Ground
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Integrator
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "0"
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+      IgnoreLimit	      off
+      ZeroCross		      on
+      ContinuousStateAttributes	"''"
+    }
+    Block {
+      BlockType		      "Lookup_n-D"
+      NumberOfTableDimensions "2"
+      BreakpointsForDimension1 "[10,22,31]"
+      BreakpointsForDimension2 "[10,22,31]"
+      BreakpointsForDimension3 "[1:3]"
+      BreakpointsForDimension4 "[1:3]"
+      BreakpointsForDimension5 "[1:3]"
+      BreakpointsForDimension6 "[1:3]"
+      BreakpointsForDimension7 "[1:3]"
+      BreakpointsForDimension8 "[1:3]"
+      BreakpointsForDimension9 "[1:3]"
+      BreakpointsForDimension10	"[1:3]"
+      BreakpointsForDimension11	"[1:3]"
+      BreakpointsForDimension12	"[1:3]"
+      BreakpointsForDimension13	"[1:3]"
+      BreakpointsForDimension14	"[1:3]"
+      BreakpointsForDimension15	"[1:3]"
+      BreakpointsForDimension16	"[1:3]"
+      BreakpointsForDimension17	"[1:3]"
+      BreakpointsForDimension18	"[1:3]"
+      BreakpointsForDimension19	"[1:3]"
+      BreakpointsForDimension20	"[1:3]"
+      BreakpointsForDimension21	"[1:3]"
+      BreakpointsForDimension22	"[1:3]"
+      BreakpointsForDimension23	"[1:3]"
+      BreakpointsForDimension24	"[1:3]"
+      BreakpointsForDimension25	"[1:3]"
+      BreakpointsForDimension26	"[1:3]"
+      BreakpointsForDimension27	"[1:3]"
+      BreakpointsForDimension28	"[1:3]"
+      BreakpointsForDimension29	"[1:3]"
+      BreakpointsForDimension30	"[1:3]"
+      BreakpointsForDimension1Min "[]"
+      BreakpointsForDimension2Min "[]"
+      BreakpointsForDimension3Min "[]"
+      BreakpointsForDimension4Min "[]"
+      BreakpointsForDimension5Min "[]"
+      BreakpointsForDimension6Min "[]"
+      BreakpointsForDimension7Min "[]"
+      BreakpointsForDimension8Min "[]"
+      BreakpointsForDimension9Min "[]"
+      BreakpointsForDimension10Min "[]"
+      BreakpointsForDimension11Min "[]"
+      BreakpointsForDimension12Min "[]"
+      BreakpointsForDimension13Min "[]"
+      BreakpointsForDimension14Min "[]"
+      BreakpointsForDimension15Min "[]"
+      BreakpointsForDimension16Min "[]"
+      BreakpointsForDimension17Min "[]"
+      BreakpointsForDimension18Min "[]"
+      BreakpointsForDimension19Min "[]"
+      BreakpointsForDimension20Min "[]"
+      BreakpointsForDimension21Min "[]"
+      BreakpointsForDimension22Min "[]"
+      BreakpointsForDimension23Min "[]"
+      BreakpointsForDimension24Min "[]"
+      BreakpointsForDimension25Min "[]"
+      BreakpointsForDimension26Min "[]"
+      BreakpointsForDimension27Min "[]"
+      BreakpointsForDimension28Min "[]"
+      BreakpointsForDimension29Min "[]"
+      BreakpointsForDimension30Min "[]"
+      BreakpointsForDimension1Max "[]"
+      BreakpointsForDimension2Max "[]"
+      BreakpointsForDimension3Max "[]"
+      BreakpointsForDimension4Max "[]"
+      BreakpointsForDimension5Max "[]"
+      BreakpointsForDimension6Max "[]"
+      BreakpointsForDimension7Max "[]"
+      BreakpointsForDimension8Max "[]"
+      BreakpointsForDimension9Max "[]"
+      BreakpointsForDimension10Max "[]"
+      BreakpointsForDimension11Max "[]"
+      BreakpointsForDimension12Max "[]"
+      BreakpointsForDimension13Max "[]"
+      BreakpointsForDimension14Max "[]"
+      BreakpointsForDimension15Max "[]"
+      BreakpointsForDimension16Max "[]"
+      BreakpointsForDimension17Max "[]"
+      BreakpointsForDimension18Max "[]"
+      BreakpointsForDimension19Max "[]"
+      BreakpointsForDimension20Max "[]"
+      BreakpointsForDimension21Max "[]"
+      BreakpointsForDimension22Max "[]"
+      BreakpointsForDimension23Max "[]"
+      BreakpointsForDimension24Max "[]"
+      BreakpointsForDimension25Max "[]"
+      BreakpointsForDimension26Max "[]"
+      BreakpointsForDimension27Max "[]"
+      BreakpointsForDimension28Max "[]"
+      BreakpointsForDimension29Max "[]"
+      BreakpointsForDimension30Max "[]"
+      BreakpointsForDimension1DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension2DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension3DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension4DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension5DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension6DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension7DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension8DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension9DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension10DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension11DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension12DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension13DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension14DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension15DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension16DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension17DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension18DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension19DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension20DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension21DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension22DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension23DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension24DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension25DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension26DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension27DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension28DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension29DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension30DataTypeStr "Inherit: Same as corresponding input"
+      IndexSearchMethod	      "Binary search"
+      BeginIndexSearchUsingPreviousIndexResult off
+      UseOneInputPortForAllInputData off
+      Table		      "[4 5 6;16 19 20;10 18 23]"
+      TableMin		      "[]"
+      TableMax		      "[]"
+      TableDataTypeStr	      "Inherit: Same as output"
+      IntermediateResultsDataTypeStr "Inherit: Same as output"
+      InterpMethod	      "Linear"
+      ExtrapMethod	      "Linear"
+      ActionForOutOfRangeInput "None"
+      UseLastTableValue	      off
+      SampleTime	      "-1"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+      FractionDataTypeStr     "Inherit: Inherit via internal rule"
+      LUTDesignTableMode      "Redesign Table"
+      LUTDesignDataSource     "Block Dialog"
+      LUTDesignFunctionName   "sqrt(x)"
+      LUTDesignUseExistingBP  on
+      LUTDesignRelError	      "0.01"
+      LUTDesignAbsError	      "1e-6"
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Product
+      Inputs		      "2"
+      Multiplication	      "Element-wise(.*)"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+      SFunctionDeploymentMode off
+    }
+    Block {
+      BlockType		      Saturate
+      UpperLimitSource	      "Dialog"
+      UpperLimit	      "0.5"
+      LowerLimitSource	      "Dialog"
+      LowerLimit	      "-0.5"
+      LinearizeAsGain	      on
+      ZeroCross		      on
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+    }
+    Block {
+      BlockType		      Selector
+      NumberOfDimensions      "1"
+      IndexMode		      "One-based"
+      InputPortWidth	      "-1"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      StateSpace
+      A			      "1"
+      B			      "1"
+      C			      "1"
+      D			      "1"
+      X0		      "0"
+      AbsoluteTolerance	      "auto"
+      ContinuousStateAttributes	"''"
+      Realization	      "auto"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      Variant		      off
+      GeneratePreprocessorConditionals off
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      AccumDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Switch
+      Criteria		      "u2 >= Threshold"
+      Threshold		      "0"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      ZeroCross		      on
+      SampleTime	      "-1"
+      AllowDiffInputSizes     off
+    }
+    Block {
+      BlockType		      Terminator
+    }
+  }
+  System {
+    Name		    "b_microCHP_modulating"
+    Location		    [8, 129, 1245, 599]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "216"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "872"
+    Block {
+      BlockType		      SubSystem
+      Name		      "CHP with modulating power output"
+      SID		      "643"
+      Ports		      [3, 2]
+      Position		      [305, 32, 515, 148]
+      BackgroundColor	      "red"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      MaskType		      "CHP "
+      MaskDescription	      "engine speed = f(T_return_load, T_flow_setpoint, T_flow, T_return)\nT_return_load: a stor"
+      "age temperature or the return flow temperature. \nAdjustable start-up phase: initial heating power\nRamp-up phas"
+      "e: maximum heating power up to 60°C\nControl phase: heating power is readjusted after an inputed readjustment in"
+      "tervall.\n\nStateflow needed!\n\nReturn temperature raising facility."
+      MaskHelp		      "eval('filetest (''manual.htm#electric_heating'')')"
+      MaskPromptString	      "maximum heating power [W]|minimum heating power [W]|initial heating power at start-up ph"
+      "ase [W]|electrical power fraction (referring to heating power) [0..1]|flow setpoint temperature [°C]|maximum flo"
+      "w temperature [°C]|duration of start-up phase [s]|duration of readjustment intervall [s]"
+      MaskStyleString	      "edit,edit,edit,edit,edit,edit,edit,edit"
+      MaskVariables	      "P_th_max=@1;P_th_min=@2;P_th_start=@3;f_P_el=@4;T_flow_setpoint=@5;T_flow_max=@6;t_start=@7"
+      ";t_readjustment=@8;"
+      MaskTunableValueString  "on,on,on,on,on,on,on,on"
+      MaskCallbackString      "|||||||"
+      MaskEnableString	      "on,on,on,on,on,on,on,on"
+      MaskVisibilityString    "on,on,on,on,on,on,on,on"
+      MaskToolTipString	      "on,on,on,on,on,on,on,on"
+      MaskDisplay	      "plot(0,0,100,100,[50,50,60,40,50],[55,40,70,60,90],[59,50],[48,40])"
+      MaskIconFrame	      on
+      MaskIconOpaque	      off
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "12500|3500|8000|0.37|80|88|180|450"
+      System {
+	Name			"CHP with modulating power output"
+	Location		[2, 93, 1260, 777]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"91"
+	Block {
+	  BlockType		  Inport
+	  Name			  "T_return_load"
+	  SID			  "644"
+	  Position		  [80, 203, 110, 217]
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "THV_return_load"
+	  SID			  "645"
+	  Position		  [80, 13, 110, 27]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "demand control"
+	  SID			  "646"
+	  Position		  [80, 263, 110, 277]
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant"
+	  SID			  "831"
+	  Position		  [335, 673, 460, 707]
+	  Value			  "f_P_el"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  SID			  "649"
+	  Ports			  [1, 6]
+	  Position		  [380, 202, 385, 318]
+	  BackgroundColor	  "black"
+	  ShowName		  off
+	  Outputs		  "[1 1 1 1 1 1]"
+	  Port {
+	    PortNumber		    1
+	    Name		    "ID"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "T"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    3
+	    Name		    "mdot"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    4
+	    Name		    "p"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux3"
+	  SID			  "650"
+	  Ports			  [1, 2]
+	  Position		  [355, 250, 360, 285]
+	  BackgroundColor	  "black"
+	  ShowName		  off
+	  Outputs		  "[6 14]"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux1"
+	  SID			  "651"
+	  Ports			  [7, 1]
+	  Position		  [745, 200, 750, 340]
+	  BackgroundColor	  "black"
+	  ShowName		  off
+	  Inputs		  "[1 1 1 1 1 1 14]"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux2"
+	  SID			  "871"
+	  Ports			  [6, 1]
+	  Position		  [745, 542, 750, 643]
+	  BackgroundColor	  "black"
+	  ShowName		  off
+	  Inputs		  "6"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product"
+	  SID			  "652"
+	  Ports			  [3, 1]
+	  Position		  [615, 357, 640, 503]
+	  ShowName		  off
+	  Inputs		  "//*"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product1"
+	  SID			  "843"
+	  Ports			  [2, 1]
+	  Position		  [445, 577, 470, 628]
+	  ShowName		  off
+	  Inputs		  "**"
+	}
+	Block {
+	  BlockType		  Product
+	  Name			  "Product2"
+	  SID			  "842"
+	  Ports			  [2, 1]
+	  Position		  [500, 646, 525, 704]
+	  ShowName		  off
+	  Inputs		  "**"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  SID			  "655"
+	  Ports			  [2, 1]
+	  Position		  [670, 219, 700, 241]
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "control unit"
+	  SID			  "720"
+	  Ports			  [5, 2]
+	  Position		  [154, 345, 246, 495]
+	  BlockRotation		  270
+	  BlockMirror		  on
+	  BackgroundColor	  "gray"
+	  NamePlacement		  "alternate"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "control unit"
+	  MaskDescription	  "The switching of the CHP depends on the below conditions of safety shutdown and the demand signa"
+	  "l of the consumer. \nconditions of safety shutdown:\nCHP ON: T_flow < T_flow_max\nCHP OFF: T_flow > T_flow_max  \n "
+	  "                "
+	  MaskDisplay		  "plot(-30,0,150,100,[70,100,40,10,70,70,10,10],[50,80,80,50,50,20,20,50],[100,70],[50,20],[20,50,50,"
+	  "20,20],[40,40,30,30,40],[62,62,62,61,59,58,58,60],[42,41,39,38,38,40,42,43],[61,62,62,61,60,59,58,58,58,59],[32,31,"
+	  "30,28,27,28,28,30,31,32])"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  off
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "control unit"
+	    Location		    [285, 185, 1185, 693]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "107"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "demand control"
+	      SID		      "845"
+	      Position		      [575, 35, 595, 55]
+	      BlockMirror	      on
+	      NamePlacement	      "alternate"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "T_return_load"
+	      SID		      "846"
+	      Position		      [750, 295, 770, 315]
+	      BlockMirror	      on
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "mdot_return"
+	      SID		      "847"
+	      Position		      [625, 315, 645, 335]
+	      BlockMirror	      on
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "T_flow"
+	      SID		      "848"
+	      Position		      [525, 275, 545, 295]
+	      BlockMirror	      on
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "cp"
+	      SID		      "849"
+	      Position		      [625, 365, 645, 385]
+	      BlockMirror	      on
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant"
+	      SID		      "850"
+	      Position		      [510, 236, 595, 254]
+	      BlockMirror	      on
+	      ShowName		      off
+	      Value		      "T_flow_max"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant2"
+	      SID		      "851"
+	      Position		      [730, 271, 825, 289]
+	      BlockMirror	      on
+	      ShowName		      off
+	      Value		      "T_flow_setpoint"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant3"
+	      SID		      "852"
+	      Position		      [255, 420, 275, 440]
+	      NamePlacement	      "alternate"
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant4"
+	      SID		      "853"
+	      Position		      [510, 76, 595, 94]
+	      BlockMirror	      on
+	      ShowName		      off
+	      Value		      "t_readjustment"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant5"
+	      SID		      "854"
+	      Position		      [540, 116, 595, 134]
+	      BlockMirror	      on
+	      ShowName		      off
+	      Value		      "P_th_start"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant6"
+	      SID		      "855"
+	      Position		      [535, 157, 595, 173]
+	      BlockMirror	      on
+	      ShowName		      off
+	      Value		      "P_th_max"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant7"
+	      SID		      "856"
+	      Position		      [555, 196, 595, 214]
+	      BlockMirror	      on
+	      ShowName		      off
+	      Value		      "t_start"
+	    }
+	    Block {
+	      BlockType		      Integrator
+	      Name		      "Integrator"
+	      SID		      "857"
+	      Ports		      [2, 1]
+	      Position		      [320, 422, 350, 453]
+	      ExternalReset	      "rising"
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Product"
+	      SID		      "858"
+	      Ports		      [2, 1]
+	      Position		      [110, 174, 135, 216]
+	      BlockMirror	      on
+	      NamePlacement	      "alternate"
+	      ShowName		      off
+	      Inputs		      "**"
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Product1"
+	      SID		      "859"
+	      Ports		      [3, 1]
+	      Position		      [560, 283, 575, 367]
+	      BlockMirror	      on
+	      ShowName		      off
+	      Inputs		      "***"
+	    }
+	    Block {
+	      BlockType		      Saturate
+	      Name		      "Saturation"
+	      SID		      "860"
+	      Ports		      [1, 1]
+	      Position		      [500, 310, 530, 340]
+	      BlockMirror	      on
+	      InputPortMap	      "u0"
+	      UpperLimit	      "P_th_max"
+	      LowerLimit	      "P_th_min"
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Subtract"
+	      SID		      "861"
+	      Ports		      [2, 1]
+	      Position		      [660, 267, 695, 318]
+	      BlockMirror	      on
+	      Inputs		      "+-"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "heat capacity modulation"
+	      SID		      "862"
+	      Ports		      [9, 3]
+	      Position		      [245, 31, 465, 379]
+	      BlockMirror	      on
+	      ErrorFcn		      "Stateflow.Translate.translate"
+	      PermitHierarchicalResolution "ExplicitOnly"
+	      TreatAsAtomicUnit	      on
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskType		      "Stateflow"
+	      MaskDescription	      "Stateflow diagram"
+	      MaskSelfModifiable      on
+	      MaskDisplay	      "plot(sf('Private','sfblk','xIcon'),sf('Private','sfblk','yIcon'));text(0.5,0,sf('Private', '"
+	      "sfblk', 'tIcon'),'HorizontalAl','Center','VerticalAl','Bottom');"
+	      MaskIconFrame	      off
+	      MaskIconOpaque	      off
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"heat capacity modulation"
+		Location		[257, 457, 812, 717]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		SIDHighWatermark	"56"
+		Block {
+		  BlockType		  Inport
+		  Name			  "demand_control"
+		  SID			  "862::48"
+		  Position		  [20, 101, 40, 119]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "t_readjustment"
+		  SID			  "862::26"
+		  Position		  [20, 136, 40, 154]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "P_th_start"
+		  SID			  "862::27"
+		  Position		  [20, 171, 40, 189]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "P_th_max"
+		  SID			  "862::28"
+		  Position		  [20, 206, 40, 224]
+		  Port			  "4"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "t_start"
+		  SID			  "862::29"
+		  Position		  [20, 246, 40, 264]
+		  Port			  "5"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "T_flow_max"
+		  SID			  "862::19"
+		  Position		  [20, 281, 40, 299]
+		  Port			  "6"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "T_flow"
+		  SID			  "862::3"
+		  Position		  [20, 316, 40, 334]
+		  Port			  "7"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "P_th_setpoint"
+		  SID			  "862::7"
+		  Position		  [20, 351, 40, 369]
+		  Port			  "8"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "t_timer"
+		  SID			  "862::8"
+		  Position		  [20, 386, 40, 404]
+		  Port			  "9"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  " Demux "
+		  SID			  "862::54"
+		  Ports			  [1, 1]
+		  Position		  [270, 300, 320, 340]
+		  Outputs		  "1"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  " SFunction "
+		  SID			  "862::53"
+		  Tag			  "Stateflow S-Function b_microCHP_modulating 1"
+		  Ports			  [9, 4]
+		  Position		  [180, 100, 230, 300]
+		  FunctionName		  "sf_sfun"
+		  PortCounts		  "[9 4]"
+		  EnableBusSupport	  on
+		  Port {
+		    PortNumber		    2
+		    Name		    "control_CHP"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    3
+		    Name		    "P_th"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    4
+		    Name		    "timer"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  " Terminator "
+		  SID			  "862::56"
+		  Position		  [460, 311, 480, 329]
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "control_CHP"
+		  SID			  "862::12"
+		  Position		  [460, 101, 480, 119]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "P_th"
+		  SID			  "862::13"
+		  Position		  [460, 136, 480, 154]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "timer"
+		  SID			  "862::14"
+		  Position		  [460, 171, 480, 189]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "demand_control"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "t_readjustment"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "P_th_start"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "P_th_max"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  4
+		}
+		Line {
+		  SrcBlock		  "t_start"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  5
+		}
+		Line {
+		  SrcBlock		  "T_flow_max"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  6
+		}
+		Line {
+		  SrcBlock		  "T_flow"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  7
+		}
+		Line {
+		  SrcBlock		  "P_th_setpoint"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  8
+		}
+		Line {
+		  SrcBlock		  "t_timer"
+		  SrcPort		  1
+		  DstBlock		  " SFunction "
+		  DstPort		  9
+		}
+		Line {
+		  Name			  "control_CHP"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  2
+		  DstBlock		  "control_CHP"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "P_th"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  3
+		  DstBlock		  "P_th"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "timer"
+		  Labels		  [0, 0]
+		  SrcBlock		  " SFunction "
+		  SrcPort		  4
+		  DstBlock		  "timer"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  " Demux "
+		  SrcPort		  1
+		  DstBlock		  " Terminator "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  " SFunction "
+		  SrcPort		  1
+		  DstBlock		  " Demux "
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "P_th"
+	      SID		      "863"
+	      Position		      [50, 188, 80, 202]
+	      BlockMirror	      on
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "control_CHP"
+	      SID		      "864"
+	      Position		      [60, 83, 90, 97]
+	      BlockMirror	      on
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "heat capacity modulation"
+	      SrcPort		      3
+	      Points		      [-85, 0; 0, 125]
+	      DstBlock		      "Integrator"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      DstBlock		      "heat capacity modulation"
+	      DstPort		      6
+	    }
+	    Line {
+	      SrcBlock		      "Constant3"
+	      SrcPort		      1
+	      DstBlock		      "Integrator"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant4"
+	      SrcPort		      1
+	      DstBlock		      "heat capacity modulation"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "mdot_return"
+	      SrcPort		      1
+	      DstBlock		      "Product1"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "cp"
+	      SrcPort		      1
+	      Points		      [-30, 0]
+	      DstBlock		      "Product1"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Constant5"
+	      SrcPort		      1
+	      DstBlock		      "heat capacity modulation"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Constant6"
+	      SrcPort		      1
+	      DstBlock		      "heat capacity modulation"
+	      DstPort		      4
+	    }
+	    Line {
+	      SrcBlock		      "Constant7"
+	      SrcPort		      1
+	      DstBlock		      "heat capacity modulation"
+	      DstPort		      5
+	    }
+	    Line {
+	      SrcBlock		      "Constant2"
+	      SrcPort		      1
+	      DstBlock		      "Subtract"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "demand control"
+	      SrcPort		      1
+	      DstBlock		      "heat capacity modulation"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Subtract"
+	      SrcPort		      1
+	      DstBlock		      "Product1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "T_flow"
+	      SrcPort		      1
+	      DstBlock		      "heat capacity modulation"
+	      DstPort		      7
+	    }
+	    Line {
+	      SrcBlock		      "T_return_load"
+	      SrcPort		      1
+	      DstBlock		      "Subtract"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Product"
+	      SrcPort		      1
+	      DstBlock		      "P_th"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Product1"
+	      SrcPort		      1
+	      DstBlock		      "Saturation"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Saturation"
+	      SrcPort		      1
+	      DstBlock		      "heat capacity modulation"
+	      DstPort		      8
+	    }
+	    Line {
+	      SrcBlock		      "heat capacity modulation"
+	      SrcPort		      1
+	      Points		      [-85, 0]
+	      Branch {
+		DstBlock		"control_CHP"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 95]
+		DstBlock		"Product"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Integrator"
+	      SrcPort		      1
+	      Points		      [145, 0; 0, -75]
+	      DstBlock		      "heat capacity modulation"
+	      DstPort		      9
+	    }
+	    Line {
+	      SrcBlock		      "heat capacity modulation"
+	      SrcPort		      2
+	      DstBlock		      "Product"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "energy and efficiency"
+	  SID			  "676"
+	  Ports			  [4, 6]
+	  Position		  [595, 545, 700, 640]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "energy and efficiency"
+	    Location		    [233, 136, 1074, 789]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "P_th"
+	      SID		      "677"
+	      Position		      [65, 78, 95, 92]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "control CHP"
+	      SID		      "678"
+	      Position		      [65, 168, 95, 182]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "P_gas"
+	      SID		      "679"
+	      Position		      [125, 183, 155, 197]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "P_el"
+	      SID		      "680"
+	      Position		      [65, 248, 95, 262]
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Add"
+	      SID		      "681"
+	      Ports		      [2, 1]
+	      Position		      [630, 162, 660, 193]
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      DotProduct
+	      Name		      "Dot Product1"
+	      SID		      "682"
+	      Position		      [200, 79, 230, 106]
+	      ShowName		      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	    }
+	    Block {
+	      BlockType		      DotProduct
+	      Name		      "Dot Product2"
+	      SID		      "683"
+	      Position		      [200, 169, 230, 196]
+	      ShowName		      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	    }
+	    Block {
+	      BlockType		      DotProduct
+	      Name		      "Dot Product4"
+	      SID		      "684"
+	      Position		      [200, 234, 230, 261]
+	      ShowName		      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	    }
+	    Block {
+	      BlockType		      Integrator
+	      Name		      "Integrator"
+	      SID		      "685"
+	      Ports		      [1, 1]
+	      Position		      [260, 170, 290, 200]
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Integrator
+	      Name		      "Integrator1"
+	      SID		      "686"
+	      Ports		      [1, 1]
+	      Position		      [260, 80, 290, 110]
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Integrator
+	      Name		      "Integrator2"
+	      SID		      "687"
+	      Ports		      [1, 1]
+	      Position		      [260, 235, 290, 265]
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Product1"
+	      SID		      "688"
+	      Ports		      [2, 1]
+	      Position		      [535, 87, 560, 118]
+	      ShowName		      off
+	      Inputs		      "*/"
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Product2"
+	      SID		      "689"
+	      Ports		      [2, 1]
+	      Position		      [535, 227, 560, 258]
+	      ShowName		      off
+	      Inputs		      "/*"
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "T_ave1"
+	      SID		      "690"
+	      Position		      [320, 169, 425, 201]
+	      ShowName		      off
+	      Gain		      "1/3600000"
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "T_ave2"
+	      SID		      "691"
+	      Position		      [320, 234, 425, 266]
+	      ShowName		      off
+	      Gain		      "1/3600000"
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "T_ave3"
+	      SID		      "692"
+	      Position		      [320, 79, 425, 111]
+	      ShowName		      off
+	      Gain		      "1/3600000"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Q_th"
+	      SID		      "830"
+	      Position		      [570, 43, 600, 57]
+	      IconDisplay	      "Port number"
+	      InitialOutput	      "0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Q_el"
+	      SID		      "693"
+	      Position		      [535, 308, 565, 322]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      InitialOutput	      "0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Q_gas"
+	      SID		      "694"
+	      Position		      [535, 178, 565, 192]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	      InitialOutput	      "0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "eta_th"
+	      SID		      "695"
+	      Position		      [700, 98, 730, 112]
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	      InitialOutput	      "0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "eta_el"
+	      SID		      "696"
+	      Position		      [700, 238, 730, 252]
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	      InitialOutput	      "0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "eta_sys"
+	      SID		      "697"
+	      Position		      [700, 173, 730, 187]
+	      Port		      "6"
+	      IconDisplay	      "Port number"
+	      InitialOutput	      "0"
+	    }
+	    Line {
+	      SrcBlock		      "P_gas"
+	      SrcPort		      1
+	      DstBlock		      "Dot Product2"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Integrator"
+	      SrcPort		      1
+	      DstBlock		      "T_ave1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Integrator2"
+	      SrcPort		      1
+	      DstBlock		      "T_ave2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "P_el"
+	      SrcPort		      1
+	      DstBlock		      "Dot Product4"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Product2"
+	      SrcPort		      1
+	      Points		      [15, 0]
+	      Branch {
+		DstBlock		"eta_el"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -60]
+		DstBlock		"Add"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Dot Product4"
+	      SrcPort		      1
+	      DstBlock		      "Integrator2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Dot Product2"
+	      SrcPort		      1
+	      DstBlock		      "Integrator"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "control CHP"
+	      SrcPort		      1
+	      Points		      [15, 0]
+	      Branch {
+		Points			[0, 0]
+		Branch {
+		  DstBlock		  "Dot Product2"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [0, 65]
+		  DstBlock		  "Dot Product4"
+		  DstPort		  1
+		}
+	      }
+	      Branch {
+		Points			[0, -75]
+		DstBlock		"Dot Product1"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "T_ave1"
+	      SrcPort		      1
+	      Points		      [75, 0]
+	      Branch {
+		Points			[0, 50]
+		DstBlock		"Product2"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"Q_gas"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -75]
+		DstBlock		"Product1"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "T_ave2"
+	      SrcPort		      1
+	      Points		      [75, 0]
+	      Branch {
+		DstBlock		"Product2"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, 65]
+		DstBlock		"Q_el"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Dot Product1"
+	      SrcPort		      1
+	      DstBlock		      "Integrator1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "P_th"
+	      SrcPort		      1
+	      DstBlock		      "Dot Product1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Integrator1"
+	      SrcPort		      1
+	      DstBlock		      "T_ave3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "T_ave3"
+	      SrcPort		      1
+	      Points		      [75, 0]
+	      Branch {
+		DstBlock		"Product1"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -45]
+		DstBlock		"Q_th"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Product1"
+	      SrcPort		      1
+	      Points		      [15, 0]
+	      Branch {
+		Points			[0, 65]
+		DstBlock		"Add"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"eta_th"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Add"
+	      SrcPort		      1
+	      DstBlock		      "eta_sys"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  "Lookup_n-D"
+	  Name			  "f_P_gas_lookup-table"
+	  SID			  "730"
+	  Ports			  [1, 1]
+	  Position		  [315, 591, 375, 639]
+	  BackgroundColor	  "magenta"
+	  NumberOfTableDimensions "1"
+	  BreakpointsForDimension1 "[1,2]"
+	  BreakpointsForDimension2 "[44,80]"
+	  BreakpointsForDimension3 "[1:2]"
+	  BreakpointsForDimension4 "[1:2]"
+	  IndexSearchMethod	  "Binary search"
+	  Table			  "[1.79 1.5]"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "heat_capacity"
+	  SID			  "661"
+	  Ports			  [4, 1]
+	  Position		  [460, 398, 540, 457]
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "heat capacity"
+	  MaskDescription	  "Calculates the  heat_capacity of fluids [J/(kg*K)].\nCalls calls the function \"hcap\" in the CA"
+	  "RNOT library \"carlib\".\nDefinition of the fluid types                                            \nfluid-ID  mate"
+	  "rial           remarks on fluid mix                                            \n1           water              vap"
+	  "ourcontent in the 2-phase region\n2           air                   is (kg water) / (kg air)\n3           cotton oi"
+	  "l                                           \n4           silicone oil                                         \n5 "
+	  "          water-glycol    gives the volume partition [0..1] of glycol"
+	  MaskHelp		  "eval('htmlhelp (''chap_4_2h.htm#heat_capacity'')')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "heat_capacity"
+	    Location		    [164, 82, 603, 294]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "p"
+	      SID		      "873"
+	      Position		      [160, 90, 180, 110]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Fluid_Type"
+	      SID		      "874"
+	      Position		      [35, 30, 55, 50]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Fluid_Mix"
+	      SID		      "875"
+	      Position		      [80, 50, 100, 70]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "T"
+	      SID		      "876"
+	      Position		      [125, 70, 145, 90]
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      "S-Function"
+	      SID		      "877"
+	      Ports		      [4, 1]
+	      Position		      [235, 29, 310, 111]
+	      FunctionName	      "capfluid"
+	      EnableBusSupport	      off
+	      MaskDescription	      "Calculates the heat_capacity\n\nINPUT VECTORS:\nfluid type [1..5]\nfluid mix  \ntemperat"
+	      "ure [°C]\npressure [Pa]\n\nOUTPUT VECTOR:\nheat_capacity [J/(kg K)]"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "cp"
+	      SID		      "878"
+	      Position		      [355, 60, 375, 80]
+	      IconDisplay	      "Port number"
+	      InitialOutput	      "0"
+	    }
+	    Line {
+	      SrcBlock		      "p"
+	      SrcPort		      1
+	      DstBlock		      "S-Function"
+	      DstPort		      4
+	    }
+	    Line {
+	      SrcBlock		      "T"
+	      SrcPort		      1
+	      DstBlock		      "S-Function"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Fluid_Mix"
+	      SrcPort		      1
+	      DstBlock		      "S-Function"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Fluid_Type"
+	      SrcPort		      1
+	      DstBlock		      "S-Function"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "S-Function"
+	      SrcPort		      1
+	      DstBlock		      "cp"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "measure_T"
+	  SID			  "829"
+	  Ports			  [1, 2]
+	  Position		  [860, 125, 920, 160]
+	  BlockMirror		  on
+	  BackgroundColor	  "gray"
+	  NamePlacement		  "alternate"
+	  LibraryVersion	  "5.2.27"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "temperature measurement sensor"
+	  MaskDescription	  "Measurement sensor for temperatures with first-oder hold. Temperature is in degree centigrade."
+	  MaskHelp		  "eval('man (''measure_T'')')"
+	  MaskPromptString	  "time constant of sensor [s]|initial temperature [degree centigrade]"
+	  MaskStyleString	  "edit,edit"
+	  MaskVariables		  "tc=@1;t0=@2;"
+	  MaskTunableValueString  "on,on"
+	  MaskCallbackString	  "|"
+	  MaskEnableString	  "on,on"
+	  MaskVisibilityString	  "on,on"
+	  MaskToolTipString	  "on,on"
+	  MaskInitialization	  "tc = 1/max(tc, 0.001);\n"
+	  MaskDisplay		  "plot(-18,0,30,20,[0 20],[0 0],[10 10 8 8 12 12 10],[0 8 8 17 17 8 8],[10 10 9 9 11 11 10 9],[15 10 "
+	  "10 9 9 10 9 10])"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  off
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "10|25"
+	  System {
+	    Name		    "measure_T"
+	    Location		    [694, 610, 1032, 742]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "THV_in"
+	      SID		      "879"
+	      Position		      [15, 18, 45, 32]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      StateSpace
+	      Name		      "heat capacity"
+	      SID		      "880"
+	      Position		      [205, 57, 265, 93]
+	      A			      "-tc"
+	      B			      "tc"
+	      D			      "0"
+	      X0		      "t0"
+	    }
+	    Block {
+	      BlockType		      Selector
+	      Name		      "select\ntemperature"
+	      SID		      "881"
+	      Ports		      [1, 1]
+	      Position		      [120, 65, 165, 85]
+	      InputPortWidth	      "20"
+	      IndexOptions	      "Index vector (dialog)"
+	      Indices		      "[2]"
+	      OutputSizes	      "1"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "THV"
+	      SID		      "882"
+	      Position		      [275, 18, 305, 32]
+	      IconDisplay	      "Port number"
+	      InitialOutput	      "0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "T"
+	      SID		      "883"
+	      Position		      [285, 68, 315, 82]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      InitialOutput	      "0"
+	    }
+	    Line {
+	      SrcBlock		      "THV_in"
+	      SrcPort		      1
+	      Points		      [5, 0]
+	      Branch {
+		Points			[0, 50]
+		DstBlock		"select\ntemperature"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"THV"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "select\ntemperature"
+	      SrcPort		      1
+	      DstBlock		      "heat capacity"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "heat capacity"
+	      SrcPort		      1
+	      DstBlock		      "T"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "measure_mdot"
+	  SID			  "828"
+	  Ports			  [1, 2]
+	  Position		  [360, 112, 410, 148]
+	  BlockMirror		  on
+	  BackgroundColor	  "gray"
+	  NamePlacement		  "alternate"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "massflow measurement sensor"
+	  MaskDescription	  "Measurement sensor for massflow in kg/s."
+	  MaskHelp		  "eval('man (''measure_mdot'')')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "measure_mdot"
+	    Location		    [66, 150, 384, 324]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "THV_in"
+	      SID		      "884"
+	      Position		      [20, 43, 50, 57]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Selector
+	      Name		      "select\nmassflow"
+	      SID		      "885"
+	      Ports		      [1, 1]
+	      Position		      [120, 90, 170, 120]
+	      InputPortWidth	      "20"
+	      IndexOptions	      "Index vector (dialog)"
+	      Indices		      "[3]"
+	      OutputSizes	      "1"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "mdot"
+	      SID		      "886"
+	      Position		      [215, 98, 245, 112]
+	      IconDisplay	      "Port number"
+	      InitialOutput	      "0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "THV"
+	      SID		      "887"
+	      Position		      [215, 43, 245, 57]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      InitialOutput	      "0"
+	    }
+	    Line {
+	      SrcBlock		      "THV_in"
+	      SrcPort		      1
+	      Points		      [15, 0]
+	      Branch {
+		Points			[0, 55]
+		DstBlock		"select\nmassflow"
+		DstPort			1
+	      }
+	      Branch {
+		DstBlock		"THV"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "select\nmassflow"
+	      SrcPort		      1
+	      DstBlock		      "mdot"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "pump_const"
+	  SID			  "668"
+	  Ports			  [2, 1]
+	  Position		  [957, 195, 1013, 255]
+	  BlockRotation		  270
+	  BackgroundColor	  "green"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "constant pump"
+	  MaskDescription	  "set constant massflow rate"
+	  MaskHelp		  "eval('man(''pump_const'')')"
+	  MaskPromptString	  "massflow rate [kg/s]|fluid|percentage of fluid mix [0..1]|diameter at in- and outlet [m]|electr"
+	  "ic power consumption [W]|system pressure [Pa]"
+	  MaskStyleString	  "edit,popup(water|air|cotton_oil|silicone_oil|water_glycol_mix),edit,edit,edit,edit"
+	  MaskVariables		  "mdotmax=@1;fluid_id=@2;mix=@3;dia=@4;power=@5;p0=@6;"
+	  MaskTunableValueString  "on,on,on,on,on,on"
+	  MaskCallbackString	  "|||||"
+	  MaskEnableString	  "on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,on,on"
+	  MaskToolTipString	  "on,on,on,on,on,on"
+	  MaskInitialization	  "mix = min(1, max(0, mix));\ndia = max(0.001, dia);\np0 = max(p0, 1e5);"
+	  MaskDisplay		  "plot(0,0,100,100,[40,70,40,30,30,40,60,70,70,60,40],[70,50,30,40,60,70,70,60,40,30,30])"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  off
+	  MaskIconRotate	  "port"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "0.3|water|0|0.0157|100|3e5"
+	  System {
+	    Name		    "pump_const"
+	    Location		    [2, 105, 1262, 757]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "THVin"
+	      SID		      "888"
+	      Position		      [15, 63, 45, 77]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "control"
+	      SID		      "889"
+	      Position		      [15, 143, 45, 157]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant"
+	      SID		      "890"
+	      Position		      [185, 104, 245, 126]
+	      ShowName		      off
+	      Value		      "P_th_max"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant2"
+	      SID		      "891"
+	      Position		      [185, 174, 245, 196]
+	      ShowName		      off
+	      Value		      "12500"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux1"
+	      SID		      "892"
+	      Ports		      [1, 3]
+	      Position		      [105, 32, 110, 108]
+	      BackgroundColor	      "black"
+	      ShowName		      off
+	      Outputs		      "[1 1 18]"
+	      Port {
+		PortNumber		1
+		Name			"ID"
+		PropagatedSignals	"ID"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		2
+		Name			"T"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Ground
+	      Name		      "Ground"
+	      SID		      "893"
+	      Position		      [455, 150, 475, 170]
+	      ShowName		      off
+	      Port {
+		PortNumber		1
+		Name			"not used"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "ID"
+	      SID		      "894"
+	      Position		      [410, 28, 430, 52]
+	      ShowName		      off
+	      Port {
+		PortNumber		1
+		Name			"ID"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux1"
+	      SID		      "895"
+	      Ports		      [5, 1]
+	      Position		      [540, 21, 545, 179]
+	      BackgroundColor	      "black"
+	      ShowName		      off
+	      Inputs		      "[1 1 1 7 10]"
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Product1"
+	      SID		      "896"
+	      Ports		      [3, 1]
+	      Position		      [290, 95, 325, 205]
+	      ShowName		      off
+	      Inputs		      "**/"
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator"
+	      SID		      "897"
+	      Position		      [140, 35, 160, 55]
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "const1"
+	      SID		      "898"
+	      Position		      [390, 119, 515, 141]
+	      ShowName		      off
+	      Value		      "[p0 fluid_id mix dia 0 0 0]"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "heat capacity"
+	      SID		      "899"
+	      Ports		      [1, 1]
+	      Position		      [210, 58, 260, 82]
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskPromptString	      "NTU (k*A/(m*cp))"
+	      MaskStyleString	      "edit"
+	      MaskVariables	      "NTU=@1;"
+	      MaskTunableValueString  "on"
+	      MaskEnableString	      "on"
+	      MaskVisibilityString    "on"
+	      MaskToolTipString	      "on"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	      MaskValueString	      "3.1"
+	      Port {
+		PortNumber		1
+		Name			"T"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      System {
+		Name			"heat capacity"
+		Location		[0, 82, 1346, 739]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "Tin"
+		  SID			  "900"
+		  Position		  [20, 33, 50, 47]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  StateSpace
+		  Name			  "heat capacity"
+		  SID			  "901"
+		  Position		  [85, 22, 145, 58]
+		  A			  "-NTU"
+		  B			  "NTU"
+		  D			  "0"
+		  X0			  "80"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "T"
+		  SID			  "902"
+		  Position		  [180, 33, 210, 47]
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  SrcBlock		  "heat capacity"
+		  SrcPort		  1
+		  DstBlock		  "T"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Tin"
+		  SrcPort		  1
+		  DstBlock		  "heat capacity"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "mdot"
+	      SID		      "903"
+	      Position		      [90, 125, 160, 175]
+	      Gain		      "mdotmax"
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "terminate"
+	      SID		      "904"
+	      Position		      [140, 85, 160, 105]
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "THV"
+	      SID		      "905"
+	      Position		      [580, 93, 610, 107]
+	      IconDisplay	      "Port number"
+	      InitialOutput	      "0"
+	    }
+	    Line {
+	      Name		      "not used"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Ground"
+	      SrcPort		      1
+	      DstBlock		      "Mux1"
+	      DstPort		      5
+	    }
+	    Line {
+	      SrcBlock		      "Demux1"
+	      SrcPort		      3
+	      DstBlock		      "terminate"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "THVin"
+	      SrcPort		      1
+	      DstBlock		      "Demux1"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "ID"
+	      Labels		      [-1, 0]
+	      SrcBlock		      "ID"
+	      SrcPort		      1
+	      DstBlock		      "Mux1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Mux1"
+	      SrcPort		      1
+	      DstBlock		      "THV"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "const1"
+	      SrcPort		      1
+	      DstBlock		      "Mux1"
+	      DstPort		      4
+	    }
+	    Line {
+	      Name		      "ID"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux1"
+	      SrcPort		      1
+	      DstBlock		      "Terminator"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "T"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux1"
+	      SrcPort		      2
+	      DstBlock		      "heat capacity"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "mdot"
+	      SrcPort		      1
+	      DstBlock		      "Product1"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      DstBlock		      "Product1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant2"
+	      SrcPort		      1
+	      DstBlock		      "Product1"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Product1"
+	      SrcPort		      1
+	      Points		      [35, 0; 0, -50]
+	      DstBlock		      "Mux1"
+	      DstPort		      3
+	    }
+	    Line {
+	      Name		      "T"
+	      Labels		      [0, 0]
+	      SrcBlock		      "heat capacity"
+	      SrcPort		      1
+	      DstBlock		      "Mux1"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "control"
+	      SrcPort		      1
+	      DstBlock		      "mdot"
+	      DstPort		      1
+	    }
+	    Annotation {
+	      Name		      "maximum power"
+	      Position		      [212, 134]
+	    }
+	    Annotation {
+	      Name		      "nominal power of basic unit"
+	      Position		      [215, 206]
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "return temperature raising facility"
+	  SID			  "654"
+	  Ports			  [3, 2]
+	  Position		  [620, 32, 750, 158]
+	  BlockMirror		  on
+	  BackgroundColor	  "orange"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "return temperature raising facility"
+	  MaskDescription	  "A return setpoint temperature is calculated depending on heating power and flow setpoint tempera"
+	  "ture. The thermostatic mixer is located in the return flow of the CHP. \n  "
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "return temperature raising facility"
+	    Location		    [2, 82, 1262, 766]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "106"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "THV_return_load"
+	      SID		      "906"
+	      Position		      [780, 228, 810, 242]
+	      NamePlacement	      "alternate"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "P_th"
+	      SID		      "907"
+	      Position		      [350, 253, 380, 267]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "THV_flow"
+	      SID		      "908"
+	      Position		      [35, 88, 65, 102]
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "."
+	      SID		      "909"
+	      Ports		      [3, 1]
+	      Position		      [425, 120, 470, 240]
+	      Inputs		      "//*"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant1"
+	      SID		      "910"
+	      Position		      [480, 135, 585, 165]
+	      ShowName		      off
+	      Value		      "T_flow_setpoint"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant3"
+	      SID		      "911"
+	      Position		      [590, 274, 625, 296]
+	      ShowName		      off
+	      Value		      "0"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux1"
+	      SID		      "912"
+	      Ports		      [1, 6]
+	      Position		      [170, 25, 175, 145]
+	      BackgroundColor	      "black"
+	      ShowName		      off
+	      Outputs		      "[1 1 1 1 1 1]"
+	      Port {
+		PortNumber		1
+		Name			"ID"
+		PropagatedSignals	"ID"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		2
+		Name			"T"
+		PropagatedSignals	"T"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"mdot"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		4
+		Name			"p"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux2"
+	      SID		      "913"
+	      Ports		      [1, 2]
+	      Position		      [105, 75, 110, 110]
+	      BackgroundColor	      "black"
+	      ShowName		      off
+	      Outputs		      "[6 -1]"
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum1"
+	      SID		      "914"
+	      Ports		      [2, 1]
+	      Position		      [605, 102, 625, 198]
+	      ShowName		      off
+	      Inputs		      "|+-"
+	    }
+	    Block {
+	      BlockType		      Switch
+	      Name		      "Switch"
+	      SID		      "915"
+	      Position		      [675, 225, 715, 295]
+	      Threshold		      "1"
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator2"
+	      SID		      "916"
+	      Position		      [280, 25, 300, 45]
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator3"
+	      SID		      "917"
+	      Position		      [135, 90, 155, 110]
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "flow_diverter"
+	      SID		      "918"
+	      Ports		      [2, 3]
+	      Position		      [880, 370, 955, 440]
+	      BlockMirror	      on
+	      BackgroundColor	      "cyan"
+	      NamePlacement	      "alternate"
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskType		      "flow diverter, fixed rate"
+	      MaskDescription	      "The block diverts an incoming massflow according to:\nmdot1 = mdot * fdiv\nmdot2 = mdot "
+	      "* (1-fdiv)\nfdiv is limited to the range [0..1]"
+	      MaskHelp		      "eval('man(''flow_diverter_fixed_rate'')')"
+	      MaskPromptString	      "time constant in s"
+	      MaskStyleString	      "edit"
+	      MaskVariables	      "t=@1;"
+	      MaskTunableValueString  "on"
+	      MaskEnableString	      "on"
+	      MaskVisibilityString    "on"
+	      MaskToolTipString	      "on"
+	      MaskInitialization      "t = max(0.001, t);"
+	      MaskDisplay	      "plot(0,-5,120,65,[20 45 20 20],[20 30 40 20],[45 70 70 45],[30 20 40 30],[45 35 55 45],[30 1"
+	      "0 10 30])"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      off
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	      MaskValueString	      "1"
+	      System {
+		Name			"flow_diverter"
+		Location		[-2, 82, 1258, 739]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "fdiv"
+		  SID			  "923"
+		  Position		  [30, 213, 60, 227]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "THV"
+		  SID			  "924"
+		  Position		  [25, 93, 55, 107]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  "Demux"
+		  SID			  "925"
+		  Ports			  [1, 6]
+		  Position		  [80, 16, 85, 179]
+		  BackgroundColor	  "black"
+		  ShowName		  off
+		  Outputs		  "[1 1 1 4 3 10]  "
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  DotProduct
+		  Name			  "Dot Product"
+		  SID			  "926"
+		  Position		  [255, 69, 280, 96]
+		  ShowName		  off
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux"
+		  SID			  "927"
+		  Ports			  [6, 1]
+		  Position		  [425, 22, 430, 173]
+		  BackgroundColor	  "black"
+		  ShowName		  off
+		  Inputs		  "6"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux1"
+		  SID			  "928"
+		  Ports			  [6, 1]
+		  Position		  [425, 177, 430, 328]
+		  BackgroundColor	  "black"
+		  ShowName		  off
+		  Inputs		  "6"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux2"
+		  SID			  "929"
+		  Ports			  [2, 1]
+		  Position		  [265, 274, 270, 316]
+		  BackgroundColor	  "black"
+		  ShowName		  off
+		  Inputs		  "2"
+		}
+		Block {
+		  BlockType		  Saturate
+		  Name			  "Saturation"
+		  SID			  "930"
+		  Ports			  [1, 1]
+		  Position		  [85, 205, 115, 235]
+		  ShowName		  off
+		  InputPortMap		  "u0"
+		  UpperLimit		  "1"
+		  LowerLimit		  "0"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum"
+		  SID			  "931"
+		  Ports			  [2, 1]
+		  Position		  [320, 229, 340, 251]
+		  ShowName		  off
+		  Inputs		  "-+"
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "Transfer Fcn\n(with initial states)"
+		  SID			  "932"
+		  Ports			  [1, 1]
+		  Position		  [140, 202, 210, 238]
+		  LibraryVersion	  "1.41"
+		  MinAlgLoopOccurrences	  off
+		  PropExecContextOutsideSubsystem off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  Opaque		  off
+		  RequestExecContextInheritance	off
+		  MaskHideContents	  off
+		  MaskType		  "Transfer Function with Initial States"
+		  MaskDescription	  "Vector expressions for numerator, and denominator. Coefficients are in descending powers of s."
+		  MaskHelp		  "Specify the initial states for the transfer function.  The state ordering is determined by the m-file"
+		  " tf2ss.  There is no unique mapping of the states in a transfer function to states in a state-space representation"
+		  ".  However, tf2ss will consistently use the same mapping for a given transfer function.\n"
+		  MaskPromptString	  "Numerator:|Denominator:|Initial conditions:"
+		  MaskStyleString	  "edit,edit,edit"
+		  MaskVariables		  "N=@1;D=@2;X0=@3;"
+		  MaskTunableValueString  "on,on,on"
+		  MaskCallbackString	  "||"
+		  MaskEnableString	  "on,on,on"
+		  MaskVisibilityString	  "on,on,on"
+		  MaskToolTipString	  "on,on,on"
+		  MaskInitialization	  "[A,B,C,Dd]=tf2ss(N,D);if (isempty(X0));[m,n]=size(A);X0=zeros(1,m); end;"
+		  MaskDisplay		  "dpoly(N,D,'s')"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		  MaskValueString	  "[1]|[t  1]|.5"
+		  System {
+		    Name		    "Transfer Fcn\n(with initial states)"
+		    Location		    [614, 74, 834, 162]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "In1"
+		    SID			    "938"
+		    Position		    [25, 38, 55, 52]
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    StateSpace
+		    Name		    "State Space"
+		    SID			    "939"
+		    Position		    [80, 27, 140, 63]
+		    A			    "A"
+		    B			    "B"
+		    C			    "C"
+		    D			    "Dd"
+		    X0			    "X0"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "Out1"
+		    SID			    "940"
+		    Position		    [165, 38, 195, 52]
+		    IconDisplay		    "Port number"
+		    InitialOutput	    "0"
+		    }
+		    Line {
+		    SrcBlock		    "State Space"
+		    SrcPort		    1
+		    Points		    [5, 10]
+		    DstBlock		    "Out1"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "In1"
+		    SrcPort		    1
+		    Points		    [5, 10]
+		    DstBlock		    "State Space"
+		    DstPort		    1
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "add 1"
+		  SID			  "933"
+		  Ports			  [1, 1]
+		  Position		  [135, 24, 165, 46]
+		  LibraryVersion	  "5.2.27"
+		  MinAlgLoopOccurrences	  off
+		  PropExecContextOutsideSubsystem off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  Opaque		  off
+		  RequestExecContextInheritance	off
+		  MaskHideContents	  off
+		  MaskType		  "add constant"
+		  MaskDescription	  "This block adds a constant c to each element of the input vector."
+		  MaskHelp		  "eval('man (''add_constant'')')"
+		  MaskPromptString	  "constant c"
+		  MaskStyleString	  "edit"
+		  MaskVariables		  "c=@1;"
+		  MaskTunableValueString  "on"
+		  MaskEnableString	  "on"
+		  MaskVisibilityString	  "on"
+		  MaskToolTipString	  "on"
+		  MaskDisplay		  "disp('+c');"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		  MaskValueString	  "1"
+		  System {
+		    Name		    "add 1"
+		    Location		    [120, 128, 331, 258]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "In1"
+		    SID			    "941"
+		    Position		    [25, 73, 55, 87]
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Sum
+		    Name		    "Sum"
+		    SID			    "942"
+		    Ports		    [2, 1]
+		    Position		    [90, 56, 115, 89]
+		    ShowName		    off
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "const"
+		    SID			    "943"
+		    Position		    [40, 28, 70, 52]
+		    Value		    "c"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "Out1"
+		    SID			    "944"
+		    Position		    [140, 68, 170, 82]
+		    IconDisplay		    "Port number"
+		    InitialOutput	    "0"
+		    }
+		    Line {
+		    SrcBlock		    "Sum"
+		    SrcPort		    1
+		    DstBlock		    "Out1"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "In1"
+		    SrcPort		    1
+		    DstBlock		    "Sum"
+		    DstPort		    2
+		    }
+		    Line {
+		    SrcBlock		    "const"
+		    SrcPort		    1
+		    DstBlock		    "Sum"
+		    DstPort		    1
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "const"
+		  SID			  "934"
+		  Position		  [300, 127, 330, 143]
+		  ShowName		  off
+		  Value			  "[0 0 0]"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "clq"
+		  SID			  "935"
+		  Position		  [305, 288, 335, 302]
+		  IconDisplay		  "Port number"
+		  InitialOutput		  "0"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "THV1"
+		  SID			  "936"
+		  Position		  [475, 93, 505, 107]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		  InitialOutput		  "0"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "THV2"
+		  SID			  "937"
+		  Position		  [475, 248, 505, 262]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		  InitialOutput		  "0"
+		}
+		Line {
+		  SrcBlock		  "Dot Product"
+		  SrcPort		  1
+		  Points		  [5, 0]
+		  Branch {
+		    DstBlock		    "Mux"
+		    DstPort		    3
+		  }
+		  Branch {
+		    Points		    [0, 150]
+		    DstBlock		    "Sum"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "fdiv"
+		  SrcPort		  1
+		  DstBlock		  "Saturation"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Saturation"
+		  SrcPort		  1
+		  DstBlock		  "Transfer Fcn\n(with initial states)"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Demux"
+		  SrcPort		  6
+		  Points		  [260, 0]
+		  Branch {
+		    DstBlock		    "Mux"
+		    DstPort		    6
+		  }
+		  Branch {
+		    Points		    [0, 155]
+		    DstBlock		    "Mux1"
+		    DstPort		    6
+		  }
+		}
+		Line {
+		  SrcBlock		  "THV"
+		  SrcPort		  1
+		  DstBlock		  "Demux"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Mux1"
+		  SrcPort		  1
+		  DstBlock		  "THV2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Mux"
+		  SrcPort		  1
+		  DstBlock		  "THV1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Demux"
+		  SrcPort		  4
+		  Points		  [300, 0]
+		  Branch {
+		    DstBlock		    "Mux"
+		    DstPort		    4
+		  }
+		  Branch {
+		    Points		    [0, 155]
+		    DstBlock		    "Mux1"
+		    DstPort		    4
+		  }
+		}
+		Line {
+		  SrcBlock		  "const"
+		  SrcPort		  1
+		  Points		  [25, 0]
+		  Branch {
+		    DstBlock		    "Mux"
+		    DstPort		    5
+		  }
+		  Branch {
+		    Points		    [0, 155]
+		    DstBlock		    "Mux1"
+		    DstPort		    5
+		  }
+		}
+		Line {
+		  SrcBlock		  "Demux"
+		  SrcPort		  5
+		  Points		  [35, 0; 0, 170]
+		  DstBlock		  "Mux2"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Demux"
+		  SrcPort		  3
+		  Points		  [125, 0]
+		  Branch {
+		    Points		    [5, 0; -5, 160; 0, 0]
+		    Branch {
+		    DstBlock		    "Sum"
+		    DstPort		    2
+		    }
+		    Branch {
+		    Points		    [0, 40]
+		    DstBlock		    "Mux2"
+		    DstPort		    1
+		    }
+		  }
+		  Branch {
+		    Points		    [0, -10]
+		    DstBlock		    "Dot Product"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Sum"
+		  SrcPort		  1
+		  DstBlock		  "Mux1"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "Mux2"
+		  SrcPort		  1
+		  DstBlock		  "clq"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Demux"
+		  SrcPort		  2
+		  Points		  [290, 0]
+		  Branch {
+		    DstBlock		    "Mux"
+		    DstPort		    2
+		  }
+		  Branch {
+		    Points		    [0, 155]
+		    DstBlock		    "Mux1"
+		    DstPort		    2
+		  }
+		}
+		Line {
+		  SrcBlock		  "Transfer Fcn\n(with initial states)"
+		  SrcPort		  1
+		  Points		  [20, 0; 0, -130]
+		  DstBlock		  "Dot Product"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Demux"
+		  SrcPort		  1
+		  DstBlock		  "add 1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "add 1"
+		  SrcPort		  1
+		  Points		  [200, 0]
+		  Branch {
+		    DstBlock		    "Mux"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 155]
+		    DstBlock		    "Mux1"
+		    DstPort		    1
+		  }
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "heat_capacity"
+	      SID		      "919"
+	      Ports		      [4, 1]
+	      Position		      [250, 148, 330, 207]
+	      LibraryVersion	      "5.2.27"
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskType		      "heat capacity"
+	      MaskDescription	      "Calculates the  heat_capacity of fluids [J/(kg*K)].\nCalls calls the function \"hcap\" i"
+	      "n the CARNOT library \"carlib\".\nDefinition of the fluid types                                            \nfl"
+	      "uid-ID  material           remarks on fluid mix                                            \n1           water "
+	      "             vapourcontent in the 2-phase region\n2           air                   is (kg water) / (kg air)\n3"
+	      "           cotton oil                                           \n4           silicone oil                     "
+	      "                    \n5           water-glycol    gives the volume partition [0..1] of glycol\n6           tyfo"
+	      "cor LS      only available in liquid phase"
+	      MaskHelp		      "eval('man(''heat_capacity'')')"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	      System {
+		Name			"heat_capacity"
+		Location		[1435, 343, 1870, 502]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "T"
+		  SID			  "945"
+		  Position		  [125, 70, 145, 90]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "p"
+		  SID			  "946"
+		  Position		  [160, 90, 180, 110]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "Fluid_Type"
+		  SID			  "947"
+		  Position		  [35, 30, 55, 50]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "Fluid_Mix"
+		  SID			  "948"
+		  Position		  [80, 50, 100, 70]
+		  Port			  "4"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  "S-Function"
+		  SID			  "949"
+		  Ports			  [4, 1]
+		  Position		  [235, 29, 310, 111]
+		  FunctionName		  "capfluid"
+		  EnableBusSupport	  off
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "cp"
+		  SID			  "950"
+		  Position		  [355, 60, 375, 80]
+		  IconDisplay		  "Port number"
+		  InitialOutput		  "0"
+		}
+		Line {
+		  SrcBlock		  "S-Function"
+		  SrcPort		  1
+		  DstBlock		  "cp"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Fluid_Type"
+		  SrcPort		  1
+		  DstBlock		  "S-Function"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Fluid_Mix"
+		  SrcPort		  1
+		  DstBlock		  "S-Function"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "T"
+		  SrcPort		  1
+		  DstBlock		  "S-Function"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "p"
+		  SrcPort		  1
+		  DstBlock		  "S-Function"
+		  DstPort		  4
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "thermostatic_mixer"
+	      SID		      "920"
+	      Ports		      [4, 2]
+	      Position		      [875, 225, 960, 320]
+	      BackgroundColor	      "cyan"
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskType		      "thermostatic flow mixer"
+	      MaskDescription	      "The thermostatic flow mixer mixes cold and hot fluid to set a desired temperature and ca"
+	      "lculates the pressure drop.\nUse together with flow_diverter_fixed_rate."
+	      MaskHelp		      "eval('man(''flow_mixer_thermostatic'')')"
+	      MaskPromptString	      "time constant for valve [s]"
+	      MaskStyleString	      "edit"
+	      MaskVariables	      "t=@1;"
+	      MaskTunableValueString  "on"
+	      MaskEnableString	      "on"
+	      MaskVisibilityString    "on"
+	      MaskToolTipString	      "on"
+	      MaskInitialization      "t = max(t, 0.01);\nt1 = 1/t;\n"
+	      MaskDisplay	      "plot(-10,0,90,100,[40,60,60,40,40],[60,40,60,40,60],[44,50,56,44],[66,50,66,66],[50,50],[30,"
+	      "50],[56,44],[25,25],[50,50],[10,25])"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      off
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	      MaskValueString	      "1"
+	      System {
+		Name			"thermostatic_mixer"
+		Location		[2, 82, 1262, 715]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "THVcold"
+		  SID			  "951"
+		  Position		  [15, 138, 45, 152]
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "Tset"
+		  SID			  "952"
+		  Position		  [15, 318, 45, 332]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "THVhot"
+		  SID			  "953"
+		  Position		  [20, 38, 50, 52]
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "clq"
+		  SID			  "954"
+		  Position		  [185, 103, 215, 117]
+		  Port			  "4"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  "Demux"
+		  SID			  "955"
+		  Ports			  [1, 2]
+		  Position		  [125, 25, 130, 65]
+		  BackgroundColor	  "black"
+		  ShowName		  off
+		  Outputs		  "[10 10]"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  "Demux1"
+		  SID			  "956"
+		  Ports			  [1, 2]
+		  Position		  [125, 125, 130, 165]
+		  BackgroundColor	  "black"
+		  ShowName		  off
+		  Outputs		  "[10 10]"
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "Gain"
+		  SID			  "957"
+		  Position		  [335, 295, 365, 325]
+		  ShowName		  off
+		  Gain			  "t1"
+		}
+		Block {
+		  BlockType		  Integrator
+		  Name			  "Integrator"
+		  SID			  "958"
+		  Ports			  [1, 1]
+		  Position		  [430, 295, 460, 325]
+		  ShowName		  off
+		  LimitOutput		  on
+		  UpperSaturationLimit	  "1"
+		  LowerSaturationLimit	  "0"
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux"
+		  SID			  "959"
+		  Ports			  [2, 1]
+		  Position		  [455, 50, 460, 205]
+		  BackgroundColor	  "black"
+		  ShowName		  off
+		  Inputs		  "2"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  "S-Function"
+		  Name			  "S-Function"
+		  SID			  "960"
+		  Ports			  [3, 2]
+		  Position		  [305, 78, 345, 142]
+		  FunctionName		  "mixer"
+		  Parameters		  "t1"
+		  EnableBusSupport	  off
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  "Terminator"
+		  SID			  "961"
+		  Position		  [370, 115, 390, 135]
+		  ShowName		  off
+		}
+		Block {
+		  BlockType		  Terminator
+		  Name			  "Terminator1"
+		  SID			  "962"
+		  Position		  [165, 175, 185, 195]
+		  ShowName		  off
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "diff_T"
+		  SID			  "963"
+		  Ports			  [2, 1]
+		  Position		  [270, 274, 285, 341]
+		  ShowName		  off
+		  Inputs		  "-+"
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "display_THV1"
+		  SID			  "964"
+		  Ports			  [1, 1]
+		  Position		  [120, 277, 230, 303]
+		  LibraryVersion	  "5.2.27"
+		  MinAlgLoopOccurrences	  off
+		  PropExecContextOutsideSubsystem off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  Opaque		  off
+		  RequestExecContextInheritance	off
+		  MaskHideContents	  off
+		  MaskType		  "display from THV"
+		  MaskDescription	  "Displays the ticked values from one THV"
+		  MaskHelp		  "eval('man(''display_THV'')')"
+		  MaskPromptString	  "temperature [degree centigrade]|massflow [kg/s]|pressure [Pa]|fluid ID (1 = water, 2 = air, 3 "
+		  "= cotton oil, 4 = water-glycol)|fluid mix|diameter [m]"
+		  MaskStyleString	  "checkbox,checkbox,checkbox,checkbox,checkbox,checkbox"
+		  MaskVariables		  "t=@1;m=@2;p=@3;id=@4;mix=@5;d=@6;"
+		  MaskTunableValueString  "on,on,on,on,on,on"
+		  MaskCallbackString	  "|||||"
+		  MaskEnableString	  "on,on,on,on,on,on"
+		  MaskVisibilityString	  "on,on,on,on,on,on"
+		  MaskToolTipString	  "on,on,on,on,on,on"
+		  MaskInitialization	  "v=[];\nif (t)\n    v  = [2];\nend\nif (m)\n    v= [v 3];\nend\nif (p)\n    v = [v 4];\nend\n"
+		  "if (id)\n    v = [v 5];\nend\nif (mix)\n    v = [v 6];\nend\nif (d)\n    v = [v 7];\nend\n"
+		  MaskIconFrame		  on
+		  MaskIconOpaque	  on
+		  MaskIconRotate	  "none"
+		  MaskPortRotate	  "default"
+		  MaskIconUnits		  "autoscale"
+		  MaskValueString	  "on|off|off|off|off|off"
+		  System {
+		    Name		    "display_THV1"
+		    Location		    [160, 72, 493, 174]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "THV_yellow"
+		    SID			    "967"
+		    Position		    [25, 38, 55, 52]
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Selector
+		    Name		    "Selector"
+		    SID			    "968"
+		    Ports		    [1, 1]
+		    Position		    [115, 36, 160, 54]
+		    ShowName		    off
+		    InputPortWidth	    "20"
+		    IndexOptions	    "Index vector (dialog)"
+		    Indices		    "[v]"
+		    OutputSizes		    "1"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "to_scope"
+		    SID			    "969"
+		    Position		    [235, 35, 255, 55]
+		    IconDisplay		    "Port number"
+		    InitialOutput	    "0"
+		    }
+		    Line {
+		    SrcBlock		    "Selector"
+		    SrcPort		    1
+		    DstBlock		    "to_scope"
+		    DstPort		    1
+		    }
+		    Line {
+		    SrcBlock		    "THV_yellow"
+		    SrcPort		    1
+		    DstBlock		    "Selector"
+		    DstPort		    1
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "THV"
+		  SID			  "965"
+		  Position		  [525, 123, 555, 137]
+		  IconDisplay		  "Port number"
+		  InitialOutput		  "0"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "fdiv"
+		  SID			  "966"
+		  Position		  [505, 303, 535, 317]
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		  InitialOutput		  "0"
+		}
+		Line {
+		  SrcBlock		  "Mux"
+		  SrcPort		  1
+		  Points		  [25, 0]
+		  Branch {
+		    DstBlock		    "THV"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 105; -385, 0]
+		    DstBlock		    "display_THV1"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Demux"
+		  SrcPort		  1
+		  Points		  [130, 0; 0, 55]
+		  DstBlock		  "S-Function"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "THVcold"
+		  SrcPort		  1
+		  DstBlock		  "Demux1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "THVhot"
+		  SrcPort		  1
+		  DstBlock		  "Demux"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Tset"
+		  SrcPort		  1
+		  DstBlock		  "diff_T"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "display_THV1"
+		  SrcPort		  1
+		  DstBlock		  "diff_T"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "diff_T"
+		  SrcPort		  1
+		  DstBlock		  "Gain"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "S-Function"
+		  SrcPort		  1
+		  Points		  [0, -5]
+		  DstBlock		  "Mux"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "clq"
+		  SrcPort		  1
+		  DstBlock		  "S-Function"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Demux1"
+		  SrcPort		  1
+		  Points		  [155, 0]
+		  DstBlock		  "S-Function"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "S-Function"
+		  SrcPort		  2
+		  DstBlock		  "Terminator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Gain"
+		  SrcPort		  1
+		  DstBlock		  "Integrator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Demux1"
+		  SrcPort		  2
+		  Points		  [5, 0; 0, 30]
+		  DstBlock		  "Terminator1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Demux"
+		  SrcPort		  2
+		  Points		  [45, 0; 0, 110]
+		  DstBlock		  "Mux"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Integrator"
+		  SrcPort		  1
+		  DstBlock		  "fdiv"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "THV_flow_load"
+	      SID		      "921"
+	      Position		      [815, 423, 845, 437]
+	      BlockMirror	      on
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "THV_return"
+	      SID		      "922"
+	      Position		      [1015, 243, 1045, 257]
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      Name		      "ID"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux1"
+	      SrcPort		      1
+	      DstBlock		      "Terminator2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "P_th"
+	      SrcPort		      1
+	      Points		      [25, 0]
+	      Branch {
+		DstBlock		"."
+		DstPort			3
+	      }
+	      Branch {
+		DstBlock		"Switch"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "heat_capacity"
+	      SrcPort		      1
+	      DstBlock		      "."
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "THV_flow"
+	      SrcPort		      1
+	      Points		      [20, 0]
+	      Branch {
+		DstBlock		"Demux2"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 360; 905, 0; 0, -30]
+		DstBlock		"flow_diverter"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Demux2"
+	      SrcPort		      1
+	      DstBlock		      "Demux1"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "T"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux1"
+	      SrcPort		      2
+	      Points		      [55, 0]
+	      DstBlock		      "heat_capacity"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "mdot"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux1"
+	      SrcPort		      3
+	      Points		      [75, 0; 0, 65]
+	      DstBlock		      "."
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux1"
+	      SrcPort		      6
+	      Points		      [25, 0; 0, 65]
+	      DstBlock		      "heat_capacity"
+	      DstPort		      4
+	    }
+	    Line {
+	      SrcBlock		      "Demux1"
+	      SrcPort		      5
+	      Points		      [35, 0; 0, 70]
+	      DstBlock		      "heat_capacity"
+	      DstPort		      3
+	    }
+	    Line {
+	      Name		      "p"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux1"
+	      SrcPort		      4
+	      Points		      [45, 0; 0, 75]
+	      DstBlock		      "heat_capacity"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "flow_diverter"
+	      SrcPort		      1
+	      Points		      [-85, 0; 0, -70]
+	      DstBlock		      "thermostatic_mixer"
+	      DstPort		      4
+	    }
+	    Line {
+	      SrcBlock		      "flow_diverter"
+	      SrcPort		      3
+	      DstBlock		      "THV_flow_load"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "THV_return_load"
+	      SrcPort		      1
+	      DstBlock		      "thermostatic_mixer"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "flow_diverter"
+	      SrcPort		      2
+	      Points		      [-105, 0; 0, -120]
+	      DstBlock		      "thermostatic_mixer"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "thermostatic_mixer"
+	      SrcPort		      2
+	      Points		      [30, 0; 0, 95]
+	      DstBlock		      "flow_diverter"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux2"
+	      SrcPort		      2
+	      DstBlock		      "Terminator3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant1"
+	      SrcPort		      1
+	      DstBlock		      "Sum1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Sum1"
+	      SrcPort		      1
+	      Points		      [30, 0]
+	      DstBlock		      "Switch"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "."
+	      SrcPort		      1
+	      DstBlock		      "Sum1"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Constant3"
+	      SrcPort		      1
+	      DstBlock		      "Switch"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Switch"
+	      SrcPort		      1
+	      DstBlock		      "thermostatic_mixer"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "thermostatic_mixer"
+	      SrcPort		      1
+	      DstBlock		      "THV_return"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "scale_function"
+	  SID			  "731"
+	  Ports			  [1, 1]
+	  Position		  [210, 591, 265, 639]
+	  BackgroundColor	  "yellow"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  System {
+	    Name		    "scale_function"
+	    Location		    [226, 405, 1067, 1058]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "P_th"
+	      SID		      "766"
+	      Position		      [80, 123, 110, 137]
+	      NamePlacement	      "alternate"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "."
+	      SID		      "758"
+	      Ports		      [2, 1]
+	      Position		      [140, 118, 170, 167]
+	      Inputs		      "+-"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      ".1"
+	      SID		      "759"
+	      Ports		      [2, 1]
+	      Position		      [190, 176, 220, 209]
+	      ShowName		      off
+	      Inputs		      "-+"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Add"
+	      SID		      "760"
+	      Ports		      [2, 1]
+	      Position		      [365, 158, 410, 202]
+	      ShowName		      off
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Divide"
+	      SID		      "761"
+	      Ports		      [2, 1]
+	      Position		      [250, 122, 285, 218]
+	      ShowName		      off
+	      Inputs		      "*/"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "b"
+	      SID		      "763"
+	      Position		      [25, 186, 75, 214]
+	      NamePlacement	      "alternate"
+	      ShowName		      off
+	      Value		      "P_th_max"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "m"
+	      SID		      "764"
+	      Position		      [25, 140, 75, 170]
+	      NamePlacement	      "alternate"
+	      ShowName		      off
+	      Value		      "P_th_min"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "m2"
+	      SID		      "765"
+	      Position		      [300, 179, 340, 201]
+	      NamePlacement	      "alternate"
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "X_pth"
+	      SID		      "767"
+	      Position		      [455, 173, 485, 187]
+	      IconDisplay	      "Port number"
+	      InitialOutput	      "0"
+	    }
+	    Line {
+	      SrcBlock		      "m2"
+	      SrcPort		      1
+	      DstBlock		      "Add"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "m"
+	      SrcPort		      1
+	      Points		      [50, 0]
+	      Branch {
+		DstBlock		"."
+		DstPort			2
+	      }
+	      Branch {
+		Points			[-25, 0; 0, 30]
+		DstBlock		".1"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "."
+	      SrcPort		      1
+	      DstBlock		      "Divide"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "b"
+	      SrcPort		      1
+	      DstBlock		      ".1"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      ".1"
+	      SrcPort		      1
+	      DstBlock		      "Divide"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "P_th"
+	      SrcPort		      1
+	      DstBlock		      "."
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Divide"
+	      SrcPort		      1
+	      DstBlock		      "Add"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Add"
+	      SrcPort		      1
+	      DstBlock		      "X_pth"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "thermal inertia"
+	  SID			  "870"
+	  Ports			  [1, 1]
+	  Position		  [795, 215, 905, 325]
+	  BackgroundColor	  "red"
+	  LoadFcn		  "carmen('call');"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  MaskType		  "simple water storage"
+	  MaskDescription	  "multinode water storage"
+	  MaskHelp		  "eval('htmlhelp (''chap_4_2s.htm#storage'')')"
+	  MaskPromptString	  "volume [m³]|diameter [m]|position|axial heat conductivity [W/(m*K)]|heat loss coefficient [W/(m"
+	  "²*K)]|initial temperature [degree centigrade]|number of nodes|number of measurement points (>= 3)  (first is at bot"
+	  "tom)|ambient temperature"
+	  MaskStyleString	  "edit,edit,popup(lying cylinder|standing cylinder),edit,edit,edit,edit,edit,edit"
+	  MaskVariables		  "vol=@1;d=@2;stand=@3;cond=@4;uloss=@5;tini=@6;nodes=@7;mpts=@8;Tambient=@9;"
+	  MaskTunableValueString  "on,on,on,on,on,on,on,on,on"
+	  MaskCallbackString	  "||||||||"
+	  MaskEnableString	  "on,on,on,on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,on,on,on,on,on"
+	  MaskToolTipString	  "on,on,on,on,on,on,on,on,on"
+	  MaskInitialization	  "vol = max(vol, 0.001);\nd = max(d, 0.001);\nstand = stand-1;\nnodes = max(nodes, 1);\nmpts = "
+	  "max(mpts, 3);"
+	  MaskDisplay		  "plot(0,0,100,110,[40,40,47,53,60,60,53,47,40],[80,40,30,30,40,80,90,90,80],[40,35],[77,77],[64,60],"
+	  "[77,77],[40,35],[42,42],[64,60],[42,42])"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  off
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "0.00175*O_th/1000+ 0.0021|0.1|standing cylinder|1|1|25|3|1|15"
+	  System {
+	    Name		    "thermal inertia"
+	    Location		    [331, 105, 1082, 762]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "in"
+	      SID		      "970"
+	      Position		      [75, 220, 95, 240]
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux1"
+	      SID		      "971"
+	      Ports		      [1, 7]
+	      Position		      [400, 70, 405, 140]
+	      BackgroundColor	      "black"
+	      ShowName		      off
+	      Outputs		      "[1 mpts-2 1 1 1 3 3]"
+	      Port {
+		PortNumber		2
+		Name			"p"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"p"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux4"
+	      SID		      "972"
+	      Ports		      [1, 6]
+	      Position		      [160, 315, 165, 410]
+	      BackgroundColor	      "black"
+	      ShowName		      off
+	      Outputs		      "[1 1 1 1 3 3] "
+	      Port {
+		PortNumber		1
+		Name			"ID"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		2
+		Name			"T"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"mdot"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		4
+		Name			"p"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		5
+		Name			"fluid, mix, d"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		6
+		Name			"clq"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux5"
+	      SID		      "973"
+	      Ports		      [1, 2]
+	      Position		      [125, 354, 130, 396]
+	      BackgroundColor	      "black"
+	      ShowName		      off
+	      Outputs		      "[10 -1]"
+	      Port {
+		PortNumber		2
+		Name			"others"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux6"
+	      SID		      "974"
+	      Ports		      [1, 6]
+	      Position		      [160, 170, 165, 265]
+	      BackgroundColor	      "black"
+	      ShowName		      off
+	      Outputs		      "[1 1 1 1 3 3] "
+	      Port {
+		PortNumber		1
+		Name			"ID"
+		PropagatedSignals	"ID"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		2
+		Name			"T"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"mdot"
+		PropagatedSignals	"mdot"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		4
+		Name			"p"
+		PropagatedSignals	"p"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		5
+		Name			"fluid, mix, d"
+		PropagatedSignals	", , "
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		6
+		Name			"clq"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux7"
+	      SID		      "975"
+	      Ports		      [1, 2]
+	      Position		      [120, 209, 125, 251]
+	      BackgroundColor	      "black"
+	      ShowName		      off
+	      Outputs		      "[10 -1]"
+	      Port {
+		PortNumber		2
+		Name			"others"
+		PropagatedSignals	"not used"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux"
+	      SID		      "976"
+	      Ports		      [13, 1]
+	      Position		      [265, 43, 270, 167]
+	      BackgroundColor	      "black"
+	      ShowName		      off
+	      Inputs		      "13"
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux1"
+	      SID		      "977"
+	      Ports		      [7, 1]
+	      Position		      [545, 163, 550, 287]
+	      BackgroundColor	      "black"
+	      ShowName		      off
+	      Inputs		      "7"
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux2"
+	      SID		      "978"
+	      Ports		      [7, 1]
+	      Position		      [545, 315, 550, 425]
+	      BackgroundColor	      "black"
+	      ShowName		      off
+	      Inputs		      "7"
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux3"
+	      SID		      "979"
+	      Ports		      [3, 1]
+	      Position		      [550, 67, 555, 103]
+	      BackgroundColor	      "black"
+	      ShowName		      off
+	      Inputs		      "3"
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator"
+	      SID		      "980"
+	      Position		      [600, 360, 620, 380]
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator1"
+	      SID		      "981"
+	      Position		      [600, 75, 620, 95]
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "const4"
+	      SID		      "982"
+	      Position		      [95, 36, 145, 54]
+	      ShowName		      off
+	      Value		      "Tambient"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "constant_THV"
+	      SID		      "983"
+	      Ports		      [0, 1]
+	      Position		      [30, 363, 90, 387]
+	      BackgroundColor	      "lightBlue"
+	      LibraryVersion	      "5.2.27"
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      MaskType		      "constant THV"
+	      MaskDescription	      "Create a constant Thermo-Hydraulic-Vector. "
+	      MaskHelp		      "eval('man (''constant_THV'')')"
+	      MaskPromptString	      "temperature [degree centigrade]|massflow [kg/s]|pressure [Pa]|fluid|fluid mixture [0..1"
+	      "]|diameter [m]"
+	      MaskStyleString	      "edit,edit,edit,popup(water|air|cotton_oil|silicone_oil|water_glycol_mix|tyfocor_LS),edit"
+	      ",edit"
+	      MaskVariables	      "t=@1;mdot=@2;p=@3;fluid=@4;mix=@5;dia=@6;"
+	      MaskTunableValueString  "on,on,on,on,on,on"
+	      MaskCallbackString      "|||||"
+	      MaskEnableString	      "on,on,on,on,on,on"
+	      MaskVisibilityString    "on,on,on,on,on,on"
+	      MaskToolTipString	      "on,on,on,on,on,on"
+	      MaskInitialization      "mix = min(1, max(0, mix));\ndia = max(dia, 0.001);\n"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskPortRotate	      "default"
+	      MaskIconUnits	      "autoscale"
+	      MaskValueString	      "20|0|2e5|water|0|0.02"
+	      System {
+		Name			"constant_THV"
+		Location		[267, 101, 620, 711]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  BusCreator
+		  Name			  "Bus\nCreator"
+		  SID			  "986"
+		  Ports			  [20, 1]
+		  Position		  [220, 39, 225, 556]
+		  ShowName		  off
+		  Inputs		  "20"
+		  DisplayOption		  "bar"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "const1"
+		  SID			  "987"
+		  Position		  [70, 49, 90, 71]
+		  ShowName		  off
+		  Port {
+		    PortNumber		    1
+		    Name		    "THV_ID"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "const10"
+		  SID			  "988"
+		  Position		  [70, 273, 105, 297]
+		  ShowName		  off
+		  Value			  "0"
+		  Port {
+		    PortNumber		    1
+		    Name		    "not_used_3"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "const11"
+		  SID			  "989"
+		  Position		  [70, 298, 105, 322]
+		  ShowName		  off
+		  Value			  "0"
+		  Port {
+		    PortNumber		    1
+		    Name		    "not_used_4"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "const12"
+		  SID			  "990"
+		  Position		  [70, 323, 105, 347]
+		  ShowName		  off
+		  Value			  "0"
+		  Port {
+		    PortNumber		    1
+		    Name		    "not_used_5"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "const13"
+		  SID			  "991"
+		  Position		  [70, 348, 105, 372]
+		  ShowName		  off
+		  Value			  "0"
+		  Port {
+		    PortNumber		    1
+		    Name		    "not_used_6"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "const14"
+		  SID			  "992"
+		  Position		  [70, 373, 105, 397]
+		  ShowName		  off
+		  Value			  "0"
+		  Port {
+		    PortNumber		    1
+		    Name		    "not_used_7"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "const15"
+		  SID			  "993"
+		  Position		  [70, 398, 105, 422]
+		  ShowName		  off
+		  Value			  "0"
+		  Port {
+		    PortNumber		    1
+		    Name		    "not_used_8"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "const16"
+		  SID			  "994"
+		  Position		  [70, 423, 105, 447]
+		  ShowName		  off
+		  Value			  "0"
+		  Port {
+		    PortNumber		    1
+		    Name		    "not_used_9"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "const17"
+		  SID			  "995"
+		  Position		  [70, 448, 105, 472]
+		  ShowName		  off
+		  Value			  "0"
+		  Port {
+		    PortNumber		    1
+		    Name		    "not_used_10"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "const18"
+		  SID			  "996"
+		  Position		  [70, 473, 105, 497]
+		  ShowName		  off
+		  Value			  "0"
+		  Port {
+		    PortNumber		    1
+		    Name		    "not_used_11"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "const19"
+		  SID			  "997"
+		  Position		  [70, 498, 105, 522]
+		  ShowName		  off
+		  Value			  "0"
+		  Port {
+		    PortNumber		    1
+		    Name		    "not_used_12"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "const2"
+		  SID			  "998"
+		  Position		  [70, 74, 90, 96]
+		  ShowName		  off
+		  Value			  "t"
+		  Port {
+		    PortNumber		    1
+		    Name		    "Temperature"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "const20"
+		  SID			  "999"
+		  Position		  [70, 523, 105, 547]
+		  ShowName		  off
+		  Value			  "0"
+		  Port {
+		    PortNumber		    1
+		    Name		    "not_used_13"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "const3"
+		  SID			  "1000"
+		  Position		  [70, 98, 105, 122]
+		  ShowName		  off
+		  Value			  "mdot"
+		  Port {
+		    PortNumber		    1
+		    Name		    "Massflow"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "const4"
+		  SID			  "1001"
+		  Position		  [70, 124, 90, 146]
+		  ShowName		  off
+		  Value			  "p"
+		  Port {
+		    PortNumber		    1
+		    Name		    "Pressure"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "const5"
+		  SID			  "1002"
+		  Position		  [70, 148, 105, 172]
+		  ShowName		  off
+		  Value			  "fluid"
+		  Port {
+		    PortNumber		    1
+		    Name		    "Fluid_Type"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "const6"
+		  SID			  "1003"
+		  Position		  [70, 173, 105, 197]
+		  ShowName		  off
+		  Value			  "mix"
+		  Port {
+		    PortNumber		    1
+		    Name		    "Fluid_Mix"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "const7"
+		  SID			  "1004"
+		  Position		  [70, 198, 105, 222]
+		  ShowName		  off
+		  Value			  "dia"
+		  Port {
+		    PortNumber		    1
+		    Name		    "Diameter"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "const8"
+		  SID			  "1005"
+		  Position		  [70, 223, 105, 247]
+		  ShowName		  off
+		  Value			  "0"
+		  Port {
+		    PortNumber		    1
+		    Name		    "not_used_1"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "const9"
+		  SID			  "1006"
+		  Position		  [70, 248, 105, 272]
+		  ShowName		  off
+		  Value			  "0"
+		  Port {
+		    PortNumber		    1
+		    Name		    "not_used_2"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "THV_out"
+		  SID			  "1007"
+		  Position		  [265, 293, 295, 307]
+		  IconDisplay		  "Port number"
+		  InitialOutput		  "0"
+		}
+		Line {
+		  Name			  "not_used_13"
+		  Labels		  [0, 0]
+		  SrcBlock		  "const20"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  20
+		}
+		Line {
+		  Name			  "not_used_12"
+		  Labels		  [0, 0]
+		  SrcBlock		  "const19"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  19
+		}
+		Line {
+		  Name			  "not_used_11"
+		  Labels		  [0, 0]
+		  SrcBlock		  "const18"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  18
+		}
+		Line {
+		  Name			  "not_used_10"
+		  Labels		  [0, 0]
+		  SrcBlock		  "const17"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  17
+		}
+		Line {
+		  Name			  "not_used_9"
+		  Labels		  [0, 0]
+		  SrcBlock		  "const16"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  16
+		}
+		Line {
+		  Name			  "not_used_8"
+		  Labels		  [0, 0]
+		  SrcBlock		  "const15"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  15
+		}
+		Line {
+		  Name			  "not_used_7"
+		  Labels		  [0, 0]
+		  SrcBlock		  "const14"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  14
+		}
+		Line {
+		  Name			  "not_used_6"
+		  Labels		  [0, 0]
+		  SrcBlock		  "const13"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  13
+		}
+		Line {
+		  Name			  "not_used_5"
+		  Labels		  [0, 0]
+		  SrcBlock		  "const12"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  12
+		}
+		Line {
+		  Name			  "not_used_4"
+		  Labels		  [0, 0]
+		  SrcBlock		  "const11"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  11
+		}
+		Line {
+		  Name			  "not_used_3"
+		  Labels		  [0, 0]
+		  SrcBlock		  "const10"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  10
+		}
+		Line {
+		  Name			  "not_used_2"
+		  Labels		  [0, 0]
+		  SrcBlock		  "const9"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  9
+		}
+		Line {
+		  Name			  "not_used_1"
+		  Labels		  [0, 0]
+		  SrcBlock		  "const8"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  8
+		}
+		Line {
+		  Name			  "Diameter"
+		  Labels		  [-1, 0]
+		  SrcBlock		  "const7"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  7
+		}
+		Line {
+		  Name			  "Fluid_Mix"
+		  Labels		  [-1, 0]
+		  SrcBlock		  "const6"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  6
+		}
+		Line {
+		  Name			  "Fluid_Type"
+		  Labels		  [-1, 0]
+		  SrcBlock		  "const5"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  5
+		}
+		Line {
+		  Name			  "Pressure"
+		  Labels		  [-1, 0]
+		  SrcBlock		  "const4"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  4
+		}
+		Line {
+		  Name			  "Massflow"
+		  Labels		  [-1, 0]
+		  SrcBlock		  "const3"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  3
+		}
+		Line {
+		  Name			  "Temperature"
+		  Labels		  [-1, 0]
+		  SrcBlock		  "const2"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  2
+		}
+		Line {
+		  Name			  "THV_ID"
+		  Labels		  [-1, 0]
+		  SrcBlock		  "const1"
+		  SrcPort		  1
+		  DstBlock		  "Bus\nCreator"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Bus\nCreator"
+		  SrcPort		  1
+		  DstBlock		  "THV_out"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      "finite volume\nstratified\nstorage model"
+	      SID		      "984"
+	      Ports		      [1, 1]
+	      Position		      [305, 92, 370, 118]
+	      FunctionName	      "store"
+	      Parameters	      "vol, d, stand, uloss, cond, tini, nodes, mpts"
+	      EnableBusSupport	      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "out"
+	      SID		      "985"
+	      Position		      [600, 215, 620, 235]
+	      IconDisplay	      "Port number"
+	      InitialOutput	      "0"
+	    }
+	    Line {
+	      SrcBlock		      "Demux1"
+	      SrcPort		      7
+	      Points		      [60, 0; 0, 265]
+	      DstBlock		      "Mux2"
+	      DstPort		      6
+	    }
+	    Line {
+	      Name		      "others"
+	      Labels		      [2, 1]
+	      SrcBlock		      "Demux5"
+	      SrcPort		      2
+	      Points		      [0, 30]
+	      DstBlock		      "Mux2"
+	      DstPort		      7
+	    }
+	    Line {
+	      SrcBlock		      "Demux1"
+	      SrcPort		      6
+	      Points		      [80, 0; 0, 130]
+	      DstBlock		      "Mux1"
+	      DstPort		      6
+	    }
+	    Line {
+	      SrcBlock		      "Demux1"
+	      SrcPort		      5
+	      Points		      [70, 0; 0, 255]
+	      DstBlock		      "Mux2"
+	      DstPort		      4
+	    }
+	    Line {
+	      Name		      "T"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux4"
+	      SrcPort		      2
+	      Points		      [60, 0; 0, -215]
+	      DstBlock		      "Mux"
+	      DstPort		      9
+	    }
+	    Line {
+	      SrcBlock		      "Mux2"
+	      SrcPort		      1
+	      DstBlock		      "Terminator"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "p"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux4"
+	      SrcPort		      4
+	      Points		      [70, 0; 0, -225]
+	      DstBlock		      "Mux"
+	      DstPort		      11
+	    }
+	    Line {
+	      Name		      "clq"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux4"
+	      SrcPort		      6
+	      Points		      [80, 0]
+	      DstBlock		      "Mux"
+	      DstPort		      13
+	    }
+	    Line {
+	      SrcBlock		      "Demux5"
+	      SrcPort		      1
+	      DstBlock		      "Demux4"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "ID"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux4"
+	      SrcPort		      1
+	      Points		      [0, 0; 55, 0]
+	      Branch {
+		Points			[0, -210]
+		DstBlock		"Mux"
+		DstPort			8
+	      }
+	      Branch {
+		DstBlock		"Mux2"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      Name		      "mdot"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux4"
+	      SrcPort		      3
+	      Points		      [0, 0; 65, 0]
+	      Branch {
+		Points			[0, -220]
+		DstBlock		"Mux"
+		DstPort			10
+	      }
+	      Branch {
+		DstBlock		"Mux2"
+		DstPort			3
+	      }
+	    }
+	    Line {
+	      Name		      "fluid, mix, d"
+	      Labels		      [2, 1]
+	      SrcBlock		      "Demux4"
+	      SrcPort		      5
+	      Points		      [0, 0; 75, 0]
+	      Branch {
+		Points			[0, -230]
+		DstBlock		"Mux"
+		DstPort			12
+	      }
+	      Branch {
+		DstBlock		"Mux2"
+		DstPort			5
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "constant_THV"
+	      SrcPort		      1
+	      DstBlock		      "Demux5"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "others"
+	      Labels		      [2, 1]
+	      SrcBlock		      "Demux7"
+	      SrcPort		      2
+	      Points		      [0, 30]
+	      DstBlock		      "Mux1"
+	      DstPort		      7
+	    }
+	    Line {
+	      Name		      "p"
+	      SrcBlock		      "Demux1"
+	      SrcPort		      3
+	      Points		      [0, 0; 100, 0]
+	      Branch {
+		DstBlock		"Mux3"
+		DstPort			3
+	      }
+	      Branch {
+		Points			[0, 245]
+		DstBlock		"Mux2"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      Name		      "p"
+	      SrcBlock		      "Demux1"
+	      SrcPort		      2
+	      DstBlock		      "Mux3"
+	      DstPort		      2
+	    }
+	    Line {
+	      Labels		      [2, 1]
+	      SrcBlock		      "Demux1"
+	      SrcPort		      1
+	      Points		      [0, 0; 110, 0]
+	      Branch {
+		DstBlock		"Mux3"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 120]
+		DstBlock		"Mux1"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Mux3"
+	      SrcPort		      1
+	      DstBlock		      "Terminator1"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "clq"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux6"
+	      SrcPort		      6
+	      Points		      [45, 0; 0, -150]
+	      DstBlock		      "Mux"
+	      DstPort		      7
+	    }
+	    Line {
+	      SrcBlock		      "Demux7"
+	      SrcPort		      1
+	      DstBlock		      "Demux6"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "in"
+	      SrcPort		      1
+	      DstBlock		      "Demux7"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Demux1"
+	      SrcPort		      4
+	      Points		      [90, 0; 0, 120]
+	      DstBlock		      "Mux1"
+	      DstPort		      4
+	    }
+	    Line {
+	      SrcBlock		      "Mux"
+	      SrcPort		      1
+	      DstBlock		      "finite volume\nstratified\nstorage model"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "const4"
+	      SrcPort		      1
+	      DstBlock		      "Mux"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Mux1"
+	      SrcPort		      1
+	      DstBlock		      "out"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "ID"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux6"
+	      SrcPort		      1
+	      Points		      [0, 0; 20, 0]
+	      Branch {
+		DstBlock		"Mux1"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, -125]
+		DstBlock		"Mux"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      Name		      "T"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux6"
+	      SrcPort		      2
+	      Points		      [25, 0; 0, -130]
+	      DstBlock		      "Mux"
+	      DstPort		      3
+	    }
+	    Line {
+	      Name		      "mdot"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux6"
+	      SrcPort		      3
+	      Points		      [0, 0; 30, 0]
+	      Branch {
+		Points			[0, -135]
+		DstBlock		"Mux"
+		DstPort			4
+	      }
+	      Branch {
+		DstBlock		"Mux1"
+		DstPort			3
+	      }
+	    }
+	    Line {
+	      Name		      "p"
+	      Labels		      [0, 0]
+	      SrcBlock		      "Demux6"
+	      SrcPort		      4
+	      Points		      [35, 0; 0, -140]
+	      DstBlock		      "Mux"
+	      DstPort		      5
+	    }
+	    Line {
+	      SrcBlock		      "finite volume\nstratified\nstorage model"
+	      SrcPort		      1
+	      DstBlock		      "Demux1"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "fluid, mix, d"
+	      SrcBlock		      "Demux6"
+	      SrcPort		      5
+	      Points		      [0, 0; 40, 0]
+	      Branch {
+		Points			[0, -145]
+		DstBlock		"Mux"
+		DstPort			6
+	      }
+	      Branch {
+		Labels			[1, 1]
+		DstBlock		"Mux1"
+		DstPort			5
+	      }
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Saturate
+	  Name			  "zeroavoiding"
+	  SID			  "663"
+	  Ports			  [1, 1]
+	  Position		  [560, 363, 590, 397]
+	  InputPortMap		  "u0"
+	  UpperLimit		  "inf"
+	  LowerLimit		  "1e-5"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "THV_flow_load"
+	  SID			  "665"
+	  Position		  [80, 58, 110, 72]
+	  BlockMirror		  on
+	  IconDisplay		  "Port number"
+	  InitialOutput		  "0"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "data"
+	  SID			  "872"
+	  Position		  [825, 588, 855, 602]
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  InitialOutput		  "0"
+	}
+	Line {
+	  Name			  "p"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Demux"
+	  SrcPort		  4
+	  Points		  [50, 0]
+	  Branch {
+	    DstBlock		    "Mux1"
+	    DstPort		    4
+	  }
+	  Branch {
+	    Points		    [0, 135]
+	    DstBlock		    "heat_capacity"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  Name			  "ID"
+	  Labels		  [0, 1]
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  5
+	  Points		  [40, 0]
+	  Branch {
+	    Points		    [0, 130]
+	    DstBlock		    "heat_capacity"
+	    DstPort		    2
+	  }
+	  Branch {
+	    DstBlock		    "Mux1"
+	    DstPort		    5
+	  }
+	}
+	Line {
+	  SrcBlock		  "Demux"
+	  SrcPort		  6
+	  Points		  [25, 0]
+	  Branch {
+	    Points		    [0, 125]
+	    DstBlock		    "heat_capacity"
+	    DstPort		    3
+	  }
+	  Branch {
+	    DstBlock		    "Mux1"
+	    DstPort		    6
+	  }
+	}
+	Line {
+	  Name			  "mdot"
+	  Labels		  [1, 0]
+	  SrcBlock		  "Demux"
+	  SrcPort		  3
+	  Points		  [115, 0]
+	  Branch {
+	    DstBlock		    "Mux1"
+	    DstPort		    3
+	  }
+	  Branch {
+	    Points		    [0, 130]
+	    DstBlock		    "zeroavoiding"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Sum"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Demux3"
+	  SrcPort		  1
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux3"
+	  SrcPort		  2
+	  Points		  [5, 0; 0, 55]
+	  DstBlock		  "Mux1"
+	  DstPort		  7
+	}
+	Line {
+	  SrcBlock		  "Mux1"
+	  SrcPort		  1
+	  DstBlock		  "thermal inertia"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  DstBlock		  "Sum"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "T"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  Points		  [0, -5; 15, 0]
+	  Branch {
+	    Points		    [0, 225]
+	    DstBlock		    "heat_capacity"
+	    DstPort		    4
+	  }
+	  Branch {
+	    DstBlock		    "Sum"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "demand control"
+	  SrcPort		  1
+	  Points		  [45, 0]
+	  DstBlock		  "control unit"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "T_return_load"
+	  SrcPort		  1
+	  Points		  [65, 0]
+	  DstBlock		  "control unit"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "heat_capacity"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  Branch {
+	    DstBlock		    "Product"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 50; -240, 0; 0, -205; -75, 0]
+	    DstBlock		    "control unit"
+	    DstPort		    5
+	  }
+	}
+	Line {
+	  SrcBlock		  "measure_T"
+	  SrcPort		  2
+	  Points		  [0, 30; -635, 0]
+	  DstBlock		  "control unit"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "measure_mdot"
+	  SrcPort		  1
+	  Points		  [-155, 0]
+	  DstBlock		  "control unit"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "zeroavoiding"
+	  SrcPort		  1
+	  DstBlock		  "Product"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "thermal inertia"
+	  SrcPort		  1
+	  DstBlock		  "pump_const"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "pump_const"
+	  SrcPort		  1
+	  Points		  [0, -45]
+	  DstBlock		  "measure_T"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "control unit"
+	  SrcPort		  2
+	  Points		  [0, 10; 290, 0]
+	  Branch {
+	    Points		    [485, 0]
+	    DstBlock		    "pump_const"
+	    DstPort		    2
+	  }
+	  Branch {
+	    Points		    [0, 70]
+	    DstBlock		    "energy and efficiency"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "THV_return_load"
+	  SrcPort		  1
+	  Points		  [680, 0; 0, 35]
+	  DstBlock		  "return temperature raising facility"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "control unit"
+	  SrcPort		  1
+	  Points		  [0, 25]
+	  Branch {
+	    Points		    [230, 0]
+	    Branch {
+	      Points		      [155, 0]
+	      Branch {
+		Points			[0, 30]
+		DstBlock		"energy and efficiency"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[35, 0]
+		Branch {
+		  DstBlock		  "Product"
+		  DstPort		  3
+		}
+		Branch {
+		  Points		  [475, 0; 0, -430]
+		  DstBlock		  "return temperature raising facility"
+		  DstPort		  2
+		}
+	      }
+	    }
+	    Branch {
+	      Points		      [0, 65]
+	      DstBlock		      "Product1"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    Points		    [0, 90]
+	    Branch {
+	      DstBlock		      "scale_function"
+	      DstPort		      1
+	    }
+	    Branch {
+	      Points		      [0, 45]
+	      DstBlock		      "Product2"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  SrcBlock		  "scale_function"
+	  SrcPort		  1
+	  DstBlock		  "f_P_gas_lookup-table"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Product2"
+	  SrcPort		  1
+	  Points		  [35, 0; 0, -45]
+	  DstBlock		  "energy and efficiency"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "f_P_gas_lookup-table"
+	  SrcPort		  1
+	  DstBlock		  "Product1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Product1"
+	  SrcPort		  1
+	  DstBlock		  "energy and efficiency"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "return temperature raising facility"
+	  SrcPort		  1
+	  DstBlock		  "THV_flow_load"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "return temperature raising facility"
+	  SrcPort		  2
+	  DstBlock		  "measure_mdot"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "measure_T"
+	  SrcPort		  1
+	  DstBlock		  "return temperature raising facility"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "measure_mdot"
+	  SrcPort		  2
+	  Points		  [-15, 0]
+	  DstBlock		  "Demux3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Constant"
+	  SrcPort		  1
+	  DstBlock		  "Product2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "energy and efficiency"
+	  SrcPort		  1
+	  DstBlock		  "Mux2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "energy and efficiency"
+	  SrcPort		  2
+	  DstBlock		  "Mux2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "energy and efficiency"
+	  SrcPort		  3
+	  DstBlock		  "Mux2"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "energy and efficiency"
+	  SrcPort		  4
+	  DstBlock		  "Mux2"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "energy and efficiency"
+	  SrcPort		  5
+	  DstBlock		  "Mux2"
+	  DstPort		  5
+	}
+	Line {
+	  SrcBlock		  "energy and efficiency"
+	  SrcPort		  6
+	  DstBlock		  "Mux2"
+	  DstPort		  6
+	}
+	Line {
+	  SrcBlock		  "Mux2"
+	  SrcPort		  1
+	  DstBlock		  "data"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Ground
+      Name		      "Ground"
+      SID		      "76"
+      Position		      [130, 25, 150, 45]
+      IOType		      "siggen"
+    }
+    Annotation {
+      Position		      [619, 249]
+    }
+  }
+}
+# Finite State Machines
+#
+#    Stateflow Version 7.5 (R2010a) dated Jul 24 2010, 07:30:36
+#
+#
+
+
+Stateflow {
+  machine {
+    id			    1
+    name		    "b_microCHP_modulating"
+    created		    "10-Jan-2011 10:39:35"
+    isLibrary		    0
+    firstTarget		    30
+    sfVersion		    75014000.000003
+  }
+  chart {
+    id			    2
+    name		    "CHP with modulating power output/control unit/heat capacity modulation"
+    windowPosition	    [223.5 111.75 526.5 432]
+    viewLimits		    [549.96 1189.452 843 1367.304]
+    zoomFactor		    1.324
+    screen		    [1 1 1280 800 1.333333333333333]
+    treeNode		    [0 6 0 0]
+    firstTransition	    13
+    viewObj		    2
+    machine		    1
+    subviewS {
+      x1		      549.96
+      y1		      843
+      zoomFactor	      1.324
+    }
+    ssIdHighWaterMark	    416
+    decomposition	    CLUSTER_CHART
+    firstData		    17
+    chartFileNumber	    1
+    supportVariableSizing   0
+  }
+  state {
+    id			    3
+    labelString		    "control_phase/\nentry:\ntimer=0;\nP_th=P_th_setpoint;"
+    position		    [976.7487 1160.5559 172.542 74.693]
+    fontSize		    12
+    chart		    2
+    treeNode		    [6 0 4 8]
+    subviewer		    2
+    ssIdNumber		    354
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    4
+    labelString		    "ramp_up_phase/\nentry: P_th=P_th_max;"
+    position		    [974.8678 1069.7773 170.6047 38.4907]
+    fontSize		    12
+    chart		    2
+    treeNode		    [6 0 7 3]
+    subviewer		    2
+    ssIdNumber		    375
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    5
+    labelString		    "OFF/\nentry:control_CHP=0;\n        timer=0;"
+    position		    [650.165 1059.0558 196.0482 54.0135]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 0 6 0]
+    subviewer		    2
+    ssIdNumber		    339
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    6
+    labelString		    "P_th_modulation"
+    position		    [899.5368 856.109 293.8875 498.1558]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 7 0 5]
+    firstTransition	    10
+    subviewer		    2
+    ssIdNumber		    345
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    7
+    labelString		    "start_up_phase/\nentry:control_CHP=1;\ntimer=1;\nP_th=P_th_start;"
+    position		    [970.4763 921.6861 170.2377 69.8577]
+    fontSize		    12
+    chart		    2
+    treeNode		    [6 0 0 4]
+    superState		    GROUPED
+    subviewer		    2
+    ssIdNumber		    371
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  state {
+    id			    8
+    labelString		    "readjustment_intervall/\nentry:\ntimer=1;"
+    position		    [972.7191 1278.6215 171.799 56.344]
+    fontSize		    12
+    chart		    2
+    treeNode		    [6 0 3 0]
+    subviewer		    2
+    ssIdNumber		    356
+    type		    OR_STATE
+    decomposition	    CLUSTER_STATE
+  }
+  transition {
+    id			    9
+    labelPosition	    [1023.27 1256.852 8.933 16.848]
+    fontSize		    12
+    src {
+      id		      3
+      intersection	      [3 0 1 0.7231 1024.5256 1235.2489 0 34.0966]
+    }
+    dst {
+      id		      8
+      intersection	      [1 -0 -1 0.3016 1024.5256 1278.6215 0 -34.0966]
+    }
+    midPoint		    [1024.5256 1253.6174]
+    chart		    2
+    linkNode		    [6 16 12]
+    dataLimits		    [1022.126 1026.926 1235.249 1278.622]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    381
+  }
+  transition {
+    id			    10
+    labelPosition	    [1048.506 893.005 8.933 16.848]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 1044.1101 872.4525 0 0]
+    }
+    dst {
+      id		      7
+      intersection	      [1 0 -1 0.4325 1044.1041 921.6861 0 0]
+    }
+    midPoint		    [1044.1101 893.8789]
+    chart		    2
+    linkNode		    [6 0 14]
+    dataLimits		    [1041.704 1046.504 872.452 921.686]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    362
+  }
+  transition {
+    id			    11
+    labelPosition	    [627.139 1070.013 8.933 16.848]
+    fontSize		    12
+    src {
+      intersection	      [0 1 0 0 611.2231 1087.159 0 0]
+    }
+    dst {
+      id		      5
+      intersection	      [4 -1 0 0.4797 650.165 1087.159 0 0]
+    }
+    midPoint		    [627.2799 1087.159]
+    chart		    2
+    linkNode		    [2 13 15]
+    dataLimits		    [611.223 650.165 1084.759 1089.559]
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    359
+  }
+  transition {
+    id			    12
+    labelString		    "[t_timer>t_readjustment]"
+    labelPosition	    [1051.153 1249.333 134.983 16.848]
+    fontSize		    12
+    src {
+      id		      8
+      intersection	      [1 -0 -1 0.419 1044.6957 1278.6215 0 -13.9239]
+    }
+    dst {
+      id		      3
+      intersection	      [3 0 1 0.6062 1044.6957 1235.2489 0 13.9239]
+    }
+    midPoint		    [1044.6957 1260.253]
+    chart		    2
+    linkNode		    [6 9 0]
+    dataLimits		    [1042.296 1047.096 1235.249 1278.622]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    382
+  }
+  transition {
+    id			    13
+    labelString		    "[ T_flow<T_flow_max & demand_control==1]"
+    labelPosition	    [618.463 960.749 243.167 16.848]
+    fontSize		    12
+    src {
+      id		      5
+      intersection	      [1 0 -1 0.6312 773.9106 1059.0558 0 -99.3093]
+    }
+    dst {
+      id		      6
+      intersection	      [4 -1 0 0.7464 899.5368 982.4413 0 103.6213]
+    }
+    midPoint		    [817.3949 1000.6857]
+    chart		    2
+    linkNode		    [2 0 11]
+    dataLimits		    [773.911 899.537 980.041 1059.056]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    slide {
+      mode		      MIRROR_SLIDE
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    369
+  }
+  transition {
+    id			    14
+    labelString		    "[t_timer>t_start]"
+    labelPosition	    [1072.55 1025.454 86.349 16.848]
+    fontSize		    12
+    src {
+      id		      7
+      intersection	      [3 0 1 0.4771 1059.4877 991.5438 0 0.6805]
+    }
+    dst {
+      id		      4
+      intersection	      [1 -0 -1 0.496 1059.4877 1069.7773 0 -0.6805]
+    }
+    midPoint		    [1059.4877 1028.1006]
+    chart		    2
+    linkNode		    [6 10 16]
+    dataLimits		    [1057.088 1061.888 991.544 1069.777]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    376
+  }
+  transition {
+    id			    15
+    labelString		    "[T_flow>T_flow_max | demand_control==0]"
+    labelPosition	    [629.951 1221.176 235.227 16.848]
+    fontSize		    12
+    src {
+      id		      6
+      intersection	      [4 -1 0 0.2771 899.5368 1216.2258 0 -130.1632]
+    }
+    dst {
+      id		      5
+      intersection	      [3 0 1 0.3768 772.3422 1113.0693 0 100.8777]
+    }
+    midPoint		    [812.2509 1186.8698]
+    chart		    2
+    linkNode		    [2 11 0]
+    dataLimits		    [769.942 899.537 1113.069 1216.226]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    slide {
+      mode		      MIRROR_SLIDE
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    348
+  }
+  transition {
+    id			    16
+    labelString		    "[T_flow>60]"
+    labelPosition	    [1063.904 1125.678 64.514 16.848]
+    fontSize		    12
+    src {
+      id		      4
+      intersection	      [3 -0 1 0.5419 1053.0218 1108.268 0 7.1554]
+    }
+    dst {
+      id		      3
+      intersection	      [1 0 -1 0.4421 1053.0218 1160.5559 0 -7.1554]
+    }
+    midPoint		    [1053.0218 1131.2879]
+    chart		    2
+    linkNode		    [6 14 9]
+    dataLimits		    [1050.622 1055.422 1108.268 1160.556]
+    stampAngle		    NaN
+    subviewer		    2
+    drawStyle		    SMART
+    executionOrder	    1
+    ssIdNumber		    377
+  }
+  data {
+    id			    17
+    ssIdNumber		    409
+    name		    "demand_control"
+    linkNode		    [2 0 18]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_DOUBLE_TYPE
+      }
+    }
+    dataType		    "double"
+  }
+  data {
+    id			    18
+    ssIdNumber		    68
+    name		    "t_readjustment"
+    linkNode		    [2 17 19]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_DOUBLE_TYPE
+      }
+    }
+    dataType		    "double"
+  }
+  data {
+    id			    19
+    ssIdNumber		    69
+    name		    "P_th_start"
+    linkNode		    [2 18 20]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_DOUBLE_TYPE
+      }
+    }
+    dataType		    "double"
+  }
+  data {
+    id			    20
+    ssIdNumber		    70
+    name		    "P_th_max"
+    linkNode		    [2 19 21]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_DOUBLE_TYPE
+      }
+    }
+    dataType		    "double"
+  }
+  data {
+    id			    21
+    ssIdNumber		    71
+    name		    "t_start"
+    linkNode		    [2 20 22]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_DOUBLE_TYPE
+      }
+    }
+    dataType		    "double"
+  }
+  data {
+    id			    22
+    ssIdNumber		    53
+    name		    "T_flow_max"
+    linkNode		    [2 21 23]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_DOUBLE_TYPE
+      }
+    }
+    dataType		    "double"
+  }
+  data {
+    id			    23
+    ssIdNumber		    38
+    name		    "control_CHP"
+    linkNode		    [2 22 24]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_DOUBLE_TYPE
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "double"
+  }
+  data {
+    id			    24
+    ssIdNumber		    40
+    name		    "T_flow"
+    linkNode		    [2 23 25]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_DOUBLE_TYPE
+      }
+    }
+    dataType		    "double"
+  }
+  data {
+    id			    25
+    ssIdNumber		    42
+    name		    "P_th"
+    linkNode		    [2 24 26]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      initialValue	      "2050"
+      type {
+	primitive		SF_DOUBLE_TYPE
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "double"
+  }
+  data {
+    id			    26
+    ssIdNumber		    43
+    name		    "timer"
+    linkNode		    [2 25 27]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_DOUBLE_TYPE
+      }
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "double"
+  }
+  data {
+    id			    27
+    ssIdNumber		    46
+    name		    "P_th_setpoint"
+    linkNode		    [2 26 28]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_DOUBLE_TYPE
+      }
+    }
+    dataType		    "double"
+  }
+  data {
+    id			    28
+    ssIdNumber		    48
+    name		    "t_timer"
+    linkNode		    [2 27 0]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      type {
+	primitive		SF_DOUBLE_TYPE
+      }
+    }
+    dataType		    "double"
+  }
+  instance {
+    id			    29
+    name		    "CHP with modulating power output/control unit/heat capacity modulation"
+    machine		    1
+    chart		    2
+  }
+  target {
+    id			    30
+    name		    "sfun"
+    codeFlags		    ""
+    machine		    1
+    linkNode		    [1 0 0]
+  }
+}

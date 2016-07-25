@@ -1,0 +1,371 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="de-at" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>specific volume</title>
+<style type="text/css">
+ div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+p
+	{margin-right:0cm;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ ul
+	{margin-bottom:0cm;}
+ li.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ a:link
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;
+}
+tt
+	{font-family:"Courier New";
+	}
+ table.MsoNormalTable
+	{line-height:120%;
+	font-size:10.0pt;
+	font-family:"Calibri","sans-serif";
+	}
+.auto-style1 {
+	margin-left: 120px;
+}
+</style>
+</head>
+
+<body>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+"Times New Roman"'>
+
+<hr size=10 width="100%" noshade style='color:#A0A0A0' align=center>
+
+</span></span></span></div>
+
+<p><!--[if gte vml 1]><v:shape id="Bild_x0020_219" o:spid="_x0000_s1426"
+ type="#_x0000_t75" style='position:absolute;left:0;text-align:left;
+ margin-left:67.25pt;margin-top:0;width:107.25pt;height:63.75pt;z-index:217;
+ visibility:visible;mso-wrap-style:square;mso-wrap-distance-left:0;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:0;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:right;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line'
+ o:allowoverlap="f">
+ <v:imagedata src="Figures/specific_volume.jpg" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <w:wrap type="square" anchory="line" xmlns:w="urn:schemas-microsoft-com:office:word"/>
+</v:shape><![endif]--><![if !vml]><img width=143 height=85
+src="Figures/specific_volume.jpg" align=right v:shapes="Bild_x0020_219"><![endif]><span class=GramE><span
+style='mso-bookmark:Specific_volume'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:18.0pt;
+line-height:120%'>specific</span></b></span></span></span></span><span
+style='mso-bookmark:Specific_volume'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:18.0pt;
+line-height:120%'> volume</span></b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> <br>
+<b>Path: CARNOT/materials</b> <br clear=all style='mso-special-character:line-break'>
+<o:p></o:p></span></span></span></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:Specific_volume'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;mso-fareast-font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></span></span></span></div>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Purpose</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+Calculates the specific volume of the specified material. </span><span
+lang=EN-US style='font-size:12.0pt;line-height:120%'><o:p></o:p></span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Description</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+Calculates the specific_volume [m<sup>3</sup>/kg] according to the </span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Inputs:</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> </span></span></span></p>
+
+<ul type=disc class="auto-style1">
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l85 level1 lfo187;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>temperature in [°C] </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l85 level1 lfo187;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>pressure in [Pa] </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l85 level1 lfo187;tab-stops:list 36.0pt'><a
+     href="carnot_manual.htm#fluid_id"><span style='mso-bookmark:schwamberger'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>fluid types</span></span></span></a><span
+     style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'> see above definition </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l85 level1 lfo187;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>fluid-mix [Unit dependents on fluid_type, see below] </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></span></li>
+</ul>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>The block calls the
+function &quot;specific_volume&quot; in the CARNOT </span></span></span><a
+href="carnot_manual.htm#carlib"><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:
+literature'><span lang=EN-US style='font-size:13.5pt;line-height:120%'>Carlib
+Library</span></span></span></a><span style='mso-bookmark:
+schwamberger'><span style='mso-bookmark:literature'><span lang=EN-US
+style='font-size:13.5pt;line-height:120%'> where the calculation is carried
+out. The material properties functions can also be called directly from the
+command window by typing </span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><tt><span
+lang=EN-US style='font-size:10.0pt;line-height:120%'>specific_<span
+class=GramE>volume(</span>temperature,pressure, fluidtype,fluidmix) </span></tt></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Instead of the italic
+variables the actual value of the respective property has to be entered. This
+is possible for the Carlib functions density, thermal_conductivity,
+heat_capacity, kinematic_viscosity, prandtl, vapourpressure,
+saturationtemperature, enthalpy, entropy, evaporation_enthalpy and
+specific_volume. <br>
+For more information about the function type </span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+class=GramE><tt><span lang=EN-US style='font-size:10.0pt;line-height:120%'>help</span></tt></span><tt><span
+lang=EN-US style='font-size:10.0pt;line-height:120%'> specific_volume</span></tt></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+class=GramE><span lang=EN-US style='font-size:13.5pt;line-height:120%'>to</span></span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> the workspace as for any
+other MATLAB function. <br>
+For the vaporous phase the valid temperature range is up to 800 °C and the
+valid pressure range is up to 49.55 MPa.<br>
+<br>
+For the liquid phase the valid temperature range is between 10 °C and 200 °C
+and the pressure is limited up to 2 MPa.</span></span></span></p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 style='mso-cellspacing:1.5pt;
+ mso-yfti-tbllook:1184'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><b><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>fluid_ID </span><span
+  lang=EN-US><o:p></o:p></span></b></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><b><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>fluid </span><span
+  lang=EN-US><o:p></o:p></span></b></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><b><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>phase </span><span
+  lang=EN-US><o:p></o:p></span></b></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><b><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>temperature </span><span
+  lang=EN-US><o:p></o:p></span></b></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><b><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>pressure </span><span
+  lang=EN-US><o:p></o:p></span></b></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>&nbsp;</td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>1 </span></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>water </span></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>vaporous </span></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>50°C &lt; T &lt; 800°C </span></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>0.1 bar &lt; p &lt; 490
+  bar </span></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>&nbsp;</td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td style='padding:.75pt .75pt .75pt .75pt; height: 25px;'></td>
+  <td style='padding:.75pt .75pt .75pt .75pt; height: 25px;'></td>
+  <td style='padding:.75pt .75pt .75pt .75pt; height: 25px;'>
+  <p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>liquid </span></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt; height: 25px;'>
+  <p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>0°C &lt; T &lt; 800°C </span></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt; height: 25px;'>
+  <p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>1 bar &lt; p &lt; 200
+  bar </span></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt; height: 25px;'></td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>2 </span></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>air </span></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>gaseous&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>0°C &lt; T &lt; 1000°C </span></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>1 bar &lt; p &lt; 100
+  bar </span></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>&nbsp;</td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>3 </span></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>cotton oil </span></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>liquid </span></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>T &lt; 250°C </span></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>p = 1 bar </span></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>&nbsp;</td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>4 </span></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>silicone oil </span></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>liquid </span></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>T &lt; 250°C </span></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>p = 1 bar </span></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>&nbsp;</td>
+ </tr>
+ <tr style='mso-yfti-irow:6;mso-yfti-lastrow:yes'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>5 </span></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>water-glykol&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>liquid </span></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>0 °C &lt; T &lt; 100 °C&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+  lang=EN-US style='font-size:13.5pt;line-height:120%'>p = 1 bar </span></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>&nbsp;</td>
+ </tr>
+</table>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Characteristics</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+Direct Feedthrough&nbsp;&nbsp;&nbsp;Yes <br>
+Sample
+time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size:13.5pt;line-height:120%'>&nbsp;
+</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> Inherited
+from driving block <br>
+Vectorized&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size:13.5pt;line-height:120%'>&nbsp;&nbsp;
+</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> No
+</span></span></span></p>
+
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+Hanafusa, H., T. Tsuchida, K. Kawai, H. Sato, M. Uematsu, and K. Watanabe, Proceedings of the 10th International Conference on the Properties of Steam, Moscow 1984, edited by V. V. Sytchev, and A. A. Alexandrov (MIR, Moscow, 1984), p.180.
+
+8 of 8 psigma data were selected to develop the IAPWS-95 Formulation.
+Temperatures were converted to the ITS-90 scale.
+ 
+ T / K           psigma / MPa  Author                             No.
+  643.1740        21.050200000 HANAFUSA et al. (1984)             001
+  646.1066        21.799700000 HANAFUSA et al. (1984)             002
+  646.6075        21.930300000 HANAFUSA et al. (1984)             003
+  646.6075        21.930900000 HANAFUSA et al. (1984)             004
+  646.8575        21.997400000 HANAFUSA et al. (1984)             005
+  645.6067        21.671500000 HANAFUSA et al. (1984)             006
+  645.6067        21.670500000 HANAFUSA et al. (1984)             007
+  646.3566        21.864500000 HANAFUSA et al. (1984)             008

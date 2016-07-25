@@ -1,0 +1,25 @@
+Masui, R., K. Fujii, and M. Takenaka, in Physical Chemistry of Aqueous Systems: Meeting the Needs of Industry, Proceedings of the 12th International Conference on the Properties of Water and Steam, edited by H. J. White, Jr. et al. (Begell House, New York, Wallingford, 1995), p. 78.
+
+None of 19 p-rho-T data were selected to develop the IAPWS-95 Formulation.
+Temperatures are in ITS-90 scale.
+ 
+ T / K          rho /(kg/m^3)  p / MPa        Author                             No.
+  273.150000000  999.843652969    0.101325000 MASUI et al. (1995)                001
+  289.150000000  998.946800000    0.101325000 MASUI et al. (1995)                002
+  278.150000000  999.967431660    0.101325000 MASUI et al. (1995)                003
+  283.150000000  999.703347832    0.101325000 MASUI et al. (1995)                004
+  288.150000000  999.103382852    0.101325000 MASUI et al. (1995)                005
+  293.150000000  998.207812172    0.101325000 MASUI et al. (1995)                006
+  298.150000000  997.048317040    0.101325000 MASUI et al. (1995)                007
+  303.150000000  995.650254989    0.101325000 MASUI et al. (1995)                008
+  308.150000000  994.034280640    0.101325000 MASUI et al. (1995)                009
+  313.150000000  992.217481931    0.101325000 MASUI et al. (1995)                010
+  318.150000000  990.214170496    0.101325000 MASUI et al. (1995)                011
+  323.150000000  988.036438499    0.101325000 MASUI et al. (1995)                012
+  328.150000000  985.694567830    0.101325000 MASUI et al. (1995)                013
+  333.150000000  983.197351168    0.101325000 MASUI et al. (1995)                014
+  338.150000000  980.552358000    0.101325000 MASUI et al. (1995)                015
+  343.150000000  977.766152291    0.101325000 MASUI et al. (1995)                016
+  348.150000000  974.844442081    0.101325000 MASUI et al. (1995)                017
+  353.150000000  971.792114895    0.101325000 MASUI et al. (1995)                018
+  358.150000000  968.613086445    0.101325000 MASUI et al. (1995)                019

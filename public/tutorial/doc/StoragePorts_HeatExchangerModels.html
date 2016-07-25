@@ -1,0 +1,1071 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="de-at" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>heat exchanger EN12977 - storage</title>
+<style type="text/css">
+ div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+p
+	{margin-right:0cm;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ ul
+	{margin-bottom:0cm;}
+ li.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ .auto-style2 {
+	font-family: Calibri;
+	text-align: left;
+}
+.auto-style3 {
+	font-size: medium;
+}
+.auto-style7 {
+	font-size: large;
+}
+.auto-style8 {
+	font-weight: bold;
+	font-size: large;
+}
+.auto-style9 {
+	font-weight: bold;
+}
+.auto-style10 {
+	font-size: 13.5pt;
+}
+.auto-style11 {
+	margin-left: 0px;
+}
+.auto-style14 {
+	text-align: left;
+	margin: 0 2px;
+}
+.auto-style15 {
+	text-align: left;
+	font-size: medium;
+	margin: 0 2px;
+}
+.auto-style16 {
+	font-size: medium;
+	font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;mso-fareast-font-family:"Times New Roman"'>
+
+<hr size=10 width="100%" noshade style='color:#A0A0A0' align=center>
+
+<h1 class="auto-style2" style="width: 852px; height: 38px">Heat Exchanger Models<span lang="de-at">
+</span>for Storage_Type_N</h1>
+
+</span></span></div>
+
+<p class="auto-style3"><span class="auto-style8">
+<table style="width: 92%">
+	<tr>
+		<td style="width: 235px"><span class="auto-style8">HX_data_fit&nbsp;&nbsp;
+		</span></td>
+		<td><span class="auto-style8">heat exchanger model for linear data fit</span></td>
+	</tr>
+	<tr>
+		<td style="width: 235px"><span class="auto-style8">
+		HX_data_fit_stratified&nbsp;&nbsp; </span></td>
+		<td><span class="auto-style8">as above, but for stratified charging</span></td>
+	</tr>
+	<tr>
+		<td style="width: 235px"><span class="auto-style8">HX_EN12977&nbsp;&nbsp;
+		</span></td>
+		<td><span class="auto-style8">heat exchanger model for data fit 
+		according to TRNSYS Type 340 model</span><span
+style='mso-bookmark:heat_exchanger_EN12977'><span style='mso-bookmark:literature'><span
+lang=EN-US style='line-height:120%' class="auto-style9"></span></span></span></td>
+	</tr>
+	<tr>
+		<td style="width: 235px">
+		<span
+style='mso-bookmark:heat_exchanger_EN12977'>
+		<span style='mso-bookmark:literature'>
+		<span
+lang=EN-US style='line-height:120%' class="auto-style9"> </span>
+		<span
+lang=EN-US style='line-height:120%' class="auto-style8"> HX_EN12977_stratified</span><span style='line-height:120%' class="auto-style8"> </span>
+		<span class="auto-style7">&nbsp; </span></span></span></td>
+		<td><span
+style='mso-bookmark:heat_exchanger_EN12977'><b>
+		<span
+lang=EN-US style='line-height:120%' class="auto-style7"> 
+		<span lang="de-at" style="mso-bookmark: literature">as above, but for 
+		stratified charging</span></span></span></b></td>
+	</tr>
+	<tr>
+		<td style="width: 235px">HX_tube</td>
+		<td><span class="auto-style8">
+		<span
+style='mso-bookmark:heat_exchanger_EN12977'>
+		<span style='mso-bookmark:literature'><b><span class="auto-style3">
+		<span class="auto-style7">theoretical model of a smooth tube heat 
+		exchanger</span><span style='line-height:120%' class="auto-style7">&nbsp; </span>
+		</span></b></span></span></span></td>
+	</tr>
+	<tr>
+		<td style="width: 235px">HX_tube_stratified</td>
+		<td><span class="auto-style8">
+		<span
+style='mso-bookmark:heat_exchanger_EN12977'>
+		<span style='mso-bookmark:literature'>
+		<span
+lang=EN-US style='line-height:120%' class="auto-style7"> <b><span lang="de-at">
+		as above, but for stratified charging</span></b></span></span></span></span></td>
+	</tr>
+	<tr>
+		<td style="width: 235px">
+		<span
+style='mso-bookmark:heat_exchanger_EN12977'>
+		<span style='mso-bookmark:literature'><b>
+		<span
+lang=EN-US style='line-height:120%' class="auto-style7"> </span>
+		<span
+lang=EN-US style='line-height:120%'> <span class="auto-style7">HX_finned_tube</span></span><span class="auto-style3"><span class="auto-style7">&nbsp;&nbsp;
+		</b></span></span></span></span></td>
+		<td><span
+style='mso-bookmark:heat_exchanger_EN12977'>
+		<span style='mso-bookmark:literature'><b><span class="auto-style3">
+		<span class="auto-style7">theoretical model of a finned tube heat 
+		exchanger</span><span style='line-height:120%' class="auto-style7">&nbsp; </span>
+		</span><span
+lang=EN-US style='line-height:120%'> </b></span></span></span></td>
+	</tr>
+	<tr>
+		<td style="width: 235px">
+		<span
+style='mso-bookmark:heat_exchanger_EN12977'>
+		<span style='mso-bookmark:literature'><b>
+		<span
+lang=EN-US style='line-height:120%'> </span>
+		<span
+lang=EN-US style='line-height:120%' class="auto-style7"> HX_finned_tube<span lang="de-at">_stratified</span>&nbsp;&nbsp;
+		</b></span></span></span></td>
+		<td><span class="auto-style8">
+		<span
+style='mso-bookmark:heat_exchanger_EN12977'>
+		<span style='mso-bookmark:literature'>
+		<span
+lang=EN-US style='line-height:120%' class="auto-style7"> <b><span lang="de-at">
+		as above, but for stratified charging</span></b></span></span></span></span></td>
+	</tr>
+</table>
+</span></p>
+<p class="auto-style3">&nbsp;<span
+style='mso-bookmark:heat_exchanger_EN12977'><span style='mso-bookmark:literature'><b><span
+lang=EN-US style='line-height:120%' class="auto-style3"><span
+lang=EN-US style='line-height:120%' class="auto-style7"><br />
+<img src="Figures/imgStoragePorts.gif" /><br />
+Path: CARNOT\public\library_simulink\Storage\Thermal\Storage_Ports</span></span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> </span></span></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:heat_exchanger_EN12977'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></span></span></div>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Purpose</span></b><span lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+</span><span style='line-height:120%' class="auto-style3"> H</span><span lang=EN-US style='line-height:120%' class="auto-style3">eat exchanger </span>
+<span style='line-height:120%' class="auto-style3"> models </span>
+<span class="auto-style3">for the thermal storage model "Storage_Tnode" used in 
+the Storage_Type_N blocks. </span></span></p>
+
+<p style="width: 849px"><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Description</span></b><span lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+</span><span class="auto-style10">
+<span style='line-height:120%' class="auto-style3"> 
+<span lang=EN-US style='line-height:120%' class="auto-style3"> The incoming TH</span>B<span lang=EN-US style='line-height:120%' class="auto-style3"> </span>
+is transformed to a vector giving the heating power to each node of the storage.<span lang=EN-US style='font-size:13.5pt;line-height:120%'> </span>
+The</span><span lang=EN-US style='line-height:120%' class="auto-style3"> </span>
+<span style='line-height:120%' class="auto-style3"> heat exchanger models use 
+the basic block</span><span lang=EN-US style='line-height:120%' class="auto-style3"> </span>
+<span style='line-height:120%' class="auto-style3"> "</span><span lang=EN-US style='line-height:120%' class="auto-style3">sfun_storage_heatexchanger</span><span style='line-height:120%' class="auto-style3">" </span>
+</span><span style='line-height:120%' class="auto-style3"> in 
+CARNOT\Basic\Thermal_Models. In this block the s-function 
+"storage_heatexchanger" solves the different equations for the heat transfer. </span>
+<br />
+</span></p>
+<p class="auto-style7" style="width: 847px">
+<span style="mso-bookmark:OLE_LINK1"><b style="mso-bidi-font-weight:
+normal"><span lang="EN-US">Inputs and outputs<o:p></o:p></span></b></span></p>
+<p class="auto-style7" style="width: 845px">
+<span lang="EN-US" style="mso-bookmark: OLE_LINK1">S<span class="auto-style3">tructure 
+the input vector<br />
+</span></span>
+<table class="auto-style11" style="width: 88%">
+	<tr>
+		<td>
+		<p class="auto-style15">
+		<span lang="EN-US" style="mso-bookmark: OLE_LINK1">Port</span><span style="mso-bookmark: OLE_LINK1">&nbsp;
+		</span></p>
+		</td>
+		<td>
+		<p class="auto-style15"><span style="mso-bookmark: OLE_LINK1">&nbsp;
+		</span><span lang="EN-US" style="mso-bookmark: OLE_LINK1">index</span><span style="mso-bookmark: OLE_LINK1">&nbsp;
+		</span></p>
+		</td>
+		<td style="width: 328px">
+		<p class="auto-style15"><span style="mso-bookmark: OLE_LINK1">&nbsp;</span><span lang="EN-US" style="mso-bookmark: OLE_LINK1">use<span style="mso-tab-count:1">
+		</span></span><span style="mso-tab-count:1">
+		<span style="mso-bookmark: OLE_LINK1">&nbsp;</span></span></p>
+		</td>
+		<td style="width: 240px">
+		<p class="auto-style15">
+		<span lang="EN-US" style="mso-bookmark: OLE_LINK1">unit</span></p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<p class="auto-style15">
+		<span lang="EN-US" style="mso-bookmark: OLE_LINK1">1</span><span style="mso-bookmark: OLE_LINK1">
+		</span></p>
+		</td>
+		<td>
+		<p class="auto-style15">
+		<span lang="EN-US" style="mso-bookmark: OLE_LINK1">1..<a name="OLE_LINK10"></a><a name="OLE_LINK9"><span style="mso-bookmark:OLE_LINK10">NODES</span></a></span><span style="mso-bookmark: OLE_LINK1">&nbsp;
+		</span></p>
+		</td>
+		<td style="width: 328px">
+		<p class="auto-style15"><span style="mso-bookmark: OLE_LINK1">&nbsp;</span><span lang="EN-US" style="mso-bookmark: OLE_LINK1">temperatures 
+		of storage nodes<span style="mso-spacerun:yes"> </span></span></p>
+		</td>
+		<td style="width: 240px">
+		<p class="auto-style15">
+		<span lang="EN-US" style="mso-bookmark: OLE_LINK1">degree Celsius </span>
+		</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<p class="auto-style14">
+		<span lang="EN-US" style="mso-bookmark: OLE_LINK1">2<span class="auto-style3" style="mso-tab-count:
+1"> </span></span></p>
+		</td>
+		<td>
+		<p class="auto-style14">
+		<span lang="EN-US" style="mso-bookmark: OLE_LINK1">1<span class="auto-style3" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span></span></p>
+		</td>
+		<td style="width: 328px">
+		<p class="auto-style15">
+		<span lang="EN-US" style="mso-bookmark: OLE_LINK1">inlet temperature<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span></span></p>
+		</td>
+		<td style="width: 240px">
+		<p class="auto-style15"><span style="mso-bookmark: OLE_LINK1">d</span><span lang="EN-US" style="mso-bookmark: OLE_LINK1">egree 
+		Celsius </span></p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<p class="auto-style15">
+		<span lang="EN-US" style="mso-bookmark: OLE_LINK1">
+		<span style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp; </span></span></p>
+		</td>
+		<td>
+		<p class="auto-style14">
+		<span lang="EN-US" style="mso-bookmark: OLE_LINK1">2<span class="auto-style3" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span></span></p>
+		</td>
+		<td style="width: 328px">
+		<p class="auto-style15">
+		<span lang="EN-US" style="mso-bookmark: OLE_LINK1">massflow<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span></span></p>
+		</td>
+		<td style="width: 240px">
+		<p class="auto-style15">
+		<span lang="EN-US" style="mso-bookmark: OLE_LINK1">kg/s </span></p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<p class="auto-style15">
+		<span lang="EN-US" style="mso-bookmark: OLE_LINK1">
+		<span style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp; </span></span>
+		</p>
+		</td>
+		<td>
+		<p class="auto-style14">
+		<span lang="EN-US" style="mso-bookmark: OLE_LINK1">3<span class="auto-style3" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span></span></p>
+		</td>
+		<td style="width: 328px">
+		<p class="auto-style15">
+		<span lang="EN-US" style="mso-bookmark: OLE_LINK1">pressure<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span></span></p>
+		</td>
+		<td style="width: 240px">
+		<p class="auto-style15">
+		<span lang="EN-US" style="mso-bookmark: OLE_LINK1">Pa</span></p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<p class="auto-style15">
+		<span lang="EN-US" style="mso-bookmark: OLE_LINK1">
+		<span style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span></span></p>
+		</td>
+		<td>
+		<p class="auto-style15"><span style="mso-tab-count:1">
+		<span style="mso-bookmark: OLE_LINK1">4</span><span lang="EN-US" style="mso-bookmark: OLE_LINK1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span></span></p>
+		</td>
+		<td style="width: 328px">
+		<p class="auto-style15">
+		<span lang="EN-US" style="mso-bookmark: OLE_LINK1">fluid ID (defined in 
+		carlib.h)</span></p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+		<p class="auto-style15">
+		<span lang="EN-US" style="mso-bookmark: OLE_LINK1">
+		<span style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span></span></p>
+		</td>
+		<td>
+		<p class="auto-style14">
+		<span lang="EN-US" style="mso-bookmark: OLE_LINK1">5<span class="auto-style3" style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span></span></p>
+		</td>
+		<td style="width: 328px">
+		<p class="auto-style15">
+		<span lang="EN-US" style="mso-bookmark: OLE_LINK1">mixture (defined in 
+		carlib.h)</span></p>
+		</td>
+	</tr>
+</table>
+<br />
+</p>
+<p class="MsoNormal">
+<span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1">Structure 
+of the output vector</span><span style="mso-bookmark:OLE_LINK1"><span class="auto-style3" lang="EN-US"><o:p><br />
+<table style="width: 78%">
+	<tr>
+		<td><span lang="EN-US" style="mso-bookmark: OLE_LINK1">Port<span style="mso-tab-count:1">&nbsp;&nbsp;
+		</span></span></td>
+		<td style="width: 87px">
+		<span lang="EN-US" style="mso-bookmark: OLE_LINK1">index<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span></span></td>
+		<td><span lang="EN-US" style="mso-bookmark: OLE_LINK1">use</span></td>
+	</tr>
+	<tr>
+		<td><span lang="EN-US" style="mso-bookmark: OLE_LINK1">1<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span></span></td>
+		<td style="width: 87px">
+		<span lang="EN-US" style="mso-bookmark: OLE_LINK1">1..NODES<span style="mso-tab-count:1">&nbsp;&nbsp;
+		</span></span></td>
+		<td><span lang="EN-US" style="mso-bookmark: OLE_LINK1">power entering 
+		node from outside</span></td>
+		<td><span lang="EN-US" style="mso-bookmark: OLE_LINK1">&nbsp;vector with 
+		one element per node</span></td>
+	</tr>
+	<tr>
+		<td><span lang="EN-US" style="mso-bookmark: OLE_LINK1">2<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span></span></td>
+		<td style="width: 87px">
+		<span lang="EN-US" style="mso-bookmark: OLE_LINK1">1..NODES<span style="mso-tab-count:1">&nbsp;&nbsp;
+		</span></span></td>
+		<td><span lang="EN-US" style="mso-bookmark: OLE_LINK1">temperature of 
+		the heat exchanger at node</span></td>
+	</tr>
+</table>
+<br />
+</o:p>
+</span></span></p>
+<p class="MsoNormal"><span style="mso-bookmark:OLE_LINK1">
+<b style="mso-bidi-font-weight:
+normal"><span lang="EN-US">Parameters<o:p><br />
+</o:p>
+</span></b></span><span lang="EN-US" style="mso-bookmark: OLE_LINK1">All 
+parameter are non- tunable parameters (values are initialized at simulation 
+start and cannot change during the simulation).<o:p><br />
+</o:p>
+The heat exchanger model knows different types of heat exchangers. The type is 
+defined by the PORT_ID</span><span style="mso-bookmark: OLE_LINK1"> (see below)</span><span lang="EN-US" style="mso-bookmark: OLE_LINK1">.
+</span></p>
+<p class="MsoNormal"><span lang="EN-US" style="mso-bookmark: OLE_LINK1"><o:p>&nbsp;</o:p></span></p>
+<p class="auto-style7"><span style="mso-bookmark:OLE_LINK1">
+<b style="mso-bidi-font-weight:
+normal"><span lang="EN-US">Mathematical model</span><o:p>s</o:p></b></span></p>
+<p class="MsoNormal" style="width: 861px">
+<o:p><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'>
+<span style='line-height:120%' class="auto-style3">Stratified Charging<br />
+</span></span></span></o:p>
+<o:p><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'>
+<span
+lang=EN-US style='line-height:120%' class="auto-style3">For this stratified charging heat exchanger the heat transfer is set to zero if
+the temperature in the storage is above the heat exchanger temperature. If you
+specify <span class=GramE>a</span> inlet above the outlet, the flow in the heat
+exchanger is going down in the storage until it reaches a node where the
+temperature is lower than the flow temperature. At this node it starts charging
+the storage. To model a complete stratified charging heat exchanger, set
+inlet-position to 1 and outlet- position to 0. <br />
+<span
+lang=EN-US style='line-height:120%'>The port</span><span lang="de-at"><span style='line-height:120%'>s</span></span><span
+lang=EN-US style='line-height:120%'> also model stratified discharging for inlet below outlet. In this
+case the port starts discharging the storage if the flow temperature reaches a
+node where the temperature is higher.</span></span></span></span></o:p></p>
+<p class="MsoNormal" style="width: 868px">
+<o:p><span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1">In 
+case of no mass-flow (Mass-flow smaller than the predefined constant 
+“NO_MASSFLOW” in <a name="OLE_LINK8">carlib</a>.h) the node temperature of the 
+heat exchanger is set to the node temperature of the storage. The power output 
+is zero.</span><span style="mso-bookmark:OLE_LINK1"><span lang="EN-US" style="font-size:12.0pt"><o:p><br />
+<span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1">For 
+undefined heat exchangers </span><span lang="de-at">
+<span class="auto-style3" style="mso-bookmark: OLE_LINK1">(Port_ID not listed 
+below) </span></span>
+<span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1">the
+</span><span lang="de-at">
+<span class="auto-style3" style="mso-bookmark: OLE_LINK1">model</span></span><span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1"> 
+takes a default value of 500 W/K</span></span><span style="font-size:12.0pt"><o:p> 
+for the heat transfer.<br />
+</o:p></span></o:p></span></o:p></p>
+<p class="MsoNormal"><span style="mso-bookmark:OLE_LINK1">
+<b style="mso-bidi-font-weight:
+normal"><span class="auto-style3" lang="EN-US">Smooth tube heat exchanger 
+(theoretical model) <br />
+</span><span class="auto-style3">&nbsp;&nbsp;&nbsp; </span>
+<span class="auto-style3" lang="EN-US">portID = 201</span><span class="auto-style3">
+</span><span class="auto-style3" lang="EN-US"><br />
+</span><span style="mso-bookmark: OLE_LINK1">
+<b style="mso-bidi-font-weight: normal"><span class="auto-style3">&nbsp;&nbsp;&nbsp;
+</span><span class="auto-style3" lang="EN-US">portID = </span></b></span>
+<span class="auto-style3" lang="EN-US">301 </span><span class="auto-style3">for
+</span><span class="auto-style3" lang="EN-US">stratified charging</span></b></span><span style="mso-bookmark:
+OLE_LINK1"><b style="mso-bidi-font-weight:normal"><span lang="EN-US" style="font-size:12.0pt"><o:p></o:p></span></b></span></p>
+<p class="auto-style3" style="width: 878px">
+<span style="mso-bookmark:OLE_LINK1"><b style="mso-bidi-font-weight:
+normal"><span lang="EN-US">Finned tube heat exchanger (theoretical model) <br />
+</span>&nbsp;&nbsp;&nbsp; <span lang="EN-US">portID = 202<br />
+</span><span style="mso-bookmark: OLE_LINK1">
+<b style="mso-bidi-font-weight: normal"><span class="auto-style3">&nbsp;&nbsp;&nbsp;
+</span><span lang="EN-US"><span class="auto-style3" lang="EN-US">portID = </span>
+</span></b></span><span lang="EN-US">302 </span>for <span lang="EN-US">
+stratified charging<o:p></o:p></span></b></span></p>
+<p class="auto-style3" style="width: 878px">
+<span class="auto-style7" lang="EN-US" style="mso-bookmark: OLE_LINK1"><strong>
+Parameters<br />
+<br />
+<span style="mso-bookmark:OLE_LINK1"><span lang="EN-US" style="font-size:12.0pt">
+<img alt="" height="614" src="Figures/imgParaHxTube.jpg" width="440" /><br />
+<br />
+<img alt="" height="738" src="Figures/imgParaHxFinTube.jpg" width="440" /></span></span></strong></span></p>
+<p class="auto-style3" style="width: 878px">
+<span style="mso-bookmark:OLE_LINK1">
+<o:p><span lang="EN-US" style="font-size:12.0pt">
+<table style="width: 71%">
+	<tr>
+		<td style="width: 105px">
+		<span class="auto-style3" style="mso-bookmark: OLE_LINK1">
+		<span lang="EN-US" style="color: black">Dpipe<span style="mso-tab-count:
+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span>
+		</td>
+		<td style="width: 278px">
+		<span class="auto-style3" style="mso-bookmark: OLE_LINK1"><span lang="EN-US">
+		outer diameter 
+		of heat exchanger pipe</span></span></span></td>
+		<span lang="EN-US" style="font-size:12.0pt">
+		<td><span class="auto-style3" style="mso-bookmark: OLE_LINK1">
+		<span lang="EN-US">m<span style="mso-spacerun:yes">&nbsp; </span></span>
+		</span></td>
+	</tr>
+	<tr>
+		<td style="width: 105px">
+		<span class="auto-style3" style="mso-bookmark: OLE_LINK1">
+		<span lang="EN-US" style="color: black">Swall<span style="mso-tab-count:
+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span>
+		</span></td>
+		<td style="width: 278px">
+		<span class="auto-style3" style="mso-bookmark: OLE_LINK1">
+		<span lang="EN-US">wall thickness</span></span></td>
+		<td><span lang="EN-US">
+		<span class="auto-style3" style="mso-bookmark: OLE_LINK1">m </span>
+		</span></td>
+	</tr>
+	<tr>
+		<td style="width: 105px">
+		<span class="auto-style3" style="mso-bookmark: OLE_LINK1">
+		<span lang="EN-US" style="color: black">Lpipe<span style="mso-tab-count:
+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span>
+		</span></td>
+		<td style="width: 278px">
+		<span class="auto-style3" style="mso-bookmark: OLE_LINK1">
+		<span lang="EN-US">length of pipe</span></span></td>
+		<td><span lang="EN-US">
+		<span class="auto-style3" style="mso-bookmark: OLE_LINK1">m</span></span></td>
+	</tr>
+</span><span style="font-size:12.0pt">
+	<tr>
+		<td style="width: 105px">
+		c</span><span lang="EN-US" style="font-size:12.0pt"><span class="auto-style3" style="mso-bookmark: OLE_LINK1"><span lang="EN-US" style="color: black">ond</span><span lang="de-at"><span style="color: black">W</span></span><span lang="EN-US" style="color: black">all<span style="mso-tab-count:
+1">&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span></td>
+		<td style="width: 278px"><span lang="EN-US">
+		<span class="auto-style3" style="mso-bookmark: OLE_LINK1">conductivity 
+		heat exchanger material<span style="mso-tab-count:1">&nbsp;
+		</span></span></span></td>
+		<td><span lang="EN-US">
+		<span class="auto-style3" style="mso-bookmark: OLE_LINK1">W/(m²*K)</span></span></td>
+	</tr>
+	<tr>
+		<td style="width: 105px">
+		<span class="auto-style3" style="mso-bookmark: OLE_LINK1">
+		<span lang="EN-US" style="color: black">Dfin<span style="mso-tab-count:
+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span></span></span></td>
+		<td style="width: 278px"><span lang="EN-US">
+		<span class="auto-style3" style="mso-bookmark: OLE_LINK1">total diameter 
+		of pipe with fins<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span></span></span></td>
+		<td><span lang="EN-US">
+		<span class="auto-style3" style="mso-bookmark: OLE_LINK1">m</span></span></td>
+	</tr>
+	<tr>
+		<td style="width: 105px">
+		<span class="auto-style3" style="mso-bookmark: OLE_LINK1">
+		<span lang="EN-US" style="color: black">Sfin<span style="mso-tab-count:
+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span></span></span></td>
+		<td style="width: 278px">
+		<span class="auto-style3" style="mso-bookmark: OLE_LINK1">
+		<span lang="EN-US">wallthickness</span><span lang="de-at"> </span>
+		<span lang="EN-US">fin<span style="mso-tab-count:1">&nbsp;</span></span></span></td>
+		<td><span lang="EN-US">
+		<span class="auto-style3" style="mso-bookmark: OLE_LINK1">m</span></span></td>
+	</tr>
+	<tr>
+		<td style="width: 105px">
+		<span class="auto-style3" style="mso-bookmark: OLE_LINK1">
+		<span lang="EN-US" style="color: black">XNfin<span style="mso-tab-count:
+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span>
+		</span></td>
+		<td style="width: 278px">
+		<span class="auto-style3" style="mso-bookmark: OLE_LINK1">
+		<span lang="EN-US">number of fins per meter
+		</span></span></td>
+		<td><span lang="EN-US">
+		<span class="auto-style3" style="mso-bookmark: OLE_LINK1">1/m</span></span></td>
+	</tr>
+</table>
+<br />
+</span>
+</o:p>
+</span></p>
+<p class="auto-style3" style="width: 882px">
+<span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1">Heat 
+transfer calculation<a name="OLE_LINK24"> [Wagner 1991</a>]:</span><span style="mso-bookmark: OLE_LINK1"><span class="auto-style3">
+<br />
+<br />
+&nbsp;&nbsp;&nbsp;
+</span></span><span lang="EN-US" style="mso-bookmark: OLE_LINK1">Nu</span><span style="mso-bookmark: OLE_LINK1">(outside)</span><span lang="EN-US" style="mso-bookmark: OLE_LINK1"> = 0.5 * (Gr 
+* Pr)^0.25<o:p><br />
+<br />
+</span><span style="mso-bookmark: OLE_LINK1">&nbsp;&nbsp;&nbsp; Nu(inside) = 
+0.0235*(Re^0.8 - 230)*Pr^0.48
+</span><span lang="EN-US" style="mso-bookmark: OLE_LINK1"><br />
+<br />
+</span><span style="mso-bookmark: OLE_LINK1">&nbsp;&nbsp;&nbsp;
+</span>
+</o:p>
+<span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1">U</span><span class="auto-style3" style="mso-bookmark: OLE_LINK1">(outside)</span><span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1"> 
+= Nu<span class="auto-style3" style="mso-bookmark: OLE_LINK1">(outside)</span>*<span class="auto-style3" style="mso-bookmark: OLE_LINK1">condFluid<span lang="de-at"> 
+/ (Dpipe * PI/2)</span><br />
+<br />
+</span>
+</span><span class="auto-style3" style="mso-bookmark: OLE_LINK1">&nbsp;&nbsp;&nbsp; 
+U(inside) =&nbsp; Nu(inside)*condFluid / Dpipe</span><span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1"><br />
+</span></p>
+<p class="auto-style3" style="width: 883px">
+<span lang="EN-US" style="mso-bookmark: OLE_LINK1">
+<table style="width: 100%">
+	<tr>
+		<td><span lang="EN-US" style="mso-bookmark: OLE_LINK1">Gr<span style="mso-tab-count:
+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></td>
+		<td><span style="mso-tab-count: 1">
+		<span style="mso-bookmark: OLE_LINK1"></span></span>
+		<span lang="EN-US" style="mso-bookmark: OLE_LINK1">Grashof number of the 
+		fluid taken between inlet temperature of heat exchanger node and storage 
+		node temperature. <br />
+		The function Grashof is available in carlib library.<o:p></o:p></span></td>
+	</tr>
+</span>
+<span style="mso-bookmark: OLE_LINK1">
+	<tr>
+		<td>N</span>u</td>
+<span style="mso-bookmark: OLE_LINK1">
+		<td>N</span>usselt number<span style="mso-bookmark: OLE_LINK1"> for the 
+		heat transfer inside or outside of the pipe.</td>
+	</tr>
+</span><span lang="EN-US" style="mso-bookmark: OLE_LINK1">
+	<tr>
+		<td><span lang="EN-US" style="mso-bookmark: OLE_LINK1"><o:p></o:p>
+		Pr<span style="mso-tab-count:
+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></td>
+		<td><span style="mso-tab-count: 1">
+		<span style="mso-bookmark: OLE_LINK1"></span></span>
+		<span lang="EN-US" style="mso-bookmark: OLE_LINK1">Prandtl number of the 
+		fluid at mean temperature (average between heat exchanger inlet and 
+		storage node)</span></span><span style="mso-bookmark: OLE_LINK1">.
+<span lang="EN-US" style="mso-bookmark: OLE_LINK1">
+		<br />
+		The function
+</span>Prandtl<span lang="EN-US" style="mso-bookmark: OLE_LINK1">
+		is available in carlib library.<o:p></o:p></span></span></td>
+	</tr>
+<span lang="EN-US" style="mso-bookmark: OLE_LINK1">
+	<tr>
+		<td>Re</td>
+		<td>Renolds number of the fluid flow inside of the Pipe.
+		<span style="mso-bookmark: OLE_LINK1">
+<span lang="EN-US" style="mso-bookmark: OLE_LINK1">
+		The function
+</span>Reynolds<span lang="EN-US" style="mso-bookmark: OLE_LINK1">
+		is available in carlib library.<o:p></o:p></span></span></td>
+	</tr>
+	<tr>
+		<td><span lang="EN-US" style="mso-bookmark: OLE_LINK1"><o:p></o:p>
+		</span><span style="mso-bookmark:OLE_LINK1"><a name="OLE_LINK25">
+		<span lang="EN-US">Ahx<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span></span></a></span></td>
+		<td><span style="mso-bookmark: OLE_LINK1"><a name="OLE_LINK25">
+		<span style="mso-tab-count: 1"></span><span lang="EN-US">Heat exchanger 
+		surface in m²</span></a><span lang="EN-US"><o:p></o:p></span></span></td>
+	</tr>
+	<tr>
+		<td><span style="mso-bookmark: OLE_LINK1">
+		<span lang="EN-US" style="mso-bookmark: OLE_LINK25">U<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span></span></span></td>
+		<td><span style="mso-bookmark: OLE_LINK1">
+		<span style="mso-tab-count: 1"><span style="mso-bookmark: OLE_LINK25">
+		</span></span><span lang="EN-US" style="mso-bookmark: OLE_LINK25">Heat 
+		transfer in W/m²/K<o:p></span></o:p></span></td>
+	</tr>
+	<tr>
+		<td><span style="mso-bookmark: OLE_LINK1">
+		<span lang="EN-US" style="mso-bookmark: OLE_LINK25"><o:p></o:p>
+		</span></span><span lang="EN-US" style="mso-bookmark: OLE_LINK1">UA<span style="mso-tab-count:
+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</span></span></td>
+		<td><span style="mso-tab-count: 1">
+		<span style="mso-bookmark: OLE_LINK1"></span></span>
+		<span lang="EN-US" style="mso-bookmark: OLE_LINK1">Integral heat 
+		transfer in W/K<o:p></o:p></span></td>
+	</tr>
+	<tr>
+		<td><span style="mso-bookmark: OLE_LINK1">condFluid
+</span></td>
+		<td><span style="mso-bookmark: OLE_LINK1"><span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1">
+		thermal_conductivity</span><span lang="de-at"><span class="auto-style3" style="mso-bookmark: OLE_LINK1"> 
+		of fluid (</span></span><span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1">Water)</span><span class="auto-style3" style="mso-bookmark: OLE_LINK1"> 
+		in W/m/K</span></span></td>
+	</tr>
+</table>
+</span><br />
+</p>
+<p class="auto-style3" style="width: 883px">
+<span lang="EN-US" style="mso-bookmark: OLE_LINK1">Finned tube additionally have 
+the fin heat transfer [Wagner 1991] which means a correction of the smooth tube 
+heat transfer:<br />
+</span>
+<span style="mso-bookmark: OLE_LINK1">&nbsp;&nbsp;&nbsp;
+</span>
+<span lang="EN-US" style="mso-bookmark: OLE_LINK1">m = (2*U/(Condwall*Sfin)) ^0.5<o:p><br />
+</o:p>
+The heat transfer from the pipe is reduced by the place occupied by the fins</span><span style="mso-bookmark: OLE_LINK1">.
+</span><span lang="EN-US" style="mso-bookmark: OLE_LINK1">The heat transfer of the fins is added:<o:p><br />
+</span><span style="mso-bookmark: OLE_LINK1">&nbsp;&nbsp;&nbsp;
+</span>
+</o:p>
+<span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1">U</span><span class="auto-style3" style="mso-bookmark: OLE_LINK1">(outside_fin)</span><span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1"> 
+=
+<span lang="EN-US" style="mso-bookmark: OLE_LINK1">U</span><span style="mso-bookmark: OLE_LINK1">(<span lang="de-at">outside</span>)</span><span lang="EN-US" style="mso-bookmark: OLE_LINK1">*(1.0 - Sfin*XNfin)</span> + Sfin*XNfin * m * 
+</span><span class="auto-style3" style="mso-bookmark: OLE_LINK1">c</span><span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1">ond</span><span class="auto-style3" style="mso-bookmark: OLE_LINK1">W</span><span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1">all*tanh(m*0.5*(Dfin-Dpipe))<br />
+<br />
+</span><span class="auto-style3" style="mso-bookmark: OLE_LINK1">For smooth tube 
+heat exchangers this gives:</span><span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1"><br />
+</span><span class="auto-style3" style="mso-bookmark: OLE_LINK1">&nbsp;&nbsp;&nbsp;
+</span><span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1">U<span class="auto-style3" style="mso-bookmark: OLE_LINK1">(tube)</span> 
+= 1 / (</span><span class="auto-style3" style="mso-bookmark: OLE_LINK1">1/U(outside)</span><span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1"> + Swall/</span><span class="auto-style3" style="mso-bookmark: OLE_LINK1">c</span><span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1">ond</span><span class="auto-style3" style="mso-bookmark: OLE_LINK1">W</span><span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1">all<span class="auto-style3" style="mso-bookmark: OLE_LINK1"> 
++
+</span>
+</span><span class="auto-style3" style="mso-bookmark: OLE_LINK1">1/U(inside))</span><span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1"><br />
+<br />
+</span><span class="auto-style3" style="mso-bookmark: OLE_LINK1">And for finned 
+tubes the heat transfer is:</span><span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1"><br />
+<span class="auto-style3" style="mso-bookmark: OLE_LINK1">&nbsp;&nbsp;&nbsp;
+</span>U<span class="auto-style3" style="mso-bookmark: OLE_LINK1">(<span lang="de-at">finned
+</span>tube)</span> = 1 / (<span class="auto-style3" style="mso-bookmark: OLE_LINK1">1/U(outside<span lang="de-at">_fin</span>)</span> + Swall/<span class="auto-style3" style="mso-bookmark: OLE_LINK1">c</span>ond<span class="auto-style3" style="mso-bookmark: OLE_LINK1">W</span>all<span class="auto-style3" style="mso-bookmark: OLE_LINK1"> 
++ 1/U(inside))</span><br />
+<br />
+</span><span lang="EN-US" style="mso-bookmark: OLE_LINK1">For the integral heat 
+transfer the exchanger surface has to be integrated:<o:p><br />
+</span><span style="mso-bookmark: OLE_LINK1">&nbsp;&nbsp;&nbsp;
+</span>
+</o:p>
+<span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1">UA 
+= U*<a name="OLE_LINK26">Ahx</a></span><span style="mso-bookmark:OLE_LINK1"><span lang="EN-US" style="font-size:12.0pt"><o:p><br />
+<br />
+</o:p></span></span></p>
+<p class="auto-style3"><span style="mso-bookmark:OLE_LINK1">
+<span style="mso-bookmark:
+OLE_LINK11"><b style="mso-bidi-font-weight:normal"><span lang="EN-US">Heat 
+exchanger with a heat transfer fitted to measurement</span></b></span><b style="mso-bidi-font-weight:normal"><span lang="EN-US"><br />
+</span>&nbsp;&nbsp;&nbsp; <span lang="EN-US">portID = 203<br />
+</span>&nbsp;&nbsp;&nbsp; <span style="mso-bookmark: OLE_LINK1">
+<span lang="EN-US"><b style="mso-bidi-font-weight: normal">portID</b></span><b style="mso-bidi-font-weight: normal">
+</b></span><span lang="EN-US">= 303 for stratified charging<o:p></o:p></span></b></span></p>
+<p class="MsoNormal">
+<span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1">Equation 
+1:<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>UA =
+<a name="OLE_LINK18"></a><a name="OLE_LINK17">
+<span style="mso-bookmark:OLE_LINK18">UAC </span></a>+ mdot*<a name="OLE_LINK20"></a><a name="OLE_LINK19"><span style="mso-bookmark:OLE_LINK20">UAM
+</span></a>+ (Theatexchanger-Tstorage)*<a name="OLE_LINK22"></a><span style="mso-bookmark:OLE_LINK22"><a name="OLE_LINK21">UAT</a></span></span><br />
+<br />
+<table style="width: 59%">
+	<tr>
+		<td style="width: 112px">
+		<span class="auto-style3" style="mso-bookmark:
+OLE_LINK1"><a name="OLE_LINK27">
+		<span lang="EN-US" style="mso-bookmark: OLE_LINK28">UAC
+</span></a></span></td>
+		<td style="width: 283px">
+<span lang="EN-US" style="mso-bookmark: OLE_LINK28">
+		<span class="auto-style3" style="mso-bookmark:
+OLE_LINK1"><a name="OLE_LINK27">
+		constant heat transfer rate <span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></a></span></span></td>
+		<td>
+<span lang="EN-US" style="mso-bookmark: OLE_LINK28">
+		<span class="auto-style3" style="mso-bookmark:
+OLE_LINK1"><a name="OLE_LINK27">
+		W/K</a></span></span></td>
+	</tr>
+	<tr>
+		<td style="width: 112px"><span style="mso-bookmark:
+OLE_LINK1"><span style="mso-bookmark:OLE_LINK27">
+		<span class="auto-style3">
+		<span lang="EN-US" style="mso-bookmark: OLE_LINK28">UAM</span></span></span></span></td>
+		<td style="width: 283px">
+<span lang="EN-US" style="mso-bookmark: OLE_LINK28">
+		<span style="mso-bookmark:
+OLE_LINK1"><span style="mso-bookmark:OLE_LINK27">
+		<span class="auto-style3">
+		mass-flow dependent heat transfer<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span></span></span></td>
+		<td>
+<span lang="EN-US" style="mso-bookmark: OLE_LINK28">
+		<span style="mso-bookmark:
+OLE_LINK1"><span style="mso-bookmark:OLE_LINK27">
+		<span class="auto-style3">
+		W*s/(kg*K)</span></span></span></span></td>
+	</tr>
+	<tr>
+		<td style="width: 112px"><span style="mso-bookmark:
+OLE_LINK1"><span style="mso-bookmark:OLE_LINK27">
+		<span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK28">UAT</span></span></span></td>
+		<td style="width: 283px"><span style="mso-bookmark:
+OLE_LINK1"><span style="mso-bookmark:OLE_LINK27">
+<span style="mso-tab-count:1">
+<span class="auto-style3" style="mso-bookmark: OLE_LINK28"></span>
+</span>
+<span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK28">temperature dependent heat transfer<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span></span></td>
+		<td><span style="mso-bookmark:
+OLE_LINK1"><span style="mso-bookmark:OLE_LINK27">
+<span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK28"><span style="mso-tab-count:1">&nbsp;</span>W/K/°C</span></span></span></td>
+	</tr>
+</table>
+<br />
+<img alt="" height="429" src="Figures/imgHxDataFit.jpg" width="440" /><br />
+<span class="auto-style3" style="mso-bookmark:
+OLE_LINK1"><a name="OLE_LINK28"></a></span></p>
+<p class="auto-style3"><span lang="EN-US" style="mso-bookmark: OLE_LINK1">
+Equation 2 (EN 12977):<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp; </span>UA 
+= UAC * mdot^UAM * ((Theatexchanger+Tstorage)/2)^UAT</span><span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1"><br />
+<table style="width: 63%">
+	<tr>
+		<td style="width: 110px">
+<span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1">UAC</span></td>
+		<td style="width: 915px">
+<span style="mso-tab-count:1">
+<span class="auto-style3" style="mso-bookmark: OLE_LINK1"></span>
+</span>
+<span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1">heat transfer rate</span></td>
+		<td style="width: 485px"> <span style="mso-tab-count:1">
+<span class="auto-style3" style="mso-bookmark: OLE_LINK1"></span>
+</span>
+<span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1">W/K / (kg/s) / °C</span></td>
+	</tr>
+	<tr>
+		<td style="width: 110px"><span lang="EN-US" style="mso-bookmark: OLE_LINK1">
+<span class="auto-style3">UA<span lang="de-at">M</span></span></span></td>
+		<td style="width: 915px">
+<span class="auto-style3"> <span style="mso-tab-count:1">
+		<span style="mso-bookmark: OLE_LINK1">
+		</span>
+</span><span lang="EN-US" style="mso-bookmark: OLE_LINK1">
+		mass-flow dependent heat transfer</span></span></td>
+		<td style="width: 485px"><span lang="EN-US" style="mso-bookmark: OLE_LINK1">
+		<span style="mso-tab-count:1"><span class="auto-style3">
+		<span lang="de-at"></span>&nbsp;</span></span>-<span style="color:black"><o:p></span></o:p></span></td>
+	</tr>
+	<tr>
+		<td style="width: 110px">
+<span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1">UAT</span></td>
+		<td style="width: 915px">
+<span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1">
+<span style="mso-tab-count:1"><span lang="de-at"></span>
+</span>temperature dependent heat transfer</span></td>
+		<td style="width: 485px">
+<span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1"><span style="mso-tab-count:1">
+		<span lang="de-at"></span>&nbsp;</span>-</span></td>
+	</tr>
+</table>
+</span><span style="mso-bookmark:OLE_LINK1"><span lang="EN-US" style="font-size:12.0pt"><o:p>
+<br />
+<img alt="" height="446" src="Figures/imgHxDataFitEN.jpg" width="440" /><br />
+</o:p>
+</span></span></p>
+<p class="auto-style3" style="width: 819px">
+<span style="mso-bookmark:OLE_LINK1"><b style="mso-bidi-font-weight:
+normal"><span lang="EN-US">Heat transfer calculation<o:p><br />
+</o:p>
+</span></b></span>
+<span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1">The power 
+of the heat exchange per node is calculated by the mathematical function derived 
+from</span><span style="mso-bookmark:OLE_LINK1"><span lang="EN-US" style="font-size:12.0pt"><o:p><br />
+</o:p>
+</span></span><span class="auto-style3" style="mso-bookmark: OLE_LINK1">&nbsp;&nbsp;&nbsp;
+</span><span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1">
+mdot * cp * dThx = U * dA * (Tnode - Thx)<br />
+Replace (Tnode-Thx) by teta, than dThx is -dteta</span><span style="mso-bookmark:
+OLE_LINK1"><span lang="EN-US" style="font-size:12.0pt"><o:p><br />
+</span><span style="font-size:12.0pt">&nbsp;&nbsp;&nbsp; </span></o:p>
+</span><span style="mso-bookmark:OLE_LINK1">
+<span class="auto-style3" style="mso-ansi-language:
+DE">mdot * cp * dteta = - U * dA * teta</span></span><span style="mso-bookmark:
+OLE_LINK1"><span style="font-size:12.0pt;mso-ansi-language:DE"><o:p><br />
+&nbsp;&nbsp;&nbsp; </o:p>
+</span></span><span style="mso-bookmark:OLE_LINK1">
+<span class="auto-style3" style="mso-ansi-language:
+DE">dteta / teta = - U * dA / (mdot * cp)</span></span><span style="mso-bookmark:
+OLE_LINK1"><span style="font-size:12.0pt;mso-ansi-language:DE"><o:p><br />
+</o:p>
+</span></span>
+<span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1">Integrate 
+from inlet position to outlet position</span><span class="auto-style3" style="mso-bookmark: OLE_LINK1">. 
+The equation uses the upwind scheme from Patankar [Patankar 1981] so the inlet 
+temperature of the heat exchanger node is the temperature of the node upwards in 
+flow direction.</span><span style="mso-bookmark:
+OLE_LINK1"><span lang="EN-US" style="font-size:12.0pt"><o:p><br />
+</span><span style="font-size:12.0pt">&nbsp;&nbsp;&nbsp; </span></o:p>
+</span><span lang="EN-US" style="mso-bookmark: OLE_LINK1">ln(teta(out)/teta(in)) 
+= - U * A / (mdot * cp)<o:p><br />
+</o:p>
+</span><span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1">
+Exponentiate and solve for teta(out)</span><span style="mso-bookmark:OLE_LINK1"><span lang="EN-US" style="font-size:12.0pt"><o:p><br />
+</o:p>
+</span></span><span style="mso-bookmark: OLE_LINK1">&nbsp;&nbsp;&nbsp; </span>
+<span lang="EN-US" style="mso-bookmark: OLE_LINK1">teta(out) = teta(in) * 
+exp(-U*A/(mdot*cp))<o:p><br />
+</o:p>
+</span><span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1">
+Replace teta by (Tnode - Thx) and solve for</span><span class="auto-style3" style="mso-bookmark: OLE_LINK1">
+</span><span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1">
+Thx(out), the outlet temperature of the heat exchanger in one node</span><span style="mso-bookmark:OLE_LINK1"><span lang="EN-US" style="font-size:12.0pt"><o:p><br />
+</o:p>
+</span></span><span style="mso-bookmark: OLE_LINK1">&nbsp;&nbsp;&nbsp; </span>
+<span lang="EN-US" style="mso-bookmark: OLE_LINK1">Thx(out) = Tnode(out) + 
+((Thx(in) - Tnode(in)) * exp(-U*A/(mdot*cp))<o:p><br />
+</o:p>
+The power of the node is calculated </span>
+<span style="mso-bookmark: OLE_LINK1">(<span lang="EN-US" style="mso-bookmark: OLE_LINK1">Tnode(in) 
+and Tnode(out) are the same since nodes are fully mixed</span>)</span><span lang="EN-US" style="mso-bookmark: OLE_LINK1"><br />
+</span><span style="mso-bookmark: OLE_LINK1">&nbsp;&nbsp;&nbsp; </span>
+<span lang="EN-US" style="mso-bookmark: OLE_LINK1">Q</span><span style="mso-bookmark: OLE_LINK1">dotHX(</span><span lang="EN-US" style="mso-bookmark: OLE_LINK1">node</span><span style="mso-bookmark: OLE_LINK1">)
+</span><span lang="EN-US" style="mso-bookmark: OLE_LINK1">= 
+UA*(Thx(in)-Thx(node)) / log((Thx(in)-Tstore(node)/(Thx(node)-Tstore(node)))<o:p><br />
+</o:p>
+</span><span style="mso-bookmark:OLE_LINK1"><span style="mso-ansi-language:DE">
+<br />
+<table style="width: 60%; height: 86px">
+	<tr>
+		<td style="width: 84px"><span style="mso-bookmark:OLE_LINK1"><span style="mso-ansi-language:DE">
+</span></span>cp </td>
+		<td>specific heat capacity </td>
+		<td>J/(kg*K) </td>
+	</tr>
+	<tr>
+		<td style="width: 84px">Thx(in) </td>
+		<td>inlet temperature of heat exchanger node </td>
+		<td>degree Celsius </td>
+	</tr>
+	<tr>
+		<td style="width: 84px">Thx(node) </td>
+		<td>temperature of heat exchanger node </td>
+		<td>degree Celsius </td>
+	</tr>
+	<tr>
+		<td style="width: 84px">Tstore </td>
+		<td>temperature of the storage node </td>
+		<td>degree Celsuis </td>
+	</tr>
+</table>
+<br />
+</span></span></p>
+<p class="auto-style3"><span lang="EN-US" style="mso-bookmark: OLE_LINK1">
+<o:p><strong>Parameters for the s-function </strong></o:p>
+<br />
+<table style="width: 89%">
+	<tr>
+		<td><span lang="EN-US" style="mso-bookmark: OLE_LINK1">
+PORT_ID</span></td>
+		<td><span style="mso-tab-count:1"><span style="mso-bookmark: OLE_LINK1">
+		</span>
+</span><span lang="EN-US" style="mso-bookmark: OLE_LINK1">
+		Heat Exchanger Type<o:p></o:p></span></td>
+	</tr>
+	<tr>
+		<td><span style="mso-bookmark:OLE_LINK1"><a name="OLE_LINK2">
+<span class="auto-style3" lang="EN-US">201<span style="mso-tab-count:1">&nbsp;</span></span></a></span></td>
+		<td><span style="mso-bookmark:OLE_LINK1"><a name="OLE_LINK2">
+		<span style="mso-tab-count:1">
+<span class="auto-style3"></span>
+</span>
+<span class="auto-style3" lang="EN-US">smooth tube heat exchanger theoretical model</a></span></span></td>
+	</tr>
+	<tr>
+		<td><span lang="EN-US" style="mso-bookmark: OLE_LINK1">301<span style="mso-tab-count:1">&nbsp;</span></span></td>
+		<td><span style="mso-tab-count:1"><span style="mso-bookmark: OLE_LINK1"></span>
+</span><span lang="EN-US" style="mso-bookmark: OLE_LINK1">smooth tube heat exchanger theoretical model stratified charging<o:p></o:p></span></td>
+	</tr>
+	<tr>
+		<td><span style="mso-bookmark:OLE_LINK1"><a name="OLE_LINK6">
+<span class="auto-style3" lang="EN-US">202<span style="mso-tab-count:1">&nbsp;</span></span></a></span></td>
+		<td><span style="mso-bookmark:OLE_LINK1"><a name="OLE_LINK6">
+		<span style="mso-tab-count:1">
+<span class="auto-style3"></span>
+</span>
+<span class="auto-style3" lang="EN-US">finned tube heat exchanger theoretical model</a></span></span></td>
+	</tr>
+	<tr>
+		<td>
+<span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1">302</span></td>
+		<td><span style="mso-tab-count:1">
+<span class="auto-style3" style="mso-bookmark: OLE_LINK1"></span>
+</span>
+<span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1">finned tube heat exchanger theoretical model stratified charging</span></td>
+	</tr>
+	<tr>
+		<td><span lang="EN-US" style="mso-bookmark: OLE_LINK1">203</span></td>
+		<td><span lang="EN-US" style="mso-bookmark: OLE_LINK1"><span style="mso-tab-count:1">
+		<span lang="de-at"></span>
+</span><a name="OLE_LINK12">heat transfer fitted to measurement</span></a></td>
+	</tr>
+	<tr>
+		<td><span lang="EN-US" style="mso-bookmark: OLE_LINK1">303</span></td>
+		<td>
+<span style="mso-tab-count:1"><span style="mso-bookmark: OLE_LINK1"></span>
+</span><span lang="EN-US" style="mso-bookmark: OLE_LINK1">heat transfer fitted to measurement model for stratified charging<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;</span></span></td>
+	</tr>
+</table>
+<span style="mso-spacerun:yes"><br />
+</span>
+<o:p>The number of nodes, the start node and the node in the storage must be 
+known by the model. These values are determined by the general mask for the 
+storage tank (see <span style="background: yellow; mso-highlight: yellow">
+Storage_Type_N</span> for details).</span><span style="mso-bookmark: OLE_LINK1"><o:p>
+<span lang="EN-US" style="mso-bookmark: OLE_LINK1">The heat transfer is divided 
+by the number of nodes concerned by the heat exchanger. The calculation of the 
+temperatures and transferred power is done in a loop from inlet node to outlet 
+node.<o:p><br />
+<br />
+</o:p>
+</span></o:p>
+</span></o:p>
+<span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1">NODES
+<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>number of nodes in the storage concerned by the heat exchanger</span><span style="mso-bookmark:OLE_LINK1"><span lang="EN-US" style="font-size:12.0pt"><o:p><br />
+</o:p>
+</span></span>
+<span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1">
+START_NODE <span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+start node of the heat exchanger in the storage</span><span style="mso-bookmark:OLE_LINK1"><span lang="EN-US" style="font-size:12.0pt"><o:p><br />
+</o:p>
+</span></span>
+<span class="auto-style3" lang="EN-US" style="mso-bookmark: OLE_LINK1">END_NODE<span style="mso-tab-count:1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>end node <a name="OLE_LINK3">of the heat exchanger in the storage</a></span><span style="mso-bookmark:OLE_LINK1"><span lang="EN-US" style="font-size:12.0pt"><o:p><br />
+</o:p></span></span></p>
+<p class="auto-style3"><span style="mso-bookmark:OLE_LINK1">
+<b style="mso-bidi-font-weight:
+normal"><span style="mso-ansi-language:DE">Literatur<o:p><br />
+</o:p>
+</span></b><span style="mso-ansi-language:
+DE">Wagner: Waermeuebertragung, Vogel-Verlag, 1991<o:p><br />
+</o:p>
+</span></span>
+<o:p>VDI Wärmeatlas, VDI Verlag 2008<br />
+</o:p>
+<span lang="EN-US" style="mso-bookmark: OLE_LINK1">Patankar: Numerical Heat 
+Transfer and Fluid Flow, 1981</span><o:p></o:p></p>
+<p><span style='mso-bookmark:literature'>
+<span lang=EN-US style='line-height:120%' class="auto-style16">Characteristics</span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> </span><span lang=EN-US style='line-height:120%'> 
+<br class="auto-style3">
+</span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> 
+<span lang=EN-US style='line-height:120%' class="auto-style3"> Direct Feedthrough&nbsp;&nbsp;&nbsp;Yes 
+<br />
+</span></span><span style='line-height:120%' class="auto-style3"> Continous 
+states&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; None<br />
+</span></span><span class="auto-style3">Discrete states&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+None</span><span style='mso-bookmark:literature'><span lang=EN-US style='line-height:120%' class="auto-style3"><span lang=EN-US style='line-height:120%'><br>
+Sample
+time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span><span style='line-height:120%' class="auto-style3">&nbsp;</span><span lang=EN-US style='line-height:120%' class="auto-style3">Inherited
+from driving block <br>
+Vectorized&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='line-height:120%' class="auto-style3">&nbsp;&nbsp;</span><span lang=EN-US style='line-height:120%' class="auto-style3">No
+</span></span></p>
+
+</body>
+
+</html>

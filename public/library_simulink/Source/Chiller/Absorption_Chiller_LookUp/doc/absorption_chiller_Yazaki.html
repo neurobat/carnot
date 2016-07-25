@@ -1,0 +1,74 @@
+<p><hr size="10" noshade> </p>
+
+<p><img src="figures/AKM.png" width="250" align="right" border="0"></p>  
+ 
+<p><a name="absorption chiller Yazaki WFC-SC5"><font size="5"><b>absorption chiller Yazaki WFC-SC5</b></font></a><br>
+<b>Path: CARNOT/New Blocks</b><br clear="all"><hr></p>
+
+
+
+<p><b>Purpose</b> <br>
+
+This block calculates the capacities and cop of the absorption chiller Yazaki WFC-SC5 (nominal cooling capacity: 17.6 kW, nominal COP: 0.7) based on measured curves.
+
+
+</p>
+
+<p><b>Description</b> <br>
+The capacities and cop are calculated by lookup-tables for the three capacities dependent on the three input temperatures, based on measured data.<br>
+The block includes a dynamic start-up behaviour with a dead time of the cooling capacity and capacities in all cycles.<br>
+The dead time depends on the mean generator temperature at start.
+<br> <img src="Formulas/formel_yazaki_dead_time.jpg" align="left" border="0"> <br clear="all"> 
+Additionally the power of the solution pump is given out.
+
+</p>
+
+<p><b>Inputs:</b> 
+
+<ul><li>THV_GEN_IN: Thermo-hydraulic vector generator (HT) cycle input</li>
+<li>THV_COLD_IN: Thermo-hydraulic vector cooling (LT) cycle input</li>
+<li>THV_RC_IN: Thermo-hydraulic vector recooling (MT) cycle input</li>
+<li>control: 0/1</li></ul>
+
+</p>
+
+<p><b>Outputs:</b> 
+
+<ul><li>THV_GEN_OUT: Thermo-hydraulic vector generator (HT) cycle output</li>
+<li>THV_COLD_OUT: Thermo-hydraulic vector cooling (LT) cycle output</li>
+<li>THV_RC_OUT: Thermo-hydraulic vector recooling (MT) cycle output</li>
+<li>power_SP: electrical power of the solution pump in W</li>
+<li>COP_AKM</li>
+<li>Qcold_AKM_kW: cooling power in kW</li>
+</ul>
+
+</p>
+
+<p align="left"><hr> <b>NOTE:</b> 
+
+The measured curves are only valid for the following volumeflows: <br>
+HT: 4320 l/h, MT: 9180 l/h, LT: 2770 l/h <br>
+
+Measurement range: T_HT_IN 70 .. 88 °C, T_MT_IN 29 .. 33 °C, T_NT_IN 11 .. 14 °C <br>
+Outside of this range the lookup-tables extrapolate.
+
+<hr> <br> Additional files: 
+
+The lookup-tables use data of the Variables WFC_q_hot, WFC_q_recooling and WFC_q_cold, which are stored in Yazaki_KF.mat and loaded as a PreLoad-Function.
+<a href="Yazaki_KF.mat"><img src="Figures/clipbrd.gif" width="10" height="10" border="2"></a><b>&nbsp;</b>
+</p>
+
+<form name="form" method="get"><p align="left"><b>Validation report : </b>
+<a href="..help/carnot/Validation/Validation_Report_absorption_chiller_Yazaki_WFC-SC5.pdf"><img src="Figures/clipbrd.gif" width="21" height="30" border="2"></a><b>&nbsp;</b><br>
+<a href="#Literature">Literature:</a> 
+<a name="author">AuthorName : Adam, M., Lohmann, S., Radosavljevic, R., Goebel, J., & Gottschald, J. (2013). Solare Kühlung im Hardware-in-the-Loop-Test, Abschlussbericht zum Forschungsprojekt FKZ 17 42X 09. Düsseldorf</a></p>
+</form>
+<p>&nbsp;</p>
+<p><b>Parameters and Dialog Box</b> <br> <img src="Figures/AKM_parameters.jpg" width="400" align="left"
+ border="0"> <br clear="all"> 
+</p>
+<p><b>Characteristics</b> <br>
+Direct Feedthrough&nbsp;&nbsp;&nbsp;Yes <br>
+Sample time &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inherited from driving block <br>
+Vectorized&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No 
+</p>

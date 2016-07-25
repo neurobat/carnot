@@ -1,0 +1,191 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Styleguide</title>
+<meta name="author" content="winteler">
+<link rel="stylesheet" type="text/css" href="Carnot_Style.css">
+<style type="text/css">body{margin-left:108.0pt;}</style>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="purple" alink="red">
+
+<h1> 0 CARNOT documentation Example </h1>
+<p>This document is an example for the various styles defined in &quot;Carnot_Styles.css&quot;. View source code for details. Styles are defined in "Carnot_style.css", best use the header from this file to inlude it properly.<p/>
+<hr/>
+
+<h2> Table of contents</h2>
+<p class="toc1"> 1 <a href="#Title1"> This is a Title</a></p>
+<p class="toc2"> 1.1 <a href="#Title2"> This is a Subtitle</a></p>
+<p class="toc3"> 1.1.1 <a href="#Title3"> This is a Sub-Subtitle</a></p>
+<p class="toc1"> 2 <a href="#Layouts"> Layouts</a></p>
+<p class="toc2"> 2.1 <a href="#Text"> Text</a></p>
+<p class="toc2"> 2.2 <a href="#Lists"> Lists</a></p>
+<p class="toc3"> 2.2.1 <a href="#UL"> Unordered Lists</a></p>
+<p class="toc3"> 2.2.2 <a href="#OL"> Ordered Lists</a></p>
+<p class="toc2"> 2.3 <a href="#Eqs"> Equations</a></p>
+<hr/>
+
+<h1> <a name="Title1"> 1 This is a Title </a></h1>
+<h2> <a name="Title2"> 1.1 This is a Subtitle </a></h2>
+<h3> <a name="Title3"> 1.1.1 This is a Sub-Subtitle </a></h3>
+
+<h1> <a name="Layouts"> 2 Layouts </a></h1>
+<h2> <a name="Text"> 2.1 Text </a></h2>
+<p> This is regular Text.
+
+<h2> <a name="Lists"> 2.2 Lists </a></h2>
+<h3> <a name="UL"> 2.2.1 Unordered Lists </a></h3>
+<p> use unordered lists to make bulletpoint lists:
+<ul>
+	<li> item 1 </li>
+    <li> item 2 </li>
+    	<ul>
+    	<li> additional item</li>
+        </ul>
+    <li> item 3 </li>
+</ul>
+
+<h3> <a name="OL"> 2.2.2 Ordered Lists </a></h3>
+<p> use ordered lists to make numbered lists:
+<ol>
+	<li> item 1 </li>
+    <li> item 2 </li>
+    	<ul>
+    	<li> additional item</li>
+        </ul>
+    <li> item 3 </li>
+</ol>
+
+<h3> <a name="Ref"> 2.2.3 References </a></h3>
+<p>The Reference section is a special case of ordered list, using the "ref" class:
+
+<ol class="ref">
+	<li>Patankar, S.V.: "Numerical Heat Transfer and Fluid Flow", 1980 </li>
+    <li>Peter, Winteler,Dott: Implementation of the IEA SHC &amp; HPP T44/A38 Boundary Conditions in Matlab/Simulink with CARNOT-blockset, IEA Solar Heating and Cooling Program, FHNW, 2014</li>
+</ol>
+
+<h2> <a name="Eqs"> 2.3 Equations </a></h2>
+<p>Equations are displayed in <mathrm> roman font </mathrm> and can either be set inline with surrounding text:<br> 
+Heat transfer to the environment, <mathrm>Q&#x0307;<sub>amb</sub> = UA &middot; (T<sub>amb</sub> - T<sub>node</sub>)</mathrm>, is considered.<br>
+or in a seperate paragraph:
+<table class="eq">
+<tr>
+<td> dp<sub>pump</sub> = a<sub>0</sub> + a<sub>1</sub>&middot;m&#x0307; + a<sub>2</sub>&middot;m&#x0307;<sup>2</sup> </td>
+<th>(Eq. 2.2)</th>
+</tr>
+</table>
+<p>Equation nubering is optional and has to be done "by hand".
+
+<h2> <a name="Code"> 2.4 Command line input </a></h2>
+<p>Command line input is displayed in a monotype font: <br><tt>mex ExampleSFunction.c</tt><br>
+
+<h2> <a name="Vectable"> 2.5 Vector Tables </a></h2>
+<p> To format the rather large tables explaining vector or bus components use the "vectortable" class, e.g.
+<p> <b>T H V - vector definition</b> 
+<table class="vectortable">
+	<tr>
+    	<th style="width: 80px">Col.</th>
+        <th style="width: 300px">Description</th>
+        <th style="width: 180px">Abbreviation </th>
+        <th style="width: 140px">Physical unit </th>
+        <th >remarks</th>
+    </tr>
+    <tr>
+        <td> 1 </td>
+        <td>flow identifier </td>
+        <td>ID </td>
+        <td>none </td>
+        <td>is set by the simulation, not by the user </td>
+    </tr>
+    <tr>
+        <td> 2 </td>
+        <td> temperature </td>
+        <td> T </td>
+        <td> [&deg;C] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td> 3 </td>
+        <td> massflow </td>
+        <td> mdot </td>
+        <td> [kg/s] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td> 4 </td>
+        <td> pressure </td>
+        <td> p </td>
+        <td> [Pa] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td> 5 </td>
+        <td> fluid type </td>
+        <td> fluid_ID </td>
+        <td> none </td>
+        <td> is set in the pump </td>
+    </tr>
+    <tr>
+        <td> 6 </td>
+        <td> mixture of fluid </td>
+        <td> fluid_mix </td>
+        <td> [0..1]&nbsp; </td>
+        <td> is set in the pump </td>
+    </tr>
+    <tr>
+        <td> 7 </td>
+        <td> diameter last piece </td>
+        <td> d_last </td>
+        <td> [m] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td> 8 </td>
+        <td> constant coefficient of pressure drop</td>
+        <td> c </td>
+        <td> none </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td> 9 </td>
+        <td> linear coefficient of pressure drop</td>
+        <td> l </td>
+        <td> [s/kg] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td> 10 </td>
+        <td> quadratic coefficient of pressure drop </td>
+        <td> q </td>
+        <td> [s<sup>2</sup>/kg<sup>2</sup>] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td> 11 </td>
+        <td> not used </td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td> to </td>
+        <td> ... </td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td> 20 </td>
+        <td> not used </td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<p> the width of the columns has to be specified in the header only, numbers given here seem to look pretty okay.
+
+
+</body>
+
+</html>

@@ -1,0 +1,569 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="de-at" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>ground storage U-tube</title>
+<style type="text/css">
+ div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+p
+	{margin-right:0cm;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ a:link
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;
+}
+tt
+	{font-family:"Courier New";
+	}
+ table.MsoNormalTable
+	{line-height:120%;
+	font-size:10.0pt;
+	font-family:"Calibri","sans-serif";
+	}
+ul
+	{margin-bottom:0cm;}
+ li.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ .auto-style1 {
+	margin-left: 120px;
+}
+</style>
+</head>
+
+<body>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;mso-fareast-font-family:"Times New Roman"'>
+
+<hr size=10 width="100%" noshade style='color:#A0A0A0' align=center>
+
+</span></span></div>
+
+<p><!--[if gte vml 1]><v:shape id="Bild_x0020_96" o:spid="_x0000_s1549" type="#_x0000_t75"
+ style='position:absolute;left:0;text-align:left;margin-left:64.25pt;
+ margin-top:0;width:104.25pt;height:102.75pt;z-index:94;visibility:visible;
+ mso-wrap-style:square;mso-wrap-distance-left:0;mso-wrap-distance-top:0;
+ mso-wrap-distance-right:0;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:right;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line'
+ o:allowoverlap="f">
+ <v:imagedata src="Figures/ground_storage_U-tube.jpg" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <w:wrap type="square" anchory="line" xmlns:w="urn:schemas-microsoft-com:office:word"/>
+</v:shape><![endif]--><![if !vml]><img width=139 height=137
+src="Figures/ground_storage_U-tube.jpg" align=right v:shapes="Bild_x0020_96"><![endif]><span class=GramE><span
+style='mso-bookmark:ground_storage_UTube'><span style='mso-bookmark:literature'><b><span
+lang=EN-US style='font-size:18.0pt;line-height:120%'>ground_storage_U-tube</span></b></span></span></span><span
+style='mso-bookmark:ground_storage_UTube'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+<b>Path: CARNOT/storage</b> <br clear=all style='mso-special-character:line-break'>
+<o:p></o:p></span></span></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:ground_storage_UTube'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></span></span></div>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Purpose</span></b><span lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+Model for the calculation of <span class=GramE>an</span> U-tube ground storage.
+</span><span lang=EN-US
+style='font-size:12.0pt;line-height:120%'><o:p></o:p></span></span></p>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>ATTENTION: The c-souce code of the model is not
+completely validated.</span></b></span></p>
+
+<p><span lang=EN-US style="mso-bookmark: literature">&nbsp;</span></p>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Description</span></b><span lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+This block contains the model of <span class=GramE>an</span> U-tube ground
+storage the heat is transferred in the ground by a U-tube heat exchanger in the
+bore. The surrounding surface is modelled for two different cases that can be
+found in the subset surface models for the ground storage. The heat transport
+in the ground is calculated with a two-dimensional finite difference scheme
+using the cylindrical symmetry (</span></span><a href="carnot_manual.htm#patankar"><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>Patankar, 1980</span></span></a><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>). </span></span></p>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class=GramE><tt><span lang=EN-US
+style='font-size:10.0pt;line-height:120%'>rho*</span></tt></span><tt><span lang=EN-US style='font-size:10.0pt;
+line-height:120%'>c * dT/dt = 1/r * d/dr (r * cond * dT/dr) + d2T/dz2+ S </span></tt></span></p>
+
+<p><span style='mso-bookmark:literature'><span class=GramE><span lang=EN-US
+style='font-size:13.5pt;line-height:120%'>where</span></span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> S is the source term. For the central node (bore) </span></span></p>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><tt><span lang=EN-US style='font-size:10.0pt;
+line-height:120%'>S = (UA + cond * 4 / dborehole) / dV * (Tfluid - T). </span></tt></span></p>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>The storage is divided into ZNODES nodes in
+z-direction, RNODES nodes in radial direction and 6 nodes in angular direction.
+The energy balance for every node is: </span></span></p>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><tt><span lang=EN-US style='font-size:10.0pt;
+line-height:120%'> <span class=GramE>rho*</span>c*dT/dt = cond/d<sub>z</sub><sup>2</sup>
+* (T<sub>node_up</sub>+T<sub>node_down</sub> - 2*T<sub>node</sub>) + cond*(r+d<sub>r</sub>/2)/(r*d<sub>r</sub><sup>2</sup>)
+* (T<sub>node_out</sub> - T<sub>node</sub>) + cond*(r-d<sub>r</sub>/2)/(r*d<sub>r</sub><sup>2</sup>)
+* (T<sub>node_in</sub> - T<sub>node</sub>) </span></tt></span></p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 style='mso-cellspacing:1.5pt;
+ mso-yfti-tbllook:1184'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><b><span lang=EN-US
+  style='font-size:13.5pt;line-height:120%'>symbol</span><span lang=EN-US><o:p></o:p></span></b></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><b><span lang=EN-US
+  style='font-size:13.5pt;line-height:120%'>used for</span><span lang=EN-US><o:p></o:p></span></b></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><b><span lang=EN-US
+  style='font-size:13.5pt;line-height:120%'>unit</span><span lang=EN-US><o:p></o:p></span></b></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>&nbsp;</td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>cond</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>effective thermal conductivity </span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>[W/(m K)]</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>&nbsp;</td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>c</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>heat capacity </span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>[J/(kg K)]</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>&nbsp;</td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>d<sub>a</sub> = pi/3 </span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>angular distance between nodes </span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>[rad]</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>&nbsp;</td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>d<sub>r</sub></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>radial between two nodes </span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>[m]</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>&nbsp;</td>
+ </tr>
+ <tr style='mso-yfti-irow:5'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>d<sub>z</sub></span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>axial between two nodes </span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>&nbsp;</td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>[m]</span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>rho</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>density</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>[kg/m<sup>3</sup>]</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>&nbsp;</td>
+ </tr>
+ <tr style='mso-yfti-irow:7'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>T</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>temperature </span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>[K]</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>&nbsp;</td>
+ </tr>
+ <tr style='mso-yfti-irow:8'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>t</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>time</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>[s]</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>&nbsp;</td>
+ </tr>
+ <tr style='mso-yfti-irow:9;mso-yfti-lastrow:yes'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>UA</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>heat transfer</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>[W/K]</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>&nbsp;</td>
+ </tr>
+</table>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>According to </span></span><a href="carnot_manual.htm#albers"><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>Albers (1991)</span></span></a><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> the thermal properties of the ground can be characterized by
+only four types. For the bore, a fifth type of filling can be specified
+(betting bore filling) (Reuss, 1993). <br>
+An insulation material between descending and rising pipe is not calculated.
+Research shows that the performance of the U-tube decreases when using the
+insulation (Reuss, 1993). This is due to the reduction in the heat transfer
+surface of the pipe: about one third of the perimeter is covered by the
+insulation. <br>
+The model gets the thermal conductivity and capacity from a table: </span></span></p>
+
+<table class=MsoNormalTable border=0 cellpadding=0 style='mso-cellspacing:1.5pt;
+ mso-yfti-tbllook:1184'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>&nbsp;</td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><b><span lang=EN-US
+  style='font-size:13.5pt;line-height:120%'>conductivity [W/(m K)]</span><span
+  lang=EN-US><o:p></o:p></span></b></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><b><span lang=EN-US
+  style='font-size:13.5pt;line-height:120%'>Capacity [J/(m<sup>3</sup>K)]</span><span
+  lang=EN-US><o:p></o:p></span></b></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>dry sand</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>0.70</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>1382400</span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>sand saturated with water </span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>1.88</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>1798200</span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>humid clay</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>1.45</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>2410560</span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>clay saturated with water</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>2.90</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>2864160</span></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;mso-yfti-lastrow:yes'>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>bentonite</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>0.58</span></span></p>
+  </td>
+  <td style='padding:.75pt .75pt .75pt .75pt'>
+  <p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+  13.5pt;line-height:120%'>1798200</span></span></p>
+  </td>
+ </tr>
+</table>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>In axial direction the nodes have the same extension
+(same height), in radial direction the size increases with the radius. The size
+of the node is proportional to its distance from the centre. </span></span></p>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>This is better to model the fast changes near the heat
+exchanger pipe. The boundary conditions for the outer nodes are specified at
+the surface (top node) and at the bottom. For the nodes in-between the
+temperature is linearly interpolated. </span></span></p>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Inputs:</span></b><span lang=EN-US style='font-size:13.5pt;line-height:120%'> </span></span></p>
+
+<ul type=disc class="auto-style1">
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l222 level1 lfo104;tab-stops:list 36.0pt'><a href="carnot_manual.htm#weather_data_vector"><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>Weather data
+     vector</span></span></a><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'> </span><span lang=EN-US style='mso-fareast-font-family:
+     "Times New Roman"'><o:p></o:p></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l222 level1 lfo104;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>THVin </span><span lang=EN-US style='mso-fareast-font-family:
+     "Times New Roman"'><o:p></o:p></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l222 level1 lfo104;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>temperature at
+     ground surface [°C] </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l222 level1 lfo104;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>temperature
+     below storage [°C] </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></li>
+</ul>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Outputs:</span></b><span lang=EN-US style='font-size:13.5pt;line-height:120%'> </span></span></p>
+
+<ul type=disc class="auto-style1">
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l114 level1 lfo105;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>THV </span><span lang=EN-US style='mso-fareast-font-family:
+     "Times New Roman"'><o:p></o:p></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l114 level1 lfo105;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>temperatures
+     at measurement points </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></li>
+</ul>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Because you need to know the temperature at fixed
+places inside the storage, a number of measurement points (M_PTS) is placed at
+equidistant locations inside the storage, no matter how many nodes are used for
+the calculation. The output vector starts with the top-temperature and ends
+with the bottom-temperature (M_PTS). <br>
+Three measurement points are arranged in a layer: </span></span></p>
+
+<ul type=disc class="auto-style1">
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l67 level1 lfo106;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>first at the
+     centre of the storage </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l67 level1 lfo106;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'>second at half
+     of the radius </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l67 level1 lfo106;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span class=GramE><span lang=EN-US
+     style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:"Times New Roman"'>third</span></span><span lang=EN-US style='font-size:13.5pt;
+     line-height:120%;mso-fareast-font-family:"Times New Roman"'> at the outer
+     boundary. </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></li>
+</ul>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>The layers are distributed over the height range
+(first sensor is at top, last at bottom). One of the surface models in the
+subset &quot;surface models&quot; is used in the subsystem of the ground
+storage. The </span></span><a href="carnot_manual.htm#weather_data_vector"><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>Weather data vector</span></span></a><span style='mso-bookmark:literature'><span lang=EN-US
+style='font-size:13.5pt;line-height:120%'> is transformed to a heat transfer
+vector for the surface. Specify the albedo of the ground for this region. You
+may use the open ground model or the insulated cover model for both regions.
+Just remove the old blocks and copy a new one at its place (break the library
+link of the storage before doing that, otherwise you will change the CARNOT
+library). <br>
+Validation: <br>
+This model has not yet been thoroughly tested. There is only few measured data
+available for this type of storage. The model has been compared with the data
+published by Reuss (Reuss 1988)<span class=GramE>,</span> mainly with the data
+obtained in the laboratory model of a U-tube ground storage. <br>
+<b>Attention<span class=GramE>:<span style='font-weight:normal'>The</span></span></b>
+model does not include water transport phenomena. <span class=GramE>Specially</span>
+for higher temperatures (&gt; 40°C) the water transport has high impact on the
+heat transport and the model might not be correct any longer. </span></span></p>
+
+<p><a href="carnot_manual.htm#Literature"><span
+style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>Literature:</span></b></span></a><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> <br>
+Reuss: Erdsondenspeicher, Landtechnik Weinstephan, TU München, 1988 <br>
+</span></span><a href="carnot_manual.htm#patankar"><span style='mso-bookmark:literature'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Patankar, Numerical Heat
+Transfer</span></b></span></a><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> <br>
+Albers: Erdreichwärmetauscher <br>
+<b>Parameters and Dialog Box</b> <br>
+</span></span><!--[if gte vml 1]><v:shape id="Bild_x0020_97" o:spid="_x0000_s1548"
+ type="#_x0000_t75" style='position:absolute;left:0;text-align:left;
+ margin-left:0;margin-top:0;width:282pt;height:445.5pt;z-index:95;visibility:visible;
+ mso-wrap-style:square;mso-wrap-distance-left:0;mso-wrap-distance-top:0;
+ mso-wrap-distance-right:0;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:left;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line'
+ o:allowoverlap="f">
+ <v:imagedata src="Figures/ground_storage_U-tubeSHOT.JPG" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <w:wrap type="square" anchory="line" xmlns:w="urn:schemas-microsoft-com:office:word"/>
+</v:shape><![endif]--><![if !vml]><img width=376 height=594
+src="Figures/ground_storage_U-tubeSHOT.JPG" align=left v:shapes="Bild_x0020_97"><![endif]><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'><br clear=all
+style='mso-special-character:line-break'>
+</span></span></p>
+
+<p><span style='mso-bookmark:literature'><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>&nbsp;</span></span></p>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Characteristics</span></b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> <br>
+Direct Feedthrough&nbsp;&nbsp;&nbsp;Yes <br>
+Sample
+time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size:13.5pt;
+line-height:120%'>&nbsp;
+</span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> Inherited
+from driving block <br>
+States&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='font-size:13.5pt;
+line-height:120%'> &nbsp;&nbsp;&nbsp;
+</span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> corresponding to the number of nodes <br>
+Vectorized&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size:13.5pt;
+line-height:120%'>&nbsp;&nbsp;
+</span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> No
+</span></span></p>
+
+</body>
+
+</html>

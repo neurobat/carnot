@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>DWD TRY Radiation Filter</title>
+<style type="text/css">
+ div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+p
+	{margin-right:0cm;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ ul
+	{margin-bottom:0cm;}
+ li.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ .auto-style1 {
+	margin-left: 120px;
+}
+.auto-style2 {
+	font-size: 13.5pt;
+}
+</style>
+</head>
+
+<body>
+
+<hr size=10 noshade  style='color:#A0A0A0;margin-left:108pt' >
+
+</span></span></span></div>
+
+<p><!--[if gte vml 1]><v:shape id="Bild_x0020_251" o:spid="_x0000_s1394"
+ type="#_x0000_t75" alt="symbol" style='position:absolute;left:0;text-align:left;
+ margin-left:4.25pt;margin-top:0;width:44.25pt;height:46.5pt;z-index:249;
+ visibility:visible;mso-wrap-style:square;mso-wrap-distance-left:0;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:0;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:right;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line'
+ o:allowoverlap="f">
+ <v:imagedata src="Figures/systemtime.jpg" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <w:wrap type="square" anchory="line" xmlns:w="urn:schemas-microsoft-com:office:word"/>
+</v:shape><![endif]--><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><a
+name=systemtime></a><span style='mso-bookmark:systemtime'><span
+class=GramE><b><span style='font-size:18.0pt;line-height:120%'>
+DWD_TRY_Radiation_Filter</span></b></span></span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> <br>
+<b>Path: CARNOT/<span lang="de">Weather</span></b><o:p></o:p></span></span></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></span></span></div>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Purpose</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'><br>
+</span><span style='font-size:13.5pt;line-height:120%'>Filter peaks in solar 
+beam normal radiation in Test Reference Years.</span></span></span></p>
+<p class="auto-style2"><o:p><strong>Description</strong><br />
+The peaks occur because the time comlumn in the DWD reference years is not 
+correct. For details see <a href="pdf/Hiller_TRY_Klimadatensaetze_OTTI_2015.pdf">
+Hiller 2015</a>.</o:p></p>
+<p class="auto-style2">The filter sets the beam normal radiation reduces the 
+solar beam radiation to a filter parameter (1..10) times the cosine of the solar 
+zenith angle.</p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'>
+<font size="4"><strong>Parameters</strong></font><span style='font-size:13.5pt;line-height:120%'>: 
+filter level&nbsp;&nbsp;&nbsp;&nbsp; 1...10</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'><br>
+</span></span></span></p>
+
+<p><span style='mso-bookmark:literature'>
+<span style='mso-bookmark:schwamberger'><b>
+<span style='font-size:13.5pt;line-height:120%'>Inp</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>uts</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>:</span><span style='font-size:13.5pt;line-height:120%'>&nbsp;&nbsp;&nbsp; </span></span></span></p>
+<ul type=disc class="auto-style1">
+    <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l92 level1 lfo210;tab-stops:list 36.0pt'>
+    <span
+     style='mso-bookmark:literature'>
+    <span style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>Weather Data Bus </span></span></li>
+</ul>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Outputs</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>: </span></span></span></p>
+<ul type=disc class="auto-style1">
+    <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l92 level1 lfo210;tab-stops:list 36.0pt'>
+    <span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'>
+    <span style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>Weather Data Bus with filtered beam radiation</span><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'> </span><o:p></o:p>
+	</span></span></li>
+</ul>
+
+<p><span style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:
+13.5pt;line-height:120%'>Characteristics </span></b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'><br>
+Direct Feedthrough</span><span style='font-size:13.5pt;
+line-height:120%'>&nbsp; Yes</span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> <br>
+Sample time</span><span style='font-size:13.5pt;
+line-height:120%'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>Inherited from driving block <br>
+Vectorized</span><span style='font-size:13.5pt;
+line-height:120%'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>No</span></span></p>
+
+</body>
+
+</html>

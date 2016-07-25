@@ -1,0 +1,189 @@
+Carnot guidelines for s-function programming
+
+see also: chapter 3 Advanced Topics in the manual
+
+
+
+**********************************************************************
+1) Using Simulink templates for s-functions
+Some methods are optional in the s-function. They can be undefined 
+in the Simulink templates (e.g. sfuntmpl_basic.c or sfuntmpl_doc.c).
+Example:
+#define MDL_INITIALIZE_CONDITIONS   /* Change to #undef to remove function */
+#if defined(MDL_INITIALIZE_CONDITIONS)
+ static void mdlInitializeConditions(SimStruct *S) 
+ { 
+ } 
+#endif /* MDL_INITIALIZE_CONDITIONS */ 
+
+To keep your code readable you should use one of the two options:
+
+a) You need the method, remove the #define, #undef and #if defined and 
+add a comment:
+/* The optional method mdlInitializeConditions is used by this s-function */
+ static void mdlInitializeConditions(SimStruct *S) 
+ { 
+ } 
+
+b) You do not need the method, remove the function and #pragmas but 
+add a comment:
+/* The optional method mdlInitializeConditions is not used by this s-function */
+ 
+ 
+**********************************************************************
+2) Constants
+a) Constant PI or M_PI (from math.h)
+Avoid to redefine the constant in your code unless you need a more 
+precise value than delivered by the original definition.
+In this case you should give an other name and add a comment:
+#define PI_PREC 3.1415... /* need more precision than PI defined in math.h */
+
+carlib.h defines PI to have exactely the same value as M_PI in math.h.
+Ohterwise it is defined to be the Matlab value for "long". 
+#ifndef PI
+    #ifdef M_PI
+        #define PI      M_PI                   /* definition in math.h */
+    #else
+        #define PI      3.141592653589793      /* Matlab value for long */
+    #endif
+#endif
+
+b) Constants defined in carlib.h
+carlib.h offers already several constants (e.g. PI, DEG2RAD, RAD2DEG, 
+C_GRAVITATION, SIGMA_STEFAN_BOLTZMANN, SECONDSPERDAY).
+Please check carlib.h before defining new constants.
+Avoid to redefine the constants in your code unless you need a more 
+precise value than delivered by the original definition. In this case 
+you should give an other name and add a comment.
+
+**********************************************************************
+3) Boolean and other logical variables
+Be carefull when using other than logical variables in if-conditions:
+Example:
+#define PULSE_FLAG  (*mxGetPr(ssGetSFcnParam(S,2)))   
+// PULSE_FLAG is of the same type as ssGetSFcnParam, so it is real_T
+...
+if (PULSE_FLAG && ENABLED==0 && INPUT_PULSE>0.9) 
+// The real_T varibale is used in the logical operation &&.
+// Not all compilers accept this without mistakes.
+...
+end
+
+You should either
+a)  define PULSE_FLAG to be a result of a logical operation:
+#define PULSE_FLAG  ((*mxGetPr(ssGetSFcnParam(S,2)))>0.5) 
+or
+b) use a logical operation in the if-condition
+if ((PULSE_FLAG > 0.5) && (ENABLED==0) && (INPUT_PULSE>0.9))
+You should also use parantheses to show the order of operation.
+
+
+**********************************************************************
+4) Floating point accuracy
+Real numbers are not exactely represented in by floating point variables:
+0.1 ? 1.10011001100110011001101 × 2^(-4)
+This is important for numbers close to maximum floating point number 
+and numbers between 0 and the smallest floating point number.
+
+Commonly known mathematical laws are not exactely valid:
+(x + y) + z ? x + (y + z)
+x*(y + z) ? (x*y) + (x*z)
+
+Absorption:
+(2^53 + 1) - 2^53 „=“ 0		bzw.	2^53 + 1 „=“ 2^53
+
+Extinction:
+a = 2.345678,  b = 2.346789;	b – a = 0.001111
+Rounded  a = 2.345, b = 2.346;	b – a = 0.001	error >> eps
+
+Catastrophic cancellation:
+sqrt(1e-16 + 1) – 1 „=“ 0
+
+
+**********************************************************************
+5) Mixing types of variables
+Assure that you compare or assign the correct type of variables.
+The following contruction (a) should be avoided:
+(a)	int n;
+	double y;
+	n = 0;
+	y = n;
+	if (n == y)
+	 ...
+	end
+First, there is an implicit type cast of int to double, i.e. the 
+integer n will be converted to a double before they become compared. 
+Often two different types of variables represent different information. 
+So a mixture of types is error prone.
+A possible solution is an explicit typecast using rounded integer:
+(b)	int n, m;
+	double y;
+	y = 0.0;
+	m = (int)(y+0.5);
+	if (n == m)
+	 ...
+	end
+
+Second, in the construction (a) two doubles are compared directly. 
+Due to floating point arithmetic, there may occur small errors 
+(see above). So it is necessary to check if the difference of two 
+doubles is smaller than a small value. This value is DLB_EPSILON 
+defined in float.h. Of course, the absolute value of the difference 
+is used, since we do not know which variable, y or ny, is bigger.
+So the second possibility is an explicit typecast using double:
+(c)	int n;
+	double y, ny;
+	n = 0;
+	ny = (double)n;
+	y = ny;
+	if (fabs(ny – y) < DBL_EPSILON)
+	 ...
+	end
+
+ 
+
+
+
+******************** FILE TRAILER ************************************
+ * This file is part of the CARNOT Blockset.
+ * Copyright (c) 1998-2015, Solar-Institute Juelich of the FH Aachen.
+ * Additional Copyright for this file see list auf authors.
+ * All rights reserved.
+ * Redistribution and use in source and binary forms, with or without 
+ * modification, are permitted provided that the following conditions are 
+ * met:
+ * 1. Redistributions of source code must retain the above copyright notice, 
+ *    this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright 
+ *    notice, this list of conditions and the following disclaimer in the 
+ *    documentation and/or other materials provided with the distribution.
+ * 3. Neither the name of the copyright holder nor the names of its 
+ *    contributors may be used to endorse or promote products derived from 
+ *    this software without specific prior written permission.
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE 
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE 
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN 
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF 
+ * THE POSSIBILITY OF SUCH DAMAGE.
+**********************************************************************
+
+Matlab(C) and Simulink(C) are registered trademarks of The MathWorks, Inc.
+for a complete list see: 
+http://www.mathworks.com/company/aboutus/policies_statements/trademarks.html
+
+**********************************************************************
+* F I L E   D O C U M E N T A T I O N
+* author list:      hf -> Bernd Hafner
+*                   mp -> Marcel Paasche
+*                   aw -> Arnold Wohlfeil
+* version: CarnotVersion.MajorVersionOfFunction.SubversionOfFunction
+* Version  Author   Changes                                 Date
+* 6.1.0    hf       created, based on remarks of aw         20aug2015
+* 6.1.1    hf/aw    added chapter 5                         18sep2015
+********************************** E N D *****************************

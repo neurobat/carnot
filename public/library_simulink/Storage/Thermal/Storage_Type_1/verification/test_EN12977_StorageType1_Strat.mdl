@@ -1,0 +1,3128 @@
+Model {
+  Name			  "test_EN12977_StorageType1_Strat"
+  Version		  8.2
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "windows-1252"
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.159"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  DataTypeOverrideAppliesTo "AllNumericTypes"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  FPTRunName		  "Run 1"
+  MaxMDLFileLineLength	  120
+  Object {
+    $PropName		    "BdWindowsInfo"
+    $ObjectID		    1
+    $ClassName		    "Simulink.BDWindowsInfo"
+    Object {
+      $PropName		      "WindowsInfo"
+      $ObjectID		      2
+      $ClassName	      "Simulink.WindowInfo"
+      IsActive		      [1]
+      Location		      [-8.0, -8.0, 1197.0, 816.0]
+      Object {
+	$PropName		"ModelBrowserInfo"
+	$ObjectID		3
+	$ClassName		"Simulink.ModelBrowserInfo"
+	Visible			[0]
+	DockPosition		"Left"
+	Width			[50]
+	Height			[50]
+	Filter			[8]
+      }
+      Object {
+	$PropName		"ExplorerBarInfo"
+	$ObjectID		4
+	$ClassName		"Simulink.ExplorerBarInfo"
+	Visible			[1]
+      }
+      Object {
+	$PropName		"EditorsInfo"
+	$ObjectID		5
+	$ClassName		"Simulink.EditorInfo"
+	IsActive		[1]
+	ViewObjType		"SimulinkTopLevel"
+	LoadSaveID		"0"
+	Extents			[1147.0, 642.0]
+	ZoomFactor		[1.0]
+	Offset			[0.0, 0.0]
+      }
+    }
+  }
+  Created		  "Mon Dec 17 19:30:29 2012"
+  Creator		  "drhf"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "drhf"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Wed Feb 18 16:53:17 2015"
+  RTWModifiedTimeStamp	  342465763
+  ModelVersionFormat	  "1.%<AutoIncrement:159>"
+  ConfigurationManager	  "none"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "all"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowDesignRanges	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  PauseTimes		  "5"
+  NumberOfSteps		  1
+  SnapshotBufferSize	  10
+  SnapshotInterval	  10
+  NumberOfLastSnapshots	  0
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  Object {
+    $PropName		    "DataLoggingOverride"
+    $ObjectID		    6
+    $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
+    model_		    "test_EN12977_StorageType1_Strat"
+    Array {
+      Type		      "Cell"
+      Dimension		      1
+      Cell		      "test_EN12977_StorageType1_Strat"
+      PropName		      "logAsSpecifiedByModels_"
+    }
+    Array {
+      Type		      "Cell"
+      Dimension		      1
+      Cell		      ""
+      PropName		      "logAsSpecifiedByModelsSSIDs_"
+    }
+  }
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  CovEnableCumulative	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      7
+      Version		      "1.13.1"
+      Array {
+	Type			"Handle"
+	Dimension		8
+	Simulink.SolverCC {
+	  $ObjectID		  8
+	  Version		  "1.13.1"
+	  StartTime		  "time(1)"
+	  StopTime		  "time(end)"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "time(2)-time(1)"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  EnableConcurrentExecution off
+	  ConcurrentTasks	  off
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  9
+	  Version		  "1.13.1"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SignalLoggingSaveFormat "ModelDataLogs"
+	  SaveOutput		  off
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  off
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  10
+	  Version		  "1.13.1"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    8
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    Cell		    "UseSpecifiedMinMax"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  UseFloatMulNetSlope	  off
+	  DefaultUnderspecifiedDataType	"double"
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  ActiveStateOutputEnumStorageType "Native Integer"
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	  ParallelExecutionInRapidAccelerator on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  11
+	  Version		  "1.13.1"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "UseLocalSettings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  FrameProcessingCompatibilityMsg "warning"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  SimStateOlderReleaseMsg "error"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	  SFUnconditionalTransitionShadowingDiag "warning"
+	  SFUndirectedBroadcastEventsDiag "warning"
+	  SFTransitionActionBeforeConditionDiag	"warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  12
+	  Version		  "1.13.1"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerLongLong	  64
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdLongLongMode	  off
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerLongLong	  64
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetLongLongMode	  off
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  13
+	  Version		  "1.13.1"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  14
+	  Version		  "1.13.1"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  on
+	  SimBuildMode		  "sf_incremental_build"
+	  SimGenImportedTypeDefs  off
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  15
+	  Version		  "1.13.1"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    7
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    Cell		    "GenerateSLWebview"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  TLCOptions		  ""
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  PackageGeneratedCodeAndArtifacts off
+	  PackageName		  ""
+	  TemplateMakefile	  "grt_default_tmf"
+	  PostCodeGenCommand	  ""
+	  Description		  ""
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ProcessScript		  ""
+	  ConfigurationScript	  ""
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  CustomSourceCode	  ""
+	  CustomHeaderCode	  ""
+	  CustomInclude		  ""
+	  CustomSource		  ""
+	  CustomLibrary		  ""
+	  CustomInitializer	  ""
+	  CustomTerminator	  ""
+	  Toolchain		  "Automatically locate an installed toolchain"
+	  BuildConfiguration	  "Faster Builds"
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  PortableWordSizes	  off
+	  GenerateErtSFunction	  off
+	  CreateSILPILBlock	  "None"
+	  CodeExecutionProfiling  off
+	  CodeExecutionProfileVariable "executionProfile"
+	  CodeProfilingSaveOptions "SummaryOnly"
+	  CodeProfilingInstrumentation off
+	  SILDebugging		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  GenerateWebview	  off
+	  GenerateCodeMetricsReport off
+	  GenerateCodeReplacementReport	off
+	  RTWCompilerOptimization "Off"
+	  RTWCustomCompilerOptimizations ""
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  DataInitializer	  ""
+	  SharedConstantsCachingThreshold 1024
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      16
+	      Version		      "1.13.1"
+	      Array {
+		Type			"Cell"
+		Dimension		21
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"InsertPolySpaceComments"
+		Cell			"SFDataObjDesc"
+		Cell			"MATLABFcnDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      OperatorAnnotations     off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M_T"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      CustomSymbolStrUtil     "$N$C"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InternalIdentifier      "Shortened"
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      17
+	      Version		      "1.13.1"
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"PortableWordSizes"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"GenerateAllocFcn"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      CodeReplacementLibrary  "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      ConcurrentExecutionCompliant on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      MATLABClassNameForMDSCustomization "Simulink.SoftwareTarget.GRTCustomization"
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      GRTInterface	      on
+	      GenerateAllocFcn	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      RTWCAPIRootIO	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition     [ 400, 210, 1280, 840 ] 
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    7
+  }
+  Object {
+    $PropName		    "DataTransfer"
+    $ObjectID		    18
+    $ClassName		    "Simulink.GlobalDataTransfer"
+    DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
+    DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
+    DefaultTransitionBetweenContTasks "Ensure deterministic transfer (minimum delay)"
+    DefaultExtrapolationMethodBetweenContTasks "None"
+    AutoInsertRateTranBlk   [0]
+  }
+  ExplicitPartitioning	  off
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  MaskDefaults {
+    SelfModifiable	    "off"
+    IconFrame		    "on"
+    IconOpaque		    "on"
+    RunInitForIconRedraw    "off"
+    IconRotate		    "none"
+    PortRotate		    "default"
+    IconUnits		    "autoscale"
+  }
+  MaskParameterDefaults {
+    Evaluate		    "on"
+    Tunable		    "on"
+    NeverSave		    "off"
+    Internal		    "off"
+    ReadOnly		    "off"
+    Enabled		    "on"
+    Visible		    "on"
+    ToolTip		    "on"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      BusCreator
+      Inputs		      "4"
+      DisplayOption	      "none"
+      OutDataTypeStr	      "Inherit: auto"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      FromWorkspace
+      VariableName	      "simulink_input"
+      OutDataTypeStr	      "Inherit: auto"
+      SampleTime	      "-1"
+      Interpolate	      on
+      ZeroCross		      off
+      OutputAfterFinalValue   "Extrapolation"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      OutputFunctionCall      off
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Integrator
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "0"
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+      IgnoreLimit	      off
+      ZeroCross		      on
+      ContinuousStateAttributes	"''"
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      S-Function
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+      SFunctionDeploymentMode off
+    }
+    Block {
+      BlockType		      Scope
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      DataFormat	      "Array"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Selector
+      NumberOfDimensions      "1"
+      IndexMode		      "One-based"
+      InputPortWidth	      "-1"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      FunctionInterfaceSpec   "void_void"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      SFBlockType	      "NONE"
+      Variant		      off
+      GeneratePreprocessorConditionals off
+      ContentPreviewEnabled   off
+    }
+    Block {
+      BlockType		      Terminator
+    }
+    Block {
+      BlockType		      ToWorkspace
+      VariableName	      "simulink_output"
+      MaxDataPoints	      "1000"
+      Decimation	      "1"
+      SampleTime	      "0"
+      SaveFormat	      "Array"
+      FixptAsFi		      off
+      NumInputs		      "1"
+    }
+  }
+  System {
+    Name		    "test_EN12977_StorageType1_Strat"
+    Location		    [-8, -8, 1189, 808]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "1185"
+    Block {
+      BlockType		      FromWorkspace
+      Name		      "From\nWorkspace"
+      SID		      "883"
+      Position		      [125, 228, 190, 252]
+      ZOrder		      -1
+      BackgroundColor	      "magenta"
+      ShowName		      off
+      VariableName	      "Ts_sol_stg"
+      SampleTime	      "0"
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      FromWorkspace
+      Name		      "From\nWorkspace1"
+      SID		      "885"
+      Position		      [125, 198, 190, 222]
+      ZOrder		      -2
+      BackgroundColor	      "magenta"
+      ShowName		      off
+      VariableName	      "mdot_sol_stg"
+      SampleTime	      "0"
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      FromWorkspace
+      Name		      "From\nWorkspace10"
+      SID		      "964"
+      Position		      [580, 433, 645, 457]
+      ZOrder		      -3
+      BackgroundColor	      "magenta"
+      ShowName		      off
+      VariableName	      "Qdot_sol_stg"
+      SampleTime	      "0"
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      FromWorkspace
+      Name		      "From\nWorkspace11"
+      SID		      "965"
+      Position		      [585, 588, 650, 612]
+      ZOrder		      -4
+      BackgroundColor	      "magenta"
+      ShowName		      off
+      VariableName	      "Qdot_stg_hec"
+      SampleTime	      "0"
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      FromWorkspace
+      Name		      "From\nWorkspace2"
+      SID		      "886"
+      Position		      [125, 128, 190, 152]
+      ZOrder		      -5
+      BackgroundColor	      "magenta"
+      ShowName		      off
+      VariableName	      "Tamb"
+      SampleTime	      "0"
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      FromWorkspace
+      Name		      "From\nWorkspace3"
+      SID		      "887"
+      Position		      [125, 313, 190, 337]
+      ZOrder		      -6
+      BackgroundColor	      "magenta"
+      ShowName		      off
+      VariableName	      "Tr_stg_hec"
+      SampleTime	      "0"
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      FromWorkspace
+      Name		      "From\nWorkspace4"
+      SID		      "960"
+      Position		      [125, 283, 190, 307]
+      ZOrder		      -7
+      BackgroundColor	      "magenta"
+      ShowName		      off
+      VariableName	      "mdot_stg_hec"
+      SampleTime	      "0"
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      FromWorkspace
+      Name		      "From\nWorkspace5"
+      SID		      "902"
+      Position		      [125, 418, 190, 442]
+      ZOrder		      -8
+      BackgroundColor	      "magenta"
+      ShowName		      off
+      VariableName	      "Tr_sol_stg"
+      SampleTime	      "0"
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      FromWorkspace
+      Name		      "From\nWorkspace6"
+      SID		      "903"
+      Position		      [125, 388, 190, 412]
+      ZOrder		      -9
+      BackgroundColor	      "magenta"
+      ShowName		      off
+      VariableName	      "mdot_sol_stg"
+      SampleTime	      "0"
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      FromWorkspace
+      Name		      "From\nWorkspace7"
+      SID		      "904"
+      Position		      [125, 573, 190, 597]
+      ZOrder		      -10
+      BackgroundColor	      "magenta"
+      ShowName		      off
+      VariableName	      "Ts_stg_hec"
+      SampleTime	      "0"
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      FromWorkspace
+      Name		      "From\nWorkspace8"
+      SID		      "905"
+      Position		      [125, 543, 190, 567]
+      ZOrder		      -11
+      BackgroundColor	      "magenta"
+      ShowName		      off
+      VariableName	      "mdot_stg_hec"
+      SampleTime	      "0"
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      FromWorkspace
+      Name		      "From\nWorkspace9"
+      SID		      "955"
+      Position		      [810, 198, 875, 222]
+      ZOrder		      -12
+      BackgroundColor	      "magenta"
+      ShowName		      off
+      VariableName	      "Tstg"
+      SampleTime	      "0"
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux"
+      SID		      "952"
+      Ports		      [2, 1]
+      Position		      [935, 181, 940, 219]
+      ZOrder		      -13
+      ShowName		      off
+      Inputs		      "2"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "THBr_heating"
+      SID		      "1166"
+      Ports		      [2, 1]
+      Position		      [250, 290, 325, 325]
+      ZOrder		      -14
+      BackgroundColor	      "[0.909804, 0.819608, 0.321569]"
+      LibraryVersion	      "6.0.30"
+      SourceBlock	      "carnot/Source/Simple/create_THB"
+      SourceType	      "create THV"
+      ContentPreviewEnabled   off
+      p			      "1e5"
+      fluid		      "Water"
+      mix		      "0"
+      dia		      "0.02"
+      mID		      "No Pressure Drop"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "THBr_solar"
+      SID		      "1165"
+      Ports		      [2, 1]
+      Position		      [250, 205, 325, 240]
+      ZOrder		      -15
+      BackgroundColor	      "[0.909804, 0.819608, 0.321569]"
+      LibraryVersion	      "6.0.30"
+      SourceBlock	      "carnot/Source/Simple/create_THB"
+      SourceType	      "create THV"
+      ContentPreviewEnabled   off
+      p			      "1e5"
+      fluid		      "Water"
+      mix		      "0"
+      dia		      "0.02"
+      mID		      "No Pressure Drop"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "THBs_heating"
+      SID		      "1168"
+      Ports		      [2, 1]
+      Position		      [250, 550, 325, 585]
+      ZOrder		      -16
+      BackgroundColor	      "[0.909804, 0.819608, 0.321569]"
+      LibraryVersion	      "6.0.30"
+      SourceBlock	      "carnot/Source/Simple/create_THB"
+      SourceType	      "create THV"
+      ContentPreviewEnabled   off
+      p			      "1e5"
+      fluid		      "Water"
+      mix		      "0"
+      dia		      "0.02"
+      mID		      "No Pressure Drop"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "THBs_solar"
+      SID		      "1167"
+      Ports		      [2, 1]
+      Position		      [250, 395, 325, 430]
+      ZOrder		      -17
+      BackgroundColor	      "[0.909804, 0.819608, 0.321569]"
+      LibraryVersion	      "6.0.30"
+      SourceBlock	      "carnot/Source/Simple/create_THB"
+      SourceType	      "create THV"
+      ContentPreviewEnabled   off
+      p			      "1e5"
+      fluid		      "Water"
+      mix		      "0"
+      dia		      "0.02"
+      mID		      "No Pressure Drop"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "T_Sensor_Surface"
+      SID		      "959"
+      Ports		      [1, 1]
+      Position		      [670, 174, 755, 206]
+      ZOrder		      -18
+      BackgroundColor	      "gray"
+      LibraryVersion	      "6.0.30"
+      SourceBlock	      "carnot/Control/T_Sensor_Surface"
+      SourceType	      "surface sensor"
+      ContentPreviewEnabled   off
+      pos		      "[0.8830 0.7980 0.7130 0.6280 0.5430 0.4570 0.3720 0.2870 0.2020 0.1170]"
+      tdel		      "1"
+      t0		      "Tstg(1, 2:11)"
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator"
+      SID		      "958"
+      Position		      [715, 115, 735, 135]
+      ZOrder		      -19
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace"
+      SID		      "1102"
+      Ports		      [1]
+      Position		      [880, 305, 940, 335]
+      ZOrder		      -20
+      VariableName	      "Q_charge"
+      MaxDataPoints	      "1"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace1"
+      SID		      "1103"
+      Ports		      [1]
+      Position		      [870, 626, 945, 654]
+      ZOrder		      -21
+      VariableName	      "Q_discharge"
+      MaxDataPoints	      "1"
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace2"
+      SID		      "1118"
+      Ports		      [1]
+      Position		      [985, 626, 1060, 654]
+      ZOrder		      -22
+      VariableName	      "Qdot_discharge"
+      MaxDataPoints	      "inf"
+      SampleTime	      "180"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace3"
+      SID		      "1119"
+      Ports		      [1]
+      Position		      [985, 305, 1065, 335]
+      ZOrder		      -23
+      VariableName	      "Qdot_charge"
+      MaxDataPoints	      "inf"
+      SampleTime	      "180"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Tstg"
+      SID		      "951"
+      Ports		      [1]
+      Position		      [985, 184, 1015, 216]
+      ZOrder		      -24
+      Floating		      off
+      Location		      [6, 48, 1224, 719]
+      Open		      off
+      NumInputPorts	      "1"
+      ZoomMode		      "xonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      ShowLegends	      off
+      YMin		      "15"
+      YMax		      "60"
+      SaveName		      "ScopeData5"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "compare_1"
+      SID		      "1085"
+      Ports		      [4, 3]
+      Position		      [685, 337, 800, 463]
+      ZOrder		      -25
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      Port {
+	PortNumber		1
+	Name			"yellow=Tout_sim magenta=Tout_mes"
+	PropagatedSignals	"Tout"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		2
+	Name			"yellow=Q_sim magenta=Q_calc cyan=Q_mes"
+	PropagatedSignals	"energy"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		3
+	Name			"yellow=Qdot_sim magenta=Qdot_calc cyan=Qdot_mes"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      System {
+	Name			"compare_1"
+	Location		[330, 53, 1306, 894]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "THB_sim"
+	  SID			  "1086"
+	  Position		  [75, 58, 105, 72]
+	  ZOrder		  -1
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "THB_in"
+	  SID			  "1087"
+	  Position		  [55, 158, 85, 172]
+	  ZOrder		  -2
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "THB_mes"
+	  SID			  "1088"
+	  Position		  [25, 105, 55, 125]
+	  ZOrder		  -3
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Qdot_mes"
+	  SID			  "1089"
+	  Position		  [55, 340, 85, 360]
+	  ZOrder		  -4
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Display_THB1"
+	  SID			  "1171"
+	  Ports			  [2, 1]
+	  Position		  [180, 53, 290, 97]
+	  ZOrder		  -5
+	  LibraryVersion	  "6.0.30"
+	  SourceBlock		  "carnot/Outputs/Display_THB2"
+	  SourceType		  "display from THV"
+	  ContentPreviewEnabled	  off
+	  t			  on
+	  m			  off
+	  p			  off
+	  id			  off
+	  mix			  off
+	  d			  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "Tout"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "EnergyMeter1"
+	  SID			  "1169"
+	  Ports			  [2, 2]
+	  Position		  [185, 128, 280, 177]
+	  ZOrder		  -6
+	  LibraryVersion	  "6.0.30"
+	  SourceBlock		  "carnot/Control/EnergyMeter"
+	  SourceType		  "energy meter"
+	  ContentPreviewEnabled	  off
+	  Port {
+	    PortNumber		    2
+	    Name		    "power"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "EnergyMeter2"
+	  SID			  "1170"
+	  Ports			  [2, 2]
+	  Position		  [185, 213, 275, 262]
+	  ZOrder		  -7
+	  LibraryVersion	  "6.0.30"
+	  SourceBlock		  "carnot/Control/EnergyMeter"
+	  SourceType		  "energy meter"
+	  ContentPreviewEnabled	  off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator"
+	  SID			  "1092"
+	  Ports			  [1, 1]
+	  Position		  [215, 299, 245, 331]
+	  ZOrder		  -8
+	  ShowName		  off
+	  UpperSaturationLimit	  "1"
+	  LowerSaturationLimit	  "0"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  SID			  "1093"
+	  Ports			  [3, 1]
+	  Position		  [400, 130, 405, 200]
+	  ZOrder		  -9
+	  ShowName		  off
+	  Inputs		  "3"
+	  DisplayOption		  "bar"
+	  Port {
+	    PortNumber		    1
+	    Name		    "energy"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux1"
+	  SID			  "1094"
+	  Ports			  [3, 1]
+	  Position		  [440, 330, 445, 400]
+	  ZOrder		  -10
+	  ShowName		  off
+	  Inputs		  "3"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Tout"
+	  SID			  "1096"
+	  Position		  [415, 68, 445, 82]
+	  ZOrder		  -11
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Q"
+	  SID			  "1097"
+	  Position		  [490, 158, 520, 172]
+	  ZOrder		  -12
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Qdot"
+	  SID			  "1098"
+	  Position		  [485, 358, 515, 372]
+	  ZOrder		  -13
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  ZOrder		  1
+	  SrcBlock		  "THB_sim"
+	  SrcPort		  1
+	  Points		  [40, 0]
+	  Branch {
+	    ZOrder		    2
+	    Points		    [0, 100]
+	    DstBlock		    "EnergyMeter1"
+	    DstPort		    2
+	  }
+	  Branch {
+	    ZOrder		    3
+	    DstBlock		    "Display_THB1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  ZOrder		  4
+	  SrcBlock		  "THB_mes"
+	  SrcPort		  1
+	  Points		  [55, 0]
+	  Branch {
+	    ZOrder		    5
+	    Points		    [0, 135]
+	    DstBlock		    "EnergyMeter2"
+	    DstPort		    2
+	  }
+	  Branch {
+	    ZOrder		    6
+	    Points		    [0, -30]
+	    DstBlock		    "Display_THB1"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  ZOrder		  7
+	  SrcBlock		  "EnergyMeter1"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "Tout"
+	  ZOrder		  8
+	  Labels		  [0, 0]
+	  SrcBlock		  "Display_THB1"
+	  SrcPort		  1
+	  DstBlock		  "Tout"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "energy"
+	  ZOrder		  9
+	  Labels		  [0, 0]
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "Q"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  10
+	  SrcBlock		  "Qdot_mes"
+	  SrcPort		  1
+	  Points		  [50, 0]
+	  Branch {
+	    ZOrder		    11
+	    Points		    [0, -35]
+	    DstBlock		    "Integrator"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    12
+	    Points		    [0, 40]
+	    DstBlock		    "Mux1"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  Name			  "power"
+	  ZOrder		  13
+	  Labels		  [0, 0]
+	  SrcBlock		  "EnergyMeter1"
+	  SrcPort		  2
+	  Points		  [60, 0; 0, 175]
+	  DstBlock		  "Mux1"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  14
+	  SrcBlock		  "Mux1"
+	  SrcPort		  1
+	  DstBlock		  "Qdot"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  15
+	  SrcBlock		  "THB_in"
+	  SrcPort		  1
+	  Points		  [50, 0]
+	  Branch {
+	    ZOrder		    16
+	    Points		    [0, 60]
+	    DstBlock		    "EnergyMeter2"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    17
+	    Points		    [0, -25]
+	    DstBlock		    "EnergyMeter1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  ZOrder		  18
+	  SrcBlock		  "EnergyMeter2"
+	  SrcPort		  1
+	  Points		  [85, 0; 0, -60]
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  19
+	  SrcBlock		  "EnergyMeter2"
+	  SrcPort		  2
+	  Points		  [55, 0; 0, 115]
+	  DstBlock		  "Mux1"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  20
+	  SrcBlock		  "Integrator"
+	  SrcPort		  1
+	  Points		  [135, 0]
+	  DstBlock		  "Mux"
+	  DstPort		  3
+	}
+      }
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "compare_2"
+      SID		      "1172"
+      Ports		      [4, 3]
+      Position		      [690, 492, 805, 618]
+      ZOrder		      -26
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      Port {
+	PortNumber		1
+	Name			"yellow=Tout_sim magenta=Tout_mes"
+	PropagatedSignals	"Tout"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		2
+	Name			"yellow=Q_sim magenta=Q_calc cyan=Q_mes"
+	PropagatedSignals	"energy"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      Port {
+	PortNumber		3
+	Name			"yellow=Qdot_sim magenta=Qdot_calc cyan=Qdot_mes"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      System {
+	Name			"compare_2"
+	Location		[330, 53, 1306, 894]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "THB_sim"
+	  SID			  "1173"
+	  Position		  [75, 58, 105, 72]
+	  ZOrder		  -1
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "THB_in"
+	  SID			  "1174"
+	  Position		  [55, 158, 85, 172]
+	  ZOrder		  -2
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "THB_mes"
+	  SID			  "1175"
+	  Position		  [25, 105, 55, 125]
+	  ZOrder		  -3
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Qdot_mes"
+	  SID			  "1176"
+	  Position		  [55, 340, 85, 360]
+	  ZOrder		  -4
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Display_THB1"
+	  SID			  "1177"
+	  Ports			  [2, 1]
+	  Position		  [180, 53, 290, 97]
+	  ZOrder		  -5
+	  LibraryVersion	  "6.0.30"
+	  SourceBlock		  "carnot/Outputs/Display_THB2"
+	  SourceType		  "display from THV"
+	  ContentPreviewEnabled	  off
+	  t			  on
+	  m			  off
+	  p			  off
+	  id			  off
+	  mix			  off
+	  d			  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "Tout"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "EnergyMeter1"
+	  SID			  "1178"
+	  Ports			  [2, 2]
+	  Position		  [185, 128, 280, 177]
+	  ZOrder		  -6
+	  LibraryVersion	  "6.0.30"
+	  SourceBlock		  "carnot/Control/EnergyMeter"
+	  SourceType		  "energy meter"
+	  ContentPreviewEnabled	  off
+	  Port {
+	    PortNumber		    2
+	    Name		    "power"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "EnergyMeter2"
+	  SID			  "1179"
+	  Ports			  [2, 2]
+	  Position		  [185, 213, 275, 262]
+	  ZOrder		  -7
+	  LibraryVersion	  "6.0.30"
+	  SourceBlock		  "carnot/Control/EnergyMeter"
+	  SourceType		  "energy meter"
+	  ContentPreviewEnabled	  off
+	}
+	Block {
+	  BlockType		  Integrator
+	  Name			  "Integrator"
+	  SID			  "1180"
+	  Ports			  [1, 1]
+	  Position		  [215, 299, 245, 331]
+	  ZOrder		  -8
+	  ShowName		  off
+	  UpperSaturationLimit	  "1"
+	  LowerSaturationLimit	  "0"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  SID			  "1181"
+	  Ports			  [3, 1]
+	  Position		  [400, 130, 405, 200]
+	  ZOrder		  -9
+	  ShowName		  off
+	  Inputs		  "3"
+	  DisplayOption		  "bar"
+	  Port {
+	    PortNumber		    1
+	    Name		    "energy"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux1"
+	  SID			  "1182"
+	  Ports			  [3, 1]
+	  Position		  [440, 330, 445, 400]
+	  ZOrder		  -10
+	  ShowName		  off
+	  Inputs		  "3"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Tout"
+	  SID			  "1183"
+	  Position		  [415, 68, 445, 82]
+	  ZOrder		  -11
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Q"
+	  SID			  "1184"
+	  Position		  [490, 158, 520, 172]
+	  ZOrder		  -12
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Qdot"
+	  SID			  "1185"
+	  Position		  [485, 358, 515, 372]
+	  ZOrder		  -13
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  ZOrder		  1
+	  SrcBlock		  "Integrator"
+	  SrcPort		  1
+	  Points		  [135, 0]
+	  DstBlock		  "Mux"
+	  DstPort		  3
+	}
+	Line {
+	  ZOrder		  2
+	  SrcBlock		  "EnergyMeter2"
+	  SrcPort		  2
+	  Points		  [55, 0; 0, 115]
+	  DstBlock		  "Mux1"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  3
+	  SrcBlock		  "EnergyMeter2"
+	  SrcPort		  1
+	  Points		  [85, 0; 0, -60]
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  4
+	  SrcBlock		  "THB_in"
+	  SrcPort		  1
+	  Points		  [50, 0]
+	  Branch {
+	    ZOrder		    5
+	    Points		    [0, -25]
+	    DstBlock		    "EnergyMeter1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    6
+	    Points		    [0, 60]
+	    DstBlock		    "EnergyMeter2"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  ZOrder		  7
+	  SrcBlock		  "Mux1"
+	  SrcPort		  1
+	  DstBlock		  "Qdot"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "power"
+	  ZOrder		  8
+	  Labels		  [0, 0]
+	  SrcBlock		  "EnergyMeter1"
+	  SrcPort		  2
+	  Points		  [60, 0; 0, 175]
+	  DstBlock		  "Mux1"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  9
+	  SrcBlock		  "Qdot_mes"
+	  SrcPort		  1
+	  Points		  [50, 0]
+	  Branch {
+	    ZOrder		    10
+	    Points		    [0, 40]
+	    DstBlock		    "Mux1"
+	    DstPort		    3
+	  }
+	  Branch {
+	    ZOrder		    11
+	    Points		    [0, -35]
+	    DstBlock		    "Integrator"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  Name			  "energy"
+	  ZOrder		  12
+	  Labels		  [0, 0]
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "Q"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "Tout"
+	  ZOrder		  13
+	  Labels		  [0, 0]
+	  SrcBlock		  "Display_THB1"
+	  SrcPort		  1
+	  DstBlock		  "Tout"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  14
+	  SrcBlock		  "EnergyMeter1"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  15
+	  SrcBlock		  "THB_mes"
+	  SrcPort		  1
+	  Points		  [55, 0]
+	  Branch {
+	    ZOrder		    16
+	    Points		    [0, -30]
+	    DstBlock		    "Display_THB1"
+	    DstPort		    2
+	  }
+	  Branch {
+	    ZOrder		    17
+	    Points		    [0, 135]
+	    DstBlock		    "EnergyMeter2"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  ZOrder		  18
+	  SrcBlock		  "THB_sim"
+	  SrcPort		  1
+	  Points		  [40, 0]
+	  Branch {
+	    ZOrder		    19
+	    DstBlock		    "Display_THB1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    20
+	    Points		    [0, 100]
+	    DstBlock		    "EnergyMeter1"
+	    DstPort		    2
+	  }
+	}
+      }
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "heating"
+      SID		      "934"
+      Ports		      [3]
+      Position		      [1140, 495, 1205, 615]
+      ZOrder		      -27
+      Floating		      off
+      Location		      [540, 56, 1124, 723]
+      Open		      off
+      NumInputPorts	      "3"
+      ZoomMode		      "yonly"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+	axes2			"%<SignalLabel>"
+	axes3			"%<SignalLabel>"
+      }
+      ShowLegends	      off
+      YMin		      "20~-4e+007~-7500"
+      YMax		      "60~4e+007~7500"
+      SaveName		      "ScopeData4"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "load_data"
+      SID		      "1120"
+      Ports		      []
+      Position		      [125, 34, 238, 77]
+      ZOrder		      -28
+      BackgroundColor	      "orange"
+      DropShadow	      on
+      ShowName		      off
+      LibraryVersion	      "1.225"
+      OpenFcn		      "[filename, pathname, filterindex] = ...             \n   uigetfile( {  'data*.mat', ...         "
+      "          \n   'validation files (data*.mat)'; ...              \n   '*.mat','MAT-files (*.mat)'; ...           "
+      "      \n   '*.*',  'All Files (*.*)'},  'Pick a data file');\n                                                  "
+      "  \nif (filterindex > 0)                                \n   load(filename)                                   \n"
+      "end                                                 "
+      FontName		      "Arial"
+      FontSize		      12
+      FontWeight	      "bold"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      Object {
+	$PropName		"MaskObject"
+	$ObjectID		19
+	$ClassName		"Simulink.Mask"
+	Display			"disp('double click \\nto load data')"
+      }
+      System {
+	Name			"load_data"
+	Location		[373, 179, 983, 847]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+      }
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "solar"
+      SID		      "910"
+      Ports		      [3]
+      Position		      [1125, 340, 1190, 460]
+      ZOrder		      -29
+      Floating		      off
+      Location		      [318, 77, 868, 744]
+      Open		      off
+      NumInputPorts	      "3"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+	axes2			"%<SignalLabel>"
+	axes3			"%<SignalLabel>"
+      }
+      ShowLegends	      off
+      YMin		      "17.5~-1.9e+007~-5500"
+      YMax		      "60~1e+006~4500"
+      SaveName		      "ScopeData2"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "storage_type_1_with_statified_charge"
+      SID		      "1143"
+      Ports		      [3, 4]
+      Position		      [425, 95, 615, 350]
+      ZOrder		      -30
+      BackgroundColor	      "red"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      Object {
+	$PropName		"MaskObject"
+	$ObjectID		20
+	$ClassName		"Simulink.Mask"
+	Type			"Multiport Storage"
+	Description		"The volmue of the cylindrical storage is divided in a number \"nodes\" of horizontal slices (1xN-node m"
+	"odel). For each node the energy balance equation is solved.\nLook under mask to set the ports types and properties."
+	Help			"eval('man(''storage_multiport'')')"
+	Initialization		"standing = pos-1;\n\nif standing\n    dh = volume/(0.25*dia^2*pi*nodes);\nelse\n    dh = dia/nodes;\n"
+	"end\n\n% height = 0.5*dh : dh : dh*nodes;\nheight = dh*nodes;\n\nmpoints = max(mpoints,1);\nmpts = round(nodes/mpoint"
+	"s/2:nodes/mpoints:nodes);"
+	Display			"plot(10,10,90,100,[40,40,45,55,60,60,55,45,40],[84,36,30,30,36,84,90,90,84],[40,35],[77,77],[64,60],[77,77"
+	"],[40,35],[42,42],[64,60],[42,42])"
+	IconOpaque		"off"
+	Array {
+	  Type			  "Simulink.MaskParameter"
+	  Dimension		  11
+	  Object {
+	    $ObjectID		    21
+	    Type		    "edit"
+	    Name		    "uloss"
+	    Prompt		    "Heat loss coefficient cylinder wall in W/(m²K)"
+	    Value		    "1.4"
+	    Tunable		    "off"
+	    TabName		    "Thermal"
+	  }
+	  Object {
+	    $ObjectID		    22
+	    Type		    "edit"
+	    Name		    "ubot"
+	    Prompt		    "Heat loss coefficient bottom in W/(m²K)"
+	    Value		    "1.4"
+	    Tunable		    "off"
+	    TabName		    "Thermal"
+	  }
+	  Object {
+	    $ObjectID		    23
+	    Type		    "edit"
+	    Name		    "utop"
+	    Prompt		    "Heat loss coefficient top cover in W/(m²K)"
+	    Value		    "1.4"
+	    Tunable		    "off"
+	    TabName		    "Thermal"
+	  }
+	  Object {
+	    $ObjectID		    24
+	    Type		    "edit"
+	    Name		    "cond"
+	    Prompt		    "Effective vertical conductivity in W/(m*K)"
+	    Value		    "1.2"
+	    Tunable		    "off"
+	    TabName		    "Thermal"
+	  }
+	  Object {
+	    $ObjectID		    25
+	    Type		    "edit"
+	    Name		    "tini"
+	    Prompt		    "Initial temperature (vector or scalar) in °C"
+	    Value		    "interp1(1:10, Tstg(1, 2:end), 10:-9/99:1)"
+	    Tunable		    "off"
+	    TabName		    "Thermal"
+	  }
+	  Object {
+	    $ObjectID		    26
+	    Type		    "edit"
+	    Name		    "volume"
+	    Prompt		    "Volume in m³"
+	    Value		    "0.225"
+	    Tunable		    "off"
+	    TabName		    "Geometry"
+	  }
+	  Object {
+	    $ObjectID		    27
+	    Type		    "edit"
+	    Name		    "dia"
+	    Prompt		    "Diameter in m"
+	    Value		    "0.53"
+	    Tunable		    "off"
+	    TabName		    "Geometry"
+	  }
+	  Object {
+	    $ObjectID		    28
+	    Type		    "popup"
+	    Array {
+	      Type		      "Cell"
+	      Dimension		      2
+	      Cell		      "lying cylinder"
+	      Cell		      "standing cylinder"
+	      PropName		      "TypeOptions"
+	    }
+	    Name		    "pos"
+	    Prompt		    "Position"
+	    Value		    "standing cylinder"
+	    Tunable		    "off"
+	    TabName		    "Geometry"
+	  }
+	  Object {
+	    $ObjectID		    29
+	    Type		    "edit"
+	    Name		    "nconnect"
+	    Prompt		    "Number of connections"
+	    Value		    "2"
+	    Tunable		    "off"
+	    TabName		    "Geometry"
+	  }
+	  Object {
+	    $ObjectID		    30
+	    Type		    "edit"
+	    Name		    "nodes"
+	    Prompt		    "Number of nodes"
+	    Value		    "100"
+	    Tunable		    "off"
+	    TabName		    "Calculation"
+	  }
+	  Object {
+	    $ObjectID		    31
+	    Type		    "edit"
+	    Name		    "mpoints"
+	    Prompt		    "Number of measurement points"
+	    Value		    "100"
+	    TabName		    "Calculation"
+	  }
+	  PropName		  "Parameters"
+	}
+      }
+      System {
+	Name			"storage_type_1_with_statified_charge"
+	Location		[16, 52, 949, 874]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "Tamb"
+	  SID			  "1144"
+	  Position		  [615, 133, 645, 147]
+	  ZOrder		  -1
+	  BlockMirror		  on
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "Tamb"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "THB_chg"
+	  SID			  "1145"
+	  Position		  [140, 438, 170, 452]
+	  ZOrder		  -2
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "THBbackup_in"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "THB_dis"
+	  SID			  "1146"
+	  Position		  [135, 643, 165, 657]
+	  ZOrder		  -3
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "THBheating_in"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  BusCreator
+	  Name			  "Bus\nCreator"
+	  SID			  "1147"
+	  Ports			  [13, 1]
+	  Position		  [1190, 15, 1195, 495]
+	  ZOrder		  -4
+	  ForegroundColor	  "gray"
+	  ShowName		  off
+	  Inputs		  "13"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  BusCreator
+	  Name			  "Bus\nCreator1"
+	  SID			  "1148"
+	  Ports			  [2, 1]
+	  Position		  [815, 61, 820, 99]
+	  ZOrder		  -5
+	  ShowName		  off
+	  Inputs		  "2"
+	  DisplayOption		  "bar"
+	  Port {
+	    PortNumber		    1
+	    Name		    "energy"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  SID			  "1149"
+	  Ports			  [1, 2]
+	  Position		  [730, 61, 735, 99]
+	  ZOrder		  -6
+	  ShowName		  off
+	  Outputs		  "2"
+	  DisplayOption		  "bar"
+	  Port {
+	    PortNumber		    1
+	    Name		    "internal"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "losses"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "constant_THB"
+	  SID			  "1150"
+	  Ports			  [0, 1]
+	  Position		  [1035, 103, 1095, 127]
+	  ZOrder		  -7
+	  BackgroundColor	  "[0.380392, 0.741176, 0.988235]"
+	  ShowName		  off
+	  LibraryVersion	  "6.0.30"
+	  SourceBlock		  "carnot/Source/Simple/Constant_THB"
+	  SourceType		  "constant THB"
+	  ContentPreviewEnabled	  off
+	  t			  "20"
+	  mdot			  "0"
+	  p			  "1e5"
+	  mID			  "No Pressure Drop"
+	  fluid			  "Water"
+	  mix			  "0"
+	  dia			  "0.02"
+	  hgt			  "0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "THBdhw_in"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "constant_THB1"
+	  SID			  "1151"
+	  Ports			  [0, 1]
+	  Position		  [1035, 138, 1095, 162]
+	  ZOrder		  -8
+	  BackgroundColor	  "[0.380392, 0.741176, 0.988235]"
+	  ShowName		  off
+	  LibraryVersion	  "6.0.30"
+	  SourceBlock		  "carnot/Source/Simple/Constant_THB"
+	  SourceType		  "constant THB"
+	  ContentPreviewEnabled	  off
+	  t			  "20"
+	  mdot			  "0"
+	  p			  "1e5"
+	  mID			  "No Pressure Drop"
+	  fluid			  "Water"
+	  mix			  "0"
+	  dia			  "0.02"
+	  hgt			  "0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "THBdhw_out"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "constant_THB6"
+	  SID			  "1152"
+	  Ports			  [0, 1]
+	  Position		  [1035, 313, 1095, 337]
+	  ZOrder		  -9
+	  BackgroundColor	  "[0.380392, 0.741176, 0.988235]"
+	  ShowName		  off
+	  LibraryVersion	  "6.0.30"
+	  SourceBlock		  "carnot/Source/Simple/Constant_THB"
+	  SourceType		  "constant THB"
+	  ContentPreviewEnabled	  off
+	  t			  "20"
+	  mdot			  "0"
+	  p			  "1e5"
+	  mID			  "No Pressure Drop"
+	  fluid			  "Water"
+	  mix			  "0"
+	  dia			  "0.02"
+	  hgt			  "0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "THBother_in"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "constant_THB7"
+	  SID			  "1153"
+	  Ports			  [0, 1]
+	  Position		  [1035, 348, 1095, 372]
+	  ZOrder		  -10
+	  BackgroundColor	  "[0.380392, 0.741176, 0.988235]"
+	  ShowName		  off
+	  LibraryVersion	  "6.0.30"
+	  SourceBlock		  "carnot/Source/Simple/Constant_THB"
+	  SourceType		  "constant THB"
+	  ContentPreviewEnabled	  off
+	  t			  "20"
+	  mdot			  "0"
+	  p			  "1e5"
+	  mID			  "No Pressure Drop"
+	  fluid			  "Water"
+	  mix			  "0"
+	  dia			  "0.02"
+	  hgt			  "0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "THBother_out"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "constant_THB8"
+	  SID			  "1154"
+	  Ports			  [0, 1]
+	  Position		  [1035, 383, 1095, 407]
+	  ZOrder		  -11
+	  BackgroundColor	  "[0.380392, 0.741176, 0.988235]"
+	  ShowName		  off
+	  LibraryVersion	  "6.0.30"
+	  SourceBlock		  "carnot/Source/Simple/Constant_THB"
+	  SourceType		  "constant THB"
+	  ContentPreviewEnabled	  off
+	  t			  "20"
+	  mdot			  "0"
+	  p			  "1e5"
+	  mID			  "No Pressure Drop"
+	  fluid			  "Water"
+	  mix			  "0"
+	  dia			  "0.02"
+	  hgt			  "0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "THBsolar_in"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "constant_THB9"
+	  SID			  "1155"
+	  Ports			  [0, 1]
+	  Position		  [1035, 418, 1095, 442]
+	  ZOrder		  -12
+	  BackgroundColor	  "[0.380392, 0.741176, 0.988235]"
+	  ShowName		  off
+	  LibraryVersion	  "6.0.30"
+	  SourceBlock		  "carnot/Source/Simple/Constant_THB"
+	  SourceType		  "constant THB"
+	  ContentPreviewEnabled	  off
+	  t			  "20"
+	  mdot			  "0"
+	  p			  "1e5"
+	  mID			  "No Pressure Drop"
+	  fluid			  "Water"
+	  mix			  "0"
+	  dia			  "0.02"
+	  hgt			  "0"
+	  Port {
+	    PortNumber		    1
+	    Name		    "THBsolar_out"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "pipe_charge"
+	  SID			  "1156"
+	  Ports			  [2, 2]
+	  Position		  [400, 406, 535, 459]
+	  ZOrder		  -13
+	  BackgroundColor	  "lightBlue"
+	  LibraryVersion	  "6.0.30"
+	  SourceBlock		  "carnot/Storage/Thermal/Storage_Ports/Pipe"
+	  SourceType		  "pipe connection to storage"
+	  ContentPreviewEnabled	  off
+	  h_in			  "0.62"
+	  h_out			  "0"
+	  dplin			  "0"
+	  dpqua			  "0"
+	  nodes			  "nodes"
+	  hgt			  "height"
+	  dia			  "dia"
+	  Port {
+	    PortNumber		    2
+	    Name		    "THBbackup_out"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "pipe_discharge"
+	  SID			  "1157"
+	  Ports			  [2, 2]
+	  Position		  [400, 611, 535, 664]
+	  ZOrder		  -14
+	  BackgroundColor	  "lightBlue"
+	  LibraryVersion	  "6.0.30"
+	  SourceBlock		  "carnot/Storage/Thermal/Storage_Ports/Pipe"
+	  SourceType		  "pipe connection to storage"
+	  ContentPreviewEnabled	  off
+	  h_in			  "0.1"
+	  h_out			  "1"
+	  dplin			  "0"
+	  dpqua			  "0"
+	  nodes			  "nodes"
+	  hgt			  "height"
+	  dia			  "dia"
+	  Port {
+	    PortNumber		    2
+	    Name		    "THBheating_out"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "select_T"
+	  SID			  "1158"
+	  Ports			  [1, 1]
+	  Position		  [135, 271, 175, 309]
+	  ZOrder		  -15
+	  BlockMirror		  on
+	  InputPortWidth	  "nodes"
+	  IndexOptions		  "Index vector (dialog)"
+	  Indices		  "mpts"
+	  OutputSizes		  "1"
+	  Port {
+	    PortNumber		    1
+	    Name		    "Tnodes"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  S-Function
+	  Name			  "storeT"
+	  SID			  "1159"
+	  Ports			  [3, 2]
+	  Position		  [400, 96, 550, 354]
+	  ZOrder		  -16
+	  BlockMirror		  on
+	  FunctionName		  "storage_Tnodes"
+	  Parameters		  "dia, volume, standing, uloss , ubot, utop, cond, tini, nodes, nconnect"
+	  EnableBusSupport	  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "Energy"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "Tnodes"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "data_S"
+	  SID			  "1160"
+	  Position		  [1245, 248, 1275, 262]
+	  ZOrder		  -17
+	  ForegroundColor	  "gray"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "T_nodes"
+	  SID			  "1161"
+	  Position		  [40, 283, 70, 297]
+	  ZOrder		  -18
+	  BlockMirror		  on
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "THBchg"
+	  SID			  "1162"
+	  Position		  [800, 438, 830, 452]
+	  ZOrder		  -19
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "THBdis"
+	  SID			  "1163"
+	  Position		  [795, 643, 825, 657]
+	  ZOrder		  -20
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  Name			  "Tamb"
+	  ZOrder		  1
+	  SrcBlock		  "Tamb"
+	  SrcPort		  1
+	  Points		  [-15, 0]
+	  Branch {
+	    ZOrder		    2
+	    DstBlock		    "storeT"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    3
+	    Labels		    [-1, 0]
+	    Points		    [0, -95]
+	    DstBlock		    "Bus\nCreator"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  Name			  "THBheating_in"
+	  ZOrder		  4
+	  SrcBlock		  "THB_dis"
+	  SrcPort		  1
+	  Points		  [150, 0]
+	  Branch {
+	    ZOrder		    5
+	    Labels		    [-1, 0]
+	    Points		    [0, -105; 395, 0; 0, -360]
+	    DstBlock		    "Bus\nCreator"
+	    DstPort		    5
+	  }
+	  Branch {
+	    ZOrder		    6
+	    DstBlock		    "pipe_discharge"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  Name			  "THBheating_out"
+	  ZOrder		  7
+	  SrcBlock		  "pipe_discharge"
+	  SrcPort		  2
+	  Points		  [190, 0]
+	  Branch {
+	    ZOrder		    8
+	    DstBlock		    "THBdis"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    9
+	    Labels		    [-1, 0]
+	    Points		    [0, -430]
+	    DstBlock		    "Bus\nCreator"
+	    DstPort		    6
+	  }
+	}
+	Line {
+	  ZOrder		  10
+	  SrcBlock		  "pipe_discharge"
+	  SrcPort		  1
+	  Points		  [40, 0; 0, -400]
+	  DstBlock		  "storeT"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "Tnodes"
+	  ZOrder		  11
+	  SrcBlock		  "select_T"
+	  SrcPort		  1
+	  Points		  [-25, 0]
+	  Branch {
+	    ZOrder		    12
+	    DstBlock		    "T_nodes"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    13
+	    Labels		    [-1, 0]
+	    Points		    [0, -275; 895, 0; 0, 450]
+	    DstBlock		    "Bus\nCreator"
+	    DstPort		    13
+	  }
+	}
+	Line {
+	  Name			  "Energy"
+	  ZOrder		  14
+	  Labels		  [0, 1]
+	  SrcBlock		  "storeT"
+	  SrcPort		  1
+	  Points		  [-155, 0; 0, -80]
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "Tnodes"
+	  ZOrder		  15
+	  Labels		  [1, 0]
+	  SrcBlock		  "storeT"
+	  SrcPort		  2
+	  Points		  [-140, 0]
+	  Branch {
+	    ZOrder		    16
+	    DstBlock		    "select_T"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    17
+	    Points		    [0, 130]
+	    Branch {
+	      ZOrder		      18
+	      DstBlock		      "pipe_charge"
+	      DstPort		      1
+	    }
+	    Branch {
+	      ZOrder		      19
+	      Points		      [0, 205]
+	      DstBlock		      "pipe_discharge"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Line {
+	  Name			  "THBdhw_out"
+	  ZOrder		  20
+	  Labels		  [-1, 0]
+	  SrcBlock		  "constant_THB1"
+	  SrcPort		  1
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "THBdhw_in"
+	  ZOrder		  21
+	  Labels		  [-1, 0]
+	  SrcBlock		  "constant_THB"
+	  SrcPort		  1
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  3
+	}
+	Line {
+	  ZOrder		  22
+	  SrcBlock		  "Bus\nCreator"
+	  SrcPort		  1
+	  DstBlock		  "data_S"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "THBsolar_out"
+	  ZOrder		  23
+	  Labels		  [0, 0]
+	  SrcBlock		  "constant_THB9"
+	  SrcPort		  1
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  12
+	}
+	Line {
+	  Name			  "THBsolar_in"
+	  ZOrder		  24
+	  Labels		  [0, 0]
+	  SrcBlock		  "constant_THB8"
+	  SrcPort		  1
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  11
+	}
+	Line {
+	  Name			  "THBother_out"
+	  ZOrder		  25
+	  Labels		  [0, 0]
+	  SrcBlock		  "constant_THB7"
+	  SrcPort		  1
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  10
+	}
+	Line {
+	  Name			  "THBother_in"
+	  ZOrder		  26
+	  Labels		  [0, 0]
+	  SrcBlock		  "constant_THB6"
+	  SrcPort		  1
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  9
+	}
+	Line {
+	  Name			  "THBbackup_in"
+	  ZOrder		  27
+	  SrcBlock		  "THB_chg"
+	  SrcPort		  1
+	  Points		  [150, 0]
+	  Branch {
+	    ZOrder		    28
+	    Labels		    [-1, 0]
+	    Points		    [0, -55; 560, 0; 0, -135]
+	    DstBlock		    "Bus\nCreator"
+	    DstPort		    7
+	  }
+	  Branch {
+	    ZOrder		    29
+	    DstBlock		    "pipe_charge"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  Name			  "THBbackup_out"
+	  ZOrder		  30
+	  SrcBlock		  "pipe_charge"
+	  SrcPort		  2
+	  Points		  [200, 0]
+	  Branch {
+	    ZOrder		    31
+	    DstBlock		    "THBchg"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    32
+	    Labels		    [-1, 0]
+	    Points		    [0, -40; 160, 0; 0, -115]
+	    DstBlock		    "Bus\nCreator"
+	    DstPort		    8
+	  }
+	}
+	Line {
+	  ZOrder		  33
+	  SrcBlock		  "pipe_charge"
+	  SrcPort		  1
+	  Points		  [85, 0; 0, -110]
+	  DstBlock		  "storeT"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "internal"
+	  ZOrder		  34
+	  Labels		  [0, 0]
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  DstBlock		  "Bus\nCreator1"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "losses"
+	  ZOrder		  35
+	  Labels		  [0, 0]
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  DstBlock		  "Bus\nCreator1"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "energy"
+	  ZOrder		  36
+	  Labels		  [-1, 0]
+	  SrcBlock		  "Bus\nCreator1"
+	  SrcPort		  1
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  2
+	}
+      }
+    }
+    Line {
+      ZOrder		      1
+      SrcBlock		      "storage_type_1_with_statified_charge"
+      SrcPort		      1
+      DstBlock		      "Terminator"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      2
+      SrcBlock		      "storage_type_1_with_statified_charge"
+      SrcPort		      2
+      DstBlock		      "T_Sensor_Surface"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      3
+      SrcBlock		      "From\nWorkspace2"
+      SrcPort		      1
+      DstBlock		      "storage_type_1_with_statified_charge"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      4
+      SrcBlock		      "THBr_solar"
+      SrcPort		      1
+      Points		      [55, 0]
+      Branch {
+	ZOrder			5
+	Labels			[0, 0]
+	Points			[0, 160]
+	DstBlock		"compare_1"
+	DstPort			2
+      }
+      Branch {
+	ZOrder			6
+	DstBlock		"storage_type_1_with_statified_charge"
+	DstPort			2
+      }
+    }
+    Line {
+      ZOrder		      7
+      SrcBlock		      "THBr_heating"
+      SrcPort		      1
+      Points		      [40, 0]
+      Branch {
+	ZOrder			8
+	DstBlock		"storage_type_1_with_statified_charge"
+	DstPort			3
+      }
+      Branch {
+	ZOrder			9
+	Points			[0, 230]
+	DstBlock		"compare_2"
+	DstPort			2
+      }
+    }
+    Line {
+      Name		      "yellow=Tout_sim magenta=Tout_mes"
+      ZOrder		      10
+      Labels		      [-1, 0]
+      SrcBlock		      "compare_1"
+      SrcPort		      1
+      DstBlock		      "solar"
+      DstPort		      1
+    }
+    Line {
+      Name		      "yellow=Q_sim magenta=Q_calc cyan=Q_mes"
+      ZOrder		      11
+      SrcBlock		      "compare_1"
+      SrcPort		      2
+      Points		      [25, 0]
+      Branch {
+	ZOrder			12
+	Labels			[-1, 0]
+	DstBlock		"solar"
+	DstPort			2
+      }
+      Branch {
+	ZOrder			13
+	Points			[0, -80]
+	DstBlock		"To Workspace"
+	DstPort			1
+      }
+    }
+    Line {
+      ZOrder		      14
+      Labels		      [0, 0]
+      SrcBlock		      "storage_type_1_with_statified_charge"
+      SrcPort		      3
+      Points		      [50, 0]
+      DstBlock		      "compare_1"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      15
+      Labels		      [0, 0]
+      SrcBlock		      "THBs_solar"
+      SrcPort		      1
+      DstBlock		      "compare_1"
+      DstPort		      3
+    }
+    Line {
+      Name		      "yellow=Tout_sim magenta=Tout_mes"
+      ZOrder		      16
+      Labels		      [1, 1]
+      SrcBlock		      "compare_2"
+      SrcPort		      1
+      DstBlock		      "heating"
+      DstPort		      1
+    }
+    Line {
+      Name		      "yellow=Q_sim magenta=Q_calc cyan=Q_mes"
+      ZOrder		      17
+      SrcBlock		      "compare_2"
+      SrcPort		      2
+      Points		      [20, 0]
+      Branch {
+	ZOrder			18
+	Labels			[-1, 0]
+	DstBlock		"heating"
+	DstPort			2
+      }
+      Branch {
+	ZOrder			19
+	Points			[0, 85]
+	DstBlock		"To Workspace1"
+	DstPort			1
+      }
+    }
+    Line {
+      ZOrder		      20
+      SrcBlock		      "THBs_heating"
+      SrcPort		      1
+      DstBlock		      "compare_2"
+      DstPort		      3
+    }
+    Line {
+      ZOrder		      21
+      SrcBlock		      "storage_type_1_with_statified_charge"
+      SrcPort		      4
+      Points		      [35, 0; 0, 190]
+      DstBlock		      "compare_2"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      22
+      SrcBlock		      "Mux"
+      SrcPort		      1
+      DstBlock		      "Tstg"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      23
+      SrcBlock		      "T_Sensor_Surface"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      24
+      SrcBlock		      "From\nWorkspace9"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      2
+    }
+    Line {
+      Name		      "yellow=Qdot_sim magenta=Qdot_calc cyan=Qdot_mes"
+      ZOrder		      25
+      SrcBlock		      "compare_1"
+      SrcPort		      3
+      Points		      [160, 0]
+      Branch {
+	ZOrder			26
+	Labels			[-1, 0]
+	DstBlock		"solar"
+	DstPort			3
+      }
+      Branch {
+	ZOrder			27
+	Points			[0, -120]
+	DstBlock		"To Workspace3"
+	DstPort			1
+      }
+    }
+    Line {
+      ZOrder		      28
+      SrcBlock		      "From\nWorkspace10"
+      SrcPort		      1
+      DstBlock		      "compare_1"
+      DstPort		      4
+    }
+    Line {
+      ZOrder		      29
+      SrcBlock		      "From\nWorkspace11"
+      SrcPort		      1
+      DstBlock		      "compare_2"
+      DstPort		      4
+    }
+    Line {
+      Name		      "yellow=Qdot_sim magenta=Qdot_calc cyan=Qdot_mes"
+      ZOrder		      30
+      SrcBlock		      "compare_2"
+      SrcPort		      3
+      Points		      [160, 0]
+      Branch {
+	ZOrder			31
+	Labels			[-1, 1]
+	DstBlock		"heating"
+	DstPort			3
+      }
+      Branch {
+	ZOrder			32
+	DstBlock		"To Workspace2"
+	DstPort			1
+      }
+    }
+    Line {
+      ZOrder		      33
+      SrcBlock		      "From\nWorkspace1"
+      SrcPort		      1
+      Points		      [40, 0]
+      DstBlock		      "THBr_solar"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      34
+      SrcBlock		      "From\nWorkspace"
+      SrcPort		      1
+      Points		      [40, 0]
+      DstBlock		      "THBr_solar"
+      DstPort		      2
+    }
+    Line {
+      ZOrder		      35
+      SrcBlock		      "From\nWorkspace4"
+      SrcPort		      1
+      Points		      [40, 0]
+      DstBlock		      "THBr_heating"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      36
+      SrcBlock		      "From\nWorkspace3"
+      SrcPort		      1
+      Points		      [40, 0]
+      DstBlock		      "THBr_heating"
+      DstPort		      2
+    }
+    Line {
+      ZOrder		      37
+      SrcBlock		      "From\nWorkspace6"
+      SrcPort		      1
+      Points		      [40, 0]
+      DstBlock		      "THBs_solar"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      38
+      SrcBlock		      "From\nWorkspace5"
+      SrcPort		      1
+      Points		      [40, 0]
+      DstBlock		      "THBs_solar"
+      DstPort		      2
+    }
+    Line {
+      ZOrder		      39
+      SrcBlock		      "From\nWorkspace8"
+      SrcPort		      1
+      Points		      [40, 0]
+      DstBlock		      "THBs_heating"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      40
+      SrcBlock		      "From\nWorkspace7"
+      SrcPort		      1
+      Points		      [40, 0]
+      DstBlock		      "THBs_heating"
+      DstPort		      2
+    }
+  }
+}

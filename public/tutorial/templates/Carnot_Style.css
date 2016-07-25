@@ -1,0 +1,196 @@
+﻿body{margin-left:108.0pt;}
+
+
+p	{
+	margin-right:0cm;
+	line-height:120%;
+	font-size:13.5pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+
+ul
+	{
+	margin-bottom:0cm;
+	list-style-position: outside;
+	}
+
+
+ol
+	{
+	margin-bottom:0cm;
+	list-style-position: outside;
+	}
+
+li
+	{
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	line-height:120%;
+	font-size:13.5pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+
+a:link
+	{
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;
+	}
+
+
+p.toc1
+	{
+	margin-top: 1.0em;
+	margin-bottom: 0.0em;
+	}	
+
+
+p.toc2
+	{
+	margin-top: 0.0em;
+	margin-bottom: 0.0em;
+	margin-left:12.0pt;
+	}	
+
+p.toc3
+	{
+	margin-top: 0.0em;
+	margin-bottom: 0.0em;
+	margin-left:24.0pt;
+	}	
+
+p.blockname
+	{margin-top: 10px;
+	 margin-bottom: 0;
+	 font-size:18.0pt;
+	 line-height:120%;
+	 font-weight: bold;
+	}
+
+table
+	{
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:13.5pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+
+tt
+	{
+	font-family:"Courier New";
+	line-height:200%;
+	margin-left:20.0pt;
+	}
+
+
+h1
+	{
+	margin-right:0cm;
+	line-height:120%;
+	font-size: 18pt;
+	font-weight: bold;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+
+h2
+	{
+	margin-right:0cm;
+	line-height:120%;
+	font-size: 16pt;
+	font-weight: bold;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+
+h3
+	{
+	margin-right:0cm;
+	line-height:120%;
+	font-size: 13.5pt;
+	font-weight: bold;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+
+.eq 
+	{
+	width: 1000px;
+	margin-left:24.0pt;
+    font-family: "Times New Roman","sans-serif";
+	font-size: 13.5pt;
+	}
+
+.eq td 
+	{
+	width: 800px
+	text-align: left;
+	font-size: 13.5pt;
+	font-weight: normal;
+	color:#5A5A5A;
+	}
+
+hr	
+	{
+	border-width:0;
+	background-color:#A0A0A0;
+	color: #A0A0A0;
+	height: 2px;
+	}
+
+hr.large
+	{
+	height: 10px;
+	}
+
+.eq th 
+	{
+	width: 200px
+	text-align: right;
+	font-family: "Calibri","sans-serif";
+	font-size: 13.5pt;
+	font-weight: normal;
+	color:#5A5A5A;
+	}
+
+mathrm
+	{
+	font-family:"Times New Roman","sans-serif";
+	white-space: nowrap;
+	}
+
+.vectortable
+	{
+	border: 0;
+	}
+
+.vectortable th
+	{
+	padding: 6px;
+	text-align: left;
+	text-decoration: underline;
+	}
+
+.vectortable td
+	{
+	padding: 6px;
+	text-align: left;
+	vertical-align: top;
+	}
+
+.ref
+	{
+	padding: 0px;
+	/*list-style: none; 
+	counter-reset:array;
+*/	}
+
+.ref li:before
+	{
+	/*counter-increment:array;
+	content:"[" counter(array) "] ";*/
+	}

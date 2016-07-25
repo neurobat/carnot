@@ -1,0 +1,1812 @@
+Library {
+  Name			  "THBCreator"
+  Version		  8.2
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "windows-1252"
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  FPTRunName		  "Run 1"
+  MaxMDLFileLineLength	  120
+  Object {
+    $PropName		    "BdWindowsInfo"
+    $ObjectID		    1
+    $ClassName		    "Simulink.BDWindowsInfo"
+    Object {
+      $PropName		      "WindowsInfo"
+      $ObjectID		      2
+      $ClassName	      "Simulink.WindowInfo"
+      IsActive		      [1]
+      Location		      [479.0, 53.0, 648.0, 657.0]
+      Object {
+	$PropName		"ModelBrowserInfo"
+	$ObjectID		3
+	$ClassName		"Simulink.ModelBrowserInfo"
+	Visible			[0]
+	DockPosition		"Left"
+	Width			[50]
+	Height			[50]
+	Filter			[9]
+      }
+      Object {
+	$PropName		"ExplorerBarInfo"
+	$ObjectID		4
+	$ClassName		"Simulink.ExplorerBarInfo"
+	Visible			[1]
+      }
+      Object {
+	$PropName		"EditorsInfo"
+	$ObjectID		5
+	$ClassName		"Simulink.EditorInfo"
+	IsActive		[1]
+	ViewObjType		"SimulinkTopLevel"
+	LoadSaveID		"0"
+	Extents			[598.0, 491.0]
+	ZoomFactor		[1.0]
+	Offset			[0.0, 0.0]
+      }
+    }
+  }
+  Created		  "Mon Jul 07 08:44:50 2014"
+  Creator		  "lena.frank"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "drhf"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Sat Feb 28 11:48:03 2015"
+  RTWModifiedTimeStamp	  347024850
+  ModelVersionFormat	  "1.%<AutoIncrement:2>"
+  ConfigurationManager	  "none"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "disabled"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowDesignRanges	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  PauseTimes		  "5"
+  NumberOfSteps		  1
+  SnapshotBufferSize	  10
+  SnapshotInterval	  10
+  NumberOfLastSnapshots	  0
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  RecordCoverage	  off
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  CovEnableCumulative	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      6
+      Version		      "1.13.1"
+      Array {
+	Type			"Handle"
+	Dimension		8
+	Simulink.SolverCC {
+	  $ObjectID		  7
+	  Version		  "1.13.1"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  EnableConcurrentExecution off
+	  ConcurrentTasks	  off
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  8
+	  Version		  "1.13.1"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SignalLoggingSaveFormat "ModelDataLogs"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  9
+	  Version		  "1.13.1"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    8
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    Cell		    "UseSpecifiedMinMax"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  UseFloatMulNetSlope	  off
+	  DefaultUnderspecifiedDataType	"double"
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  ActiveStateOutputEnumStorageType "Native Integer"
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	  ParallelExecutionInRapidAccelerator on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  10
+	  Version		  "1.13.1"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "EnableAllAsWarning"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  FrameProcessingCompatibilityMsg "warning"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  SimStateOlderReleaseMsg "error"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	  SFUnconditionalTransitionShadowingDiag "warning"
+	  SFUndirectedBroadcastEventsDiag "warning"
+	  SFTransitionActionBeforeConditionDiag	"warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  11
+	  Version		  "1.13.1"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerLongLong	  64
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdLongLongMode	  off
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerLongLong	  64
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetLongLongMode	  off
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  12
+	  Version		  "1.13.1"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  13
+	  Version		  "1.13.1"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  on
+	  SimBuildMode		  "sf_incremental_build"
+	  SimGenImportedTypeDefs  off
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  14
+	  Version		  "1.13.1"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    9
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    Cell		    "GenerateWebview"
+	    Cell		    "GenerateCodeMetricsReport"
+	    Cell		    "GenerateCodeReplacementReport"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  TLCOptions		  ""
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  PackageGeneratedCodeAndArtifacts off
+	  PackageName		  ""
+	  TemplateMakefile	  "grt_default_tmf"
+	  PostCodeGenCommand	  ""
+	  Description		  ""
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ProcessScript		  ""
+	  ConfigurationScript	  ""
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  CustomSourceCode	  ""
+	  CustomHeaderCode	  ""
+	  CustomInclude		  ""
+	  CustomSource		  ""
+	  CustomLibrary		  ""
+	  CustomInitializer	  ""
+	  CustomTerminator	  ""
+	  Toolchain		  "Automatically locate an installed toolchain"
+	  BuildConfiguration	  "Faster Builds"
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  PortableWordSizes	  off
+	  GenerateErtSFunction	  off
+	  CreateSILPILBlock	  "None"
+	  CodeExecutionProfiling  off
+	  CodeExecutionProfileVariable "executionProfile"
+	  CodeProfilingSaveOptions "SummaryOnly"
+	  CodeProfilingInstrumentation off
+	  SILDebugging		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  GenerateWebview	  off
+	  GenerateCodeMetricsReport off
+	  GenerateCodeReplacementReport	off
+	  RTWCompilerOptimization "Off"
+	  RTWCustomCompilerOptimizations ""
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  DataInitializer	  ""
+	  SharedConstantsCachingThreshold 1024
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      15
+	      Version		      "1.13.1"
+	      Array {
+		Type			"Cell"
+		Dimension		21
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"InsertPolySpaceComments"
+		Cell			"SFDataObjDesc"
+		Cell			"MATLABFcnDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      OperatorAnnotations     off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M_T"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      CustomSymbolStrUtil     "$N$C"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InternalIdentifier      "Shortened"
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      16
+	      Version		      "1.13.1"
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"PortableWordSizes"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"GenerateAllocFcn"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      CodeReplacementLibrary  "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      ConcurrentExecutionCompliant on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      MATLABClassNameForMDSCustomization "Simulink.SoftwareTarget.GRTCustomization"
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      GRTInterface	      on
+	      GenerateAllocFcn	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      RTWCAPIRootIO	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition     [ 520, 225, 1400, 855 ] 
+    }
+    PropName		    "ConfigurationSets"
+  }
+  ExplicitPartitioning	  off
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  MaskDefaults {
+    SelfModifiable	    "off"
+    IconFrame		    "on"
+    IconOpaque		    "on"
+    RunInitForIconRedraw    "off"
+    IconRotate		    "none"
+    PortRotate		    "default"
+    IconUnits		    "autoscale"
+  }
+  MaskParameterDefaults {
+    Evaluate		    "on"
+    Tunable		    "on"
+    NeverSave		    "off"
+    Internal		    "off"
+    ReadOnly		    "off"
+    Enabled		    "on"
+    Visible		    "on"
+    ToolTip		    "on"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      BusCreator
+      Inputs		      "4"
+      DisplayOption	      "none"
+      OutDataTypeStr	      "Inherit: auto"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      OutputFunctionCall      off
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      FunctionInterfaceSpec   "void_void"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      SFBlockType	      "NONE"
+      Variant		      off
+      GeneratePreprocessorConditionals off
+      ContentPreviewEnabled   off
+    }
+  }
+  System {
+    Name		    "THBCreator"
+    Location		    [479, 53, 1127, 710]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "2"
+    Block {
+      BlockType		      SubSystem
+      Name		      "THBCreator"
+      SID		      "2"
+      Ports		      [12, 1]
+      Position		      [145, 52, 245, 233]
+      ZOrder		      1
+      InitFcn		      "load('THB.mat');"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      Object {
+	$PropName		"MaskObject"
+	$ObjectID		17
+	$ClassName		"Simulink.Mask"
+	Type			"THBCreator"
+	Description		"This block creates a THB from input signals."
+	Help			"web('THBCreator.html','-helpbrowser'\nweb(fullfile(path_carnot('help'),'THBCreator.html'),'-helpbrowser')"
+	Initialization		"MaskValue = get_param(gcb,'MaskValues');\n    \nif strcmp(MaskValue{1},'on') %ID\n    if ~strcmp(get"
+	"_param([gcb,'/ID'],'BlockType'),'Inport')\n        delete_line(gcb,'ID/1','BusCreator/1'); %delete connection\n      "
+	"  delete_block([gcb,'/ID']); %delete block\n        add_block('built-in/Inport',[gcb,'/ID']); %add new block\n       "
+	" set_param([gcb, '/ID'],'Position',[50   1*50+8   50+30   1*50+8+14]); %set new block's position\n        add_line(gc"
+	"b,'ID/1','BusCreator/1'); %add new connection\n        handles=get_param([gcb, '/ID'],'LineHandles'); %get line handl"
+	"es\n        set(handles.Outport(1),'Name','ID'); %set line name\n    end\nelse\n    if ~strcmp(get_param([gcb,'/ID'],"
+	"'BlockType'),'Constant')\n        delete_line(gcb,'ID/1','BusCreator/1'); %delete connection\n        delete_block([g"
+	"cb,'/ID']); %delete block\n        add_block('built-in/Constant',[gcb,'/ID']); %add new block\n        set_param([gcb"
+	", '/ID'],'Position',[50   1*50   50+30   1*50+30]); %set new block's position\n        set_param([gcb, '/ID'],'Value'"
+	",'ID'); %set mask varible as value\n        add_line(gcb,'ID/1','BusCreator/1'); %add new connection\n        handles"
+	"=get_param([gcb, '/ID'],'LineHandles'); %get line handles\n        set(handles.Outport(1),'Name','ID'); %set line nam"
+	"e\n    end\nend\n\nif strcmp(MaskValue{2},'on') %T\n    if ~strcmp(get_param([gcb,'/Temperature'],'BlockType'),'Inpor"
+	"t')\n        delete_line(gcb,'Temperature/1','BusCreator/2'); %delete connection\n        delete_block([gcb,'/Tempera"
+	"ture']); %delete block\n        add_block('built-in/Inport',[gcb,'/Temperature']); %add new block\n        set_param("
+	"[gcb, '/Temperature'],'Position',[50   2*50+8   50+30   2*50+8+14]); %set new block's position\n        add_line(gcb,"
+	"'Temperature/1','BusCreator/2'); %add new connection\n        handles=get_param([gcb, '/Temperature'],'LineHandles');"
+	" %get line handles\n        set(handles.Outport(1),'Name','Temperature'); %set line name\n    end\nelse\n    if ~strc"
+	"mp(get_param([gcb,'/Temperature'],'BlockType'),'Constant')\n        delete_line(gcb,'Temperature/1','BusCreator/2'); "
+	"%delete connection\n        delete_block([gcb,'/Temperature']); %delete block\n        add_block('built-in/Constant',"
+	"[gcb,'/Temperature']); %add new block\n        set_param([gcb, '/Temperature'],'Position',[50   2*50   50+30   2*50+3"
+	"0]); %set new block's position\n        set_param([gcb, '/Temperature'],'Value','T'); %set mask varible as value\n   "
+	"     add_line(gcb,'Temperature/1','BusCreator/2'); %add new connection\n        handles=get_param([gcb, '/Temperature"
+	"'],'LineHandles'); %get line handles\n        set(handles.Outport(1),'Name','Temperature'); %set line name\n    end\n"
+	"end\n\nif strcmp(MaskValue{3},'on') %MassFlow\n    if ~strcmp(get_param([gcb,'/MassFlow'],'BlockType'),'Inport')\n   "
+	"     delete_line(gcb,'MassFlow/1','BusCreator/3'); %delete connection\n        delete_block([gcb,'/MassFlow']); %dele"
+	"te block\n        add_block('built-in/Inport',[gcb,'/MassFlow']); %add new block\n        set_param([gcb, '/MassFlow'"
+	"],'Position',[50   3*50+8   50+30   3*50+8+14]); %set new block's position\n        add_line(gcb,'MassFlow/1','BusCre"
+	"ator/3'); %add new connection\n        handles=get_param([gcb, '/MassFlow'],'LineHandles'); %get line handles\n      "
+	"  set(handles.Outport(1),'Name','MassFlow'); %set line name\n    end\nelse\n    if ~strcmp(get_param([gcb,'/MassFlow'"
+	"],'BlockType'),'Constant')\n        delete_line(gcb,'MassFlow/1','BusCreator/3'); %delete connection\n        delete_"
+	"block([gcb,'/MassFlow']); %delete block\n        add_block('built-in/Constant',[gcb,'/MassFlow']); %add new block\n  "
+	"      set_param([gcb, '/MassFlow'],'Position',[50   3*50   50+30   3*50+30]); %set new block's position\n        set_"
+	"param([gcb, '/MassFlow'],'Value','mdot'); %set mask varible as value\n        add_line(gcb,'MassFlow/1','BusCreator/3"
+	"'); %add new connection\n        handles=get_param([gcb, '/MassFlow'],'LineHandles'); %get line handles\n        set("
+	"handles.Outport(1),'Name','MassFlow'); %set line name\n    end\nend\n\nif strcmp(MaskValue{4},'on') %Pressure\n    if"
+	" ~strcmp(get_param([gcb,'/Pressure'],'BlockType'),'Inport')\n        delete_line(gcb,'Pressure/1','BusCreator/4'); %d"
+	"elete connection\n        delete_block([gcb,'/Pressure']); %delete block\n        add_block('built-in/Inport',[gcb,'/"
+	"Pressure']); %add new block\n        set_param([gcb, '/Pressure'],'Position',[50   4*50+8   50+30   4*50+8+14]); %set"
+	" new block's position\n        add_line(gcb,'Pressure/1','BusCreator/4'); %add new connection\n        handles=get_pa"
+	"ram([gcb, '/Pressure'],'LineHandles'); %get line handles\n        set(handles.Outport(1),'Name','Pressure'); %set lin"
+	"e name\n    end\nelse\n    if ~strcmp(get_param([gcb,'/Pressure'],'BlockType'),'Constant')\n        delete_line(gcb,'"
+	"Pressure/1','BusCreator/4'); %delete connection\n        delete_block([gcb,'/Pressure']); %delete block\n        add_"
+	"block('built-in/Constant',[gcb,'/Pressure']); %add new block\n        set_param([gcb, '/Pressure'],'Position',[50   4"
+	"*50   50+30   4*50+30]); %set new block's position\n        set_param([gcb, '/Pressure'],'Value','p'); %set mask vari"
+	"ble as value\n        add_line(gcb,'Pressure/1','BusCreator/4'); %add new connection\n        handles=get_param([gcb,"
+	" '/Pressure'],'LineHandles'); %get line handles\n        set(handles.Outport(1),'Name','Pressure'); %set line name\n "
+	"   end\nend\n\nif strcmp(MaskValue{5},'on') %FluidType\n    if ~strcmp(get_param([gcb,'/FluidType'],'BlockType'),'Inp"
+	"ort')\n        delete_line(gcb,'FluidType/1','BusCreator/5'); %delete connection\n        delete_block([gcb,'/FluidTy"
+	"pe']); %delete block\n        add_block('built-in/Inport',[gcb,'/FluidType']); %add new block\n        set_param([gcb"
+	", '/FluidType'],'Position',[50   5*50+8   50+30   5*50+8+14]); %set new block's position\n        add_line(gcb,'Fluid"
+	"Type/1','BusCreator/5'); %add new connection\n        handles=get_param([gcb, '/FluidType'],'LineHandles'); %get line"
+	" handles\n        set(handles.Outport(1),'Name','FluidType'); %set line name\n    end\nelse\n    if ~strcmp(get_param"
+	"([gcb,'/FluidType'],'BlockType'),'Constant')\n        delete_line(gcb,'FluidType/1','BusCreator/5'); %delete connecti"
+	"on\n        delete_block([gcb,'/FluidType']); %delete block\n        add_block('built-in/Constant',[gcb,'/FluidType']"
+	"); %add new block\n        set_param([gcb, '/FluidType'],'Position',[50   5*50   50+30   5*50+30]); %set new block's "
+	"position\n        set_param([gcb, '/FluidType'],'Value','FluidType'); %set mask varible as value\n        add_line(gc"
+	"b,'FluidType/1','BusCreator/5'); %add new connection\n        handles=get_param([gcb, '/FluidType'],'LineHandles'); %"
+	"get line handles\n        set(handles.Outport(1),'Name','FluidType'); %set line name\n    end\nend\n\nif strcmp(MaskV"
+	"alue{6},'on') %FluidMix\n    if ~strcmp(get_param([gcb,'/FluidMix'],'BlockType'),'Inport')\n        delete_line(gcb,'"
+	"FluidMix/1','BusCreator/6'); %delete connection\n        delete_block([gcb,'/FluidMix']); %delete block\n        add_"
+	"block('built-in/Inport',[gcb,'/FluidMix']); %add new block\n        set_param([gcb, '/FluidMix'],'Position',[50   6*5"
+	"0+8   50+30   6*50+8+14]); %set new block's position\n        add_line(gcb,'FluidMix/1','BusCreator/6'); %add new con"
+	"nection\n        handles=get_param([gcb, '/FluidMix'],'LineHandles'); %get line handles\n        set(handles.Outport("
+	"1),'Name','FluidMix'); %set line name\n    end\nelse\n    if ~strcmp(get_param([gcb,'/FluidMix'],'BlockType'),'Consta"
+	"nt')\n        delete_line(gcb,'FluidMix/1','BusCreator/6'); %delete connection\n        delete_block([gcb,'/FluidMix'"
+	"]); %delete block\n        add_block('built-in/Constant',[gcb,'/FluidMix']); %add new block\n        set_param([gcb, "
+	"'/FluidMix'],'Position',[50   6*50   50+30   6*50+30]); %set new block's position\n        set_param([gcb, '/FluidMix"
+	"'],'Value','FluidMix'); %set mask varible as value\n        add_line(gcb,'FluidMix/1','BusCreator/6'); %add new conne"
+	"ction\n        handles=get_param([gcb, '/FluidMix'],'LineHandles'); %get line handles\n        set(handles.Outport(1)"
+	",'Name','FluidMix'); %set line name\n    end\nend\n\nif strcmp(MaskValue{7},'on') %DiameterLastPiece\n    if ~strcmp("
+	"get_param([gcb,'/DiameterLastPiece'],'BlockType'),'Inport')\n        delete_line(gcb,'DiameterLastPiece/1','BusCreato"
+	"r/7'); %delete connection\n        delete_block([gcb,'/DiameterLastPiece']); %delete block\n        add_block('built-"
+	"in/Inport',[gcb,'/DiameterLastPiece']); %add new block\n        set_param([gcb, '/DiameterLastPiece'],'Position',[50 "
+	"  7*50+8   50+30   7*50+8+14]); %set new block's position\n        add_line(gcb,'DiameterLastPiece/1','BusCreator/7')"
+	"; %add new connection\n        handles=get_param([gcb, '/DiameterLastPiece'],'LineHandles'); %get line handles\n     "
+	"   set(handles.Outport(1),'Name','DiameterLastPiece'); %set line name\n    end\nelse\n    if ~strcmp(get_param([gcb,'"
+	"/DiameterLastPiece'],'BlockType'),'Constant')\n        delete_line(gcb,'DiameterLastPiece/1','BusCreator/7'); %delete"
+	" connection\n        delete_block([gcb,'/DiameterLastPiece']); %delete block\n        add_block('built-in/Constant',["
+	"gcb,'/DiameterLastPiece']); %add new block\n        set_param([gcb, '/DiameterLastPiece'],'Position',[50   7*50   50+"
+	"30   7*50+30]); %set new block's position\n        set_param([gcb, '/DiameterLastPiece'],'Value','d'); %set mask vari"
+	"ble as value\n        add_line(gcb,'DiameterLastPiece/1','BusCreator/7'); %add new connection\n        handles=get_pa"
+	"ram([gcb, '/DiameterLastPiece'],'LineHandles'); %get line handles\n        set(handles.Outport(1),'Name','DiameterLas"
+	"tPiece'); %set line name\n    end\nend\n\nif strcmp(MaskValue{8},'on') %DPConstant\n    if ~strcmp(get_param([gcb,'/D"
+	"PConstant'],'BlockType'),'Inport')\n        delete_line(gcb,'DPConstant/1','BusCreator/8'); %delete connection\n     "
+	"   delete_block([gcb,'/DPConstant']); %delete block\n        add_block('built-in/Inport',[gcb,'/DPConstant']); %add n"
+	"ew block\n        set_param([gcb, '/DPConstant'],'Position',[50   8*50+8   50+30   8*50+8+14]); %set new block's posi"
+	"tion\n        add_line(gcb,'DPConstant/1','BusCreator/8'); %add new connection\n        handles=get_param([gcb, '/DPC"
+	"onstant'],'LineHandles'); %get line handles\n        set(handles.Outport(1),'Name','DPConstant'); %set line name\n   "
+	" end\nelse\n    if ~strcmp(get_param([gcb,'/DPConstant'],'BlockType'),'Constant')\n        delete_line(gcb,'DPConstan"
+	"t/1','BusCreator/8'); %delete connection\n        delete_block([gcb,'/DPConstant']); %delete block\n        add_block"
+	"('built-in/Constant',[gcb,'/DPConstant']); %add new block\n        set_param([gcb, '/DPConstant'],'Position',[50   8*"
+	"50   50+30   8*50+30]); %set new block's position\n        set_param([gcb, '/DPConstant'],'Value','c'); %set mask var"
+	"ible as value\n        add_line(gcb,'DPConstant/1','BusCreator/8'); %add new connection\n        handles=get_param([g"
+	"cb, '/DPConstant'],'LineHandles'); %get line handles\n        set(handles.Outport(1),'Name','DPConstant'); %set line "
+	"name\n    end\nend\n\nif strcmp(MaskValue{9},'on') %DPLinear\n    if ~strcmp(get_param([gcb,'/DPLinear'],'BlockType')"
+	",'Inport')\n        delete_line(gcb,'DPLinear/1','BusCreator/9'); %delete connection\n        delete_block([gcb,'/DPL"
+	"inear']); %delete block\n        add_block('built-in/Inport',[gcb,'/DPLinear']); %add new block\n        set_param([g"
+	"cb, '/DPLinear'],'Position',[50   9*50+8   50+30   9*50+8+14]); %set new block's position\n        add_line(gcb,'DPLi"
+	"near/1','BusCreator/9'); %add new connection\n        handles=get_param([gcb, '/DPLinear'],'LineHandles'); %get line "
+	"handles\n        set(handles.Outport(1),'Name','DPLinear'); %set line name\n    end\nelse\n    if ~strcmp(get_param(["
+	"gcb,'/DPLinear'],'BlockType'),'Constant')\n        delete_line(gcb,'DPLinear/1','BusCreator/9'); %delete connection\n"
+	"        delete_block([gcb,'/DPLinear']); %delete block\n        add_block('built-in/Constant',[gcb,'/DPLinear']); %ad"
+	"d new block\n        set_param([gcb, '/DPLinear'],'Position',[50   9*50   50+30   9*50+30]); %set new block's positio"
+	"n\n        set_param([gcb, '/DPLinear'],'Value','l'); %set mask varible as value\n        add_line(gcb,'DPLinear/1','"
+	"BusCreator/9'); %add new connection\n        handles=get_param([gcb, '/DPLinear'],'LineHandles'); %get line handles\n"
+	"        set(handles.Outport(1),'Name','DPLinear'); %set line name\n    end\nend\n\nif strcmp(MaskValue{10},'on') %DPQ"
+	"uadratic\n    if ~strcmp(get_param([gcb,'/DPQuadratic'],'BlockType'),'Inport')\n        delete_line(gcb,'DPQuadratic/"
+	"1','BusCreator/10'); %delete connection\n        delete_block([gcb,'/DPQuadratic']); %delete block\n        add_block"
+	"('built-in/Inport',[gcb,'/DPQuadratic']); %add new block\n        set_param([gcb, '/DPQuadratic'],'Position',[50   10"
+	"*50+8   50+30   10*50+8+14]); %set new block's position\n        add_line(gcb,'DPQuadratic/1','BusCreator/10'); %add "
+	"new connection\n        handles=get_param([gcb, '/DPQuadratic'],'LineHandles'); %get line handles\n        set(handle"
+	"s.Outport(1),'Name','DPQuadratic'); %set line name\n    end\nelse\n    if ~strcmp(get_param([gcb,'/DPQuadratic'],'Blo"
+	"ckType'),'Constant')\n        delete_line(gcb,'DPQuadratic/1','BusCreator/10'); %delete connection\n        delete_bl"
+	"ock([gcb,'/DPQuadratic']); %delete block\n        add_block('built-in/Constant',[gcb,'/DPQuadratic']); %add new block"
+	"\n        set_param([gcb, '/DPQuadratic'],'Position',[50   10*50   50+30   10*50+30]); %set new block's position\n   "
+	"     set_param([gcb, '/DPQuadratic'],'Value','q'); %set mask varible as value\n        add_line(gcb,'DPQuadratic/1','"
+	"BusCreator/10'); %add new connection\n        handles=get_param([gcb, '/DPQuadratic'],'LineHandles'); %get line handl"
+	"es\n        set(handles.Outport(1),'Name','DPQuadratic'); %set line name\n    end\nend\n\nif strcmp(MaskValue{11},'on"
+	"') %HydraulicInductance\n    if ~strcmp(get_param([gcb,'/HydraulicInductance'],'BlockType'),'Inport')\n        delete"
+	"_line(gcb,'HydraulicInductance/1','BusCreator/11'); %delete connection\n        delete_block([gcb,'/HydraulicInductan"
+	"ce']); %delete block\n        add_block('built-in/Inport',[gcb,'/HydraulicInductance']); %add new block\n        set_"
+	"param([gcb, '/HydraulicInductance'],'Position',[50   11*50+8   50+30   11*50+8+14]); %set new block's position\n     "
+	"   add_line(gcb,'HydraulicInductance/1','BusCreator/11'); %add new connection\n        handles=get_param([gcb, '/Hydr"
+	"aulicInductance'],'LineHandles'); %get line handles\n        set(handles.Outport(1),'Name','HydraulicInductance'); %s"
+	"et line name\n    end\nelse\n    if ~strcmp(get_param([gcb,'/HydraulicInductance'],'BlockType'),'Constant')\n        "
+	"delete_line(gcb,'HydraulicInductance/1','BusCreator/11'); %delete connection\n        delete_block([gcb,'/HydraulicIn"
+	"ductance']); %delete block\n        add_block('built-in/Constant',[gcb,'/HydraulicInductance']); %add new block\n    "
+	"    set_param([gcb, '/HydraulicInductance'],'Position',[50   11*50   50+30   11*50+30]); %set new block's position\n "
+	"       set_param([gcb, '/HydraulicInductance'],'Value','LH'); %set mask varible as value\n        add_line(gcb,'Hydra"
+	"ulicInductance/1','BusCreator/11'); %add new connection\n        handles=get_param([gcb, '/HydraulicInductance'],'Lin"
+	"eHandles'); %get line handles\n        set(handles.Outport(1),'Name','HydraulicInductance'); %set line name\n    end\n"
+	"end\n\nif strcmp(MaskValue{12},'on') %GeodeticHeight\n    if ~strcmp(get_param([gcb,'/GeodeticHeight'],'BlockType'),'"
+	"Inport')\n        delete_line(gcb,'GeodeticHeight/1','BusCreator/12'); %delete connection\n        delete_block([gcb,"
+	"'/GeodeticHeight']); %delete block\n        add_block('built-in/Inport',[gcb,'/GeodeticHeight']); %add new block\n   "
+	"     set_param([gcb, '/GeodeticHeight'],'Position',[50   12*50+8   50+30   12*50+8+14]); %set new block's position\n "
+	"       add_line(gcb,'GeodeticHeight/1','BusCreator/12'); %add new connection\n        handles=get_param([gcb, '/Geode"
+	"ticHeight'],'LineHandles'); %get line handles\n        set(handles.Outport(1),'Name','GeodeticHeight'); %set line nam"
+	"e\n    end\nelse\n    if ~strcmp(get_param([gcb,'/GeodeticHeight'],'BlockType'),'Constant')\n        delete_line(gcb,"
+	"'GeodeticHeight/1','BusCreator/12'); %delete connection\n        delete_block([gcb,'/GeodeticHeight']); %delete block"
+	"\n        add_block('built-in/Constant',[gcb,'/GeodeticHeight']); %add new block\n        set_param([gcb, '/GeodeticH"
+	"eight'],'Position',[50   12*50   50+30   12*50+30]); %set new block's position\n        set_param([gcb, '/GeodeticHei"
+	"ght'],'Value','H'); %set mask varible as value\n        add_line(gcb,'GeodeticHeight/1','BusCreator/12'); %add new co"
+	"nnection\n        handles=get_param([gcb, '/GeodeticHeight'],'LineHandles'); %get line handles\n        set(handles.O"
+	"utport(1),'Name','GeodeticHeight'); %set line name\n    end\nend\n\n"
+	SelfModifiable		"on"
+	Array {
+	  Type			  "Simulink.MaskParameter"
+	  Dimension		  36
+	  Object {
+	    $ObjectID		    18
+	    Type		    "checkbox"
+	    Name		    "Inport_ID"
+	    Prompt		    "ID as inport"
+	    Value		    "on"
+	    Callback		    "THBCreator_ParamCallback;"
+	  }
+	  Object {
+	    $ObjectID		    19
+	    Type		    "checkbox"
+	    Name		    "Inport_T"
+	    Prompt		    "temperature as inport"
+	    Value		    "on"
+	    Callback		    "THBCreator_ParamCallback;"
+	  }
+	  Object {
+	    $ObjectID		    20
+	    Type		    "checkbox"
+	    Name		    "Inport_mdot"
+	    Prompt		    "mass flow rate as inport"
+	    Value		    "on"
+	    Callback		    "THBCreator_ParamCallback;"
+	  }
+	  Object {
+	    $ObjectID		    21
+	    Type		    "checkbox"
+	    Name		    "Inport_p"
+	    Prompt		    "pressure as inport"
+	    Value		    "on"
+	    Callback		    "THBCreator_ParamCallback;"
+	  }
+	  Object {
+	    $ObjectID		    22
+	    Type		    "checkbox"
+	    Name		    "Inport_type"
+	    Prompt		    "fluid type as inport"
+	    Value		    "on"
+	    Callback		    "THBCreator_ParamCallback;"
+	  }
+	  Object {
+	    $ObjectID		    23
+	    Type		    "checkbox"
+	    Name		    "Inport_mix"
+	    Prompt		    "fluid mix as inport"
+	    Value		    "on"
+	    Callback		    "THBCreator_ParamCallback;"
+	  }
+	  Object {
+	    $ObjectID		    24
+	    Type		    "checkbox"
+	    Name		    "Inport_d"
+	    Prompt		    "diameter last piece as inport"
+	    Value		    "on"
+	    Callback		    "THBCreator_ParamCallback;"
+	  }
+	  Object {
+	    $ObjectID		    25
+	    Type		    "checkbox"
+	    Name		    "Inport_c"
+	    Prompt		    "constant pressure drop coefficient as inport"
+	    Value		    "on"
+	    Callback		    "THBCreator_ParamCallback;"
+	  }
+	  Object {
+	    $ObjectID		    26
+	    Type		    "checkbox"
+	    Name		    "Inport_l"
+	    Prompt		    "linear pressure drop coefficient as inport"
+	    Value		    "on"
+	    Callback		    "THBCreator_ParamCallback;"
+	  }
+	  Object {
+	    $ObjectID		    27
+	    Type		    "checkbox"
+	    Name		    "Inport_q"
+	    Prompt		    "quadratic pressure drop coefficient as inport"
+	    Value		    "on"
+	    Callback		    "THBCreator_ParamCallback;"
+	  }
+	  Object {
+	    $ObjectID		    28
+	    Type		    "checkbox"
+	    Name		    "Inport_LH"
+	    Prompt		    "hydraulic inductance as inport"
+	    Value		    "on"
+	    Callback		    "THBCreator_ParamCallback;"
+	  }
+	  Object {
+	    $ObjectID		    29
+	    Type		    "checkbox"
+	    Name		    "Inport_H"
+	    Prompt		    "geodetic height as inport"
+	    Value		    "on"
+	    Callback		    "THBCreator_ParamCallback;\n"
+	  }
+	  Object {
+	    $ObjectID		    30
+	    Type		    "edit"
+	    Name		    "ID"
+	    Prompt		    "ID [1]"
+	    Value		    "20001"
+	    Visible		    "off"
+	  }
+	  Object {
+	    $ObjectID		    31
+	    Type		    "edit"
+	    Name		    "T"
+	    Prompt		    "temperature [°C]"
+	    Value		    "20"
+	    Visible		    "off"
+	  }
+	  Object {
+	    $ObjectID		    32
+	    Type		    "edit"
+	    Name		    "mdot"
+	    Prompt		    "mass flow rate [kg/s]"
+	    Value		    "0"
+	    Visible		    "off"
+	  }
+	  Object {
+	    $ObjectID		    33
+	    Type		    "edit"
+	    Name		    "p"
+	    Prompt		    "pressure [Pa]"
+	    Value		    "1e5"
+	    Visible		    "off"
+	  }
+	  Object {
+	    $ObjectID		    34
+	    Type		    "edit"
+	    Name		    "FluidType"
+	    Prompt		    "fluid type [enum]"
+	    Value		    "1"
+	    Visible		    "off"
+	  }
+	  Object {
+	    $ObjectID		    35
+	    Type		    "edit"
+	    Name		    "FluidMix"
+	    Prompt		    "fluid mix [1]"
+	    Value		    "0"
+	    Visible		    "off"
+	  }
+	  Object {
+	    $ObjectID		    36
+	    Type		    "edit"
+	    Name		    "d"
+	    Prompt		    "diameter last piece [m]"
+	    Value		    "0.01"
+	    Visible		    "off"
+	  }
+	  Object {
+	    $ObjectID		    37
+	    Type		    "edit"
+	    Name		    "c"
+	    Prompt		    "constant pressure drop coefficient [Pa]"
+	    Value		    "0"
+	    Visible		    "off"
+	  }
+	  Object {
+	    $ObjectID		    38
+	    Type		    "edit"
+	    Name		    "l"
+	    Prompt		    "linear pressure drop coefficient [Pa/(kg/s)]"
+	    Value		    "0"
+	    Visible		    "off"
+	  }
+	  Object {
+	    $ObjectID		    39
+	    Type		    "edit"
+	    Name		    "q"
+	    Prompt		    "quadratic pressure drop coefficient [Pa/(kg/s)²]"
+	    Value		    "0"
+	    Visible		    "off"
+	  }
+	  Object {
+	    $ObjectID		    40
+	    Type		    "edit"
+	    Name		    "LH"
+	    Prompt		    "hydraulic inductance [1/m]"
+	    Value		    "0"
+	    Visible		    "off"
+	  }
+	  Object {
+	    $ObjectID		    41
+	    Type		    "edit"
+	    Name		    "H"
+	    Prompt		    "geodetic height"
+	    Value		    "0"
+	    Visible		    "off"
+	  }
+	  Object {
+	    $ObjectID		    42
+	    Type		    "checkbox"
+	    Name		    "Annotation_ID"
+	    Prompt		    "ID as annotation"
+	    Value		    "off"
+	    Visible		    "off"
+	    Callback		    "THBCreator_ParamCallback;"
+	  }
+	  Object {
+	    $ObjectID		    43
+	    Type		    "checkbox"
+	    Name		    "Annotation_T"
+	    Prompt		    "temperature as annotation"
+	    Value		    "off"
+	    Visible		    "off"
+	    Callback		    "THBCreator_ParamCallback;"
+	  }
+	  Object {
+	    $ObjectID		    44
+	    Type		    "checkbox"
+	    Name		    "Annotation_mdot"
+	    Prompt		    "mass flow rate as annotation"
+	    Value		    "off"
+	    Visible		    "off"
+	    Callback		    "THBCreator_ParamCallback;"
+	  }
+	  Object {
+	    $ObjectID		    45
+	    Type		    "checkbox"
+	    Name		    "Annotation_p"
+	    Prompt		    "pressure as annotation"
+	    Value		    "off"
+	    Visible		    "off"
+	    Callback		    "THBCreator_ParamCallback;"
+	  }
+	  Object {
+	    $ObjectID		    46
+	    Type		    "checkbox"
+	    Name		    "Annotation_type"
+	    Prompt		    "fluid type as annotation"
+	    Value		    "off"
+	    Visible		    "off"
+	    Callback		    "THBCreator_ParamCallback;"
+	  }
+	  Object {
+	    $ObjectID		    47
+	    Type		    "checkbox"
+	    Name		    "Annotation_mix"
+	    Prompt		    "fluid mix as annotation"
+	    Value		    "off"
+	    Visible		    "off"
+	    Callback		    "THBCreator_ParamCallback;"
+	  }
+	  Object {
+	    $ObjectID		    48
+	    Type		    "checkbox"
+	    Name		    "Annotation_d"
+	    Prompt		    "diameter last piece as annotation"
+	    Value		    "off"
+	    Visible		    "off"
+	    Callback		    "THBCreator_ParamCallback;"
+	  }
+	  Object {
+	    $ObjectID		    49
+	    Type		    "checkbox"
+	    Name		    "Annotation_c"
+	    Prompt		    "constant pressure drop coefficient as annotation"
+	    Value		    "off"
+	    Visible		    "off"
+	    Callback		    "THBCreator_ParamCallback;"
+	  }
+	  Object {
+	    $ObjectID		    50
+	    Type		    "checkbox"
+	    Name		    "Annotation_l"
+	    Prompt		    "linear pressure drop coefficient as annotation"
+	    Value		    "off"
+	    Visible		    "off"
+	    Callback		    "THBCreator_ParamCallback;"
+	  }
+	  Object {
+	    $ObjectID		    51
+	    Type		    "checkbox"
+	    Name		    "Annotation_q"
+	    Prompt		    "quadratic pressure drop coefficient as annotation"
+	    Value		    "off"
+	    Visible		    "off"
+	    Callback		    "THBCreator_ParamCallback;"
+	  }
+	  Object {
+	    $ObjectID		    52
+	    Type		    "checkbox"
+	    Name		    "Annotation_LH"
+	    Prompt		    "hydraulic inductance as annotation"
+	    Value		    "off"
+	    Visible		    "off"
+	    Callback		    "THBCreator_ParamCallback;"
+	  }
+	  Object {
+	    $ObjectID		    53
+	    Type		    "checkbox"
+	    Name		    "Annotation_H"
+	    Prompt		    "geodetic height as annotation"
+	    Value		    "off"
+	    Visible		    "off"
+	    Callback		    "THBCreator_ParamCallback;"
+	  }
+	  PropName		  "Parameters"
+	}
+	Array {
+	  Type			  "Simulink.dialog.Container"
+	  Dimension		  2
+	  Object {
+	    $ObjectID		    54
+	    $ClassName		    "Simulink.dialog.Group"
+	    Prompt		    "%<MaskType>"
+	    Object {
+	      $PropName		      "DialogControls"
+	      $ObjectID		      55
+	      $ClassName	      "Simulink.dialog.Text"
+	      Prompt		      "%<MaskDescription>"
+	      Name		      "DescTextVar"
+	    }
+	    Name		    "DescGroupVar"
+	  }
+	  Object {
+	    $ObjectID		    56
+	    $ClassName		    "Simulink.dialog.TabContainer"
+	    Array {
+	      Type		      "Simulink.dialog.Tab"
+	      Dimension		      3
+	      Object {
+		$ObjectID		57
+		Prompt			"Settings"
+		Array {
+		  Type			  "Simulink.dialog.parameter.CheckBox"
+		  Dimension		  12
+		  Object {
+		    $ObjectID		    58
+		    Name		    "Inport_ID"
+		  }
+		  Object {
+		    $ObjectID		    59
+		    Name		    "Inport_T"
+		  }
+		  Object {
+		    $ObjectID		    60
+		    Name		    "Inport_mdot"
+		  }
+		  Object {
+		    $ObjectID		    61
+		    Name		    "Inport_p"
+		  }
+		  Object {
+		    $ObjectID		    62
+		    Name		    "Inport_type"
+		  }
+		  Object {
+		    $ObjectID		    63
+		    Name		    "Inport_mix"
+		  }
+		  Object {
+		    $ObjectID		    64
+		    Name		    "Inport_d"
+		  }
+		  Object {
+		    $ObjectID		    65
+		    Name		    "Inport_c"
+		  }
+		  Object {
+		    $ObjectID		    66
+		    Name		    "Inport_l"
+		  }
+		  Object {
+		    $ObjectID		    67
+		    Name		    "Inport_q"
+		  }
+		  Object {
+		    $ObjectID		    68
+		    Name		    "Inport_LH"
+		  }
+		  Object {
+		    $ObjectID		    69
+		    Name		    "Inport_H"
+		  }
+		  PropName		  "DialogControls"
+		}
+		Name			"ParameterTabVar0"
+	      }
+	      Object {
+		$ObjectID		70
+		Prompt			"Values"
+		Array {
+		  Type			  "Simulink.dialog.parameter.Edit"
+		  Dimension		  12
+		  Object {
+		    $ObjectID		    71
+		    Name		    "ID"
+		  }
+		  Object {
+		    $ObjectID		    72
+		    Name		    "T"
+		  }
+		  Object {
+		    $ObjectID		    73
+		    Name		    "mdot"
+		  }
+		  Object {
+		    $ObjectID		    74
+		    Name		    "p"
+		  }
+		  Object {
+		    $ObjectID		    75
+		    Name		    "FluidType"
+		  }
+		  Object {
+		    $ObjectID		    76
+		    Name		    "FluidMix"
+		  }
+		  Object {
+		    $ObjectID		    77
+		    Name		    "d"
+		  }
+		  Object {
+		    $ObjectID		    78
+		    Name		    "c"
+		  }
+		  Object {
+		    $ObjectID		    79
+		    Name		    "l"
+		  }
+		  Object {
+		    $ObjectID		    80
+		    Name		    "q"
+		  }
+		  Object {
+		    $ObjectID		    81
+		    Name		    "LH"
+		  }
+		  Object {
+		    $ObjectID		    82
+		    Name		    "H"
+		  }
+		  PropName		  "DialogControls"
+		}
+		Name			"ParameterTabVar01"
+	      }
+	      Object {
+		$ObjectID		83
+		Prompt			"Annotations"
+		Array {
+		  Type			  "Simulink.dialog.parameter.CheckBox"
+		  Dimension		  12
+		  Object {
+		    $ObjectID		    84
+		    Name		    "Annotation_ID"
+		  }
+		  Object {
+		    $ObjectID		    85
+		    Name		    "Annotation_T"
+		  }
+		  Object {
+		    $ObjectID		    86
+		    Name		    "Annotation_mdot"
+		  }
+		  Object {
+		    $ObjectID		    87
+		    Name		    "Annotation_p"
+		  }
+		  Object {
+		    $ObjectID		    88
+		    Name		    "Annotation_type"
+		  }
+		  Object {
+		    $ObjectID		    89
+		    Name		    "Annotation_mix"
+		  }
+		  Object {
+		    $ObjectID		    90
+		    Name		    "Annotation_d"
+		  }
+		  Object {
+		    $ObjectID		    91
+		    Name		    "Annotation_c"
+		  }
+		  Object {
+		    $ObjectID		    92
+		    Name		    "Annotation_l"
+		  }
+		  Object {
+		    $ObjectID		    93
+		    Name		    "Annotation_q"
+		  }
+		  Object {
+		    $ObjectID		    94
+		    Name		    "Annotation_LH"
+		  }
+		  Object {
+		    $ObjectID		    95
+		    Name		    "Annotation_H"
+		  }
+		  PropName		  "DialogControls"
+		}
+		Name			"ParameterTabVar012"
+	      }
+	      PropName		      "DialogControls"
+	    }
+	    Name		    "ParameterTabContainerVar"
+	  }
+	  PropName		  "DialogControls"
+	}
+      }
+      System {
+	Name			"THBCreator"
+	Location		[499, 52, 1079, 1175]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	SIDHighWatermark	"616"
+	Block {
+	  BlockType		  Inport
+	  Name			  "ID"
+	  SID			  "2:591"
+	  Position		  [50, 58, 80, 72]
+	  ZOrder		  -1
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "ID"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Temperature"
+	  SID			  "2:592"
+	  Position		  [50, 108, 80, 122]
+	  ZOrder		  -2
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "Temperature"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "MassFlow"
+	  SID			  "2:593"
+	  Position		  [50, 158, 80, 172]
+	  ZOrder		  -3
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "MassFlow"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Pressure"
+	  SID			  "2:594"
+	  Position		  [50, 208, 80, 222]
+	  ZOrder		  -4
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "Pressure"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "FluidType"
+	  SID			  "2:595"
+	  Position		  [50, 258, 80, 272]
+	  ZOrder		  -5
+	  Port			  "5"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "FluidType"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "FluidMix"
+	  SID			  "2:596"
+	  Position		  [50, 308, 80, 322]
+	  ZOrder		  -6
+	  Port			  "6"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "FluidMix"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "DiameterLastPiece"
+	  SID			  "2:597"
+	  Position		  [50, 358, 80, 372]
+	  ZOrder		  -7
+	  Port			  "7"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "DiameterLastPiece"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "DPConstant"
+	  SID			  "2:598"
+	  Position		  [50, 408, 80, 422]
+	  ZOrder		  -8
+	  Port			  "8"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "DPConstant"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "DPLinear"
+	  SID			  "2:599"
+	  Position		  [50, 458, 80, 472]
+	  ZOrder		  -9
+	  Port			  "9"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "DPLinear"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "DPQuadratic"
+	  SID			  "2:600"
+	  Position		  [50, 508, 80, 522]
+	  ZOrder		  -10
+	  Port			  "10"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "DPQuadratic"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "HydraulicInductance"
+	  SID			  "2:601"
+	  Position		  [50, 558, 80, 572]
+	  ZOrder		  -11
+	  Port			  "11"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "HydraulicInductance"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "GeodeticHeight"
+	  SID			  "2:602"
+	  Position		  [50, 608, 80, 622]
+	  ZOrder		  -12
+	  Port			  "12"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "GeodeticHeight"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  BusCreator
+	  Name			  "BusCreator"
+	  SID			  "2:353"
+	  Ports			  [12, 1]
+	  Position		  [240, 30, 245, 650]
+	  ZOrder		  -13
+	  Inputs		  "12"
+	  DisplayOption		  "bar"
+	  OutDataTypeStr	  "Bus: THB"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "THB"
+	  SID			  "2:354"
+	  Position		  [290, 333, 320, 347]
+	  ZOrder		  -14
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  Name			  "GeodeticHeight"
+	  ZOrder		  1
+	  Labels		  [0, 0]
+	  SrcBlock		  "GeodeticHeight"
+	  SrcPort		  1
+	  DstBlock		  "BusCreator"
+	  DstPort		  12
+	}
+	Line {
+	  Name			  "HydraulicInductance"
+	  ZOrder		  2
+	  Labels		  [0, 0]
+	  SrcBlock		  "HydraulicInductance"
+	  SrcPort		  1
+	  DstBlock		  "BusCreator"
+	  DstPort		  11
+	}
+	Line {
+	  Name			  "DPQuadratic"
+	  ZOrder		  3
+	  Labels		  [0, 0]
+	  SrcBlock		  "DPQuadratic"
+	  SrcPort		  1
+	  DstBlock		  "BusCreator"
+	  DstPort		  10
+	}
+	Line {
+	  Name			  "DPLinear"
+	  ZOrder		  4
+	  Labels		  [0, 0]
+	  SrcBlock		  "DPLinear"
+	  SrcPort		  1
+	  DstBlock		  "BusCreator"
+	  DstPort		  9
+	}
+	Line {
+	  Name			  "DPConstant"
+	  ZOrder		  5
+	  Labels		  [0, 0]
+	  SrcBlock		  "DPConstant"
+	  SrcPort		  1
+	  DstBlock		  "BusCreator"
+	  DstPort		  8
+	}
+	Line {
+	  Name			  "DiameterLastPiece"
+	  ZOrder		  6
+	  Labels		  [0, 0]
+	  SrcBlock		  "DiameterLastPiece"
+	  SrcPort		  1
+	  DstBlock		  "BusCreator"
+	  DstPort		  7
+	}
+	Line {
+	  Name			  "FluidMix"
+	  ZOrder		  7
+	  Labels		  [0, 0]
+	  SrcBlock		  "FluidMix"
+	  SrcPort		  1
+	  DstBlock		  "BusCreator"
+	  DstPort		  6
+	}
+	Line {
+	  Name			  "FluidType"
+	  ZOrder		  8
+	  Labels		  [0, 0]
+	  SrcBlock		  "FluidType"
+	  SrcPort		  1
+	  DstBlock		  "BusCreator"
+	  DstPort		  5
+	}
+	Line {
+	  Name			  "Pressure"
+	  ZOrder		  9
+	  Labels		  [0, 0]
+	  SrcBlock		  "Pressure"
+	  SrcPort		  1
+	  DstBlock		  "BusCreator"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "MassFlow"
+	  ZOrder		  10
+	  Labels		  [0, 0]
+	  SrcBlock		  "MassFlow"
+	  SrcPort		  1
+	  DstBlock		  "BusCreator"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "Temperature"
+	  ZOrder		  11
+	  Labels		  [0, 0]
+	  SrcBlock		  "Temperature"
+	  SrcPort		  1
+	  DstBlock		  "BusCreator"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "ID"
+	  ZOrder		  12
+	  Labels		  [0, 0]
+	  SrcBlock		  "ID"
+	  SrcPort		  1
+	  DstBlock		  "BusCreator"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  13
+	  Labels		  [0, 0]
+	  SrcBlock		  "BusCreator"
+	  SrcPort		  1
+	  DstBlock		  "THB"
+	  DstPort		  1
+	}
+      }
+    }
+  }
+}

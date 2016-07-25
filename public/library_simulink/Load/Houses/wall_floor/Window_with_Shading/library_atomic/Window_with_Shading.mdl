@@ -1,0 +1,3018 @@
+Library {
+  Name			  "Window_with_Shading"
+  Version		  8.2
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "windows-1252"
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  FPTRunName		  "Run 1"
+  MaxMDLFileLineLength	  120
+  Object {
+    $PropName		    "BdWindowsInfo"
+    $ObjectID		    1
+    $ClassName		    "Simulink.BDWindowsInfo"
+    Object {
+      $PropName		      "WindowsInfo"
+      $ObjectID		      2
+      $ClassName	      "Simulink.WindowInfo"
+      IsActive		      [1]
+      Location		      [667.0, 57.0, 648.0, 657.0]
+      Object {
+	$PropName		"ModelBrowserInfo"
+	$ObjectID		3
+	$ClassName		"Simulink.ModelBrowserInfo"
+	Visible			[0]
+	DockPosition		"Left"
+	Width			[50]
+	Height			[50]
+	Filter			[9]
+      }
+      Object {
+	$PropName		"ExplorerBarInfo"
+	$ObjectID		4
+	$ClassName		"Simulink.ExplorerBarInfo"
+	Visible			[1]
+      }
+      Object {
+	$PropName		"EditorsInfo"
+	$ObjectID		5
+	$ClassName		"Simulink.EditorInfo"
+	IsActive		[1]
+	ViewObjType		"SimulinkTopLevel"
+	LoadSaveID		"0"
+	Extents			[598.0, 491.0]
+	ZoomFactor		[1.0]
+	Offset			[0.0, 0.0]
+      }
+    }
+  }
+  Created		  "Wed Jul 09 09:19:01 2014"
+  Creator		  "lena.frank"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "drhf"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Tue Jun 02 18:48:09 2015"
+  RTWModifiedTimeStamp	  355171688
+  ModelVersionFormat	  "1.%<AutoIncrement:5>"
+  ConfigurationManager	  "none"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "all"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowDesignRanges	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  PauseTimes		  "5"
+  NumberOfSteps		  1
+  SnapshotBufferSize	  10
+  SnapshotInterval	  10
+  NumberOfLastSnapshots	  0
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  RecordCoverage	  off
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  CovEnableCumulative	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      6
+      Version		      "1.13.1"
+      Array {
+	Type			"Handle"
+	Dimension		8
+	Simulink.SolverCC {
+	  $ObjectID		  7
+	  Version		  "1.13.1"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  EnableConcurrentExecution off
+	  ConcurrentTasks	  off
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  8
+	  Version		  "1.13.1"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SignalLoggingSaveFormat "ModelDataLogs"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  9
+	  Version		  "1.13.1"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    8
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    Cell		    "UseSpecifiedMinMax"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  UseFloatMulNetSlope	  off
+	  DefaultUnderspecifiedDataType	"double"
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  ActiveStateOutputEnumStorageType "Native Integer"
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	  ParallelExecutionInRapidAccelerator on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  10
+	  Version		  "1.13.1"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "EnableAllAsWarning"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  FrameProcessingCompatibilityMsg "warning"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  SimStateOlderReleaseMsg "error"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	  SFUnconditionalTransitionShadowingDiag "warning"
+	  SFUndirectedBroadcastEventsDiag "warning"
+	  SFTransitionActionBeforeConditionDiag	"warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  11
+	  Version		  "1.13.1"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerLongLong	  64
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdLongLongMode	  off
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerLongLong	  64
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetLongLongMode	  off
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  12
+	  Version		  "1.13.1"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  13
+	  Version		  "1.13.1"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  on
+	  SimBuildMode		  "sf_incremental_build"
+	  SimGenImportedTypeDefs  off
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  14
+	  Version		  "1.13.1"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    9
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    Cell		    "GenerateWebview"
+	    Cell		    "GenerateCodeMetricsReport"
+	    Cell		    "GenerateCodeReplacementReport"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  TLCOptions		  ""
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  PackageGeneratedCodeAndArtifacts off
+	  PackageName		  ""
+	  TemplateMakefile	  "grt_default_tmf"
+	  PostCodeGenCommand	  ""
+	  Description		  ""
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ProcessScript		  ""
+	  ConfigurationScript	  ""
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  CustomSourceCode	  ""
+	  CustomHeaderCode	  ""
+	  CustomInclude		  ""
+	  CustomSource		  ""
+	  CustomLibrary		  ""
+	  CustomInitializer	  ""
+	  CustomTerminator	  ""
+	  Toolchain		  "Automatically locate an installed toolchain"
+	  BuildConfiguration	  "Faster Builds"
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  PortableWordSizes	  off
+	  GenerateErtSFunction	  off
+	  CreateSILPILBlock	  "None"
+	  CodeExecutionProfiling  off
+	  CodeExecutionProfileVariable "executionProfile"
+	  CodeProfilingSaveOptions "SummaryOnly"
+	  CodeProfilingInstrumentation off
+	  SILDebugging		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  GenerateWebview	  off
+	  GenerateCodeMetricsReport off
+	  GenerateCodeReplacementReport	off
+	  RTWCompilerOptimization "Off"
+	  RTWCustomCompilerOptimizations ""
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  DataInitializer	  ""
+	  SharedConstantsCachingThreshold 1024
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      15
+	      Version		      "1.13.1"
+	      Array {
+		Type			"Cell"
+		Dimension		21
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"InsertPolySpaceComments"
+		Cell			"SFDataObjDesc"
+		Cell			"MATLABFcnDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      OperatorAnnotations     off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M_T"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      CustomSymbolStrUtil     "$N$C"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InternalIdentifier      "Shortened"
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      16
+	      Version		      "1.13.1"
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"PortableWordSizes"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"GenerateAllocFcn"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      CodeReplacementLibrary  "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      ConcurrentExecutionCompliant on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      MATLABClassNameForMDSCustomization "Simulink.SoftwareTarget.GRTCustomization"
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      GRTInterface	      on
+	      GenerateAllocFcn	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      RTWCAPIRootIO	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition     [ 520, 225, 1400, 855 ] 
+    }
+    PropName		    "ConfigurationSets"
+  }
+  ExplicitPartitioning	  off
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  MaskDefaults {
+    SelfModifiable	    "off"
+    IconFrame		    "on"
+    IconOpaque		    "on"
+    RunInitForIconRedraw    "off"
+    IconRotate		    "none"
+    PortRotate		    "default"
+    IconUnits		    "autoscale"
+  }
+  MaskParameterDefaults {
+    Evaluate		    "on"
+    Tunable		    "on"
+    NeverSave		    "off"
+    Internal		    "off"
+    ReadOnly		    "off"
+    Enabled		    "on"
+    Visible		    "on"
+    ToolTip		    "on"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      BusSelector
+      OutputSignals	      "signal1,signal2,signal3"
+      OutputAsBus	      off
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+      PreserveConstantTs      off
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParamMin		      "[]"
+      ParamMax		      "[]"
+      ParamDataTypeStr	      "Inherit: Same as input"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Ground
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      OutputFunctionCall      off
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Lookup2D
+      RowIndex		      "[0 1]"
+      ColumnIndex	      "[0 1]"
+      Table		      "[0 0;0 0]"
+      LookUpMeth	      "Interpolation-Extrapolation"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+      LUTDesignTableMode      "Redesign Table"
+      LUTDesignDataSource     "Block Dialog"
+      LUTDesignFunctionName   "sqrt(x)"
+      LUTDesignUseExistingBP  on
+      LUTDesignRelError	      "0.01"
+      LUTDesignAbsError	      "1e-6"
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Product
+      Inputs		      "2"
+      Multiplication	      "Element-wise(.*)"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      S-Function
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+      SFunctionDeploymentMode off
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      FunctionInterfaceSpec   "void_void"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      SFBlockType	      "NONE"
+      Variant		      off
+      GeneratePreprocessorConditionals off
+      ContentPreviewEnabled   off
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      AccumDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Terminator
+    }
+    Block {
+      BlockType		      TransferFcn
+      Numerator		      "[1]"
+      Denominator	      "[1 2 1]"
+      AbsoluteTolerance	      "auto"
+      ContinuousStateAttributes	"''"
+      Realization	      "auto"
+    }
+  }
+  System {
+    Name		    "Window_with_Shading"
+    Location		    [667, 57, 1315, 714]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "524"
+    Block {
+      BlockType		      SubSystem
+      Name		      "Window_with_Shading"
+      SID		      "432"
+      Ports		      [3, 1]
+      Position		      [215, 88, 320, 162]
+      ZOrder		      2
+      BackgroundColor	      "lightBlue"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      Object {
+	$PropName		"MaskObject"
+	$ObjectID		17
+	$ClassName		"Simulink.Mask"
+	Type			"window"
+	Description		"The window model evaluates the g-value, the total energy transmission tau and the u-value to build up a"
+	" two node model.\n\ncontrol [0..1]:   specifies the fraction of the shading device. \n                  0 means a nor"
+	"m g-value, 1 means total shading of the \n                  window"
+	Help			"web(fullfile(path_carnot('help'),'Window.html'),'-helpbrowser')"
+	Initialization		"pos = [90  pos  0];\n\nh = windowsize(1);\nw = windowsize(2);\n\n%für Variablen in surfrad\nreflectg"
+	"round = max(0, min(1, misc(1)));\n\n%windowangle = position(1);\n%windowazimut = position(2);\n%windowheight=h;\n%win"
+	"dowwidth=w;\nwindowsurface = h*w;\n\nabsorption_out = misc(2);\nemission_out = misc(3);\nemission_in = misc(4);\n\nfo"
+	"r i = 1:numpanes\nC = sum(cp(i)*d(i)*d(i)*rho(i));\nend\nR=1/Ug-(0.04+0.13);\ntimeconst = R*C/2;\n\nR_norm_in = 0.13;"
+	"\nR_norm_out = 0.04;\nRwin = 1/Ug - R_norm_in - R_norm_out;\n\n\n\n\n\n\n"
+	Array {
+	  Type			  "Simulink.MaskParameter"
+	  Dimension		  21
+	  Object {
+	    $ObjectID		    18
+	    Type		    "edit"
+	    Name		    "windowsize"
+	    Prompt		    "size of window [m] [height width]"
+	    Value		    "[1 1]"
+	  }
+	  Object {
+	    $ObjectID		    19
+	    Type		    "edit"
+	    Name		    "numpanes"
+	    Prompt		    "number of window panes [1..4]"
+	    Value		    "2"
+	  }
+	  Object {
+	    $ObjectID		    20
+	    Type		    "edit"
+	    Name		    "frame"
+	    Prompt		    "part of frame of the surface (0..1)"
+	    Value		    "0.15"
+	  }
+	  Object {
+	    $ObjectID		    21
+	    Type		    "edit"
+	    Name		    "pos"
+	    Prompt		    "azimut (0=south, east = -90)"
+	    Value		    "0"
+	  }
+	  Object {
+	    $ObjectID		    22
+	    Type		    "edit"
+	    Name		    "d"
+	    Prompt		    "thickness of panes [m]"
+	    Value		    "[0.004 0.004]"
+	  }
+	  Object {
+	    $ObjectID		    23
+	    Type		    "edit"
+	    Name		    "rho"
+	    Prompt		    "density of glass [kg/m³]"
+	    Value		    "[2500 2500]"
+	  }
+	  Object {
+	    $ObjectID		    24
+	    Type		    "edit"
+	    Name		    "cp"
+	    Prompt		    "capacity of glass [J/(kgK)]"
+	    Value		    "[0.21 0.21]*3600"
+	  }
+	  Object {
+	    $ObjectID		    25
+	    Type		    "edit"
+	    Name		    "t0"
+	    Prompt		    "initial temperature [degree centigrade]"
+	    Value		    "20"
+	  }
+	  Object {
+	    $ObjectID		    26
+	    Type		    "edit"
+	    Name		    "misc"
+	    Prompt		    "[reflection_ground absorption_out emission_out emission_in]"
+	    Value		    "[0.2 0.1 0.84 0.84]"
+	  }
+	  Object {
+	    $ObjectID		    27
+	    Type		    "edit"
+	    Name		    "gvalue"
+	    Prompt		    "energy transmission of window (g-value) [0..1]"
+	    Value		    "0.6"
+	  }
+	  Object {
+	    $ObjectID		    28
+	    Type		    "edit"
+	    Name		    "tauzero"
+	    Prompt		    "transmission of glass [0..1]"
+	    Value		    "0.58"
+	  }
+	  Object {
+	    $ObjectID		    29
+	    Type		    "edit"
+	    Name		    "Ug"
+	    Prompt		    "heat transfer coefficient (U-value) [W/m²K]"
+	    Value		    "1.4"
+	  }
+	  Object {
+	    $ObjectID		    30
+	    Type		    "popup"
+	    Array {
+	      Type		      "Cell"
+	      Dimension		      4
+	      Cell		      "No shading"
+	      Cell		      "Exterior Screen"
+	      Cell		      "Interior Screen"
+	      Cell		      "Venetian Blind"
+	      PropName		      "TypeOptions"
+	    }
+	    Name		    "shad_type"
+	    Prompt		    "shading type [no Shading/exterior/interior]"
+	    Value		    "No shading"
+	    Callback		    "  \n    switch get_param(gcb,'shad_type')\n        case 'No shading' % nr. 1 no shading        \n "
+	    "           set_param(gcb,'MaskVisibilities',{'on','on','on','on','on','on','on','on','on','on','on','on','on','of"
+	    "f','off','off','off','off','off','off','off'});\n        case 'Exterior Screen' % nr. 2 external screen\n        "
+	    "    set_param(gcb,'MaskVisibilities',{'on','on','on','on','on','on','on','on','on','on','on','on','on','off','on'"
+	    ",'off','off','off','off','off','off'});\n        case 'Interior Screen' % nr. 3 Interior Screen\n            set_"
+	    "param(gcb,'MaskVisibilities',{'on','on','on','on','on','on','on','on','on','on','on','on','on','on','on','off','o"
+	    "ff','off','off','off','off'});\n        case 'Venetian Blind' % nr. 4 venetian blind\n            set_param(gcb,'"
+	    "MaskVisibilities',{'on','on','on','on','on','on','on','on','on','on','on','on','on','off','off','on','on','on','o"
+	    "n','on','on'});\n    end    \n"
+	  }
+	  Object {
+	    $ObjectID		    31
+	    Type		    "popup"
+	    Array {
+	      Type		      "Cell"
+	      Dimension		      6
+	      Cell		      "Zweifachglas normal"
+	      Cell		      "Zweifach-Wärmeschutzglas"
+	      Cell		      "Zweifach-Kombiglas 73/41"
+	      Cell		      "Zweifach-Kombiglas 50/24"
+	      Cell		      "Dreifachglas normal"
+	      Cell		      "Dreifach-Wärmeschutzglas"
+	      PropName		      "TypeOptions"
+	    }
+	    Name		    "type_glazing"
+	    Prompt		    "glazing type"
+	    Value		    "Dreifach-Wärmeschutzglas"
+	    Visible		    "off"
+	  }
+	  Object {
+	    $ObjectID		    32
+	    Type		    "edit"
+	    Name		    "tau_shad"
+	    Prompt		    "solar transmittance of shading element [0..1]"
+	    Value		    "0.304"
+	    Visible		    "off"
+	  }
+	  Object {
+	    $ObjectID		    33
+	    Type		    "edit"
+	    Name		    "bli_a"
+	    Prompt		    "a  Depth of blind blades [m]"
+	    Value		    "0.08"
+	    Visible		    "off"
+	  }
+	  Object {
+	    $ObjectID		    34
+	    Type		    "edit"
+	    Name		    "bli_b"
+	    Prompt		    "b heigth of blind blades [m]"
+	    Value		    "0.0126"
+	    Visible		    "off"
+	  }
+	  Object {
+	    $ObjectID		    35
+	    Type		    "edit"
+	    Name		    "bli_c"
+	    Prompt		    "c distance of \"b\" to back end of blind blade [m]"
+	    Value		    "0.009"
+	    Visible		    "off"
+	  }
+	  Object {
+	    $ObjectID		    36
+	    Type		    "edit"
+	    Name		    "bli_d"
+	    Prompt		    "d offset between blind blades [m]"
+	    Value		    "0.062"
+	    Visible		    "off"
+	  }
+	  Object {
+	    $ObjectID		    37
+	    Type		    "edit"
+	    Name		    "bli_alpha"
+	    Prompt		    "blind angle  (0=closed, 90=horizontal) [0..90]"
+	    Value		    "45"
+	    Visible		    "off"
+	  }
+	  Object {
+	    $ObjectID		    38
+	    Type		    "edit"
+	    Name		    "bli_refl"
+	    Prompt		    "optical reflectance of blind surface [0..1]"
+	    Value		    "0.441"
+	    Visible		    "off"
+	  }
+	  PropName		  "Parameters"
+	}
+      }
+      System {
+	Name			"Window_with_Shading"
+	Location		[620, 52, 1164, 944]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "WDB"
+	  SID			  "433"
+	  Position		  [45, 31, 65, 49]
+	  ZOrder		  -1
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "[AIV]"
+	  SID			  "434"
+	  Position		  [45, 336, 65, 354]
+	  ZOrder		  -2
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "control"
+	  SID			  "435"
+	  Position		  [45, 406, 65, 424]
+	  ZOrder		  -3
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "alfa_window_in"
+	  SID			  "436"
+	  Ports			  [5, 2]
+	  Position		  [235, 252, 330, 438]
+	  ZOrder		  -4
+	  BackgroundColor	  "yellow"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  Object {
+	    $PropName		    "MaskObject"
+	    $ObjectID		    39
+	    $ClassName		    "Simulink.Mask"
+	    Type		    "ALFA"
+	    Description		    "Convective and radiative heat transfer at the INDOOR SURFACE OF A VERTICAL WINDOW with 1-4 laye"
+	    "rs (each 3 ... 8 mm thick).\n\nTs  : temperature of window surface, °C,\n[sun_t]  : sun data (incidence angle, di"
+	    "rect and diffuse radiation\n    at tilted window surface),\n[AIV]  : conditions of zone node,\nqdots  : specific "
+	    "heat flow into window construction, W/m^2,\n[S]  : heat and air flow to zone node.\n\n"
+	  }
+	  System {
+	    Name		    "alfa_window_in"
+	    Location		    [238, 52, 1119, 841]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Ts2"
+	      SID		      "437"
+	      Position		      [15, 95, 35, 115]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	      Port {
+		PortNumber		1
+		Name			"Ts"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "[sun_t]"
+	      SID		      "438"
+	      Position		      [30, 290, 50, 310]
+	      ZOrder		      -2
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "[AIV]"
+	      SID		      "439"
+	      Position		      [15, 205, 35, 225]
+	      ZOrder		      -3
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "WDB"
+	      SID		      "440"
+	      Position		      [70, 315, 90, 335]
+	      ZOrder		      -4
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "control"
+	      SID		      "441"
+	      Position		      [125, 340, 145, 360]
+	      ZOrder		      -5
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      "Demux"
+	      SID		      "442"
+	      Ports		      [1, 4]
+	      Position		      [50, 185, 55, 240]
+	      ZOrder		      -6
+	      BackgroundColor	      "black"
+	      ShowName		      off
+	      Outputs		      "[1 1 1 6]"
+	      Port {
+		PortNumber		2
+		Name			"Tc"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"Tr"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Ground
+	      Name		      "Ground"
+	      SID		      "443"
+	      Position		      [655, 155, 675, 175]
+	      ZOrder		      -7
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Ground
+	      Name		      "Ground1"
+	      SID		      "444"
+	      Position		      [655, 205, 675, 225]
+	      ZOrder		      -8
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux"
+	      SID		      "445"
+	      Ports		      [2, 1]
+	      Position		      [555, 164, 560, 211]
+	      ZOrder		      -9
+	      BackgroundColor	      "black"
+	      ShowName		      off
+	      Inputs		      "2"
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux1"
+	      SID		      "446"
+	      Ports		      [4, 1]
+	      Position		      [690, 124, 695, 231]
+	      ZOrder		      -10
+	      BackgroundColor	      "black"
+	      ShowName		      off
+	      Inputs		      "[1 5 2 5]"
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Product5"
+	      SID		      "447"
+	      Ports		      [2, 1]
+	      Position		      [465, 164, 475, 231]
+	      ZOrder		      -11
+	      ShowName		      off
+	      Port {
+		PortNumber		1
+		Name			"qdotr"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum"
+	      SID		      "448"
+	      Ports		      [2, 1]
+	      Position		      [180, 82, 210, 113]
+	      ZOrder		      -12
+	      ShowName		      off
+	      Inputs		      "-+"
+	      Port {
+		PortNumber		1
+		Name			"dTc"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum1"
+	      SID		      "449"
+	      Ports		      [2, 1]
+	      Position		      [180, 197, 210, 228]
+	      ZOrder		      -13
+	      ShowName		      off
+	      Inputs		      "+-"
+	      Port {
+		PortNumber		1
+		Name			"dTr"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum2"
+	      SID		      "450"
+	      Ports		      [3, 1]
+	      Position		      [555, 93, 585, 127]
+	      ZOrder		      -14
+	      ShowName		      off
+	      Inputs		      "--+"
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator"
+	      SID		      "451"
+	      Position		      [70, 180, 90, 200]
+	      ZOrder		      -15
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator1"
+	      SID		      "452"
+	      Position		      [70, 225, 90, 245]
+	      ZOrder		      -16
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "emission_in"
+	      SID		      "453"
+	      Position		      [390, 165, 420, 195]
+	      ZOrder		      -17
+	      Gain		      "emission_in"
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "surface of\nwindow"
+	      SID		      "454"
+	      Position		      [585, 175, 615, 205]
+	      ZOrder		      -18
+	      BackgroundColor	      "yellow"
+	      Gain		      "windowsurface"
+	      Port {
+		PortNumber		1
+		Name			"[Qdotc, Qdotr]"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "surface of\nwindow glass"
+	      SID		      "455"
+	      Position		      [470, 330, 500, 360]
+	      ZOrder		      -19
+	      BackgroundColor	      "yellow"
+	      Gain		      "(1-frame)*windowsurface"
+	      Port {
+		PortNumber		1
+		Name			"Qdot_sol"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "transmission_absorption"
+	      SID		      "456"
+	      Ports		      [3, 2]
+	      Position		      [205, 285, 325, 365]
+	      ZOrder		      -20
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      Port {
+		PortNumber		1
+		Name			"qabs"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		2
+		Name			"qdot_sol (> =0)"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      System {
+		Name			"transmission_absorption"
+		Location		[127, 116, 1109, 1038]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "sun_t"
+		  SID			  "457"
+		  Position		  [115, 245, 135, 265]
+		  ZOrder		  -1
+		  NamePlacement		  "alternate"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "WDB"
+		  SID			  "458"
+		  Position		  [90, 340, 110, 360]
+		  ZOrder		  -2
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "control"
+		  SID			  "459"
+		  Position		  [90, 380, 110, 400]
+		  ZOrder		  -3
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  "Demux"
+		  SID			  "460"
+		  Ports			  [1, 2]
+		  Position		  [400, 195, 405, 235]
+		  ZOrder		  -4
+		  BackgroundColor	  "black"
+		  NamePlacement		  "alternate"
+		  ShowName		  off
+		  Outputs		  "2"
+		  Port {
+		    PortNumber		    1
+		    Name		    "tau_norm(teta)"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    2
+		    Name		    "tau_norm(60)"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  "Demux1"
+		  SID			  "461"
+		  Ports			  [1, 3]
+		  Position		  [160, 231, 165, 279]
+		  ZOrder		  -5
+		  BackgroundColor	  "black"
+		  ShowName		  off
+		  Outputs		  "3"
+		  Port {
+		    PortNumber		    1
+		    Name		    "teta"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    2
+		    Name		    "Idir_t"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  Port {
+		    PortNumber		    3
+		    Name		    "Idfu_t"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "LUT_taualfa"
+		  SID			  "462"
+		  Ports			  [2, 1]
+		  Position		  [250, 197, 340, 228]
+		  ZOrder		  -6
+		  BackgroundColor	  "yellow"
+		  MinAlgLoopOccurrences	  off
+		  PropExecContextOutsideSubsystem off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  Opaque		  off
+		  RequestExecContextInheritance	off
+		  MaskHideContents	  off
+		  Object {
+		    $PropName		    "MaskObject"
+		    $ObjectID		    40
+		    $ClassName		    "Simulink.Mask"
+		    Type		    "LOOK UP TABLE"
+		    Description		    "Normalized RADIATION TRANSMISSION COEFFICIENT of a window glass layer stack with 1, 2, 3 or 4 "
+		    "layers depending on the incidence angle.\n\nteta		: incidence angle = angle between surface normal and \n	      "
+		    "          incidence direction, degree\nnumlayer	: number of layers within the window glass, [1,4].\ntau		: trans"
+		    "mission of glass layer stack, [0,1]\n\nNOTE: This block is defined for pane thickness between 3 and 6 mm."
+		  }
+		  Port {
+		    PortNumber		    1
+		    Name		    "Qdot_sol"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		  System {
+		    Name		    "LUT_taualfa"
+		    Location		    [458, 52, 877, 477]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "numlpanes"
+		    SID			    "463"
+		    Position		    [25, 93, 55, 107]
+		    ZOrder		    -1
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "teta"
+		    SID			    "464"
+		    Position		    [25, 58, 55, 72]
+		    ZOrder		    -2
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Lookup2D
+		    Name		    "TAUALFA 1-2-3-4 layers"
+		    SID			    "465"
+		    Position		    [200, 55, 240, 95]
+		    ZOrder		    -3
+		    BackgroundColor	    "yellow"
+		    RowIndex		    "[0:10:90]"
+		    ColumnIndex		    "[1:4]"
+		    Table		    "[1  1  1  1;.99955 .99912  .9987 .99827;.99787  .9961 .99449 .99298;.99364 .98941 .98618 .98366;.983"
+		    "64 .97519 .97041 .96824;.9601 .94337 .93638 .93624;.90423 .86634 .84734 .84064;.77129 .67843 .61507 .56891;.4743"
+		    "6  .3235 .22952 .16682;0  0  0  0]"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "tau_norm"
+		    SID			    "466"
+		    Position		    [315, 68, 345, 82]
+		    ZOrder		    -4
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    ZOrder		    1
+		    SrcBlock		    "teta"
+		    SrcPort		    1
+		    DstBlock		    "TAUALFA 1-2-3-4 layers"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    2
+		    SrcBlock		    "numlpanes"
+		    SrcPort		    1
+		    Points		    [65, 0; 0, -15]
+		    DstBlock		    "TAUALFA 1-2-3-4 layers"
+		    DstPort		    2
+		    }
+		    Line {
+		    ZOrder		    3
+		    SrcBlock		    "TAUALFA 1-2-3-4 layers"
+		    SrcPort		    1
+		    DstBlock		    "tau_norm"
+		    DstPort		    1
+		    }
+		    Annotation {
+		    SID			    "468"
+		    Name		    "NOTE: \nTAUALFA-Lookup-table calculated with \"taualfa.m\":\n  a) 4mm float glass (error neglectable "
+		    "if glass thickness is 3 or 6mm),\n  b) no dirt absorption on glass surfaces,\n  c) 100% room absorption,\n  d) n"
+		    "ormalized to tau(0).\n\nFrom: Duffie / Beckman: Solar Engineering of Thermal Processes, 1991"
+		    Position		    [18, 177, 18, 177]
+		    AutoSize		    on
+		    WordWrap		    off
+		    HorizontalAlignment	    "left"
+		    ForegroundColor	    "red"
+		    ZOrder		    -1
+		    }
+		    Annotation {
+		    SID			    "467"
+		    Name		    "Normalized radiation transmission TAUALFA \nof a window glass stack with 1,2,3 or 4 layers"
+		    Position		    [26, 29, 286, 61]
+		    AutoSize		    on
+		    WordWrap		    off
+		    HorizontalAlignment	    "left"
+		    ForegroundColor	    "blue"
+		    ZOrder		    -2
+		    FontSize		    12
+		    FontWeight		    "bold"
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "Mux"
+		  SID			  "469"
+		  Ports			  [2, 1]
+		  Position		  [210, 199, 215, 241]
+		  ZOrder		  -7
+		  BackgroundColor	  "black"
+		  ShowName		  off
+		  Inputs		  "2"
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product1"
+		  SID			  "470"
+		  Ports			  [2, 1]
+		  Position		  [410, 286, 425, 319]
+		  ZOrder		  -8
+		  BackgroundColor	  "[0.188235, 0.596078, 0.725490]"
+		  ShowName		  off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product11"
+		  SID			  "471"
+		  Ports			  [2, 1]
+		  Position		  [705, 170, 720, 205]
+		  ZOrder		  -9
+		  ShowName		  off
+		  Inputs		  "**"
+		  Port {
+		    PortNumber		    1
+		    Name		    "qdot_room"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product2"
+		  SID			  "472"
+		  Ports			  [2, 1]
+		  Position		  [380, 246, 395, 279]
+		  ZOrder		  -10
+		  BackgroundColor	  "[0.188235, 0.596078, 0.725490]"
+		  ShowName		  off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product3"
+		  SID			  "473"
+		  Ports			  [2, 1]
+		  Position		  [670, 231, 685, 264]
+		  ZOrder		  -11
+		  BackgroundColor	  "[0.188235, 0.596078, 0.725490]"
+		  ShowName		  off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product4"
+		  SID			  "474"
+		  Ports			  [2, 1]
+		  Position		  [660, 146, 675, 179]
+		  ZOrder		  -12
+		  BackgroundColor	  "[0.188235, 0.596078, 0.725490]"
+		  ShowName		  off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product7"
+		  SID			  "475"
+		  Ports			  [2, 1]
+		  Position		  [505, 197, 520, 228]
+		  ZOrder		  -13
+		  ShowName		  off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product8"
+		  SID			  "476"
+		  Ports			  [2, 1]
+		  Position		  [505, 247, 520, 278]
+		  ZOrder		  -14
+		  ShowName		  off
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "Shading"
+		  SID			  "477"
+		  Ports			  [2, 4]
+		  Position		  [160, 330, 310, 410]
+		  ZOrder		  -15
+		  BackgroundColor	  "[0.188235, 0.596078, 0.725490]"
+		  MinAlgLoopOccurrences	  off
+		  PropExecContextOutsideSubsystem off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  Opaque		  off
+		  RequestExecContextInheritance	off
+		  MaskHideContents	  off
+		  System {
+		    Name		    "Shading"
+		    Location		    [266, 192, 727, 758]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "WDB"
+		    SID			    "478"
+		    Position		    [35, 97, 65, 113]
+		    ZOrder		    -1
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "control"
+		    SID			    "479"
+		    Position		    [35, 52, 65, 68]
+		    ZOrder		    -2
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    BusSelector
+		    Name		    "Bus\nSelector"
+		    SID			    "480"
+		    Ports		    [1, 1]
+		    Position		    [105, 93, 110, 117]
+		    ZOrder		    -3
+		    ShowName		    off
+		    OutputSignals	    "Zenith_Angle"
+		    Port {
+		    PortNumber		    1
+		    Name		    "<Zenith_Angle>"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    Demux
+		    Name		    "Demux"
+		    SID			    "481"
+		    Ports		    [1, 4]
+		    Position		    [310, 38, 315, 152]
+		    ZOrder		    -4
+		    BackgroundColor	    "black"
+		    ShowName		    off
+		    DisplayOption	    "bar"
+		    }
+		    Block {
+		    BlockType		    Mux
+		    Name		    "Mux"
+		    SID			    "482"
+		    Ports		    [2, 1]
+		    Position		    [200, 69, 205, 116]
+		    ZOrder		    -5
+		    ShowName		    off
+		    Inputs		    "2"
+		    DisplayOption	    "bar"
+		    }
+		    Block {
+		    BlockType		    S-Function
+		    Name		    "S-Function"
+		    SID			    "483"
+		    Ports		    [1, 1]
+		    Position		    [225, 80, 285, 110]
+		    ZOrder		    -6
+		    FunctionName	    "venetian"
+		    Parameters		    "bli_a, bli_b, bli_c, bli_d, bli_alpha, bli_refl, shad_type, type_glazing, tau_shad"
+		    EnableBusSupport	    off
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "f_dir"
+		    SID			    "484"
+		    Position		    [340, 40, 360, 60]
+		    ZOrder		    -7
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "f_dfu"
+		    SID			    "485"
+		    Position		    [340, 70, 360, 90]
+		    ZOrder		    -8
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "f_g"
+		    SID			    "486"
+		    Position		    [340, 100, 360, 120]
+		    ZOrder		    -9
+		    Port		    "3"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "f_tau"
+		    SID			    "487"
+		    Position		    [340, 130, 360, 150]
+		    ZOrder		    -10
+		    Port		    "4"
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    ZOrder		    1
+		    SrcBlock		    "WDB"
+		    SrcPort		    1
+		    DstBlock		    "Bus\nSelector"
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "<Zenith_Angle>"
+		    ZOrder		    2
+		    Labels		    [0, 0]
+		    SrcBlock		    "Bus\nSelector"
+		    SrcPort		    1
+		    DstBlock		    "Mux"
+		    DstPort		    2
+		    }
+		    Line {
+		    ZOrder		    3
+		    SrcBlock		    "control"
+		    SrcPort		    1
+		    Points		    [115, 0]
+		    DstBlock		    "Mux"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    4
+		    SrcBlock		    "Mux"
+		    SrcPort		    1
+		    DstBlock		    "S-Function"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    5
+		    SrcBlock		    "S-Function"
+		    SrcPort		    1
+		    DstBlock		    "Demux"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    6
+		    SrcBlock		    "Demux"
+		    SrcPort		    1
+		    DstBlock		    "f_dir"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    7
+		    SrcBlock		    "Demux"
+		    SrcPort		    2
+		    DstBlock		    "f_dfu"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    8
+		    SrcBlock		    "Demux"
+		    SrcPort		    3
+		    DstBlock		    "f_g"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    9
+		    SrcBlock		    "Demux"
+		    SrcPort		    4
+		    DstBlock		    "f_tau"
+		    DstPort		    1
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum"
+		  SID			  "488"
+		  Ports			  [2, 1]
+		  Position		  [780, 181, 795, 214]
+		  ZOrder		  -16
+		  ShowName		  off
+		  Inputs		  "+-"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum3"
+		  SID			  "489"
+		  Ports			  [2, 1]
+		  Position		  [555, 189, 570, 291]
+		  ZOrder		  -17
+		  ShowName		  off
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "const1"
+		  SID			  "490"
+		  Position		  [540, 143, 610, 167]
+		  ZOrder		  -18
+		  NamePlacement		  "alternate"
+		  ShowName		  off
+		  Value			  "gvalue"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "numlayer"
+		  SID			  "491"
+		  Position		  [217, 165, 253, 185]
+		  ZOrder		  -19
+		  BlockRotation		  270
+		  BlockMirror		  on
+		  NamePlacement		  "alternate"
+		  ShowName		  off
+		  Value			  "numpanes"
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "tau(0)"
+		  SID			  "492"
+		  Position		  [595, 225, 625, 255]
+		  ZOrder		  -20
+		  Gain			  "tauzero"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "teta(taudfu)"
+		  SID			  "493"
+		  Position		  [115, 165, 175, 185]
+		  ZOrder		  -21
+		  Value			  "60"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "qdot_abs"
+		  SID			  "494"
+		  Position		  [850, 193, 880, 207]
+		  ZOrder		  -22
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "qdot_sol"
+		  SID			  "495"
+		  Position		  [850, 243, 880, 257]
+		  ZOrder		  -23
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  ZOrder		  1
+		  SrcBlock		  "control"
+		  SrcPort		  1
+		  DstBlock		  "Shading"
+		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  2
+		  SrcBlock		  "WDB"
+		  SrcPort		  1
+		  DstBlock		  "Shading"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  3
+		  SrcBlock		  "Shading"
+		  SrcPort		  3
+		  Points		  [325, 0; 0, -210]
+		  DstBlock		  "Product4"
+		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  4
+		  SrcBlock		  "const1"
+		  SrcPort		  1
+		  DstBlock		  "Product4"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  5
+		  SrcBlock		  "Product4"
+		  SrcPort		  1
+		  Points		  [10, 0]
+		  DstBlock		  "Product11"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  6
+		  SrcBlock		  "Shading"
+		  SrcPort		  4
+		  Points		  [340, 0]
+		  DstBlock		  "Product3"
+		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  7
+		  SrcBlock		  "Shading"
+		  SrcPort		  2
+		  Points		  [80, 0]
+		  DstBlock		  "Product1"
+		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  8
+		  SrcBlock		  "Shading"
+		  SrcPort		  1
+		  Points		  [50, 0]
+		  DstBlock		  "Product2"
+		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  9
+		  SrcBlock		  "Product2"
+		  SrcPort		  1
+		  Points		  [75, 0; 0, -45]
+		  DstBlock		  "Product7"
+		  DstPort		  2
+		}
+		Line {
+		  Name			  "Idir_t"
+		  ZOrder		  10
+		  Labels		  [0, 0]
+		  SrcBlock		  "Demux1"
+		  SrcPort		  2
+		  DstBlock		  "Product2"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  11
+		  SrcBlock		  "Product1"
+		  SrcPort		  1
+		  Points		  [55, 0; 0, -35]
+		  DstBlock		  "Product8"
+		  DstPort		  2
+		}
+		Line {
+		  Name			  "Idfu_t"
+		  ZOrder		  12
+		  Labels		  [0, 0]
+		  SrcBlock		  "Demux1"
+		  SrcPort		  3
+		  Points		  [95, 0; 0, 25]
+		  DstBlock		  "Product1"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  13
+		  SrcBlock		  "Product3"
+		  SrcPort		  1
+		  Points		  [45, 0]
+		  Branch {
+		    ZOrder		    14
+		    DstBlock		    "qdot_sol"
+		    DstPort		    1
+		  }
+		  Branch {
+		    ZOrder		    15
+		    Points		    [0, -45]
+		    DstBlock		    "Sum"
+		    DstPort		    2
+		  }
+		}
+		Line {
+		  ZOrder		  16
+		  SrcBlock		  "tau(0)"
+		  SrcPort		  1
+		  DstBlock		  "Product3"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  17
+		  SrcBlock		  "sun_t"
+		  SrcPort		  1
+		  DstBlock		  "Demux1"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "Qdot_sol"
+		  ZOrder		  18
+		  Labels		  [0, 0]
+		  SrcBlock		  "LUT_taualfa"
+		  SrcPort		  1
+		  DstBlock		  "Demux"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "tau_norm(teta)"
+		  ZOrder		  19
+		  Labels		  [0, 1]
+		  SrcBlock		  "Demux"
+		  SrcPort		  1
+		  DstBlock		  "Product7"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  20
+		  SrcBlock		  "Product7"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  21
+		  SrcBlock		  "Product8"
+		  SrcPort		  1
+		  DstBlock		  "Sum3"
+		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  22
+		  SrcBlock		  "Sum3"
+		  SrcPort		  1
+		  Points		  [5, 0]
+		  Branch {
+		    ZOrder		    23
+		    Points		    [0, 0; 0, -45]
+		    DstBlock		    "Product11"
+		    DstPort		    2
+		  }
+		  Branch {
+		    ZOrder		    24
+		    DstBlock		    "tau(0)"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  Name			  "tau_norm(60)"
+		  ZOrder		  25
+		  Labels		  [0, 1]
+		  SrcBlock		  "Demux"
+		  SrcPort		  2
+		  Points		  [75, 0; 0, 30]
+		  DstBlock		  "Product8"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "qdot_room"
+		  ZOrder		  26
+		  Labels		  [0, 0]
+		  SrcBlock		  "Product11"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  27
+		  SrcBlock		  "Sum"
+		  SrcPort		  1
+		  DstBlock		  "qdot_abs"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "teta"
+		  ZOrder		  28
+		  Labels		  [0, 0]
+		  SrcBlock		  "Demux1"
+		  SrcPort		  1
+		  Points		  [5, 0; 0, -30]
+		  DstBlock		  "Mux"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  29
+		  SrcBlock		  "teta(taudfu)"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, 55]
+		  DstBlock		  "Mux"
+		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  30
+		  SrcBlock		  "numlayer"
+		  SrcPort		  1
+		  DstBlock		  "LUT_taualfa"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  31
+		  SrcBlock		  "Mux"
+		  SrcPort		  1
+		  DstBlock		  "LUT_taualfa"
+		  DstPort		  2
+		}
+		Annotation {
+		  SID			  "497"
+		  Name			  "Assumption:\n1. gvalue = gvalue(0)\n2. gvalue(teta) / gvalue = tau(teta) / tau(0)"
+		  Position		  [40, 97, 40, 97]
+		  AutoSize		  on
+		  WordWrap		  off
+		  HorizontalAlignment	  "left"
+		  ForegroundColor	  "red"
+		  ZOrder		  -1
+		}
+		Annotation {
+		  SID			  "496"
+		  Name			  "1. solar radiation into room (behind window glass layers)\n2. absorbed solar radiation flowing from inne"
+		  "r window surface into zone"
+		  Position		  [22, 23, 434, 55]
+		  AutoSize		  on
+		  WordWrap		  off
+		  HorizontalAlignment	  "left"
+		  ForegroundColor	  "blue"
+		  ZOrder		  -2
+		  FontSize		  12
+		  FontWeight		  "bold"
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Gain
+	      Name		      "u_convection"
+	      SID		      "498"
+	      Position		      [285, 85, 325, 115]
+	      ZOrder		      -21
+	      Gain		      "2.5"
+	      Port {
+		PortNumber		1
+		Name			"qdotc"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "u_rad"
+	      SID		      "499"
+	      Position		      [320, 165, 350, 195]
+	      ZOrder		      -22
+	      Value		      "5.6"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "qdots2"
+	      SID		      "500"
+	      Position		      [735, 100, 755, 120]
+	      ZOrder		      -23
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "[S]"
+	      SID		      "501"
+	      Position		      [735, 170, 755, 190]
+	      ZOrder		      -24
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      ZOrder		      1
+	      SrcBlock		      "control"
+	      SrcPort		      1
+	      DstBlock		      "transmission_absorption"
+	      DstPort		      3
+	    }
+	    Line {
+	      ZOrder		      2
+	      SrcBlock		      "WDB"
+	      SrcPort		      1
+	      DstBlock		      "transmission_absorption"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "qabs"
+	      ZOrder		      3
+	      Labels		      [0, 0]
+	      SrcBlock		      "transmission_absorption"
+	      SrcPort		      1
+	      Points		      [210, 0]
+	      DstBlock		      "Sum2"
+	      DstPort		      3
+	    }
+	    Line {
+	      Name		      "qdot_sol (> =0)"
+	      ZOrder		      4
+	      Labels		      [0, 0]
+	      SrcBlock		      "transmission_absorption"
+	      SrcPort		      2
+	      DstBlock		      "surface of\nwindow glass"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "Tr"
+	      FontSize		      10
+	      ZOrder		      5
+	      Labels		      [1, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      3
+	      DstBlock		      "Sum1"
+	      DstPort		      2
+	    }
+	    Line {
+	      Name		      "dTc"
+	      FontSize		      10
+	      ZOrder		      6
+	      SrcBlock		      "Sum"
+	      SrcPort		      1
+	      DstBlock		      "u_convection"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "Tc"
+	      FontSize		      10
+	      ZOrder		      7
+	      Labels		      [3, 0]
+	      SrcBlock		      "Demux"
+	      SrcPort		      2
+	      Points		      [50, 0; 0, -115]
+	      DstBlock		      "Sum"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "[Qdotc, Qdotr]"
+	      ZOrder		      8
+	      Labels		      [1, 1]
+	      SrcBlock		      "surface of\nwindow"
+	      SrcPort		      1
+	      DstBlock		      "Mux1"
+	      DstPort		      3
+	    }
+	    Line {
+	      Name		      "Qdot_sol"
+	      ZOrder		      9
+	      Labels		      [2, 1]
+	      SrcBlock		      "surface of\nwindow glass"
+	      SrcPort		      1
+	      Points		      [65, 0; 0, -205]
+	      DstBlock		      "Mux1"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      10
+	      SrcBlock		      "[sun_t]"
+	      SrcPort		      1
+	      DstBlock		      "transmission_absorption"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "qdotc"
+	      FontSize		      10
+	      ZOrder		      11
+	      Labels		      [0, 0]
+	      SrcBlock		      "u_convection"
+	      SrcPort		      1
+	      Points		      [175, 0; 0, 0]
+	      Branch {
+		ZOrder			12
+		Points			[0, 75]
+		DstBlock		"Mux"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			13
+		Labels			[1, 0]
+		DstBlock		"Sum2"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      Name		      "qdotr"
+	      FontSize		      10
+	      ZOrder		      14
+	      Labels		      [1, 1]
+	      SrcBlock		      "Product5"
+	      SrcPort		      1
+	      Points		      [40, 0]
+	      Branch {
+		ZOrder			15
+		Points			[0, -90]
+		DstBlock		"Sum2"
+		DstPort			2
+	      }
+	      Branch {
+		ZOrder			16
+		DstBlock		"Mux"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      Name		      "Ts"
+	      FontSize		      10
+	      ZOrder		      17
+	      SrcBlock		      "Ts2"
+	      SrcPort		      1
+	      Points		      [85, 0]
+	      Branch {
+		ZOrder			18
+		Points			[0, 100]
+		DstBlock		"Sum1"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			19
+		DstBlock		"Sum"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      ZOrder		      20
+	      SrcBlock		      "u_rad"
+	      SrcPort		      1
+	      DstBlock		      "emission_in"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "dTr"
+	      FontSize		      10
+	      ZOrder		      21
+	      Labels		      [-1, 0]
+	      SrcBlock		      "Sum1"
+	      SrcPort		      1
+	      DstBlock		      "Product5"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      22
+	      SrcBlock		      "emission_in"
+	      SrcPort		      1
+	      DstBlock		      "Product5"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      23
+	      SrcBlock		      "Mux"
+	      SrcPort		      1
+	      DstBlock		      "surface of\nwindow"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      24
+	      SrcBlock		      "Demux"
+	      SrcPort		      1
+	      DstBlock		      "Terminator"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      25
+	      SrcBlock		      "[AIV]"
+	      SrcPort		      1
+	      DstBlock		      "Demux"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      26
+	      SrcBlock		      "Demux"
+	      SrcPort		      4
+	      DstBlock		      "Terminator1"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      27
+	      SrcBlock		      "Sum2"
+	      SrcPort		      1
+	      DstBlock		      "qdots2"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      28
+	      SrcBlock		      "Mux1"
+	      SrcPort		      1
+	      DstBlock		      "[S]"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      29
+	      SrcBlock		      "Ground"
+	      SrcPort		      1
+	      DstBlock		      "Mux1"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      30
+	      SrcBlock		      "Ground1"
+	      SrcPort		      1
+	      DstBlock		      "Mux1"
+	      DstPort		      4
+	    }
+	    Annotation {
+	      SID		      "507"
+	      Name		      "(°C)"
+	      Position		      [27, 136, 27, 136]
+	      AutoSize		      on
+	      WordWrap		      off
+	      ZOrder		      -1
+	    }
+	    Annotation {
+	      SID		      "506"
+	      Name		      "Convective and radiative heat transfer at the INDOOR SURFACE OF A VERTICAL WINDOW \nwith 1-4 layer"
+	      "s (each 3 ... 8 mm thick)"
+	      Position		      [272, 18, 790, 50]
+	      AutoSize		      on
+	      WordWrap		      off
+	      ForegroundColor	      "blue"
+	      ZOrder		      -2
+	      FontSize		      12
+	      FontWeight	      "bold"
+	    }
+	    Annotation {
+	      SID		      "505"
+	      Name		      "WINDOW = FRAME + GLASS"
+	      Position		      [102, 452, 102, 452]
+	      AutoSize		      on
+	      WordWrap		      off
+	      ZOrder		      -3
+	    }
+	    Annotation {
+	      SID		      "504"
+	      Name		      "s: surface        \nc: convective   \nr: radiative      "
+	      Position		      [72, 486, 72, 486]
+	      AutoSize		      on
+	      WordWrap		      off
+	      ZOrder		      -4
+	    }
+	    Annotation {
+	      SID		      "503"
+	      Name		      "CONVENTION:\nQdot > 0 and qdots < 0, if Ts > T (heat flows from wall surface to room node),\nQdot "
+	      "< 0 and qdots > 0, if Ts < T (heat flows from room node to wall surface)."
+	      Position		      [369, 517, 369, 517]
+	      AutoSize		      on
+	      WordWrap		      off
+	      ForegroundColor	      "red"
+	      DropShadow	      on
+	      ZOrder		      -5
+	    }
+	    Annotation {
+	      SID		      "502"
+	      Name		      "(W/m^2)"
+	      Position		      [738, 145, 738, 145]
+	      AutoSize		      on
+	      WordWrap		      off
+	      ZOrder		      -6
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "alfa_window_out"
+	  SID			  "508"
+	  Ports			  [3, 2]
+	  Position		  [235, 27, 320, 103]
+	  ZOrder		  -5
+	  BackgroundColor	  "yellow"
+	  FontName		  "Arial"
+	  SourceBlock		  "carnot/Load/Houses/heat_transfer/alfa_window_out"
+	  SourceType		  "ALFA"
+	  ContentPreviewEnabled	  off
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "lambda_window"
+	  SID			  "509"
+	  Ports			  [2, 2]
+	  Position		  [235, 150, 325, 205]
+	  ZOrder		  -6
+	  BlockMirror		  on
+	  BackgroundColor	  "yellow"
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  Object {
+	    $PropName		    "MaskObject"
+	    $ObjectID		    41
+	    $ClassName		    "Simulink.Mask"
+	    Type		    "LAMBDA"
+	    Description		    "Heat conduction through a transparent component (window).\n\nqdots1	: specific heat flow vertic"
+	    "al on surface 1, W/m²\nqdots2	: specific heat flow vertical on surface 2, W/m²\nTs1	: temperature of surface 1, °"
+	    "C\nTs2	: temperature of surface 2, °C\n\nNOTE CONVENTION for INPUT NUMBER:\n\"1\"	  indoor surface of an outer wi"
+	    "ndow OR\n	  surface \"a\" of an inner window OR\n 	  surface \"f\" of a glass floor\n\n\"2\"	  outdoor surface of"
+	    " a window OR\n	  surface \"b\" of an inner window OR\n 	  surface \"c\" of a glass ceiling\n"
+	  }
+	  System {
+	    Name		    "lambda_window"
+	    Location		    [84, 65, 668, 506]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "qdots1"
+	      SID		      "510"
+	      Position		      [20, 153, 50, 167]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "qdots2"
+	      SID		      "511"
+	      Position		      [20, 188, 50, 202]
+	      ZOrder		      -2
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Product1"
+	      SID		      "512"
+	      Ports		      [2, 1]
+	      Position		      [245, 171, 260, 204]
+	      ZOrder		      -3
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Product6"
+	      SID		      "513"
+	      Ports		      [2, 1]
+	      Position		      [245, 66, 260, 99]
+	      ZOrder		      -4
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "R_win"
+	      SID		      "514"
+	      Position		      [15, 64, 95, 86]
+	      ZOrder		      -5
+	      Value		      "Rwin"
+	      Port {
+		PortNumber		1
+		Name			"R_win"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum1"
+	      SID		      "515"
+	      Ports		      [2, 1]
+	      Position		      [295, 181, 310, 214]
+	      ZOrder		      -6
+	      NamePlacement	      "alternate"
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum3"
+	      SID		      "516"
+	      Ports		      [2, 1]
+	      Position		      [295, 76, 310, 109]
+	      ZOrder		      -7
+	      NamePlacement	      "alternate"
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      TransferFcn
+	      Name		      "Transfer Fcn"
+	      SID		      "517"
+	      Position		      [325, 77, 410, 113]
+	      ZOrder		      -8
+	      ShowName		      off
+	      Denominator	      "[timeconst 1]"
+	    }
+	    Block {
+	      BlockType		      TransferFcn
+	      Name		      "Transfer Fcn1"
+	      SID		      "518"
+	      Position		      [330, 183, 405, 217]
+	      ZOrder		      -9
+	      ShowName		      off
+	      Denominator	      "[timeconst 1]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Ts1"
+	      SID		      "519"
+	      Position		      [455, 88, 485, 102]
+	      ZOrder		      -10
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Ts2"
+	      SID		      "520"
+	      Position		      [455, 193, 485, 207]
+	      ZOrder		      -11
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      ZOrder		      1
+	      SrcBlock		      "Transfer Fcn1"
+	      SrcPort		      1
+	      Points		      [-20, 0; 25, 0]
+	      Branch {
+		ZOrder			2
+		Labels			[1, 0]
+		DstBlock		"Ts2"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			3
+		Points			[0, -25; -135, 0]
+		DstBlock		"Sum3"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      ZOrder		      4
+	      SrcBlock		      "Transfer Fcn"
+	      SrcPort		      1
+	      Points		      [0, 0]
+	      Branch {
+		ZOrder			5
+		DstBlock		"Ts1"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			6
+		Points			[0, 70; -145, 0; 0, 40]
+		DstBlock		"Sum1"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      ZOrder		      7
+	      SrcBlock		      "qdots1"
+	      SrcPort		      1
+	      Points		      [140, 0; 0, -70]
+	      DstBlock		      "Product6"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      8
+	      SrcBlock		      "qdots2"
+	      SrcPort		      1
+	      DstBlock		      "Product1"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      9
+	      SrcBlock		      "Product6"
+	      SrcPort		      1
+	      DstBlock		      "Sum3"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      10
+	      SrcBlock		      "Sum3"
+	      SrcPort		      1
+	      DstBlock		      "Transfer Fcn"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      11
+	      SrcBlock		      "Product1"
+	      SrcPort		      1
+	      DstBlock		      "Sum1"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      12
+	      SrcBlock		      "Sum1"
+	      SrcPort		      1
+	      DstBlock		      "Transfer Fcn1"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "R_win"
+	      ZOrder		      13
+	      Labels		      [2, 0]
+	      SrcBlock		      "R_win"
+	      SrcPort		      1
+	      Points		      [0, 0; 120, 0]
+	      Branch {
+		ZOrder			14
+		DstBlock		"Product6"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			15
+		Points			[0, 105]
+		DstBlock		"Product1"
+		DstPort			1
+	      }
+	    }
+	    Annotation {
+	      SID		      "522"
+	      Name		      "Heat conduction in a window (ONLY SURFACE LAYER CONNECTABLE)"
+	      Position		      [9, 15, 417, 32]
+	      AutoSize		      on
+	      WordWrap		      off
+	      HorizontalAlignment     "left"
+	      ForegroundColor	      "blue"
+	      ZOrder		      -1
+	      FontSize		      12
+	      FontWeight	      "bold"
+	    }
+	    Annotation {
+	      SID		      "521"
+	      Name		      "Timeconstant of window is calculated \nin the mask initialization"
+	      Position		      [373, 53, 373, 53]
+	      AutoSize		      on
+	      WordWrap		      off
+	      ForegroundColor	      "red"
+	      ZOrder		      -2
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "position1"
+	  SID			  "523"
+	  Position		  [165, 54, 210, 76]
+	  ZOrder		  -7
+	  ShowName		  off
+	  Value			  "gvalue"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "[S]"
+	  SID			  "524"
+	  Position		  [415, 386, 435, 404]
+	  ZOrder		  -8
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  ZOrder		  1
+	  SrcBlock		  "position1"
+	  SrcPort		  1
+	  DstBlock		  "alfa_window_out"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  2
+	  SrcBlock		  "control"
+	  SrcPort		  1
+	  DstBlock		  "alfa_window_in"
+	  DstPort		  5
+	}
+	Line {
+	  ZOrder		  3
+	  SrcBlock		  "alfa_window_out"
+	  SrcPort		  1
+	  Points		  [35, 0; 0, 185; -155, 0; 0, 80]
+	  DstBlock		  "alfa_window_in"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  4
+	  SrcBlock		  "alfa_window_out"
+	  SrcPort		  2
+	  Points		  [15, 0]
+	  DstBlock		  "lambda_window"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  5
+	  SrcBlock		  "lambda_window"
+	  SrcPort		  2
+	  Points		  [-10, 0]
+	  DstBlock		  "alfa_window_in"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  6
+	  SrcBlock		  "alfa_window_in"
+	  SrcPort		  2
+	  DstBlock		  "[S]"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  7
+	  SrcBlock		  "alfa_window_in"
+	  SrcPort		  1
+	  Points		  [10, 0; 0, -110]
+	  DstBlock		  "lambda_window"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  8
+	  SrcBlock		  "[AIV]"
+	  SrcPort		  1
+	  DstBlock		  "alfa_window_in"
+	  DstPort		  3
+	}
+	Line {
+	  ZOrder		  9
+	  SrcBlock		  "WDB"
+	  SrcPort		  1
+	  Points		  [80, 0]
+	  Branch {
+	    ZOrder		    10
+	    DstBlock		    "alfa_window_out"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    11
+	    Points		    [0, 340]
+	    DstBlock		    "alfa_window_in"
+	    DstPort		    4
+	  }
+	}
+	Line {
+	  ZOrder		  12
+	  SrcBlock		  "lambda_window"
+	  SrcPort		  1
+	  Points		  [-15, 0; 0, -75]
+	  DstBlock		  "alfa_window_out"
+	  DstPort		  3
+	}
+      }
+    }
+  }
+}

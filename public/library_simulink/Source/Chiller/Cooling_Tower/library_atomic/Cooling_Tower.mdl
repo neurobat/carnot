@@ -1,0 +1,6129 @@
+Library {
+  Name			  "Cooling_Tower"
+  Version		  8.2
+  MdlSubVersion		  0
+  SavedCharacterEncoding  "windows-1252"
+  LibraryType		  "BlockLibrary"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  FPTRunName		  "Run 1"
+  MaxMDLFileLineLength	  120
+  Object {
+    $PropName		    "BdWindowsInfo"
+    $ObjectID		    1
+    $ClassName		    "Simulink.BDWindowsInfo"
+    Object {
+      $PropName		      "WindowsInfo"
+      $ObjectID		      2
+      $ClassName	      "Simulink.WindowInfo"
+      IsActive		      [1]
+      Location		      [595.0, 105.0, 648.0, 657.0]
+      Object {
+	$PropName		"ModelBrowserInfo"
+	$ObjectID		3
+	$ClassName		"Simulink.ModelBrowserInfo"
+	Visible			[0]
+	DockPosition		"Left"
+	Width			[50]
+	Height			[50]
+	Filter			[11]
+      }
+      Object {
+	$PropName		"ExplorerBarInfo"
+	$ObjectID		4
+	$ClassName		"Simulink.ExplorerBarInfo"
+	Visible			[1]
+      }
+      Object {
+	$PropName		"EditorsInfo"
+	$ObjectID		5
+	$ClassName		"Simulink.EditorInfo"
+	IsActive		[1]
+	ViewObjType		"SimulinkTopLevel"
+	LoadSaveID		"0"
+	Extents			[598.0, 491.0]
+	ZoomFactor		[1.0]
+	Offset			[0.0, 0.0]
+      }
+    }
+  }
+  Created		  "Wed Jul 09 11:14:28 2014"
+  Creator		  "lena.frank"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "drhf"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Mon Jun 08 16:28:33 2015"
+  RTWModifiedTimeStamp	  355681711
+  ModelVersionFormat	  "1.%<AutoIncrement:5>"
+  ConfigurationManager	  "none"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "all"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowDesignRanges	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  PauseTimes		  "5"
+  NumberOfSteps		  1
+  SnapshotBufferSize	  10
+  SnapshotInterval	  10
+  NumberOfLastSnapshots	  0
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  RecordCoverage	  off
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  CovEnableCumulative	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      6
+      Version		      "1.13.1"
+      Array {
+	Type			"Handle"
+	Dimension		8
+	Simulink.SolverCC {
+	  $ObjectID		  7
+	  Version		  "1.13.1"
+	  StartTime		  "0.0"
+	  StopTime		  "10.0"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  EnableConcurrentExecution off
+	  ConcurrentTasks	  off
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  8
+	  Version		  "1.13.1"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SignalLoggingSaveFormat "ModelDataLogs"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  9
+	  Version		  "1.13.1"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    8
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    Cell		    "UseSpecifiedMinMax"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  UseFloatMulNetSlope	  off
+	  DefaultUnderspecifiedDataType	"double"
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  ActiveStateOutputEnumStorageType "Native Integer"
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	  ParallelExecutionInRapidAccelerator on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  10
+	  Version		  "1.13.1"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "EnableAllAsWarning"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  FrameProcessingCompatibilityMsg "warning"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  SimStateOlderReleaseMsg "error"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	  SFUnconditionalTransitionShadowingDiag "warning"
+	  SFUndirectedBroadcastEventsDiag "warning"
+	  SFTransitionActionBeforeConditionDiag	"warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  11
+	  Version		  "1.13.1"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerLongLong	  64
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdLongLongMode	  off
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerLongLong	  64
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetLongLongMode	  off
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  12
+	  Version		  "1.13.1"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  13
+	  Version		  "1.13.1"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  on
+	  SimBuildMode		  "sf_incremental_build"
+	  SimGenImportedTypeDefs  off
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  14
+	  Version		  "1.13.1"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    9
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    Cell		    "GenerateWebview"
+	    Cell		    "GenerateCodeMetricsReport"
+	    Cell		    "GenerateCodeReplacementReport"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  TLCOptions		  ""
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  PackageGeneratedCodeAndArtifacts off
+	  PackageName		  ""
+	  TemplateMakefile	  "grt_default_tmf"
+	  PostCodeGenCommand	  ""
+	  Description		  ""
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ProcessScript		  ""
+	  ConfigurationScript	  ""
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  CustomSourceCode	  ""
+	  CustomHeaderCode	  ""
+	  CustomInclude		  ""
+	  CustomSource		  ""
+	  CustomLibrary		  ""
+	  CustomInitializer	  ""
+	  CustomTerminator	  ""
+	  Toolchain		  "Automatically locate an installed toolchain"
+	  BuildConfiguration	  "Faster Builds"
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  PortableWordSizes	  off
+	  GenerateErtSFunction	  off
+	  CreateSILPILBlock	  "None"
+	  CodeExecutionProfiling  off
+	  CodeExecutionProfileVariable "executionProfile"
+	  CodeProfilingSaveOptions "SummaryOnly"
+	  CodeProfilingInstrumentation off
+	  SILDebugging		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  GenerateWebview	  off
+	  GenerateCodeMetricsReport off
+	  GenerateCodeReplacementReport	off
+	  RTWCompilerOptimization "Off"
+	  RTWCustomCompilerOptimizations ""
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  DataInitializer	  ""
+	  SharedConstantsCachingThreshold 1024
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      15
+	      Version		      "1.13.1"
+	      Array {
+		Type			"Cell"
+		Dimension		21
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"InsertPolySpaceComments"
+		Cell			"SFDataObjDesc"
+		Cell			"MATLABFcnDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      OperatorAnnotations     off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M_T"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      CustomSymbolStrUtil     "$N$C"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InternalIdentifier      "Shortened"
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      16
+	      Version		      "1.13.1"
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"PortableWordSizes"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"GenerateAllocFcn"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      CodeReplacementLibrary  "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      ConcurrentExecutionCompliant on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns off
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      MATLABClassNameForMDSCustomization "Simulink.SoftwareTarget.GRTCustomization"
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      GRTInterface	      on
+	      GenerateAllocFcn	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      RTWCAPIRootIO	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+      ConfigPrmDlgPosition     [ 520, 225, 1400, 855 ] 
+    }
+    PropName		    "ConfigurationSets"
+  }
+  ExplicitPartitioning	  off
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  MaskDefaults {
+    SelfModifiable	    "off"
+    IconFrame		    "on"
+    IconOpaque		    "on"
+    RunInitForIconRedraw    "off"
+    IconRotate		    "none"
+    PortRotate		    "default"
+    IconUnits		    "autoscale"
+  }
+  MaskParameterDefaults {
+    Evaluate		    "on"
+    Tunable		    "on"
+    NeverSave		    "off"
+    Internal		    "off"
+    ReadOnly		    "off"
+    Enabled		    "on"
+    Visible		    "on"
+    ToolTip		    "on"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      BusCreator
+      Inputs		      "4"
+      DisplayOption	      "none"
+      OutDataTypeStr	      "Inherit: auto"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      BusSelector
+      OutputSignals	      "signal1,signal2,signal3"
+      OutputAsBus	      off
+    }
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+      PreserveConstantTs      off
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      EnablePort
+      StatesWhenEnabling      "held"
+      PropagateVarSize	      "Only when enabling"
+      ShowOutputPort	      off
+      ZeroCross		      on
+      PortDimensions	      "1"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "double"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      OutputFunctionCall      off
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Integrator
+      ExternalReset	      "none"
+      InitialConditionSource  "internal"
+      InitialCondition	      "0"
+      LimitOutput	      off
+      UpperSaturationLimit    "inf"
+      LowerSaturationLimit    "-inf"
+      ShowSaturationPort      off
+      ShowStatePort	      off
+      AbsoluteTolerance	      "auto"
+      IgnoreLimit	      off
+      ZeroCross		      on
+      ContinuousStateAttributes	"''"
+    }
+    Block {
+      BlockType		      Lookup
+      InputValues	      "[-4:5]"
+      Table		      " rand(1,10)-0.5"
+      LookUpMeth	      "Interpolation-Extrapolation"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+      LUTDesignTableMode      "Redesign Table"
+      LUTDesignDataSource     "Block Dialog"
+      LUTDesignFunctionName   "sqrt(x)"
+      LUTDesignUseExistingBP  on
+      LUTDesignRelError	      "0.01"
+      LUTDesignAbsError	      "1e-6"
+    }
+    Block {
+      BlockType		      Lookup2D
+      RowIndex		      "[0 1]"
+      ColumnIndex	      "[0 1]"
+      Table		      "[0 0;0 0]"
+      LookUpMeth	      "Interpolation-Extrapolation"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+      LUTDesignTableMode      "Redesign Table"
+      LUTDesignDataSource     "Block Dialog"
+      LUTDesignFunctionName   "sqrt(x)"
+      LUTDesignUseExistingBP  on
+      LUTDesignRelError	      "0.01"
+      LUTDesignAbsError	      "1e-6"
+    }
+    Block {
+      BlockType		      Math
+      Operator		      "exp"
+      OutputSignalType	      "auto"
+      SampleTime	      "-1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      IntermediateResultsDataTypeStr "Inherit: Inherit via internal rule"
+      AlgorithmType	      "Newton-Raphson"
+      Iterations	      "3"
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      NonVirtualBus	      off
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Product
+      Inputs		      "2"
+      Multiplication	      "Element-wise(.*)"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      S-Function
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+      SFunctionDeploymentMode off
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      FunctionInterfaceSpec   "void_void"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      SFBlockType	      "NONE"
+      Variant		      off
+      GeneratePreprocessorConditionals off
+      ContentPreviewEnabled   off
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      AccumDataTypeStr	      "Inherit: Inherit via internal rule"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Terminator
+    }
+  }
+  System {
+    Name		    "Cooling_Tower"
+    Location		    [595, 105, 1243, 762]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "710"
+    Block {
+      BlockType		      SubSystem
+      Name		      "Cooling_Tower"
+      SID		      "534"
+      Ports		      [4, 2]
+      Position		      [195, 31, 390, 229]
+      ZOrder		      2
+      BackgroundColor	      "lightBlue"
+      FontName		      "Arial"
+      FontSize		      11
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      Object {
+	$PropName		"MaskObject"
+	$ObjectID		17
+	$ClassName		"Simulink.Mask"
+	Type			"Closed Circuit Cooling Tower "
+	Description		"performance data \nwet-bulb temperature - 15°C ... 24°C\nrpm fan - 248 1/min (30%) ... 824 1/min (100%)"
+	"\nfluid temperature - 26°C ... 44°C\nfluid flow rate - 1,07 l/s ... 3,03 l/s\nwater/glykol - 0 % ... 100%\n\ndata log"
+	"ging:\nwet-bulb temperature....[°C]   (ambient air)\nrpm fan.........................[%]\nv_dot fan.................."
+	"....[m³/s]\nrpm fan.........................[1/min]\nrel_hum.........................[%]     (ambient air)\nt_air...."
+	"..........................[°C]    (ambient air)\nenergy ct......................[kJ]    (fan motor + recirculating sp"
+	"ray pump)\npower ct.......................[kW]    (fan motor + recirculating spray pump)\nwater consumption.......[kg"
+	"]\nTnodes.........................[°C]    (inactivity modul)\nTHBout                  \n"
+	Help			"web(fullfile(path_carnot('help'),'Cooling_Tower.html'),'-helpbrowser')"
+	Display			"plot(-20,5,140,80,[20 90 90 20 20],[20 20 70 70 20])\nplot([30 35],[62 65],[40 35],[62 65],[35 35],[62 65]"
+	",[80 80],[62 65],[75 80],[62 65],[85 80],[62 65],[57 57],[62 65],[52 57],[62 65],[62 57],[62 65])\nplot([15 20],[22 2"
+	"2],[15 80],[65 65],[15 15],[22 65],[20 90],[24 24])\nplot([25 100],[58 58],[25 100],[44 44],[60 25],[51 58],[60 25],["
+	"51 44])\nplot([87 93],[36 36],[87 93],[28 28],[87 82],[36 34],[93 98],[36 34],[87 82],[28 30],[93 98],[28 30],[82 82]"
+	",[34 30],[98 98],[34 30],[82 95],[34 35],[82 95],[30 29])\nplot([86 90],[32 32],[90 93],[32 33.5],[90 93],[32 30.5])"
+	IconOpaque		"off"
+      }
+      System {
+	Name			"Cooling_Tower"
+	Location		[31, 5, 809, 825]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "THBin"
+	  SID			  "535"
+	  Position		  [190, 598, 220, 612]
+	  ZOrder		  -1
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "WDB"
+	  SID			  "536"
+	  Position		  [190, 283, 220, 297]
+	  ZOrder		  -2
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "rpm_fan"
+	  SID			  "537"
+	  Position		  [840, 273, 870, 287]
+	  ZOrder		  -3
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	  Port {
+	    PortNumber		    1
+	    Name		    "rpm fan [1/min]"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "control_fan"
+	  SID			  "538"
+	  Position		  [240, 348, 270, 362]
+	  ZOrder		  -4
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  BusCreator
+	  Name			  "Bus\nCreator"
+	  SID			  "539"
+	  Ports			  [11, 1]
+	  Position		  [1855, 48, 1865, 362]
+	  ZOrder		  -5
+	  ShowName		  off
+	  Inputs		  "11"
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  BusSelector
+	  Name			  "Bus\nSelector"
+	  SID			  "540"
+	  Ports			  [1, 2]
+	  Position		  [270, 255, 275, 330]
+	  ZOrder		  -6
+	  ShowName		  off
+	  OutputSignals		  "Temperature_Ambient,Relative_Humidity"
+	  Port {
+	    PortNumber		    1
+	    Name		    "<Temperature_Ambient>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "<Relative_Humidity>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Constant_THB"
+	  SID			  "541"
+	  Ports			  [0, 1]
+	  Position		  [1575, 553, 1635, 577]
+	  ZOrder		  -7
+	  BackgroundColor	  "red"
+	  LibraryVersion	  "6.0.108"
+	  SourceBlock		  "carnot/Source/Simple/Constant_THB"
+	  SourceType		  "constant THB"
+	  ContentPreviewEnabled	  off
+	  t			  "40"
+	  mdot			  "0*100/3600"
+	  p			  "1e5"
+	  mID			  "No Pressure Drop"
+	  fluid			  "Water"
+	  mix			  "0"
+	  dia			  "0.02"
+	  hgt			  "0"
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux"
+	  SID			  "542"
+	  Ports			  [1, 7]
+	  Position		  [425, 510, 430, 700]
+	  ZOrder		  -8
+	  BackgroundColor	  "black"
+	  ShowName		  off
+	  Outputs		  "[1 1 1 1 1 1 14]"
+	  Port {
+	    PortNumber		    1
+	    Name		    "ID"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "T"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    3
+	    Name		    "mdot"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    4
+	    Name		    "p"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    5
+	    Name		    "fluid"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    6
+	    Name		    "mix"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Fan"
+	  SID			  "543"
+	  Ports			  [1, 3]
+	  Position		  [900, 242, 1010, 318]
+	  ZOrder		  -9
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "rpm fan [%] "
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "v_dot_fan"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "Fan"
+	    Location		    [80, 88, 909, 598]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "n_fan"
+	      SID		      "544"
+	      Position		      [25, 133, 55, 147]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Divide1"
+	      SID		      "545"
+	      Ports		      [2, 1]
+	      Position		      [650, 87, 680, 118]
+	      ZOrder		      -2
+	      ShowName		      off
+	      Inputs		      "*/"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Divide2"
+	      SID		      "546"
+	      Ports		      [3, 1]
+	      Position		      [655, 228, 675, 272]
+	      ZOrder		      -3
+	      ShowName		      off
+	      Inputs		      "*/*"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Divide3"
+	      SID		      "547"
+	      Ports		      [2, 1]
+	      Position		      [650, 162, 680, 193]
+	      ZOrder		      -4
+	      ShowName		      off
+	      Inputs		      "/*"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Divide4"
+	      SID		      "548"
+	      Ports		      [2, 1]
+	      Position		      [410, 126, 425, 184]
+	      ZOrder		      -5
+	      NamePlacement	      "alternate"
+	      ShowName		      off
+	      Inputs		      "/*"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Input Leistung"
+	      SID		      "549"
+	      Position		      [545, 179, 610, 211]
+	      ZOrder		      -6
+	      Value		      "1.8"
+	    }
+	    Block {
+	      BlockType		      Math
+	      Name		      "Math\nFunction"
+	      SID		      "550"
+	      Ports		      [2, 1]
+	      Position		      [500, 143, 530, 192]
+	      ZOrder		      -7
+	      ShowName		      off
+	      Operator		      "pow"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Pw1"
+	      SID		      "551"
+	      Position		      [440, 165, 470, 195]
+	      ZOrder		      -8
+	      ShowName		      off
+	      Value		      "3"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "max. Drehzahl"
+	      SID		      "552"
+	      Position		      [85, 156, 145, 184]
+	      ZOrder		      -9
+	      Value		      "824"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "max. Vdot_Lüfter"
+	      SID		      "553"
+	      Position		      [80, 250, 145, 280]
+	      ZOrder		      -10
+	      Value		      "2.2"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "n_fan [%]"
+	      SID		      "554"
+	      Position		      [720, 98, 750, 112]
+	      ZOrder		      -11
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "vdot_fan"
+	      SID		      "555"
+	      Position		      [720, 243, 750, 257]
+	      ZOrder		      -12
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "P_fan"
+	      SID		      "556"
+	      Position		      [720, 173, 750, 187]
+	      ZOrder		      -13
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      ZOrder		      1
+	      SrcBlock		      "Pw1"
+	      SrcPort		      1
+	      DstBlock		      "Math\nFunction"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      2
+	      SrcBlock		      "Math\nFunction"
+	      SrcPort		      1
+	      DstBlock		      "Divide3"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      3
+	      SrcBlock		      "Divide4"
+	      SrcPort		      1
+	      DstBlock		      "Math\nFunction"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      4
+	      SrcBlock		      "Divide3"
+	      SrcPort		      1
+	      DstBlock		      "P_fan"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      5
+	      SrcBlock		      "Divide2"
+	      SrcPort		      1
+	      DstBlock		      "vdot_fan"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      6
+	      SrcBlock		      "max. Vdot_Lüfter"
+	      SrcPort		      1
+	      DstBlock		      "Divide2"
+	      DstPort		      3
+	    }
+	    Line {
+	      ZOrder		      7
+	      SrcBlock		      "Input Leistung"
+	      SrcPort		      1
+	      Points		      [20, 0]
+	      DstBlock		      "Divide3"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      8
+	      SrcBlock		      "Divide1"
+	      SrcPort		      1
+	      DstBlock		      "n_fan [%]"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      9
+	      SrcBlock		      "max. Drehzahl"
+	      SrcPort		      1
+	      Points		      [25, 0]
+	      Branch {
+		ZOrder			10
+		Points			[95, 0]
+		Branch {
+		  ZOrder		  11
+		  DstBlock		  "Divide4"
+		  DstPort		  2
+		}
+		Branch {
+		  ZOrder		  12
+		  Points		  [0, -60]
+		  DstBlock		  "Divide1"
+		  DstPort		  2
+		}
+	      }
+	      Branch {
+		ZOrder			13
+		Points			[0, 80]
+		DstBlock		"Divide2"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      ZOrder		      14
+	      SrcBlock		      "n_fan"
+	      SrcPort		      1
+	      Points		      [190, 0]
+	      Branch {
+		ZOrder			15
+		Points			[0, -45]
+		DstBlock		"Divide1"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			16
+		Points			[105, 0]
+		Branch {
+		  ZOrder		  17
+		  DstBlock		  "Divide4"
+		  DstPort		  1
+		}
+		Branch {
+		  ZOrder		  18
+		  Points		  [0, 95]
+		  DstBlock		  "Divide2"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Annotation {
+	      SID		      "557"
+	      Name		      "Grundlage zur Berechnung\nbei Drehzahländerung eines bestimmten Lüfters\n\nProportionalitätsgesetz"
+	      "\nV1/V2 = n1/n2\nP1/P2 = (n1/n2)^3\n\nWirkungsgrad Elektromotor\nP = Pm/eta"
+	      Position		      [126, 62, 126, 62]
+	      AutoSize		      on
+	      WordWrap		      off
+	      ZOrder		      -1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Feuchtkugel-\ntemperatureinfluss /\nwet-bulb temperature effect"
+	  SID			  "558"
+	  Ports			  [2, 3, 1]
+	  Position		  [470, 31, 555, 139]
+	  ZOrder		  -10
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "wet-bulb temperature"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "Feuchtkugel-\ntemperatureinfluss /\nwet-bulb temperature effect"
+	    Location		    [283, 320, 1418, 1045]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "WDB"
+	      SID		      "559"
+	      Position		      [45, 198, 75, 212]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "t_ie"
+	      SID		      "560"
+	      Position		      [15, 268, 45, 282]
+	      ZOrder		      -2
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      EnablePort
+	      Name		      "Enable"
+	      SID		      "561"
+	      Ports		      []
+	      Position		      [545, 15, 565, 35]
+	      ZOrder		      -3
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Abgleich "
+	      SID		      "562"
+	      Ports		      [3, 1]
+	      Position		      [610, 177, 700, 253]
+	      ZOrder		      -4
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"Abgleich "
+		Location		[412, 52, 971, 625]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "t_FK"
+		  SID			  "563"
+		  Position		  [45, 118, 75, 132]
+		  ZOrder		  -1
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "t_ie"
+		  SID			  "564"
+		  Position		  [45, 178, 75, 192]
+		  ZOrder		  -2
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "t_ia_FK15"
+		  SID			  "565"
+		  Position		  [45, 148, 75, 162]
+		  ZOrder		  -3
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "Embedded\nMATLAB Function"
+		  SID			  "566"
+		  Ports			  [3, 1]
+		  Position		  [200, 113, 295, 177]
+		  ZOrder		  -4
+		  ShowName		  off
+		  ErrorFcn		  "Stateflow.Translate.translate"
+		  PermitHierarchicalResolution "ExplicitOnly"
+		  TreatAsAtomicUnit	  on
+		  MinAlgLoopOccurrences	  off
+		  PropExecContextOutsideSubsystem off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  Opaque		  off
+		  RequestExecContextInheritance	off
+		  MaskHideContents	  off
+		  SFBlockType		  "MATLAB Function"
+		  System {
+		    Name		    "Embedded\nMATLAB Function"
+		    Location		    [227, 345, 838, 789]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    SIDHighWatermark	    "33"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "t_fk"
+		    SID			    "566::1"
+		    Position		    [20, 101, 40, 119]
+		    ZOrder		    -1
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "t_ia_fk15"
+		    SID			    "566::2"
+		    Position		    [20, 136, 40, 154]
+		    ZOrder		    -2
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "t_ie"
+		    SID			    "566::3"
+		    Position		    [20, 171, 40, 189]
+		    ZOrder		    -3
+		    Port		    "3"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Demux
+		    Name		    " Demux "
+		    SID			    "566::32"
+		    Ports		    [1, 1]
+		    Position		    [270, 230, 320, 270]
+		    ZOrder		    5
+		    Outputs		    "1"
+		    }
+		    Block {
+		    BlockType		    S-Function
+		    Name		    " SFunction "
+		    SID			    "566::31"
+		    Tag			    "Stateflow S-Function Cooling_Tower 4"
+		    Ports		    [3, 2]
+		    Position		    [180, 100, 230, 180]
+		    ZOrder		    4
+		    FunctionName	    "sf_sfun"
+		    PortCounts		    "[3 2]"
+		    EnableBusSupport	    off
+		    Port {
+		    PortNumber		    2
+		    Name		    "y"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    Terminator
+		    Name		    " Terminator "
+		    SID			    "566::33"
+		    Position		    [460, 241, 480, 259]
+		    ZOrder		    6
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "y"
+		    SID			    "566::7"
+		    Position		    [460, 101, 480, 119]
+		    ZOrder		    -7
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    ZOrder		    7
+		    SrcBlock		    "t_fk"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    8
+		    SrcBlock		    "t_ia_fk15"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    2
+		    }
+		    Line {
+		    ZOrder		    9
+		    SrcBlock		    "t_ie"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    3
+		    }
+		    Line {
+		    Name		    "y"
+		    ZOrder		    10
+		    Labels		    [0, 0]
+		    SrcBlock		    " SFunction "
+		    SrcPort		    2
+		    DstBlock		    "y"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    11
+		    SrcBlock		    " Demux "
+		    SrcPort		    1
+		    DstBlock		    " Terminator "
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    12
+		    SrcBlock		    " SFunction "
+		    SrcPort		    1
+		    Points		    [20, 0]
+		    DstBlock		    " Demux "
+		    DstPort		    1
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "t_ia_FK"
+		  SID			  "567"
+		  Position		  [365, 138, 395, 152]
+		  ZOrder		  -5
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  ZOrder		  1
+		  SrcBlock		  "t_ie"
+		  SrcPort		  1
+		  Points		  [50, 0; 0, -20]
+		  DstBlock		  "Embedded\nMATLAB Function"
+		  DstPort		  3
+		}
+		Line {
+		  ZOrder		  2
+		  SrcBlock		  "t_ia_FK15"
+		  SrcPort		  1
+		  Points		  [35, 0; 0, -10]
+		  DstBlock		  "Embedded\nMATLAB Function"
+		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  3
+		  SrcBlock		  "t_FK"
+		  SrcPort		  1
+		  DstBlock		  "Embedded\nMATLAB Function"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  4
+		  SrcBlock		  "Embedded\nMATLAB Function"
+		  SrcPort		  1
+		  DstBlock		  "t_ia_FK"
+		  DstPort		  1
+		}
+		Annotation {
+		  SID			  "568"
+		  Name			  "\nDurch den Abgleich der vorliegenden Datensätze\nwierd die Annahme getroffen \ndas bei einer reduzierun"
+		  "g der Feuchtkugeltemp um 1K\n sich die Kaltwassertemp um 0.27K sinkt.\n\ny = ((t_FK-15)*0.27)+t_ia_100\n\nAb eine "
+		  "Eintritstemperatur von 41 °C wierd mit\ndem Faktor 0,25 K gerechnet.\n\ny = ((t_FK-15)*0.25)+t_ia_100"
+		  Position		  [266, 253, 266, 253]
+		  AutoSize		  on
+		  WordWrap		  off
+		  ZOrder		  -1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Add"
+	      SID		      "569"
+	      Ports		      [2, 1]
+	      Position		      [880, 372, 910, 403]
+	      ZOrder		      -5
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant"
+	      SID		      "570"
+	      Position		      [920, 393, 945, 417]
+	      ZOrder		      -6
+	      ShowName		      off
+	      Value		      "2"
+	    }
+	    Block {
+	      BlockType		      Product
+	      Name		      "Divide"
+	      SID		      "571"
+	      Ports		      [2, 1]
+	      Position		      [965, 382, 995, 413]
+	      ZOrder		      -7
+	      Inputs		      "*/"
+	      InputSameDT	      off
+	      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+	      RndMeth		      "Floor"
+	      SaturateOnIntegerOverflow	off
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "THB_WetBulbTemperature"
+	      SID		      "572"
+	      Ports		      [1, 2]
+	      Position		      [405, 179, 465, 226]
+	      ZOrder		      -8
+	      SourceBlock	      "carnot/Basic/Material_Properties/THB_WetBulbTemperature"
+	      SourceType	      "THB to wet bulb temperature and relative humidity"
+	      ContentPreviewEnabled   off
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator1"
+	      SID		      "573"
+	      Position		      [495, 205, 515, 225]
+	      ZOrder		      -9
+	      ShowName		      off
+	    }
+	    Block {
+	      BlockType		      Reference
+	      Name		      "WDB2THB"
+	      SID		      "574"
+	      Ports		      [1, 1]
+	      Position		      [240, 189, 305, 221]
+	      ZOrder		      -10
+	      BackgroundColor	      "[1.000000, 0.674510, 0.000000]"
+	      SourceBlock	      "carnot/Weather/WDB2THB"
+	      SourceType	      "Weather Data Bus to Thermo Hydraulic Bus"
+	      ContentPreviewEnabled   off
+	      dia		      0.2
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "wet-bulb 15 °C"
+	      SID		      "575"
+	      Ports		      [1, 1]
+	      Position		      [140, 287, 230, 363]
+	      ZOrder		      -11
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"wet-bulb 15 °C"
+		Location		[695, 136, 1254, 437]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "t_ie"
+		  SID			  "576"
+		  Position		  [25, 33, 55, 47]
+		  ZOrder		  -1
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Lookup
+		  Name			  "Lookup Table"
+		  SID			  "577"
+		  Position		  [230, 15, 280, 65]
+		  ZOrder		  -2
+		  InputValues		  "[26 28 30 32 34 36 38 40 42 44 79.2]"
+		  Table			  "[22.6 23.9 25.2 26.4 27.7 28.9 30.1 31.2 32.4 33.5 49.25]"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "t_ia_FK15"
+		  SID			  "578"
+		  Position		  [440, 33, 470, 47]
+		  ZOrder		  -3
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  ZOrder		  1
+		  SrcBlock		  "Lookup Table"
+		  SrcPort		  1
+		  DstBlock		  "t_ia_FK15"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  2
+		  SrcBlock		  "t_ie"
+		  SrcPort		  1
+		  DstBlock		  "Lookup Table"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "t_FK"
+	      SID		      "579"
+	      Position		      [760, 148, 790, 162]
+	      ZOrder		      -12
+	      IconDisplay	      "Port number"
+	      InitialOutput	      "0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "t_ia_FK"
+	      SID		      "580"
+	      Position		      [760, 208, 790, 222]
+	      ZOrder		      -13
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      InitialOutput	      "0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "dt"
+	      SID		      "581"
+	      Position		      [1020, 393, 1050, 407]
+	      ZOrder		      -14
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	      InitialOutput	      "0"
+	    }
+	    Line {
+	      ZOrder		      1
+	      SrcBlock		      "Divide"
+	      SrcPort		      1
+	      DstBlock		      "dt"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      2
+	      SrcBlock		      "Constant"
+	      SrcPort		      1
+	      DstBlock		      "Divide"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      3
+	      SrcBlock		      "Add"
+	      SrcPort		      1
+	      DstBlock		      "Divide"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      4
+	      SrcBlock		      "Abgleich "
+	      SrcPort		      1
+	      Points		      [10, 0]
+	      Branch {
+		ZOrder			5
+		DstBlock		"t_ia_FK"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			6
+		Points			[0, 165]
+		DstBlock		"Add"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      ZOrder		      7
+	      SrcBlock		      "t_ie"
+	      SrcPort		      1
+	      Points		      [45, 0]
+	      Branch {
+		ZOrder			8
+		Points			[30, 0]
+		Branch {
+		  ZOrder		  9
+		  Points		  [440, 0; 0, -60]
+		  DstBlock		  "Abgleich "
+		  DstPort		  2
+		}
+		Branch {
+		  ZOrder		  10
+		  DstBlock		  "wet-bulb 15 °C"
+		  DstPort		  1
+		}
+	      }
+	      Branch {
+		ZOrder			11
+		Points			[0, 120]
+		DstBlock		"Add"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      ZOrder		      12
+	      SrcBlock		      "THB_WetBulbTemperature"
+	      SrcPort		      1
+	      Points		      [100, 0]
+	      Branch {
+		ZOrder			13
+		Points			[0, -35]
+		DstBlock		"t_FK"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			14
+		DstBlock		"Abgleich "
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      ZOrder		      15
+	      SrcBlock		      "wet-bulb 15 °C"
+	      SrcPort		      1
+	      Points		      [350, 0; 0, -85]
+	      DstBlock		      "Abgleich "
+	      DstPort		      3
+	    }
+	    Line {
+	      ZOrder		      16
+	      SrcBlock		      "WDB"
+	      SrcPort		      1
+	      DstBlock		      "WDB2THB"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      17
+	      SrcBlock		      "THB_WetBulbTemperature"
+	      SrcPort		      2
+	      DstBlock		      "Terminator1"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      18
+	      SrcBlock		      "WDB2THB"
+	      SrcPort		      1
+	      DstBlock		      "THB_WetBulbTemperature"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Heat_Capacity"
+	  SID			  "582"
+	  Ports			  [4, 1]
+	  Position		  [605, 384, 690, 451]
+	  ZOrder		  -11
+	  LibraryVersion	  "6.0.108"
+	  SourceBlock		  "carnot/Basic/Material_Properties/Heat_Capacity"
+	  SourceType		  "heat capacity"
+	  VariantControl	  "CarlibClassic"
+	  ContentPreviewEnabled	  off
+	  INPUTARGUMENTS	  "state variables (classic)"
+	  DEBUGLEVEL		  "DEBUGLEVEL"
+	  MAXTOTALWARNINGS	  "inf"
+	  MAXCONSECUTIVEWARNINGS  "inf"
+	  WRITETOFILE		  "0"
+	  FILENAME		  "'errors.txt'"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Leistungseinflüsse / \ninfluence on coolingpower"
+	  SID			  "583"
+	  Ports			  [7, 2, 1]
+	  Position		  [1055, 69, 1170, 221]
+	  ZOrder		  -12
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "Q_i_ist"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "Leistungseinflüsse / \ninfluence on coolingpower"
+	    Location		    [26, 52, 960, 705]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "t_ia_FK"
+	      SID		      "584"
+	      Position		      [15, 28, 45, 42]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "cp_i"
+	      SID		      "585"
+	      Position		      [15, 313, 45, 327]
+	      ZOrder		      -2
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "t_ie"
+	      SID		      "586"
+	      Position		      [15, 283, 45, 297]
+	      ZOrder		      -3
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "mdot_i"
+	      SID		      "587"
+	      Position		      [205, 193, 235, 207]
+	      ZOrder		      -4
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Fluid_Type"
+	      SID		      "588"
+	      Position		      [110, 98, 140, 112]
+	      ZOrder		      -5
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Fluid_mix"
+	      SID		      "589"
+	      Position		      [205, 163, 235, 177]
+	      ZOrder		      -6
+	      Port		      "6"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "n_fan [%]"
+	      SID		      "590"
+	      Position		      [205, 128, 235, 142]
+	      ZOrder		      -7
+	      Port		      "7"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      EnablePort
+	      Name		      "Enable"
+	      SID		      "591"
+	      Ports		      []
+	      Position		      [700, 135, 720, 155]
+	      ZOrder		      -8
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Qdot_i_FK"
+	      SID		      "592"
+	      Ports		      [3, 1]
+	      Position		      [205, 20, 315, 120]
+	      ZOrder		      -9
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"Qdot_i_FK"
+		Location		[205, 90, 1122, 707]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "t_ia_FK"
+		  SID			  "593"
+		  Position		  [75, 53, 105, 67]
+		  ZOrder		  -1
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "t_ie"
+		  SID			  "594"
+		  Position		  [15, 38, 45, 52]
+		  ZOrder		  -2
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "Fluid_Type"
+		  SID			  "595"
+		  Position		  [15, 258, 45, 272]
+		  ZOrder		  -3
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Add"
+		  SID			  "596"
+		  Ports			  [2, 1]
+		  Position		  [155, 62, 185, 93]
+		  ZOrder		  -4
+		  InputSameDT		  off
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant"
+		  SID			  "597"
+		  Position		  [60, 273, 85, 297]
+		  ZOrder		  -5
+		  Value			  "0.3"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant1"
+		  SID			  "598"
+		  Position		  [505, 183, 530, 207]
+		  ZOrder		  -6
+		  Value			  "2.4"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant2"
+		  SID			  "599"
+		  Position		  [195, 85, 220, 105]
+		  ZOrder		  -7
+		  Value			  "2"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Density"
+		  SID			  "600"
+		  Ports			  [4, 1]
+		  Position		  [340, 210, 430, 300]
+		  ZOrder		  -8
+		  SourceBlock		  "carnot/Basic/Material_Properties/Density"
+		  SourceType		  "density"
+		  VariantControl	  CarlibClassic
+		  ContentPreviewEnabled	  off
+		  INPUTARGUMENTS	  "state variables (classic)"
+		  DEBUGLEVEL		  DEBUGLEVEL
+		  MAXTOTALWARNINGS	  inf
+		  MAXCONSECUTIVEWARNINGS  inf
+		  WRITETOFILE		  0
+		  FILENAME		  "'errors.txt'"
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Divide1"
+		  SID			  "601"
+		  Ports			  [2, 1]
+		  Position		  [240, 72, 270, 103]
+		  ZOrder		  -9
+		  Inputs		  "*/"
+		  InputSameDT		  off
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Divide2"
+		  SID			  "602"
+		  Ports			  [2, 1]
+		  Position		  [490, 247, 520, 278]
+		  ZOrder		  -10
+		  Inputs		  "*/"
+		  InputSameDT		  off
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Divide3"
+		  SID			  "603"
+		  Ports			  [2, 1]
+		  Position		  [505, 107, 535, 138]
+		  ZOrder		  -11
+		  Inputs		  "*/"
+		  InputSameDT		  off
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Heat_Capacity"
+		  SID			  "604"
+		  Ports			  [4, 1]
+		  Position		  [345, 79, 430, 146]
+		  ZOrder		  -12
+		  SourceBlock		  "carnot/Basic/Material_Properties/Heat_Capacity"
+		  SourceType		  "heat capacity"
+		  VariantControl	  CarlibClassic
+		  ContentPreviewEnabled	  off
+		  INPUTARGUMENTS	  "state variables (classic)"
+		  DEBUGLEVEL		  DEBUGLEVEL
+		  MAXTOTALWARNINGS	  inf
+		  MAXCONSECUTIVEWARNINGS  inf
+		  WRITETOFILE		  0
+		  FILENAME		  "'errors.txt'"
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product"
+		  SID			  "605"
+		  Ports			  [4, 1]
+		  Position		  [580, 21, 600, 299]
+		  ZOrder		  -13
+		  Inputs		  "4"
+		  InputSameDT		  off
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Subtract"
+		  SID			  "606"
+		  Ports			  [2, 1]
+		  Position		  [490, 37, 520, 68]
+		  ZOrder		  -14
+		  Inputs		  "+-"
+		  InputSameDT		  off
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "phi_Le1"
+		  SID			  "607"
+		  Position		  [445, 259, 470, 281]
+		  ZOrder		  -15
+		  ShowName		  off
+		  Value			  "1000"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "phi_Le2"
+		  SID			  "608"
+		  Position		  [455, 119, 480, 141]
+		  ZOrder		  -16
+		  ShowName		  off
+		  Value			  "1000"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "phi_Le3"
+		  SID			  "609"
+		  Position		  [60, 234, 85, 256]
+		  ZOrder		  -17
+		  ShowName		  off
+		  Value			  "1e5"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Qdot_i_FK"
+		  SID			  "610"
+		  Position		  [645, 153, 675, 167]
+		  ZOrder		  -18
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  ZOrder		  1
+		  SrcBlock		  "Divide3"
+		  SrcPort		  1
+		  DstBlock		  "Product"
+		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  2
+		  SrcBlock		  "phi_Le2"
+		  SrcPort		  1
+		  DstBlock		  "Divide3"
+		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  3
+		  SrcBlock		  "Add"
+		  SrcPort		  1
+		  DstBlock		  "Divide1"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  4
+		  SrcBlock		  "Divide1"
+		  SrcPort		  1
+		  DstBlock		  "Heat_Capacity"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  5
+		  SrcBlock		  "Constant2"
+		  SrcPort		  1
+		  DstBlock		  "Divide1"
+		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  6
+		  SrcBlock		  "Heat_Capacity"
+		  SrcPort		  1
+		  DstBlock		  "Divide3"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  7
+		  SrcBlock		  "Constant1"
+		  SrcPort		  1
+		  DstBlock		  "Product"
+		  DstPort		  3
+		}
+		Line {
+		  ZOrder		  8
+		  SrcBlock		  "Divide2"
+		  SrcPort		  1
+		  DstBlock		  "Product"
+		  DstPort		  4
+		}
+		Line {
+		  ZOrder		  9
+		  SrcBlock		  "phi_Le1"
+		  SrcPort		  1
+		  DstBlock		  "Divide2"
+		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  10
+		  SrcBlock		  "Fluid_Type"
+		  SrcPort		  1
+		  Points		  [245, 0]
+		  Branch {
+		    ZOrder		    11
+		    DstBlock		    "Density"
+		    DstPort		    3
+		  }
+		  Branch {
+		    ZOrder		    12
+		    Points		    [0, -145]
+		    DstBlock		    "Heat_Capacity"
+		    DstPort		    3
+		  }
+		}
+		Line {
+		  ZOrder		  13
+		  SrcBlock		  "phi_Le3"
+		  SrcPort		  1
+		  Points		  [190, 0]
+		  Branch {
+		    ZOrder		    14
+		    DstBlock		    "Density"
+		    DstPort		    2
+		  }
+		  Branch {
+		    ZOrder		    15
+		    Points		    [0, -140]
+		    DstBlock		    "Heat_Capacity"
+		    DstPort		    2
+		  }
+		}
+		Line {
+		  ZOrder		  16
+		  SrcBlock		  "Density"
+		  SrcPort		  1
+		  DstBlock		  "Divide2"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  17
+		  SrcBlock		  "Constant"
+		  SrcPort		  1
+		  Points		  [220, 0]
+		  Branch {
+		    ZOrder		    18
+		    DstBlock		    "Density"
+		    DstPort		    4
+		  }
+		  Branch {
+		    ZOrder		    19
+		    Points		    [0, -150]
+		    DstBlock		    "Heat_Capacity"
+		    DstPort		    4
+		  }
+		}
+		Line {
+		  ZOrder		  20
+		  SrcBlock		  "t_ie"
+		  SrcPort		  1
+		  Points		  [10, 0]
+		  Branch {
+		    ZOrder		    21
+		    Points		    [70, 0]
+		    Branch {
+		    ZOrder		    22
+		    Points		    [0, 25]
+		    DstBlock		    "Add"
+		    DstPort		    1
+		    }
+		    Branch {
+		    ZOrder		    23
+		    DstBlock		    "Subtract"
+		    DstPort		    1
+		    }
+		  }
+		  Branch {
+		    ZOrder		    24
+		    Points		    [0, 180]
+		    DstBlock		    "Density"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  ZOrder		  25
+		  SrcBlock		  "Subtract"
+		  SrcPort		  1
+		  DstBlock		  "Product"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  26
+		  SrcBlock		  "Product"
+		  SrcPort		  1
+		  DstBlock		  "Qdot_i_FK"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  27
+		  SrcBlock		  "t_ia_FK"
+		  SrcPort		  1
+		  Points		  [10, 0]
+		  Branch {
+		    ZOrder		    28
+		    Points		    [0, 25]
+		    DstBlock		    "Add"
+		    DstPort		    2
+		  }
+		  Branch {
+		    ZOrder		    29
+		    DstBlock		    "Subtract"
+		    DstPort		    2
+		  }
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Qdot_i_ist "
+	      SID		      "611"
+	      Ports		      [6, 1]
+	      Position		      [390, 106, 505, 259]
+	      ZOrder		      -10
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"Qdot_i_ist "
+		Location		[374, 52, 1408, 930]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "Qdot_i_FK"
+		  SID			  "612"
+		  Position		  [55, 173, 85, 187]
+		  ZOrder		  -1
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "n_Fan [%]"
+		  SID			  "613"
+		  Position		  [55, 213, 85, 227]
+		  ZOrder		  -2
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "Fluid_mix"
+		  SID			  "614"
+		  Position		  [40, 528, 70, 542]
+		  ZOrder		  -3
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "mdot_i"
+		  SID			  "615"
+		  Position		  [45, 308, 75, 322]
+		  ZOrder		  -4
+		  Port			  "4"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "Fluid_Type"
+		  SID			  "616"
+		  Position		  [45, 418, 75, 432]
+		  ZOrder		  -5
+		  Port			  "5"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "t_ie"
+		  SID			  "617"
+		  Position		  [45, 378, 75, 392]
+		  ZOrder		  -6
+		  Port			  "6"
+		  IconDisplay		  "Port number"
+		  Port {
+		    PortNumber		    1
+		    Name		    "column"
+		    PropagatedSignals	    "T"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant"
+		  SID			  "618"
+		  Position		  [330, 248, 370, 272]
+		  ZOrder		  -7
+		  Value			  "92"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Constant2"
+		  SID			  "619"
+		  Position		  [330, 213, 370, 237]
+		  ZOrder		  -8
+		  Value			  "100"
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Density"
+		  SID			  "620"
+		  Ports			  [4, 1]
+		  Position		  [165, 379, 255, 446]
+		  ZOrder		  -9
+		  SourceBlock		  "carnot/Basic/Material_Properties/Density"
+		  SourceType		  "density"
+		  VariantControl	  CarlibClassic
+		  ContentPreviewEnabled	  off
+		  INPUTARGUMENTS	  "state variables (classic)"
+		  DEBUGLEVEL		  DEBUGLEVEL
+		  MAXTOTALWARNINGS	  inf
+		  MAXCONSECUTIVEWARNINGS  inf
+		  WRITETOFILE		  0
+		  FILENAME		  "'errors.txt'"
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Divide"
+		  SID			  "621"
+		  Ports			  [3, 1]
+		  Position		  [395, 175, 410, 275]
+		  ZOrder		  -10
+		  Inputs		  "**/"
+		  InputSameDT		  off
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Divide1"
+		  SID			  "622"
+		  Ports			  [2, 1]
+		  Position		  [390, 307, 420, 338]
+		  ZOrder		  -11
+		  Inputs		  "*/"
+		  InputSameDT		  off
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow off
+		  Port {
+		    PortNumber		    1
+		    Name		    "row"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		  }
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Divide2"
+		  SID			  "623"
+		  Ports			  [2, 1]
+		  Position		  [320, 407, 350, 438]
+		  ZOrder		  -12
+		  Inputs		  "*/"
+		  InputSameDT		  off
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Lookup2D
+		  Name			  "Lookup\nTable (2-D)\nVolumenstromänderung"
+		  SID			  "624"
+		  Position		  [475, 313, 530, 362]
+		  ZOrder		  -13
+		  RowIndex		  "[1.07 1.77 2.4 2.65 3.03] "
+		  ColumnIndex		  "[25 30 35 40 45 50 55 60 65]"
+		  Table			  "[0.7248 0.7054 0.6860 0.6666 0.6472 0.6278 0.6084 0.5890 0.5696; 0.9493 0.9294 0.9096 0.8897 0.8698 0.8"
+		  "500 0.8301 0.8103 0.7904; 1 1 1 1 1 1 1 1 1; 1.1191 1.1295 1.0956 1.0674 1.0450 1.0284 1.0175 1.0123 1.0129; 1.237"
+		  "0 1.1910 1.1526 1.1219 1.0988 1.0833 1.0754 1.0752 1.0826]"
+		  InputSameDT		  off
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Lookup
+		  Name			  "Lookup Table\nLüfterdrehzahl"
+		  SID			  "625"
+		  Position		  [175, 195, 225, 245]
+		  ZOrder		  -14
+		  InputValues		  "[0 0.2 0.3 0.5 0.7 0.9 1]"
+		  Table			  "[0 0.37 0.482 0.625 0.786 0.928 1]"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Lookup
+		  Name			  "Lookup Table1\nGlykol"
+		  SID			  "626"
+		  Position		  [170, 510, 220, 560]
+		  ZOrder		  -15
+		  InputValues		  "[0 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1]"
+		  Table			  "[1 0.98 0.95 0.92 0.875 0.83 0.78 0.73 0.68 0.63 0.57]"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product"
+		  SID			  "627"
+		  Ports			  [2, 1]
+		  Position		  [275, 172, 305, 203]
+		  ZOrder		  -16
+		  InputSameDT		  off
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product1"
+		  SID			  "628"
+		  Ports			  [2, 1]
+		  Position		  [605, 217, 635, 248]
+		  ZOrder		  -17
+		  InputSameDT		  off
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product2"
+		  SID			  "629"
+		  Ports			  [2, 1]
+		  Position		  [725, 227, 755, 258]
+		  ZOrder		  -18
+		  InputSameDT		  off
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "phi_Le1"
+		  SID			  "630"
+		  Position		  [280, 419, 305, 441]
+		  ZOrder		  -19
+		  ShowName		  off
+		  Value			  "1000"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "phi_Le3"
+		  SID			  "631"
+		  Position		  [90, 394, 115, 416]
+		  ZOrder		  -20
+		  ShowName		  off
+		  Value			  "1e5"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Qdot_i_ist"
+		  SID			  "632"
+		  Position		  [805, 238, 835, 252]
+		  ZOrder		  -21
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  ZOrder		  1
+		  SrcBlock		  "Constant2"
+		  SrcPort		  1
+		  DstBlock		  "Divide"
+		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  2
+		  SrcBlock		  "Lookup\nTable (2-D)\nVolumenstromänderung"
+		  SrcPort		  1
+		  Points		  [30, 0; 0, -100]
+		  DstBlock		  "Product1"
+		  DstPort		  2
+		}
+		Line {
+		  Name			  "row"
+		  ZOrder		  3
+		  Labels		  [1, 0]
+		  SrcBlock		  "Divide1"
+		  SrcPort		  1
+		  DstBlock		  "Lookup\nTable (2-D)\nVolumenstromänderung"
+		  DstPort		  1
+		}
+		Line {
+		  Name			  "column"
+		  ZOrder		  4
+		  SrcBlock		  "t_ie"
+		  SrcPort		  1
+		  Points		  [45, 0]
+		  Branch {
+		    ZOrder		    5
+		    Labels		    [2, 0]
+		    Points		    [0, -35]
+		    DstBlock		    "Lookup\nTable (2-D)\nVolumenstromänderung"
+		    DstPort		    2
+		  }
+		  Branch {
+		    ZOrder		    6
+		    Points		    [25, 0]
+		    DstBlock		    "Density"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  ZOrder		  7
+		  SrcBlock		  "Divide2"
+		  SrcPort		  1
+		  Points		  [10, 0; 0, -95]
+		  DstBlock		  "Divide1"
+		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  8
+		  SrcBlock		  "phi_Le1"
+		  SrcPort		  1
+		  DstBlock		  "Divide2"
+		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  9
+		  SrcBlock		  "Fluid_Type"
+		  SrcPort		  1
+		  Points		  [70, 0]
+		  DstBlock		  "Density"
+		  DstPort		  3
+		}
+		Line {
+		  ZOrder		  10
+		  SrcBlock		  "phi_Le3"
+		  SrcPort		  1
+		  DstBlock		  "Density"
+		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  11
+		  SrcBlock		  "Density"
+		  SrcPort		  1
+		  DstBlock		  "Divide2"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  12
+		  SrcBlock		  "Product2"
+		  SrcPort		  1
+		  DstBlock		  "Qdot_i_ist"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  13
+		  SrcBlock		  "mdot_i"
+		  SrcPort		  1
+		  DstBlock		  "Divide1"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  14
+		  SrcBlock		  "Constant"
+		  SrcPort		  1
+		  DstBlock		  "Divide"
+		  DstPort		  3
+		}
+		Line {
+		  ZOrder		  15
+		  SrcBlock		  "Divide"
+		  SrcPort		  1
+		  DstBlock		  "Product1"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  16
+		  SrcBlock		  "Fluid_mix"
+		  SrcPort		  1
+		  Points		  [50, 0]
+		  Branch {
+		    ZOrder		    17
+		    Points		    [0, 0]
+		    DstBlock		    "Lookup Table1\nGlykol"
+		    DstPort		    1
+		  }
+		  Branch {
+		    ZOrder		    18
+		    Points		    [0, -100]
+		    DstBlock		    "Density"
+		    DstPort		    4
+		  }
+		}
+		Line {
+		  ZOrder		  19
+		  SrcBlock		  "Lookup Table1\nGlykol"
+		  SrcPort		  1
+		  Points		  [440, 0; 0, -285]
+		  DstBlock		  "Product2"
+		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  20
+		  SrcBlock		  "Product1"
+		  SrcPort		  1
+		  DstBlock		  "Product2"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  21
+		  SrcBlock		  "Product"
+		  SrcPort		  1
+		  DstBlock		  "Divide"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  22
+		  SrcBlock		  "Qdot_i_FK"
+		  SrcPort		  1
+		  DstBlock		  "Product"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  23
+		  SrcBlock		  "Lookup Table\nLüfterdrehzahl"
+		  SrcPort		  1
+		  Points		  [15, 0; 0, -25]
+		  DstBlock		  "Product"
+		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  24
+		  SrcBlock		  "n_Fan [%]"
+		  SrcPort		  1
+		  DstBlock		  "Lookup Table\nLüfterdrehzahl"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "t_ia_ist "
+	      SID		      "633"
+	      Ports		      [4, 1]
+	      Position		      [575, 243, 660, 367]
+	      ZOrder		      -11
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"t_ia_ist "
+		Location		[327, 52, 1222, 725]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "Qdot_i_ist"
+		  SID			  "634"
+		  Position		  [15, 38, 45, 52]
+		  ZOrder		  -1
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "t_ie"
+		  SID			  "635"
+		  Position		  [610, 113, 640, 127]
+		  ZOrder		  -2
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "cp_i"
+		  SID			  "636"
+		  Position		  [15, 88, 45, 102]
+		  ZOrder		  -3
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "mdot"
+		  SID			  "637"
+		  Position		  [15, 158, 45, 172]
+		  ZOrder		  -4
+		  Port			  "4"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Add"
+		  SID			  "638"
+		  Ports			  [2, 1]
+		  Position		  [685, 97, 715, 128]
+		  ZOrder		  -5
+		  Inputs		  "-+"
+		  InputSameDT		  off
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Divide"
+		  SID			  "639"
+		  Ports			  [3, 1]
+		  Position		  [255, 16, 275, 194]
+		  ZOrder		  -6
+		  Inputs		  "*//"
+		  InputSameDT		  off
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Divide1"
+		  SID			  "640"
+		  Ports			  [2, 1]
+		  Position		  [195, 87, 225, 118]
+		  ZOrder		  -7
+		  Inputs		  "*/"
+		  InputSameDT		  off
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  RndMeth		  "Floor"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "isinf"
+		  SID			  "641"
+		  Ports			  [1, 1]
+		  Position		  [480, 82, 550, 128]
+		  ZOrder		  -8
+		  ErrorFcn		  "Stateflow.Translate.translate"
+		  PermitHierarchicalResolution "ExplicitOnly"
+		  TreatAsAtomicUnit	  on
+		  MinAlgLoopOccurrences	  off
+		  PropExecContextOutsideSubsystem off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  Opaque		  off
+		  RequestExecContextInheritance	off
+		  MaskHideContents	  off
+		  SFBlockType		  "MATLAB Function"
+		  System {
+		    Name		    "isinf"
+		    Location		    [227, 345, 838, 789]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    SIDHighWatermark	    "31"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "u"
+		    SID			    "641::1"
+		    Position		    [20, 101, 40, 119]
+		    ZOrder		    -1
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Demux
+		    Name		    " Demux "
+		    SID			    "641::30"
+		    Ports		    [1, 1]
+		    Position		    [270, 230, 320, 270]
+		    ZOrder		    5
+		    Outputs		    "1"
+		    }
+		    Block {
+		    BlockType		    S-Function
+		    Name		    " SFunction "
+		    SID			    "641::29"
+		    Tag			    "Stateflow S-Function Cooling_Tower 8"
+		    Ports		    [1, 2]
+		    Position		    [180, 100, 230, 160]
+		    ZOrder		    4
+		    FunctionName	    "sf_sfun"
+		    PortCounts		    "[1 2]"
+		    EnableBusSupport	    off
+		    Port {
+		    PortNumber		    2
+		    Name		    "y"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    Terminator
+		    Name		    " Terminator "
+		    SID			    "641::31"
+		    Position		    [460, 241, 480, 259]
+		    ZOrder		    6
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "y"
+		    SID			    "641::5"
+		    Position		    [460, 101, 480, 119]
+		    ZOrder		    -5
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    ZOrder		    5
+		    SrcBlock		    "u"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "y"
+		    ZOrder		    6
+		    Labels		    [0, 0]
+		    SrcBlock		    " SFunction "
+		    SrcPort		    2
+		    DstBlock		    "y"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    7
+		    SrcBlock		    " Demux "
+		    SrcPort		    1
+		    DstBlock		    " Terminator "
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    8
+		    SrcBlock		    " SFunction "
+		    SrcPort		    1
+		    DstBlock		    " Demux "
+		    DstPort		    1
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "isnan"
+		  SID			  "642"
+		  Ports			  [1, 1]
+		  Position		  [355, 82, 425, 128]
+		  ZOrder		  -9
+		  ErrorFcn		  "Stateflow.Translate.translate"
+		  PermitHierarchicalResolution "ExplicitOnly"
+		  TreatAsAtomicUnit	  on
+		  MinAlgLoopOccurrences	  off
+		  PropExecContextOutsideSubsystem off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  Opaque		  off
+		  RequestExecContextInheritance	off
+		  MaskHideContents	  off
+		  SFBlockType		  "MATLAB Function"
+		  System {
+		    Name		    "isnan"
+		    Location		    [227, 345, 838, 789]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    SIDHighWatermark	    "31"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "u"
+		    SID			    "642::1"
+		    Position		    [20, 101, 40, 119]
+		    ZOrder		    -1
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Demux
+		    Name		    " Demux "
+		    SID			    "642::30"
+		    Ports		    [1, 1]
+		    Position		    [270, 230, 320, 270]
+		    ZOrder		    5
+		    Outputs		    "1"
+		    }
+		    Block {
+		    BlockType		    S-Function
+		    Name		    " SFunction "
+		    SID			    "642::29"
+		    Tag			    "Stateflow S-Function Cooling_Tower 9"
+		    Ports		    [1, 2]
+		    Position		    [180, 100, 230, 160]
+		    ZOrder		    4
+		    FunctionName	    "sf_sfun"
+		    PortCounts		    "[1 2]"
+		    EnableBusSupport	    off
+		    Port {
+		    PortNumber		    2
+		    Name		    "y"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    Terminator
+		    Name		    " Terminator "
+		    SID			    "642::31"
+		    Position		    [460, 241, 480, 259]
+		    ZOrder		    6
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "y"
+		    SID			    "642::5"
+		    Position		    [460, 101, 480, 119]
+		    ZOrder		    -5
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    ZOrder		    5
+		    SrcBlock		    "u"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    1
+		    }
+		    Line {
+		    Name		    "y"
+		    ZOrder		    6
+		    Labels		    [0, 0]
+		    SrcBlock		    " SFunction "
+		    SrcPort		    2
+		    DstBlock		    "y"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    7
+		    SrcBlock		    " Demux "
+		    SrcPort		    1
+		    DstBlock		    " Terminator "
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    8
+		    SrcBlock		    " SFunction "
+		    SrcPort		    1
+		    DstBlock		    " Demux "
+		    DstPort		    1
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "phi_Le2"
+		  SID			  "643"
+		  Position		  [150, 99, 175, 121]
+		  ZOrder		  -10
+		  ShowName		  off
+		  Value			  "1000"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "t_ia_ist"
+		  SID			  "644"
+		  Position		  [785, 108, 815, 122]
+		  ZOrder		  -11
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  ZOrder		  1
+		  SrcBlock		  "isinf"
+		  SrcPort		  1
+		  DstBlock		  "Add"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  2
+		  SrcBlock		  "mdot"
+		  SrcPort		  1
+		  DstBlock		  "Divide"
+		  DstPort		  3
+		}
+		Line {
+		  ZOrder		  3
+		  SrcBlock		  "Divide1"
+		  SrcPort		  1
+		  DstBlock		  "Divide"
+		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  4
+		  SrcBlock		  "phi_Le2"
+		  SrcPort		  1
+		  DstBlock		  "Divide1"
+		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  5
+		  SrcBlock		  "isnan"
+		  SrcPort		  1
+		  DstBlock		  "isinf"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  6
+		  SrcBlock		  "cp_i"
+		  SrcPort		  1
+		  DstBlock		  "Divide1"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  7
+		  SrcBlock		  "Divide"
+		  SrcPort		  1
+		  DstBlock		  "isnan"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  8
+		  SrcBlock		  "t_ie"
+		  SrcPort		  1
+		  DstBlock		  "Add"
+		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  9
+		  SrcBlock		  "Qdot_i_ist"
+		  SrcPort		  1
+		  DstBlock		  "Divide"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  10
+		  SrcBlock		  "Add"
+		  SrcPort		  1
+		  DstBlock		  "t_ia_ist"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Qdot_i_ist"
+	      SID		      "645"
+	      Position		      [715, 178, 745, 192]
+	      ZOrder		      -12
+	      IconDisplay	      "Port number"
+	      InitialOutput	      "0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "t_ia_ist"
+	      SID		      "646"
+	      Position		      [710, 298, 740, 312]
+	      ZOrder		      -13
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	      InitialOutput	      "0"
+	    }
+	    Line {
+	      ZOrder		      1
+	      SrcBlock		      "Fluid_mix"
+	      SrcPort		      1
+	      DstBlock		      "Qdot_i_ist "
+	      DstPort		      3
+	    }
+	    Line {
+	      ZOrder		      2
+	      SrcBlock		      "mdot_i"
+	      SrcPort		      1
+	      Points		      [35, 0]
+	      Branch {
+		ZOrder			3
+		Points			[0, 150]
+		DstBlock		"t_ia_ist "
+		DstPort			4
+	      }
+	      Branch {
+		ZOrder			4
+		Points			[55, 0; 0, -5]
+		DstBlock		"Qdot_i_ist "
+		DstPort			4
+	      }
+	    }
+	    Line {
+	      ZOrder		      5
+	      SrcBlock		      "Fluid_Type"
+	      SrcPort		      1
+	      Points		      [30, 0]
+	      Branch {
+		ZOrder			6
+		Points			[0, 160; 160, 0; 0, -45]
+		DstBlock		"Qdot_i_ist "
+		DstPort			5
+	      }
+	      Branch {
+		ZOrder			7
+		DstBlock		"Qdot_i_FK"
+		DstPort			3
+	      }
+	    }
+	    Line {
+	      ZOrder		      8
+	      SrcBlock		      "cp_i"
+	      SrcPort		      1
+	      DstBlock		      "t_ia_ist "
+	      DstPort		      3
+	    }
+	    Line {
+	      ZOrder		      9
+	      SrcBlock		      "t_ia_ist "
+	      SrcPort		      1
+	      DstBlock		      "t_ia_ist"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      10
+	      SrcBlock		      "n_fan [%]"
+	      SrcPort		      1
+	      Points		      [135, 0]
+	      DstBlock		      "Qdot_i_ist "
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      11
+	      SrcBlock		      "t_ia_FK"
+	      SrcPort		      1
+	      DstBlock		      "Qdot_i_FK"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      12
+	      SrcBlock		      "t_ie"
+	      SrcPort		      1
+	      Points		      [35, 0]
+	      Branch {
+		ZOrder			13
+		Points			[260, 0]
+		Branch {
+		  ZOrder		  14
+		  Points		  [0, -45]
+		  DstBlock		  "Qdot_i_ist "
+		  DstPort		  6
+		}
+		Branch {
+		  ZOrder		  15
+		  DstBlock		  "t_ia_ist "
+		  DstPort		  2
+		}
+	      }
+	      Branch {
+		ZOrder			16
+		Points			[0, -220]
+		DstBlock		"Qdot_i_FK"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      ZOrder		      17
+	      SrcBlock		      "Qdot_i_FK"
+	      SrcPort		      1
+	      Points		      [25, 0; 0, 50]
+	      DstBlock		      "Qdot_i_ist "
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      18
+	      SrcBlock		      "Qdot_i_ist "
+	      SrcPort		      1
+	      Points		      [15, 0]
+	      Branch {
+		ZOrder			19
+		Points			[0, 75]
+		DstBlock		"t_ia_ist "
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			20
+		DstBlock		"Qdot_i_ist"
+		DstPort			1
+	      }
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux"
+	  SID			  "647"
+	  Ports			  [7, 1]
+	  Position		  [1525, 508, 1530, 702]
+	  ZOrder		  -13
+	  BackgroundColor	  "black"
+	  ShowName		  off
+	  Inputs		  "7"
+	  Port {
+	    PortNumber		    1
+	    Name		    "THV out"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Storage_Type_1"
+	  SID			  "648"
+	  Ports			  [3, 4]
+	  Position		  [1660, 502, 1795, 628]
+	  ZOrder		  -14
+	  BackgroundColor	  "red"
+	  LibraryVersion	  "6.0.108"
+	  SourceBlock		  "carnot/Storage/Thermal/Storage_Type_1"
+	  SourceType		  "Multiport Storage"
+	  ContentPreviewEnabled	  off
+	  uloss			  "1"
+	  ubot			  "1"
+	  utop			  "1"
+	  cond			  "1"
+	  t0			  "[10:5:55]"
+	  volume		  "0.03"
+	  dia			  "0.01"
+	  pos			  "standing cylinder"
+	  nconnect		  "2"
+	  nodes			  "10"
+	  mpoints		  "10"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "THB2THV"
+	  SID			  "649"
+	  Ports			  [1, 1]
+	  Position		  [270, 590, 335, 620]
+	  ZOrder		  -15
+	  LibraryVersion	  "6.0.108"
+	  SourceBlock		  "carnot/Toolbox/THB2THV"
+	  SourceType		  "THB2THV"
+	  ContentPreviewEnabled	  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "THV2THB"
+	  SID			  "650"
+	  Ports			  [1, 1]
+	  Position		  [1550, 590, 1625, 620]
+	  ZOrder		  -16
+	  LibraryVersion	  "6.0.108"
+	  SourceBlock		  "carnot/Toolbox/THV2THB"
+	  SourceType		  "THV2THB"
+	  ContentPreviewEnabled	  off
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator"
+	  SID			  "651"
+	  Position		  [1840, 570, 1860, 590]
+	  ZOrder		  -17
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Terminator
+	  Name			  "Terminator1"
+	  SID			  "652"
+	  Position		  [1840, 510, 1860, 530]
+	  ZOrder		  -18
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Verbrauch / consumption"
+	  SID			  "653"
+	  Ports			  [7, 3]
+	  Position		  [1230, 378, 1360, 512]
+	  ZOrder		  -19
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  Port {
+	    PortNumber		    1
+	    Name		    "energy ct"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "power ct"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  Port {
+	    PortNumber		    3
+	    Name		    "water consumption"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
+	  System {
+	    Name		    "Verbrauch / consumption"
+	    Location		    [61, 52, 859, 639]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Qdot"
+	      SID		      "654"
+	      Position		      [70, 288, 100, 302]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "vdot_fan"
+	      SID		      "655"
+	      Position		      [120, 263, 150, 277]
+	      ZOrder		      -2
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "P_fan"
+	      SID		      "656"
+	      Position		      [120, 133, 150, 147]
+	      ZOrder		      -3
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "control_fan"
+	      SID		      "657"
+	      Position		      [120, 103, 150, 117]
+	      ZOrder		      -4
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "phi_le"
+	      SID		      "658"
+	      Position		      [70, 248, 100, 262]
+	      ZOrder		      -5
+	      Port		      "5"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "t_le"
+	      SID		      "659"
+	      Position		      [120, 228, 150, 242]
+	      ZOrder		      -6
+	      Port		      "6"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "t_ie"
+	      SID		      "660"
+	      Position		      [120, 303, 150, 317]
+	      ZOrder		      -7
+	      Port		      "7"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Strom"
+	      SID		      "661"
+	      Ports		      [2, 2]
+	      Position		      [305, 93, 435, 157]
+	      ZOrder		      -8
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"Strom"
+		Location		[234, 52, 1110, 495]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "control_Fan"
+		  SID			  "662"
+		  Position		  [65, 68, 95, 82]
+		  ZOrder		  -1
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "P_Fan"
+		  SID			  "663"
+		  Position		  [65, 163, 95, 177]
+		  ZOrder		  -2
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Add"
+		  SID			  "664"
+		  Ports			  [2, 1]
+		  Position		  [215, 112, 245, 143]
+		  ZOrder		  -3
+		  InputSameDT		  off
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Integrator
+		  Name			  "Integrator1"
+		  SID			  "665"
+		  Ports			  [1, 1]
+		  Position		  [455, 106, 485, 144]
+		  ZOrder		  -4
+		  ShowName		  off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product"
+		  SID			  "666"
+		  Ports			  [2, 1]
+		  Position		  [330, 107, 360, 138]
+		  ZOrder		  -5
+		  InputSameDT		  off
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product2"
+		  SID			  "667"
+		  Ports			  [2, 1]
+		  Position		  [560, 115, 605, 150]
+		  ZOrder		  -6
+		  ShowName		  off
+		  Inputs		  "*/"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "Rieselwasserpumpe [kW]"
+		  SID			  "668"
+		  Position		  [60, 106, 120, 134]
+		  ZOrder		  -7
+		  Value			  "0.25"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "factor1"
+		  SID			  "669"
+		  Position		  [495, 131, 535, 149]
+		  ZOrder		  -8
+		  ShowName		  off
+		  Value			  "3600"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "energy"
+		  SID			  "670"
+		  Position		  [695, 128, 725, 142]
+		  ZOrder		  -9
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "power"
+		  SID			  "671"
+		  Position		  [695, 163, 725, 177]
+		  ZOrder		  -10
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  ZOrder		  1
+		  SrcBlock		  "Product2"
+		  SrcPort		  1
+		  DstBlock		  "energy"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  2
+		  SrcBlock		  "factor1"
+		  SrcPort		  1
+		  DstBlock		  "Product2"
+		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  3
+		  SrcBlock		  "Integrator1"
+		  SrcPort		  1
+		  DstBlock		  "Product2"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  4
+		  SrcBlock		  "P_Fan"
+		  SrcPort		  1
+		  Points		  [70, 0; 0, -35]
+		  DstBlock		  "Add"
+		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  5
+		  SrcBlock		  "Add"
+		  SrcPort		  1
+		  DstBlock		  "Product"
+		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  6
+		  SrcBlock		  "control_Fan"
+		  SrcPort		  1
+		  Points		  [190, 0; 0, 40]
+		  DstBlock		  "Product"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  7
+		  SrcBlock		  "Product"
+		  SrcPort		  1
+		  Points		  [45, 0]
+		  Branch {
+		    ZOrder		    8
+		    DstBlock		    "Integrator1"
+		    DstPort		    1
+		  }
+		  Branch {
+		    ZOrder		    9
+		    Points		    [0, 45]
+		    DstBlock		    "power"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  ZOrder		  10
+		  SrcBlock		  "Rieselwasserpumpe [kW]"
+		  SrcPort		  1
+		  DstBlock		  "Add"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Verdunstung"
+	      SID		      "672"
+	      Ports		      [6, 1]
+	      Position		      [305, 208, 435, 307]
+	      ZOrder		      -9
+	      MinAlgLoopOccurrences   off
+	      PropExecContextOutsideSubsystem off
+	      RTWSystemCode	      "Auto"
+	      FunctionWithSeparateData off
+	      Opaque		      off
+	      RequestExecContextInheritance off
+	      MaskHideContents	      off
+	      System {
+		Name			"Verdunstung"
+		Location		[110, 420, 1434, 1067]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"A4"
+		PaperUnits		"centimeters"
+		TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+		TiledPageScale		1
+		ShowPageBoundaries	off
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "control_Fan"
+		  SID			  "673"
+		  Position		  [765, 178, 795, 192]
+		  ZOrder		  -1
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "t_le"
+		  SID			  "674"
+		  Position		  [15, 28, 45, 42]
+		  ZOrder		  -2
+		  Port			  "2"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "phi_le"
+		  SID			  "675"
+		  Position		  [90, 58, 120, 72]
+		  ZOrder		  -3
+		  Port			  "3"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "Vdot_Fan"
+		  SID			  "676"
+		  Position		  [315, 138, 345, 152]
+		  ZOrder		  -4
+		  Port			  "4"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "Qdot"
+		  SID			  "677"
+		  Position		  [435, 188, 465, 202]
+		  ZOrder		  -5
+		  Port			  "5"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  Inport
+		  Name			  "t_ie"
+		  SID			  "678"
+		  Position		  [435, 218, 465, 232]
+		  ZOrder		  -6
+		  Port			  "6"
+		  IconDisplay		  "Port number"
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "Enthalpie "
+		  SID			  "679"
+		  Ports			  [2, 1]
+		  Position		  [375, 28, 430, 117]
+		  ZOrder		  -7
+		  MinAlgLoopOccurrences	  off
+		  PropExecContextOutsideSubsystem off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  Opaque		  off
+		  RequestExecContextInheritance	off
+		  MaskHideContents	  off
+		  System {
+		    Name		    "Enthalpie "
+		    Location		    [410, 52, 1099, 796]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "x_le"
+		    SID			    "680"
+		    Position		    [30, 243, 60, 257]
+		    ZOrder		    -1
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "t_le"
+		    SID			    "681"
+		    Position		    [30, 203, 60, 217]
+		    ZOrder		    -2
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Sum
+		    Name		    "Add"
+		    SID			    "682"
+		    Ports		    [2, 1]
+		    Position		    [495, 187, 525, 218]
+		    ZOrder		    -3
+		    InputSameDT		    off
+		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Sum
+		    Name		    "Add1"
+		    SID			    "683"
+		    Ports		    [2, 1]
+		    Position		    [315, 267, 345, 298]
+		    ZOrder		    -4
+		    InputSameDT		    off
+		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product"
+		    SID			    "684"
+		    Ports		    [2, 1]
+		    Position		    [200, 157, 230, 188]
+		    ZOrder		    -5
+		    InputSameDT		    off
+		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product1"
+		    SID			    "685"
+		    Ports		    [2, 1]
+		    Position		    [390, 217, 420, 248]
+		    ZOrder		    -6
+		    InputSameDT		    off
+		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Product
+		    Name		    "Product2"
+		    SID			    "686"
+		    Ports		    [2, 1]
+		    Position		    [250, 257, 280, 288]
+		    ZOrder		    -7
+		    InputSameDT		    off
+		    OutDataTypeStr	    "Inherit: Inherit via internal rule"
+		    SaturateOnIntegerOverflow off
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "cp_d"
+		    SID			    "687"
+		    Position		    [35, 285, 65, 315]
+		    ZOrder		    -8
+		    Value		    "1.861"
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "cp_lt"
+		    SID			    "688"
+		    Position		    [30, 150, 60, 180]
+		    ZOrder		    -9
+		    Value		    "1.006"
+		    }
+		    Block {
+		    BlockType		    Constant
+		    Name		    "dhv0"
+		    SID			    "689"
+		    Position		    [35, 340, 65, 370]
+		    ZOrder		    -10
+		    Value		    "2500"
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "h_le"
+		    SID			    "690"
+		    Position		    [565, 198, 595, 212]
+		    ZOrder		    -11
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    ZOrder		    1
+		    SrcBlock		    "dhv0"
+		    SrcPort		    1
+		    Points		    [225, 0; 0, -65]
+		    DstBlock		    "Add1"
+		    DstPort		    2
+		    }
+		    Line {
+		    ZOrder		    2
+		    SrcBlock		    "Product2"
+		    SrcPort		    1
+		    DstBlock		    "Add1"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    3
+		    SrcBlock		    "Add1"
+		    SrcPort		    1
+		    Points		    [10, 0; 0, -45]
+		    DstBlock		    "Product1"
+		    DstPort		    2
+		    }
+		    Line {
+		    ZOrder		    4
+		    SrcBlock		    "cp_d"
+		    SrcPort		    1
+		    Points		    [80, 0; 0, -20]
+		    DstBlock		    "Product2"
+		    DstPort		    2
+		    }
+		    Line {
+		    ZOrder		    5
+		    SrcBlock		    "x_le"
+		    SrcPort		    1
+		    Points		    [155, 0; 0, -25]
+		    DstBlock		    "Product1"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    6
+		    SrcBlock		    "Product1"
+		    SrcPort		    1
+		    Points		    [20, 0; 0, -25]
+		    DstBlock		    "Add"
+		    DstPort		    2
+		    }
+		    Line {
+		    ZOrder		    7
+		    SrcBlock		    "Product"
+		    SrcPort		    1
+		    Points		    [110, 0; 0, 20]
+		    DstBlock		    "Add"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    8
+		    SrcBlock		    "t_le"
+		    SrcPort		    1
+		    Points		    [50, 0]
+		    Branch {
+		    ZOrder		    9
+		    Points		    [0, 55]
+		    DstBlock		    "Product2"
+		    DstPort		    1
+		    }
+		    Branch {
+		    ZOrder		    10
+		    Points		    [0, -30]
+		    DstBlock		    "Product"
+		    DstPort		    2
+		    }
+		    }
+		    Line {
+		    ZOrder		    11
+		    SrcBlock		    "cp_lt"
+		    SrcPort		    1
+		    DstBlock		    "Product"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    12
+		    SrcBlock		    "Add"
+		    SrcPort		    1
+		    DstBlock		    "h_le"
+		    DstPort		    1
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  Integrator
+		  Name			  "Integrator1"
+		  SID			  "691"
+		  Ports			  [1, 1]
+		  Position		  [895, 211, 925, 249]
+		  ZOrder		  -8
+		  ShowName		  off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product"
+		  SID			  "692"
+		  Ports			  [2, 1]
+		  Position		  [430, 137, 460, 168]
+		  ZOrder		  -9
+		  InputSameDT		  off
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product1"
+		  SID			  "693"
+		  Ports			  [2, 1]
+		  Position		  [840, 212, 870, 243]
+		  ZOrder		  -10
+		  InputSameDT		  off
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product2"
+		  SID			  "694"
+		  Ports			  [2, 1]
+		  Position		  [1000, 220, 1045, 255]
+		  ZOrder		  -11
+		  ShowName		  off
+		  Inputs		  "*/"
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "Product3"
+		  SID			  "695"
+		  Ports			  [2, 1]
+		  Position		  [685, 207, 715, 238]
+		  ZOrder		  -12
+		  InputSameDT		  off
+		  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+		  SaturateOnIntegerOverflow off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "RelHum2x"
+		  SID			  "696"
+		  Ports			  [3, 1]
+		  Position		  [180, 25, 240, 75]
+		  ZOrder		  -13
+		  SourceBlock		  "carnot/Basic/Material_Properties/RelHum2x"
+		  SourceType		  "relative humidity to x"
+		  ContentPreviewEnabled	  off
+		}
+		Block {
+		  BlockType		  Reference
+		  Name			  "Saturation_Temperature"
+		  SID			  "697"
+		  Ports			  [4, 1]
+		  Position		  [370, 264, 455, 331]
+		  ZOrder		  -14
+		  SourceBlock		  "carnot/Basic/Material_Properties/Saturation_Temperature"
+		  SourceType		  "Saturation Temperature"
+		  VariantControl	  CarlibClassic
+		  ContentPreviewEnabled	  off
+		  INPUTARGUMENTS	  "state variables (classic)"
+		  DEBUGLEVEL		  WARNINGLEVEL
+		  MAXTOTALMESSAGES	  inf
+		  MAXCONSECUTIVEMESSAGES  inf
+		  WRITETOFILE		  0
+		  FILENAME		  "'errors.txt'"
+		}
+		Block {
+		  BlockType		  SubSystem
+		  Name			  "Verdunstungsmenge"
+		  SID			  "698"
+		  Ports			  [7, 1]
+		  Position		  [570, 172, 650, 288]
+		  ZOrder		  -15
+		  ErrorFcn		  "Stateflow.Translate.translate"
+		  PermitHierarchicalResolution "ExplicitOnly"
+		  TreatAsAtomicUnit	  on
+		  MinAlgLoopOccurrences	  off
+		  PropExecContextOutsideSubsystem off
+		  RTWSystemCode		  "Auto"
+		  FunctionWithSeparateData off
+		  Opaque		  off
+		  RequestExecContextInheritance	off
+		  MaskHideContents	  off
+		  SFBlockType		  "MATLAB Function"
+		  System {
+		    Name		    "Verdunstungsmenge"
+		    Location		    [227, 345, 838, 789]
+		    Open		    off
+		    ModelBrowserVisibility  off
+		    ModelBrowserWidth	    200
+		    ScreenColor		    "white"
+		    PaperOrientation	    "landscape"
+		    PaperPositionMode	    "auto"
+		    PaperType		    "A4"
+		    PaperUnits		    "centimeters"
+		    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+		    TiledPageScale	    1
+		    ShowPageBoundaries	    off
+		    ZoomFactor		    "100"
+		    SIDHighWatermark	    "37"
+		    Block {
+		    BlockType		    Inport
+		    Name		    "h_le"
+		    SID			    "698::1"
+		    Position		    [20, 101, 40, 119]
+		    ZOrder		    -1
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "mdot"
+		    SID			    "698::2"
+		    Position		    [20, 136, 40, 154]
+		    ZOrder		    -2
+		    Port		    "2"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "qdot"
+		    SID			    "698::3"
+		    Position		    [20, 171, 40, 189]
+		    ZOrder		    -3
+		    Port		    "3"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "t_ie"
+		    SID			    "698::4"
+		    Position		    [20, 206, 40, 224]
+		    ZOrder		    -4
+		    Port		    "4"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "x_le"
+		    SID			    "698::5"
+		    Position		    [20, 246, 40, 264]
+		    ZOrder		    -5
+		    Port		    "5"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "t_tau"
+		    SID			    "698::6"
+		    Position		    [20, 281, 40, 299]
+		    ZOrder		    -6
+		    Port		    "6"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Inport
+		    Name		    "p"
+		    SID			    "698::7"
+		    Position		    [20, 316, 40, 334]
+		    ZOrder		    -7
+		    Port		    "7"
+		    IconDisplay		    "Port number"
+		    }
+		    Block {
+		    BlockType		    Demux
+		    Name		    " Demux "
+		    SID			    "698::36"
+		    Ports		    [1, 1]
+		    Position		    [270, 230, 320, 270]
+		    ZOrder		    5
+		    Outputs		    "1"
+		    }
+		    Block {
+		    BlockType		    S-Function
+		    Name		    " SFunction "
+		    SID			    "698::35"
+		    Tag			    "Stateflow S-Function Cooling_Tower 10"
+		    Ports		    [7, 2]
+		    Position		    [180, 100, 230, 260]
+		    ZOrder		    4
+		    FunctionName	    "sf_sfun"
+		    PortCounts		    "[7 2]"
+		    EnableBusSupport	    off
+		    Port {
+		    PortNumber		    2
+		    Name		    "x_fl"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
+		    }
+		    }
+		    Block {
+		    BlockType		    Terminator
+		    Name		    " Terminator "
+		    SID			    "698::37"
+		    Position		    [460, 241, 480, 259]
+		    ZOrder		    6
+		    }
+		    Block {
+		    BlockType		    Outport
+		    Name		    "x_fl"
+		    SID			    "698::11"
+		    Position		    [460, 101, 480, 119]
+		    ZOrder		    -11
+		    IconDisplay		    "Port number"
+		    }
+		    Line {
+		    ZOrder		    11
+		    SrcBlock		    "h_le"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    12
+		    SrcBlock		    "mdot"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    2
+		    }
+		    Line {
+		    ZOrder		    13
+		    SrcBlock		    "qdot"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    3
+		    }
+		    Line {
+		    ZOrder		    14
+		    SrcBlock		    "t_ie"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    4
+		    }
+		    Line {
+		    ZOrder		    15
+		    SrcBlock		    "x_le"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    5
+		    }
+		    Line {
+		    ZOrder		    16
+		    SrcBlock		    "t_tau"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    6
+		    }
+		    Line {
+		    ZOrder		    17
+		    SrcBlock		    "p"
+		    SrcPort		    1
+		    DstBlock		    " SFunction "
+		    DstPort		    7
+		    }
+		    Line {
+		    Name		    "x_fl"
+		    ZOrder		    18
+		    Labels		    [0, 0]
+		    SrcBlock		    " SFunction "
+		    SrcPort		    2
+		    DstBlock		    "x_fl"
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    19
+		    SrcBlock		    " Demux "
+		    SrcPort		    1
+		    DstBlock		    " Terminator "
+		    DstPort		    1
+		    }
+		    Line {
+		    ZOrder		    20
+		    SrcBlock		    " SFunction "
+		    SrcPort		    1
+		    DstBlock		    " Demux "
+		    DstPort		    1
+		    }
+		  }
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "air"
+		  SID			  "699"
+		  Position		  [240, 294, 260, 316]
+		  ZOrder		  -16
+		  Value			  "2"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "factor1"
+		  SID			  "700"
+		  Position		  [935, 236, 975, 254]
+		  ZOrder		  -17
+		  ShowName		  off
+		  Value			  "3600"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "p"
+		  SID			  "701"
+		  Position		  [55, 40, 85, 60]
+		  ZOrder		  -18
+		  Value			  "1e5"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "roh_air"
+		  SID			  "702"
+		  Position		  [370, 149, 395, 171]
+		  ZOrder		  -19
+		  Value			  "1.29"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Wasserverbrauch"
+		  SID			  "703"
+		  Position		  [1100, 233, 1130, 247]
+		  ZOrder		  -20
+		  IconDisplay		  "Port number"
+		}
+		Line {
+		  ZOrder		  1
+		  SrcBlock		  "Verdunstungsmenge"
+		  SrcPort		  1
+		  DstBlock		  "Product3"
+		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  2
+		  SrcBlock		  "t_ie"
+		  SrcPort		  1
+		  Points		  [30, 0; 0, 5]
+		  DstBlock		  "Verdunstungsmenge"
+		  DstPort		  4
+		}
+		Line {
+		  ZOrder		  3
+		  SrcBlock		  "Product"
+		  SrcPort		  1
+		  Points		  [50, 0]
+		  Branch {
+		    ZOrder		    4
+		    Points		    [150, 0; 0, 60]
+		    DstBlock		    "Product3"
+		    DstPort		    1
+		  }
+		  Branch {
+		    ZOrder		    5
+		    Points		    [0, 45]
+		    DstBlock		    "Verdunstungsmenge"
+		    DstPort		    2
+		  }
+		}
+		Line {
+		  ZOrder		  6
+		  SrcBlock		  "Product3"
+		  SrcPort		  1
+		  Points		  [50, 0; 0, 10]
+		  DstBlock		  "Product1"
+		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  7
+		  SrcBlock		  "control_Fan"
+		  SrcPort		  1
+		  Points		  [15, 0; 0, 35]
+		  DstBlock		  "Product1"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  8
+		  SrcBlock		  "Product1"
+		  SrcPort		  1
+		  DstBlock		  "Integrator1"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  9
+		  SrcBlock		  "Product2"
+		  SrcPort		  1
+		  DstBlock		  "Wasserverbrauch"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  10
+		  SrcBlock		  "factor1"
+		  SrcPort		  1
+		  DstBlock		  "Product2"
+		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  11
+		  SrcBlock		  "Integrator1"
+		  SrcPort		  1
+		  DstBlock		  "Product2"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  12
+		  SrcBlock		  "air"
+		  SrcPort		  1
+		  DstBlock		  "Saturation_Temperature"
+		  DstPort		  3
+		}
+		Line {
+		  ZOrder		  13
+		  SrcBlock		  "Saturation_Temperature"
+		  SrcPort		  1
+		  Points		  [50, 0; 0, -40]
+		  DstBlock		  "Verdunstungsmenge"
+		  DstPort		  6
+		}
+		Line {
+		  ZOrder		  14
+		  SrcBlock		  "Qdot"
+		  SrcPort		  1
+		  Points		  [35, 0; 0, 20]
+		  DstBlock		  "Verdunstungsmenge"
+		  DstPort		  3
+		}
+		Line {
+		  ZOrder		  15
+		  SrcBlock		  "RelHum2x"
+		  SrcPort		  1
+		  Points		  [50, 0]
+		  Branch {
+		    ZOrder		    16
+		    Points		    [0, 195]
+		    Branch {
+		    ZOrder		    17
+		    DstBlock		    "Verdunstungsmenge"
+		    DstPort		    5
+		    }
+		    Branch {
+		    ZOrder		    18
+		    Points		    [0, 75]
+		    DstBlock		    "Saturation_Temperature"
+		    DstPort		    4
+		    }
+		  }
+		  Branch {
+		    ZOrder		    19
+		    DstBlock		    "Enthalpie "
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  ZOrder		  20
+		  SrcBlock		  "Enthalpie "
+		  SrcPort		  1
+		  Points		  [95, 0; 0, 110]
+		  DstBlock		  "Verdunstungsmenge"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  21
+		  SrcBlock		  "roh_air"
+		  SrcPort		  1
+		  DstBlock		  "Product"
+		  DstPort		  2
+		}
+		Line {
+		  ZOrder		  22
+		  SrcBlock		  "Vdot_Fan"
+		  SrcPort		  1
+		  DstBlock		  "Product"
+		  DstPort		  1
+		}
+		Line {
+		  ZOrder		  23
+		  SrcBlock		  "phi_le"
+		  SrcPort		  1
+		  DstBlock		  "RelHum2x"
+		  DstPort		  3
+		}
+		Line {
+		  ZOrder		  24
+		  SrcBlock		  "p"
+		  SrcPort		  1
+		  Points		  [65, 0]
+		  Branch {
+		    ZOrder		    25
+		    Points		    [0, 240]
+		    Branch {
+		    ZOrder		    26
+		    Points		    [0, 90; 375, 0; 0, -105]
+		    DstBlock		    "Verdunstungsmenge"
+		    DstPort		    7
+		    }
+		    Branch {
+		    ZOrder		    27
+		    DstBlock		    "Saturation_Temperature"
+		    DstPort		    2
+		    }
+		  }
+		  Branch {
+		    ZOrder		    28
+		    DstBlock		    "RelHum2x"
+		    DstPort		    2
+		  }
+		}
+		Line {
+		  ZOrder		  29
+		  SrcBlock		  "t_le"
+		  SrcPort		  1
+		  Points		  [85, 0]
+		  Branch {
+		    ZOrder		    30
+		    Points		    [0, 60]
+		    Branch {
+		    ZOrder		    31
+		    DstBlock		    "Enthalpie "
+		    DstPort		    2
+		    }
+		    Branch {
+		    ZOrder		    32
+		    Points		    [0, 180]
+		    DstBlock		    "Saturation_Temperature"
+		    DstPort		    1
+		    }
+		  }
+		  Branch {
+		    ZOrder		    33
+		    DstBlock		    "RelHum2x"
+		    DstPort		    1
+		  }
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "energy"
+	      SID		      "704"
+	      Position		      [560, 103, 590, 117]
+	      ZOrder		      -10
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "power"
+	      SID		      "705"
+	      Position		      [560, 133, 590, 147]
+	      ZOrder		      -11
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Wasserverbrauch"
+	      SID		      "706"
+	      Position		      [560, 253, 590, 267]
+	      ZOrder		      -12
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      ZOrder		      1
+	      SrcBlock		      "Strom"
+	      SrcPort		      1
+	      DstBlock		      "energy"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      2
+	      SrcBlock		      "t_ie"
+	      SrcPort		      1
+	      Points		      [70, 0; 0, -15]
+	      DstBlock		      "Verdunstung"
+	      DstPort		      6
+	    }
+	    Line {
+	      ZOrder		      3
+	      SrcBlock		      "Qdot"
+	      SrcPort		      1
+	      Points		      [110, 0; 0, -15]
+	      DstBlock		      "Verdunstung"
+	      DstPort		      5
+	    }
+	    Line {
+	      ZOrder		      4
+	      SrcBlock		      "vdot_fan"
+	      SrcPort		      1
+	      Points		      [55, 0; 0, -5]
+	      DstBlock		      "Verdunstung"
+	      DstPort		      4
+	    }
+	    Line {
+	      ZOrder		      5
+	      SrcBlock		      "phi_le"
+	      SrcPort		      1
+	      Points		      [100, 0; 0, -5]
+	      DstBlock		      "Verdunstung"
+	      DstPort		      3
+	    }
+	    Line {
+	      ZOrder		      6
+	      SrcBlock		      "Verdunstung"
+	      SrcPort		      1
+	      DstBlock		      "Wasserverbrauch"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      7
+	      SrcBlock		      "t_le"
+	      SrcPort		      1
+	      DstBlock		      "Verdunstung"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      8
+	      SrcBlock		      "Strom"
+	      SrcPort		      2
+	      DstBlock		      "power"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      9
+	      SrcBlock		      "P_fan"
+	      SrcPort		      1
+	      DstBlock		      "Strom"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      10
+	      SrcBlock		      "control_fan"
+	      SrcPort		      1
+	      Points		      [55, 0]
+	      Branch {
+		ZOrder			11
+		Points			[0, 110]
+		DstBlock		"Verdunstung"
+		DstPort			1
+	      }
+	      Branch {
+		ZOrder			12
+		DstBlock		"Strom"
+		DstPort			1
+	      }
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "THBout"
+	  SID			  "707"
+	  Position		  [1880, 603, 1910, 617]
+	  ZOrder		  -20
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "data logging"
+	  SID			  "708"
+	  Position		  [1890, 198, 1920, 212]
+	  ZOrder		  -21
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  Name			  "energy ct"
+	  ZOrder		  1
+	  Labels		  [-1, 1]
+	  SrcBlock		  "Verbrauch / consumption"
+	  SrcPort		  1
+	  Points		  [355, 0; 0, -165]
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  7
+	}
+	Line {
+	  ZOrder		  2
+	  SrcBlock		  "Bus\nCreator"
+	  SrcPort		  1
+	  DstBlock		  "data logging"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  3
+	  SrcBlock		  "WDB"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    ZOrder		    4
+	    DstBlock		    "Bus\nSelector"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    5
+	    Points		    [0, -230]
+	    DstBlock		    "Feuchtkugel-\ntemperatureinfluss /\nwet-bulb temperature effect"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  Name			  "mix"
+	  ZOrder		  6
+	  Labels		  [0, 0]
+	  SrcBlock		  "Demux"
+	  SrcPort		  6
+	  Points		  [60, 0]
+	  Branch {
+	    ZOrder		    7
+	    Points		    [320, 0]
+	    Branch {
+	      ZOrder		      8
+	      DstBlock		      "Mux"
+	      DstPort		      6
+	    }
+	    Branch {
+	      ZOrder		      9
+	      Points		      [0, -470]
+	      DstBlock		      "Leistungseinflüsse / \ninfluence on coolingpower"
+	      DstPort		      6
+	    }
+	  }
+	  Branch {
+	    ZOrder		    10
+	    Points		    [0, -215]
+	    DstBlock		    "Heat_Capacity"
+	    DstPort		    4
+	  }
+	}
+	Line {
+	  Name			  "water consumption"
+	  ZOrder		  11
+	  Labels		  [-1, 1]
+	  SrcBlock		  "Verbrauch / consumption"
+	  SrcPort		  3
+	  Points		  [385, 0; 0, -195]
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  9
+	}
+	Line {
+	  Name			  "<Temperature_Ambient>"
+	  ZOrder		  12
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector"
+	  SrcPort		  1
+	  Points		  [135, 0; 0, 90; 415, 0]
+	  Branch {
+	    ZOrder		    13
+	    Points		    [765, 0]
+	    Branch {
+	      ZOrder		      14
+	      Labels		      [-1, 1]
+	      Points		      [110, 0; 0, -160]
+	      DstBlock		      "Bus\nCreator"
+	      DstPort		      6
+	    }
+	    Branch {
+	      ZOrder		      15
+	      Points		      [0, 160]
+	      DstBlock		      "Storage_Type_1"
+	      DstPort		      1
+	    }
+	  }
+	  Branch {
+	    ZOrder		    16
+	    Points		    [0, 120]
+	    DstBlock		    "Verbrauch / consumption"
+	    DstPort		    6
+	  }
+	}
+	Line {
+	  Name			  "<Relative_Humidity>"
+	  ZOrder		  17
+	  Labels		  [0, 0]
+	  SrcBlock		  "Bus\nSelector"
+	  SrcPort		  2
+	  Points		  [100, 0; 0, 35; 465, 0]
+	  Branch {
+	    ZOrder		    18
+	    Labels		    [-1, 1]
+	    Points		    [845, 0; 0, -170]
+	    DstBlock		    "Bus\nCreator"
+	    DstPort		    5
+	  }
+	  Branch {
+	    ZOrder		    19
+	    Points		    [0, 120]
+	    DstBlock		    "Verbrauch / consumption"
+	    DstPort		    5
+	  }
+	}
+	Line {
+	  Name			  "rpm fan [%] "
+	  ZOrder		  20
+	  SrcBlock		  "Fan"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  Branch {
+	    ZOrder		    21
+	    Labels		    [-1, 1]
+	    Points		    [615, 0; 0, -170]
+	    DstBlock		    "Bus\nCreator"
+	    DstPort		    2
+	  }
+	  Branch {
+	    ZOrder		    22
+	    Points		    [0, -50]
+	    DstBlock		    "Leistungseinflüsse / \ninfluence on coolingpower"
+	    DstPort		    7
+	  }
+	}
+	Line {
+	  Name			  "Q_i_ist"
+	  ZOrder		  23
+	  SrcBlock		  "Leistungseinflüsse / \ninfluence on coolingpower"
+	  SrcPort		  1
+	  Points		  [30, 0; 0, 275]
+	  DstBlock		  "Verbrauch / consumption"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "wet-bulb temperature"
+	  ZOrder		  24
+	  Labels		  [-1, 1]
+	  SrcBlock		  "Feuchtkugel-\ntemperatureinfluss /\nwet-bulb temperature effect"
+	  SrcPort		  1
+	  Points		  [315, 0; 0, -10; 770, 0; 0, 15]
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "ID"
+	  ZOrder		  25
+	  Labels		  [0, 0]
+	  SrcBlock		  "Demux"
+	  SrcPort		  1
+	  DstBlock		  "Mux"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  26
+	  SrcBlock		  "control_fan"
+	  SrcPort		  1
+	  Points		  [125, 0]
+	  Branch {
+	    ZOrder		    27
+	    Points		    [0, -339]
+	    DstBlock		    "Feuchtkugel-\ntemperatureinfluss /\nwet-bulb temperature effect"
+	    DstPort		    enable
+	  }
+	  Branch {
+	    ZOrder		    28
+	    Points		    [530, 0]
+	    Branch {
+	      ZOrder		      29
+	      Points		      [285, 0; 0, -301]
+	      DstBlock		      "Leistungseinflüsse / \ninfluence on coolingpower"
+	      DstPort		      enable
+	    }
+	    Branch {
+	      ZOrder		      30
+	      Points		      [0, 90]
+	      DstBlock		      "Verbrauch / consumption"
+	      DstPort		      4
+	    }
+	  }
+	}
+	Line {
+	  ZOrder		  31
+	  SrcBlock		  "Fan"
+	  SrcPort		  3
+	  Points		  [15, 0; 0, 120]
+	  DstBlock		  "Verbrauch / consumption"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "power ct"
+	  ZOrder		  32
+	  Labels		  [-1, 1]
+	  SrcBlock		  "Verbrauch / consumption"
+	  SrcPort		  2
+	  Points		  [370, 0; 0, -180]
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  8
+	}
+	Line {
+	  Name			  "v_dot_fan"
+	  ZOrder		  33
+	  SrcBlock		  "Fan"
+	  SrcPort		  2
+	  Points		  [30, 0]
+	  Branch {
+	    ZOrder		    34
+	    Labels		    [-1, 1]
+	    Points		    [615, 0; 0, -165]
+	    DstBlock		    "Bus\nCreator"
+	    DstPort		    3
+	  }
+	  Branch {
+	    ZOrder		    35
+	    Points		    [0, 125]
+	    DstBlock		    "Verbrauch / consumption"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  ZOrder		  36
+	  SrcBlock		  "Heat_Capacity"
+	  SrcPort		  1
+	  Points		  [60, 0; 0, -315]
+	  DstBlock		  "Leistungseinflüsse / \ninfluence on coolingpower"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  37
+	  SrcBlock		  "Leistungseinflüsse / \ninfluence on coolingpower"
+	  SrcPort		  2
+	  Points		  [280, 0; 0, 370]
+	  DstBlock		  "Mux"
+	  DstPort		  2
+	}
+	Line {
+	  Name			  "T"
+	  ZOrder		  38
+	  Labels		  [0, 0]
+	  SrcBlock		  "Demux"
+	  SrcPort		  2
+	  Points		  [10, 0]
+	  Branch {
+	    ZOrder		    39
+	    Points		    [325, 0; 0, -50]
+	    Branch {
+	      ZOrder		      40
+	      DstBlock		      "Verbrauch / consumption"
+	      DstPort		      7
+	    }
+	    Branch {
+	      ZOrder		      41
+	      Points		      [0, -380]
+	      DstBlock		      "Leistungseinflüsse / \ninfluence on coolingpower"
+	      DstPort		      3
+	    }
+	  }
+	  Branch {
+	    ZOrder		    42
+	    Points		    [0, -440]
+	    DstBlock		    "Feuchtkugel-\ntemperatureinfluss /\nwet-bulb temperature effect"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  ZOrder		  43
+	  SrcBlock		  "Feuchtkugel-\ntemperatureinfluss /\nwet-bulb temperature effect"
+	  SrcPort		  2
+	  DstBlock		  "Leistungseinflüsse / \ninfluence on coolingpower"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  44
+	  SrcBlock		  "Feuchtkugel-\ntemperatureinfluss /\nwet-bulb temperature effect"
+	  SrcPort		  3
+	  Points		  [20, 0; 0, 275]
+	  DstBlock		  "Heat_Capacity"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "rpm fan [1/min]"
+	  ZOrder		  45
+	  SrcBlock		  "rpm_fan"
+	  SrcPort		  1
+	  Points		  [5, 0]
+	  Branch {
+	    ZOrder		    46
+	    Labels		    [-1, 1]
+	    Points		    [0, 55; 795, 0; 0, -190]
+	    DstBlock		    "Bus\nCreator"
+	    DstPort		    4
+	  }
+	  Branch {
+	    ZOrder		    47
+	    DstBlock		    "Fan"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  Name			  "p"
+	  ZOrder		  48
+	  Labels		  [0, 0]
+	  SrcBlock		  "Demux"
+	  SrcPort		  4
+	  Points		  [30, 0]
+	  Branch {
+	    ZOrder		    49
+	    DstBlock		    "Mux"
+	    DstPort		    4
+	  }
+	  Branch {
+	    ZOrder		    50
+	    Points		    [0, -195]
+	    DstBlock		    "Heat_Capacity"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  Name			  "THV out"
+	  ZOrder		  51
+	  Labels		  [0, 0]
+	  SrcBlock		  "Mux"
+	  SrcPort		  1
+	  DstBlock		  "THV2THB"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "fluid"
+	  ZOrder		  52
+	  Labels		  [0, 0]
+	  SrcBlock		  "Demux"
+	  SrcPort		  5
+	  Points		  [45, 0]
+	  Branch {
+	    ZOrder		    53
+	    Points		    [320, 0]
+	    Branch {
+	      ZOrder		      54
+	      Points		      [0, -465]
+	      DstBlock		      "Leistungseinflüsse / \ninfluence on coolingpower"
+	      DstPort		      5
+	    }
+	    Branch {
+	      ZOrder		      55
+	      DstBlock		      "Mux"
+	      DstPort		      5
+	    }
+	  }
+	  Branch {
+	    ZOrder		    56
+	    Points		    [0, -205]
+	    DstBlock		    "Heat_Capacity"
+	    DstPort		    3
+	  }
+	}
+	Line {
+	  ZOrder		  57
+	  SrcBlock		  "Demux"
+	  SrcPort		  7
+	  DstBlock		  "Mux"
+	  DstPort		  7
+	}
+	Line {
+	  Name			  "mdot"
+	  ZOrder		  58
+	  Labels		  [0, 0]
+	  SrcBlock		  "Demux"
+	  SrcPort		  3
+	  Points		  [350, 0]
+	  Branch {
+	    ZOrder		    59
+	    DstBlock		    "Mux"
+	    DstPort		    3
+	  }
+	  Branch {
+	    ZOrder		    60
+	    Points		    [0, -435]
+	    DstBlock		    "Leistungseinflüsse / \ninfluence on coolingpower"
+	    DstPort		    4
+	  }
+	}
+	Line {
+	  ZOrder		  61
+	  SrcBlock		  "THBin"
+	  SrcPort		  1
+	  DstBlock		  "THB2THV"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  62
+	  SrcBlock		  "Storage_Type_1"
+	  SrcPort		  3
+	  DstBlock		  "Terminator"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  63
+	  SrcBlock		  "Storage_Type_1"
+	  SrcPort		  1
+	  DstBlock		  "Terminator1"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  64
+	  SrcBlock		  "Constant_THB"
+	  SrcPort		  1
+	  DstBlock		  "Storage_Type_1"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  65
+	  SrcBlock		  "Storage_Type_1"
+	  SrcPort		  2
+	  Points		  [20, 0; 0, -225]
+	  DstBlock		  "Bus\nCreator"
+	  DstPort		  10
+	}
+	Line {
+	  ZOrder		  66
+	  SrcBlock		  "Storage_Type_1"
+	  SrcPort		  4
+	  DstBlock		  "THBout"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  67
+	  SrcBlock		  "THV2THB"
+	  SrcPort		  1
+	  DstBlock		  "Storage_Type_1"
+	  DstPort		  3
+	}
+	Line {
+	  ZOrder		  68
+	  SrcBlock		  "THB2THV"
+	  SrcPort		  1
+	  DstBlock		  "Demux"
+	  DstPort		  1
+	}
+	Annotation {
+	  SID			  "710"
+	  Name			  "--Indizes--\nFK - Feuchtkugel\nl - Luft\ni - Prozessfluid\ne - ein\na - aus\n\n\n--Abkürzungen--\ncp - sp"
+	  "ezifische Wärmekapazität\nn/rpm - Drehzahl\np - Druck\nP - Leistung\nt - Temperatur\nphi - relative Feuchte\nx - ab"
+	  "solute Feuchte\ncontrol - Steuersignal\nmdot - Massenstrom\nQdot - Rückkühlleistung\nvdot - Volumenstrom"
+	  Position		  [254, 781, 254, 781]
+	  AutoSize		  on
+	  WordWrap		  off
+	  ZOrder		  -1
+	}
+	Annotation {
+	  SID			  "709"
+	  Name			  "Kaltwassertemperatur bei\n100% Luftdurchsatz\n30% Glykolgehalt\n2,4 l/s Prozessfluid-Volumenstrom"
+	  Position		  [670, 125, 670, 125]
+	  AutoSize		  on
+	  WordWrap		  off
+	  ZOrder		  -2
+	}
+      }
+    }
+  }
+}
+# Finite State Machines
+#
+#    Stateflow Version 7.6 (R2013a) dated Aug  8 2013, 23:20:01
+#
+#
+
+Stateflow {
+  machine {
+    id			    1
+    name		    "Cooling_Tower"
+    created		    "09-Jul-2014 11:14:30"
+    isLibrary		    1
+    firstTarget		    38
+    sfVersion		    76014001.0016
+  }
+  chart {
+    id			    2
+    name		    "Cooling_Tower/Feuchtkugel-\ntemperatureinfluss //\nwet-bulb temperature effect/Abgleich /Embedded\nMATL"
+    "AB Function"
+    windowPosition	    [566 346.25 213 385]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1680 1050 1.333333333333333]
+    treeNode		    [0 3 0 0]
+    firstTransition	    9
+    firstJunction	    8
+    viewObj		    2
+    machine		    1
+    subviewS {
+    }
+    ssIdHighWaterMark	    7
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    4
+    chartFileNumber	    4
+    disableImplicitCasting  1
+    eml {
+      name		      "fcn"
+    }
+    supportVariableSizing   0
+  }
+  state {
+    id			    3
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    2
+    treeNode		    [2 0 0 0]
+    superState		    SUBCHART
+    subviewer		    2
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "%Festlegung der Eingänge\nfunction y = fcn(t_fk, t_ia_fk15, t_ie)\n\n%Änderung des Faktors\nif t_"
+      "ie < 41\n    \n    y = ((t_fk-15)*0.27)+t_ia_fk15;\n    \nelse\n    \n    y = ((t_fk-15)*0.25)+t_ia_fk15;\n    \n"
+      "end"
+      editorLayout	      "100 M4x1[366 140 671 364]"
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', true)"
+      emlDefaultFimath	      FimathUserSpecified
+    }
+  }
+  data {
+    id			    4
+    ssIdNumber		    4
+    name		    "t_fk"
+    linkNode		    [2 0 5]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    5
+    ssIdNumber		    5
+    name		    "y"
+    linkNode		    [2 4 6]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    6
+    ssIdNumber		    6
+    name		    "t_ia_fk15"
+    linkNode		    [2 5 7]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    7
+    ssIdNumber		    7
+    name		    "t_ie"
+    linkNode		    [2 6 0]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  junction {
+    id			    8
+    position		    [23.5747 49.5747 7]
+    chart		    2
+    linkNode		    [2 0 0]
+    subviewer		    2
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    9
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      8
+      intersection	      [1 0 -1 0 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    2
+    linkNode		    [2 0 0]
+    dataLimits		    [21.175 25.975 14.625 42.575]
+    subviewer		    2
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  instance {
+    id			    10
+    name		    "Cooling_Tower/Feuchtkugel-\ntemperatureinfluss //\nwet-bulb temperature effect/Abgleich /Embedded\nMATL"
+    "AB Function"
+    machine		    1
+    chart		    2
+  }
+  chart {
+    id			    11
+    name		    "Cooling_Tower/Leistungseinflüsse // \ninfluence on coolingpower/t_ia_ist /isinf"
+    windowPosition	    [531 346.25 213 385]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1680 1050 1.333333333333333]
+    treeNode		    [0 12 0 0]
+    firstTransition	    16
+    firstJunction	    15
+    viewObj		    11
+    machine		    1
+    subviewS {
+    }
+    ssIdHighWaterMark	    5
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    13
+    chartFileNumber	    8
+    disableImplicitCasting  1
+    eml {
+      name		      "fcn"
+    }
+    supportVariableSizing   0
+  }
+  state {
+    id			    12
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    11
+    treeNode		    [11 0 0 0]
+    superState		    SUBCHART
+    subviewer		    11
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "\nfunction y = fcn(u)\n\n%Verhindert die Fehlerausgabe bei Teilen mit dem Wert 0 \n%Dieser Zustan"
+      "d tritt ein wenn der Volumenstrom 0 l/s gesetzt wird.\n\nv = isinf (u);\n\nif v == 0\n    \n    y = u;\n\nelse \n"
+      "    \n    y = 0;\n    \nend"
+      editorLayout	      "100 M4x1[288 38 713 438]"
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', true)"
+      emlDefaultFimath	      FimathUserSpecified
+    }
+  }
+  data {
+    id			    13
+    ssIdNumber		    4
+    name		    "u"
+    linkNode		    [11 0 14]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    14
+    ssIdNumber		    5
+    name		    "y"
+    linkNode		    [11 13 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  junction {
+    id			    15
+    position		    [23.5747 49.5747 7]
+    chart		    11
+    linkNode		    [11 0 0]
+    subviewer		    11
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    16
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      15
+      intersection	      [1 0 -1 0 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    11
+    linkNode		    [11 0 0]
+    dataLimits		    [21.175 25.975 14.625 42.575]
+    subviewer		    11
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  instance {
+    id			    17
+    name		    "Cooling_Tower/Leistungseinflüsse // \ninfluence on coolingpower/t_ia_ist /isinf"
+    machine		    1
+    chart		    11
+  }
+  chart {
+    id			    18
+    name		    "Cooling_Tower/Leistungseinflüsse // \ninfluence on coolingpower/t_ia_ist /isnan"
+    windowPosition	    [514 346.25 213 385]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1680 1050 1.333333333333333]
+    treeNode		    [0 19 0 0]
+    firstTransition	    23
+    firstJunction	    22
+    viewObj		    18
+    machine		    1
+    subviewS {
+    }
+    ssIdHighWaterMark	    5
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    20
+    chartFileNumber	    9
+    disableImplicitCasting  1
+    eml {
+      name		      "fcn"
+    }
+    supportVariableSizing   0
+  }
+  state {
+    id			    19
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    18
+    treeNode		    [18 0 0 0]
+    superState		    SUBCHART
+    subviewer		    18
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "\nfunction y = fcn(u)\n\n%Verhindert die Fehlerausgabe bei Teilen durch den Wert 0 \n%Dieser Zust"
+      "and tritt ein wenn der Volumenstrom 0 l/s gesetzt wird.\n\nv = isnan (u);\n\nif v == 0\n    \n    y = u;\n\nelse"
+      " \n    \n    y = 0;\n    \nend"
+      editorLayout	      "100 M4x1[288 38 713 438]"
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', true)"
+      emlDefaultFimath	      FimathUserSpecified
+    }
+  }
+  data {
+    id			    20
+    ssIdNumber		    4
+    name		    "u"
+    linkNode		    [18 0 21]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    21
+    ssIdNumber		    5
+    name		    "y"
+    linkNode		    [18 20 0]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  junction {
+    id			    22
+    position		    [23.5747 49.5747 7]
+    chart		    18
+    linkNode		    [18 0 0]
+    subviewer		    18
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    23
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      22
+      intersection	      [1 0 -1 0 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    18
+    linkNode		    [18 0 0]
+    dataLimits		    [21.175 25.975 14.625 42.575]
+    subviewer		    18
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  instance {
+    id			    24
+    name		    "Cooling_Tower/Leistungseinflüsse // \ninfluence on coolingpower/t_ia_ist /isnan"
+    machine		    1
+    chart		    18
+  }
+  chart {
+    id			    25
+    name		    "Cooling_Tower/Verbrauch // consumption/Verdunstung/Verdunstungsmenge"
+    windowPosition	    [549 346.25 213 385]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 1680 1050 1.333333333333333]
+    treeNode		    [0 26 0 0]
+    firstTransition	    36
+    firstJunction	    35
+    viewObj		    25
+    machine		    1
+    subviewS {
+    }
+    ssIdHighWaterMark	    11
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    27
+    chartFileNumber	    10
+    disableImplicitCasting  1
+    eml {
+      name		      "fcn"
+    }
+    supportVariableSizing   0
+  }
+  state {
+    id			    26
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
+    fontSize		    12
+    chart		    25
+    treeNode		    [25 0 0 0]
+    superState		    SUBCHART
+    subviewer		    25
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function x_fl = fcn(h_le, mdot, qdot, t_ie, x_le, t_tau, p)\n\ncp_lt = 1.006;\ncp_d = 1.861;\ncp_"
+      "w = 4.19;\ndhv0 = 2500;\ntmax = t_ie;\ntmin = t_tau;\nt_zw = 15;\nphi_luftaus = 100;\nm = 1;\n\n\n% Vorbedingung"
+      " qdot muss positiv sein um eine Verdunstung zu gewährleisten ansonsten ist es ein Kondensation\nif qdot < 0\n   "
+      " \n    x_luftaus = 0;\n    \nelse\n    % Luftaustrittstemperaturberechnung, Halbierungsverfahren\n        t_luft"
+      "aus = (tmax+tmin)/2;\n    \n    % Absolute Feuchte-Berechnung Lufteintritt\n        ps_luftaus = 611*exp((-1.912"
+      "75)*10^(-4)+7.258*10^(-2)*t_luftaus-2.939*10^(-4)*t_luftaus^2+9.841*10^(-7)*t_luftaus^3-1.92*10^(-9)*t_luftaus^4"
+      ");\n        x_luftaus = (0.622*(phi_luftaus/100)*ps_luftaus)/(p-(phi_luftaus/100)*ps_luftaus);\n\n    % Enthalpi"
+      "e Luftaustritt mit dem schon berechneten Qpkt\n        h_la = qdot/mdot + (x_luftaus-x_le)*cp_w*t_zw + h_le;\n  "
+      "  \n    % Austrittstemperatur \n        tlab = (h_la - x_luftaus*dhv0)/(cp_lt + x_luftaus*cp_d);\n\n    % Beginn"
+      " der Schleife \n    % (t_luftaus - tlab) < 0,001 und > -0,001 ist die Austrittstemperatur gefunden\n    %  t_luf"
+      "taus < tlab  tmin = t_luftaus\n    %  t_luftaus > tlab  tmax = t_luftaus\n        while (t_luftaus - tlab)>0.001"
+      " || (t_luftaus - tlab) < -0.001 && m < 30\n    \n            if t_luftaus < tlab\n        \n                tmin"
+      " = t_luftaus;\n    \n            else\n        \n                tmax = t_luftaus;\n    \n            end\n    \n"
+      "            % Luftaustrittstemperaturberechnung, Halbierungsverfahren\n                t_luftaus = (tmax+tmin)/2"
+      ";\n    \n            % Absolute Feuchte-Berechnung Lufteintritt\n                ps_luftaus = 611*exp((-1.91275)"
+      "*10^(-4)+7.258*10^(-2)*t_luftaus-2.939*10^(-4)*t_luftaus^2+9.841*10^(-7)*t_luftaus^3-1.92*10^(-9)*t_luftaus^4);\n"
+      "                x_luftaus = (0.622*(phi_luftaus/100)*ps_luftaus)/(p-(phi_luftaus/100)*ps_luftaus);\n        \n  "
+      "          % Enthalpie Luftaustritt mit dem schon berechneten Qpkt\n                h_la = qdot/mdot + (x_luftaus"
+      "-x_le)*cp_w*t_zw + h_le;\n        \n            % Austrittstemperatur \n                tlab = (h_la - x_luftaus"
+      "*dhv0)/(cp_lt + x_luftaus*cp_d);\n        \n            % Schleifenzähler\n                m = m + 1;\n    \n   "
+      "     end\n\nend\n\nx_fl = x_luftaus-x_le;\n"
+      editorLayout	      "100 M4x1[12 20 1288 778]"
+      fimathString	      "fimath(...\n'RoundMode', 'floor',...\n'OverflowMode', 'wrap',...\n'ProductMode', 'KeepLSB', "
+      "'ProductWordLength', 32,...\n'SumMode', 'KeepLSB', 'SumWordLength', 32,...\n'CastBeforeSum', true)"
+      emlDefaultFimath	      FimathUserSpecified
+    }
+  }
+  data {
+    id			    27
+    ssIdNumber		    4
+    name		    "h_le"
+    linkNode		    [25 0 28]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    28
+    ssIdNumber		    5
+    name		    "mdot"
+    linkNode		    [25 27 29]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    29
+    ssIdNumber		    6
+    name		    "x_fl"
+    linkNode		    [25 28 30]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    30
+    ssIdNumber		    7
+    name		    "qdot"
+    linkNode		    [25 29 31]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    31
+    ssIdNumber		    8
+    name		    "t_ie"
+    linkNode		    [25 30 32]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    32
+    ssIdNumber		    9
+    name		    "x_le"
+    linkNode		    [25 31 33]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    33
+    ssIdNumber		    10
+    name		    "t_tau"
+    linkNode		    [25 32 34]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  data {
+    id			    34
+    ssIdNumber		    11
+    name		    "p"
+    linkNode		    [25 33 0]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
+  }
+  junction {
+    id			    35
+    position		    [23.5747 49.5747 7]
+    chart		    25
+    linkNode		    [25 0 0]
+    subviewer		    25
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
+  }
+  transition {
+    id			    36
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [32.125 19.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
+    }
+    dst {
+      id		      35
+      intersection	      [1 0 -1 0 23.5747 42.5747 0 0]
+    }
+    midPoint		    [23.5747 24.9468]
+    chart		    25
+    linkNode		    [25 0 0]
+    dataLimits		    [21.175 25.975 14.625 42.575]
+    subviewer		    25
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    1
+    ssIdNumber		    2
+  }
+  instance {
+    id			    37
+    name		    "Cooling_Tower/Verbrauch // consumption/Verdunstung/Verdunstungsmenge"
+    machine		    1
+    chart		    25
+  }
+  target {
+    id			    38
+    name		    "sfun"
+    description		    "Default Simulink S-Function Target."
+    machine		    1
+    linkNode		    [1 0 0]
+  }
+}

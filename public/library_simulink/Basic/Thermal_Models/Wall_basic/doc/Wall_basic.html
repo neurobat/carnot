@@ -1,0 +1,460 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="de-at" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>wall_out</title>
+<style type="text/css">
+ div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+p
+	{margin-right:0cm;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ p.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ul
+	{margin-bottom:0cm;}
+ li.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ a:link
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;
+}
+.auto-style1 {
+	margin-left: 120px;
+}
+</style>
+</head>
+
+<body>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+"Times New Roman"'>
+
+<hr size=10 width="100%" noshade style='color:#A0A0A0' align=center>
+
+</span></span></span></div>
+
+<p><!--[if gte vml 1]><v:shape id="Bild_x0020_286" o:spid="_x0000_s1359"
+ type="#_x0000_t75" style='position:absolute;left:0;text-align:left;
+ margin-left:54.5pt;margin-top:0;width:94.5pt;height:63.75pt;z-index:284;
+ visibility:visible;mso-wrap-style:square;mso-wrap-distance-left:0;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:0;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:right;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line'
+ o:allowoverlap="f">
+ <v:imagedata src="Figures/wall_out.jpg" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <w:wrap type="square" anchory="line" xmlns:w="urn:schemas-microsoft-com:office:word"/>
+</v:shape><![endif]--><![if !vml]><img width=126 height=85
+src="Figures/wall_out.jpg" align=right v:shapes="Bild_x0020_286"><![endif]><span class=GramE><span style='mso-bookmark:wall_out'><span
+style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><b><span
+lang=EN-US style='font-size:18.0pt;line-height:120%'>wall_out</span></b></span></span></span></span><span
+style='mso-bookmark:wall_out'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> <br>
+<b>Path: CARNOT/loads/wall_floor</b> <br clear=all style='mso-special-character:
+line-break'>
+<o:p></o:p></span></span></span></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:wall_out'><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;mso-fareast-font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></span></span></span></div>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Purpose</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+Wall models for a house. </span><span lang=EN-US style='font-size:12.0pt;
+line-height:120%'><o:p></o:p></span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Description</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+Mechanism of heat transfer </span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Each outward-facing
+structural component, such as walls and windows, is subject to three
+temperature-exchange mechanism as it interacts with the outside environment. </span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Absorption of short wave
+solar radiation The transformation of short-wave solar energy on the facade
+into heat power QT depends upon the absorption-coefficient of the given surface
+</span><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;font-family:Symbol'>a</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> aus [0<span class=GramE>,1</span>]:
+</span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Q<sub>T</sub> = </span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;font-family:Symbol'>a</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>*<span class=GramE>I<sub>T</sub>[</span>W/m<sup>2</sup>]
+</span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Solar-radiation that
+penetrates into the building through windows is absorbed 100% by floor, which
+in turn transfers the energy via the radiative node to all other structures. </span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Radiative heat transfer</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> </span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Long-wave radiation
+interaction with the surroundings or opposite surfaces is subject to the
+radiative heat transfer coefficient based on law of radiation: </span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;font-family:Symbol'>a</span><sub><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>r</span></sub><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> = </span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;font-family:Symbol'>e</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>*</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;font-family:Symbol'>s</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>* (T<sub>amb</sub><sup>2</sup>
++ T<sub>s</sub><sup>2</sup>) * (T<sub>amb</sub> + T<sub>s</sub><span
+class=GramE>)[</span>W/m<sup>2</sup>] </span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>A constant </span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;font-family:Symbol'>a</span><sub><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>r</span></sub><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> = </span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;font-family:Symbol'>e</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> = 5.6 [W/m<sup>2</sup>]
+is taken. </span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>The heat exchange between
+wall-surface <span class=GramE>A<sub>s</sub></span> (temperature T<sub>s</sub>)
+and the environment (temperature T<sub>amb</sub>) is </span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+class=GramE><span lang=EN-US style='font-size:13.5pt;line-height:120%'>dQ/dt</span></span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> = </span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;font-family:Symbol'>a</span><sub><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>r</span></sub><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>*A<sub>s</sub>*(T<sub>amb</sub>
+- T<sub>s</sub>)[W] </span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Inside the building the
+same approach is used except that Tamb is replaced by the radiative node
+temperature T<sub>r</sub>. </span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Convective heat transfer</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+The program assumes a constant convective heat transfer coefficient. The <i>exterior
+surface</i> of all structures is calculated a convective heat transfer </span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;font-family:Symbol'>a</span><sub><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>c<span class=GramE>,out</span></span></sub><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> = 2.8 + 3*vwind[W/m<sup>2</sup>]<br>
+where vwind is the air velocity in m/s.</span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Interior vertical surfaces
+use: </span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;font-family:Symbol'>a</span><sub><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>c<span class=GramE>,wall</span></span></sub><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> = 2.5 [W/m<sup>2</sup>] </span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+class=GramE><span lang=EN-US style='font-size:13.5pt;line-height:120%'>withdT</span></span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> = T<sub>s,wall</sub> - T<sub>c</sub>
+</span></span></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></span></span></div>
+
+<p class=MsoNormal><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:literature'><b><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;mso-fareast-font-family:"Times New Roman"'>NOTE:</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+"Times New Roman"'> In some cases this can result in distorted calculations as
+heat transfers are temperature-dependent. In addition convective temperature
+transfer is influenced by the <i>height</i> of vertical plane. <o:p></o:p></span></span></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></span></span></div>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Heat conduction</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> </span><span
+lang=EN-US style='font-size:12.0pt;line-height:120%'><o:p></o:p></span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>The heat conduction of a
+wall can be assessed with the Beuken-model as shown in Figure. The underlying
+assumption is a one-dimensional heat flow. Each wall-layer is separated into two
+equal partial capacities, to be seen as on both surfaces of the wall-layer.
+Should the wall consist of multiple partial layers, their partial capacities of
+adjoining layers are combined in a single capacity <span class=GramE>ci .</span>
+Thermal conductivity through a wall layer is modelled with resistance ki which
+combines both partial capacities. The transition from one layer to the next is
+described with node i to which capacity ci and resistances ki-1 and ki are
+attached. Thermal conductivity of node i of Beuken-model <span class=GramE>reads</span>:
+</span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+class=GramE><span lang=EN-US style='font-size:13.5pt;line-height:120%'>c<sub>i</sub></span></span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>*(dT/dt)<sub>i</sub> = k <sub>i</sub>i-1*T<sub>i</sub>
+- (k<sub>i-1+k</sub>i-1+k<sub>i</sub>)*T<sub>i</sub> + k<sub>i</sub>*T<sub>i+1</sub>
++ (dq/dt)<sub>i</sub>[W/m<sup>2</sup>] </span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+class=GramE><span lang=EN-US style='font-size:13.5pt;line-height:120%'>with</span></span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+T<sub>i</sub>: temperature of node i, [°C] <br>
+c<sub>i</sub>: specific heat capacity of node i, [Ws/(kg*K)] <br>
+k<sub>i</sub>: specific heat resistance between node i and node i+1, [W/(m<sup>2</sup>*K)]
+<br>
+(dq/dt)<sub>i</sub>: optional power flow into node i (i.e. floor heating) </span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>The composition of a wall
+in j layers is thus described in Beuken with j+1 <span class=GramE>nodes</span>
+via j+1 differential equations. The equation system for a two-layered wall as
+in Figure goes as follows on matrix convention: </span></span></span></p>
+
+<p><!--[if gte vml 1]><v:shape id="Bild_x0020_287" o:spid="_x0000_s1358"
+ type="#_x0000_t75" style='position:absolute;left:0;text-align:left;
+ margin-left:0;margin-top:0;width:368.25pt;height:62.25pt;z-index:285;
+ visibility:visible;mso-wrap-style:square;mso-wrap-distance-left:0;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:0;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:left;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line'
+ o:allowoverlap="f">
+ <v:imagedata src="Formulas/formel_wall_out_a.jpg" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <w:wrap type="square" anchory="line" xmlns:w="urn:schemas-microsoft-com:office:word"/>
+</v:shape><![endif]--><![if !vml]><img width=491 height=83
+src="Formulas/formel_wall_out_a.jpg" align=left v:shapes="Bild_x0020_287"><![endif]><span
+style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'><br clear=all
+style='mso-special-character:line-break'>
+</span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+class=GramE><span lang=EN-US style='font-size:13.5pt;line-height:120%'>with</span></span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> </span></span></span></p>
+
+<p><!--[if gte vml 1]><v:shape id="Bild_x0020_288" o:spid="_x0000_s1357"
+ type="#_x0000_t75" style='position:absolute;left:0;text-align:left;
+ margin-left:0;margin-top:0;width:224.25pt;height:57.75pt;z-index:286;
+ visibility:visible;mso-wrap-style:square;mso-wrap-distance-left:0;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:0;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:left;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line'
+ o:allowoverlap="f">
+ <v:imagedata src="Formulas/formel_wall_out_b.jpg" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <w:wrap type="square" anchory="line" xmlns:w="urn:schemas-microsoft-com:office:word"/>
+</v:shape><![endif]--><![if !vml]><img width=299 height=77
+src="Formulas/formel_wall_out_b.jpg" align=left v:shapes="Bild_x0020_288"><![endif]><span
+style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'><br clear=all
+style='mso-special-character:line-break'>
+</span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Attached to the first and
+last node (wall-surfaces) are thermal transfer resistances </span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;font-family:Symbol'>a</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>r und </span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;font-family:Symbol'>a</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>c. </span></span></span></p>
+
+<p><!--[if gte vml 1]><v:shape id="Bild_x0020_289" o:spid="_x0000_s1356"
+ type="#_x0000_t75" style='position:absolute;left:0;text-align:left;
+ margin-left:0;margin-top:0;width:171pt;height:132.75pt;z-index:287;
+ visibility:visible;mso-wrap-style:square;mso-wrap-distance-left:0;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:0;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:left;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line'
+ o:allowoverlap="f">
+ <v:imagedata src="Figures/Beuken.jpg" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <w:wrap type="square" anchory="line" xmlns:w="urn:schemas-microsoft-com:office:word"/>
+</v:shape><![endif]--><![if !vml]><img width=228 height=177
+src="Figures/Beuken.jpg" align=left v:shapes="Bild_x0020_289"><![endif]><span
+style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'><br clear=all>
+<br>
+Figure: Beuken-model (FEIST, 1994) </span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>The number of nodes
+depends on the time-constant given in the dialog box. A minimum of two nodes
+per layer is taken. The condition for the number of <span class=GramE>sublayers</span>
+one layer is: </span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+class=GramE><span lang=EN-US style='font-size:13.5pt;line-height:120%'>with</span></span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> </span></span></span></p>
+
+<ul type=disc class="auto-style1">
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l48 level1 lfo228;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>cheat capacity in [J/(kg K)] </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l48 level1 lfo228;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>Dthickness of layer [-] </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l48 level1 lfo228;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>nnumber of sublayers [-] </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l48 level1 lfo228;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;font-family:Symbol;
+     mso-fareast-font-family:"Times New Roman"'>l</span><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>thermal conductivity in [W/(m K)] </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l48 level1 lfo228;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;font-family:Symbol;
+     mso-fareast-font-family:"Times New Roman"'>r</span><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>density in [kg/m<sup>3</sup>] </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></span></li>
+</ul>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Validation: <br>
+The model has not yet been tested under all conditions. It has been compared to
+the results given by Feist (Feist 1994) and to the measured and calculated data
+of the SOPASIM-project (Balters 1995). Comparison to measurements has also been
+done with data from a project in Argentina (Mueller 1999). </span></span></span></p>
+
+<p><a
+href="carnot_manual.htm#examples"><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>Example</span></span></span></a><span style='mso-bookmark:
+schwamberger'><span style='mso-bookmark:literature'><span lang=EN-US
+style='font-size:13.5pt;line-height:120%'> the block is used in
+&quot;room_radiator&quot; and &quot;room_floor_heating&quot; see housetest.mdl </span></span></span></p>
+
+<p><a
+href="carnot_manual.htm#literature"><span style='mso-bookmark:schwamberger'><span
+style='mso-bookmark:literature'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'>Literature:</span></span></span></a><span
+style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+Balters, E., Lehmann, H., Schaub, A.: SOPASIM - Test weit verbreiteter
+Solar-Passiv- Simulationssysteme für Architekten, Abschluábericht, UHL Data,
+Herzogstr. 27, Aachen, Arbeitsgemeinschaft Solar Nordrhein-Westfalen, 1995 <br>
+Feist, W.: Thermische Gebäudesimulation - Kritische Prüfung unterschiedlicher
+Modellansätze, Verlag C.F.Müller, Heidelberg, 1994 <br>
+Kasten, F. Strahlungsaustausch zwischen Oberflächen und Atmosphäre,
+VDI-Bericht, Nr. 721, 131-158, Düsseldorf, 1989 <br>
+Mueller, C.: Diplomarbeit University of Karlsruhe, 1999 <br>
+Recknagel-Sprenger-Schramek: Taschenbuch für Heizung + Klimatechnik, R.
+Oldenbourg Verlag München Wien, 1995 <br>
+VDI-Wärmeatlas, Berechnungsblätter für den Wärmeübergang, 7. Auflage, VDI
+Verlag GmbH, Düsseldorf, 1994 </span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Parameters and Dialog Box</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'><br>
+</span></span></span><!--[if gte vml 1]><v:shape id="Bild_x0020_290" o:spid="_x0000_s1355"
+ type="#_x0000_t75" style='position:absolute;left:0;text-align:left;
+ margin-left:0;margin-top:0;width:282pt;height:453.75pt;z-index:288;
+ visibility:visible;mso-wrap-style:square;mso-wrap-distance-left:0;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:0;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:left;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line'
+ o:allowoverlap="f">
+ <v:imagedata src="Figures/wall_outSHOT.jpg" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <w:wrap type="square" anchory="line" xmlns:w="urn:schemas-microsoft-com:office:word"/>
+</v:shape><![endif]--><![if !vml]><img width=376 height=605
+src="Figures/wall_outSHOT.jpg" align=left v:shapes="Bild_x0020_290"><![endif]><span
+style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'><br clear=all
+style='mso-special-character:line-break'>
+</span></span></span></p>
+
+<p><span style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Characteristics</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+Direct Feedthrough&nbsp;&nbsp;&nbsp;Yes <br>
+Sample
+time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size:13.5pt;line-height:120%'>&nbsp;
+</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> Inherited
+from driving block <br>
+States
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size:13.5pt;line-height:120%'>&nbsp;&nbsp;&nbsp;
+</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> corresponding
+to the number of nodes <br>
+Vectorized&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size:13.5pt;line-height:120%'>&nbsp;&nbsp;
+</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> No
+</span></span></span></p>
+
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<hr size="10" noshade> 
+
+<p><img src="figures/cooling tower.jpg" align="right" border="0"></p>  
+ 
+<p><a name="closed circuited cooling tower"><font size="5"><b>closed circuited cooling tower</b></font></a><br>
+<b>Path: CARNOT/Source/Chiller</b><p>&nbsp;<p>&nbsp;<p><br clear="all"><hr>
+
+
+
+<p><b>Purpose</b> <br>
+
+Calculates the output THV and the energy and water consumption of the closed circuited cooling tower.
+
+</p>
+
+<p><b>Description</b> <br>
+The output temperature depends on air temperature, humidity, rpm of the fan, flow rate and glykol content.<br><br>
+wet –bulb temperature<br>
+<br> 
+<img alt="" height="49" src="Figures/formel_cooling_tower_a.jpg" width="268"> <br clear="all"> 
+<br>
+power calculation in case of speed regulation<br>
+proportionality rule<br>
+<br> 
+<img alt="" height="59" src="Figures/formel_cooling_tower_b.jpg" width="87"> <br clear="all"> 
+<br>
+water consumption<br>
+<br>
+<img alt="" height="261" src="Figures/formel_cooling_tower_c.jpg" width="469"><br> 
+
+
+</p>
+<p>&nbsp;<br clear="all"> 
+The saturation pressure p_s is calculated with the simplified approximation of Glück<br><br>
+<table border="1">
+  <tr>
+    <th style="width: 106px">Symbol</th>
+    <th style="width: 239px">used for</th>
+  </tr>
+  <tr>
+    <td style="width: 106px">c</td>
+    <td style="width: 239px"> </td>
+  </tr> 
+  <tr>
+    <td style="width: 106px">h</td>
+    <td style="width: 239px"> </td>
+  </tr>
+  <tr>
+    <td style="width: 106px">n</td>
+    <td style="width: 239px"> </td>
+  </tr>
+  <tr>
+    <td style="width: 106px">m_dot</td>
+    <td style="width: 239px"> </td>
+  </tr>
+  <tr>
+    <td style="width: 106px">p</td>
+    <td style="width: 239px">pressure in Pa</td>
+  </tr>
+  <tr>
+    <td style="width: 106px">P</td>
+    <td style="width: 239px">power in kW</td>
+  </tr>
+  <tr>
+    <td style="width: 106px">Q_dot</td>
+    <td style="width: 239px"> </td>
+  </tr>
+  <tr>
+    <td style="width: 106px">t</td>
+    <td style="width: 239px">temperature</td>
+  </tr>
+  <tr>
+    <td style="width: 106px">x</td>
+    <td style="width: 239px"> </td>
+  </tr>
+</table>
+
+
+</p>
+
+<p><b>Inputs:</b> 
+<ul>
+<li>THVin - input only fluid-typ water/glycol</li>
+<li>weather - weather data vector</li>	
+<li>rpm_fan - in rounds per minute, limited to the range 0 … 824 1/min</li>
+<li>control_fan - limited to the range 0 or 1</li>
+</ul>
+
+
+</p>
+
+<p><b>Outputs:</b> 
+<ul>
+  <li>THVout</li>
+  <li>data logging (see Parameter and Dialog Box)</li>
+</ul>
+
+<p><b>Parameters and Dialog Box</b> <br>
+The cooling tower mask is an overview about the performance data and about the distribution of the data logging bus-signal.<br>
+<br> <img src="Figures/cooling tower parameters.jpg" align="left"
+ border="0"> <br clear="all"> 
+</p>
+<p><br></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<hr> <b>NOTE:</b> 
+
+If necessary, add some notes about the good use of the block
+
+
+<br>
+
+
+<br>
+Literature: 
+<br><a href="pdf/Thesing_Modellerstellung_Kuehlturm_FHD_2010.pdf" name="author">Mario Thesing : Bachelor-Thesis: Solare Kühlung – Modellerstellung und -validierung eines Kühlturmes unter Matlab / Simulink / Carnot</a>, 
+Fachhochschule Düsseldorf, Februar 2010
+<br>VDI Wärmeatlas, 7.Auflage, VDI Verlag
+<br>Taschenbuch für Heizung + Klima Technik 09/10, Oldenburg Industrieverlag
+<br>Fortschritt-Bericht VDI, Berechnungsmodell der nichtadiabaten Verdunstungskühlung in Fluidtürmen und Verdunstungskondensatoren
+<br>VXI Verdunstungskühler, Auslegung und Technische Daten, BAC Baltimore Aircoil
+<br>VXI Lühlturm mit geschlossenem Kreislauf, BAC Baltimore Aircoil
+<br>
+
+</form>
+<p>&nbsp;</p>
+<p><b>Characteristics</b> <br>
+Direct Feedthrough&nbsp;&nbsp;&nbsp;Yes <br>
+Sample time &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inherited from driving block <br>
+Vectorized&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No
+</p>

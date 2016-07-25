@@ -1,0 +1,28 @@
+Kell, G. S., G. E. McLaurin, and E. Whalley, Philos. Trans. R. Soc. London A 315, 235 (1985).
+
+22 of 22 psigma data were selected to develop the IAPWS-95 Formulation.
+Temperatures were converted to the ITS-90 scale.
+ 
+ T / K           psigma / MPa  Author                             No.
+  423.1149         0.475700000 KELL et al. (1985)                 001
+  423.1149         0.475600000 KELL et al. (1985)                 002
+  423.1149         0.475500000 KELL et al. (1985)                 003
+  423.1149         0.475300000 KELL et al. (1985)                 004
+  423.1149         0.475700000 KELL et al. (1985)                 005
+  448.1120         0.891700000 KELL et al. (1985)                 006
+  448.1120         0.891700000 KELL et al. (1985)                 007
+  473.1102         1.553600000 KELL et al. (1985)                 008
+  473.1102         1.553500000 KELL et al. (1985)                 009
+  498.1096         2.547500000 KELL et al. (1985)                 010
+  498.1096         2.547500000 KELL et al. (1985)                 011
+  523.1097         3.974100000 KELL et al. (1985)                 012
+  523.1097         3.973300000 KELL et al. (1985)                 013
+  548.1101         5.941300000 KELL et al. (1985)                 014
+  548.1101         5.941300000 KELL et al. (1985)                 015
+  573.1105         8.582100000 KELL et al. (1985)                 016
+  573.1105         8.582300000 KELL et al. (1985)                 017
+  598.1102        12.044800000 KELL et al. (1985)                 018
+  598.1102        12.044300000 KELL et al. (1985)                 019
+  623.1090        16.522000000 KELL et al. (1985)                 020
+  623.1090        16.522000000 KELL et al. (1985)                 021
+  623.1090        16.519600000 KELL et al. (1985)                 022

@@ -1,0 +1,67 @@
+<p><hr size="10" noshade> </p>
+
+<p><img src="figures/microCHP_constant_png.png" width="251" height="158" align="right" border="0"></p>  
+ 
+<p><a name="CHP with constant power output"><font size="5"><b>CHP with constant power output</b></font></a><br>
+<b>Path: CARNOT/???????</b><br clear="all"><hr></p>
+
+
+
+<p><b>Purpose</b> <br>
+
+This block calculates mass flow rate and outlet flow temperature depending on <br> 
+inlet return temperature and inputed nominal heating power of a gas driven micro-CHP with constant power.
+
+</p>
+
+<p><b>Description</b> <br>
+
+This block is based on characteristic curves calculating heating capacity <br>
+and representing a thermostat-controlled three-way mixer valve situated <br>
+in the inlet flow of a gas driven micro-CHP called "Dachs" by Senertec. <br>
+External mass flow rate, outlet flow temperature and heating power factor <br>
+depend on inlet return temperature and are calculated by 1-D lookup-tables <br>
+based on measured data.<br>
+The scaling is based on 
+<ul>
+<li>a heating power of 12.52 kW,</li> <li>an electrical power of 5.5 kW, 
+<li>a fuel power of 22,03 kW and</li> <li>a maximum external mass flow rate of 0.14 kg/s.</li></ul>
+Mass flow rate and thermal inertia are linearly resized according to the <br>
+inputed nominal heating power. <br>
+Thermal and electrical efficiency are calculated and summarised in a data output vector.
+
+</p>
+
+<p><b>Inputs:</b> 
+<ul>
+<li>THV_return: Thermo hydraulic vector coming from the heating system</li>
+<li>demand control: 0 or 1</li>
+</ul>
+</p>
+
+<p><b>Outputs:</b> 
+<ul>
+<li>THV_flow: Thermo hydraulic vector leading to the heating system</li>
+<li>data: Q_thermal [kWh], Q_electrical [kWh], Q_gas [kWh], eta_thermal, eta_electrical, eta_system</li>
+</ul>
+
+</p>
+
+
+
+</p>
+
+<form name="form" method="get"><p align="left">
+<br>
+<a href="#Literature">Literature:</a> 
+<a name="author">Diourane Mouhcin: Aufbereitung von zwei vorhandenen BHKW-Modellen zur Bereitstellung in der Carnot-User-Community (Bachelor-Arbeit), 2012</a></p>
+</form>
+<p>&nbsp;</p>
+<p><b>Parameters and Dialog Box</b> <br> <img src="Figures/microCHP_constant_mask_jpg.jpg" align="left"
+ border="0"> <br clear="all"> 
+</p>
+<p><b>Characteristics</b> <br>
+Direct Feedthrough&nbsp;&nbsp;&nbsp;Yes <br>
+Sample time &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inherited from driving block <br>
+Vectorized&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No 
+</p>

@@ -1,0 +1,2703 @@
+Model {
+  Name			  "MyRhoVar"
+  Version		  7.9
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.42"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "windows-1252"
+  SaveDefaultBlockParams  on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  DataTypeOverrideAppliesTo "AllNumericTypes"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  FPTRunName		  "Run 1"
+  MaxMDLFileLineLength	  120
+  Created		  "Wed Aug 14 08:55:39 2013"
+  Creator		  "awohlfei"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "awohlfei"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Thu Aug 22 14:48:14 2013"
+  RTWModifiedTimeStamp	  299083692
+  ModelVersionFormat	  "1.%<AutoIncrement:42>"
+  ConfigurationManager	  "None"
+  SampleTimeColors	  off
+  SampleTimeAnnotations	  off
+  LibraryLinkDisplay	  "disabled"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowDesignRanges	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowSignalResolutionIcons on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  Object {
+    $PropName		    "DataLoggingOverride"
+    $ObjectID		    1
+    $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
+    model_		    "MyRhoVar"
+    overrideMode_	    [0.0]
+    Array {
+      Type		      "Cell"
+      Dimension		      1
+      Cell		      "MyRhoVar"
+      PropName		      "logAsSpecifiedByModels_"
+    }
+    Array {
+      Type		      "Cell"
+      Dimension		      1
+      Cell		      []
+      PropName		      "logAsSpecifiedByModelsSSIDs_"
+    }
+  }
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  CovForceBlockReductionOff on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  CovModelRefEnable	  "Off"
+  CovExternalEMLEnable	  off
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      2
+      Version		      "1.12.0"
+      Array {
+	Type			"Handle"
+	Dimension		8
+	Simulink.SolverCC {
+	  $ObjectID		  3
+	  Version		  "1.12.0"
+	  StartTime		  "0.0"
+	  StopTime		  "1e8"
+	  AbsTol		  "auto"
+	  FixedStep		  "1"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ZcThreshold		  "auto"
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  EnableConcurrentExecution off
+	  ConcurrentTasks	  off
+	  Solver		  "FixedStepDiscrete"
+	  SolverName		  "FixedStepDiscrete"
+	  SolverJacobianMethodControl "auto"
+	  ShapePreserveControl	  "DisableAll"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  ZeroCrossAlgorithm	  "Nonadaptive"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  InsertRTBMode		  "Whenever possible"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  4
+	  Version		  "1.12.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveCompleteFinalSimState off
+	  SaveFormat		  "Array"
+	  SignalLoggingSaveFormat "ModelDataLogs"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  DSMLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  off
+	  ReturnWorkspaceOutputs  off
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  DSMLoggingName	  "dsmout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  ReturnWorkspaceOutputsName "out"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  5
+	  Version		  "1.12.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    8
+	    Cell		    "BooleansAsBitfields"
+	    Cell		    "PassReuseOutputArgsAs"
+	    Cell		    "PassReuseOutputArgsThreshold"
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    Cell		    "UseSpecifiedMinMax"
+	    PropName		    "DisabledProps"
+	  }
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  UseIntDivNetSlope	  off
+	  UseFloatMulNetSlope	  off
+	  UseSpecifiedMinMax	  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnhancedBackFolding	  off
+	  StrengthReduction	  off
+	  ExpressionFolding	  on
+	  BooleansAsBitfields	  off
+	  BitfieldContainerType	  "uint_T"
+	  EnableMemcpy		  on
+	  MemcpyThreshold	  64
+	  PassReuseOutputArgsAs	  "Structure reference"
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  off
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  MaxStackSize		  "Inherit from target"
+	  BufferReusableBoundary  on
+	  SimCompilerOptimization "Off"
+	  AccelVerboseBuild	  off
+	  ParallelExecutionInRapidAccelerator on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  6
+	  Version		  "1.12.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  SignalRangeChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  SaveWithDisabledLinksMsg "warning"
+	  SaveWithParameterizedLinksMsg	"warning"
+	  CheckSSInitialOutputMsg on
+	  UnderspecifiedInitializationDetection	"Classic"
+	  MergeDetectMultiDrivingBlocksExec "none"
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  MaskedZcDiagnostic	  "warning"
+	  IgnoredZcDiagnostic	  "warning"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  FixptConstUnderflowMsg  "none"
+	  FixptConstOverflowMsg	  "none"
+	  FixptConstPrecisionLossMsg "none"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Enable All"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  FrameProcessingCompatibilityMsg "warning"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  SimStateOlderReleaseMsg "error"
+	  InitInArrayFormatMsg	  "warning"
+	  StrictBusMsg		  "ErrorLevel1"
+	  BusNameAdapt		  "WarnAndRepair"
+	  NonBusSignalsTreatedAsBus "none"
+	  LoggingUnavailableSignals "error"
+	  BlockIODiagnostic	  "none"
+	  SFUnusedDataAndEventsDiag "warning"
+	  SFUnexpectedBacktrackingDiag "warning"
+	  SFInvalidInputDataAccessInChartInitDiag "warning"
+	  SFNoUnconditionalDefaultTransitionDiag "warning"
+	  SFTransitionOutsideNaturalParentDiag "warning"
+	  SFUnconditionalTransitionShadowingDiag "warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  7
+	  Version		  "1.12.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdBitPerFloat	  32
+	  ProdBitPerDouble	  64
+	  ProdBitPerPointer	  32
+	  ProdLargestAtomicInteger "Char"
+	  ProdLargestAtomicFloat  "None"
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetBitPerFloat	  32
+	  TargetBitPerDouble	  64
+	  TargetBitPerPointer	  32
+	  TargetLargestAtomicInteger "Char"
+	  TargetLargestAtomicFloat "None"
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  8
+	  Version		  "1.12.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  EnableParallelModelReferenceBuilds off
+	  ParallelModelReferenceErrorOnInvalidPool on
+	  ParallelModelReferenceMATLABWorkerInit "None"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  PropagateVarSize	  "Infer from blocks in model"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	  PropagateSignalLabelsOutOfModel off
+	  SupportModelReferenceSimTargetCustomCode off
+	}
+	Simulink.SFSimCC {
+	  $ObjectID		  9
+	  Version		  "1.12.0"
+	  SimUserSources	  "carlib.c"
+	  SFSimEnableDebug	  on
+	  SFSimOverflowDetection  on
+	  SFSimEcho		  on
+	  SimBlas		  on
+	  SimCtrlC		  on
+	  SimExtrinsic		  on
+	  SimIntegrity		  on
+	  SimUseLocalCustomCode	  off
+	  SimParseCustomCode	  on
+	  SimBuildMode		  "sf_incremental_build"
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  10
+	  Version		  "1.12.0"
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    9
+	    Cell		    "IncludeHyperlinkInReport"
+	    Cell		    "GenerateTraceInfo"
+	    Cell		    "GenerateTraceReport"
+	    Cell		    "GenerateTraceReportSl"
+	    Cell		    "GenerateTraceReportSf"
+	    Cell		    "GenerateTraceReportEml"
+	    Cell		    "GenerateWebview"
+	    Cell		    "GenerateCodeMetricsReport"
+	    Cell		    "GenerateCodeReplacementReport"
+	    PropName		    "DisabledProps"
+	  }
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  RTWUseLocalCustomCode	  off
+	  RTWUseSimCustomCode	  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  GenerateTraceInfo	  off
+	  GenerateTraceReport	  off
+	  GenerateTraceReportSl	  off
+	  GenerateTraceReportSf	  off
+	  GenerateTraceReportEml  off
+	  GenerateCodeInfo	  off
+	  GenerateWebview	  off
+	  GenerateCodeMetricsReport off
+	  GenerateCodeReplacementReport	off
+	  RTWCompilerOptimization "Off"
+	  CheckMdlBeforeBuild	  "Off"
+	  CustomRebuildMode	  "OnUpdate"
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      11
+	      Version		      "1.12.0"
+	      Array {
+		Type			"Cell"
+		Dimension		21
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"IgnoreTestpoints"
+		Cell			"InsertBlockDesc"
+		Cell			"InsertPolySpaceComments"
+		Cell			"SFDataObjDesc"
+		Cell			"MATLABFcnDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrFcnArg"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		Cell			"ReqsInCode"
+		PropName		"DisabledProps"
+	      }
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrFcnArg   "rt$I$N$M"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      InsertPolySpaceComments off
+	      SimulinkBlockComments   on
+	      MATLABSourceComments    off
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	      UseSimReservedNames     off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      12
+	      Version		      "1.12.0"
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"GeneratePreprocessorConditionals"
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlCompliant"
+		Cell			"CPPClassGenCompliant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      CodeReplacementLibrary  "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      ERTMultiwordTypeDef     "System defined"
+	      CodeExecutionProfiling  off
+	      ERTMultiwordLength      256
+	      MultiwordLength	      2048
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      ParMdlRefBuildCompliant on
+	      CompOptLevelCompliant   on
+	      ConcurrentExecutionCompliant on
+	      IncludeMdlTerminateFcn  on
+	      GeneratePreprocessorConditionals "Disable all"
+	      CombineOutputUpdateFcns on
+	      CombineSignalStateStructs	off
+	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      SupportVariableSizeSignals off
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      CPPClassGenCompliant    off
+	      AutosarCompliant	      off
+	      GRTInterface	      off
+	      UseMalloc		      off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      ExtModeIntrfLevel	      "Level1"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      RTWCAPIRootIO	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Simulation Target/Custom Code"
+      ConfigPrmDlgPosition     [ 504, 225, 1416, 931 ] 
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    2
+  }
+  ExplicitPartitioning	  off
+  BlockDefaults {
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+    BlockRotation	    0
+    BlockMirror		    off
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      SamplingMode	      "Sample based"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Inherit from 'Constant value'"
+      LockScale		      off
+      SampleTime	      "inf"
+      FramePeriod	      "inf"
+      PreserveConstantTs      off
+    }
+    Block {
+      BlockType		      Display
+      Format		      "short"
+      Decimation	      "10"
+      Floating		      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      OutputFunctionCall      off
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Lookup_n-D
+      NumberOfTableDimensions "2"
+      BreakpointsForDimension1 "[10,22,31]"
+      BreakpointsForDimension2 "[10,22,31]"
+      BreakpointsForDimension3 "[1:3]"
+      BreakpointsForDimension4 "[1:3]"
+      BreakpointsForDimension5 "[1:3]"
+      BreakpointsForDimension6 "[1:3]"
+      BreakpointsForDimension7 "[1:3]"
+      BreakpointsForDimension8 "[1:3]"
+      BreakpointsForDimension9 "[1:3]"
+      BreakpointsForDimension10	"[1:3]"
+      BreakpointsForDimension11	"[1:3]"
+      BreakpointsForDimension12	"[1:3]"
+      BreakpointsForDimension13	"[1:3]"
+      BreakpointsForDimension14	"[1:3]"
+      BreakpointsForDimension15	"[1:3]"
+      BreakpointsForDimension16	"[1:3]"
+      BreakpointsForDimension17	"[1:3]"
+      BreakpointsForDimension18	"[1:3]"
+      BreakpointsForDimension19	"[1:3]"
+      BreakpointsForDimension20	"[1:3]"
+      BreakpointsForDimension21	"[1:3]"
+      BreakpointsForDimension22	"[1:3]"
+      BreakpointsForDimension23	"[1:3]"
+      BreakpointsForDimension24	"[1:3]"
+      BreakpointsForDimension25	"[1:3]"
+      BreakpointsForDimension26	"[1:3]"
+      BreakpointsForDimension27	"[1:3]"
+      BreakpointsForDimension28	"[1:3]"
+      BreakpointsForDimension29	"[1:3]"
+      BreakpointsForDimension30	"[1:3]"
+      BreakpointsForDimension1Min "[]"
+      BreakpointsForDimension2Min "[]"
+      BreakpointsForDimension3Min "[]"
+      BreakpointsForDimension4Min "[]"
+      BreakpointsForDimension5Min "[]"
+      BreakpointsForDimension6Min "[]"
+      BreakpointsForDimension7Min "[]"
+      BreakpointsForDimension8Min "[]"
+      BreakpointsForDimension9Min "[]"
+      BreakpointsForDimension10Min "[]"
+      BreakpointsForDimension11Min "[]"
+      BreakpointsForDimension12Min "[]"
+      BreakpointsForDimension13Min "[]"
+      BreakpointsForDimension14Min "[]"
+      BreakpointsForDimension15Min "[]"
+      BreakpointsForDimension16Min "[]"
+      BreakpointsForDimension17Min "[]"
+      BreakpointsForDimension18Min "[]"
+      BreakpointsForDimension19Min "[]"
+      BreakpointsForDimension20Min "[]"
+      BreakpointsForDimension21Min "[]"
+      BreakpointsForDimension22Min "[]"
+      BreakpointsForDimension23Min "[]"
+      BreakpointsForDimension24Min "[]"
+      BreakpointsForDimension25Min "[]"
+      BreakpointsForDimension26Min "[]"
+      BreakpointsForDimension27Min "[]"
+      BreakpointsForDimension28Min "[]"
+      BreakpointsForDimension29Min "[]"
+      BreakpointsForDimension30Min "[]"
+      BreakpointsForDimension1Max "[]"
+      BreakpointsForDimension2Max "[]"
+      BreakpointsForDimension3Max "[]"
+      BreakpointsForDimension4Max "[]"
+      BreakpointsForDimension5Max "[]"
+      BreakpointsForDimension6Max "[]"
+      BreakpointsForDimension7Max "[]"
+      BreakpointsForDimension8Max "[]"
+      BreakpointsForDimension9Max "[]"
+      BreakpointsForDimension10Max "[]"
+      BreakpointsForDimension11Max "[]"
+      BreakpointsForDimension12Max "[]"
+      BreakpointsForDimension13Max "[]"
+      BreakpointsForDimension14Max "[]"
+      BreakpointsForDimension15Max "[]"
+      BreakpointsForDimension16Max "[]"
+      BreakpointsForDimension17Max "[]"
+      BreakpointsForDimension18Max "[]"
+      BreakpointsForDimension19Max "[]"
+      BreakpointsForDimension20Max "[]"
+      BreakpointsForDimension21Max "[]"
+      BreakpointsForDimension22Max "[]"
+      BreakpointsForDimension23Max "[]"
+      BreakpointsForDimension24Max "[]"
+      BreakpointsForDimension25Max "[]"
+      BreakpointsForDimension26Max "[]"
+      BreakpointsForDimension27Max "[]"
+      BreakpointsForDimension28Max "[]"
+      BreakpointsForDimension29Max "[]"
+      BreakpointsForDimension30Max "[]"
+      BreakpointsForDimension1DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension2DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension3DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension4DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension5DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension6DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension7DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension8DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension9DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension10DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension11DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension12DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension13DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension14DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension15DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension16DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension17DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension18DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension19DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension20DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension21DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension22DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension23DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension24DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension25DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension26DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension27DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension28DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension29DataTypeStr "Inherit: Same as corresponding input"
+      BreakpointsForDimension30DataTypeStr "Inherit: Same as corresponding input"
+      IndexSearchMethod	      "Binary search"
+      BeginIndexSearchUsingPreviousIndexResult off
+      UseOneInputPortForAllInputData off
+      Table		      "[4 5 6;16 19 20;10 18 23]"
+      TableMin		      "[]"
+      TableMax		      "[]"
+      TableDataTypeStr	      "Inherit: Same as output"
+      IntermediateResultsDataTypeStr "Inherit: Same as output"
+      InterpMethod	      "Linear"
+      ExtrapMethod	      "Linear"
+      DiagnosticForOutOfRangeInput "None"
+      RemoveProtectionInput   off
+      UseLastTableValue	      off
+      SampleTime	      "-1"
+      InputSameDT	      on
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: Same as first input"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+      FractionDataTypeStr     "Inherit: Inherit via internal rule"
+      SupportTunableTableSize off
+      MaximumIndicesForEachDimension "[]"
+      LUTDesignTableMode      "Redesign Table"
+      LUTDesignDataSource     "Block Dialog"
+      LUTDesignFunctionName   "sqrt(x)"
+      LUTDesignUseExistingBP  on
+      LUTDesignRelError	      "0.01"
+      LUTDesignAbsError	      "1e-6"
+    }
+    Block {
+      BlockType		      Memory
+      X0		      "0"
+      InheritSampleTime	      off
+      LinearizeMemory	      off
+      LinearizeAsDelay	      off
+      StateMustResolveToSignalObject off
+      RTWStateStorageClass    "Auto"
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Polyval
+      Coefs		      "[1,2]"
+    }
+    Block {
+      BlockType		      S-Function
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+      SFunctionDeploymentMode off
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      SFBlockType	      "NONE"
+      Variant		      off
+      GeneratePreprocessorConditionals off
+    }
+    Block {
+      BlockType		      Terminator
+    }
+  }
+  System {
+    Name		    "MyRhoVar"
+    Location		    [338, 403, 1209, 802]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    SIDHighWatermark	    "26967"
+    Block {
+      BlockType		      SubSystem
+      Name		      "Density"
+      SID		      "1"
+      Ports		      [4, 1]
+      Position		      [330, 107, 560, 303]
+      ZOrder		      -24
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      Variant		      on
+      OverrideUsingVariant    "CarlibWithErrorManagement1"
+      MaskPromptString	      "Calculation method|Input arguments|DEBUGLEVEL|MAXTOTALWARNINGS|MAXCONSECUTIVEWARNINGS|WR"
+      "ITETOFILE|FILENAME|TLOOKUP|PLOOKUP|MIXLOOKUP|DENSITYLOOKUP|POLYNOMIALCOEFFICIENTS|CONSTANTVALUE"
+      MaskStyleString	      "popup(CarlibClassic|CarlibWithErrorManagement|CarlibWithErrorManagement1|Lookup|Polynomia"
+      "l|ConstantValue),popup(state variables (classic)|state variables (reduced)|THV|THB),popup(DEBUG|INFO|WARNING|ERR"
+      "OR|FATAL),edit,edit,edit,edit,edit,edit,edit,edit,edit,edit"
+      MaskVariables	      "CALCMETHOD=@1;INPUTARGUMENTS=@2;DEBUGLEVEL=@3;MAXTOTALWARNINGS=@4;MAXCONSECUTIVEWARNINGS=@5"
+      ";WRITETOFILE=@6;FILENAME=@7;TLOOKUP=@8;PLOOKUP=@9;MIXLOOKUP=@10;DENSITYLOOKUP=@11;POLYNOMIALCOEFFICIENTS=@12;CON"
+      "STANTVALUE=@13;"
+      MaskTunableValueString  "on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskCallbackString      "set_param(gcb,'OverrideUsingVariant',get_param(gcb,'CALCMETHOD'));\nswitch get_param(gc"
+      "b,'CALCMETHOD')\n    case 'CarlibClassic'\n        set_param(gcb,'MaskVisibilities',{'on','on','off','off','off'"
+      ",'off','off','off','off','off','off','off','off'});\n    case 'CarlibWithErrorManagement'\n        set_param(gcb"
+      ",'MaskVisibilities',{'on','on','on','on','on','on','on','off','off','off','off','off','off'});\n    case 'Carlib"
+      "WithErrorManagement1'\n        set_param(gcb,'MaskVisibilities',{'on','on','on','on','on','on','on','off','off',"
+      "'off','off','off','off'});\n    case 'Lookup'\n        set_param(gcb,'MaskVisibilities',{'on','on','off','off','"
+      "off','off','off','on','on','on','on','off','off'});\n    case 'Polynomial'\n        set_param(gcb,'MaskVisibilit"
+      "ies',{'on','on','off','off','off','off','off','off','off','off','off','on','off'});\n    case 'ConstantValue'\n "
+      "       set_param(gcb,'MaskVisibilities',{'on','on','off','off','off','off','off','off','off','off','off','off','"
+      "on'});\nend\n||||||||||||"
+      MaskEnableString	      "on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskVisibilityString    "on,on,on,on,on,on,on,off,off,off,off,off,off"
+      MaskToolTipString	      "on,on,on,on,on,on,on,on,on,on,on,on,on"
+      MaskInitialization      "CalcmethodString=get_param(gcb,'CALCMETHOD');\n\nUNUSEDINPORTS={}; %initialisation nece"
+      "ssary, otherwise the active variant does not have this parameter in the next step (this is important for running"
+      " the model)\n\n%set choosen variant active\nset_param([gcb,'/',CalcmethodString],'ACTIVE','1');\nif str2num(get_"
+      "param([gcb,'/',CalcmethodString],'DUMMY'))==0 %change in the flag ensures execution of the initialisation comman"
+      "ds\n    set_param([gcb,'/',CalcmethodString],'DUMMY','1');\nelse\n    set_param([gcb,'/',CalcmethodString],'DUMM"
+      "Y','0');\nend\n\n%read inports from the active variant\nInportsActiveVariant=find_system([gcb,'/',CalcmethodStri"
+      "ng],'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','Inport');\n%read inports of teh varia"
+      "nt subsystem\nInportsParent=find_system(gcb,'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType"
+      "','Inport');\n%read all subsystems\nSystemsPartent=find_system(gcb,'LookUnderMasks','all','FollowLinks','on','Se"
+      "archDepth',1,'Variants','AllVariants','Blocktype','SubSystem');\n\n\n%delete all unused ports\nfor CountParent=n"
+      "umel(InportsActiveVariant)+1:numel(InportsParent)\n    delete_block(InportsParent{CountParent});\nend\n\n%rename"
+      " / add inports\nUNUSEDINPORTS=cell(numel(InportsActiveVariant),1);\nfor CountParent=1:numel(InportsActiveVariant"
+      ")\n    InportName=InportsActiveVariant{CountParent};\n    SlashPos=strfind(InportName,'/');\n    InportName=Inpo"
+      "rtName(SlashPos(end)+1:end);\n    UNUSEDINPORTS{CountParent}=InportName;\n    if CountParent<=numel(InportsParen"
+      "t)\n        set_param(InportsParent{CountParent},'Name',InportName);\n    else\n        add_block('built-in/Inpo"
+      "rt',[gcb,'/',InportName]);\n    end\n    set_param([gcb,'/',InportName],'Position',[55 100+50*CountParent 85 100"
+      "+50*CountParent+14]);\nend\n\n%set all variants passive except the choosen one\nfor CountParent=2:numel(SystemsP"
+      "artent) %element 1 is the name of the variant subsystem\n    SysName=SystemsPartent{CountParent};\n    SlashPos="
+      "strfind(SysName,'/');\n    SysName=SysName(SlashPos(end)+1:end);\n    if ~strcmp(SysName,CalcmethodString); %not"
+      " the active one\n        set_param(SystemsPartent{CountParent},'ACTIVE','0');\n        if str2num(get_param(Syst"
+      "emsPartent{CountParent},'DUMMY'))==0 %change in the flag ensures execution of the initialisation commands\n     "
+      "       set_param(SystemsPartent{CountParent},'DUMMY','1');\n        else\n            set_param(SystemsPartent{C"
+      "ountParent},'DUMMY','0');\n        end\n    end\nend\n"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskPortRotate	      "default"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "CarlibWithErrorManagement1|state variables (classic)|ERROR|inf|inf|0|'m.txt'|[0 100]|[0.5"
+      " 5]*1e5|[0 1]|ones(2,2,2)*1000|[-0.003564 -0.07696 1001.0]|1000.0"
+      System {
+	Name			"Density"
+	Location		[1157, 105, 1754, 747]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "T"
+	  SID			  "19632"
+	  Position		  [55, 148, 85, 162]
+	  ZOrder		  15
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "p"
+	  SID			  "19633"
+	  Position		  [55, 198, 85, 212]
+	  ZOrder		  16
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Fluid_Type"
+	  SID			  "19634"
+	  Position		  [55, 248, 85, 262]
+	  ZOrder		  17
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "Fluid_Mix"
+	  SID			  "19635"
+	  Position		  [55, 298, 85, 312]
+	  ZOrder		  18
+	  Port			  "4"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "CarlibClassic"
+	  SID			  "5"
+	  Ports			  [4, 1]
+	  Position		  [190, 89, 290, 131]
+	  ZOrder		  -19
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  VariantObject		  "CarlibClassic"
+	  MaskPromptString	  "INPUTARGUMENTS|DUMMY|ACTIVE|UNUSEDINPORTS"
+	  MaskStyleString	  "edit,edit,edit,edit"
+	  MaskVariables		  "INPUTARGUMENTS=@1;DUMMY=@2;ACTIVE=@3;UNUSEDINPORTS=@4;"
+	  MaskTunableValueString  "on,on,on,on"
+	  MaskCallbackString	  "|||"
+	  MaskEnableString	  "on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on"
+	  MaskToolTipString	  "on,on,on,on"
+	  MaskInitialization	  "Inports=find_system(gcb,'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType'"
+	  ",'Inport');\nConstants=find_system(gcb,'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','Const"
+	  "ant');\nSelectors=find_system(gcb,'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','Selector')"
+	  ";\nBusSelectors=find_system(gcb,'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','BusSelector'"
+	  ");\nDemuxes=find_system(gcb,'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','Demux');\nTermin"
+	  "ators=find_system(gcb,'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','Terminator');\n\n%%del"
+	  "ete lines, Demuxes, Selectors, Bus Selectors, Constants\n%delete all lines\nfor Count=1:numel(Inports)\n    AuxVar="
+	  "get_param(Inports{Count},'LineHandles');\n    for Count2=1:numel(AuxVar.Outport)\n        if AuxVar.Outport>=0\n   "
+	  "         delete_line(AuxVar.Outport(Count2));\n        end\n    end\nend\nfor Count=1:numel(Constants)\n    AuxVar="
+	  "get_param(Constants{Count},'LineHandles');\n    for Count2=1:numel(AuxVar.Outport)\n        if AuxVar.Outport>=0\n "
+	  "           delete_line(AuxVar.Outport(Count2));\n        end\n    end\nend\nfor Count=1:numel(Selectors)\n    AuxVa"
+	  "r=get_param(Selectors{Count},'LineHandles');\n    for Count2=1:numel(AuxVar.Outport)\n        if AuxVar.Outport>=0\n"
+	  "            delete_line(AuxVar.Outport(Count2));\n        end\n    end\nend\nfor Count=1:numel(BusSelectors)\n    A"
+	  "uxVar=get_param(BusSelectors{Count},'LineHandles');\n    for Count2=1:numel(AuxVar.Outport)\n        if AuxVar.Outp"
+	  "ort>=0\n            delete_line(AuxVar.Outport(Count2));\n        end\n    end\nend\nfor Count=1:numel(Demuxes)\n  "
+	  "  AuxVar=get_param(Demuxes{Count},'LineHandles');\n    for Count2=1:numel(AuxVar.Outport)\n        if AuxVar.Outpor"
+	  "t>=0\n            delete_line(AuxVar.Outport(Count2));\n        end\n    end\nend\nclear Count Count2 AuxVar;\n\n%d"
+	  "elete all constants, selectos, bus selectors and demuxes\nfor Count=1:numel(Constants)\n    delete_block(Constants{"
+	  "Count})\nend\nfor Count=1:numel(Selectors)\n    delete_block(Selectors{Count})\nend\nfor Count=1:numel(BusSelectors"
+	  ")\n    delete_block(BusSelectors{Count})\nend\nfor Count=1:numel(Demuxes)\n    delete_block(Demuxes{Count})\nend\nf"
+	  "or Count=1:numel(Terminators)\n    delete_block(Terminators{Count})\nend\nclear Count;\n    \n\n%%add / delete inpo"
+	  "rts and add constants and lines\nif ACTIVE==1\n    if INPUTARGUMENTS==1 || INPUTARGUMENTS==2 %T p ID Mix\n        %"
+	  "delete all unused inports\n        for Count=5:numel(Inports)\n            delete_block(Inports{Count});\n        e"
+	  "nd\n        InportsMyParent=find_system(get_param(gcb,'Parent'),'LookUnderMasks','all','FollowLinks','on','SearchDe"
+	  "pth',1,'BlockType','Inport');\n        for Count=5:numel(InportsMyParent)\n            delete_block(InportsMyParent"
+	  "{Count});\n        end\n        clear InPortsMyParent;\n        \n        if numel(Inports)>=1\n            set_par"
+	  "am(Inports{1},'Name','T');\n        else\n            add_block('built-in/Inport',[gcb,'/T']);\n        end\n      "
+	  "  set_param([gcb,'/T'],'Position',[55   243    85   257]);\n        add_line(gcb,'T/1','rhofluid/3');\n        if n"
+	  "umel(Inports)>=2\n            set_param(Inports{2},'Name','p');\n        else\n            add_block('built-in/Inpo"
+	  "rt',[gcb,'/p']);\n        end\n        set_param([gcb,'/p'],'Position',[55   313    85   327]);\n        add_line(g"
+	  "cb,'p/1','rhofluid/4');\n        if numel(Inports)>=3\n            set_param(Inports{3},'Name','Fluid_Type');\n    "
+	  "    else\n            add_block('built-in/Inport',[gcb,'/Fluid_Type']);\n        end\n        set_param([gcb,'/Flui"
+	  "d_Type'],'Position',[55   103    85   117]);\n        add_line(gcb,'Fluid_Type/1','rhofluid/1');\n        if numel("
+	  "Inports)>=4\n            set_param(Inports{4},'Name','Fluid_Mix');\n        else\n            add_block('built-in/I"
+	  "nport',[gcb,'/Fluid_Mix']);\n        end\n        set_param([gcb,'/Fluid_Mix'],'Position',[55   173    85   187]);\n"
+	  "        add_line(gcb,'Fluid_Mix/1','rhofluid/2');\n    elseif INPUTARGUMENTS==3 %THV\n        %delete all unused in"
+	  "ports\n        for Count=2:numel(Inports)\n            delete_block(Inports{Count});\n        end\n        InportsM"
+	  "yParent=find_system(get_param(gcb,'Parent'),'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','"
+	  "Inport');\n        for Count=2:numel(InportsMyParent)\n            delete_block(InportsMyParent{Count});\n        e"
+	  "nd\n        clear InPortsMyParent;\n        clear Count;\n        \n        if numel(Inports)>=1\n            set_p"
+	  "aram(Inports{1},'Name','THV');\n        else\n            add_block('built-in/Inport',[gcb,'/THV']);\n        end\n"
+	  "        set_param([gcb,'/THV'],'Position',[55   208    85   222]);\n        add_block('built-in/Selector',[gcb,'/Se"
+	  "lector']); %add a selector\n        set_param([gcb,'/Selector'],'Position',[125   196   165   234]);\n        set_p"
+	  "aram([gcb,'/Selector'],'InputPortWidth','-1')\n        set_param([gcb,'/Selector'],'Indices','[5 6 2 4]');\n       "
+	  " add_block('built-in/Demux',[gcb,'/Demux']); %add a demux\n        set_param([gcb,'/Demux'],'Position',[220    73  "
+	  " 225   357]);\n        set_param([gcb,'/Demux'],'Outputs','4');\n        add_line(gcb,'THV/1','Selector/1');\n     "
+	  "   add_line(gcb,'Selector/1','Demux/1');\n        add_line(gcb,'Demux/1','rhofluid/1');\n        add_line(gcb,'Demu"
+	  "x/2','rhofluid/2');\n        add_line(gcb,'Demux/3','rhofluid/3');\n        add_line(gcb,'Demux/4','rhofluid/4');\n"
+	  "    elseif INPUTARGUMENTS==4 %THB\n        %delete all unused inports\n        for Count=2:numel(Inports)\n        "
+	  "    delete_block(Inports{Count});\n        end\n        InportsMyParent=find_system(get_param(gcb,'Parent'),'LookUn"
+	  "derMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','Inport');\n        for Count=2:numel(InportsMyParen"
+	  "t)\n            delete_block(InportsMyParent{Count});\n        end\n        clear InPortsMyParent;\n        clear C"
+	  "ount;\n        \n        if numel(Inports)>=1\n            set_param(Inports{1},'Name','THB');\n        else\n     "
+	  "       add_block('built-in/Inport',[gcb,'/THB']);\n        end\n        set_param([gcb,'/THB'],'Position',[55   208"
+	  "    85   222]);\n        add_block('built-in/BusSelector',[gcb,'/BusSelector']); %add a bus selector\n        set_p"
+	  "aram([gcb,'/BusSelector'],'Position',[220    73   225   357]);\n        set_param([gcb,'/BusSelector'],'OutputSigna"
+	  "ls','FluidType,FluidMix,Temperature,Pressure');\n        add_line(gcb,'THB/1','BusSelector/1');\n        add_line(g"
+	  "cb,'BusSelector/1','rhofluid/1');\n        add_line(gcb,'BusSelector/2','rhofluid/2');\n        add_line(gcb,'BusSe"
+	  "lector/3','rhofluid/3');\n        add_line(gcb,'BusSelector/4','rhofluid/4');\n    end\nelse\n    for Count=numel(U"
+	  "NUSEDINPORTS)+1:numel(Inports) %delete all unused inports\n        delete_block(Inports{Count});\n    end\n    for "
+	  "Count=1:numel(UNUSEDINPORTS)\n        if numel(Inports)<Count\n            add_block('built-in/Inport',[gcb,'/',UNU"
+	  "SEDINPORTS{Count}]);\n        else\n            set_param(Inports{Count},'Name',UNUSEDINPORTS{Count});\n        end"
+	  "\n        set_param([gcb,'/',UNUSEDINPORTS{Count}],'Position',[55 50*Count 85 50*Count+14]);\n        add_block('bu"
+	  "ilt-in/Terminator',[gcb,'/Terminator_',UNUSEDINPORTS{Count}]);\n        set_param([gcb,'/Terminator_',UNUSEDINPORTS"
+	  "{Count}],'Position',[155 50*Count-3 175 50*Count+17]);\n        add_line(gcb,[UNUSEDINPORTS{Count},'/1'],['Terminat"
+	  "or_',UNUSEDINPORTS{Count},'/1']);\n    end\n    add_block('built-in/Constant',[gcb,'/Constant_T']);\n    set_param("
+	  "[gcb,'/Constant_T'],'Position',[275   235   305   265]);\n    set_param([gcb,'/Constant_T'],'Value','20.0');\n    a"
+	  "dd_line(gcb,'Constant_T/1','rhofluid/3');\n    \n    add_block('built-in/Constant',[gcb,'/Constant_p']);\n    set_p"
+	  "aram([gcb,'/Constant_p'],'Position',[275   305   305   335]);\n    set_param([gcb,'/Constant_p'],'Value','1e5');\n "
+	  "   add_line(gcb,'Constant_p/1','rhofluid/4');\n    \n    add_block('built-in/Constant',[gcb,'/Constant_Type']);\n  "
+	  "  set_param([gcb,'/Constant_Type'],'Position',[275    95   305   125]);\n    set_param([gcb,'/Constant_Type'],'Valu"
+	  "e','1');\n    add_line(gcb,'Constant_Type/1','rhofluid/1');\n    \n    add_block('built-in/Constant',[gcb,'/Constan"
+	  "t_Mix']);\n    set_param([gcb,'/Constant_Mix'],'Position',[275   165   305   195]);\n    set_param([gcb,'/Constant_"
+	  "Mix'],'Value','0.0');\n    add_line(gcb,'Constant_Mix/1','rhofluid/2');\nend\n"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "INPUTARGUMENTS|0|0|UNUSEDINPORTS"
+	  System {
+	    Name		    "CarlibClassic"
+	    Location		    [1000, 196, 1734, 771]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "T"
+	      SID		      "19636"
+	      Position		      [55, 48, 85, 62]
+	      ZOrder		      4373
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "p"
+	      SID		      "19638"
+	      Position		      [55, 98, 85, 112]
+	      ZOrder		      4375
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Fluid_Type"
+	      SID		      "19640"
+	      Position		      [55, 148, 85, 162]
+	      ZOrder		      4377
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Fluid_Mix"
+	      SID		      "19642"
+	      Position		      [55, 198, 85, 212]
+	      ZOrder		      4379
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant_Mix"
+	      SID		      "26943"
+	      Position		      [275, 165, 305, 195]
+	      ZOrder		      4403
+	      Value		      "0.0"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant_T"
+	      SID		      "26940"
+	      Position		      [275, 235, 305, 265]
+	      ZOrder		      4400
+	      Value		      "20.0"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant_Type"
+	      SID		      "26942"
+	      Position		      [275, 95, 305, 125]
+	      ZOrder		      4402
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant_p"
+	      SID		      "26941"
+	      Position		      [275, 305, 305, 335]
+	      ZOrder		      4401
+	      Value		      "1e5"
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator_Fluid_Mix"
+	      SID		      "26939"
+	      Position		      [155, 195, 175, 215]
+	      ZOrder		      4399
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator_Fluid_Type"
+	      SID		      "26938"
+	      Position		      [155, 145, 175, 165]
+	      ZOrder		      4398
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator_T"
+	      SID		      "26936"
+	      Position		      [155, 45, 175, 65]
+	      ZOrder		      4396
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator_p"
+	      SID		      "26937"
+	      Position		      [155, 95, 175, 115]
+	      ZOrder		      4397
+	    }
+	    Block {
+	      BlockType		      S-Function
+	      Name		      "rhofluid"
+	      SID		      "20"
+	      Ports		      [4, 1]
+	      Position		      [345, 73, 465, 357]
+	      ZOrder		      -5
+	      FunctionName	      "rhofluid"
+	      EnableBusSupport	      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "density"
+	      SID		      "21"
+	      Position		      [525, 208, 555, 222]
+	      ZOrder		      -23
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "rhofluid"
+	      SrcPort		      1
+	      DstBlock		      "density"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "T"
+	      SrcPort		      1
+	      DstBlock		      "Terminator_T"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "p"
+	      SrcPort		      1
+	      DstBlock		      "Terminator_p"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Fluid_Type"
+	      SrcPort		      1
+	      DstBlock		      "Terminator_Fluid_Type"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Fluid_Mix"
+	      SrcPort		      1
+	      DstBlock		      "Terminator_Fluid_Mix"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant_T"
+	      SrcPort		      1
+	      DstBlock		      "rhofluid"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Constant_p"
+	      SrcPort		      1
+	      DstBlock		      "rhofluid"
+	      DstPort		      4
+	    }
+	    Line {
+	      SrcBlock		      "Constant_Type"
+	      SrcPort		      1
+	      DstBlock		      "rhofluid"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant_Mix"
+	      SrcPort		      1
+	      DstBlock		      "rhofluid"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "CarlibWithErrorManagement"
+	  SID			  "212"
+	  Ports			  [4, 1]
+	  Position		  [190, 159, 290, 201]
+	  ZOrder		  -19
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  VariantObject		  "CarlibWithErrorManagement"
+	  MaskPromptString	  "INPUTARGUMENTS|MAXTOTALWARNINGS|MAXCONSECUTIVEWARNINGS|DUMMY|ACTIVE|UNUSEDINPORTS|DEBUGLEVEL|WR"
+	  "ITETOFILE|FILENAME"
+	  MaskStyleString	  "edit,edit,edit,edit,edit,edit,edit,edit,edit"
+	  MaskVariables		  "INPUTARGUMENTS=@1;MAXTOTALWARNINGS=@2;MAXCONSECUTIVEWARNINGS=@3;DUMMY=@4;ACTIVE=@5;UNUSEDINPORTS="
+	  "@6;DEBUGLEVEL=@7;WRITETOFILE=@8;FILENAME=@9;"
+	  MaskTunableValueString  "on,on,on,on,on,on,on,on,on"
+	  MaskCallbackString	  "||||||||"
+	  MaskEnableString	  "on,on,on,on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,on,on,on,on,on"
+	  MaskToolTipString	  "on,on,on,on,on,on,on,on,on"
+	  MaskInitialization	  "Inports=find_system(gcb,'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType'"
+	  ",'Inport');\nConstants=find_system(gcb,'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','Const"
+	  "ant');\nSelectors=find_system(gcb,'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','Selector')"
+	  ";\nBusSelectors=find_system(gcb,'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','BusSelector'"
+	  ");\nDemuxes=find_system(gcb,'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','Demux');\nTermin"
+	  "ators=find_system(gcb,'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','Terminator');\n\n%%del"
+	  "ete lines, Demuxes, Selectors, Bus Selectors, Constants\n%delete all lines\nfor Count=1:numel(Inports)\n    AuxVar="
+	  "get_param(Inports{Count},'LineHandles');\n    for Count2=1:numel(AuxVar.Outport)\n        if AuxVar.Outport>=0\n   "
+	  "         delete_line(AuxVar.Outport(Count2));\n        end\n    end\nend\nfor Count=1:numel(Constants)\n    AuxVar="
+	  "get_param(Constants{Count},'LineHandles');\n    for Count2=1:numel(AuxVar.Outport)\n        if AuxVar.Outport>=0\n "
+	  "           delete_line(AuxVar.Outport(Count2));\n        end\n    end\nend\nfor Count=1:numel(Selectors)\n    AuxVa"
+	  "r=get_param(Selectors{Count},'LineHandles');\n    for Count2=1:numel(AuxVar.Outport)\n        if AuxVar.Outport>=0\n"
+	  "            delete_line(AuxVar.Outport(Count2));\n        end\n    end\nend\nfor Count=1:numel(BusSelectors)\n    A"
+	  "uxVar=get_param(BusSelectors{Count},'LineHandles');\n    for Count2=1:numel(AuxVar.Outport)\n        if AuxVar.Outp"
+	  "ort>=0\n            delete_line(AuxVar.Outport(Count2));\n        end\n    end\nend\nfor Count=1:numel(Demuxes)\n  "
+	  "  AuxVar=get_param(Demuxes{Count},'LineHandles');\n    for Count2=1:numel(AuxVar.Outport)\n        if AuxVar.Outpor"
+	  "t>=0\n            delete_line(AuxVar.Outport(Count2));\n        end\n    end\nend\nclear Count Count2 AuxVar;\n\n%d"
+	  "elete all constants, selectos, bus selectors and demuxes\nfor Count=1:numel(Constants)\n    delete_block(Constants{"
+	  "Count})\nend\nfor Count=1:numel(Selectors)\n    delete_block(Selectors{Count})\nend\nfor Count=1:numel(BusSelectors"
+	  ")\n    delete_block(BusSelectors{Count})\nend\nfor Count=1:numel(Demuxes)\n    delete_block(Demuxes{Count})\nend\nf"
+	  "or Count=1:numel(Terminators)\n    delete_block(Terminators{Count})\nend\nclear Count;\n    \n\n%%add / delete inpo"
+	  "rts and add constants and lines\nif ACTIVE==1\n    if INPUTARGUMENTS==1 || INPUTARGUMENTS==2 %T p ID Mix\n        %"
+	  "delete all unused inports\n        for Count=5:numel(Inports)\n            delete_block(Inports{Count});\n        e"
+	  "nd\n        InportsMyParent=find_system(get_param(gcb,'Parent'),'LookUnderMasks','all','FollowLinks','on','SearchDe"
+	  "pth',1,'BlockType','Inport');\n        for Count=5:numel(InportsMyParent)\n            delete_block(InportsMyParent"
+	  "{Count});\n        end\n        clear InPortsMyParent;\n        \n        if numel(Inports)>=1\n            set_par"
+	  "am(Inports{1},'Name','T');\n        else\n            add_block('built-in/Inport',[gcb,'/T']);\n        end\n      "
+	  "  set_param([gcb,'/T'],'Position',[55   243    85   257]);\n        add_line(gcb,'T/1','rhofluid/3');\n        if n"
+	  "umel(Inports)>=2\n            set_param(Inports{2},'Name','p');\n        else\n            add_block('built-in/Inpo"
+	  "rt',[gcb,'/p']);\n        end\n        set_param([gcb,'/p'],'Position',[55   313    85   327]);\n        add_line(g"
+	  "cb,'p/1','rhofluid/4');\n        if numel(Inports)>=3\n            set_param(Inports{3},'Name','Fluid_Type');\n    "
+	  "    else\n            add_block('built-in/Inport',[gcb,'/Fluid_Type']);\n        end\n        set_param([gcb,'/Flui"
+	  "d_Type'],'Position',[55   103    85   117]);\n        add_line(gcb,'Fluid_Type/1','rhofluid/1');\n        if numel("
+	  "Inports)>=4\n            set_param(Inports{4},'Name','Fluid_Mix');\n        else\n            add_block('built-in/I"
+	  "nport',[gcb,'/Fluid_Mix']);\n        end\n        set_param([gcb,'/Fluid_Mix'],'Position',[55   173    85   187]);\n"
+	  "        add_line(gcb,'Fluid_Mix/1','rhofluid/2');\n    elseif INPUTARGUMENTS==3 %THV\n        %delete all unused in"
+	  "ports\n        for Count=2:numel(Inports)\n            delete_block(Inports{Count});\n        end\n        InportsM"
+	  "yParent=find_system(get_param(gcb,'Parent'),'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','"
+	  "Inport');\n        for Count=2:numel(InportsMyParent)\n            delete_block(InportsMyParent{Count});\n        e"
+	  "nd\n        clear InPortsMyParent;\n        clear Count;\n        \n        if numel(Inports)>=1\n            set_p"
+	  "aram(Inports{1},'Name','THV');\n        else\n            add_block('built-in/Inport',[gcb,'/THV']);\n        end\n"
+	  "        set_param([gcb,'/THV'],'Position',[55   208    85   222]);\n        add_block('built-in/Selector',[gcb,'/Se"
+	  "lector']); %add a selector\n        set_param([gcb,'/Selector'],'Position',[125   196   165   234]);\n        set_p"
+	  "aram([gcb,'/Selector'],'InputPortWidth','-1')\n        set_param([gcb,'/Selector'],'Indices','[5 6 2 4]');\n       "
+	  " add_block('built-in/Demux',[gcb,'/Demux']); %add a demux\n        set_param([gcb,'/Demux'],'Position',[220    73  "
+	  " 225   357]);\n        set_param([gcb,'/Demux'],'Outputs','4');\n        add_line(gcb,'THV/1','Selector/1');\n     "
+	  "   add_line(gcb,'Selector/1','Demux/1');\n        add_line(gcb,'Demux/1','rhofluid/1');\n        add_line(gcb,'Demu"
+	  "x/2','rhofluid/2');\n        add_line(gcb,'Demux/3','rhofluid/3');\n        add_line(gcb,'Demux/4','rhofluid/4');\n"
+	  "    elseif INPUTARGUMENTS==4 %THB\n        %delete all unused inports\n        for Count=2:numel(Inports)\n        "
+	  "    delete_block(Inports{Count});\n        end\n        InportsMyParent=find_system(get_param(gcb,'Parent'),'LookUn"
+	  "derMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','Inport');\n        for Count=2:numel(InportsMyParen"
+	  "t)\n            delete_block(InportsMyParent{Count});\n        end\n        clear InPortsMyParent;\n        clear C"
+	  "ount;\n        \n        if numel(Inports)>=1\n            set_param(Inports{1},'Name','THB');\n        else\n     "
+	  "       add_block('built-in/Inport',[gcb,'/THB']);\n        end\n        set_param([gcb,'/THB'],'Position',[55   208"
+	  "    85   222]);\n        add_block('built-in/BusSelector',[gcb,'/BusSelector']); %add a bus selector\n        set_p"
+	  "aram([gcb,'/BusSelector'],'Position',[220    73   225   357]);\n        set_param([gcb,'/BusSelector'],'OutputSigna"
+	  "ls','FluidType,FluidMix,Temperature,Pressure');\n        add_line(gcb,'THB/1','BusSelector/1');\n        add_line(g"
+	  "cb,'BusSelector/1','rhofluid/1');\n        add_line(gcb,'BusSelector/2','rhofluid/2');\n        add_line(gcb,'BusSe"
+	  "lector/3','rhofluid/3');\n        add_line(gcb,'BusSelector/4','rhofluid/4');\n    end\nelse\n    for Count=numel(U"
+	  "NUSEDINPORTS)+1:numel(Inports) %delete all unused inports\n        delete_block(Inports{Count});\n    end\n    for "
+	  "Count=1:numel(UNUSEDINPORTS)\n        if numel(Inports)<Count\n            add_block('built-in/Inport',[gcb,'/',UNU"
+	  "SEDINPORTS{Count}]);\n        else\n            set_param(Inports{Count},'Name',UNUSEDINPORTS{Count});\n        end"
+	  "\n        set_param([gcb,'/',UNUSEDINPORTS{Count}],'Position',[55 50*Count 85 50*Count+14]);\n        add_block('bu"
+	  "ilt-in/Terminator',[gcb,'/Terminator_',UNUSEDINPORTS{Count}]);\n        set_param([gcb,'/Terminator_',UNUSEDINPORTS"
+	  "{Count}],'Position',[155 50*Count-3 175 50*Count+17]);\n        add_line(gcb,[UNUSEDINPORTS{Count},'/1'],['Terminat"
+	  "or_',UNUSEDINPORTS{Count},'/1']);\n    end\n    add_block('built-in/Constant',[gcb,'/Constant_T']);\n    set_param("
+	  "[gcb,'/Constant_T'],'Position',[275   235   305   265]);\n    set_param([gcb,'/Constant_T'],'Value','20.0');\n    a"
+	  "dd_line(gcb,'Constant_T/1','rhofluid/3');\n    \n    add_block('built-in/Constant',[gcb,'/Constant_p']);\n    set_p"
+	  "aram([gcb,'/Constant_p'],'Position',[275   305   305   335]);\n    set_param([gcb,'/Constant_p'],'Value','1e5');\n "
+	  "   add_line(gcb,'Constant_p/1','rhofluid/4');\n    \n    add_block('built-in/Constant',[gcb,'/Constant_Type']);\n  "
+	  "  set_param([gcb,'/Constant_Type'],'Position',[275    95   305   125]);\n    set_param([gcb,'/Constant_Type'],'Valu"
+	  "e','1');\n    add_line(gcb,'Constant_Type/1','rhofluid/1');\n    \n    add_block('built-in/Constant',[gcb,'/Constan"
+	  "t_Mix']);\n    set_param([gcb,'/Constant_Mix'],'Position',[275   165   305   195]);\n    set_param([gcb,'/Constant_"
+	  "Mix'],'Value','0.0');\n    add_line(gcb,'Constant_Mix/1','rhofluid/2');\nend\n"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "INPUTARGUMENTS|MAXTOTALWARNINGS|MAXCONSECUTIVEWARNINGS|1|0|UNUSEDINPORTS|DEBUGLEVEL|WRITETOFILE|"
+	  "FILENAME"
+	  System {
+	    Name		    "CarlibWithErrorManagement"
+	    Location		    [1072, 276, 1841, 951]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "T"
+	      SID		      "19648"
+	      Position		      [55, 48, 85, 62]
+	      ZOrder		      4447
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "p"
+	      SID		      "19650"
+	      Position		      [55, 98, 85, 112]
+	      ZOrder		      4449
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Fluid_Type"
+	      SID		      "19652"
+	      Position		      [55, 148, 85, 162]
+	      ZOrder		      4451
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Fluid_Mix"
+	      SID		      "19654"
+	      Position		      [55, 198, 85, 212]
+	      ZOrder		      4453
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant_Mix"
+	      SID		      "26951"
+	      Position		      [275, 165, 305, 195]
+	      ZOrder		      5133
+	      Value		      "0.0"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant_T"
+	      SID		      "26948"
+	      Position		      [275, 235, 305, 265]
+	      ZOrder		      5130
+	      Value		      "20.0"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant_Type"
+	      SID		      "26950"
+	      Position		      [275, 95, 305, 125]
+	      ZOrder		      5132
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant_p"
+	      SID		      "26949"
+	      Position		      [275, 305, 305, 335]
+	      ZOrder		      5131
+	      Value		      "1e5"
+	    }
+	    Block {
+	      BlockType		      Memory
+	      Name		      "Memory"
+	      SID		      "217"
+	      Position		      [105, 375, 135, 405]
+	      ZOrder		      -13
+	    }
+	    Block {
+	      BlockType		      Memory
+	      Name		      "Memory1"
+	      SID		      "218"
+	      Position		      [105, 445, 135, 475]
+	      ZOrder		      -13
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator_Fluid_Mix"
+	      SID		      "26947"
+	      Position		      [155, 195, 175, 215]
+	      ZOrder		      5129
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator_Fluid_Type"
+	      SID		      "26946"
+	      Position		      [155, 145, 175, 165]
+	      ZOrder		      5128
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator_T"
+	      SID		      "26944"
+	      Position		      [155, 45, 175, 65]
+	      ZOrder		      5126
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator_p"
+	      SID		      "26945"
+	      Position		      [155, 95, 175, 115]
+	      ZOrder		      5127
+	    }
+	    Block {
+	      BlockType		      S-Function
+	      Name		      "rhofluid"
+	      SID		      "219"
+	      Ports		      [6, 3]
+	      Position		      [355, 69, 480, 501]
+	      ZOrder		      -5
+	      FunctionName	      "rhofluid2"
+	      Parameters	      "DEBUGLEVEL-1,MAXTOTALWARNINGS,MAXCONSECUTIVEWARNINGS,WRITETOFILE,FILENAME"
+	      EnableBusSupport	      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "density"
+	      SID		      "220"
+	      Position		      [535, 133, 565, 147]
+	      ZOrder		      -23
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "rhofluid"
+	      SrcPort		      1
+	      DstBlock		      "density"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "rhofluid"
+	      SrcPort		      2
+	      Points		      [65, 0; 0, 250; -490, 0; 0, -145]
+	      DstBlock		      "Memory"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "rhofluid"
+	      SrcPort		      3
+	      Points		      [35, 0; 0, 90; -430, 0]
+	      DstBlock		      "Memory1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Memory1"
+	      SrcPort		      1
+	      DstBlock		      "rhofluid"
+	      DstPort		      6
+	    }
+	    Line {
+	      SrcBlock		      "Memory"
+	      SrcPort		      1
+	      DstBlock		      "rhofluid"
+	      DstPort		      5
+	    }
+	    Line {
+	      SrcBlock		      "T"
+	      SrcPort		      1
+	      DstBlock		      "Terminator_T"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "p"
+	      SrcPort		      1
+	      DstBlock		      "Terminator_p"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Fluid_Type"
+	      SrcPort		      1
+	      DstBlock		      "Terminator_Fluid_Type"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Fluid_Mix"
+	      SrcPort		      1
+	      DstBlock		      "Terminator_Fluid_Mix"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant_T"
+	      SrcPort		      1
+	      DstBlock		      "rhofluid"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Constant_p"
+	      SrcPort		      1
+	      DstBlock		      "rhofluid"
+	      DstPort		      4
+	    }
+	    Line {
+	      SrcBlock		      "Constant_Type"
+	      SrcPort		      1
+	      DstBlock		      "rhofluid"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant_Mix"
+	      SrcPort		      1
+	      DstBlock		      "rhofluid"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "CarlibWithErrorManagement1"
+	  SID			  "392"
+	  Ports			  [4, 1]
+	  Position		  [190, 234, 290, 276]
+	  ZOrder		  -19
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  VariantObject		  "CarlibWithErrorManagement1"
+	  MaskPromptString	  "INPUTARGUMENTS|MAXTOTALWARNINGS|MAXCONSECUTIVEWARNINGS|DUMMY|ACTIVE|UNUSEDINPORTS|DEBUGLEVEL|WR"
+	  "ITETOFILE|FILENAME"
+	  MaskStyleString	  "edit,edit,edit,edit,edit,edit,edit,edit,edit"
+	  MaskVariables		  "INPUTARGUMENTS=@1;MAXTOTALWARNINGS=@2;MAXCONSECUTIVEWARNINGS=@3;DUMMY=@4;ACTIVE=@5;UNUSEDINPORTS="
+	  "@6;DEBUGLEVEL=@7;WRITETOFILE=@8;FILENAME=@9;"
+	  MaskTunableValueString  "on,on,on,on,on,on,on,on,on"
+	  MaskCallbackString	  "||||||||"
+	  MaskEnableString	  "on,on,on,on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,on,on,on,on,on"
+	  MaskToolTipString	  "on,on,on,on,on,on,on,on,on"
+	  MaskInitialization	  "Inports=find_system(gcb,'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType'"
+	  ",'Inport');\nConstants=find_system(gcb,'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','Const"
+	  "ant');\nSelectors=find_system(gcb,'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','Selector')"
+	  ";\nBusSelectors=find_system(gcb,'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','BusSelector'"
+	  ");\nDemuxes=find_system(gcb,'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','Demux');\nTermin"
+	  "ators=find_system(gcb,'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','Terminator');\n\n%%del"
+	  "ete lines, Demuxes, Selectors, Bus Selectors, Constants\n%delete all lines\nfor Count=1:numel(Inports)\n    AuxVar="
+	  "get_param(Inports{Count},'LineHandles');\n    for Count2=1:numel(AuxVar.Outport)\n        if AuxVar.Outport>=0\n   "
+	  "         delete_line(AuxVar.Outport(Count2));\n        end\n    end\nend\nfor Count=1:numel(Constants)\n    AuxVar="
+	  "get_param(Constants{Count},'LineHandles');\n    for Count2=1:numel(AuxVar.Outport)\n        if AuxVar.Outport>=0\n "
+	  "           delete_line(AuxVar.Outport(Count2));\n        end\n    end\nend\nfor Count=1:numel(Selectors)\n    AuxVa"
+	  "r=get_param(Selectors{Count},'LineHandles');\n    for Count2=1:numel(AuxVar.Outport)\n        if AuxVar.Outport>=0\n"
+	  "            delete_line(AuxVar.Outport(Count2));\n        end\n    end\nend\nfor Count=1:numel(BusSelectors)\n    A"
+	  "uxVar=get_param(BusSelectors{Count},'LineHandles');\n    for Count2=1:numel(AuxVar.Outport)\n        if AuxVar.Outp"
+	  "ort>=0\n            delete_line(AuxVar.Outport(Count2));\n        end\n    end\nend\nfor Count=1:numel(Demuxes)\n  "
+	  "  AuxVar=get_param(Demuxes{Count},'LineHandles');\n    for Count2=1:numel(AuxVar.Outport)\n        if AuxVar.Outpor"
+	  "t>=0\n            delete_line(AuxVar.Outport(Count2));\n        end\n    end\nend\nclear Count Count2 AuxVar;\n\n%d"
+	  "elete all constants, selectos, bus selectors and demuxes\nfor Count=1:numel(Constants)\n    delete_block(Constants{"
+	  "Count})\nend\nfor Count=1:numel(Selectors)\n    delete_block(Selectors{Count})\nend\nfor Count=1:numel(BusSelectors"
+	  ")\n    delete_block(BusSelectors{Count})\nend\nfor Count=1:numel(Demuxes)\n    delete_block(Demuxes{Count})\nend\nf"
+	  "or Count=1:numel(Terminators)\n    delete_block(Terminators{Count})\nend\nclear Count;\n    \n\n%%add / delete inpo"
+	  "rts and add constants and lines\nif ACTIVE==1\n    if INPUTARGUMENTS==1 || INPUTARGUMENTS==2 %T p ID Mix\n        %"
+	  "delete all unused inports\n        for Count=5:numel(Inports)\n            delete_block(Inports{Count});\n        e"
+	  "nd\n        InportsMyParent=find_system(get_param(gcb,'Parent'),'LookUnderMasks','all','FollowLinks','on','SearchDe"
+	  "pth',1,'BlockType','Inport');\n        for Count=5:numel(InportsMyParent)\n            delete_block(InportsMyParent"
+	  "{Count});\n        end\n        clear InPortsMyParent;\n        \n        if numel(Inports)>=1\n            set_par"
+	  "am(Inports{1},'Name','T');\n        else\n            add_block('built-in/Inport',[gcb,'/T']);\n        end\n      "
+	  "  set_param([gcb,'/T'],'Position',[55   243    85   257]);\n        add_line(gcb,'T/1','rhofluid/3');\n        if n"
+	  "umel(Inports)>=2\n            set_param(Inports{2},'Name','p');\n        else\n            add_block('built-in/Inpo"
+	  "rt',[gcb,'/p']);\n        end\n        set_param([gcb,'/p'],'Position',[55   313    85   327]);\n        add_line(g"
+	  "cb,'p/1','rhofluid/4');\n        if numel(Inports)>=3\n            set_param(Inports{3},'Name','Fluid_Type');\n    "
+	  "    else\n            add_block('built-in/Inport',[gcb,'/Fluid_Type']);\n        end\n        set_param([gcb,'/Flui"
+	  "d_Type'],'Position',[55   103    85   117]);\n        add_line(gcb,'Fluid_Type/1','rhofluid/1');\n        if numel("
+	  "Inports)>=4\n            set_param(Inports{4},'Name','Fluid_Mix');\n        else\n            add_block('built-in/I"
+	  "nport',[gcb,'/Fluid_Mix']);\n        end\n        set_param([gcb,'/Fluid_Mix'],'Position',[55   173    85   187]);\n"
+	  "        add_line(gcb,'Fluid_Mix/1','rhofluid/2');\n    elseif INPUTARGUMENTS==3 %THV\n        %delete all unused in"
+	  "ports\n        for Count=2:numel(Inports)\n            delete_block(Inports{Count});\n        end\n        InportsM"
+	  "yParent=find_system(get_param(gcb,'Parent'),'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','"
+	  "Inport');\n        for Count=2:numel(InportsMyParent)\n            delete_block(InportsMyParent{Count});\n        e"
+	  "nd\n        clear InPortsMyParent;\n        clear Count;\n        \n        if numel(Inports)>=1\n            set_p"
+	  "aram(Inports{1},'Name','THV');\n        else\n            add_block('built-in/Inport',[gcb,'/THV']);\n        end\n"
+	  "        set_param([gcb,'/THV'],'Position',[55   208    85   222]);\n        add_block('built-in/Selector',[gcb,'/Se"
+	  "lector']); %add a selector\n        set_param([gcb,'/Selector'],'Position',[125   196   165   234]);\n        set_p"
+	  "aram([gcb,'/Selector'],'InputPortWidth','-1')\n        set_param([gcb,'/Selector'],'Indices','[5 6 2 4]');\n       "
+	  " add_block('built-in/Demux',[gcb,'/Demux']); %add a demux\n        set_param([gcb,'/Demux'],'Position',[220    73  "
+	  " 225   357]);\n        set_param([gcb,'/Demux'],'Outputs','4');\n        add_line(gcb,'THV/1','Selector/1');\n     "
+	  "   add_line(gcb,'Selector/1','Demux/1');\n        add_line(gcb,'Demux/1','rhofluid/1');\n        add_line(gcb,'Demu"
+	  "x/2','rhofluid/2');\n        add_line(gcb,'Demux/3','rhofluid/3');\n        add_line(gcb,'Demux/4','rhofluid/4');\n"
+	  "    elseif INPUTARGUMENTS==4 %THB\n        %delete all unused inports\n        for Count=2:numel(Inports)\n        "
+	  "    delete_block(Inports{Count});\n        end\n        InportsMyParent=find_system(get_param(gcb,'Parent'),'LookUn"
+	  "derMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','Inport');\n        for Count=2:numel(InportsMyParen"
+	  "t)\n            delete_block(InportsMyParent{Count});\n        end\n        clear InPortsMyParent;\n        clear C"
+	  "ount;\n        \n        if numel(Inports)>=1\n            set_param(Inports{1},'Name','THB');\n        else\n     "
+	  "       add_block('built-in/Inport',[gcb,'/THB']);\n        end\n        set_param([gcb,'/THB'],'Position',[55   208"
+	  "    85   222]);\n        add_block('built-in/BusSelector',[gcb,'/BusSelector']); %add a bus selector\n        set_p"
+	  "aram([gcb,'/BusSelector'],'Position',[220    73   225   357]);\n        set_param([gcb,'/BusSelector'],'OutputSigna"
+	  "ls','FluidType,FluidMix,Temperature,Pressure');\n        add_line(gcb,'THB/1','BusSelector/1');\n        add_line(g"
+	  "cb,'BusSelector/1','rhofluid/1');\n        add_line(gcb,'BusSelector/2','rhofluid/2');\n        add_line(gcb,'BusSe"
+	  "lector/3','rhofluid/3');\n        add_line(gcb,'BusSelector/4','rhofluid/4');\n    end\nelse\n    for Count=numel(U"
+	  "NUSEDINPORTS)+1:numel(Inports) %delete all unused inports\n        delete_block(Inports{Count});\n    end\n    for "
+	  "Count=1:numel(UNUSEDINPORTS)\n        if numel(Inports)<Count\n            add_block('built-in/Inport',[gcb,'/',UNU"
+	  "SEDINPORTS{Count}]);\n        else\n            set_param(Inports{Count},'Name',UNUSEDINPORTS{Count});\n        end"
+	  "\n        set_param([gcb,'/',UNUSEDINPORTS{Count}],'Position',[55 50*Count 85 50*Count+14]);\n        add_block('bu"
+	  "ilt-in/Terminator',[gcb,'/Terminator_',UNUSEDINPORTS{Count}]);\n        set_param([gcb,'/Terminator_',UNUSEDINPORTS"
+	  "{Count}],'Position',[155 50*Count-3 175 50*Count+17]);\n        add_line(gcb,[UNUSEDINPORTS{Count},'/1'],['Terminat"
+	  "or_',UNUSEDINPORTS{Count},'/1']);\n    end\n    add_block('built-in/Constant',[gcb,'/Constant_T']);\n    set_param("
+	  "[gcb,'/Constant_T'],'Position',[275   235   305   265]);\n    set_param([gcb,'/Constant_T'],'Value','20.0');\n    a"
+	  "dd_line(gcb,'Constant_T/1','rhofluid/3');\n    \n    add_block('built-in/Constant',[gcb,'/Constant_p']);\n    set_p"
+	  "aram([gcb,'/Constant_p'],'Position',[275   305   305   335]);\n    set_param([gcb,'/Constant_p'],'Value','1e5');\n "
+	  "   add_line(gcb,'Constant_p/1','rhofluid/4');\n    \n    add_block('built-in/Constant',[gcb,'/Constant_Type']);\n  "
+	  "  set_param([gcb,'/Constant_Type'],'Position',[275    95   305   125]);\n    set_param([gcb,'/Constant_Type'],'Valu"
+	  "e','1');\n    add_line(gcb,'Constant_Type/1','rhofluid/1');\n    \n    add_block('built-in/Constant',[gcb,'/Constan"
+	  "t_Mix']);\n    set_param([gcb,'/Constant_Mix'],'Position',[275   165   305   195]);\n    set_param([gcb,'/Constant_"
+	  "Mix'],'Value','0.0');\n    add_line(gcb,'Constant_Mix/1','rhofluid/2');\nend\n"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "INPUTARGUMENTS|MAXTOTALWARNINGS|MAXCONSECUTIVEWARNINGS|1|1|UNUSEDINPORTS|DEBUGLEVEL|WRITETOFILE|"
+	  "FILENAME"
+	  System {
+	    Name		    "CarlibWithErrorManagement1"
+	    Location		    [854, 300, 1584, 822]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "T"
+	      SID		      "19660"
+	      Position		      [55, 243, 85, 257]
+	      ZOrder		      4404
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "p"
+	      SID		      "19662"
+	      Position		      [55, 313, 85, 327]
+	      ZOrder		      4406
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Fluid_Type"
+	      SID		      "19664"
+	      Position		      [55, 103, 85, 117]
+	      ZOrder		      4408
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Fluid_Mix"
+	      SID		      "19666"
+	      Position		      [55, 173, 85, 187]
+	      ZOrder		      4410
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      S-Function
+	      Name		      "rhofluid"
+	      SID		      "399"
+	      Ports		      [4, 1]
+	      Position		      [350, 73, 470, 357]
+	      ZOrder		      -5
+	      FunctionName	      "rhofluid3"
+	      Parameters	      "DEBUGLEVEL-1,MAXTOTALWARNINGS,MAXCONSECUTIVEWARNINGS,WRITETOFILE,FILENAME"
+	      EnableBusSupport	      off
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "density"
+	      SID		      "400"
+	      Position		      [535, 208, 565, 222]
+	      ZOrder		      -23
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "rhofluid"
+	      SrcPort		      1
+	      DstBlock		      "density"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "T"
+	      SrcPort		      1
+	      DstBlock		      "rhofluid"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "p"
+	      SrcPort		      1
+	      DstBlock		      "rhofluid"
+	      DstPort		      4
+	    }
+	    Line {
+	      SrcBlock		      "Fluid_Type"
+	      SrcPort		      1
+	      DstBlock		      "rhofluid"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Fluid_Mix"
+	      SrcPort		      1
+	      DstBlock		      "rhofluid"
+	      DstPort		      2
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "ConstantValue"
+	  SID			  "18208"
+	  Ports			  [4, 1]
+	  Position		  [190, 434, 290, 476]
+	  ZOrder		  -19
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  VariantObject		  "ConstantValue"
+	  MaskPromptString	  "INPUTARGUMENTS|CONSTANTVALUE|DUMMY|ACTIVE|UNUSEDINPORTS"
+	  MaskStyleString	  "edit,edit,edit,edit,edit"
+	  MaskVariables		  "INPUTARGUMENTS=@1;CONSTANTVALUE=@2;DUMMY=@3;ACTIVE=@4;UNUSEDINPORTS=@5;"
+	  MaskTunableValueString  "on,on,on,on,on"
+	  MaskCallbackString	  "||||"
+	  MaskEnableString	  "on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,on"
+	  MaskToolTipString	  "on,on,on,on,on"
+	  MaskInitialization	  "Inports=find_system(gcb,'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType'"
+	  ",'Inport');\nConstants=find_system(gcb,'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','Const"
+	  "ant');\nTerminators=find_system(gcb,'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','Terminat"
+	  "or');\n\n%%delete lines, Constants and Terminators\n%delete all lines\nfor Count=1:numel(Inports)\n    AuxVar=get_p"
+	  "aram(Inports{Count},'LineHandles');\n    for Count2=1:numel(AuxVar.Outport)\n        if AuxVar.Outport>=0\n        "
+	  "    delete_line(AuxVar.Outport(Count2));\n        end\n    end\nend\nfor Count=1:numel(Constants)\n    AuxVar=get_p"
+	  "aram(Constants{Count},'LineHandles');\n    for Count2=1:numel(AuxVar.Outport)\n        if AuxVar.Outport>=0 && ~sum"
+	  "(strfind(Constants{Count},'ConstantValue'))\n            delete_line(AuxVar.Outport(Count2));\n        end\n    end"
+	  "\nend\nclear Count Count2 AuxVar;\n\n%delete all constants and terminators\nfor Count=1:numel(Constants)\n    if ~s"
+	  "um(strfind(Constants{Count},'ConstantValue'))\n        delete_block(Constants{Count})\n    end\nend\nfor Count=1:nu"
+	  "mel(Terminators)\n    delete_block(Terminators{Count})\nend\nclear Count;\n    \n%%add / delete inports and add con"
+	  "stants and lines\nif ACTIVE==1\n    if INPUTARGUMENTS==1 %T p ID Mix\n        %delete all not needed inports\n     "
+	  "   for Count=5:numel(Inports)\n            delete_block(Inports{Count});\n        end\n        InportsMyParent=find"
+	  "_system(get_param(gcb,'Parent'),'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','Inport');\n "
+	  "       for Count=5:numel(InportsMyParent)\n            delete_block(InportsMyParent{Count});\n        end\n        "
+	  "clear InPortsMyParent;\n        clear Count;\n        \n        %add / rename Inports\n        if numel(Inports)>=1"
+	  "\n            set_param(Inports{1},'Name','T');\n        else\n            add_block('built-in/Inport',[gcb,'/T']);"
+	  "\n        end\n        set_param([gcb,'/T'],'Position',[55    50    85   64]);\n        add_block('built-in/Termina"
+	  "tor',[gcb,'/Terminator_T']);\n        set_param([gcb,'/Terminator_T'],'Position',[155   47    175   67]);\n        "
+	  "add_line(gcb,'T/1','Terminator_T/1');\n        if numel(Inports)>=2\n            set_param(Inports{2},'Name','p');\n"
+	  "        else\n            add_block('built-in/Inport',[gcb,'/p']);\n        end\n        set_param([gcb,'/p'],'Posi"
+	  "tion',[55    100    85   114]);\n        add_block('built-in/Terminator',[gcb,'/Terminator_p']);\n        set_param"
+	  "([gcb,'/Terminator_p'],'Position',[155   97    175   117]);\n        add_line(gcb,'p/1','Terminator_p/1');\n       "
+	  " if numel(Inports)>=3\n            set_param(Inports{3},'Name','Fluid_Type');\n        else\n            add_block("
+	  "'built-in/Inport',[gcb,'/Fluid_Type']);\n        end\n        set_param([gcb,'/Fluid_Type'],'Position',[55   150   "
+	  " 85   164]);\n        add_block('built-in/Terminator',[gcb,'/Terminator_Type']);\n        set_param([gcb,'/Terminat"
+	  "or_Type'],'Position',[155   147    175   167]);\n        add_line(gcb,'Fluid_Type/1','Terminator_Type/1');\n       "
+	  " if numel(Inports)>=4\n            set_param(Inports{4},'Name','Fluid_Mix');\n        else\n            add_block('"
+	  "built-in/Inport',[gcb,'/Fluid_Mix']);\n        end\n        set_param([gcb,'/Fluid_Mix'],'Position',[55   200    85"
+	  "   214]);\n        add_block('built-in/Terminator',[gcb,'/Terminator_Mix']);\n        set_param([gcb,'/Terminator_M"
+	  "ix'],'Position',[155   197    175   217]);\n        add_line(gcb,'Fluid_Mix/1','Terminator_Mix/1');\n    elseif INP"
+	  "UTARGUMENTS==2 %no input\n        %delete all unused inports\n        for Count=1:numel(Inports)\n            delet"
+	  "e_block(Inports{Count});\n        end\n        InportsMyParent=find_system(get_param(gcb,'Parent'),'LookUnderMasks'"
+	  ",'all','FollowLinks','on','SearchDepth',1,'BlockType','Inport');\n        for Count=1:numel(InportsMyParent)\n     "
+	  "       delete_block(InportsMyParent{Count});\n        end\n        clear InPortsMyParent;\n        clear Count;\n  "
+	  "  elseif INPUTARGUMENTS==3 %THV\n        %delete all unused inports\n        for Count=2:numel(Inports)\n          "
+	  "  delete_block(Inports{Count});\n        end\n        InportsMyParent=find_system(get_param(gcb,'Parent'),'LookUnde"
+	  "rMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','Inport');\n        for Count=2:numel(InportsMyParent)"
+	  "\n            delete_block(InportsMyParent{Count});\n        end\n        clear InPortsMyParent;\n        clear Cou"
+	  "nt;\n        \n        if numel(Inports)>=1\n            set_param(Inports{1},'Name','THV');\n        else\n       "
+	  "     add_block('built-in/Inport',[gcb,'/THV']);\n        end\n        set_param([gcb,'/THV'],'Position',[55    50  "
+	  "  85   64]);\n        add_block('built-in/Terminator',[gcb,'/Terminator_THV']);\n        set_param([gcb,'/Terminato"
+	  "r_THV'],'Position',[155   47    175   67]);\n        add_line(gcb,'THV/1','Terminator_THV/1');\n    elseif INPUTARG"
+	  "UMENTS==4 %THB\n        %delete all unused inports\n        for Count=2:numel(Inports)\n            delete_block(In"
+	  "ports{Count});\n        end\n        InportsMyParent=find_system(get_param(gcb,'Parent'),'LookUnderMasks','all','Fo"
+	  "llowLinks','on','SearchDepth',1,'BlockType','Inport');\n        for Count=2:numel(InportsMyParent)\n            del"
+	  "ete_block(InportsMyParent{Count});\n        end\n        clear InPortsMyParent;\n        clear Count;\n        \n  "
+	  "      if numel(Inports)>=1\n            set_param(Inports{1},'Name','THB');\n        else\n            add_block('b"
+	  "uilt-in/Inport',[gcb,'/THB']);\n        end\n        set_param([gcb,'/THB'],'Position',[55    50    85   64]);\n   "
+	  "     add_block('built-in/Terminator',[gcb,'/Terminator_THB']);\n        set_param([gcb,'/Terminator_THB'],'Position"
+	  "',[155   47    175   67]);\n        add_line(gcb,'THB/1','Terminator_THB/1');\n    end\nelse\n    for Count=numel(U"
+	  "NUSEDINPORTS)+1:numel(Inports) %delete all unused inports\n        delete_block(Inports{Count});\n    end\n    for "
+	  "Count=1:numel(UNUSEDINPORTS)\n        if numel(Inports)<Count\n            add_block('built-in/Inport',[gcb,'/',UNU"
+	  "SEDINPORTS{Count}]);\n        else\n            set_param(Inports{Count},'Name',UNUSEDINPORTS{Count});\n        end"
+	  "\n        set_param([gcb,'/',UNUSEDINPORTS{Count}],'Position',[55 50*Count 85 50*Count+14]);\n        add_block('bu"
+	  "ilt-in/Terminator',[gcb,'/Terminator_',UNUSEDINPORTS{Count}]);\n        set_param([gcb,'/Terminator_',UNUSEDINPORTS"
+	  "{Count}],'Position',[155 50*Count-3 175 50*Count+17]);\n        add_line(gcb,[UNUSEDINPORTS{Count},'/1'],['Terminat"
+	  "or_',UNUSEDINPORTS{Count},'/1']);\n    end\nend"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "INPUTARGUMENTS|CONSTANTVALUE|1|0|UNUSEDINPORTS"
+	  System {
+	    Name		    "ConstantValue"
+	    Location		    [1026, 757, 1778, 1057]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "T"
+	      SID		      "19624"
+	      Position		      [55, 48, 85, 62]
+	      ZOrder		      474
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "p"
+	      SID		      "19626"
+	      Position		      [55, 98, 85, 112]
+	      ZOrder		      476
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Fluid_Type"
+	      SID		      "19628"
+	      Position		      [55, 148, 85, 162]
+	      ZOrder		      478
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Fluid_Mix"
+	      SID		      "19630"
+	      Position		      [55, 198, 85, 212]
+	      ZOrder		      480
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "ConstantValue"
+	      SID		      "18606"
+	      Position		      [330, 40, 360, 70]
+	      ZOrder		      -4
+	      Value		      "CONSTANTVALUE"
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator_Fluid_Mix"
+	      SID		      "26955"
+	      Position		      [155, 195, 175, 215]
+	      ZOrder		      1337
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator_Fluid_Type"
+	      SID		      "26954"
+	      Position		      [155, 145, 175, 165]
+	      ZOrder		      1336
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator_T"
+	      SID		      "26952"
+	      Position		      [155, 45, 175, 65]
+	      ZOrder		      1334
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator_p"
+	      SID		      "26953"
+	      Position		      [155, 95, 175, 115]
+	      ZOrder		      1335
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "density"
+	      SID		      "18219"
+	      Position		      [405, 48, 435, 62]
+	      ZOrder		      -23
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "ConstantValue"
+	      SrcPort		      1
+	      DstBlock		      "density"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "T"
+	      SrcPort		      1
+	      DstBlock		      "Terminator_T"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "p"
+	      SrcPort		      1
+	      DstBlock		      "Terminator_p"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Fluid_Type"
+	      SrcPort		      1
+	      DstBlock		      "Terminator_Fluid_Type"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Fluid_Mix"
+	      SrcPort		      1
+	      DstBlock		      "Terminator_Fluid_Mix"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Lookup"
+	  SID			  "59"
+	  Ports			  [4, 1]
+	  Position		  [190, 294, 290, 336]
+	  ZOrder		  -19
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  VariantObject		  "Lookup"
+	  MaskPromptString	  "INPUTARGUMENTS|TLOOKUP|PLOOKUP|MIXLOOKUP|DENSITYLOOKUP|DUMMY|ACTIVE|UNUSEDINPORTS"
+	  MaskStyleString	  "edit,edit,edit,edit,edit,edit,edit,edit"
+	  MaskVariables		  "INPUTARGUMENTS=@1;TLOOKUP=@2;PLOOKUP=@3;MIXLOOKUP=@4;DENSITYLOOKUP=@5;DUMMY=@6;ACTIVE=@7;UNUSEDIN"
+	  "PORTS=@8;"
+	  MaskTunableValueString  "on,on,on,on,on,on,on,on"
+	  MaskCallbackString	  "|||||||"
+	  MaskEnableString	  "on,on,on,on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,on,on,on,on"
+	  MaskToolTipString	  "on,on,on,on,on,on,on,on"
+	  MaskInitialization	  "Inports=find_system(gcb,'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType'"
+	  ",'Inport');\nConstants=find_system(gcb,'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','Const"
+	  "ant');\nSelectors=find_system(gcb,'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','Selector')"
+	  ";\nBusSelectors=find_system(gcb,'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','BusSelector'"
+	  ");\nDemuxes=find_system(gcb,'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','Demux');\nTermin"
+	  "ators=find_system(gcb,'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','Terminator');\n\n%%del"
+	  "ete lines, Demuxes, Selectors, Bus Selectors, Constants\n%delete all lines\nfor Count=1:numel(Inports)\n    AuxVar="
+	  "get_param(Inports{Count},'LineHandles');\n    for Count2=1:numel(AuxVar.Outport)\n        if AuxVar.Outport>=0\n   "
+	  "         delete_line(AuxVar.Outport(Count2));\n        end\n    end\nend\nfor Count=1:numel(Constants)\n    AuxVar="
+	  "get_param(Constants{Count},'LineHandles');\n    for Count2=1:numel(AuxVar.Outport)\n        if AuxVar.Outport>=0\n "
+	  "           delete_line(AuxVar.Outport(Count2));\n        end\n    end\nend\nfor Count=1:numel(Selectors)\n    AuxVa"
+	  "r=get_param(Selectors{Count},'LineHandles');\n    for Count2=1:numel(AuxVar.Outport)\n        if AuxVar.Outport>=0\n"
+	  "            delete_line(AuxVar.Outport(Count2));\n        end\n    end\nend\nfor Count=1:numel(BusSelectors)\n    A"
+	  "uxVar=get_param(BusSelectors{Count},'LineHandles');\n    for Count2=1:numel(AuxVar.Outport)\n        if AuxVar.Outp"
+	  "ort>=0\n            delete_line(AuxVar.Outport(Count2));\n        end\n    end\nend\nfor Count=1:numel(Demuxes)\n  "
+	  "  AuxVar=get_param(Demuxes{Count},'LineHandles');\n    for Count2=1:numel(AuxVar.Outport)\n        if AuxVar.Outpor"
+	  "t>=0\n            delete_line(AuxVar.Outport(Count2));\n        end\n    end\nend\nclear Count Count2 AuxVar;\n\n%d"
+	  "elete all constants, selectos, bus selectors and demuxes\nfor Count=1:numel(Constants)\n    delete_block(Constants{"
+	  "Count})\nend\nfor Count=1:numel(Selectors)\n    delete_block(Selectors{Count})\nend\nfor Count=1:numel(BusSelectors"
+	  ")\n    delete_block(BusSelectors{Count})\nend\nfor Count=1:numel(Demuxes)\n    delete_block(Demuxes{Count})\nend\nf"
+	  "or Count=1:numel(Terminators)\n    delete_block(Terminators{Count})\nend\nclear Count;\n    \n%%add / delete inport"
+	  "s and add constants and lines\nif ACTIVE==1\n    if INPUTARGUMENTS==1 %T p ID Mix\n        %delete all not needed i"
+	  "nports\n        for Count=5:numel(Inports)\n            delete_block(Inports{Count});\n        end\n        Inports"
+	  "MyParent=find_system(get_param(gcb,'Parent'),'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType',"
+	  "'Inport');\n        for Count=5:numel(InportsMyParent)\n            delete_block(InportsMyParent{Count});\n        "
+	  "end\n        clear InPortsMyParent;\n        \n        if numel(Inports)>=1\n            set_param(Inports{1},'Name"
+	  "','T');\n        else\n            add_block('built-in/Inport',[gcb,'/T']);\n        end\n        set_param([gcb,'/"
+	  "T'],'Position',[55    63    85    77]);\n        add_line(gcb,'T/1','LookupTable/1');\n        if numel(Inports)>=2"
+	  "\n            set_param(Inports{2},'Name','p');\n        else\n            add_block('built-in/Inport',[gcb,'/p']);"
+	  "\n        end\n        set_param([gcb,'/p'],'Position',[55    93    85   107]);\n        add_line(gcb,'p/1','Lookup"
+	  "Table/2');\n        if numel(Inports)>=3\n            set_param(Inports{3},'Name','Fluid_Type');\n        else\n   "
+	  "         add_block('built-in/Inport',[gcb,'/Fluid_Type']);\n        end\n        set_param([gcb,'/Fluid_Type'],'Pos"
+	  "ition',[55   153    85   167]);\n        add_block('built-in/Terminator',[gcb,'/Terminator_Type']);\n        set_pa"
+	  "ram([gcb,'/Terminator_Type'],'Position',[155   150    175   170]);\n        add_line(gcb,'Fluid_Type/1','Terminator"
+	  "_Type/1');\n        if numel(Inports)>=4\n            set_param(Inports{4},'Name','Fluid_Mix');\n        else\n    "
+	  "        add_block('built-in/Inport',[gcb,'/Fluid_Mix']);\n        end\n        set_param([gcb,'/Fluid_Mix'],'Positi"
+	  "on',[55   123    85   137]);\n        add_line(gcb,'Fluid_Mix/1','LookupTable/3');\n    elseif INPUTARGUMENTS==2 %T"
+	  ", p, Mix\n        %delete all not needed inports\n        for Count=4:numel(Inports)\n            delete_block(Inpo"
+	  "rts{Count});\n        end\n        InportsMyParent=find_system(get_param(gcb,'Parent'),'LookUnderMasks','all','Foll"
+	  "owLinks','on','SearchDepth',1,'BlockType','Inport');\n        for Count=4:numel(InportsMyParent)\n            delet"
+	  "e_block(InportsMyParent{Count});\n        end\n        clear InportsMyParent;\n        \n        %add / rename inpo"
+	  "rts\n        if numel(Inports)>=1\n            set_param(Inports{1},'Name','T');\n        else\n            add_blo"
+	  "ck('built-in/Inport',[gcb,'/T']);\n        end\n        set_param([gcb,'/T'],'Position',[55    63    85    77]);\n "
+	  "       add_line(gcb,'T/1','LookupTable/1');\n        if numel(Inports)>=2\n            set_param(Inports{2},'Name',"
+	  "'p');\n        else\n            add_block('built-in/Inport',[gcb,'/p']);\n        end\n        set_param([gcb,'/p'"
+	  "],'Position',[55    93    85   107]);\n        add_line(gcb,'p/1','LookupTable/2');\n        if numel(Inports)>=3\n"
+	  "            set_param(Inports{3},'Name','Fluid_Mix');\n        else\n            add_block('built-in/Inport',[gcb,'"
+	  "/Fluid_Mix']);\n        end\n        set_param([gcb,'/Fluid_Mix'],'Position',[55   123    85   137]);\n        add_"
+	  "line(gcb,'Fluid_Mix/1','LookupTable/3');\n    elseif INPUTARGUMENTS==3 %THV\n        for Count=2:numel(Inports) %de"
+	  "lete all but the first inport\n            delete_block(Inports{Count});\n        end\n        InportsMyParent=find"
+	  "_system(get_param(gcb,'Parent'),'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','Inport');\n "
+	  "       for Count=2:numel(InportsMyParent)\n            delete_block(InportsMyParent{Count});\n        end\n        "
+	  "clear InportsMyParent;\n        clear Count;\n        \n        if numel(Inports)>=1\n            set_param(Inports"
+	  "{1},'Name','THV');\n        else\n            add_block('built-in/Inport',[gcb,'/THV']);\n        end\n        set_"
+	  "param([gcb,'/THV'],'Position',[55    93    85   107]);\n        add_block('built-in/Selector',[gcb,'/Selector']); %"
+	  "add a selector\n        set_param([gcb,'/Selector'],'Position',[125    81   165   119]);\n        set_param([gcb,'/"
+	  "Selector'],'InputPortWidth','-1')\n        set_param([gcb,'/Selector'],'Indices','[2 4 6]');\n        add_block('bu"
+	  "ilt-in/Demux',[gcb,'/Demux']); %add a demux\n        set_param([gcb,'/Demux'],'Position',[220    52   225   148]);\n"
+	  "        set_param([gcb,'/Demux'],'Outputs','3');\n        add_line(gcb,'THV/1','Selector/1');\n        add_line(gcb"
+	  ",'Selector/1','Demux/1');\n        add_line(gcb,'Demux/1','LookupTable/1');\n        add_line(gcb,'Demux/2','Lookup"
+	  "Table/2');\n        add_line(gcb,'Demux/3','LookupTable/3');\n    elseif INPUTARGUMENTS==4 %THB\n        for Count="
+	  "2:numel(Inports) %delete all but the first inport\n            delete_block(Inports{Count});\n        end\n        "
+	  "InportsMyParent=find_system(get_param(gcb,'Parent'),'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'Bloc"
+	  "kType','Inport');\n        for Count=2:numel(InportsMyParent)\n            delete_block(InportsMyParent{Count});\n "
+	  "       end\n        clear InportsMyParent;\n        clear Count;\n        \n        if numel(Inports)>=1\n         "
+	  "   set_param(Inports{1},'Name','THB');\n        else\n            add_block('built-in/Inport',[gcb,'/THB']);\n     "
+	  "   end\n        set_param([gcb,'/THB'],'Position',[55    93    85   107]);\n        add_block('built-in/BusSelector"
+	  "',[gcb,'/BusSelector']); %add a bus selector\n        set_param([gcb,'/BusSelector'],'Position',[220    53   225   "
+	  "147]);\n        set_param([gcb,'/BusSelector'],'OutputSignals','Temperature,Pressure,FluidMix');\n        add_line("
+	  "gcb,'THB/1','BusSelector/1');\n        add_line(gcb,'BusSelector/1','LookupTable/1');\n        add_line(gcb,'BusSel"
+	  "ector/2','LookupTable/2');\n        add_line(gcb,'BusSelector/3','LookupTable/3');\n    end\nelse\n    %delete all "
+	  "unused inports\n    for Count=numel(UNUSEDINPORTS)+1:numel(Inports)\n        delete_block(Inports{Count});\n    end"
+	  "\n    \n    for Count=1:numel(UNUSEDINPORTS)\n        if numel(Inports)<Count\n            add_block('built-in/Inpo"
+	  "rt',[gcb,'/',UNUSEDINPORTS{Count}]);\n        else\n            set_param(Inports{Count},'Name',UNUSEDINPORTS{Count"
+	  "});\n        end\n        set_param([gcb,'/',UNUSEDINPORTS{Count}],'Position',[55 50*Count 85 50*Count+14]);\n     "
+	  "   add_block('built-in/Terminator',[gcb,'/Terminator_',UNUSEDINPORTS{Count}]);\n        set_param([gcb,'/Terminator"
+	  "_',UNUSEDINPORTS{Count}],'Position',[155 50*Count-3 175 50*Count+17]);\n        add_line(gcb,[UNUSEDINPORTS{Count},"
+	  "'/1'],['Terminator_',UNUSEDINPORTS{Count},'/1']);\n    end\n    add_block('built-in/Constant',[gcb,'/Constant_T']);"
+	  "\n    set_param([gcb,'/Constant_T'],'Position',[260    35   290    65]);\n    set_param([gcb,'/Constant_T'],'Value'"
+	  ",'20.0');\n    add_line(gcb,'Constant_T/1','LookupTable/1');\n    \n    add_block('built-in/Constant',[gcb,'/Consta"
+	  "nt_p']);\n    set_param([gcb,'/Constant_p'],'Position',[260    85   290    115]);\n    set_param([gcb,'/Constant_p'"
+	  "],'Value','1e5');\n    add_line(gcb,'Constant_p/1','LookupTable/2');\n    \n    add_block('built-in/Constant',[gcb,"
+	  "'/Constant_Mix']);\n    set_param([gcb,'/Constant_Mix'],'Position',[260    135   290    165]);\n    set_param([gcb,"
+	  "'/Constant_Mix'],'Value','0.0');\n    add_line(gcb,'Constant_Mix/1','LookupTable/3');\nend\n"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "INPUTARGUMENTS|TLOOKUP|PLOOKUP|MIXLOOKUP|DENSITYLOOKUP|1|0|UNUSEDINPORTS"
+	  System {
+	    Name		    "Lookup"
+	    Location		    [1114, 780, 1902, 1081]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "T"
+	      SID		      "19672"
+	      Position		      [55, 48, 85, 62]
+	      ZOrder		      2514
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "p"
+	      SID		      "19674"
+	      Position		      [55, 98, 85, 112]
+	      ZOrder		      2516
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Fluid_Type"
+	      SID		      "19676"
+	      Position		      [55, 148, 85, 162]
+	      ZOrder		      2518
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Fluid_Mix"
+	      SID		      "19678"
+	      Position		      [55, 198, 85, 212]
+	      ZOrder		      2520
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant_Mix"
+	      SID		      "26962"
+	      Position		      [260, 135, 290, 165]
+	      ZOrder		      3962
+	      Value		      "0.0"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant_T"
+	      SID		      "26960"
+	      Position		      [260, 35, 290, 65]
+	      ZOrder		      3960
+	      Value		      "20.0"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant_p"
+	      SID		      "26961"
+	      Position		      [260, 85, 290, 115]
+	      ZOrder		      3961
+	      Value		      "1e5"
+	    }
+	    Block {
+	      BlockType		      Lookup_n-D
+	      Name		      "LookupTable"
+	      SID		      "64"
+	      Ports		      [3, 1]
+	      Position		      [330, 58, 395, 142]
+	      ZOrder		      -9
+	      NumberOfTableDimensions "3"
+	      BreakpointsForDimension1 "TLOOKUP"
+	      BreakpointsForDimension2 "PLOOKUP"
+	      BreakpointsForDimension3 "MIXLOOKUP"
+	      Table		      "DENSITYLOOKUP"
+	      DiagnosticForOutOfRangeInput "Warning"
+	      RndMeth		      "Simplest"
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator_Fluid_Mix"
+	      SID		      "26959"
+	      Position		      [155, 195, 175, 215]
+	      ZOrder		      3959
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator_Fluid_Type"
+	      SID		      "26958"
+	      Position		      [155, 145, 175, 165]
+	      ZOrder		      3958
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator_T"
+	      SID		      "26956"
+	      Position		      [155, 45, 175, 65]
+	      ZOrder		      3956
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator_p"
+	      SID		      "26957"
+	      Position		      [155, 95, 175, 115]
+	      ZOrder		      3957
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "density"
+	      SID		      "66"
+	      Position		      [445, 93, 475, 107]
+	      ZOrder		      -23
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "LookupTable"
+	      SrcPort		      1
+	      DstBlock		      "density"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "T"
+	      SrcPort		      1
+	      DstBlock		      "Terminator_T"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "p"
+	      SrcPort		      1
+	      DstBlock		      "Terminator_p"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Fluid_Type"
+	      SrcPort		      1
+	      DstBlock		      "Terminator_Fluid_Type"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Fluid_Mix"
+	      SrcPort		      1
+	      DstBlock		      "Terminator_Fluid_Mix"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant_T"
+	      SrcPort		      1
+	      DstBlock		      "LookupTable"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant_p"
+	      SrcPort		      1
+	      DstBlock		      "LookupTable"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Constant_Mix"
+	      SrcPort		      1
+	      DstBlock		      "LookupTable"
+	      DstPort		      3
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Polynomial"
+	  SID			  "11"
+	  Ports			  [4, 1]
+	  Position		  [190, 364, 290, 406]
+	  ZOrder		  -19
+	  MinAlgLoopOccurrences	  off
+	  PropExecContextOutsideSubsystem off
+	  RTWSystemCode		  "Auto"
+	  FunctionWithSeparateData off
+	  Opaque		  off
+	  RequestExecContextInheritance	off
+	  MaskHideContents	  off
+	  VariantObject		  "Polynomial"
+	  MaskPromptString	  "INPUTARGUMENTS|POLYNOMIALCOEFFICIENTS|DUMMY|ACTIVE|UNUSEDINPORTS"
+	  MaskStyleString	  "edit,edit,edit,edit,edit"
+	  MaskVariables		  "INPUTARGUMENTS=@1;POLYNOMIALCOEFFICIENTS=@2;DUMMY=@3;ACTIVE=@4;UNUSEDINPORTS=@5;"
+	  MaskTunableValueString  "on,on,on,on,on"
+	  MaskCallbackString	  "||||"
+	  MaskEnableString	  "on,on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on,on"
+	  MaskToolTipString	  "on,on,on,on,on"
+	  MaskInitialization	  "Inports=find_system(gcb,'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType'"
+	  ",'Inport');\nConstants=find_system(gcb,'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','Const"
+	  "ant');\nSelectors=find_system(gcb,'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','Selector')"
+	  ";\nBusSelectors=find_system(gcb,'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','BusSelector'"
+	  ");\nTerminators=find_system(gcb,'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','Terminator')"
+	  ";\n\n%%delete lines, Demuxes, Selectors, Bus Selectors, Constants and\n%%Terminators\n%delete all lines\nfor Count="
+	  "1:numel(Inports)\n    AuxVar=get_param(Inports{Count},'LineHandles');\n    for Count2=1:numel(AuxVar.Outport)\n    "
+	  "    if AuxVar.Outport>=0\n            delete_line(AuxVar.Outport(Count2));\n        end\n    end\nend\nfor Count=1:"
+	  "numel(Constants)\n    AuxVar=get_param(Constants{Count},'LineHandles');\n    for Count2=1:numel(AuxVar.Outport)\n  "
+	  "      if AuxVar.Outport>=0\n            delete_line(AuxVar.Outport(Count2));\n        end\n    end\nend\nfor Count="
+	  "1:numel(Selectors)\n    AuxVar=get_param(Selectors{Count},'LineHandles');\n    for Count2=1:numel(AuxVar.Outport)\n"
+	  "        if AuxVar.Outport>=0\n            delete_line(AuxVar.Outport(Count2));\n        end\n    end\nend\nfor Coun"
+	  "t=1:numel(BusSelectors)\n    AuxVar=get_param(BusSelectors{Count},'LineHandles');\n    for Count2=1:numel(AuxVar.Ou"
+	  "tport)\n        if AuxVar.Outport>=0\n            delete_line(AuxVar.Outport(Count2));\n        end\n    end\nend\n"
+	  "clear Count Count2 AuxVar;\n\n%delete all constants, selectos, bus selectors and terminators\nfor Count=1:numel(Con"
+	  "stants)\n    delete_block(Constants{Count})\nend\nfor Count=1:numel(Selectors)\n    delete_block(Selectors{Count})\n"
+	  "end\nfor Count=1:numel(BusSelectors)\n    delete_block(BusSelectors{Count})\nend\nfor Count=1:numel(Terminators)\n "
+	  "   delete_block(Terminators{Count})\nend\nclear Count;\n    \n%%add / delete inports and add constants and lines\ni"
+	  "f ACTIVE==1\n    if INPUTARGUMENTS==1 %T p ID Mix\n        %delete all not needed inports\n        for Count=5:nume"
+	  "l(Inports)\n            delete_block(Inports{Count});\n        end\n        InportsMyParent=find_system(get_param(g"
+	  "cb,'Parent'),'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','Inport');\n        for Count=5:"
+	  "numel(InportsMyParent)\n            delete_block(InportsMyParent{Count});\n        end\n        clear InPortsMyPare"
+	  "nt;\n        clear Count;\n        \n        %add / rename Inports\n        if numel(Inports)>=1\n            set_p"
+	  "aram(Inports{1},'Name','T');\n        else\n            add_block('built-in/Inport',[gcb,'/T']);\n        end\n    "
+	  "    set_param([gcb,'/T'],'Position',[55    50    85   64]);\n        add_line(gcb,'T/1','Polynomial/1');\n        i"
+	  "f numel(Inports)>=2\n            set_param(Inports{2},'Name','p');\n        else\n            add_block('built-in/I"
+	  "nport',[gcb,'/p']);\n        end\n        set_param([gcb,'/p'],'Position',[55    100    85   114]);\n        add_bl"
+	  "ock('built-in/Terminator',[gcb,'/Terminator_p']);\n        set_param([gcb,'/Terminator_p'],'Position',[155   97    "
+	  "175   117]);\n        add_line(gcb,'p/1','Terminator_p/1');\n        if numel(Inports)>=3\n            set_param(In"
+	  "ports{3},'Name','Fluid_Type');\n        else\n            add_block('built-in/Inport',[gcb,'/Fluid_Type']);\n      "
+	  "  end\n        set_param([gcb,'/Fluid_Type'],'Position',[55   150    85   164]);\n        add_block('built-in/Termi"
+	  "nator',[gcb,'/Terminator_Type']);\n        set_param([gcb,'/Terminator_Type'],'Position',[155   147    175   167]);"
+	  "\n        add_line(gcb,'Fluid_Type/1','Terminator_Type/1');\n        if numel(Inports)>=4\n            set_param(In"
+	  "ports{4},'Name','Fluid_Mix');\n        else\n            add_block('built-in/Inport',[gcb,'/Fluid_Mix']);\n        "
+	  "end\n        set_param([gcb,'/Fluid_Mix'],'Position',[55   200    85   214]);\n        add_block('built-in/Terminat"
+	  "or',[gcb,'/Terminator_Mix']);\n        set_param([gcb,'/Terminator_Mix'],'Position',[155   197    175   217]);\n   "
+	  "     add_line(gcb,'Fluid_Mix/1','Terminator_Mix/1');\n    elseif INPUTARGUMENTS==2 %T\n        %delete all unused i"
+	  "nports\n        for Count=2:numel(Inports)\n            delete_block(Inports{Count});\n        end\n        Inports"
+	  "MyParent=find_system(get_param(gcb,'Parent'),'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType',"
+	  "'Inport');\n        for Count=2:numel(InportsMyParent)\n            delete_block(InportsMyParent{Count});\n        "
+	  "end\n        clear InPortsMyParent;\n        clear Count;\n        \n        if numel(Inports)>=1\n            set_"
+	  "param(Inports{1},'Name','T');\n        else\n            add_block('built-in/Inport',[gcb,'/T']);\n        end\n   "
+	  "     set_param([gcb,'/T'],'Position',[55    50    85   64]);\n        add_line(gcb,'T/1','Polynomial/1');\n    else"
+	  "if INPUTARGUMENTS==3 %THV\n        %delete all unused inports\n        for Count=2:numel(Inports)\n            dele"
+	  "te_block(Inports{Count});\n        end\n        InportsMyParent=find_system(get_param(gcb,'Parent'),'LookUnderMasks"
+	  "','all','FollowLinks','on','SearchDepth',1,'BlockType','Inport');\n        for Count=2:numel(InportsMyParent)\n    "
+	  "        delete_block(InportsMyParent{Count});\n        end\n        clear InPortsMyParent;\n        clear Count;\n "
+	  "       \n        if numel(Inports)>=1\n            set_param(Inports{1},'Name','THV');\n        else\n            a"
+	  "dd_block('built-in/Inport',[gcb,'/THV']);\n        end\n        set_param([gcb,'/THV'],'Position',[55    50    85  "
+	  " 64]);\n        add_block('built-in/Selector',[gcb,'/Selector']); %add a selector\n        set_param([gcb,'/Selecto"
+	  "r'],'Position',[125    36   165    74]);\n        set_param([gcb,'/Selector'],'InputPortWidth','-1')\n        set_p"
+	  "aram([gcb,'/Selector'],'Indices','[2]');\n        add_line(gcb,'THV/1','Selector/1');\n        add_line(gcb,'Select"
+	  "or/1','Polynomial/1');\n    elseif INPUTARGUMENTS==4 %THB\n        %delete all unused inports\n        for Count=2:"
+	  "numel(Inports)\n            delete_block(Inports{Count});\n        end\n        InportsMyParent=find_system(get_par"
+	  "am(gcb,'Parent'),'LookUnderMasks','all','FollowLinks','on','SearchDepth',1,'BlockType','Inport');\n        for Coun"
+	  "t=2:numel(InportsMyParent)\n            delete_block(InportsMyParent{Count});\n        end\n        clear InPortsMy"
+	  "Parent;\n        clear Count;\n        \n        if numel(Inports)>=1\n            set_param(Inports{1},'Name','THB"
+	  "');\n        else\n            add_block('built-in/Inport',[gcb,'/THB']);\n        end\n        set_param([gcb,'/TH"
+	  "B'],'Position',[55    50    85   64]);\n        add_block('built-in/BusSelector',[gcb,'/BusSelector']); %add a bus "
+	  "selector\n        set_param([gcb,'/BusSelector'],'Position',[220    36   225    74]);\n        set_param([gcb,'/Bus"
+	  "Selector'],'OutputSignals','Temperature');\n        add_line(gcb,'THB/1','BusSelector/1');\n        add_line(gcb,'B"
+	  "usSelector/1','Polynomial/1');\n    end\nelse\n    for Count=numel(UNUSEDINPORTS)+1:numel(Inports) %delete all unus"
+	  "ed inports\n        delete_block(Inports{Count});\n    end\n    for Count=1:numel(UNUSEDINPORTS)\n        if numel("
+	  "Inports)<Count\n            add_block('built-in/Inport',[gcb,'/',UNUSEDINPORTS{Count}]);\n        else\n           "
+	  " set_param(Inports{Count},'Name',UNUSEDINPORTS{Count});\n        end\n        set_param([gcb,'/',UNUSEDINPORTS{Coun"
+	  "t}],'Position',[55 50*Count 85 50*Count+14]);\n        add_block('built-in/Terminator',[gcb,'/Terminator_',UNUSEDIN"
+	  "PORTS{Count}]);\n        set_param([gcb,'/Terminator_',UNUSEDINPORTS{Count}],'Position',[155 50*Count-3 175 50*Coun"
+	  "t+17]);\n        add_line(gcb,[UNUSEDINPORTS{Count},'/1'],['Terminator_',UNUSEDINPORTS{Count},'/1']);\n    end\n   "
+	  " add_block('built-in/Constant',[gcb,'/Constant_T']);\n    set_param([gcb,'/Constant_T'],'Position',[230    40   260"
+	  "    70]);\n    set_param([gcb,'/Constant_T'],'Value','20.0');\n    add_line(gcb,'Constant_T/1','Polynomial/1');\nen"
+	  "d"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskPortRotate	  "default"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "INPUTARGUMENTS|POLYNOMIALCOEFFICIENTS|1|0|UNUSEDINPORTS"
+	  System {
+	    Name		    "Polynomial"
+	    Location		    [115, 754, 867, 1054]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "T"
+	      SID		      "19683"
+	      Position		      [55, 48, 85, 62]
+	      ZOrder		      461
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "p"
+	      SID		      "19685"
+	      Position		      [55, 98, 85, 112]
+	      ZOrder		      463
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Fluid_Type"
+	      SID		      "19687"
+	      Position		      [55, 148, 85, 162]
+	      ZOrder		      465
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Fluid_Mix"
+	      SID		      "19689"
+	      Position		      [55, 198, 85, 212]
+	      ZOrder		      467
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Constant_T"
+	      SID		      "26967"
+	      Position		      [230, 40, 260, 70]
+	      ZOrder		      1505
+	      Value		      "20.0"
+	    }
+	    Block {
+	      BlockType		      Polyval
+	      Name		      "Polynomial"
+	      SID		      "28"
+	      Position		      [300, 40, 360, 70]
+	      ZOrder		      -18
+	      Coefs		      "POLYNOMIALCOEFFICIENTS"
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator_Fluid_Mix"
+	      SID		      "26966"
+	      Position		      [155, 195, 175, 215]
+	      ZOrder		      1504
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator_Fluid_Type"
+	      SID		      "26965"
+	      Position		      [155, 145, 175, 165]
+	      ZOrder		      1503
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator_T"
+	      SID		      "26963"
+	      Position		      [155, 45, 175, 65]
+	      ZOrder		      1501
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator_p"
+	      SID		      "26964"
+	      Position		      [155, 95, 175, 115]
+	      ZOrder		      1502
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "density"
+	      SID		      "29"
+	      Position		      [405, 48, 435, 62]
+	      ZOrder		      -23
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      SrcBlock		      "Polynomial"
+	      SrcPort		      1
+	      DstBlock		      "density"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "T"
+	      SrcPort		      1
+	      DstBlock		      "Terminator_T"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "p"
+	      SrcPort		      1
+	      DstBlock		      "Terminator_p"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Fluid_Type"
+	      SrcPort		      1
+	      DstBlock		      "Terminator_Fluid_Type"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Fluid_Mix"
+	      SrcPort		      1
+	      DstBlock		      "Terminator_Fluid_Mix"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Constant_T"
+	      SrcPort		      1
+	      DstBlock		      "Polynomial"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "density"
+	  SID			  "3"
+	  Position		  [415, 103, 445, 117]
+	  ZOrder		  -2
+	  IconDisplay		  "Port number"
+	}
+	Annotation {
+	  SID			  "4"
+	  Name			  "1) Only subsystems can be added as variant choices at this level\n2) Blocks cannot be connected at this l"
+	  "evel as connectivity is\nautomatically determined at simulation, based on the active variant"
+	  Position		  [91, 43]
+	  HorizontalAlignment	  "left"
+	}
+      }
+    }
+    Block {
+      BlockType		      Display
+      Name		      "Display"
+      SID		      "211"
+      Ports		      [1]
+      Position		      [615, 190, 705, 220]
+      ZOrder		      -1
+      Decimation	      "1"
+      Lockdown		      off
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Fluid_Mix"
+      SID		      "298"
+      Position		      [120, 265, 150, 295]
+      ZOrder		      -4
+      Value		      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Fluid_Type"
+      SID		      "297"
+      Position		      [120, 215, 150, 245]
+      ZOrder		      -4
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "T"
+      SID		      "295"
+      Position		      [120, 115, 150, 145]
+      ZOrder		      -4
+      Value		      "20"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "p"
+      SID		      "26807"
+      Position		      [120, 165, 150, 195]
+      ZOrder		      -4
+      Value		      "1e5"
+    }
+    Line {
+      SrcBlock		      "Density"
+      SrcPort		      1
+      DstBlock		      "Display"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "p"
+      SrcPort		      1
+      DstBlock		      "Density"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Fluid_Type"
+      SrcPort		      1
+      DstBlock		      "Density"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Fluid_Mix"
+      SrcPort		      1
+      DstBlock		      "Density"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "T"
+      SrcPort		      1
+      DstBlock		      "Density"
+      DstPort		      1
+    }
+  }
+}

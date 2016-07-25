@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="../css/default.css" type="text/css" media="screen" /> 
+	
+	
+	<title>THBCreator</title>
+	
+	<style type="text/css">
+	h1{
+		margin-left: 145px;
+		font-family: Calibri, sans-serif;
+		font-size: 18pt;
+		color:#5A5A5A;
+	}
+	h2{
+		margin-left: 145px;
+		font-family: Calibri, sans-serif;
+		font-size: 13.5pt;
+		color:#5A5A5A;
+	}
+	p {
+		margin-left: 145px;
+		font-family: Calibri, sans-serif;
+		font-size: 13.5pt;
+		color:#5A5A5A;
+	}
+	table {
+		margin-left: 145px;
+		font-family: Calibri, sans-serif;
+		font-size: 13.5pt;
+		color:#5A5A5A;
+	}
+	hr {margin-left: 145px;
+	    color:#A0A0A0 }
+	
+}
+	</style>
+
+</head>
+
+<body>
+	<div id='header'></div>
+	<div class='content'>
+	    
+		<hr size=10 noshade> </hr>
+		<h1>THBCreator</h1>
+		<hr size=2 noshade> </hr>
+
+
+			
+		<h2>Description</h2>
+		
+		<p>
+		The block THBCreator creates a THB.
+		</p>
+		
+		
+		<h2>Inputs</h2>
+		<table class='tabelle'>
+			<tr>
+				<th style="width: 160px">Input</th>	<th style="width: 80px">Unit</th>
+			</tr>
+			<tr>
+				<td style="width: 160px">ID</td> 
+				<td style="text-align: Center; width: 80px;">1</td>
+			</tr>
+			<tr>
+				<td style="width: 160px">Temperature</td> 
+				<td style="text-align: Center; width: 80px;">°C</td>
+			</tr>
+			<tr>
+				<td style="width: 160px">MassFlow</td> 
+				<td style="text-align: Center; width: 80px;">kg/s</td>
+			</tr>
+			<tr>
+				<td style="width: 160px">Pressure</td> 
+				<td style="text-align: Center; width: 80px;">Pa</td>
+			</tr>
+			<tr>
+				<td style="width: 160px">FluidType</td> 
+				<td style="text-align: Center; width: 80px;">1</td>
+			</tr>
+			<tr>
+				<td style="width: 160px">FluidMix</td> 
+				<td style="text-align: Center; width: 80px;">1</td>
+			</tr>
+			<tr>
+				<td style="width: 160px">DiameterLastPiece</td> 
+				<td style="text-align: Center; width: 80px;">m</td>
+			</tr>
+			<tr>
+				<td style="width: 160px">DPConstant</td> 
+				<td style="text-align: Center; width: 80px;">Pa</td>
+			</tr>
+			<tr>
+				<td style="width: 160px">DPLinear</td> 
+				<td style="text-align: Center; width: 80px;">Pa/(kg/s)</td>
+			</tr>
+			<tr>
+				<td style="width: 160px">DPQuadratic</td> 
+				<td style="text-align: Center; width: 80px;">Pa/(kg/s)<sup>2</sup></td>
+			</tr>
+			<tr>
+				<td style="width: 160px">HydraulicInductance</td> 
+				<td style="text-align: Center; width: 80px;">1/m</td>
+			</tr>
+			<tr>
+				<td style="width: 160px">GeodeticHeight</td> 
+				<td style="text-align: Center; width: 80px;">m</td>
+			</tr>
+			
+		</table>
+		<br/>
+		<h2>Parameters</h2>
+		<table class='tabelle'>
+			<tr>
+				<th style="width: 368px">Parameter</th>	<th>Unit</th>
+			</tr>
+			<tr>
+				<td style="width: 368px">ID as inport</td> <td  style="text-align: Center">-</td>
+			</tr>
+			<tr>
+				<td style="width: 368px">temperature as inport</td> <td  style="text-align: Center">-</td>
+			</tr>
+			<tr>
+				<td style="width: 368px">mass flow rate as inport</td> <td  style="text-align: Center">-</td>
+			</tr>
+			<tr>
+				<td style="width: 368px">pressure as inport</td> <td  style="text-align: Center">-</td>
+			</tr>
+			<tr>
+				<td style="width: 368px">fluid type as inport</td> <td  style="text-align: Center">-</td>
+			</tr>
+			<tr>
+				<td style="width: 368px">fluid mix as inport</td> <td  style="text-align: Center">-</td>
+			</tr>
+			<tr>
+				<td style="width: 368px">diameter last piece as inport</td> <td  style="text-align: Center">-</td>
+			</tr>
+			<tr>
+				<td style="width: 368px">constant pressure drop coefficient as inport</td> <td  style="text-align: Center">-</td>
+			</tr>
+			<tr>
+				<td style="width: 368px">linear pressure drop coefficient as inport</td> <td  style="text-align: Center">-</td>
+			</tr>
+			<tr>
+				<td style="width: 368px">quadratic pressure drop coefficient as inport</td> <td  style="text-align: Center">-</td>
+			</tr>
+			<tr>
+				<td style="width: 368px">hydraulic inductance as inport</td> <td  style="text-align: Center">-</td>
+			</tr>
+			<tr>
+				<td style="width: 368px">geodetic height as inport</td> <td  style="text-align: Center">-</td>
+			</tr>
+			<tr>
+				<td style="width: 368px">ID</td> <td style="text-align: Center">1</td>
+			</tr>
+			<tr>
+				<td style="width: 368px">Temperature</td> <td style="text-align: Center">°C</td>
+			</tr>
+			<tr>
+				<td style="width: 368px">MassFlow</td> <td style="text-align: Center">kg/s</td>
+			</tr>
+			<tr>
+				<td style="width: 368px">Pressure</td> <td style="text-align: Center">Pa</td>
+			</tr>
+			<tr>
+				<td style="width: 368px">FluidType</td> <td style="text-align: Center">1</td>
+			</tr>
+			<tr> 
+				<td style="width: 368px">FluidMix</td> <td style="text-align: Center">1</td>
+			</tr>
+			<tr>
+				<td style="width: 368px">DiameterLastPiece</td> <td style="text-align: Center">m</td>
+			</tr>
+			<tr>
+				<td style="width: 368px">DPConstant</td> <td style="text-align: Center">Pa</td>
+			</tr>
+			<tr>
+				<td style="width: 368px">DPLinear</td> <td style="text-align: Center">Pa/(kg/s)</td>
+			</tr>
+			<tr>
+				<td style="width: 368px">DPQuadratic</td> <td style="text-align: Center">Pa/(kg/s)<sup>2</sup></td>
+			</tr>
+			<tr>
+				<td style="width: 368px">HydraulicInductance</td> <td style="text-align: Center">1/m</td>
+			</tr>
+			<tr>
+				<td style="width: 368px">ID as annotation</td> <td style="text-align: Center">-</td>
+			</tr>
+			<tr>
+				<td style="width: 368px;">temperature as annotation</td > 
+				<td style="text-align: Center">-</td>
+			</tr>
+			<tr>
+				<td style="width: 368px">mass flow rate as annotation</td > <td style="text-align: Center">-</td>
+			</tr>
+			<tr>
+				<td style="width: 368px">pressure as annotation</td> <td style="text-align: Center">-</td>
+			</tr>
+			<tr>
+				<td style="width: 368px">fluid type as annotation</td> <td style="text-align: Center">-</td>
+			</tr>
+			<tr>
+				<td style="width: 368px">fluid mix as annotation</td> <td style="text-align: Center">-</td>
+			</tr>
+			<tr>
+				<td style="width: 368px; height: 26px;">diameter last piece as annotation</td> 
+				<td style="text-align: Center; height: 26px;">-</td>
+			</tr>
+			<tr>
+				<td style="width: 368px">constant pressure drop coefficient as annotation</td> <td style="text-align: Center">-</td>
+			</tr>
+			<tr>
+				<td style="width: 368px">linear pressure drop coefficient as annotation</td> <td style="text-align: Center">-</td>
+			</tr>
+			<tr>
+				<td style="width: 368px">quadratic pressure drop coefficient as annotation</td> <td style="text-align: Center">-</td>
+			</tr>
+			<tr>
+				<td style="width: 368px">hydraulic inductance as annotation</td> <td style="text-align: Center">-</td>
+			</tr>
+			<tr>
+				<td style="width: 368px">geodetic height as annotation</td> <td style="text-align: Center">-</td>
+			</tr>
+		</table>
+		
+		
+		<br/>
+		<table class='tabelle'>
+			<tr>
+				<th style="width: 60px">Output</th>	<th style="width: 70px">Unit</th>
+			</tr>
+			<tr>
+				<td style="width: 60px;text-align:center">THB</td> <td style="width: 70px;text-align: Center">see <a href='BasicsTHB.html'>THV</td>
+			</tr>
+		</table>
+		
+		
+			<h2>Function</h2>
+		<p>
+		With this block a THB is created.
+		The THB should be used in VCarnot instead of the old Carnot THV.
+		It can be choosen if a certain element of the THB is entered in the mask or as an inport. Furthermore, the values entered in the mask can be used for the block annotation.
+		
+		</p>
+		
+		
+	</div>
+	
+
+	
+</body>
+</html>

@@ -1,0 +1,75 @@
+<p><hr size="10" noshade> </p>
+
+<p><img src="figures/microCHP_modulating_jpg2.png" width="251" height="158" align="right" border="0"></p>  
+ 
+<p><a name="CHP with modulating power output"><font size="5"><b>CHP with modulating power output</b></font></a><br>
+<b>Path: CARNOT/???????</b><br clear="all"><hr></p>
+
+
+
+<p><b>Purpose</b> <br>
+
+This block calculates mass flow rate, outlet flow temperature, fuel and electrical power of a mini-CHP with modulating power.
+
+</p>
+
+<p><b>Description</b> <br>
+
+The engine speed of this CHP depends on the return flow temperature of the consumer circuit T_return_load, 
+the flow setpoint temperature T_flow_setpoint and temperatures of flow T_flow and return flow T_return of the CHP. <br>
+T_return_load can be, as circumstances require, a storage temperature or the return flow temperature. <br>
+The modulation is directly implemented on the heating power because of the linear connection between engine speed 
+and heating power. <br> 
+<br>
+During the adjustable start-up phase the CHP runs with inputed initial heating power. <br>
+Then, the CHP pass over to the ramp-up phase and runs with maximum heating power. <br>
+As soon as T_flow has reached 60°C the CHP pass over to the control phase. <br>
+During the control phase the heating power is readjusted after an inputed readjustment intervall.<br>
+<br>
+The generated electrical power and fuel power are based on measured data of a modulating mini-CHP called "Ecopower" 
+from Vaillant with a heating power range from 3,5 to 12,5 kW. <br>
+The electrical power is calculated by an inputed fraction parameter f_P_el that refers to the heating power. <br>
+The fuel power is calculated by the factor f_P_gas multiplied with the heating power. P_gas_factor is calculated 
+by linear interpolation between 1.79 at minimum heating power and 1.5 at maximum heating power (f_P_gas_lookup-table).
+<br>
+The model enables a free scalability of the heating power. It is therefor needed to enter the desired heating power 
+range and initial heating power. The maximum mass flow of the pump and thermal capacity of the CHP are linearly 
+resized according to the relation between inputed maximum heating power and maximum heating power of the basic unit. 
+<br>
+The model includes a return temperature raising facility. A return setpoint temperature is calculated depending on 
+heating power and flow setpoint temperature. The thermostatic mixer is located in the return flow of the CHP. <br>
+<br>
+Thermal and electrical efficiency are calculated and summarised in a data output vector. 
+
+</p>
+
+<p><b>Inputs:</b> 
+<ul>
+<li>T_return_load: Temperature (as circumstances require, a storage temperature or the return flow temperature)</li>
+<li>THV_return_load: Thermo hydraulic vector coming from the heating system</li>
+<li>demand control: 0 or 1</li>
+</ul>
+</p>
+
+<p><b>Outputs:</b> 
+<ul>
+<li>THV_flow_load: Thermo hydraulic vector leading to the heating system</li>
+<li>data: Q_thermal [kWh], Q_electrical [kWh], Q_gas [kWh], eta_thermal, eta_electrical, eta_system</li>
+</ul>
+
+</p>
+
+<form name="form" method="get"><p align="left">
+<br>
+<a href="#Literature">Literature:</a> 
+<a name="author">Diourane Mouhcin: Aufbereitung von zwei vorhandenen BHKW-Modellen zur Bereitstellung in der Carnot-User-Community (Bachelor-Arbeit), 2012</a></p>
+</form>
+<p>&nbsp;</p>
+<p><b>Parameters and Dialog Box</b> <br> <img src="Figures/microCHP_modulating_mask_jpg.jpg" align="left"
+ border="0"> <br clear="all"> 
+</p>
+<p><b>Characteristics</b> <br>
+Direct Feedthrough&nbsp;&nbsp;&nbsp;Yes <br>
+Sample time &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Inherited from driving block <br>
+Vectorized&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;No 
+</p>

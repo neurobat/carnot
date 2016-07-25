@@ -1,0 +1,2278 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<title>Basic concepts</title>
+<meta name="author" content="wemhoene">
+<meta name="generator" content="Namo WebEditor v3.0">
+<style type="text/css">
+div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:13.5pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+h1
+	{
+	margin-left: 108pt;
+	margin-top:1em;
+	margin-bottom:.5em;
+	margin-right:0cm;
+	line-height:120%;
+	font-size: 18pt;
+	font-weight: bold;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+
+h2
+	{
+	margin-left: 108pt;
+	margin-top:2em;
+	margin-bottom:0px;
+	margin-right:0cm;
+	line-height:120%;
+	font-size: 16pt;
+	font-weight: bold;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+
+h3
+	{
+	margin-left: 108pt;
+	margin-right:0cm;
+	line-height:120%;
+	font-size: 13.5pt;
+	font-weight: bold;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+
+p
+	{margin-right:0cm;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:13.5pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ul
+	{margin-bottom:0cm;}
+ li.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:13.5pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+a:link
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;
+}
+ p.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:13.5pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ table.MsoNormalTable
+	{line-height:120%;
+	font-size:12.0pt;
+	font-family:"Calibri","sans-serif";
+	}
+tt
+	{font-family:"Courier New";
+	}
+ol
+	{/*margin-left:108.0pt;*/
+	 margin-bottom:0cm;}
+
+.auto-style1 {
+	font-family: "Calibri","sans-serif";
+	font-size: 13.5pt;
+	margin-left:108.0pt;
+	color:#5A5A5A;
+
+
+}
+
+.auto-style3 {
+	color: #5A5A5A;
+}
+.auto-style4 {
+/*	font-family: "Courier New", Courier, monospace;*/
+/*	margin-left: 40px;*/
+	font-family: "Calibri","sans-serif";
+	font-size: 13.5pt;
+
+}
+.auto-style5 {
+/*	font-family: "Courier New", Courier, monospace;*/
+	font-family: "Calibri","sans-serif";
+	font-size: 13.5pt;
+
+}
+.auto-style6 {
+	/*font-family: "Courier New", Courier, monospace;
+	color: #5B5B5B;
+	margin-left: 40px;
+*/  font-family: "Calibri","sans-serif";
+	font-size: 13.5pt;
+	color: #5B5B5B;
+}
+.auto-style7 {
+	/*font-family: "Courier New", Courier, monospace;
+	font-size: large;
+	margin-left: 40px;
+*/ 
+	font-family: "Calibri","sans-serif";
+	font-size: large;
+}
+.auto-style9 {
+	text-align: right;
+	font-family: "Calibri","sans-serif";
+	font-size: 13.5pt;
+	color:#5A5A5A;
+
+}
+.auto-style11 {
+	margin-left: 144px;
+}
+.auto-style12 {
+	font-size: large;
+}
+.auto-style13 {
+	margin-top: 0px;
+}
+.auto-style14 {
+	margin-left: 0;
+}
+</style>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="purple" alink="red">
+<hr class="auto-style11">
+<p><font size="5">2<a href="#Basic_concepts"> <font size="5"> Basic concepts 
+</font> </a><font
+ size="4"> </p>
+<a name="Basic_concepts1"><hr class="auto-style11"> </a>
+<p> 2.1 <a href="#carnot_vectors"> CARNOT 
+Vector Definitions</a></p>
+<p> <a href="#carnot_vectors"> </a>
+&nbsp;&nbsp;2.1.1 <a href="#THB"> Thermo Hydraulic Vector 
+(THV) and Thermo Hydraulic Bus (THB)</a> <br>
+&nbsp;&nbsp;2.1.2 <a href="#weather_data_vector"> Weather 
+Data Vector </a> <br>
+&nbsp;&nbsp;2.1.3 <a href="#fuel_vector"> Fuel Vector </a><font
+ size="4"> <br>
+&nbsp;&nbsp;2.1.4 <a href="#eco_vector"> The Eco Vector </a><font
+ size="4"> <br>
+&nbsp;&nbsp;2.1.5 <a href="#building_vector"> The Building 
+Vectors </a> </p>
+<p>2.2 <a href="#specifying_components"> Specifying 
+Components from the Subsystem</a> </p>
+<p> 2.3  <a href="#utility_functions"> Utility 
+Functions </a>  <br>
+&nbsp;&nbsp;2.3.1  <a href="#material_property_functions"> Material 
+property functions </a> <br>
+&nbsp;&nbsp;2.3.2  <a href="#other_utility_functions"> Other 
+utility functions </a></p>
+<p> 2.4  <a href="#concepts_models"> Concepts 
+for the Models </a>  <br>
+&nbsp;&nbsp;2.4.1  <a href="#pressure_calc"> Pressure Drop 
+and Massflow Calculation </a><font
+ size="4">  </p>
+<a name="Basic_concepts"> <hr class="auto-style11">  </a></p>
+<h1><a name="Basic_concepts"><b>2 Basic concepts</b> </a>
+<a name="Basic_concepts">   </a></h1>
+<p> In this chapter some important changes to the conventional 
+use of Libraries for MATLAB SIMULINK are presented. At the same time some of 
+the model concepts and calculation methods are explained, because they also 
+have an effect of the creation of the models.  </p>
+<a name="carnot_vectors"> <h2>2.1 CARNOT vector definitions</h2><!-- --></a><a
+ name="carnot_vectors">   </a>
+<h3> <b>2.1.1 <a name="THB">Thermo-Hydraulic Bus (THB) and Thermo-Hydraulic Vector (THV)</a></b>  
+</h3>
+<p> The Thermo-Hydraulic Bus (THB) is the common data structure 
+of the CARNOT Toolbox. In old versions of Carnot, the Thermo-Hydraulic Vector (THV) was used.
+In spite of the fact that it should not be used any more, it is described here, because it might be found in old models.<br>
+The THB contains all the necessary information about the flow and the energy 
+transfer associated with it. In the blocks where the Thermo-Hydraulic Bus 
+is split up, the calculations are carried out in the block and afterwards, the 
+THB is reassembled with the processed values. <br>
+Each THB corresponds to a physical pipe connection between components. The information 
+is only transported by the vector, whereas the calculation is performed inside 
+the blocks. <br>
+Components are connected using the THB. Each block must have at least one entry 
+for a THB, otherwise the block would not have any effect on the state of the 
+flow. <br>
+The THB is defined in the file THB.mat. It has 12 components. The advantage compared to a vector is that each bus
+element has it's own name. In Simulink the single data can be accessed via a bus selector block, in Matlab
+the bus can be used as a structure.<br>
+
+<p> The structure of the Thermo-Hydraulic Bus is shown in the 
+following table.  </p>
+<p> <b>T H B - bus definition</b>    
+<table border="0">
+    <tr>
+        <th align="left"><p> <u>No.</u> </th>
+		<th align="left"><p> <u>name in the bus</u> </th>
+        <th align="left"><p> <u>description&nbsp;</u> </th>
+        <th align="left"><p> <u>abbreviation&nbsp;</u> </th>
+        <th align="left"><p> <u>physical unit&nbsp;</u> </th>
+        <th align="left"><p> <u>remarks</u> </th>
+    </tr>
+    <tr>
+        <td valign="top"><p> 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+		<td valign="top"><p> ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+        <td valign="top"><p><a href="#flow_ID"> flow identifier </a></td>
+        <td valign="top"><p> ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+        <td valign="top"><p> none&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+        <td valign="top"><p> is set by the simulation, not by 
+            the user </td>
+    </tr>
+    <tr>
+        <td style="height: 21px"><p> 2 </td>
+		<td style="height: 21px"><p> Temperature </td>
+        <td style="height: 21px"><p> temperature </td>
+        <td style="height: 21px"><p> T </td>
+        <td style="height: 21px"><p> [&deg;C] </td>
+        <td style="height: 21px"></td>
+    </tr>
+    <tr>
+        <td><p> 3 </td>
+		<td><p> MassFlow </td>
+        <td><p> massflow </td>
+        <td><p> m  <sub>dot</sub> </td>
+        <td><p> [kg/s] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><p> 4 </td>
+		<td><p> Pressure </td>
+        <td><p> pressure </td>
+        <td><p> p </td>
+        <td><p> [Pa] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><p> 5 </td>
+		<td><p> FluidType </td>
+        <td><p><a href="#fluid ID"> fluid type </a></td>
+        <td><p> fluid_ID </td>
+        <td><p> none </td>
+        <td><p> is set in the pump </td>
+    </tr>
+    <tr>
+        <td><p> 6 </td>
+		<td><p> FluidMix </td>
+        <td><p> mixture of fluid </td>
+        <td><p><a href="#fluid ID"> fluid_mix </a></td>
+        <td><p> [0..1]&nbsp; </td>
+        <td><p> is set in the pump </td>
+    </tr>
+    <tr>
+        <td><p> 7 </td>
+		<td><p> DiameterLastPiece </td>
+        <td><p> diameter last piece </td>
+        <td><p> d_last </td>
+        <td><p> [m] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><p> 8 </td>
+		<td><p> DPConstant </td>
+        <td><p><a href="#pressure_calc"> constant coefficient 
+            of pressure drop </a></td>
+        <td><p> c </td>
+        <td><p> [Pa] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><p> 9 </td>
+		<td><p> DPLinear </td>
+        <td><p><a href="#pressure_calc"> linear coefficient of 
+            pressure drop </a></td>
+        <td><p> l </td>
+        <td><p> [Pa s/kg] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><p> 10 </td>
+		<td><p> DPQuadratic </td>
+        <td><p><a href="#pressure_calc"> quadratic coefficient 
+            of pressure drop </a></td>
+        <td><p> q </td>
+        <td><p> [Pa s<sup>2</sup> <font size="4">/kg<sup>2</sup>] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><p> 11 </td>
+        <td><p> HydraulicInductance </td>
+        <td><p> hydraulic inductance</td>
+        <td><p> L</td>
+        <td><p> [1/m]</td>
+		<td></td>
+    </tr>
+	<tr>
+        <td><p> 12 </td>
+        <td><p> GeodeticHeight </td>
+        <td><p> geodetic height</td>
+        <td><p> H</td>
+        <td><p> [m]</td>
+		<td></td>
+    </tr>
+</table></p>
+<br>
+
+<p>The structure of the old THV is descibed in the following table. The vector consists of the first 10 elements of the THB
+and additional 10 elements, which were designated for enhancements. Normally, the last 10 elements were set to zero.
+</p>
+<br>
+<p><font size="4"><b>T H V - vector definition</b></font><font size="4"> </font>
+<table border="0">
+    <tr>
+        <th align="left"><p><font size="4"><u>No.</u></font></th>
+        <th align="left"><p><font size="4"><u>description&nbsp;</u></font></th>
+        <th align="left"><p><font size="4"><u>abbreviation&nbsp;</u></font></th>
+        <th align="left"><p><font size="4"><u>physical unit&nbsp;</u></font></th>
+        <th align="left"><p><font size="4"><u>remarks</u></font></th>
+    </tr>
+    <tr>
+        <td valign="top"><p><font size="4">1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+        <td valign="top"><p><a href="#flow_ID"><font size="4">flow identifier</font></a></td>
+        <td valign="top"><p><font size="4">ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+        <td valign="top"><p><font size="4">none&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></td>
+        <td valign="top"><p><font size="4">is set by the simulation, not by 
+            the user</font></td>
+    </tr>
+    <tr>
+        <td><p><font size="4">2</font></td>
+        <td><p><font size="4">temperature</font></td>
+        <td><p><font size="4">T</font></td>
+        <td><p><font size="4">[&deg;C]</font></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><p><font size="4">3</font></td>
+        <td><p><font size="4">massflow</font></td>
+        <td><p><font size="4">m</font><font size="4"><sub>dot</sub></font></td>
+        <td><p><font size="4">[kg/s]</font></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><p><font size="4">4</font></td>
+        <td><p><font size="4">pressure</font></td>
+        <td><p><font size="4">p</font></td>
+        <td><p><font size="4">[Pa]</font></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><p><font size="4">5</font></td>
+        <td><p><a href="#fluid ID"><font size="4">fluid type</font></a></td>
+        <td><p><font size="4">fluid_ID</font></td>
+        <td><p><font size="4">none</font></td>
+        <td><p><font size="4">is set in the pump</font></td>
+    </tr>
+    <tr>
+        <td><p><font size="4">6</font></td>
+        <td><p><font size="4">mixture of fluid</font></td>
+        <td><p><a href="#fluid ID"><font size="4">fluid_mix</font></a></td>
+        <td><p><font size="4">[0..1]&nbsp;</font></td>
+        <td><p><font size="4">is set in the pump</font></td>
+    </tr>
+    <tr>
+        <td><p><font size="4">7</font></td>
+        <td><p><font size="4">diameter last piece</font></td>
+        <td><p><font size="4">d_last</font></td>
+        <td><p><font size="4">[m]</font></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><p><font size="4">8</font></td>
+        <td><p><a href="#pressure_calc"><font size="4">constant coefficient 
+            of pressure drop</font></a></td>
+        <td><p><font size="4">c</font></td>
+        <td><p><font size="4">[Pa]</font></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><p><font size="4">9</font></td>
+        <td><p><a href="#pressure_calc"><font size="4">linear coefficient of 
+            pressure drop</font></a></td>
+        <td><p><font size="4">l</font></td>
+        <td><p><font size="4">[Pa s/kg]</font></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><p><font size="4">10</font></td>
+        <td><p><a href="#pressure_calc"><font size="4">quadratic coefficient 
+            of pressure drop</font></a></td>
+        <td><p><font size="4">q</font></td>
+        <td><p><font size="4">[Pa s<sup>2</sup>/kg<sup>2</sup>]</font></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><p><font size="4">11</font></td>
+        <td><p><font size="4">not used</font></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><p><font size="4">to</font></td>
+        <td><p><font size="4">...</font></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><p><font size="4">20</font></td>
+        <td><p><font size="4">not used</font></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+
+<div align="center" class="MsoNormal">
+	<span lang="EN-US" style="font-size: 13.5pt; line-height: 120%; mso-fareast-font-family: &quot;Times New Roman&quot;">
+	<hr align="center" size="2" width="100%" /></span></div>
+<p class="MsoNormal"><b>
+<span lang="EN-US" style="font-size: 13.5pt; line-height: 120%; mso-fareast-font-family: &quot;Times New Roman&quot;">
+NOTE:</span></b><span lang="EN-US" style="font-size: 13.5pt; line-height: 120%; mso-fareast-font-family: &quot;Times New Roman&quot;"> 
+Physical units in CARNOT are <span class="GramE">conform</span> to SI, the 
+international standard. (One small difference is the temperature, which is given 
+in degree Celsius and not in Kelvin.) <o:p></o:p></span></p>
+<div align="center" class="MsoNormal">
+	<span lang="EN-US" style="font-size: 13.5pt; line-height: 120%; mso-fareast-font-family: &quot;Times New Roman&quot;">
+	<hr align="center" size="2" width="100%" /></span></div>
+<p class="MsoNormal"><b>
+<span lang="EN-US" style="font-size: 13.5pt; line-height: 120%; mso-fareast-font-family: &quot;Times New Roman&quot;">
+NOTE:</span></b><span lang="EN-US" style="font-size: 13.5pt; line-height: 120%; mso-fareast-font-family: &quot;Times New Roman&quot;"> 
+Since the THB can be changed in the file THB.mat, a THB should not be created by a Simulink bus creator block.
+Please use a bus assignment block to change values of a THB or the THBCreator block to create a THB.
+If the THB is changed, there is no need to alter almost every block in Carnot.<o:p></o:p></span></p>
+<div align="center" class="MsoNormal">
+	<span lang="EN-US" style="font-size: 13.5pt; line-height: 120%; mso-fareast-font-family: &quot;Times New Roman&quot;">
+	<hr align="center" size="2" width="100%" /></span></div>
+
+<p> Connected to the THB other definitions are made for the description 
+of the fluid characteristics  </p>
+<p><a name="flow_id"> <b>flow_ID</b> </a><a name="flow_id"><font
+ size="4">  </a></p>
+<p> The flow_id is used for the hydraulic calculation of the fluid. 
+For example, in the case of a closed valve, the flow_ID is set to a negative 
+value, so that the calculating element (e.g. the mixer) knows that there is 
+no mass flow through this branch (see &quot; <a href="#pressure_calc"><font
+ size="4">pressure drop calculation </a> &quot;). Another 
+use of the flow_ID is to control the pressure drop calculation. So  
+<table border="0">
+    <tr>
+        <th align="left"><p> <u>if</u> </th>
+        <th align="left"><p> <u>then</u> </th>
+    </tr>
+    <tr>
+        <td><p> ID &lt; 0 </td>
+        <td><p> no massflow through the branch (e.g a closed valve 
+            is contained in the branch) </td>
+    </tr>
+    <tr>
+        <td style="height: 22px"><p> ID &lt;=10000 </td>
+        <td style="height: 22px"><p> no pressure calculation is carried out </td>
+    </tr>
+    <tr>
+        <td><p> ID &lt; 20000 </td>
+        <td><p> only pressure drop is calculated </td>
+    </tr>
+    <tr>
+        <td><p> ID = 20000 </td>
+        <td><p> pressure drop and static pressure are calculated </td>
+    </tr>
+</table>
+<div align="center" class="MsoNormal">
+	<span lang="EN-US" style="font-size: 13.5pt; line-height: 120%; mso-fareast-font-family: &quot;Times New Roman&quot;">
+	<hr align="center" size="2" width="100%" /></span></div>
+<p class="MsoNormal"><b>
+<span lang="EN-US" style="font-size: 13.5pt; line-height: 120%; mso-fareast-font-family: &quot;Times New Roman&quot;">
+NOTE:</span></b><span lang="EN-US" style="font-size: 13.5pt; line-height: 120%; mso-fareast-font-family: &quot;Times New Roman&quot;"> 
+Physical units in CARNOT are <span class="GramE">conform</span> to SI, the 
+international standard. (One small difference is the temperature, which is given 
+in degree Celsius and not in Kelvin.) <o:p></o:p></span></p>
+<div align="center" class="MsoNormal">
+	<span lang="EN-US" style="font-size: 13.5pt; line-height: 120%; mso-fareast-font-family: &quot;Times New Roman&quot;">
+	<hr align="center" size="2" width="100%" /></span></div>
+<p>&nbsp; 
+<table border="0">
+    <tr>
+        <th align="left"><p> <u>fluid_ID</u> </th>
+        <th align="left"><p> <u>fluid</u> </th>
+		<th align="left"><p> <u>name in FluidEnum.m</u> </th>
+		<th align="left"><p> <u>name in carlib.h</u> </th>
+        <th align="left"><p> <u>remarks</u> </th>
+    </tr>
+    <tr>
+        <td><p> 1 </td>
+        <td><p> water </td>
+		<td><p> WATER </td>
+		<td><p> WATER </td>
+		<td><p> water </td>
+        <td><p> fluid mix is the vapour content in the 2-phase 
+            region </td>
+    </tr>
+    <tr>
+        <td><p> 2 </td>
+        <td><p> air </td>
+		<td><p> AIR </td>
+		<td><p> AIR </td>
+        <td><p> fluid mix gives the kg  <sub>water</sub> <font
+             size="4">/kg  <sub>air</sub>  , 
+            i.e. the absolute fraction of water </td>
+    </tr>
+    <tr>
+        <td><p> 3 </td>
+        <td><p> cotton oil </td>
+		<td><p> COTOIL </td>
+		<td><p> COTOIL </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><p> 4 </td>
+        <td><p> silicon oil </td>
+		<td><p> SILOIL </td>
+		<td><p> SILOIL </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><p> 5 </td>
+        <td><p> water-glycol </td>
+		<td><p> WATERGLYCOL </td>
+		<td><p> WATERGLYCOL </td>
+        <td><p> fluid mix gives the volume percentage of propylen 
+            glycol<br> the properties are for Typhocor L, Typhorop Hamburg </td>
+    </tr>
+    <tr>
+        <td><p> 6 </td>
+        <td><p> Tyfocor LS </td>
+		<td><p> TYFOCOR_LS </td>
+		<td><p> TYFOCOR_LS </td>
+        <td><p> fluid mix is the vapour content </td>
+    </tr>
+	<tr>
+        <td><p> 7 </td>
+        <td><p> water </td>
+		<td><p> WATER_CONSTANT </td>
+		<td><p> WATER_CONSTANT </td>
+        <td><p> constant properties for liquid water at 20 deg C </td>
+    </tr>
+	<tr>
+        <td><p> 8 </td>
+        <td><p> air </td>
+		<td><p> WATER_CONSTANT </td>
+		<td><p> WATER_CONSTANT </td>
+        <td><p> constant properties for air at 20 deg C </td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+<p> Utilisation of the fluid_ID in the material property functions  <br>
+Some fluid functions calculate different things depending on the fluid_ID specified, 
+in particular the functions vapourpressure and saturationtemperature. In the 
+case of water (fluid_ID 1) the function  
+<ul type="disc">
+    <li class="MsoNormal"> vapourpressure <br> calculates the pressure of saturated 
+    steam.  
+    <li class="MsoNormal"> saturationtemperature <br> calculates the temperature 
+    of saturated steam at the specified pressure, i. e. it is the inverse function 
+    of vapourpressure.  
+</ul>
+<p> In the case of air ( <a href="#fluid_mix"> fl</a><font
+ size="4"><a href="#fluid ID">uid_ID = 2 &quot;air&quot;</a>) the function  
+<ul type="disc">
+    <li class="MsoNormal"> vapourpressure <br> calculates the partial pressure of 
+    steam in the moist air.  
+    <li class="MsoNormal"> saturationtemperature <br> calculates the dew point temperature 
+    of saturated steam at the specified pressure, i. e. it is the inverse function 
+    to vapourpressure.  
+</ul>
+<br>
+<p> The fluid_ID can be accessed via enumerations in Matlab/Simulink and C. They 
+are defined in FluidEnum.m and carlib.h, respectively. Please consider that 
+enumerations are of type integer, whereas in Carnot double types are used.  </p>
+<p> To output and visualise a specific physical value from the 
+Thermo-Hydraulic- Vector special blocks have been built that automatically extract 
+the desired physical value from the THV, e.g. displays that only output the 
+temperature from the THV input (contained in the Blockset  <a href="#outputs"><font
+ size="4">Outputs </a> ).  </p>
+<p>&nbsp;</p>
+<p><a name="property_id"> <b>Definition of the property types</b> </a><a
+ name="property_id">   </a></p>
+<p> In some functions concerning the fluid properties, for example 
+the saturationproperty, a property for which the calculation is performed, has 
+to be defined. This is done by specifying the <a href="#property_id"><font
+ size="4"> property_ID </a>  according to the following 
+table.  
+<table border="0">
+    <tr>
+        <th align="left"><p> <u>Property_ID</u>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </th>
+        <th align="left"><p> <u>Property</u> </th>
+		<th align="left"><p> <u>name in PropertyEnum.m</u> </th>
+		<th align="left"><p> <u>name in carlib.h</u> </th>
+    </tr>
+    <tr>
+        <td><p> 1 </td>
+        <td><p> density </td>
+		<td><p> DENSITY </td>
+		<td><p> DENSITY </td>
+    </tr>
+    <tr>
+        <td><p> 2 </td>
+        <td><p> heat_capacity </td>
+		<td><p> HEAT_CAPACITY </td>
+		<td><p> HEAT_CAPACITY </td>
+    </tr>
+    <tr>
+        <td><p> 3 </td>
+        <td><p> thermal_conductivity </td>
+		<td><p> THERMAL_CONDUCTIVITY </td>
+		<td><p> THERMAL_CONDUCTIVITY </td>
+    </tr>
+    <tr>
+        <td><p> 4 </td>
+        <td><p> kinematic_viscosity </td>
+		<td><p> KINEMATIC_VISCOSITY </td>
+		<td><p> KINEMATIC_VISCOSITY </td>
+    </tr>
+    <tr>
+        <td><p> 5 </td>
+        <td><p> enthalpy </td>
+		<td><p> ENTHALPY </td>
+		<td><p> ENTHALPY </td>
+    </tr>
+    <tr>
+        <td><p> 6 </td>
+        <td><p> entropy </td>
+		<td><p> ENTROPY </td>
+		<td><p> ENTROPY </td>
+    </tr>
+    <tr>
+        <td><p> 7 </td>
+        <td><p> prandtl </td>
+		<td><p> PRANDTL </td>
+		<td><p> PRANDTL </td>
+    </tr>
+    <tr>
+        <td><p> 8 </td>
+        <td><p> specific_volume </td>
+		<td><p> SPECIFIC_VOLUME </td>
+		<td><p> SPECIFIC_VOLUME </td>
+    </tr>
+    <tr>
+        <td><p> 9 </td>
+        <td><p> evaporation_enthalpy </td>
+		<td><p> EVAPORATION_ENTHALPY </td>
+		<td><p> EVAPORATION_ENTHALPY </td>
+    </tr>
+    <tr>
+        <td><p> 10 </td>
+        <td><p> vapourpressure </td>
+		<td><p> VAPOURPRESSURE </td>
+		<td><p> VAPOURPRESSURE </td>
+    </tr>
+    <tr>
+        <td><p> 11 </td>
+        <td><p> saturationtemperature </td>
+		<td><p> SATURATIONTEMPERATURE </td>
+		<td><p> SATURATIONTEMPERATURE </td>
+    </tr>
+	<tr>
+        <td><p> 12 </td>
+        <td><p> saturationproperty </td>
+		<td><p> SATURATIONPROPERTY </td>
+		<td><p> SATURATIONPROPERTY </td>
+    </tr>
+	<tr>
+        <td><p> 13 </td>
+        <td><p> temperature conductivity </td>
+		<td><p> TEMPERATURE_CONDUCTIVITY </td>
+		<td><p> TEMPERATURE_CONDUCTIVITY </td>
+    </tr>
+	<tr>
+        <td><p> 14 </td>
+        <td><p> enthalpy2temperature </td>
+		<td><p> ENTHALPY2TEMPERATURE </td>
+		<td><p> ENTHALPY2TEMPERATURE </td>
+    </tr>
+	<tr>
+        <td><p> 15 </td>
+        <td><p> grashof </td>
+		<td><p> GRASHOFNUMBER </td>
+		<td><p> GRASHOFNUMBER </td>
+    </tr>
+	<tr>
+        <td><p> 16 </td>
+        <td><p> prandtl </td>
+		<td><p> PRANDTLNUMBER </td>
+		<td><p> PRANDTLNUMBER </td>
+    </tr>
+	<tr>
+        <td><p> 17 </td>
+        <td><p> vapourcontent </td>
+		<td><p> VAPOURCONTENT </td>
+		<td><p> VAPOURCONTENT </td>
+    </tr>
+</table>
+<p> Moreover in the case of the saturation value of the respective 
+property, the fluid phase has to be set as well. This is done by defining the 
+phase_ID according to the following table.  </p>
+<p>&nbsp;</p>
+<p><a name="phase_id"> <b>Definition of the phase ID </b> </a>
+<table border="0">
+    <tr>
+        <th align="left"><p> <u>phase_ID</u>  &nbsp;&nbsp;&nbsp;&nbsp; </th>
+        <th align="left"><p> <u>phase</u> </th>
+		<th align="left"><p> <u>name in PhaseEnum.m</u> </th>
+		<th align="left"><p> <u>name in carlib.h</u> </th>
+    </tr>
+    <tr>
+        <td><p> 1 </td>
+        <td><p> vaporous </td>
+		<td><p> VAPOROUS </td>
+		<td><p> VAPOROUS </td>
+    </tr>
+    <tr>
+        <td><p> 2 </td>
+        <td><p> liquid </td>
+		<td><p> LIQUID </td>
+		<td><p> LIQUID </td>
+    </tr>
+    <tr>
+        <td><p> 3 </td>
+        <td><p> solid </td>
+		<td><p> SOLID </td>
+		<td><p> SOLID </td>
+    </tr>
+</table>
+<p> The phase_ID is specified in the same way as the other IDs 
+like the  <a href="#fluid ID"> fluid type </a><font
+ size="4"> or the  <a href="#property_ID"> property_ID </a><font
+ size="4"> .  </p>
+<p>&nbsp;</p>
+<h3> <b>2.1.2 The </b> W<font
+ size="4"><a name="weather_data_vector"><b>eather Data Bus</b> </a>   </h3>
+<p> The weather data bus contains the weather conditions for 
+the calculation period. <br>
+It is calculated from measurements over a long period of time. Averaged data 
+of monthly measurements are pre-processed discretely to generate hourly values 
+of the relevant weather data. Correlations for the temperature, the radiation, 
+the relative humidity and the wind speed are used to generate the hourly values. 
+ </p>
+<p> The weather data is specified in a certain format (see also 
+&quot;wformat.txt&quot;) that is created by the preprocessing of the weather 
+data in the M-files &quot;Wprepro&quot; (for test reference year) and  <a href="#Meteonorm2wformat"><font
+ size="4">&quot;Meteonorm2wformat&quot; </a>  and  <a href="#MeteonormMinute2wformat"><font
+ size="4">&quot;MeteonormMinute2wformat&quot; </a>  (for 
+Meteonorm data) :  </p>
+<p> Each row contains a dataset for a specific time. Column limiter 
+is a tabulator or a space. <br>  </p>
+<p> Information on the dataset <br> station name: country: <br>
+geographical position: longitude: , latitude: <br>
+reference meridian for time (example: 0&deg; = Greenwich Mean Time): <br>
+mark type of data collection: measured/calculated/satellite  </p>
+<p>&nbsp; 
+<table border="0">
+    <tr>
+        <th align="left"><p> <u>col</u> </th>
+        <th align="left" style="width: 499px"><p> <u>description</u> </th>
+        <th align="left"><p> <u>units</u> </th>
+    </tr>
+    <tr>
+        <td><p> 1 </td>
+        <td style="width: 499px"><p> time </td>
+        <td><p> [s] </td>
+    </tr>
+    <tr>
+        <td><p> 2 </td>
+        <td style="width: 499px"><p> timevalue (comment line) format YYYYMMDDHH <font
+ size="4">Y is the year, M the month, D the day, H the hour </font>&nbsp;</td>
+        <td><p> [-] </td>
+    </tr>
+    <tr>
+        <td><p> 3 </td>
+        <td style="width: 499px"><p> zenith angle of sun (at time, not averaged) <font
+ size="4">(continue at night to get time of sunrise by linear interpolation)</td>
+        <td><p> [degree] </td>
+    </tr>
+    <tr>
+        <td><p> 4 </td>
+        <td style="width: 499px"><p> azimuth angle of sun (0&deg;=south, east negative), 
+		value is <font
+ size="4">at timestep, no average over timestep
+		</td>
+        <td><p> [degree] </td>
+    </tr>
+    <tr>
+        <td><p> 5 </td>
+        <td style="width: 499px"><p> direct beam solar radiation on a normal surface </td>
+        <td><p> [W/m&sup2;] </td>
+    </tr>
+    <tr>
+        <td><p> 6 </td>
+        <td style="width: 499px"><p> diffuse solar radiation on a horizontal surface </td>
+        <td><p> [W/m&sup2;] </td>
+    </tr>
+    <tr>
+        <td><p> 7 </td>
+        <td style="width: 499px"><p> ambient temperature </td>
+        <td><p> [degree Celsius] </td>
+    </tr>
+    <tr>
+        <td><p> 8 </td>
+        <td style="width: 499px"><p> radiation temperature of sky </td>
+        <td><p> [degree Celsius] </td>
+    </tr>
+    <tr>
+        <td><p> 9 </td>
+        <td style="width: 499px"><p> relative humidity </td>
+        <td><p> [percent] </td>
+    </tr>
+    <tr>
+        <td><p> 10 </td>
+        <td style="width: 499px"><p> precipitation </td>
+        <td><p> [m/s] </td>
+    </tr>
+    <tr>
+        <td><p> 11 </td>
+        <td style="width: 499px"><p> cloud index (0=no cloud, 1=covered sky) </td>
+        <td><p> [-] </td>
+    </tr>
+    <tr>
+        <td><p> 12 </td>
+        <td style="width: 499px"><p> station pressure </td>
+        <td><p> [Pa] </td>
+    </tr>
+    <tr>
+        <td><p> 13 </td>
+        <td style="width: 499px"><p> mean wind speed </td>
+        <td><p> [m/s] </td>
+    </tr>
+    <tr>
+        <td><p> 14 </td>
+        <td style="width: 499px"><p> wind direction (north=0&deg; west=270&deg;) </td>
+        <td><p> [degree] </td>
+    </tr>
+    <tr>
+        <td><p> 15 </td>
+        <td style="width: 499px"><p> incidence angle on surface (0&deg; = vertical) </td>
+        <td><p> [degree] </td>
+    </tr>
+    <tr>
+        <td><p>&nbsp;</td>
+        <td style="width: 499px"><p> (= -9999, if surface orientation is unknown) </td>
+        <td><p>&nbsp;</td>
+    </tr>
+    <tr>
+        <td><p> 16 </td>
+        <td style="width: 499px"><p> incidence angle in plane of vertical and main <font
+ size="4">surface axis (the main axis is parallel to the main flow direction in 
+		a collector)
+		</td>
+        <td><p> [degree] </td>
+    </tr>
+    <tr>
+        <td><p> 17 </td>
+        <td style="width: 499px"><p> incidence angle in plane of vertical and second <font
+ size="4">surface axis (the second axis is in the surface and a vertical on the 
+		main flow direction in a collector)
+		</td>
+        <td><p> [degree] </td>
+    </tr>
+    <tr>
+        <td><p> 18 </td>
+        <td style="width: 499px"><p> direct solar radiation on surface </td>
+        <td><p> [W/m&sup2;] </td>
+    </tr>
+    <tr>
+        <td><p> 19 </td>
+        <td style="width: 499px"><p> diffuse solar radiation on surface </td>
+        <td><p> [W/m&sup2;] </td>
+    </tr>
+    <tr>
+        <td><p>&nbsp;</td>
+        <td style="width: 499px"><p>&nbsp;</td>
+        <td><p>&nbsp;</td>
+    </tr>
+    <tr>
+        <td><p>&nbsp;</td>
+        <td style="width: 499px"><p> UNKNOWN: set -9999 for unknown values </td>
+        <td></td>
+    </tr>
+</table>
+<p>&nbsp;</p>
+<p> External Data, particularly the  <a href="#weather_data_vector"><font
+ size="4">weather data </a>  in the  <a href="#CARNOT"><font
+ size="4">CARNOT Library </a> , are stored in ASCII-datafiles.<br> 
+Load them to MATLAB Workspace with  </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <tt>load 
+&lt;filename&gt;.dat</tt>    </p>
+<p> where &lt;filename is the name of the external datafile, in 
+the MATLAB command window.<br>
+Use in Simulink with the &quot;from Workspace&quot; block (if previously load 
+in MATLAB Workspace) or the &quot;from File&quot; block. <br> 
+<div class="auto-style1"><hr>
+<b>NOTE:</b>  Physical units in CARNOT are conform 
+to SI, the international standard. (One small difference is the temperature, which is given in degree Celsius and not in Kelvin.)  
+<hr>
+<b>IMPORTANT NOTE:<br>
+</b>  The format of the weather data vector and weather 
+data file have been recently changed. The compatibility with the old format 
+is still maintain but will be remained in the future. Use the block  <a href="#select_weather"><font
+ size="4">select_weather </a>  in place of the Simulink 
+block &quot;Selector&quot; in your models and blocks if you want to maintain 
+compatibility or use old weather data vectors and files.<br>
+To convert your old data weather files, use  <a href="#convert_weather"><font
+ size="4">convert_weather </a>.
+<hr></div>
+ <h3><a name="fuel_vector"> <b>2.1.3 The Fuel vector</b> </a><a
+ name="fuel_vector">   </a></h3>
+<p> The fuel block is a collection of constants characterising 
+the different types of fuel. </p>
+<p> The fuel vector includes the characteristics of a fuel like 
+stoichiometric air demand, heat with and without condensation, condensation 
+temperature,  <a href="#costs"> costs </a> , 
+etc.  </p>
+<p> Definition of the Fuel-vector  
+<table border="0">
+    <tr>
+        <th align="left" style="width: 171px"><p> <u>No.</u> </th>
+        <th align="left" style="width: 249px"><p> <u>description</u> </th>
+        <th align="left" style="width: 240px"><p> <u>abbreviation</u> </th>
+        <th align="left" style="width: 205px"><p> <u>physical unit</u> </th>
+        <th align="left"><p> <u>remark</u> </th>
+    </tr>
+    <tr>
+        <td style="width: 171px"><p> 1 </td>
+        <td style="width: 249px"><p> identifier fuel </td>
+        <td style="width: 240px"><p> ID </td>
+        <td style="width: 205px"><p> none </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td style="width: 171px"><p> 2 </td>
+        <td style="width: 249px"><p> temperature </td>
+        <td style="width: 240px"><p> T </td>
+        <td style="width: 205px"><p> [&deg;C] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td style="width: 171px"><p> 3 </td>
+        <td style="width: 249px"><p> stoichiometric air demand </td>
+        <td style="width: 240px"><p> ls </td>
+        <td style="width: 205px"><p> [kg air/kg fuel] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td style="width: 171px"><p> 4 </td>
+        <td style="width: 249px"><p> pressure </td>
+        <td style="width: 240px"><p> p </td>
+        <td style="width: 205px"><p> [Pa] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td style="width: 171px"><p> 5 </td>
+        <td style="width: 249px"><p> heat without condensation </td>
+        <td style="width: 240px"><p> hl </td>
+        <td style="width: 205px"><p> [J/kg] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td style="width: 171px"><p> 6 </td>
+        <td style="width: 249px"><p> heat with condensation </td>
+        <td style="width: 240px"><p> hh </td>
+        <td style="width: 205px"><p> [J/kg] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td style="width: 171px"><p> 7 </td>
+        <td style="width: 249px"><p> condensation temperature </td>
+        <td style="width: 240px"><p> Tc </td>
+        <td style="width: 205px"><p> [&deg;C] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td style="width: 171px"><p> 8 </td>
+        <td style="width: 249px"><p> price per kg </td>
+        <td style="width: 240px"><p> price </td>
+        <td style="width: 205px"><p> [1/kg] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td style="width: 171px"><p> 9 </td>
+        <td style="width: 249px"><p> massfraction H </td>
+        <td style="width: 240px"><p> mH </td>
+        <td style="width: 205px"><p> [kg H/kg fuel] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td style="width: 171px"><p> 10 </td>
+        <td style="width: 249px"><p> massfraction C </td>
+        <td style="width: 240px"><p> mC </td>
+        <td style="width: 205px"><p> [kg C/kg fuel] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td style="width: 171px"><p> 11 </td>
+        <td style="width: 249px"><p> massfraction O </td>
+        <td style="width: 240px"><p> mO </td>
+        <td style="width: 205px"><p> [kg O/kg fuel] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td style="width: 171px"><p> 12 </td>
+        <td style="width: 249px"><p> massfraction S </td>
+        <td style="width: 240px"><p> mS </td>
+        <td style="width: 205px"><p> [kg S/kg fuel] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td style="width: 171px"><p> 13 </td>
+        <td style="width: 249px"><p> massfraction N </td>
+        <td style="width: 240px"><p> mN </td>
+        <td style="width: 205px"><p> [kg N/kg fuel] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td style="width: 171px"><p> 14 </td>
+        <td style="width: 249px"><p> massfraction H  <sub>2</sub> <font
+             size="4">O </td>
+        <td style="width: 240px"><p> mH  <sub>2</sub> <font
+             size="4">O </td>
+        <td style="width: 205px"><p> [kg O/kg fuel] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td style="width: 171px"><p> 15 </td>
+        <td style="width: 249px"><p> not used </td>
+        <td style="width: 240px"></td>
+        <td style="width: 205px"></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td style="width: 171px"><p> 16 </td>
+        <td style="width: 249px"><p> not used </td>
+        <td style="width: 240px"></td>
+        <td style="width: 205px"></td>
+        <td></td>
+    </tr>
+</table>
+<p><a name="Fuel-ID"> Definition of the Fuel-ID  </a>
+<table border="0">
+    <tr>
+        <th align="left"><p> <u>Fuel ID</u> </th>
+        <th align="left"><p> <u>description</u> </th>
+    </tr>
+    <tr>
+        <td><p> 0 </td>
+        <td><p> no calculation </td>
+    </tr>
+    <tr>
+        <td><p> 1</td>
+        <td><p> gaseous </td>
+    </tr>
+    <tr>
+        <td><p> 2</td>
+        <td><p> liquid </td>
+    </tr>
+    <tr>
+        <td><p> 3</td>
+        <td><p> solid</td>
+    </tr>
+    </table>
+<p>You may use the Fuel_CONF block which gives a choice of pre-defined fuels.<br>
+<h3><a name="eco_vector"> <b>2.1.4 The Eco vector</b> </a><a
+ name="eco_vector">   </a></h3>
+<p> The Eco (economy-ecology) vector defines the output of a fuel 
+consuming system component like massflow of  <a href="#Fuel-ID"> fuel </a><font
+ size="4">, thermal power, electric power, exhaust gas etc.. As well the fuel 
+costs are considered. Thus the Eco-vector is used for economic and ecologically 
+bilancing of combustion systems.  </p>
+<p> Definition of the Eco-vector  
+<table border="0">
+    <tr>
+        <th align="left" style="height: 46px; width: 171px;"><p> <u>No.</u> </th>
+        <th style="width: 250px; height: 46px;" class="auto-style9"><p> <u>description</u> </th>
+        <th align="left" style="height: 46px; width: 240px;"><p> <u>abbreviation</u> </th>
+        <th align="left" style="height: 46px; width: 205px;"><p> <u>physical unit</u> </th>
+        <th align="left" style="height: 46px"><p> <u>remark</u> </th>
+    </tr>
+    <tr>
+        <td style="width: 171px"><p> 1 </td>
+        <td style="width: 250px" class="auto-style9"> identifier of fuel </td>
+        <td style="width: 240px"><p> fuel-ID </td>
+        <td style="width: 205px"><p> [-] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td style="width: 171px"><p> 2 </td>
+        <td style="width: 250px" class="auto-style9"> temperature </td>
+        <td style="width: 240px"><p> T </td>
+        <td style="width: 205px"><p> [&deg;C] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td style="width: 171px"><p> 3 </td>
+        <td style="width: 250px" class="auto-style9"> massflow rate </td>
+        <td style="width: 240px"><p> m  <sub>dot</sub> </td>
+        <td style="width: 205px"><p> [kg/s] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td style="width: 171px"><p> 4 </td>
+        <td style="width: 250px" class="auto-style9"> pressure </td>
+        <td style="width: 240px"><p> p </td>
+        <td style="width: 205px"><p> [Pa] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td style="width: 171px"><p> 5 </td>
+        <td style="width: 250px" class="auto-style9">thermal power </td>
+        <td style="width: 240px"><p> Qdot </td>
+        <td style="width: 205px"><p> [W] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td style="width: 171px"><p> 6 </td>
+        <td style="width: 250px" class="auto-style9"> electric power </td>
+        <td style="width: 240px"><p> Pel </td>
+        <td style="width: 205px"><p> [W] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td style="width: 171px"><p> 7 </td>
+        <td style="width: 250px" class="auto-style9"> flow of money </td>
+        <td style="width: 240px"><p> flowmoney </td>
+        <td style="width: 205px"><p> [1/s] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td style="width: 171px"><p> 8 </td>
+        <td style="width: 250px" class="auto-style9"> massflow H  <sub>2</sub> O </td>
+        <td style="width: 240px"><p> m  <sub>dot</sub> <font
+             size="4">H  <sub>2</sub>  O </td>
+        <td style="width: 205px"><p> [kg/s] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td style="height: 25px; width: 171px"><p> 9 </td>
+        <td style="width: 250px; height: 25px;" class="auto-style9"> massflow CO  <sub>2</sub> </td>
+        <td style="width: 240px; height: 25px;"><p> m  <sub>dot</sub> <font
+             size="4">CO  <sub>2</sub> </td>
+        <td style="height: 25px; width: 205px"><p> [kg/s] </td>
+        <td style="height: 25px"></td>
+    </tr>
+    <tr>
+        <td style="width: 171px"><p> 10 </td>
+        <td style="width: 250px" class="auto-style9"> massflow O  <sub>2</sub> </td>
+        <td style="width: 240px"><p> m  <sub>dot</sub> <font
+             size="4">O  <sub>2</sub> </td>
+        <td style="width: 205px"><p> [kg/s] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td style="width: 171px"><p> 11 </td>
+        <td style="width: 250px" class="auto-style9"> massflow SO  <sub>2</sub> </td>
+        <td style="width: 240px"><p> m  <sub>dot</sub> <font
+             size="4">SO  <sub>2</sub> </td>
+        <td style="width: 205px"><p> [kg/s] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td style="width: 171px"><p> 12 </td>
+        <td style="width: 250px" class="auto-style9"> massflow N  <sub>2</sub> </td>
+        <td style="width: 240px"><p> m  <sub>dot</sub> <font
+             size="4">N  <sub>2</sub> </td>
+        <td style="width: 205px"><p> [kg/s] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td style="width: 171px"><p> 13 </td>
+        <td style="width: 250px" class="auto-style9"> massflow NO  <sub>x</sub> </td>
+        <td style="width: 240px"><p> m  <sub>dot</sub> <font
+             size="4">NO  <sub>x</sub> </td>
+        <td style="width: 205px"><p> [kg/s] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td style="width: 171px"><p> 14 </td>
+        <td style="width: 250px" class="auto-style9"> massflow CO </td>
+        <td style="width: 240px"><p> m  <sub>dot</sub> <font
+             size="4">CO </td>
+        <td style="width: 205px"><p> [kg/s] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td style="width: 171px"><p> 15 </td>
+        <td style="width: 250px" class="auto-style9"> massflow C  <sub>x</sub> <font
+             size="4">H  <sub>y</sub> </td>
+        <td style="width: 240px"><p> m  <sub>dot</sub> <font
+             size="4">C  <sub>x</sub>  H <sub>y</sub> </td>
+        <td style="width: 205px"><p> [kg/s] </td>
+        <td></td>
+    </tr>
+    <tr>
+        <td style="width: 171px"><p> 16 </td>
+        <td style="width: 250px" class="auto-style9"> free for further extensions </td>
+        <td style="width: 240px"></td>
+        <td style="width: 205px"></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td style="width: 171px"><p> 17 </td>
+        <td style="width: 250px" class="auto-style9">  free for further extensions </td>
+        <td style="width: 240px"></td>
+        <td style="width: 205px"></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td style="width: 171px"><p> 18 </td>
+        <td style="width: 250px" class="auto-style9">  free for further extensions </td>
+        <td style="width: 240px"></td>
+        <td style="width: 205px"></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td style="width: 171px"><p> 19 </td>
+        <td style="width: 250px" class="auto-style9">  free for further extensions </td>
+        <td style="width: 240px"></td>
+        <td style="width: 205px"></td>
+        <td></td>
+    </tr>
+</table>
+<h3><a name="building_vector"> <b>2.1.5 Building-Vectors</b> </a><a
+ name="building_vector">   </a></h3>
+<p> In the Building model two further vectors are used.  </p>
+<p> The  <a href="#s_vector"> <b>S-vector</b> </a><font
+ size="4"> describes the energy flows in the buidling, e.g. the solar gain through 
+the windows.  </p>
+<p> The incoming energy flows are defined in the S-vector  </p>
+<p><a name="s_vector"> Definition of the S-vector  </a>
+<table border="0">
+    <tr>
+        <th align="left"><p> <u>No.</u> </th>
+        <th align="left"><p> <u>used for</u> </th>
+        <th width="76" align="left"><p> <u>unit</u> </th>
+        <th width="424" align="left"><p>&nbsp; comment </th>
+    </tr>
+    <tr>
+        <td><p> 1 </td>
+        <td><p> incoming solar power </td>
+        <td width="76"><p> [W] </td>
+        <td width="424"><p> used to display the energy balance </td>
+    </tr>
+    <tr>
+        <td><p> 2 </td>
+        <td><p> power input by equipment, i.e. computers  </td>
+        <td width="76"><p> [W] </td>
+        <td width="424"><p> used to display the energy balance </td>
+    </tr>
+    <tr>
+        <td><p> 3 </td>
+        <td><p> power input by light sources </td>
+        <td width="76"><p> [W] </td>
+        <td width="424"><p> used to display the energy balance </td>
+    </tr>
+    <tr>
+        <td><p> 4 </td>
+        <td><p> power input by persons </td>
+        <td width="76"><p> [W] </td>
+        <td width="424"><p> used to display the energy balance </td>
+    </tr>
+    <tr>
+        <td><p> 5 </td>
+        <td><p> power input by heating, id. radiator </td>
+        <td width="76"><p> [W] </td>
+        <td width="424"><p> used to display the energy balance </td>
+    </tr>
+    <tr>
+        <td><p> 6 </td>
+        <td><p> power input by ventilation </td>
+        <td width="76"><p> [W] </td>
+        <td width="424"><p> used to display the energy balance </td>
+    </tr>
+    <tr>
+        <td><p> 7 </td>
+        <td><p> convective power from walls </td>
+        <td width="76"><p> [W] </td>
+        <td width="424"><p> used in the room node for the energy 
+            balance </td>
+    </tr>
+    <tr>
+        <td><p> 8 </td>
+        <td><p> radiative power from walls </td>
+        <td width="76"><p> [W] </td>
+        <td width="424"><p> used in the room node for the energy 
+            balance </td>
+    </tr>
+    <tr>
+        <td><p> 9 </td>
+        <td><p> massflow of air </td>
+        <td width="76"><p> [kg/s] </td>
+        <td width="424"><p> used in the room node for the energy 
+            balance </td>
+    </tr>
+    <tr>
+        <td><p> 10 </td>
+        <td><p> massflow of water(part of moist air) </td>
+        <td width="76"><p> [kg/s] </td>
+        <td width="424"><p> used in the room node for the energy 
+            and water balance </td>
+    </tr>
+    <tr>
+        <td><p> 11 </td>
+        <td><p> massflow of CO  <sub>2</sub> </td>
+        <td width="76"><p> [kg/s] </td>
+        <td width="424"><p> used in the room node for the CO <font
+             size="4"><sub>2</sub>   balance </td>
+    </tr>
+    <tr>
+        <td><p> 12 </td>
+        <td><p> flowrate of air from outside into the room </td>
+        <td width="76"><p> [m  <sup>3</sup> <font
+             size="4">/s] </td>
+        <td width="424"><p> used in the room node for the energy 
+            balance </td>
+    </tr>
+    <tr>
+        <td><p> 13 </td>
+        <td><p> flowrate of air from the room to the outside </td>
+        <td width="76"><p> [m  <sup>3</sup> <font
+             size="4">/s] </td>
+        <td width="424"><p> used in the room node for the energy 
+            balance </td>
+    </tr>
+</table>
+<p> The outputs of the  <a href="#room_node"> room_node </a><font
+ size="4"> have to be connected carefully to the walls and other components 
+of the room-zone.  </p>
+<p>&nbsp;</p>
+<p> The AIV (Air-Infiltration-vector) is the connection of a room-node 
+to the floor, the ceiling, the walls and the windows. <br>
+It contains all the necessary information about the actual air conditions in 
+the room.  </p>
+<p> The   <b>AIV-Vector (Air-Infiltration-Ventilation)</b> <font
+ size="4"> is connected to walls, floor, ceiling, ventilation and radiator.<br> 
+The S vector may be used to visualize to energy flows (see  <a href="#S_Selector"><font
+ size="4">S_Selector </a>  in CARNOT/outputs):  
+<table border="0">
+    <tr>
+        <td><p> Q  <sub>dotsol</sub> </td>
+        <td><p> solar power input </td>
+        <td><p> has to be connected to the floor </td>
+    </tr>
+    <tr>
+        <td><p> V  <sub>air</sub> </td>
+        <td><p> volume of room </td>
+        <td><p> has to be connected to the ventilation block </td>
+    </tr>
+</table>
+<div align="center" class="MsoNormal">
+	<span lang="EN-US" style="font-size: 13.5pt; line-height: 50%;">
+	<hr align="center" size="2" width="100%" /></span></div>
+    <div class="auto-style1"><b>NOTE:</b> Only one floor is allowed per room / zone.</div>
+<div align="center" class="MsoNormal">
+	<span style="font-size: 13.5pt; line-height: 120%; mso-fareast-font-family: &quot;">
+	<hr align="center" size="2" width="100%" /></span></div>
+  
+<p><a name="aiv_vector"> Definition of the AIV-vector  </a>
+<table border="0">
+    <tr>
+        <th align="left" style="height: 25px"><p> <u>No.</u> </th>
+        <th align="left" style="height: 25px"><p> <u>used for</u> </th>
+        <th align="left" style="height: 25px"><p> <u>unit</u> </th>
+    </tr>
+    <tr>
+        <td style="height: 25px"><p> 1 </td>
+        <td style="height: 25px"><p> sensitive room temperature </td>
+        <td style="height: 25px"><p> [&deg;C] </td>
+    </tr>
+    <tr>
+        <td><p> 2 </td>
+        <td><p> convective room temperature </td>
+        <td><p> [&deg;C] </td>
+    </tr>
+    <tr>
+        <td><p> 3 </td>
+        <td><p> radiative room temperature </td>
+        <td><p> [&deg;C] </td>
+    </tr>
+    <tr>
+        <td><p> 4 </td>
+        <td><p> mass of water per mass of air </td>
+        <td><p> [kg/kg] </td>
+    </tr>
+    <tr>
+        <td><p> 5 </td>
+        <td><p> mass of CO  <sub>2</sub> <font
+             size="4"> per mass of air </td>
+        <td><p> [kg/kg] </td>
+    </tr>
+    <tr>
+        <td><p> 6 </td>
+        <td><p> density of air in the room </td>
+        <td><p> [kg/m  <sup>3</sup> <font
+             size="4">] </td>
+    </tr>
+    <tr>
+        <td><p> 7 </td>
+        <td><p> heat capacity of air in the room </td>
+        <td><p> [J/kgK] </td>
+    </tr>
+    <tr>
+        <td><p> 8 </td>
+        <td><p> air pressure in the room </td>
+        <td><p> [Pa] </td>
+    </tr>
+    <tr>
+        <td><p> 9 </td>
+        <td><p> air exchange rate (flow rate per room-volume) </td>
+        <td><p> [l/h](no SI-unit) </td>
+    </tr>
+</table>
+<h2><a name="specifying_components"> <b>2.2 Specifying Components 
+in the Subsystem </b> </a></h2>
+<p> To enhance the possibility of adapting one block for different 
+types of the respective component, a kind of variable block has been introduced 
+in the subsystem. A sublibrary of blocks has been created from which a suitable 
+block can be chosen and copied into the subsystem in place of the actual block. 
+ </p>
+<p><a name="figure_2_1"> <img src="Figures/subsys.jpg" align="left"
+ border="0"><br clear="all">
+<br>
+Figure 2.1:Open subset of the incidence Angle Modifier  </a></p>
+<p> An example is the flat plate collector. If you choose the 
+  <b>&quot;Look under Mask&quot;</b>   
+command from the   <b>Edit menu</b>  , 
+the subsystem pops up and you see three coloured blocks, one called inclined 
+surface, one for the calculation of the  <a href="#iam"> incidence 
+angle modifier (IAM) </a>  and one for the pressure drop 
+calculation of the collector.  </p>
+<p> These blocks can be exchanged with blocks from the sublibraries 
+of the respective block. The incidence angle modifier can be specified for four 
+different kind of collector coverings, and a fifth is provided for modelling 
+the optical properties of a parabolic trough and another one for modelling a 
+tube collector , so you have a different type of collector. For the pressure 
+drop calculation there are three kinds of calculation methods available.  </p>
+<p><a name="figure_2_2"> <img src="Figures/collsub.jpg" align="left"
+ border="0"><br clear="all">
+<br>
+Figure 2.2: Specifying components by changing blocks in the subsystem  </a></p>
+<p> Another example of this method of modifying block properties 
+from the subsystem is in the blockset storage where the surface model has to 
+be chosen and the storage itself can be modified with different supplementary 
+components, the so-called port blocs.  </p>
+<h2><a name="utility_functions"> <b>2.3 Utility Functions</b> </a><a
+ name="utility_functions">   </a></h2>
+<h3><a name="material_property_functions"> <b>2.3.1 Material property 
+functions</b> </a></h3>
+<p> Some material property functions of the  <a href="#carlib_library"><font
+ size="4">Carlib Library </a>  can be used in Simulink and 
+be called directly from the workspace as well, namely the functions  
+<ul type="disc">
+    <li class="MsoNormal"><a href="#density"> density </a>  
+     
+    <li class="MsoNormal"><a href="#enthalpy"> enthalpy </a><font
+     size="4">  
+    <li class="MsoNormal"><a href="#entropy"> entropy </a>  
+     
+    <li class="MsoNormal"><a href="#evaporation_enthalpy"> evaporation 
+    enthalpy </a>   
+    <li class="MsoNormal"><a href="#heat_capacity"> heat_capacity  </a>
+    <li class="MsoNormal"><a href="#kinematic_viscosity"> kinematic_viscosity </a><font
+     size="4">  
+    <li class="MsoNormal"><a href="#prandtl"> prandtl </a>  
+     
+    <li class="MsoNormal"><a href="#saturationtemperature"> saturationtemperature </a><font
+     size="4">  
+    <li class="MsoNormal"><a href="#specific_volume"> specific volume </a><font
+     size="4">  
+    <li class="MsoNormal"><a href="#thermal_conductivity"> thermal_conductivity </a><font
+     size="4">  
+    <li class="MsoNormal"><a href="#vapour_pressure"> vapour pressure </a><font
+     size="4">  
+</ul>
+<p> &nbsp;Some functions are helpfull if you want do analyze fluid properties:</p>
+<p><font
+     size="4">enthalpy2temperature<o:p> - Calculates the temperature for a given 
+enthalpy value.</o:p></font></p>
+<p> 
+<o:p></o:p>
+</p>
+<p> The function call is carried out like any other function call 
+of MATLAB m-files by typing the function name and the variables. In the case 
+of the material properties, these variables are:  
+<ol>
+    <li class="MsoNormal"> temperature  
+    <li class="MsoNormal"> pressure  
+    <li class="MsoNormal"><a href="#fluid ID"> fluid_ID </a>  
+     
+    <li class="MsoNormal"><a href="#fluid ID"> fluid_mix </a>  
+     
+</ol>
+<p> The fluid_ID is the same as used in the CARNOT library. The 
+variables are specified as follows:  </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <tt>density(temperature, 
+pressure, fluid_id, fluid_mix)</tt>    </p>
+<p> For example to find the density of pure water at 1e5 Pascal 
+and 20&deg;C, type: </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;density(20, 1e5,1,0) </p>
+<p> To get the   <b>saturationproperties</b> <font
+ size="4"> of the respective property function, you have to call the function 
+fluidprop. In this case the function call contains five parameters, namely  
+<ol>
+    <li class="MsoNormal" > temperature  
+    <li class="MsoNormal" > pressure  
+    <li class="MsoNormal" > fluid_ID  
+    <li class="MsoNormal" > fluid_mix  
+    <li class="MsoNormal" > property type  
+</ol>
+<p> If you call fluidprop with a positive property type, the function 
+will return the same value as the direct call with the function name of the 
+other utility function, e.g. the calls  </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <tt>density(temp, 
+pres, fluid_id, fluid_mix)</tt>    </p>
+<p> and  </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <tt>fluidprop(temp, 
+pres, fluid_id, fluid_mix, property_type = 1)</tt>    </p>
+<p> lead to the same value of the density. To learn more about 
+the property type consult the description of the  <a href="#THB"><font
+ size="4">THB </a>  in the paragraph 2.1.1..  </p>
+<p> If you call fluidprop with a   <b>negative 
+property</b>   the function returns the   <b>saturationproperty</b> <font
+ size="4"> of the respective property in vectorial form. The first component 
+is the value for saturated steam at the specified conditions, the second value 
+the one of boiling fluid. So to get the saturationproperty the function call 
+of fluidprop has to be effectuated in the following way:  </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <tt>fluidprop(temp, 
+pres, fluid_id, fluid_mix, property_type = -1)</tt>    </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <tt>density(20,1e5,1,0)</tt> <font
+ size="4">  </p>
+<p> To get more information about the material property functions 
+you can type  </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <tt>help 
+&lt;functionname&gt;</tt>    </p>
+<p> in the workspace, as with any other MATLAB function.  </p>
+<p> Another way to get the saturation values of the respective 
+property is to call the m-file and to specify the pressure as vapourpressure 
+at the respective temperature  </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <tt>density(temp,vapourpressure(temp,pres,id,mix),fluid_id,fluid_mix)</tt> <font
+ size="4">  </p>
+<p> If you call the function with the fluid_mix = 0, <br>
+the saturation value of the boiling fluid, <br>
+if you call it with the fluid_mix =1, <br>
+the value of saturated steam is returned. <br>
+In case of a fluid_mix between 0 and 1, the fluid is in the two phase region, 
+i.e. a mixture of boiling fluid and saturated steam.  </p>
+<p> All material functions are vectorised, they can be specified 
+with more than one fluid property, i.e. with a vector of temperatures. In this 
+case either all input vectors must be of the same length or they must be a scalar. 
+A scalar is interpreted as a vector, which contains the adequate number of components 
+of the specified value.  </p>
+<p>&nbsp;</p>
+<p> <b>Validation:</b>  
+<ul type="disc">
+    <li class="MsoNormal"> The fluid properties were compared to data in the literature 
+    (  <a href="#glueck"> Bernd Glueck </a><font
+     size="4">,  <a href="#VDI"> VDI W&auml;rmeatlas </a><font
+     size="4">,  <a href="#schmidt"> Schmidttabelle </a><font
+     size="4">,  <a href="#Tyforop"> Tyforop Data 
+    Tables </a> ) and agreed very well to the given values. 
+     
+</ul>
+<h3><font
+     size="4"><a name="building_vector0"> <b>2.3.3 Characteristic Numbers</b></a><a name="other_utility_functions0">
+</a></font></h3>
+<p><span lang="EN-US" style="mso-ansi-language:EN-US">reynolds</span><span style="mso-ansi-language:EN-US"><o:p> 
+- Calculate the Reynolds number of a fluid flow</o:p></span></p>
+<p>
+<o:p><font
+     size="4"><span lang="EN-US" style="mso-ansi-language:EN-US">prandtl</span><span style="mso-ansi-language:EN-US"><o:p> 
+- Prandtl number</o:p></span></font></o:p></p>
+<p>
+<o:p>
+<o:p><font
+     size="4"><span lang="EN-US" style="mso-ansi-language:EN-US">grashof</span><span style="mso-ansi-language:EN-US"><o:p> 
+- Grashof number</o:p></span></font></o:p></o:p></p>
+<h3><a name="building_vector"> <b>2.3.3 </b> </a><a name="other_utility_functions"><b>Other utility functions</b> </a>
+</h3>
+<p> Some more utility functions are provided to handle calculations. 
+They are: 
+<p class="MsoNormal">&nbsp;  
+<table border="0">
+    <tr>
+        <th align="left" style="width: 394px; height: 25px;"><p> <u>function</u> </th>
+        <th align="left" style="width: 534px; height: 25px;"><p> <u>purpose</u> </th>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 394px">
+		<p><span lang="EN-US" style="mso-ansi-language:EN-US">airmass</span></p>
+		</td>
+        <td valign="top" style="width: 534px">
+		<p style="margin-left:0"><span style="mso-ansi-language:EN-US">
+		Calculate the airmass for a given season and geographical location.</span></p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="height: 25px; width: 394px;"><a href="#angles2time" style="font-size:13.5pt;margin-left:108pt"> 
+		angles2time 
+		</a></td>
+        <td valign="top" style="height: 25px; width: 534px;">
+		<p style="margin-left:0" class="auto-style13">&nbsp;<font
+     size="4"><span style="mso-ansi-language:EN-US"><o:p>Finds the time to two specified angles.</o:p></span></p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="height: 25px; width: 394px;"><font
+     size="4"><span lang="EN-US" style="mso-ansi-language:EN-US">
+		<p>annualcosts</p>
+		<o:p></o:p></span></td>
+        <td valign="top" style="height: 25px; width: 534px;">
+		<p style="margin-left:0">Calculate the annual costs of an 
+		investment including operation costs.</p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="height: 25px; width: 394px;"><font
+     size="4"><span lang="EN-US" style="mso-ansi-language:EN-US">
+		<p>BlockIsInCarnotLibrary<o:p></p>
+		</o:p></span></td>
+        <td valign="top" style="height: 25px; width: 534px;">
+		<p style="margin-left:0">Function call is true when the 
+		block is still in the Carnot library and false when it is placed in a 
+		model. Can be used in masked blocks (see _CONF blocks).</p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="height: 25px; width: 394px;"><span lang="EN-US" style="mso-ansi-language:EN-US">
+		<p>calculate_validation_error</p>
+		<o:p></o:p></span></td>
+        <td valign="top" style="height: 25px; width: 534px;">
+		<p style="margin-left:0">Used by validation scripts to 
+		calculate the error.</p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="height: 22px; width: 394px;">
+		<p><span lang="EN-US" style="mso-ansi-language:EN-US">
+Carnot_Callbacks</span><span style="mso-ansi-language:EN-US"><o:p>_&lt;BlockName&gt;</o:p></span></p>
+		</td>
+        <td valign="top" style="height: 22px; width: 534px;">
+		<p style="margin-left:0">Callback function for the block.</p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="center" style="width: 394px; height: 67px;" ><a href="#checkhgt" style="font-size:13.5pt;margin-left:108pt"> checkhgt </a></td>
+        <td valign="top" style="width: 534px; height: 67px;">
+		<p style="margin-left:0">The C-MEX function checkhgt (check 
+            height) is used to run through a closed cycle in a SIMULINK model 
+            and check, if all height parameters are set correctly and the cycle 
+            is in balance </p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="height: 22px; width: 394px;"><font
+     size="4"><span lang="EN-US" style="mso-ansi-language:EN-US">
+		<p>cloudindex</p>
+		<o:p></o:p></span></td>
+        <td valign="top" style="height: 22px; width: 534px;">
+		<p style="margin-left:0">Calculate the cloud index.</p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 394px"><p><a href="#colpdrop"> colpdrop </a></td>
+        <td valign="top" style="width: 534px">
+		<p style="margin-left:0">Calculates the pressure-drop in a 
+            collector per collector surface. </p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="center" style="width: 394px">
+		<p><span lang="EN-US" style="mso-ansi-language:EN-US">
+convert_weather<o:p></o:p></span></p>
+		</td>
+        <td valign="top" style="width: 534px">
+		<p ,="" style="margin-left:0">Convert_weather converts old weather Carnot-Format data 
+		file into the new Carnot-Format. </p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="center" style="width: 394px"><p><a href="#date2sec"> date2sec </a></td>
+        <td valign="top" style="width: 534px">
+		<p style="margin-left:0">Calculates the seconds that have 
+            passed since the 1st January at midnight, from a date vector which 
+            contains the values [month day hour minute second]. This function 
+            is quite useful to determine the simulation parameters, if a simulation 
+            is to start on a specified date  </p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="center" style="width: 394px">
+		<p>dir2<o:p></o:p></p>
+		</td>
+        <td valign="top" style="width: 534px">
+		<p style="margin-left:0">Similar to &quot;dir&quot; command, but searches also in 
+		subfolders (function from Mathworks file download section on the 
+		homepage).</p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 394px">
+		<p>display_verification_error</p>
+		</td>
+        <td valign="top" style="width: 534px">
+		<p style="margin-left:0">Show the result of the verfification process.</p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 394px"><p><a href="#fluidprop"> fluidprop </a></td>
+        <td valign="top" style="width: 534px">
+		<p style="margin-left:0">The  <font
+             size="4">  <a href="#creating_s_functions">C-MEX function </a>  interface to 
+            make the fluid properties of the  <a href="#carlib"> Carlib 
+            Li</a><a href="#carlib_library">b</a><a href="#carlib">rary </a>  accessible from the MATLAB 
+            command window </p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 394px; height: 25px;">
+		<p><span lang="EN-US" >
+helpcarnot<o:p></o:p></span></p>
+		</td>
+        <td valign="top" style="width: 534px; height: 25px;">
+		<p style="margin-left:0">Open the Carnot manual in the help-browser.</p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 394px"><font
+     size="4"><span lang="EN-US" style="mso-ansi-language:EN-US">
+		<p>hourangle2time<o:p></p>
+		</o:p></span></td>
+        <td valign="top" style="width: 534px">
+		<p style="margin-left:0">Convert a solar hour angle to legal time.</p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 394px"><p><a href="#hp_param"> hp_param </a></td>
+        <td valign="top" style="width: 534px">
+		<p style="margin-left:0">Function to determine parameters 
+            of a heat pump. </p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 394px"><font
+     size="4">
+<p >init_carnot</p>
+		</td>
+        <td valign="top" style="width: 534px">
+		<p style="margin-left:0">Initialize the Carnot pathes.</p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 394px"><font
+     size="4">
+<p >init_carnot_savepath</p>
+		</td>
+        <td valign="top" style="width: 534px">
+		<p style="margin-left:0">Initialize the Carnot pathes and save the changes to the Matlab 
+		path.</p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 394px"><p><a href="#legaltime2solartime"> legaltime2solartime </a></td>
+        <td valign="top" style="width: 534px">
+		<p style="margin-left:0">Calculates legal time of a location 
+            on the base of the solar time. </p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 394px"><p><a href="#link_breaker"> link breaker </a></td>
+        <td valign="top" style="width: 534px">
+		<p style="margin-left:0">open all systems in a directory and 
+            save without library links. </p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 394px">
+		<p><span lang="EN-US">
+Meteonorm2wformat</span></p>
+		</td>
+        <td valign="top" style="width: 534px"><font
+     size="4">
+		<p style="margin-left:0">Convert Metenorm data to Carnot weather data files.</p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 394px">
+		<font
+     size="4"><span lang="EN-US" style="mso-ansi-language:EN-US">
+		<p>MeteonormMinute2wformat</p>
+		</span></td>
+        <td valign="top" style="width: 534px">
+		<p style="margin-left:0">Convert Metenorm data to Carnot weather data files.</p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 394px">
+		<p><font
+     size="4"><span lang="EN-US" style="mso-ansi-language:EN-US">
+path_carnot<o:p></o:p></span></p>
+		</td>
+        <td valign="top" style="width: 534px">
+		<p class="auto-style14">Function to locate different files in the Carnot 
+		library.</p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 394px">
+		<p><font
+     size="4"><span lang="EN-US" style="mso-ansi-language:EN-US">
+radiationdivision<o:p></o:p></span></p>
+		</td>
+        <td valign="top" style="width: 534px">
+		<p style="margin-left:0">Calculate direct and diffuse radiation from the global 
+		radiation.</p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 394px; height: 67px;"><p><a href="#ratiograph"> ratiograph </a></td>
+        <td valign="top" style="width: 534px; height: 67px;">
+		<p style="margin-left:0">Plots a graph to see the ratio of 
+            direct radiation on tilted surface to that on horizontal surface 
+            depending on slope and surface&nbsp;azimuth angle </p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 394px"><p><a href="#rel_hum2x"> rel_hum2x </a></td>
+        <td valign="top" style="width: 534px">
+		<p style="margin-left:0">Calculates it the other way round, 
+            so it calculates the absolute humidity from the inputs: relative 
+            humidity of the moist air, pressure and temperature.  </p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 394px"><font
+     size="4"><span lang="EN-US" style="mso-ansi-language:EN-US">
+		<p>repeat_timeseries<o:p></p>
+		</o:p></span></td>
+        <td valign="top" style="width: 534px">
+		<p style="margin-left:0">Repeat a timeseries, can be used to duplicate annual 
+		weather data files if you want to simulate several years.</p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 394px"><p><a href="#sec2date"> sec2date </a></td>
+        <td valign="top" style="width: 534px">
+		<p style="margin-left:0">Calculates the other way round. If 
+            you enter a value of seconds you get the date that corresponds to 
+            the number of seconds which have passed since the 1st January at 
+            midnight.  </p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 394px"><font
+     size="4"><span lang="EN-US" style="mso-ansi-language:EN-US">
+		<p>skytemperature<o:p></p>
+		</o:p></span></td>
+        <td valign="top" style="width: 534px">
+		<p style="margin-left:0">Radiation temperature of the sky.</p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 394px"><p><a href="#solar_declination_angle"> solar_declination </a></td>
+        <td valign="top" style="width: 534px">
+		<p style="margin-left:0">calculates the declination of the 
+            sun in degree </p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 394px"><p><a href="#solar_extraterrestrial_radiation"><font
+             size="4">solar_extraterrestrial </a></td>
+        <td valign="top" style="width: 534px">
+		<p style="margin-left:0">Calculates the solar extraterrestrial 
+            radiation on a normal plane in W/m&sup2; </p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 394px"><p><a href="#solartime2legaltime"> solartime2legaltime </a></td>
+        <td valign="top" style="width: 534px">
+		<p style="margin-left:0">Calculates solar time on the base 
+            of the legal time. In the solar time the sun is always in the south 
+            (Azimuth 0&deg;) at 12:00. </p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 394px">
+		<p><font
+     size="4"><span lang="EN-US" style="mso-ansi-language:EN-US">sumtime<o:p></o:p></span></p>
+		</td>
+        <td valign="top" style="width: 534px">
+		<p style="margin-left:0">Calculates the time in seconds between 1st of January&nbsp; 
+		and a given date. </p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 394px"><p><a href="#sunangles"> sunangles </a></td>
+        <td valign="top" style="width: 534px">
+		<p style="margin-left:0">Calculates declination, altitude, 
+            zenith and azimuth of sun and the hourangle. </p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 394px"><p><a href="#sungraph"> sungraph </a></td>
+        <td valign="top" style="width: 534px">
+		<p style="margin-left:0">Plots a position diagram of the sun. </p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 394px">
+		<p><font
+     size="4"><span lang="EN-US" style="mso-ansi-language:EN-US">sunset<o:p></o:p></span></p>
+		</td>
+        <td valign="top" style="width: 534px">
+		<p style="margin-left:0">Calculate the time of sunrise and sunset for a given 
+		day.</p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 394px"><p><a href="#taualfa"> taualfa </a></td>
+        <td valign="top" style="width: 534px">
+		<p style="margin-left:0">Calculate the transmission-absorption 
+            product for glazing, i.e. for flat plate collectors.  </p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 394px">
+		<p><span lang="EN-US" style="mso-ansi-language:EN-US">
+template_v</span><span style="mso-ansi-language:EN-US">erify</span><span lang="EN-US" style="mso-ansi-language:EN-US">_Function<o:p></o:p></span></p>
+		</td>
+        <td valign="top" style="width: 534px">
+		<p style="margin-left:0">Template for the verify_* function (see 
+		tutorial/templates folder)</p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 394px">
+		<p><font
+     size="4"><span lang="EN-US" style="mso-ansi-language:EN-US">
+time2hourangle<o:p></o:p></span></p>
+		</td>
+        <td valign="top" style="width: 534px">
+		<p style="margin-left:0">Calculate the solar hour angle for a given time.</p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 394px">
+		<p><font
+     size="4"><span lang="EN-US" style="mso-ansi-language:EN-US">
+timecomment<o:p></o:p></span></p>
+		</td>
+        <td valign="top" style="width: 534px">
+		<p style="margin-left:0">Creates a time comment vector for the weather data 
+		files.</p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 394px"><font
+     size="4"><span lang="EN-US" style="mso-ansi-language:EN-US">
+		<p>tmy2wformat<o:p></p>
+		</o:p></span></td>
+        <td valign="top" style="width: 534px">
+		<p style="margin-left:0">Convert a typical meteorolocical year (TMY format) to 
+		Carnot weather data format.</p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 394px">
+		<p><font
+     size="4"><span lang="EN-US" style="mso-ansi-language:EN-US">
+try2wformat<o:p></o:p></span></p>
+		</td>
+        <td valign="top" style="width: 534px">
+		<p style="margin-left:0">Convert DWD test reference years to Carnot weather data 
+		format.</p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="width: 394px">
+		<p><font
+     size="4"><span lang="EN-US" style="mso-ansi-language:EN-US">tvalue<o:p></o:p></span></p>
+		</td>
+        <td valign="top" style="width: 534px">
+		<p style="margin-left:0">Convert a time to the Weather Data time comment (see 
+		also wformat)</p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" class="auto-style12" style="height: 25px; width: 394px;">
+		<p><font
+     size="4"><span lang="EN-US" style="mso-ansi-language:EN-US">txt2mat<o:p></o:p></span></p>
+		</td>
+        <td valign="top" style="height: 25px; width: 534px;">
+		<p style="margin-left:0">txt2mat read an ascii file and 
+		convert a data table to matrix (The function is from the Mathworks 
+		download section).</p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" class="auto-style12" style="height: 25px; width: 394px;">
+		<p>
+		<span lang="en-us">unitconv_carnot</span></p>
+		</td>
+        <td valign="top" style="height: 25px; width: 534px;">
+		<p style="margin-left:0">Conversion of phyical units.</p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="height: 25px; width: 394px;">
+		<p><font
+     size="4"><span lang="EN-US" style="mso-ansi-language:EN-US">
+unitconv_temperature<o:p></o:p></span></p>
+		</td>
+        <td valign="top" style="height: 25px; width: 534px;">
+		<p style="margin-left:0">Conversion of phyical units 
+		(temperature).</p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="height: 25px; width: 394px;">
+		<p><font
+     size="4"><span lang="EN-US" style="mso-ansi-language:EN-US">velocity<o:p></o:p></span></p>
+		</td>
+        <td valign="top" style="height: 25px; width: 534px;">
+		<p style="margin-left:0">Calulate the velocity in a pipe or 
+		duct.</p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="height: 25px; width: 394px;"><font
+     size="4">
+<p class="MsoNormal"><font
+     size="4"><span lang="EN-US" style="mso-ansi-language:EN-US">
+ver</span><span style="mso-ansi-language:EN-US">ification</span><span lang="EN-US" style="mso-ansi-language:EN-US">_carnot<o:p></o:p></span></p>
+		</td>
+        <td valign="top" style="height: 25px; width: 534px;">
+		<p style="margin-left:0">Main function to verify the whole 
+		library and its functions. All verify_*.m functions are called. </p>
+		</td>
+    </tr>
+    <tr>
+        <td valign="top" style="height: 25px; width: 394px;">
+		<p><font
+     size="4"><span lang="EN-US" style="mso-ansi-language:EN-US">wformat<o:p></o:p></span></p>
+		</td>
+        <td valign="top" style="height: 25px; width: 534px;">
+		<p style="margin-left:0">m-file with the definition of the 
+		weather data bus</p>
+		</td>
+    </tr>
+    <tr>
+        <td style="width: 394px"><p><a href="#x2rel_hum"> x2rel_hum </a></td>
+        <td valign="top" style="width: 534px">
+		<p style="margin-left:0">Calculates the relative humidity 
+            from the inputs: absolute humidity of the moist air, pressure and 
+            temperature.  </p>
+		</td>
+    </tr>
+    <tr>
+        <td style="width: 394px"><p><a href="#year_average"> year_average </a></td>
+        <td valign="top" style="width: 534px">
+		<p style="margin-left:0">Calculates the average of a given 
+            weather data matrix for a specified time interval </p>
+		</td>
+    </tr>
+    <tr>
+        <td style="width: 394px"><p><a href="#year_sum"> year_sum </a></td>
+        <td valign="top" style="width: 534px">
+		<p style="margin-left:0">Calculates the sum and average of 
+            a given weather data matrix for a specified time interval. </p>
+		</td>
+    </tr>
+</table>
+</p>
+<p> &nbsp; </p>
+<p> To get more information about the functions you can type  </p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <tt>help 
+&lt;functionname&gt;</tt>    </p>
+<p> in the command window.  <br>  </p>
+<!--<h2><span class="auto-style3"><span class="auto-style2"><a name="concepts_models"> 2.4 Concepts for the Models </a></span><span class="auto-style1"><a
+ name="concepts_models">   </a></span></h2>
+-->
+<h2><a name="concepts_models"><b> 2.4 Concepts for the Models </a></b><a
+ name="concepts_models">   </a></span></h2>
+ 
+
+<h3><a name="pressure_calc"><b> 2.4.1 Pressure Drop 
+and Massflow Calculations</b>&nbsp;  </a>
+</h3>
+<p class="auto-style1"> The pressure drop is described by a quadratic function of 
+the mass flow rate with the equation  </p>
+<p class="auto-style4">d p = con + lin * mdot + qua * mdot^2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+(Eq 2.1) </p>
+<p class="auto-style1"> where <span class="auto-style5">con</span> is a constant term 
+(in Pa), <span class="auto-style5">lin</span> in Pa/(kg/s) the coefficient of the linear 
+and <span class="auto-style5">qua</span> <span class="auto-style3">in 
+Pa/(kg/s)^2 </span>the coefficient of the quadratic term. If these three coefficients and 
+the actual mass flow rate are known, the pressure drop can be calculated for a 
+whole circuit. <br><span class="auto-style3">The use of the coefficients to describe the pressure drop 
+has great advantages concerning the calculation time. If the coefficients 
+are known, an iteration is no longer needed, since the pressure drop can be 
+calculated analytically. Thus 
+a whole cycle and even branches (subcycles, see below) can be calculated without iteration, so that the necessary 
+amount calculation is reduced significantly. <br></span>  </p>
+<p class="auto-style1"> <span class="auto-style3"><strong>
+Calculations without pressure drop</strong><br>If you are not interested in the 
+pressure drop calclulation because you know the mass flow in the system or you 
+assume that the cycle and the pump will be correctely dimensioned later, you can 
+use a pump creating a constant massflow rate (<a href="pump_const.html">Pump_Constant</a> 
+or <a href="pump_const.html">Pump_Simple</a>). The whole pressure drop 
+calculation is discarded and the mass flow depends only on the pump and its 
+controller signal.<br></span> </p>
+<p class="auto-style1"> <strong>Pumps and components with pressure 
+drops in a cycle</strong><br>For a complete hydraulic cycle the calculation 
+starts with the 
+pump <span class="auto-style3">&nbsp;(<a href="pump.html">Pump_Main</a>)</span>. The coefficients [con lin qua] are set to [0 0 0] in the 
+<a href="#Thermo-Hydraulic_Bus">Thermo-Hydraulic Bus</a> exiting the pump. Each 
+following component adds its pressure drop coefficients to the coefficients in 
+the bus (see <span class="auto-style3">below).</span> <br>The pump is 
+characterized by a quadratic polynom defining its pressure head. Typically the 
+pressure head is maximal without mass flow and becomes zero at a high mass flow 
+(a0 is positive, a1 and a2 are negative). </p>
+<p class="auto-style7">d p_pump = a0 + a1*mdot + a2*mdot^2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+(Eq. 2.2) </p>
+<p class="auto-style1"> For any closed hydraulic cylce the 
+pressure head created by the pump must be equal to the pressure drop of the 
+cycle. Combining Eq. 2.1 and Eq. 2.2 gives a quadratic equation which can be 
+solved analytically: <p class="auto-style7">d p_pump = dp </p>
+<p class="auto-style7"><span class="auto-style3"> a0 + a1*mdot + 
+a2*mdot^2 = con + lin*mdot + qua*mdot^2 </span></p>
+<p class="auto-style7"> (con-a0) + (lin-a1)*mdot + (qua-a2)*mdot^2 
+= 0 </p>
+<p class="auto-style1"> Carnot uses the function 
+solve_quadratic_equation in the Carlib function library. This function avoids 
+the catastrophic cancellation by taking only the root further away from zero in 
+x1 = (-b +/- sqrt(b^2-4ac))/(2a) and calculating the other root is by&nbsp; x2 = 
+c/a/x1.<br>  
+<p class="auto-style1"><span class="auto-style3"> <strong>Cycles 
+with influence of static height<br></strong>In open cycles the static pressure 
+head of the cycle has an important impact on the available pressure head of the 
+pump. In thermosiphon cycles the mass flow is created by the difference in 
+density of the fluid at different temperatures. Both cases can be modeled using 
+the constant coefficient con of the pressure drop equations. Additionaly Carnot 
+checks height difference the cycles by passing the information in the 
+Thermo-Hydraulic Bus. If the cycle has a dependancy of the mass flow on the 
+static pressure in the different branches, you must set the corresponding 
+parameters in the pumps ( <a href="pump.html">Pump_Main</a> or
+<a href="thermosyphon.html">Thermosiphon</a>). </span> <br>  
+<p class="auto-style1"> <strong>Pressure drop for components in 
+series<br></strong>Two comonents in series simply add their coefficiencts since: </p>
+<p class="auto-style4">p p_series = dp_1 + dp_2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+(Eq. 2.3) </p>
+<p class="auto-style4"> dp_series = con1 + lin1 * mdot + qua1 * mdot^2 
++ <span class="auto-style3">con2 + lin2 * mdot + qua2 * mdot^2</span> </p>
+<p class="auto-style4"><span class="auto-style3">d p_series  
+</span> = (con1+con2) + (lin1+lin2) * mdot + (qua1+qua2) * mdot^2  </p>
+<p class="auto-style1"> To enable the hydraulic calculation of arbitrary models, every 
+block performs the calculation of the three pressure drop coefficients [con lin 
+qua] that are added to the incoming coefficients during the calculation. In this 
+way the pressure drop can be calculated for every system that you specify by 
+means of the coefficients even prior to the simulation, if the coefficients 
+are known.<br>  </span> <span class="auto-style3">The
+<a href="#Thermo-Hydraulic_Bus">Thermo-Hydraulic 
+Bus</a> has the information of all three coefficients. They are passed 
+from block to block to the pump (<a href="pump.html">Pump_Main</a>) for the hydraulic calculation.
+<br>&nbsp;</span></p>
+ <span class="auto-style3">
+<p class="auto-style1"> <strong>Pressure drop for components in 
+parallel (hydraulic subcylces) <br></strong>In the case of the hydraulic subcycles which begin with a 
+<a href="flow_diverter.html">Flow Diverter </a>and end with a
+<a href="flow_mixer.html">Fow Mixer</a>(figure 2.3) - these pressure drop and 
+mass flow is coupled. The method of calculating the pressure drop includes the following 
+steps:<br> The coefficient vector [con lin qua]]  <sub>0</sub> of the main cycle and the total mass flow mmdottotal 
+are directly passed to the <a href="flow_mixer.html">FLow&nbsp; Mixer</a> block.  
+</span></p>
+<p><a name="figure_2_3"> 
+<img src="Figures/Divers.jpg" align="left"
+ border="0" class="auto-style1"><br clear="all" class="auto-style1">
+<br class="auto-style1">
+<span class="auto-style1">Figure 2.3: Hydraulic subcycle withh a flowdiverter (D) andd 
+flowmixer (M)) </span>  </a></p>
+<p>In the diverter block at the beginning two other vectors [con 
+lin qua]<sub>1/2</sub> are initialized 
+with zero and are passed from block to block within the 
+<a href="#Thermo-Hydraulic_Bus">Thermo-Hydraulic Bus</a>. In each branch 
+1 and branch 2 respectively, the pressure drop is added up by summing the coefficients 
+[con lin qua] until the final mixing block is reached. </span> 
+<br class="auto-style1">
+In this block, the flow diversion rate fdiv is 
+calculated, so that the flow diversion can be carried out according to the flow 
+resistance of the corresponding branch. This rate is then fed back to the 
+initial diverter block. To avoid an algebraic loop in the feed back an PT1 
+transfer function with a time constant of 10 s is used in the
+<a href="flow_mixer.html">Flow_Mixer</a> block. </p>
+<p> As well as these coefficients, the mixer also receives a Branch 
+ID. If the ID of the branch is negative, it symbolises a closed branch and the 
+mass flow is set to zero (for example in case of a closed valve in the branch). 
+<br> 
+Using the information of the diverter, the mixer calculates the diversion of 
+the two branches, under the condition that the pressure drop in both branches 
+must be the same:  </p>
+<p class="auto-style4"> dp_parallel = dp1 = dp2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Eq. 2.4) </p>
+<p class="auto-style1"> or by using the coefficients con, lin, qua 
+: </p>
+<p class="auto-style6"> con1 + lin1 * mdot + qua1 * mdot^2 = con2 + lin2 * mdot + qua2 * mdot^2 </p>
+<p class="auto-style1"> Furthermore, continuity has to be fulfilled  </p>
+<p class="auto-style4"> mdottotal 
+= mdot1 + mdot2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+(Eq. 2.5) </p>
+<p class="auto-style1"> With these three equations the quadratic equation can be solved 
+and the correct mass flow can be calculated for both branches. Then the flow 
+diversion rate is calculated as : </p>
+<p class="auto-style4"> fdiv 
+= mdot1/mdottotal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (Eq. 2.6) </p>
+<p class="auto-style1"> The <a href="flow_mixer.html">Flow Mixer</a> also calculates the pressure drop of the 
+whole subcycle. The total pressure drop of the whole subcycle is added to the 
+coefficients <br>[con lin qua]'<sub>0</sub>&nbsp; which arrive at the diverter. To investigate the pressure drop 
+of the whole subcycle, the pressure drop is calculated for an estimated mass flow, half 
+of this mass flow and a quarter of it. These three points define the pressure 
+drop parabola of equation (Eq. 2.1), and therefore the three coefficients 
+<span class="auto-style3">[con lin qua]</span><sub>subcycle</sub> for the whole subcycle can 
+be found. These coefficients are added to the coefficients 
+[con lin qua]'<sub>0 </sub>passing the subcycle 
+directely from the diverter to the mixer and the result 
+[con lin qua]''<sub>0</sub> is passed 
+to the next block.  </p>
+<p class="auto-style1"> NOTE: If you 
+have hydraulic subcycles which contain subcycles themselves with flow diverters, 
+you have to take care to build up the cycle in a certain way. Each Flow_Diverter 
+must have its directely corresponding Flow_Mixer. Hydraulic schemes 
+like &quot;Tichelmann&quot; are not possible. (In a &quot;Tichelmann&quot; scheme diverter_A feeds 
+its mass_flow_1 in branch_1 and branch_2. In branch_1 a second diverter_B feeds 
+branch_3 and branch_4. Now the first mixer_A takes mass flow from branch_1 and 
+branch_3, the second mixer_B takes the mass flow from branch_4 and mixer_A.)<br>
+</span>  </p>
+</span>  <hr> &nbsp; </p>
+<p>&nbsp;</p>
+</body>
+
+</html>

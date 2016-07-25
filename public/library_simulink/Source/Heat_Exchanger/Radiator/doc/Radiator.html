@@ -1,0 +1,296 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="de-at" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>radiator</title>
+<style type="text/css">
+ div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+p
+	{margin-right:0cm;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ ul
+	{margin-bottom:0cm;}
+ li.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:8.0pt;
+	margin-left:108.0pt;
+	line-height:120%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	color:#5A5A5A;
+	}
+ .auto-style1 {
+	margin-left: 120px;
+}
+</style>
+</head>
+
+<body>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:schwamberger'><span style='mso-bookmark:literature'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+"Times New Roman"'>
+
+<hr size=10 width="100%" noshade style='color:#A0A0A0' align=center>
+
+</span></span></span></div>
+
+<p><!--[if gte vml 1]><v:shape id="Bild_x0020_177" o:spid="_x0000_s1468"
+ type="#_x0000_t75" style='position:absolute;left:0;text-align:left;
+ margin-left:62pt;margin-top:0;width:102pt;height:61.5pt;z-index:175;
+ visibility:visible;mso-wrap-style:square;mso-wrap-distance-left:0;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:0;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:right;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line'
+ o:allowoverlap="f">
+ <v:imagedata src="Figures/radiator.jpg" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <w:wrap type="square" anchory="line" xmlns:w="urn:schemas-microsoft-com:office:word"/>
+</v:shape><![endif]--><![if !vml]><img width=136 height=82
+src="Figures/radiator.jpg" align=right v:shapes="Bild_x0020_177"><![endif]><span class=GramE><span style='mso-bookmark:
+Radiator'><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><b><span
+lang=EN-US style='font-size:18.0pt;line-height:120%'>radiator</span></b></span></span></span></span><span
+style='mso-bookmark:Radiator'><span style='mso-bookmark:literature'><span
+style='mso-bookmark:schwamberger'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%'> <br>
+<b>Path: CARNOT/<span lang="de-at">S</span>ourc<span lang="de-at">/Heat_Exchanger</span></b> <br clear=all style='mso-special-character:
+line-break'>
+<o:p></o:p></span></span></span></span></p>
+
+<div class=MsoNormal align=center style='text-align:center'><span
+style='mso-bookmark:Radiator'><span style='mso-bookmark:literature'><span
+style='mso-bookmark:schwamberger'><span lang=EN-US style='font-size:13.5pt;
+line-height:120%;mso-fareast-font-family:"Times New Roman"'>
+
+<hr size=2 width="100%" align=center>
+
+</span></span></span></span></div>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Purpose</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+T<span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>his block models the 
+radiators of a house heating system</span></span></span>.</span><span style='font-size:13.5pt;line-height:120%'> 
+In the <a href="Simple_House.html">simple_house</a> it may also be used as a 
+floor heating system.</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> </span></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Description</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+</span><span style='font-size:13.5pt;line-height:120%'> T</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>he radiator models
+the time delay of the Troom temperature and the temperature of the heating
+cycle. <br />
+</span><span style='font-size:13.5pt;line-height:120%'> It c</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>alculates the power of a 
+radiator according to the nominal power the and the temperature difference (EN 
+442)</span><span style='font-size:13.5pt;line-height:120%'>.</span></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>The temperature of the
+radiator is derived by an energy-balance</span><span style='font-size:13.5pt;line-height:120%'> 
+(EN 442 equation)</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>: </span></span></span></p>
+
+<dl>
+	<dd>
+
+<p><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'>
+<span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Qdot = Qdot_nom * 
+(Tdiff/Tdiff_nom)^</span><span style='font-size:13.5pt;line-height:120%'>expo</span></span></span></p>
+	</dd>
+</dl>
+<p><font size="4">with the temperature difference</font></p>
+<dl>
+	<dd>
+	<p><font size="4">Tdiff = Tnode - Troom</font><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> </span></span></span></p>
+	</dd>
+</dl>
+<p><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'>
+<span style='font-size:13.5pt;line-height:120%'>and the nominal difference</span></span></span></p>
+<dl>
+	<dd>
+	<p><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'>
+	<span style='font-size:13.5pt;line-height:120%'>Tdiff_nom = Tnode(at test) - 
+	Troom(at test)</span></span></span></p>
+	</dd>
+</dl>
+<p><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'>
+<span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>The thermal capacity of the 
+radiator is modeled by a 1-node capacity</span><span style='font-size:13.5pt;line-height:120%'>:</span></span></span></p>
+<dl>
+	<dd>
+	<p><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'>
+	<span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>m</span><span style='font-size:13.5pt;line-height:120%'>*</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>c*dTnode/dt = 
+	mdot*cp*(Tin-Tnode)-Qdot </span></span></span></p>
+	</dd>
+</dl>
+<p><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'>
+<span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>&nbsp;</span><span style='font-size:13.5pt;line-height:120%'>The </span>
+<span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>coefficients are: </span></span></span></p>
+
+<ul type=disc class="auto-style1">
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l266 level1 lfo167;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>c : heat capacity of </span>
+ <span style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>the radiator in</span><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'> [J/(kg K)] </span><span
+     lang=EN-US style='mso-fareast-font-family:"Times New Roman"'><o:p></o:p></span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l266 level1 lfo167;tab-stops:list 36.0pt'>
+ <span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'>
+ <span style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>expo: radiator exponent in [-]</span></span></span></li>
+	<li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l266 level1 lfo167;tab-stops:list 36.0pt'>
+	<span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'>
+	<span style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>m</span><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>: mass of </span>
+	<span style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>the radiator</span><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'> in kg</span></span></span></li>
+	<li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l266 level1 lfo167;tab-stops:list 36.0pt'>
+	<span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'>
+	<span style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>mdot: </span>
+	<span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>massflow rate in kg/s</span></span></span></li>
+    <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l266 level1 lfo167;tab-stops:list 36.0pt'>
+	<span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'>
+	<font size="4">
+	<span style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>Qdot</span></font><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'><span style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>: </span> </span>
+	<span style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>thermal power in W (</span></span></span></li>
+	<li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l266 level1 lfo167;tab-stops:list 36.0pt'>
+	<span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'>
+	<span style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'>
+	<span style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>Qdot_nom : </span></span></span>nominal thermal power at 
+	test conditions (EN: Tnode = 70°C, Troom = 20°C) in W</span></span></span></li>
+	<li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l266 level1 lfo167;tab-stops:list 36.0pt'>
+	<span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'>
+	<span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>T</span><span style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>in : inlet temperature in °C</span></span></span></li>
+	<li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l266 level1 lfo167;tab-stops:list 36.0pt'>
+	<font size="4">T</font><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>room</span><span style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>: the room</span><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'> temperature in °C</span></span></span></li>
+ <li class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+     margin-left:36.0pt;mso-list:l266 level1 lfo167;tab-stops:list 36.0pt'><span
+     style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>T</span><span style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>node : </span><span
+     lang=EN-US style='font-size:13.5pt;line-height:120%;mso-fareast-font-family:
+     "Times New Roman"'>radiator temperature in °C</span></span></span></li>
+</ul>
+
+<p><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'><br clear=all
+style='mso-special-character:line-break'>
+In difference to EN 442 the outlet temperature is Tnode. Tnode is not calculated 
+as average temperature of inlet and outlet. A quadratic pressure drop is applied 
+to the fluid flow.</span></span></span></p>
+<p>&nbsp;</p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Parameters and Dialog Box</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+</span></span></span><!--[if gte vml 1]><v:shape id="Bild_x0020_180" o:spid="_x0000_s1465"
+ type="#_x0000_t75" style='position:absolute;left:0;text-align:left;
+ margin-left:0;margin-top:0;width:282.75pt;height:380.25pt;z-index:178;
+ visibility:visible;mso-wrap-style:square;mso-wrap-distance-left:0;
+ mso-wrap-distance-top:0;mso-wrap-distance-right:0;mso-wrap-distance-bottom:0;
+ mso-position-horizontal:left;mso-position-horizontal-relative:text;
+ mso-position-vertical:absolute;mso-position-vertical-relative:line'
+ o:allowoverlap="f">
+ <v:imagedata src="Figures/radiatorSHOT.jpg" xmlns:v="urn:schemas-microsoft-com:vml"/>
+ <w:wrap type="square" anchory="line" xmlns:w="urn:schemas-microsoft-com:office:word"/>
+</v:shape><![endif]--><img alt="" src="Figures/Radiator_Mask.jpg" /><span
+style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'><br clear=all
+style='mso-special-character:line-break'>
+</span></span></span></p>
+
+<p><span style='mso-bookmark:literature'><span style='mso-bookmark:schwamberger'><b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'>Characteristics</span></b><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> <br>
+Direct Feedthrough&nbsp;&nbsp;&nbsp;No <br>
+Sample
+time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size:13.5pt;line-height:120%'>&nbsp;
+</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> Inherited
+from driving block <br>
+Vectorized&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style='font-size:13.5pt;line-height:120%'>&nbsp;&nbsp;
+</span><span
+lang=EN-US style='font-size:13.5pt;line-height:120%'> No
+</span></span></span></p>
+
+</body>
+
+</html>

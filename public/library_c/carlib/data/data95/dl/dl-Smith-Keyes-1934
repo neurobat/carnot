@@ -1,0 +1,15 @@
+Smith, L. B. and F. G. Keyes, Proc. Am. Acad. Arts Sci. 69, 285 (1934).
+
+9 of 13 dl data were selected to develop the IAPWS-95 Formulation.
+Temperatures were converted to the ITS-90 scale.
+ 
+ T / K           dl / (kg/m^3) Author                             No.
+  303.141000000  995.574670590 SMITH & KEYES (1934)               001
+  323.139900000  988.029040150 SMITH & KEYES (1934)               002
+  348.142800000  974.839395210 SMITH & KEYES (1934)               003
+  373.150000000  958.371228930 SMITH & KEYES (1934)               004
+  423.170300000  917.006341100 SMITH & KEYES (1934)               005
+  473.192600000  864.805777590 SMITH & KEYES (1934)               006
+  523.211200000  799.049450770 SMITH & KEYES (1934)               007
+  573.222900000  712.386187400 SMITH & KEYES (1934)               008
+  593.225700000  667.219569280 SMITH & KEYES (1934)               009
