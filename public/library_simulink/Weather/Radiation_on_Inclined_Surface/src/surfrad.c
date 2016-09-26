@@ -30,9 +30,6 @@
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * This s-function calculates the radiation on a tilted surface from 
  * the sun position.
- *
- *     surfrad.c
- *
  * author list:     gf -> Gaelle Faure
  *                  hf -> Bernd Hafner
  *                  wec -> Carsten Wemhoener
@@ -65,7 +62,7 @@
  *					multiple instances activated
  * 6.1.2    aw      implicite casts replaced by explicite casts     10sep2015
  *                  unused variables deleted
- *
+ * 6.1.3    hf      modified no-sun condition                       23sep2016
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * parameters                                                           
  * index    use                                             units       
@@ -339,14 +336,14 @@ static void mdlOutputs(SimStruct *S, int_T tid)
     src = sin(rc);      /* sine rotation angle of collector */
     crc = cos(rc);      /* cosine rotation angle of collector */
     
-    if (czs < 1.0e-5)   /* no sun */
+    if (czs < 1.0e-3)   /* no sun */
     {
         tetalong = 90.0;
         tetatrans = 90.0;
     } 
     else                /* sun is there */
     {
-        /* extraterrestrial radiation on horizontal (from carlib function) */
+        /* extraterrestrial radiation on normal (from carlib function) */
         iextra_n = extraterrestrial_radiation(time);
         
         /* cos of incidence angle on surface */
@@ -376,8 +373,6 @@ static void mdlOutputs(SimStruct *S, int_T tid)
                 a = max(0.0,costeta); 
                 b = max(cos(DEG2RAD*85),cos(zs));
 
-                /* printf("idfu_sun %f  idir_sun %f  iextra_n  %f  rb  %f  idir_t %f  idfu_t   %f  czs %f  zenith  %f  costeta  %f \n\n",idfu_sun,idir_sun,iextra_n,rb,idir_t,idfu_t,czs,ZENITH,costeta); */
-
                 /* clearness = ((idfu_t + idir_sun/czs)/idfu_sun + 5.535*1e-6*pow(zenith,3))/(1+5.535*1e-6*pow(zenith,3)); */ /* test example */
                 z3 = ZENITH*ZENITH*ZENITH;
                 clearness = ((idfu_sun_h + idir_sun_n)/idfu_sun_h + 5.535*1e-6*z3)/(1+5.535*1e-6*z3); 
@@ -405,9 +400,6 @@ static void mdlOutputs(SimStruct *S, int_T tid)
 	            F1 = max(0.0,(f11 + f12*brightness + f13*zs));
                 F2 = (f21 + f22*brightness + f23*zs);
 
-	            /*	printf("a %f  b %f  zenith %f  clearness  %f  Ion  %f  airmass %f  brightness  %f  \n",a,b,ZENITH,clearness,Ion,brightness);  
-		            printf("f11 %f  f12:  %f  f13:  %f f21: %f  f22:  %f  f23:  %f   F1  %f   F2 %f   \n",f11,f12,f13,f21,f22,f23,F1,F2); */
-        
 		        /* calculation of diffuse */
           	    idfu_t += idfu_sun_h*((1.0-F1)*0.5*(1.0+czc) + F1*a/b + F2*szc);
                 break;
