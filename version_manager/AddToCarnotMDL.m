@@ -1,4 +1,4 @@
-function AddToCarnotMDL(LibDirectory, CarnotDirectory, OffsetX, OffsetY)
+ function position = AddToCarnotMDL(LibDirectory, CarnotDirectory, OffsetX, OffsetY,PositionPublic)
 % function AddToCarnotMDL
 % This function is called by CreateCarnotMDL.
 % Parameter:
@@ -51,7 +51,7 @@ function AddToCarnotMDL(LibDirectory, CarnotDirectory, OffsetX, OffsetY)
 %
 % Version   Author  Changes                                     Date
 % 6.1.0     aw      created                                     oct2015
-
+% 6.1.1     pk      any directory for internal lib possible     sep2016
 
 
     warning('off','all');
@@ -68,7 +68,7 @@ function AddToCarnotMDL(LibDirectory, CarnotDirectory, OffsetX, OffsetY)
 
     fprintf('\tCreating mask icons and sub-library blocks ...');
     %cd([(dirScript) '\ReleaseFunctions']);
-    [position]=allicons(models, LibDirectory, CarnotDirectory, OffsetX, OffsetY);  %, origCarnot);
+    [position]=allicons(models, LibDirectory, CarnotDirectory, OffsetX, OffsetY,PositionPublic);  %, origCarnot);
     fprintf(' done \n');
     %pause
 
@@ -103,7 +103,7 @@ function AddToCarnotMDL(LibDirectory, CarnotDirectory, OffsetX, OffsetY)
     
     cd(CarnotDirectory);
     fprintf('\n');
-
+    
 end
 
 
@@ -247,7 +247,7 @@ end
 
 
 
-function [position]=allicons(models, LibDirectory, CarnotDirectory, OffsetX, OffsetY)
+function [position]=allicons(models, LibDirectory, CarnotDirectory, OffsetX, OffsetY,PositionPublic)
 % findet iterativ die Bibliotheken und legt Blöcke in Simulink an.
 % falls Animation vorhanden eingefügt
 % Position der Elemente kann in manchen Fällen falsch sein.
@@ -270,6 +270,7 @@ function [position]=allicons(models, LibDirectory, CarnotDirectory, OffsetX, Off
         %j
         clear PosLevelB
         pathPos = [];
+        pathPosStr = '';
         for iLevel=2:length(models(j,1).path)-2 
             %iLevel
             % Erstelle icons in i-tem Level, falls noch nicht vorhanden
@@ -281,7 +282,8 @@ function [position]=allicons(models, LibDirectory, CarnotDirectory, OffsetX, Off
                 directory = [directory, '/', models(j,1).path{k,:}];
                 existBlock=strcmp(find_system('carnot','SearchDepth', k-1), directory);
                 % Merke zu prüfende Lib als "Index" für Positionsstruktur
-                pathPos{1,k-1} = models(j,1).path{k,1};   
+                pathPos{1,k-1} = models(j,1).path{k,1};
+                pathPosStr=strcat(pathPosStr,'.',pathPos{1,k-1});
                 % Prüfe ob bereits ein gleichnamiger icon existiert
                 if ~any(existBlock)
                     %Falls nicht, erstelle und setze Layout
@@ -292,7 +294,6 @@ function [position]=allicons(models, LibDirectory, CarnotDirectory, OffsetX, Off
                         MaskIcon(directory);
                     end
                     cd(ThisDirectory);
-
                     % Setze Größe
                     pos2(1) = 0;
                     pos2(3) = 50;
@@ -330,9 +331,20 @@ function [position]=allicons(models, LibDirectory, CarnotDirectory, OffsetX, Off
                     %pathPos{1,end-1} = 'XY';
                     pathPosB = {pathPos{1,1:end-2}, 'XY'};
                     position = setfield(position, pathPosB{1,:}, [PosLevelX; PosLevelY]);
-                end 
+                elseif (k==length(models(j,1).path)-2)&&~isempty(PositionPublic)
+                      field_Pos=findstr(pathPosStr,'.');
+                      if length(field_Pos)>1
+                        if eval(['isfield(PositionPublic',pathPosStr(1:field_Pos(end)-1),',',char(39),pathPosStr(field_Pos(end)+1:end),char(39),');'])
+                         eval(['position',pathPosStr,'=','PositionPublic',pathPosStr,';']);
+                        end
+                      elseif eval(['isfield(PositionPublic,',char(39),pathPosStr(field_Pos(end)+1:end),char(39),');'])
+                         eval(['position',pathPosStr,'=','PositionPublic',pathPosStr,';']);  
+                      end
+%                     pos_temp = getfield(position, models(j,1).path{k,1});                     
+                end           
                 clear PosLevel
             end
+            pathPosStr='';
         end
         clear pathPos
     end

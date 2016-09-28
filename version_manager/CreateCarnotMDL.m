@@ -44,6 +44,7 @@ function CreateCarnotMDL
 %
 % Version   Author  Changes                                     Date
 % 6.1.0     aw      created                                     oct2015
+% 6.1.1     pk      any directory for internal lib possible     sep2016
 
     VersionManagerDirectory = pwd;
     addpath(pwd);
