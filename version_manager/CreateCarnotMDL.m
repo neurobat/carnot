@@ -45,17 +45,14 @@ function CreateCarnotMDL
 % Version   Author  Changes                                     Date
 % 6.1.0     aw      created                                     oct2015
 
-
-    disp('### This script is meant to be called from the ..\<CARNOT>\version_manager folder! ###')
-
     VersionManagerDirectory = pwd;
     addpath(pwd);
     cd('..');
 
     %%set up paths
     CarnotDirectory = pwd;
-    LibDirectoryPublic = fullfile(CarnotDirectory, 'public', 'library_simulink');
-    LibDirectoryInternal = fullfile(CarnotDirectory, 'internal', 'library_simulink');
+    LibDirectoryPublic=[CarnotDirectory,'\public\library_simulink'];
+    LibDirectoryInternal=[CarnotDirectory,'\internal\library_simulink'];
     
     %%set up information
     CarnotVersion='6.0.0';
@@ -153,29 +150,29 @@ function CreateCarnotMDL
     close_system('carnot', 0);
     
     %%add public blocks
-    AddToCarnotMDL(LibDirectoryPublic, CarnotDirectory, 0, 0);
+    PositionPublic=AddToCarnotMDL(LibDirectoryPublic, CarnotDirectory, 0, 0,[]);
     
     %%add internal blocks
     DirectoriesExist = true;
-    if ~exist(path_carnot('intbin'), 'dir')
+    if ~exist(fullfile(path_carnot('root'), 'internal', 'bin'), 'dir')
         DirectoriesExist = false;
     end
-    if ~exist(path_carnot('intsrc'), 'dir')
+    if ~exist(fullfile(path_carnot('root'), 'internal', 'src'), 'dir')
         DirectoriesExist = false;
     end
-    if ~exist(fullfile(path_carnot('intsrc'), 'libraries'), 'dir')
+    if ~exist(fullfile(path_carnot('root'), 'internal', 'src', 'libraries'), 'dir')
         DirectoriesExist = false;
     end
-    if ~exist(path_carnot('intlibc'), 'dir')
+    if ~exist(fullfile(path_carnot('root'), 'internal', 'library_c'), 'dir')
         DirectoriesExist = false;
     end
-    if ~exist(path_carnot('intlibsl'), 'dir')
+    if ~exist(fullfile(path_carnot('root'), 'internal', 'library_simulink'), 'dir')
         DirectoriesExist = false;
     else
-        if numel(dir(path_carnot('intlibsl'))) <= 2 % directory contains only . and ..
+        if numel(dir(fullfile(path_carnot('root'), 'internal', 'library_simulink'))) <= 2 % directory contains only . and ..
             DirectoriesExist = false;
         end
-        if ~exist(fullfile(path_carnot('intlibsl'), 'status.txt'), 'file')
+        if ~exist(fullfile(path_carnot('root'), 'internal', 'library_simulink', 'status.txt'), 'file')
             DirectoriesExist = false;
         end
     end
@@ -183,7 +180,7 @@ function CreateCarnotMDL
     if ~DirectoriesExist
         fprintf('Directories for internal models do not exist ... skipping\n');
     else
-        AddToCarnotMDL(LibDirectoryInternal, CarnotDirectory, 0, 180);
+        AddToCarnotMDL(LibDirectoryInternal, CarnotDirectory, 0, 180,PositionPublic);
     end
 
     
