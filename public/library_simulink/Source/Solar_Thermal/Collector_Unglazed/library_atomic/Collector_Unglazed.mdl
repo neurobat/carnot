@@ -19,7 +19,7 @@ Library {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [525.0, 52.0, 648.0, 656.0]
+      Location		      [65.0, 242.0, 703.0, 483.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -43,7 +43,7 @@ Library {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[598.0, 490.0]
+	Extents			[653.0, 317.0]
 	ZoomFactor		[1.0]
 	Offset			[0.0, 0.0]
       }
@@ -53,11 +53,11 @@ Library {
   Creator		  "lena.frank"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "drhf"
+  LastModifiedBy	  "ASIC"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Jun 08 17:41:57 2015"
-  RTWModifiedTimeStamp	  355686115
-  ModelVersionFormat	  "1.%<AutoIncrement:4>"
+  LastModifiedDate	  "Wed Sep 28 13:46:51 2016"
+  RTWModifiedTimeStamp	  396971211
+  ModelVersionFormat	  "1.%<AutoIncrement:6>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -81,7 +81,7 @@ Library {
   ToolBar		  on
   StatusBar		  on
   BrowserShowLibraryLinks off
-  BrowserLookUnderMasks	  off
+  BrowserLookUnderMasks	  on
   SimulationMode	  "normal"
   PauseTimes		  "5"
   NumberOfSteps		  1
@@ -477,7 +477,6 @@ Library {
 	  IncludeHyperlinkInReport off
 	  LaunchReport		  off
 	  PortableWordSizes	  off
-	  GenerateErtSFunction	  off
 	  CreateSILPILBlock	  "None"
 	  CodeExecutionProfiling  off
 	  CodeExecutionProfileVariable "executionProfile"
@@ -600,7 +599,7 @@ Library {
 	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
 	      TargetLibSuffix	      ""
 	      TargetPreCompLibLocation ""
-	      CodeReplacementLibrary  "ANSI_C"
+	      CodeReplacementLibrary  "None"
 	      UtilityFuncGeneration   "Auto"
 	      ERTMultiwordTypeDef     "System defined"
 	      ERTMultiwordLength      256
@@ -608,7 +607,6 @@ Library {
 	      GenerateFullHeader      on
 	      GenerateSampleERTMain   off
 	      GenerateTestInterfaces  off
-	      IsPILTarget	      off
 	      ModelReferenceCompliant on
 	      ParMdlRefBuildCompliant on
 	      CompOptLevelCompliant   on
@@ -635,7 +633,7 @@ Library {
 	      ParenthesesLevel	      "Nominal"
 	      MATLABClassNameForMDSCustomization "Simulink.SoftwareTarget.GRTCustomization"
 	      ModelStepFunctionPrototypeControlCompliant off
-	      CPPClassGenCompliant    off
+	      CPPClassGenCompliant    on
 	      AutosarCompliant	      off
 	      GRTInterface	      on
 	      GenerateAllocFcn	      off
@@ -655,12 +653,13 @@ Library {
 	    }
 	    PropName		    "Components"
 	  }
+	  GenerateErtSFunction	  off
 	}
 	PropName		"Components"
       }
       Name		      "Configuration"
       CurrentDlgPage	      "Solver"
-      ConfigPrmDlgPosition     [ 520, 225, 1400, 855 ] 
+      ConfigPrmDlgPosition    [ 520, 225, 1400, 855 ]  
     }
     PropName		    "ConfigurationSets"
   }
@@ -718,6 +717,7 @@ Library {
   BlockParameterDefaults {
     Block {
       BlockType		      BusAssignment
+      AssignedSignals	      "signal1"
     }
     Block {
       BlockType		      BusSelector
@@ -800,11 +800,15 @@ Library {
       Permissions	      "ReadWrite"
       PermitHierarchicalResolution "All"
       TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
       CheckFcnCallInpInsideContextMsg off
       SystemSampleTime	      "-1"
+      RTWSystemCode	      "Auto"
       RTWFcnNameOpts	      "Auto"
       RTWFileNameOpts	      "Auto"
       FunctionInterfaceSpec   "void_void"
+      FunctionWithSeparateData off
       RTWMemSecFuncInitTerm   "Inherit from model"
       RTWMemSecFuncExecute    "Inherit from model"
       RTWMemSecDataConstants  "Inherit from model"
@@ -814,6 +818,8 @@ Library {
       DataTypeOverride	      "UseLocalSettings"
       DataTypeOverrideAppliesTo	"AllNumericTypes"
       MinMaxOverflowLogging   "UseLocalSettings"
+      Opaque		      off
+      MaskHideContents	      off
       SFBlockType	      "NONE"
       Variant		      off
       GeneratePreprocessorConditionals off
@@ -846,8 +852,8 @@ Library {
   }
   System {
     Name		    "Collector_Unglazed"
-    Location		    [525, 52, 1173, 708]
-    Open		    on
+    Location		    [65, 242, 768, 725]
+    Open		    off
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
     ScreenColor		    "white"
@@ -869,13 +875,7 @@ Library {
       Position		      [275, 67, 410, 193]
       ZOrder		      1
       BackgroundColor	      "yellow"
-      MinAlgLoopOccurrences   off
-      PropExecContextOutsideSubsystem off
-      RTWSystemCode	      "Auto"
-      FunctionWithSeparateData off
-      Opaque		      off
       RequestExecContextInheritance off
-      MaskHideContents	      off
       Object {
 	$PropName		"MaskObject"
 	$ObjectID		17
@@ -1167,7 +1167,7 @@ Library {
       }
       System {
 	Name			"Collector_Unglazed"
-	Location		[100, 116, 1599, 948]
+	Location		[247, 165, 1322, 821]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -1260,13 +1260,15 @@ Library {
 	  Position		  [360, 108, 445, 157]
 	  ZOrder		  -8
 	  BackgroundColor	  "yellow"
+	  LibraryVersion	  "1.11"
 	  SourceBlock		  "carnot/Source/Solar_Thermal/IncidenceAngleModifier/IAM_Table"
 	  SourceType		  "IAM Table for Solar Thermal Collectors"
 	  ContentPreviewEnabled	  off
-	  angle			  [0:5:90]
-	  Kb			  [1.0000    1.0000    0.9999    0.9996    0.9991    0.9982    0.9965  0.9935    0.9886    0.9807    0.9678    0.9473    0.9148    0.8638   0.7846    0.6644    0.4907    0.2599    0.0000]
-	  Kd			  0.92
-	  fta			  0.9
+	  fta			  "fta"
+	  angle			  "[0:5:90]"
+	  Kb			  "[1.0000    1.0000    0.9999    0.9996    0.9991    0.9982    0.9965  0.9935    0.9886    0.9807    0.9678  "
+	  "  0.9473    0.9148    0.8638   0.7846    0.6644    0.4907    0.2599    0.0000]"
+	  Kd			  "0.92"
 	}
 	Block {
 	  BlockType		  Reference
@@ -1275,6 +1277,7 @@ Library {
 	  Ports			  [2, 1]
 	  Position		  [980, 239, 1090, 286]
 	  ZOrder		  -9
+	  LibraryVersion	  "1.11"
 	  SourceBlock		  "carnot/Control/PowerMeter"
 	  SourceType		  "power meter"
 	  ContentPreviewEnabled	  off
@@ -1286,12 +1289,13 @@ Library {
 	  Ports			  [3, 1]
 	  Position		  [985, 309, 1085, 421]
 	  ZOrder		  -10
+	  LibraryVersion	  "1.11"
 	  SourceBlock		  "carnot/Basic/Pressure_Drop/Pressure_Drop_Collector"
 	  SourceType		  "Pressure Drop Collector"
 	  ContentPreviewEnabled	  off
-	  len			  len
-	  lin			  lin
-	  qua			  qua
+	  len			  "len"
+	  lin			  "lin"
+	  qua			  "qua"
 	}
 	Block {
 	  BlockType		  Product
@@ -1314,11 +1318,12 @@ Library {
 	  Position		  [175, 95, 285, 170]
 	  ZOrder		  -12
 	  BackgroundColor	  "[1.000000, 0.674510, 0.000000]"
+	  LibraryVersion	  "1.11"
 	  SourceBlock		  "carnot/Weather/Radiation_on_Inclined_Surface"
 	  SourceType		  "inclined surface"
 	  ContentPreviewEnabled	  off
 	  sky			  "Perez 1990"
-	  reflect		  0.2
+	  reflect		  "0.2"
 	}
 	Block {
 	  BlockType		  Terminator
@@ -1352,6 +1357,7 @@ Library {
 	  Ports			  [6, 1]
 	  Position		  [1180, 38, 1245, 162]
 	  ZOrder		  -16
+	  LibraryVersion	  "1.11"
 	  SourceBlock		  "carnot/Source/Solar_Thermal/Collector_EN12975/create_dataC"
 	  SourceType		  "SubSystem"
 	  ContentPreviewEnabled	  off

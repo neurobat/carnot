@@ -1,6 +1,6 @@
 Library {
   Name			  "Collector_EN12975_FlatPlate"
-  Version		  7.6
+  Version		  8.2
   MdlSubVersion		  0
   SavedCharacterEncoding  "windows-1252"
   LibraryType		  "BlockLibrary"
@@ -8,23 +8,64 @@ Library {
   ScopeRefreshTime	  0.035000
   OverrideScopeRefreshTime on
   DisableAllScopes	  off
+  FPTRunName		  "Run 1"
   MaxMDLFileLineLength	  120
+  Object {
+    $PropName		    "BdWindowsInfo"
+    $ObjectID		    1
+    $ClassName		    "Simulink.BDWindowsInfo"
+    Object {
+      $PropName		      "WindowsInfo"
+      $ObjectID		      2
+      $ClassName	      "Simulink.WindowInfo"
+      IsActive		      [1]
+      Location		      [230.0, 82.0, 1521.0, 936.0]
+      Object {
+	$PropName		"ModelBrowserInfo"
+	$ObjectID		3
+	$ClassName		"Simulink.ModelBrowserInfo"
+	Visible			[0]
+	DockPosition		"Left"
+	Width			[50]
+	Height			[50]
+	Filter			[9]
+      }
+      Object {
+	$PropName		"ExplorerBarInfo"
+	$ObjectID		4
+	$ClassName		"Simulink.ExplorerBarInfo"
+	Visible			[1]
+      }
+      Object {
+	$PropName		"EditorsInfo"
+	$ObjectID		5
+	$ClassName		"Simulink.EditorInfo"
+	IsActive		[1]
+	ViewObjType		"SimulinkSubsys"
+	LoadSaveID		"67"
+	Extents			[1471.0, 770.0]
+	ZoomFactor		[1.25]
+	Offset			[-95.542857142857088, -55.380952380952408]
+      }
+    }
+  }
   Created		  "Wed Jul 09 11:30:16 2014"
   Creator		  "lena.frank"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "drhf"
+  LastModifiedBy	  "ASIC"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri Dec 19 15:40:57 2014"
-  RTWModifiedTimeStamp	  340904456
-  ModelVersionFormat	  "1.%<AutoIncrement:5>"
-  ConfigurationManager	  "None"
+  LastModifiedDate	  "Wed Sep 28 14:57:56 2016"
+  RTWModifiedTimeStamp	  396975476
+  ModelVersionFormat	  "1.%<AutoIncrement:10>"
+  ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "none"
   WideLines		  off
   ShowLineDimensions	  off
   ShowPortDataTypes	  off
+  ShowDesignRanges	  off
   ShowLoopsOnError	  on
   IgnoreBidirectionalLines off
   ShowStorageClass	  off
@@ -42,6 +83,11 @@ Library {
   BrowserShowLibraryLinks off
   BrowserLookUnderMasks	  off
   SimulationMode	  "normal"
+  PauseTimes		  "5"
+  NumberOfSteps		  1
+  SnapshotBufferSize	  10
+  SnapshotInterval	  10
+  NumberOfLastSnapshots	  0
   LinearizationMsg	  "none"
   Profile		  off
   ParamWorkspaceSource	  "MATLABWorkspace"
@@ -51,6 +97,7 @@ Library {
   CovNameIncrementing	  off
   CovHtmlReporting	  on
   CovForceBlockReductionOff on
+  CovEnableCumulative	  on
   covSaveCumulativeToWorkspaceVar on
   CovSaveSingleToWorkspaceVar on
   CovCumulativeReport	  off
@@ -84,14 +131,14 @@ Library {
     Type		    "Handle"
     Dimension		    1
     Simulink.ConfigSet {
-      $ObjectID		      1
-      Version		      "1.10.0"
+      $ObjectID		      6
+      Version		      "1.13.1"
       Array {
 	Type			"Handle"
 	Dimension		8
 	Simulink.SolverCC {
-	  $ObjectID		  2
-	  Version		  "1.10.0"
+	  $ObjectID		  7
+	  Version		  "1.13.1"
 	  StartTime		  "0.0"
 	  StopTime		  "10.0"
 	  AbsTol		  "auto"
@@ -109,6 +156,7 @@ Library {
 	  MaxConsecutiveMinStep	  "1"
 	  RelTol		  "1e-3"
 	  SolverMode		  "Auto"
+	  EnableConcurrentExecution off
 	  ConcurrentTasks	  off
 	  Solver		  "ode45"
 	  SolverName		  "ode45"
@@ -124,8 +172,8 @@ Library {
 	  InsertRTBMode		  "Whenever possible"
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  3
-	  Version		  "1.10.0"
+	  $ObjectID		  8
+	  Version		  "1.13.1"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
 	  FinalStateName	  "xFinal"
@@ -137,6 +185,7 @@ Library {
 	  SaveFinalState	  off
 	  SaveCompleteFinalSimState off
 	  SaveFormat		  "Array"
+	  SignalLoggingSaveFormat "ModelDataLogs"
 	  SaveOutput		  on
 	  SaveState		  off
 	  SignalLogging		  on
@@ -155,8 +204,8 @@ Library {
 	  Refine		  "1"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  4
-	  Version		  "1.10.0"
+	  $ObjectID		  9
+	  Version		  "1.13.1"
 	  Array {
 	    Type		    "Cell"
 	    Dimension		    8
@@ -175,6 +224,8 @@ Library {
 	  ConditionallyExecuteInputs on
 	  InlineParams		  off
 	  UseIntDivNetSlope	  off
+	  UseFloatMulNetSlope	  off
+	  DefaultUnderspecifiedDataType	"double"
 	  UseSpecifiedMinMax	  off
 	  InlineInvariantSignals  off
 	  OptimizeBlockIOStorage  on
@@ -194,6 +245,7 @@ Library {
 	  SystemCodeInlineAuto	  off
 	  StateBitsets		  off
 	  DataBitsets		  off
+	  ActiveStateOutputEnumStorageType "Native Integer"
 	  UseTempVars		  off
 	  ZeroExternalMemoryAtStartup on
 	  ZeroInternalMemoryAtStartup on
@@ -207,10 +259,11 @@ Library {
 	  BufferReusableBoundary  on
 	  SimCompilerOptimization "Off"
 	  AccelVerboseBuild	  off
+	  ParallelExecutionInRapidAccelerator on
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  5
-	  Version		  "1.10.0"
+	  $ObjectID		  10
+	  Version		  "1.13.1"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
 	  ArrayBoundsChecking	  "none"
@@ -259,12 +312,13 @@ Library {
 	  UnnecessaryDatatypeConvMsg "none"
 	  VectorMatrixConversionMsg "none"
 	  InvalidFcnCallConnMsg	  "error"
-	  FcnCallInpInsideContextMsg "Enable All"
+	  FcnCallInpInsideContextMsg "EnableAllAsWarning"
 	  SignalLabelMismatchMsg  "none"
 	  UnconnectedInputMsg	  "warning"
 	  UnconnectedOutputMsg	  "warning"
 	  UnconnectedLineMsg	  "warning"
 	  SFcnCompatibilityMsg	  "none"
+	  FrameProcessingCompatibilityMsg "warning"
 	  UniqueDataStoreMsg	  "none"
 	  BusObjectLabelMismatch  "warning"
 	  RootOutportRequireBusObject "warning"
@@ -281,6 +335,7 @@ Library {
 	  ModelReferenceExtraNoncontSigs "error"
 	  StateNameClashWarn	  "warning"
 	  SimStateInterfaceChecksumMismatchMsg "warning"
+	  SimStateOlderReleaseMsg "error"
 	  InitInArrayFormatMsg	  "warning"
 	  StrictBusMsg		  "ErrorLevel1"
 	  BusNameAdapt		  "WarnAndRepair"
@@ -292,14 +347,18 @@ Library {
 	  SFInvalidInputDataAccessInChartInitDiag "warning"
 	  SFNoUnconditionalDefaultTransitionDiag "warning"
 	  SFTransitionOutsideNaturalParentDiag "warning"
+	  SFUnconditionalTransitionShadowingDiag "warning"
+	  SFUndirectedBroadcastEventsDiag "warning"
+	  SFTransitionActionBeforeConditionDiag	"warning"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  6
-	  Version		  "1.10.0"
+	  $ObjectID		  11
+	  Version		  "1.13.1"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
 	  ProdBitPerInt		  32
 	  ProdBitPerLong	  32
+	  ProdBitPerLongLong	  64
 	  ProdBitPerFloat	  32
 	  ProdBitPerDouble	  64
 	  ProdBitPerPointer	  32
@@ -309,17 +368,20 @@ Library {
 	  ProdEndianess		  "Unspecified"
 	  ProdWordSize		  32
 	  ProdShiftRightIntArith  on
+	  ProdLongLongMode	  off
 	  ProdHWDeviceType	  "32-bit Generic"
 	  TargetBitPerChar	  8
 	  TargetBitPerShort	  16
 	  TargetBitPerInt	  32
 	  TargetBitPerLong	  32
+	  TargetBitPerLongLong	  64
 	  TargetBitPerFloat	  32
 	  TargetBitPerDouble	  64
 	  TargetBitPerPointer	  32
 	  TargetLargestAtomicInteger "Char"
 	  TargetLargestAtomicFloat "None"
 	  TargetShiftRightIntArith on
+	  TargetLongLongMode	  off
 	  TargetIntDivRoundTo	  "Undefined"
 	  TargetEndianess	  "Unspecified"
 	  TargetWordSize	  32
@@ -331,8 +393,8 @@ Library {
 	  ProdEqTarget		  on
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  7
-	  Version		  "1.10.0"
+	  $ObjectID		  12
+	  Version		  "1.13.1"
 	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
 	  CheckModelReferenceTargetMessage "error"
 	  EnableParallelModelReferenceBuilds off
@@ -346,8 +408,8 @@ Library {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  8
-	  Version		  "1.10.0"
+	  $ObjectID		  13
+	  Version		  "1.13.1"
 	  SFSimEnableDebug	  on
 	  SFSimOverflowDetection  on
 	  SFSimEcho		  on
@@ -358,11 +420,12 @@ Library {
 	  SimUseLocalCustomCode	  off
 	  SimParseCustomCode	  on
 	  SimBuildMode		  "sf_incremental_build"
+	  SimGenImportedTypeDefs  off
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  9
-	  Version		  "1.10.0"
+	  $ObjectID		  14
+	  Version		  "1.13.1"
 	  Array {
 	    Type		    "Cell"
 	    Dimension		    9
@@ -378,10 +441,15 @@ Library {
 	    PropName		    "DisabledProps"
 	  }
 	  SystemTargetFile	  "grt.tlc"
+	  TLCOptions		  ""
 	  GenCodeOnly		  off
 	  MakeCommand		  "make_rtw"
 	  GenerateMakefile	  on
+	  PackageGeneratedCodeAndArtifacts off
+	  PackageName		  ""
 	  TemplateMakefile	  "grt_default_tmf"
+	  PostCodeGenCommand	  ""
+	  Description		  ""
 	  GenerateReport	  off
 	  SaveLog		  off
 	  RTWVerbose		  on
@@ -392,11 +460,29 @@ Library {
 	  TLCAssert		  off
 	  ProcessScriptMode	  "Default"
 	  ConfigurationMode	  "Optimized"
+	  ProcessScript		  ""
+	  ConfigurationScript	  ""
 	  ConfigAtBuild		  off
 	  RTWUseLocalCustomCode	  off
 	  RTWUseSimCustomCode	  off
+	  CustomSourceCode	  ""
+	  CustomHeaderCode	  ""
+	  CustomInclude		  ""
+	  CustomSource		  ""
+	  CustomLibrary		  ""
+	  CustomInitializer	  ""
+	  CustomTerminator	  ""
+	  Toolchain		  "Automatically locate an installed toolchain"
+	  BuildConfiguration	  "Faster Builds"
 	  IncludeHyperlinkInReport off
 	  LaunchReport		  off
+	  PortableWordSizes	  off
+	  CreateSILPILBlock	  "None"
+	  CodeExecutionProfiling  off
+	  CodeExecutionProfileVariable "executionProfile"
+	  CodeProfilingSaveOptions "SummaryOnly"
+	  CodeProfilingInstrumentation off
+	  SILDebugging		  off
 	  TargetLang		  "C"
 	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
 	  IncludeERTFirstTime	  off
@@ -406,16 +492,21 @@ Library {
 	  GenerateTraceReportSf	  off
 	  GenerateTraceReportEml  off
 	  GenerateCodeInfo	  off
-	  GenerateSLWebview	  off
+	  GenerateWebview	  off
+	  GenerateCodeMetricsReport off
+	  GenerateCodeReplacementReport	off
 	  RTWCompilerOptimization "Off"
+	  RTWCustomCompilerOptimizations ""
 	  CheckMdlBeforeBuild	  "Off"
 	  CustomRebuildMode	  "OnUpdate"
+	  DataInitializer	  ""
+	  SharedConstantsCachingThreshold 1024
 	  Array {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      10
-	      Version		      "1.10.0"
+	      $ObjectID		      15
+	      Version		      "1.13.1"
 	      Array {
 		Type			"Cell"
 		Dimension		21
@@ -451,6 +542,7 @@ Library {
 	      PreserveName	      off
 	      PreserveNameWithParent  off
 	      ShowEliminatedStatement off
+	      OperatorAnnotations     off
 	      IncAutoGenComments      off
 	      SimulinkDataObjDesc     off
 	      SFDataObjDesc	      off
@@ -465,6 +557,7 @@ Library {
 	      CustomSymbolStrBlkIO    "rtb_$N$M"
 	      CustomSymbolStrTmpVar   "$N$M"
 	      CustomSymbolStrMacro    "$R$N$M"
+	      CustomSymbolStrUtil     "$N$C"
 	      DefineNamingRule	      "None"
 	      ParamNamingRule	      "None"
 	      SignalNamingRule	      "None"
@@ -473,14 +566,15 @@ Library {
 	      SimulinkBlockComments   on
 	      MATLABSourceComments    off
 	      EnableCustomComments    off
+	      InternalIdentifier      "Shortened"
 	      InlinedPrmAccess	      "Literals"
 	      ReqsInCode	      off
 	      UseSimReservedNames     off
 	    }
 	    Simulink.GRTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      11
-	      Version		      "1.10.0"
+	      $ObjectID		      16
+	      Version		      "1.13.1"
 	      Array {
 		Type			"Cell"
 		Dimension		16
@@ -499,28 +593,27 @@ Library {
 		Cell			"SupportAbsoluteTime"
 		Cell			"SupportContinuousTime"
 		Cell			"SupportNonInlinedSFcns"
-		Cell			"MultiInstanceERTCode"
+		Cell			"GenerateAllocFcn"
 		PropName		"DisabledProps"
 	      }
 	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
 	      TargetLibSuffix	      ""
 	      TargetPreCompLibLocation ""
-	      TargetFunctionLibrary   "ANSI_C"
+	      CodeReplacementLibrary  "None"
 	      UtilityFuncGeneration   "Auto"
 	      ERTMultiwordTypeDef     "System defined"
-	      ERTCodeCoverageTool     "None"
 	      ERTMultiwordLength      256
 	      MultiwordLength	      2048
 	      GenerateFullHeader      on
 	      GenerateSampleERTMain   off
 	      GenerateTestInterfaces  off
-	      IsPILTarget	      off
 	      ModelReferenceCompliant on
 	      ParMdlRefBuildCompliant on
 	      CompOptLevelCompliant   on
+	      ConcurrentExecutionCompliant on
 	      IncludeMdlTerminateFcn  on
 	      GeneratePreprocessorConditionals "Disable all"
-	      CombineOutputUpdateFcns on
+	      CombineOutputUpdateFcns off
 	      CombineSignalStateStructs	off
 	      SuppressErrorStatus     off
 	      ERTFirstTimeCompliant   off
@@ -538,10 +631,12 @@ Library {
 	      SupportVariableSizeSignals off
 	      EnableShiftOperators    on
 	      ParenthesesLevel	      "Nominal"
-	      PortableWordSizes	      off
+	      MATLABClassNameForMDSCustomization "Simulink.SoftwareTarget.GRTCustomization"
 	      ModelStepFunctionPrototypeControlCompliant off
-	      CPPClassGenCompliant    off
+	      CPPClassGenCompliant    on
 	      AutosarCompliant	      off
+	      GRTInterface	      on
+	      GenerateAllocFcn	      off
 	      UseMalloc		      off
 	      ExtMode		      off
 	      ExtModeStaticAlloc      off
@@ -553,19 +648,22 @@ Library {
 	      RTWCAPISignals	      off
 	      RTWCAPIParams	      off
 	      RTWCAPIStates	      off
+	      RTWCAPIRootIO	      off
 	      GenerateASAP2	      off
 	    }
 	    PropName		    "Components"
 	  }
+	  GenerateErtSFunction	  off
 	}
 	PropName		"Components"
       }
       Name		      "Configuration"
       CurrentDlgPage	      "Solver"
-      ConfigPrmDlgPosition    " [ 520, 225, 1400, 855 ] "
+      ConfigPrmDlgPosition    [ 520, 225, 1400, 855 ]  
     }
     PropName		    "ConfigurationSets"
   }
+  ExplicitPartitioning	  off
   BlockDefaults {
     ForegroundColor	    "black"
     BackgroundColor	    "white"
@@ -597,6 +695,25 @@ Library {
     FontWeight		    "normal"
     FontAngle		    "normal"
   }
+  MaskDefaults {
+    SelfModifiable	    "off"
+    IconFrame		    "on"
+    IconOpaque		    "on"
+    RunInitForIconRedraw    "off"
+    IconRotate		    "none"
+    PortRotate		    "default"
+    IconUnits		    "autoscale"
+  }
+  MaskParameterDefaults {
+    Evaluate		    "on"
+    Tunable		    "on"
+    NeverSave		    "off"
+    Internal		    "off"
+    ReadOnly		    "off"
+    Enabled		    "on"
+    Visible		    "on"
+    ToolTip		    "on"
+  }
   BlockParameterDefaults {
     Block {
       BlockType		      BusAssignment
@@ -604,6 +721,7 @@ Library {
     }
     Block {
       BlockType		      BusSelector
+      OutputSignals	      "signal1,signal2,signal3"
       OutputAsBus	      off
     }
     Block {
@@ -622,6 +740,7 @@ Library {
     Block {
       BlockType		      Inport
       Port		      "1"
+      OutputFunctionCall      off
       OutMin		      "[]"
       OutMax		      "[]"
       OutDataTypeStr	      "Inherit: auto"
@@ -667,10 +786,15 @@ Library {
       Permissions	      "ReadWrite"
       PermitHierarchicalResolution "All"
       TreatAsAtomicUnit	      off
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
       CheckFcnCallInpInsideContextMsg off
       SystemSampleTime	      "-1"
+      RTWSystemCode	      "Auto"
       RTWFcnNameOpts	      "Auto"
       RTWFileNameOpts	      "Auto"
+      FunctionInterfaceSpec   "void_void"
+      FunctionWithSeparateData off
       RTWMemSecFuncInitTerm   "Inherit from model"
       RTWMemSecFuncExecute    "Inherit from model"
       RTWMemSecDataConstants  "Inherit from model"
@@ -680,14 +804,18 @@ Library {
       DataTypeOverride	      "UseLocalSettings"
       DataTypeOverrideAppliesTo	"AllNumericTypes"
       MinMaxOverflowLogging   "UseLocalSettings"
+      Opaque		      off
+      MaskHideContents	      off
+      SFBlockType	      "NONE"
       Variant		      off
       GeneratePreprocessorConditionals off
+      ContentPreviewEnabled   off
     }
   }
   System {
     Name		    "Collector_EN12975_FlatPlate"
-    Location		    [419, 236, 1011, 709]
-    Open		    on
+    Location		    [230, 82, 1637, 938]
+    Open		    off
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
     ScreenColor		    "white"
@@ -700,57 +828,166 @@ Library {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "82"
+    SIDHighWatermark	    "87"
     Block {
       BlockType		      SubSystem
       Name		      "Collector_EN12975_FlatPlate"
       SID		      "67"
       Ports		      [3, 2]
       Position		      [80, 72, 215, 198]
+      ZOrder		      -1
       BackgroundColor	      "yellow"
       LibraryVersion	      "6.0.276"
-      MinAlgLoopOccurrences   off
-      PropExecContextOutsideSubsystem off
-      RTWSystemCode	      "Auto"
-      FunctionWithSeparateData off
-      Opaque		      off
       RequestExecContextInheritance off
-      MaskHideContents	      off
-      MaskType		      "collector"
-      MaskDescription	      "Dynamic 1-node collector model according to EN 12975 standard. \nEnergy balance:\nmdot cp"
-      " (Tout-Tin) /A = F'(TauAlfa) Kdir Idir + F'(TauAlfa) Kdfu Idfu \n       - c1 (Tm-Tamb) - c2 (Tm-Tamb)^2 - c3 v_w"
-      "ind (Tm-Ta) - c6 v_wind Iglb  \n       + c4 (ELongwave - sigmaSB*(Tamb+273.15)^4) - c5 dTm/dt\n\nOften in test r"
-      "eports the optical efficiency or conversion factor eta0 is given.\nThe correlation for F'(TauAlfa) is:\neta0 = F"
-      "'(TauAlfa) * (Kdir(15°)*0.85 + Kdfu*0.15)\nor\nF'(TauAlfa) = eta0 / (Kdir(15°)*0.85 + Kdfu*0.15)"
-      MaskHelp		      "web(fullfile(path_carnot('help'),'collector_en12975.html'),'-helpbrowser')"
-      MaskPromptString	      "A : collector surface  [m²]|length between inlet and outlet [m]|F'(TauAlfa)|c1 : heat lo"
-      "ss coefficient at (Tm-Ta)=0  [W/(m²*K)]|c2: temperature dependence of the heat loss coefficient [W/(m*K)²]|c3 : "
-      "wind speed dependence of the heat loss coefficient [J/(m³K)]|c4 : sky temperature dependence of the heat loss co"
-      "efficient [W/(m²K)]|c5 : effective thermal capacity [J/(m²K)]|c6 : wind dependence of conversion factor [s/m]|b0"
-      " : constant for the calculation of the incident angle modifier (direct radiation)|Kd : Incidence angle modifier "
-      "diffuse radiation|linear pressure drop in Pa/(kg/s)|quadratic pressure drop in Pa/(kg/s)²|initial temperature [d"
-      "egree centigrade]"
-      MaskStyleString	      "edit,edit,edit,edit,edit,edit,edit,edit,edit,edit,edit,edit,edit,edit"
-      MaskVariables	      "acol=@1;len=@2;fta=@3;c1=@4;c2=@5;c3=@6;c4=@7;c5=@8;c6=@9;b0=@10;Kd=@11;lin=@12;qua=@13;tin"
-      "i=@14;"
-      MaskTunableValueString  "off,off,off,off,off,off,off,off,off,off,off,off,off,off"
-      MaskCallbackString      "|||||||||||||"
-      MaskEnableString	      "on,on,on,on,on,on,on,on,on,on,on,on,on,on"
-      MaskVisibilityString    "on,on,on,on,on,on,on,on,on,on,on,on,on,on"
-      MaskToolTipString	      "on,on,on,on,on,on,on,on,on,on,on,on,on,on"
-      MaskInitialization      "acol = max(acol, 0.01);\nc5 = max(c5, 0.001);\n"
-      MaskDisplay	      "disp('solar thermal\\ncollector\\nEN 12975\\nB0-Optics')"
-      MaskIconFrame	      on
-      MaskIconOpaque	      off
-      MaskIconRotate	      "none"
-      MaskPortRotate	      "default"
-      MaskIconUnits	      "autoscale"
-      MaskValueString	      "2.5|2.3|0.8103|3.757|0.0147|0|0|7062|0|0.12|0.92|0|0|20"
-      MaskTabNameString	      "Geometry,Geometry,Coll.Parameters,Coll.Parameters,Coll.Parameters,Coll.Parameters,Coll."
-      "Parameters,Coll.Parameters,Coll.Parameters,Optics,Optics,Hydraulic,Hydraulic,Calculation"
+      Object {
+	$PropName		"MaskObject"
+	$ObjectID		17
+	$ClassName		"Simulink.Mask"
+	Type			"collector"
+	Description		"Dynamic 1-node collector model according to EN 12975 standard. \nEnergy balance:\nmdot cp (Tout-Tin) /A"
+	" = F'(TauAlfa) Kdir Idir + F'(TauAlfa) Kdfu Idfu \n       - c1 (Tm-Tamb) - c2 (Tm-Tamb)^2 - c3 v_wind (Tm-Ta) - c6 v_"
+	"wind Iglb  \n       + c4 (ELongwave - sigmaSB*(Tamb+273.15)^4) - c5 dTm/dt\n\nOften in test reports the optical effic"
+	"iency or conversion factor eta0 is given.\nThe correlation for F'(TauAlfa) is:\neta0 = F'(TauAlfa) * (Kdir(15°)*0.85 "
+	"+ Kdfu*0.15)\nor\nF'(TauAlfa) = eta0 / (Kdir(15°)*0.85 + Kdfu*0.15)"
+	Help			"web(fullfile(path_carnot('help'),'collector_en12975.html'),'-helpbrowser')"
+	Initialization		"acol = max(acol, 0.01);\nc5 = max(c5, 0.001);\n"
+	Display			"disp('solar thermal\\ncollector\\nEN 12975\\nB0-Optics')"
+	IconOpaque		"off"
+	Array {
+	  Type			  "Simulink.MaskParameter"
+	  Dimension		  14
+	  Object {
+	    $ObjectID		    18
+	    Type		    "edit"
+	    Name		    "acol"
+	    Prompt		    "A : collector surface  [m²]"
+	    Value		    "2.5"
+	    Tunable		    "off"
+	    TabName		    "Geometry"
+	  }
+	  Object {
+	    $ObjectID		    19
+	    Type		    "edit"
+	    Name		    "len"
+	    Prompt		    "length between inlet and outlet [m]"
+	    Value		    "2.3"
+	    Tunable		    "off"
+	    TabName		    "Geometry"
+	  }
+	  Object {
+	    $ObjectID		    20
+	    Type		    "edit"
+	    Name		    "fta"
+	    Prompt		    "F'(TauAlfa)"
+	    Value		    "0.8103"
+	    Tunable		    "off"
+	    TabName		    "Coll.Parameters"
+	  }
+	  Object {
+	    $ObjectID		    21
+	    Type		    "edit"
+	    Name		    "c1"
+	    Prompt		    "c1 : heat loss coefficient at (Tm-Ta)=0  [W/(m²*K)]"
+	    Value		    "3.757"
+	    Tunable		    "off"
+	    TabName		    "Coll.Parameters"
+	  }
+	  Object {
+	    $ObjectID		    22
+	    Type		    "edit"
+	    Name		    "c2"
+	    Prompt		    "c2: temperature dependence of the heat loss coefficient [W/(m*K)²]"
+	    Value		    "0.0147"
+	    Tunable		    "off"
+	    TabName		    "Coll.Parameters"
+	  }
+	  Object {
+	    $ObjectID		    23
+	    Type		    "edit"
+	    Name		    "c3"
+	    Prompt		    "c3 : wind speed dependence of the heat loss coefficient [J/(m³K)]"
+	    Value		    "0"
+	    Tunable		    "off"
+	    TabName		    "Coll.Parameters"
+	  }
+	  Object {
+	    $ObjectID		    24
+	    Type		    "edit"
+	    Name		    "c4"
+	    Prompt		    "c4 : sky temperature dependence of the heat loss coefficient [W/(m²K)]"
+	    Value		    "0"
+	    Tunable		    "off"
+	    TabName		    "Coll.Parameters"
+	  }
+	  Object {
+	    $ObjectID		    25
+	    Type		    "edit"
+	    Name		    "c5"
+	    Prompt		    "c5 : effective thermal capacity [J/(m²K)]"
+	    Value		    "7062"
+	    Tunable		    "off"
+	    TabName		    "Coll.Parameters"
+	  }
+	  Object {
+	    $ObjectID		    26
+	    Type		    "edit"
+	    Name		    "c6"
+	    Prompt		    "c6 : wind dependence of conversion factor [s/m]"
+	    Value		    "0"
+	    Tunable		    "off"
+	    TabName		    "Coll.Parameters"
+	  }
+	  Object {
+	    $ObjectID		    27
+	    Type		    "edit"
+	    Name		    "b0"
+	    Prompt		    "b0 : constant for the calculation of the incident angle modifier (direct radiation)"
+	    Value		    "0.12"
+	    Tunable		    "off"
+	    TabName		    "Optics"
+	  }
+	  Object {
+	    $ObjectID		    28
+	    Type		    "edit"
+	    Name		    "Kd"
+	    Prompt		    "Kd : Incidence angle modifier diffuse radiation"
+	    Value		    "0.92"
+	    Tunable		    "off"
+	    TabName		    "Optics"
+	  }
+	  Object {
+	    $ObjectID		    29
+	    Type		    "edit"
+	    Name		    "lin"
+	    Prompt		    "linear pressure drop in Pa/(kg/s)"
+	    Value		    "0"
+	    Tunable		    "off"
+	    TabName		    "Hydraulic"
+	  }
+	  Object {
+	    $ObjectID		    30
+	    Type		    "edit"
+	    Name		    "qua"
+	    Prompt		    "quadratic pressure drop in Pa/(kg/s)²"
+	    Value		    "0"
+	    Tunable		    "off"
+	    TabName		    "Hydraulic"
+	  }
+	  Object {
+	    $ObjectID		    31
+	    Type		    "edit"
+	    Name		    "tini"
+	    Prompt		    "initial temperature [degree centigrade]"
+	    Value		    "20"
+	    Tunable		    "off"
+	    TabName		    "Calculation"
+	  }
+	  PropName		  "Parameters"
+	}
+      }
       System {
 	Name			"Collector_EN12975_FlatPlate"
-	Location		[2, 74, 1179, 762]
+	Location		[230, 82, 1751, 1018]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -762,12 +999,13 @@ Library {
 	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"100"
+	ZoomFactor		"125"
 	Block {
 	  BlockType		  Inport
 	  Name			  "WDB"
 	  SID			  "68"
 	  Position		  [30, 173, 60, 187]
+	  ZOrder		  -1
 	  IconDisplay		  "Port number"
 	}
 	Block {
@@ -775,6 +1013,7 @@ Library {
 	  Name			  "position"
 	  SID			  "69"
 	  Position		  [30, 208, 60, 222]
+	  ZOrder		  -2
 	  Port			  "2"
 	  IconDisplay		  "Port number"
 	}
@@ -782,7 +1021,8 @@ Library {
 	  BlockType		  Inport
 	  Name			  "THBin"
 	  SID			  "70"
-	  Position		  [30, 338, 60, 352]
+	  Position		  [30, 388, 60, 402]
+	  ZOrder		  -3
 	  Port			  "3"
 	  IconDisplay		  "Port number"
 	  Port {
@@ -800,13 +1040,12 @@ Library {
 	  SID			  "71"
 	  Ports			  [2, 1]
 	  Position		  [910, 166, 990, 239]
+	  ZOrder		  -4
 	  ShowName		  off
 	  AssignedSignals	  "Temperature"
 	  Port {
 	    PortNumber		    1
 	    Name		    "THBout"
-	    PropagatedSignals	    "ID, Temperature, MassFlow, Pressure, FluidType, FluidMix, DiameterLastPiece, DPConstant, D"
-	    "PLinear, DPQuadratic, HydraulicInductance, GeodeticHeight"
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
@@ -815,10 +1054,11 @@ Library {
 	  BlockType		  BusSelector
 	  Name			  "Bus\nSelector"
 	  SID			  "72"
-	  Ports			  [1, 2]
-	  Position		  [525, 224, 530, 271]
+	  Ports			  [1, 3]
+	  Position		  [345, 225, 350, 295]
+	  ZOrder		  -5
 	  ShowName		  off
-	  OutputSignals		  "Temperature_Ambient,Wind_Speed"
+	  OutputSignals		  "Temperature_Ambient,Wind_Speed,Temperature_Sky_Radiation"
 	  Port {
 	    PortNumber		    1
 	    Name		    "<Temperature_Ambient>"
@@ -831,29 +1071,28 @@ Library {
 	    RTWStorageClass	    "Auto"
 	    DataLoggingNameMode	    "SignalName"
 	  }
+	  Port {
+	    PortNumber		    3
+	    Name		    "<Temperature_Sky_Radiation>"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
+	  }
 	}
 	Block {
 	  BlockType		  Reference
 	  Name			  "IAM_b0"
 	  SID			  "73"
 	  Ports			  [1, 2]
-	  Position		  [415, 174, 500, 221]
+	  Position		  [450, 174, 535, 221]
+	  ZOrder		  -6
 	  BackgroundColor	  "yellow"
-	  LibraryVersion	  "6.0.276"
+	  LibraryVersion	  "1.11"
 	  SourceBlock		  "carnot/Source/Solar_Thermal/IncidenceAngleModifier/IAM_b0"
 	  SourceType		  "collector optics single glazing with extra white glass"
-	  ShowPortLabels	  "FromPortIcon"
-	  SystemSampleTime	  "-1"
-	  FunctionWithSeparateData off
-	  RTWMemSecFuncInitTerm	  "Inherit from model"
-	  RTWMemSecFuncExecute	  "Inherit from model"
-	  RTWMemSecDataConstants  "Inherit from model"
-	  RTWMemSecDataInternal	  "Inherit from model"
-	  RTWMemSecDataParameters "Inherit from model"
-	  GeneratePreprocessorConditionals off
+	  ContentPreviewEnabled	  off
+	  fta			  "fta"
 	  b0			  "b0"
 	  Kd			  "Kd"
-	  fta			  "fta"
 	}
 	Block {
 	  BlockType		  Mux
@@ -861,6 +1100,7 @@ Library {
 	  SID			  "74"
 	  Ports			  [5, 1]
 	  Position		  [650, 175, 655, 295]
+	  ZOrder		  -7
 	  BackgroundColor	  "black"
 	  ShowName		  off
 	  Inputs		  "5"
@@ -871,18 +1111,11 @@ Library {
 	  SID			  "75"
 	  Ports			  [3, 1]
 	  Position		  [1060, 164, 1120, 246]
-	  LibraryVersion	  "6.0.276"
+	  ZOrder		  -8
+	  LibraryVersion	  "1.11"
 	  SourceBlock		  "carnot/Basic/Pressure_Drop/Pressure_Drop_Collector"
 	  SourceType		  "Pressure Drop Collector"
-	  ShowPortLabels	  "FromPortIcon"
-	  SystemSampleTime	  "-1"
-	  FunctionWithSeparateData off
-	  RTWMemSecFuncInitTerm	  "Inherit from model"
-	  RTWMemSecFuncExecute	  "Inherit from model"
-	  RTWMemSecDataConstants  "Inherit from model"
-	  RTWMemSecDataInternal	  "Inherit from model"
-	  RTWMemSecDataParameters "Inherit from model"
-	  GeneratePreprocessorConditionals off
+	  ContentPreviewEnabled	  off
 	  len			  "len"
 	  lin			  "lin"
 	  qua			  "qua"
@@ -892,20 +1125,13 @@ Library {
 	  Name			  "Radiation_on_Inclined_Surface"
 	  SID			  "76"
 	  Ports			  [2, 1]
-	  Position		  [175, 160, 285, 235]
+	  Position		  [120, 160, 230, 235]
+	  ZOrder		  -9
 	  BackgroundColor	  "[1.000000, 0.674510, 0.000000]"
-	  LibraryVersion	  "6.0.276"
+	  LibraryVersion	  "1.11"
 	  SourceBlock		  "carnot/Weather/Radiation_on_Inclined_Surface"
 	  SourceType		  "inclined surface"
-	  ShowPortLabels	  "FromPortIcon"
-	  SystemSampleTime	  "-1"
-	  FunctionWithSeparateData off
-	  RTWMemSecFuncInitTerm	  "Inherit from model"
-	  RTWMemSecFuncExecute	  "Inherit from model"
-	  RTWMemSecDataConstants  "Inherit from model"
-	  RTWMemSecDataInternal	  "Inherit from model"
-	  RTWMemSecDataParameters "Inherit from model"
-	  GeneratePreprocessorConditionals off
+	  ContentPreviewEnabled	  off
 	  sky			  "Perez 1990"
 	  reflect		  "0.2"
 	  Port {
@@ -924,6 +1150,7 @@ Library {
 	  Name			  "const"
 	  SID			  "77"
 	  Position		  [1015, 33, 1045, 57]
+	  ZOrder		  -10
 	  ShowName		  off
 	  Value			  "acol"
 	  Port {
@@ -939,25 +1166,11 @@ Library {
 	  SID			  "78"
 	  Ports			  [6, 1]
 	  Position		  [1205, 33, 1270, 157]
-	  LibraryVersion	  "6.0.276"
+	  ZOrder		  -11
+	  LibraryVersion	  "1.11"
 	  SourceBlock		  "carnot/Source/Solar_Thermal/Collector_EN12975/create_dataC"
 	  SourceType		  "SubSystem"
-	  ShowPortLabels	  "FromPortIcon"
-	  SystemSampleTime	  "-1"
-	  FunctionWithSeparateData off
-	  RTWMemSecFuncInitTerm	  "Inherit from model"
-	  RTWMemSecFuncExecute	  "Inherit from model"
-	  RTWMemSecDataConstants  "Inherit from model"
-	  RTWMemSecDataInternal	  "Inherit from model"
-	  RTWMemSecDataParameters "Inherit from model"
-	  GeneratePreprocessorConditionals off
-	}
-	Block {
-	  BlockType		  Constant
-	  Name			  "longwave radiation"
-	  SID			  "79"
-	  Position		  [420, 274, 495, 296]
-	  Value			  "-100"
+	  ContentPreviewEnabled	  off
 	}
 	Block {
 	  BlockType		  Reference
@@ -965,18 +1178,11 @@ Library {
 	  SID			  "80"
 	  Ports			  [2, 3]
 	  Position		  [695, 181, 815, 399]
-	  LibraryVersion	  "6.0.276"
+	  ZOrder		  -13
+	  LibraryVersion	  "1.11"
 	  SourceBlock		  "carnot/Basic/Thermal_Models/Solar_Collector_basic"
-	  SourceType		  ""
-	  ShowPortLabels	  "FromPortIcon"
-	  SystemSampleTime	  "-1"
-	  FunctionWithSeparateData off
-	  RTWMemSecFuncInitTerm	  "Inherit from model"
-	  RTWMemSecFuncExecute	  "Inherit from model"
-	  RTWMemSecDataConstants  "Inherit from model"
-	  RTWMemSecDataInternal	  "Inherit from model"
-	  RTWMemSecDataParameters "Inherit from model"
-	  GeneratePreprocessorConditionals off
+	  SourceType		  "Basic Solar Thermal Collector"
+	  ContentPreviewEnabled	  off
 	  acol			  "acol"
 	  c1			  "c1"
 	  c2			  "c2"
@@ -1005,6 +1211,7 @@ Library {
 	  Name			  "Cdat"
 	  SID			  "81"
 	  Position		  [1310, 88, 1340, 102]
+	  ZOrder		  -14
 	  IconDisplay		  "Port number"
 	  InitialOutput		  "0"
 	}
@@ -1013,42 +1220,52 @@ Library {
 	  Name			  "THB"
 	  SID			  "82"
 	  Position		  [1310, 198, 1340, 212]
+	  ZOrder		  -15
 	  Port			  "2"
 	  IconDisplay		  "Port number"
 	  InitialOutput		  "0"
 	}
 	Line {
+	  ZOrder		  1
 	  SrcBlock		  "Pressure_Drop_Collector"
 	  SrcPort		  1
 	  Points		  [25, 0]
 	  Branch {
+	    ZOrder		    2
 	    Points		    [0, -120]
 	    DstBlock		    "create_dataC"
 	    DstPort		    3
 	  }
 	  Branch {
+	    ZOrder		    3
 	    DstBlock		    "THB"
 	    DstPort		    1
 	  }
 	}
 	Line {
 	  Name			  "THBin"
+	  ZOrder		  4
 	  SrcBlock		  "THBin"
 	  SrcPort		  1
-	  Points		  [300, 0]
+	  Points		  [240, 0]
 	  Branch {
+	    ZOrder		    91
 	    Labels		    [1, 0]
+	    Points		    [357, 0; 0, -50]
 	    DstBlock		    "solar_collector_basic"
 	    DstPort		    2
 	  }
 	  Branch {
+	    ZOrder		    6
 	    Labels		    [2, 0]
-	    Points		    [0, -280; 520, 0]
+	    Points		    [0, -330; 580, 0]
 	    Branch {
+	      ZOrder		      7
 	      DstBlock		      "create_dataC"
 	      DstPort		      2
 	    }
 	    Branch {
+	      ZOrder		      8
 	      Points		      [0, 120]
 	      DstBlock		      "Bus\nAssignment"
 	      DstPort		      1
@@ -1056,14 +1273,9 @@ Library {
 	  }
 	}
 	Line {
-	  SrcBlock		  "longwave radiation"
-	  SrcPort		  1
-	  DstBlock		  "Mux2"
-	  DstPort		  5
-	}
-	Line {
 	  Name			  "<Wind_Speed>"
-	  Labels		  [0, 0; 0, 0]
+	  ZOrder		  10
+	  Labels		  [0, 0]
 	  SrcBlock		  "Bus\nSelector"
 	  SrcPort		  2
 	  DstBlock		  "Mux2"
@@ -1071,33 +1283,39 @@ Library {
 	}
 	Line {
 	  Name			  "<Temperature_Ambient>"
-	  Labels		  [0, 0; 0, 0]
+	  ZOrder		  11
+	  Labels		  [0, 0]
 	  SrcBlock		  "Bus\nSelector"
 	  SrcPort		  1
 	  DstBlock		  "Mux2"
 	  DstPort		  3
 	}
 	Line {
+	  ZOrder		  12
 	  SrcBlock		  "position"
 	  SrcPort		  1
-	  Points		  [70, 0]
+	  Points		  [22, 0]
 	  Branch {
-	    Points		    [0, 215; 890, 0; 0, -200]
-	    DstBlock		    "Pressure_Drop_Collector"
-	    DstPort		    3
-	  }
-	  Branch {
+	    ZOrder		    90
 	    DstBlock		    "Radiation_on_Inclined_Surface"
 	    DstPort		    2
 	  }
+	  Branch {
+	    ZOrder		    13
+	    Points		    [0, 215; 938, 0; 0, -200]
+	    DstBlock		    "Pressure_Drop_Collector"
+	    DstPort		    3
+	  }
 	}
 	Line {
+	  ZOrder		  15
 	  SrcBlock		  "WDB"
 	  SrcPort		  1
 	  DstBlock		  "Radiation_on_Inclined_Surface"
 	  DstPort		  1
 	}
 	Line {
+	  ZOrder		  16
 	  SrcBlock		  "create_dataC"
 	  SrcPort		  1
 	  DstBlock		  "Cdat"
@@ -1105,6 +1323,7 @@ Library {
 	}
 	Line {
 	  Name			  "Acol"
+	  ZOrder		  17
 	  Labels		  [-1, 1]
 	  SrcBlock		  "const"
 	  SrcPort		  1
@@ -1112,12 +1331,14 @@ Library {
 	  DstPort		  1
 	}
 	Line {
+	  ZOrder		  18
 	  SrcBlock		  "IAM_b0"
 	  SrcPort		  1
 	  DstBlock		  "Mux2"
 	  DstPort		  1
 	}
 	Line {
+	  ZOrder		  19
 	  SrcBlock		  "IAM_b0"
 	  SrcPort		  2
 	  DstBlock		  "Mux2"
@@ -1125,26 +1346,31 @@ Library {
 	}
 	Line {
 	  Name			  "WDB_surface"
+	  ZOrder		  20
 	  Labels		  [0, 0]
 	  SrcBlock		  "Radiation_on_Inclined_Surface"
 	  SrcPort		  1
-	  Points		  [95, 0]
+	  Points		  [90, 0]
 	  Branch {
+	    ZOrder		    21
 	    DstBlock		    "IAM_b0"
 	    DstPort		    1
 	  }
 	  Branch {
+	    ZOrder		    22
 	    Points		    [0, -55]
 	    DstBlock		    "create_dataC"
 	    DstPort		    6
 	  }
 	  Branch {
-	    Points		    [0, 50]
+	    ZOrder		    23
+	    Points		    [0, 60]
 	    DstBlock		    "Bus\nSelector"
 	    DstPort		    1
 	  }
 	}
 	Line {
+	  ZOrder		  24
 	  SrcBlock		  "Mux2"
 	  SrcPort		  1
 	  DstBlock		  "solar_collector_basic"
@@ -1152,6 +1378,7 @@ Library {
 	}
 	Line {
 	  Name			  "Qdot"
+	  ZOrder		  25
 	  Labels		  [-1, 1]
 	  SrcBlock		  "solar_collector_basic"
 	  SrcPort		  3
@@ -1161,21 +1388,25 @@ Library {
 	}
 	Line {
 	  Name			  "Tmean"
+	  ZOrder		  26
 	  SrcBlock		  "solar_collector_basic"
 	  SrcPort		  2
 	  Points		  [50, 0; 0, -165; 165, 0]
 	  Branch {
+	    ZOrder		    27
 	    Labels		    [-1, 1]
 	    DstBlock		    "create_dataC"
 	    DstPort		    5
 	  }
 	  Branch {
+	    ZOrder		    28
 	    Points		    [0, 55]
 	    DstBlock		    "Pressure_Drop_Collector"
 	    DstPort		    1
 	  }
 	}
 	Line {
+	  ZOrder		  29
 	  SrcBlock		  "solar_collector_basic"
 	  SrcPort		  1
 	  DstBlock		  "Bus\nAssignment"
@@ -1183,16 +1414,28 @@ Library {
 	}
 	Line {
 	  Name			  "THBout"
-	  Labels		  [0, 0; 0, 0]
+	  ZOrder		  30
+	  Labels		  [0, 0]
 	  SrcBlock		  "Bus\nAssignment"
 	  SrcPort		  1
 	  DstBlock		  "Pressure_Drop_Collector"
 	  DstPort		  2
 	}
+	Line {
+	  Name			  "<Temperature_Sky_Radiation>"
+	  ZOrder		  89
+	  Labels		  [1, 1]
+	  SrcBlock		  "Bus\nSelector"
+	  SrcPort		  3
+	  DstBlock		  "Mux2"
+	  DstPort		  5
+	}
 	Annotation {
+	  SID			  "83"
 	  Name			  "mdot cp (Tout-Tin) /A = F'(TauAlfa) IAMdir Idir + F'(TauAlfa) IAMdfu Idfu - c6 v_wind Iglb - c1 (Tm-Tamb)"
 	  " - c2 (Tm-Tamb)^2 - c3 v_wind (Tm-Ta) + c4 (ELongwave - sigma_SB Tamb^4) - c5 dTm/dt"
-	  Position		  [596, 467]
+	  Position		  [596, 467, 1629, 484]
+	  ZOrder		  -1
 	  FontName		  "Arial"
 	  FontSize		  12
 	}
