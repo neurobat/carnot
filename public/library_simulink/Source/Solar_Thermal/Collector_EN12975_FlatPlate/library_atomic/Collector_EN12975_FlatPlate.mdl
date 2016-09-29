@@ -41,11 +41,11 @@ Library {
 	$ObjectID		5
 	$ClassName		"Simulink.EditorInfo"
 	IsActive		[1]
-	ViewObjType		"SimulinkSubsys"
-	LoadSaveID		"67"
+	ViewObjType		"SimulinkTopLevel"
+	LoadSaveID		"0"
 	Extents			[1471.0, 770.0]
-	ZoomFactor		[1.25]
-	Offset			[-95.542857142857088, -55.380952380952408]
+	ZoomFactor		[1.0]
+	Offset			[0.0, 0.0]
       }
     }
   }
@@ -55,9 +55,9 @@ Library {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "ASIC"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Sep 28 14:57:56 2016"
-  RTWModifiedTimeStamp	  396975476
-  ModelVersionFormat	  "1.%<AutoIncrement:10>"
+  LastModifiedDate	  "Thu Sep 29 09:10:58 2016"
+  RTWModifiedTimeStamp	  397041058
+  ModelVersionFormat	  "1.%<AutoIncrement:12>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -814,7 +814,7 @@ Library {
   }
   System {
     Name		    "Collector_EN12975_FlatPlate"
-    Location		    [230, 82, 1637, 938]
+    Location		    [230, 82, 1751, 1018]
     Open		    off
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -863,7 +863,6 @@ Library {
 	    Prompt		    "A : collector surface  [m²]"
 	    Value		    "2.5"
 	    Tunable		    "off"
-	    TabName		    "Geometry"
 	  }
 	  Object {
 	    $ObjectID		    19
@@ -872,7 +871,6 @@ Library {
 	    Prompt		    "length between inlet and outlet [m]"
 	    Value		    "2.3"
 	    Tunable		    "off"
-	    TabName		    "Geometry"
 	  }
 	  Object {
 	    $ObjectID		    20
@@ -881,7 +879,6 @@ Library {
 	    Prompt		    "F'(TauAlfa)"
 	    Value		    "0.8103"
 	    Tunable		    "off"
-	    TabName		    "Coll.Parameters"
 	  }
 	  Object {
 	    $ObjectID		    21
@@ -890,7 +887,6 @@ Library {
 	    Prompt		    "c1 : heat loss coefficient at (Tm-Ta)=0  [W/(m²*K)]"
 	    Value		    "3.757"
 	    Tunable		    "off"
-	    TabName		    "Coll.Parameters"
 	  }
 	  Object {
 	    $ObjectID		    22
@@ -899,7 +895,6 @@ Library {
 	    Prompt		    "c2: temperature dependence of the heat loss coefficient [W/(m*K)²]"
 	    Value		    "0.0147"
 	    Tunable		    "off"
-	    TabName		    "Coll.Parameters"
 	  }
 	  Object {
 	    $ObjectID		    23
@@ -908,7 +903,6 @@ Library {
 	    Prompt		    "c3 : wind speed dependence of the heat loss coefficient [J/(m³K)]"
 	    Value		    "0"
 	    Tunable		    "off"
-	    TabName		    "Coll.Parameters"
 	  }
 	  Object {
 	    $ObjectID		    24
@@ -917,7 +911,6 @@ Library {
 	    Prompt		    "c4 : sky temperature dependence of the heat loss coefficient [W/(m²K)]"
 	    Value		    "0"
 	    Tunable		    "off"
-	    TabName		    "Coll.Parameters"
 	  }
 	  Object {
 	    $ObjectID		    25
@@ -926,7 +919,6 @@ Library {
 	    Prompt		    "c5 : effective thermal capacity [J/(m²K)]"
 	    Value		    "7062"
 	    Tunable		    "off"
-	    TabName		    "Coll.Parameters"
 	  }
 	  Object {
 	    $ObjectID		    26
@@ -935,7 +927,6 @@ Library {
 	    Prompt		    "c6 : wind dependence of conversion factor [s/m]"
 	    Value		    "0"
 	    Tunable		    "off"
-	    TabName		    "Coll.Parameters"
 	  }
 	  Object {
 	    $ObjectID		    27
@@ -944,7 +935,6 @@ Library {
 	    Prompt		    "b0 : constant for the calculation of the incident angle modifier (direct radiation)"
 	    Value		    "0.12"
 	    Tunable		    "off"
-	    TabName		    "Optics"
 	  }
 	  Object {
 	    $ObjectID		    28
@@ -953,7 +943,6 @@ Library {
 	    Prompt		    "Kd : Incidence angle modifier diffuse radiation"
 	    Value		    "0.92"
 	    Tunable		    "off"
-	    TabName		    "Optics"
 	  }
 	  Object {
 	    $ObjectID		    29
@@ -962,7 +951,6 @@ Library {
 	    Prompt		    "linear pressure drop in Pa/(kg/s)"
 	    Value		    "0"
 	    Tunable		    "off"
-	    TabName		    "Hydraulic"
 	  }
 	  Object {
 	    $ObjectID		    30
@@ -971,7 +959,6 @@ Library {
 	    Prompt		    "quadratic pressure drop in Pa/(kg/s)²"
 	    Value		    "0"
 	    Tunable		    "off"
-	    TabName		    "Hydraulic"
 	  }
 	  Object {
 	    $ObjectID		    31
@@ -980,9 +967,139 @@ Library {
 	    Prompt		    "initial temperature [degree centigrade]"
 	    Value		    "20"
 	    Tunable		    "off"
-	    TabName		    "Calculation"
 	  }
 	  PropName		  "Parameters"
+	}
+	Array {
+	  Type			  "Simulink.dialog.Container"
+	  Dimension		  2
+	  Object {
+	    $ObjectID		    32
+	    $ClassName		    "Simulink.dialog.Group"
+	    Prompt		    "%<MaskType>"
+	    Object {
+	      $PropName		      "DialogControls"
+	      $ObjectID		      33
+	      $ClassName	      "Simulink.dialog.Text"
+	      Prompt		      "%<MaskDescription>"
+	      Name		      "DescTextVar"
+	    }
+	    Name		    "DescGroupVar"
+	  }
+	  Object {
+	    $ObjectID		    34
+	    $ClassName		    "Simulink.dialog.TabContainer"
+	    Array {
+	      Type		      "Simulink.dialog.Tab"
+	      Dimension		      5
+	      Object {
+		$ObjectID		35
+		Prompt			"Geometry"
+		Array {
+		  Type			  "Simulink.dialog.parameter.Edit"
+		  Dimension		  2
+		  Object {
+		    $ObjectID		    36
+		    Name		    "acol"
+		  }
+		  Object {
+		    $ObjectID		    37
+		    Name		    "len"
+		  }
+		  PropName		  "DialogControls"
+		}
+		Name			"ParameterTabVar0"
+	      }
+	      Object {
+		$ObjectID		38
+		Prompt			"Coll.Parameters"
+		Array {
+		  Type			  "Simulink.dialog.parameter.Edit"
+		  Dimension		  7
+		  Object {
+		    $ObjectID		    39
+		    Name		    "fta"
+		  }
+		  Object {
+		    $ObjectID		    40
+		    Name		    "c1"
+		  }
+		  Object {
+		    $ObjectID		    41
+		    Name		    "c2"
+		  }
+		  Object {
+		    $ObjectID		    42
+		    Name		    "c3"
+		  }
+		  Object {
+		    $ObjectID		    43
+		    Name		    "c4"
+		  }
+		  Object {
+		    $ObjectID		    44
+		    Name		    "c5"
+		  }
+		  Object {
+		    $ObjectID		    45
+		    Name		    "c6"
+		  }
+		  PropName		  "DialogControls"
+		}
+		Name			"ParameterTabVar01"
+	      }
+	      Object {
+		$ObjectID		46
+		Prompt			"Optics"
+		Array {
+		  Type			  "Simulink.dialog.parameter.Edit"
+		  Dimension		  2
+		  Object {
+		    $ObjectID		    47
+		    Name		    "b0"
+		  }
+		  Object {
+		    $ObjectID		    48
+		    Name		    "Kd"
+		  }
+		  PropName		  "DialogControls"
+		}
+		Name			"ParameterTabVar012"
+	      }
+	      Object {
+		$ObjectID		49
+		Prompt			"Hydraulic"
+		Array {
+		  Type			  "Simulink.dialog.parameter.Edit"
+		  Dimension		  2
+		  Object {
+		    $ObjectID		    50
+		    Name		    "lin"
+		  }
+		  Object {
+		    $ObjectID		    51
+		    Name		    "qua"
+		  }
+		  PropName		  "DialogControls"
+		}
+		Name			"ParameterTabVar0123"
+	      }
+	      Object {
+		$ObjectID		52
+		Prompt			"Calculation"
+		Object {
+		  $PropName		  "DialogControls"
+		  $ObjectID		  53
+		  $ClassName		  "Simulink.dialog.parameter.Edit"
+		  Name			  "tini"
+		}
+		Name			"ParameterTabVar01234"
+	      }
+	      PropName		      "DialogControls"
+	    }
+	    Name		    "ParameterTabContainerVar"
+	  }
+	  PropName		  "DialogControls"
 	}
       }
       System {
@@ -1086,11 +1203,11 @@ Library {
 	  Position		  [450, 174, 535, 221]
 	  ZOrder		  -6
 	  BackgroundColor	  "yellow"
-	  LibraryVersion	  "1.11"
+	  LibraryVersion	  "1.5"
 	  SourceBlock		  "carnot/Source/Solar_Thermal/IncidenceAngleModifier/IAM_b0"
 	  SourceType		  "collector optics single glazing with extra white glass"
 	  ContentPreviewEnabled	  off
-	  fta			  "fta"
+	  eta0			  "fta"
 	  b0			  "b0"
 	  Kd			  "Kd"
 	}
@@ -1112,7 +1229,7 @@ Library {
 	  Ports			  [3, 1]
 	  Position		  [1060, 164, 1120, 246]
 	  ZOrder		  -8
-	  LibraryVersion	  "1.11"
+	  LibraryVersion	  "1.5"
 	  SourceBlock		  "carnot/Basic/Pressure_Drop/Pressure_Drop_Collector"
 	  SourceType		  "Pressure Drop Collector"
 	  ContentPreviewEnabled	  off
@@ -1128,7 +1245,7 @@ Library {
 	  Position		  [120, 160, 230, 235]
 	  ZOrder		  -9
 	  BackgroundColor	  "[1.000000, 0.674510, 0.000000]"
-	  LibraryVersion	  "1.11"
+	  LibraryVersion	  "1.5"
 	  SourceBlock		  "carnot/Weather/Radiation_on_Inclined_Surface"
 	  SourceType		  "inclined surface"
 	  ContentPreviewEnabled	  off
@@ -1167,7 +1284,7 @@ Library {
 	  Ports			  [6, 1]
 	  Position		  [1205, 33, 1270, 157]
 	  ZOrder		  -11
-	  LibraryVersion	  "1.11"
+	  LibraryVersion	  "1.5"
 	  SourceBlock		  "carnot/Source/Solar_Thermal/Collector_EN12975/create_dataC"
 	  SourceType		  "SubSystem"
 	  ContentPreviewEnabled	  off
@@ -1179,7 +1296,7 @@ Library {
 	  Ports			  [2, 3]
 	  Position		  [695, 181, 815, 399]
 	  ZOrder		  -13
-	  LibraryVersion	  "1.11"
+	  LibraryVersion	  "1.5"
 	  SourceBlock		  "carnot/Basic/Thermal_Models/Solar_Collector_basic"
 	  SourceType		  "Basic Solar Thermal Collector"
 	  ContentPreviewEnabled	  off
