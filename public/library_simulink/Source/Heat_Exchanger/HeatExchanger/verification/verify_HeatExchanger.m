@@ -76,7 +76,7 @@ elseif e3 > max_simu_error
     show = true;
 else
     v = true;
-    s = sprintf('temperatures %s OK: error %3.3g W', functionname, e2);
+    s = sprintf('temperatures %s OK: difference %3.3g K', functionname, e2);
 end
 
 % ------------ diplay and plot options if required ------------------------
