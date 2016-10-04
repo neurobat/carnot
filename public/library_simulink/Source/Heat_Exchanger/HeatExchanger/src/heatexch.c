@@ -76,8 +76,9 @@
  *                          mdlInitializeSizes
  * 6.1.0   hf               remove all pressure drop relevant inputs, 20oct13
  *                          keep only thermal inputs
- *
- * Copyright (c) 1998 Solar-Institut Juelich, Germany
+ * 6.2.0   hf               changed denom==0 to (fabs(denom) < 1.0e-10)    03oct2016
+ *                          changed NO_MASSFLOW conditions
+ * Copyright (c) 1998-2016 Solar-Institut Juelich, Germany
  * 
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  *  D E S C R I P T I O N
@@ -332,16 +333,43 @@ static void mdlOutputs(SimStruct *S, int_T tid)
 
     InputRealPtrsType u1  = ssGetInputPortRealSignalPtrs(S,1);
     InputRealPtrsType u2  = ssGetInputPortRealSignalPtrs(S,2);
-
     real_T  *rwork    = ssGetRWork(S);
-
-
     double flowtype = FLOWTYPE;
     double whot, wcold, ntu, psi, w1, w1to2, ua, cp, p1, denom;
     int    normal;
 
     /* equations from Wagner: Waermeuebertragung, Vogel Verlag, 1991 */ 
-    if (MDOT_COLD >= NO_MASSFLOW && MDOT_HOT >= NO_MASSFLOW)
+    if (MDOT_COLD < NO_MASSFLOW)    /* no massflow on cold side */
+    {
+        if (MDOT_COLD < NO_MASSFLOW/2)    /* no massflow on cold side */
+        {
+            y1[0] = T_HOT;          /* outlet T cold part */
+            y0[0] = T_HOT;          /* outlet T hot part */
+            y2[0] = 0.0;            /* power */
+        } else
+        {
+            y1[0] = T_COLD - rwork[0]*(T_COLD-T_HOT);   /* outlet T cold part */
+            y0[0] = T_HOT +  rwork[1]*(T_COLD-y1[0]);   /* outlet T hot part */
+            cp = heat_capacity(FLUID_HOT, PERCENT_HOT, T_HOT, P_HOT);
+            y2[0] = cp*MDOT_HOT*(T_HOT-y0[0]);          /* power */
+        }
+    }
+    else if (MDOT_HOT < NO_MASSFLOW) /* no massflow on hot side */
+    {
+        if (MDOT_HOT < NO_MASSFLOW/2) /* no massflow on hot side */
+        {
+            y0[0] = T_COLD;         /* outlet T hot part */
+            y1[0] = T_COLD;         /* outlet T cold part */
+            y2[0] = 0.0;            /* power */
+        } else
+        {
+            y0[0] = T_HOT - rwork[0]*(T_HOT-T_COLD);    /* outlet T hot part */
+            y1[0] = T_COLD + rwork[1]*(T_HOT-y0[0]);    /* outlet T cold part */
+            cp = heat_capacity(FLUID_COLD, PERCENT_COLD, T_COLD, P_COLD);
+            y2[0] = cp*MDOT_COLD*(T_COLD-y1[0]);
+        }
+    }
+    else
     {
         /* heat capacity flow */
         cp = heat_capacity(FLUID_HOT, PERCENT_HOT, T_HOT, P_HOT);
@@ -368,9 +396,10 @@ static void mdlOutputs(SimStruct *S, int_T tid)
 
         denom = (1.0+w1to2*(1.0-flowtype*(1.0+p1)));
         /* denominator = 0, if w1to2 = 1, i.e. if (m*cp)hot = (m*cp)cold */    
-        if (denom==0)
-            psi = ua/(ua+1);  /* equation for psi in case of w1to2=1                           */
-                              /* from Renz: Kalorische Apparate, Vorlesungsumdruck RWTH Aachen */
+        
+        /* equations from Renz: Kalorische Apparate, Vorlesungsumdruck RWTH Aachen */
+        if (fabs(denom) < 1.0e-10)
+            psi = ua/(ua+1);  /* equation for psi in case of w1to2=1  */
         else
             psi = (1.0-p1)/(1.0+w1to2*(1.0-flowtype*(1.0+p1)));
 
@@ -388,14 +417,9 @@ static void mdlOutputs(SimStruct *S, int_T tid)
         y2[0] = cp*MDOT_HOT*(T_HOT-y0[0]);          /* power */
 
         rwork[0] = psi;
-        rwork[1] = w1to2;
-        
-   } else { /* no massflow */
-            y1[0] = T_COLD-rwork[0]*(T_COLD-T_HOT); /* outlet T cold part */
-            y0[0] = T_HOT +rwork[1]*(T_COLD-y1[0]); /* outlet T hot part */
-            y2[0] = 0.0;                            /* power */
+        rwork[1] = w1to2;    
    }     
-}
+} /* end mdlOutputs */
 
 
 /*

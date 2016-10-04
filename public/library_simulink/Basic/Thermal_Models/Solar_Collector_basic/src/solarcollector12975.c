@@ -55,7 +55,8 @@
  *					enabled
  *					RWork replaced by DWork
  * 6.1.3    aw      unused functionmdlUpdate deleted            10sep2015
- *
+ * 6.1.4    pk      error in ELong = -100
+ *                  used Tsky for longwave radiation            28sep2016
  * Copyright (c) Bernd Hafner 2008
  * 
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -70,7 +71,7 @@
  *      - c1 (Tm-Tamb) 
  *      - c2 (Tm-Tamb)^2 
  *      - c3 v_wind (Tm-Ta) 
- *      + c4 (ELongwave - sigmaSB*(Tamb+273.15)^4) 
+ *      + c4 (sigmaSB*(Tsky+273.15)^4 - sigmaSB*(Tamb+273.15)^4) 
  *      - c5 dTm/dt
  *
  * with the incidence angle modifier Kdir 
@@ -90,7 +91,7 @@
  *   Tm         temperature of the collector node                               degree C
  *   Tamb       ambient temperature                                             degree C
  *   v_wind     wind velocity                                                   m/s 
- *   ELongwave  longwave irradiance with wave length > 3000 nm (set at -100)    W/m^2
+ *   Tsky       Sky temperature                                                 W/m^2
  *   Iglb       global solar radiation                                          W/m^2
  *   Idir       direct solar radiation                                          W/m^2
  *   Idfu       diffuse solar radiation                                         W/m^2
@@ -159,7 +160,7 @@
 #define IGLB       (*u0[1])  /* global radiation   */
 #define TAMB       (*u0[2])  /* ambient temperature */
 #define VWIND      (*u0[3])  /* wind velocity */
-#define ELONG      (*u0[4])  /* longwave radiation */
+#define TSKY      (*u0[4])  /* sky temperature longwave radiation */
 #define NINPUT1         5
 
 #define TIN        (*u1[0])  /* inlet temperature */
@@ -341,7 +342,7 @@ static void mdlDerivatives(SimStruct *S)
      *      F'(TauAlfa) Kdir Idir + F'(TauAlfa) Kdfu Idfu 
      *      - c1 (Tm-Tamb) - c2 (Tm-Tamb)^2 
      *      - c3 v_wind (Tm-Ta) - c6 v_wind Iglb 
-     *      + c4 (ELongwave - sigmaSB*(Tamb+273.15)^4) 
+     *      + c4 (sigmaSB*(Tsky+273.15)^4 - sigmaSB*(Tamb+273.15)^4) 
      *      - mdot cp (Tout-Tin) /A )
      *
      *  Tm = 0.5*(Tout+Tin)
@@ -355,7 +356,7 @@ static void mdlDerivatives(SimStruct *S)
 
     dTmdt[0] = (QSOLAR - tdiff *(C1 + C2*tdiff)
         - VWIND * (C3*tdiff + C6*IGLB)
-        + C4 * (ELONG - STEFAN_BOLTZMANN * square(square(TAMB + 273.15)))
+        + C4 * STEFAN_BOLTZMANN *(square(square(TSKY + 273.15)) -  square(square(TAMB + 273.15)))
         - POWER/A_COLL) / C5;
 	
 }
