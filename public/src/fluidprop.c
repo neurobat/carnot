@@ -54,9 +54,11 @@
  * 4.1.3    pc      Tyfocor LS added                                20apr2011
  * 4.1.4    gf      test of too many iterations for                 08nov2011
  *                  enthalpy2temperature 
+ * 6.1.0    hf      revised warning 'vapourpressure only available  20oct2016
+ *                  for water', function also available for air and
+ *                  gylocol mixtures
  *
- *
- * Copyright (c) 1998 Solar-Institut Juelich, Germany
+ * Copyright (c) 1998-2016 Solar-Institut Juelich, Germany
  *
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  *  D E S C R I P T I O N
@@ -706,13 +708,15 @@ void fluidprop(double x[], double ft[], double fm[], double t[], double p[],
                                      "pressures above the critical point!\n");
                          }
                          break;
-                    case TYFOCOR_LS:
+                    case WATERGLYCOL: case TYFOCOR_LS:
                          if (t[id[0]] < 39.0 || t[id[0]] > 200.0)
                              printf ("Warning in vapour pressure: temperature out of range of interpolation!\n"
                                      "        Values are interpolated  between 40°C and 200 °C\n");
                          break;
-                    case AIR: case COTOIL: case SILOIL: case WATERGLYCOL:
-                         printf ("vapourpressure only available for water!\n");        
+                    case AIR:
+                         break;   
+                    case COTOIL: case SILOIL: default:
+                         printf ("vapourpressure not available for cotton oil and silicon oil\n");        
                          break;   
                 } /* end switch material */
                 x[n] = vapourpressure(ft[id[2]], fm[id[3]], t[id[0]], p[id[1]]);
