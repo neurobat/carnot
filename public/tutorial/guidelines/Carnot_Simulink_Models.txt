@@ -9,12 +9,53 @@ Guideline for Simulink Blocks in the Carnot Library
 -> see Carnot_Filenames_and_Folders.txt
 
 **********************************************************************
-2) BLOCK NAMES
+2) BLOCKS
+a) Block Names
 Use capital letters in the name to increase readability.
   Example: BlockName instead of blockname
 Do not use blanks in the BlockName, use underscore instead.
   Example: block_name instead of "block name"
 Do not use special characters, character set is limited to ASCII standard.
+
+b) Inports and Outports
+Inports should be located at the left of the model, outports at the right.
+In- or Outports somewhere in the middle should be avoided.
+The name of the inport visible on the block/mask level should be the same
+as the name of the inport in the subsystem.
+Following names and abbreviations are recommended
+
+Components
+THB 	inports and outports of the Thermo-Hydraulic Bus
+THB_r	return line THB
+THB_s	supply line THB (aka flow line)
+HEC 	Heating Circuit
+HEX	Heat Exchanger
+HP	Heat Pump
+PLB	Peak load boiler
+WHB	Wall hung boiler
+BOI	boiler (floor standing)
+SOL	Solar thermal collector
+PV	Photovoltaic
+WDB	Weather data bus
+EB	Electric (connection) bus
+GEO	Geothermal probe
+
+Physical units
+T	Temperature
+mdot	Massflow
+Vdot	Volume flow
+p	pressure
+
+
+c) Block Color
+red - thermal sources (except solar termal)
+yellow - solar thermal sources
+green - active hydraulic components (e.g. pumps)
+cyan -  hydraulic components with control inputs
+light blue - passive hydraulic components
+orange - thermal loads
+grey - controller or sensors
+white - basic blocks for use in other models
 
 
 **********************************************************************
@@ -251,4 +292,5 @@ http://www.mathworks.com/company/aboutus/policies_statements/trademarks.html
 * 6.1.3    hf       added chapter 15 and 16                     23mar2015
 * 6.1.4    hf       added chapter 18 				09jul2015
 * 6.1.5    hf       correctes path to \public\data		17sep2015
+* 6.1.6    hf       block color definition added                14oct2016
 ********************************** E N D ************************************

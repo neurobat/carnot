@@ -1,38 +1,31 @@
-% density_solid calculates the density [kg/m3] 
-%
-% Inputs:             
-%               temperature [°C]                                                    
-%               type of solid (ID see below)                                              
-%                                                                      
-% Syntax:       r = density(temperature, ID)
-%                                                                          
-% Description:  The density is calculated from values of VDI /1/
-%               rho = rho0 + T*rho1
-%
-%  symbol      used for                                        unit
-%  rho         density                                         kg/m^3
-%  T           temperature                                     K
-%  rho0        constant density                                kg/m^3
-%  rho1        linear temperature dependant density            kg/m^3/K
-%                                                                          
-%  ID  Solid            REMARKS
-%  1   wood             only up to 200°C
-%  2   sand stone
-%  3   concrete         
-%                                                                          
-% See also: density
+function tsn = carnot_m_file_head(ts)
+% -> summary of the function in one line (appears with 'lookfor')
+%% Description
+% -> Using to the Matlab 'publish' function it creates a (more or less) 
+% -> readable html file.
+%  This is a template for Matlab functions in the Carnot toolbox.
+%  Carnot model and function m-files should use a name which gives a 
+%  hint to the model of function (avoid names like testfunction1.m).
+%  See also -
 % 
-% Function Calls:
-% function is used by: nn.m
-% this function calls: cc.m
+% Function is used by: nn.m, function calls: cc.m
 % 
 % Literature: /1/  VDI Waermeatlas 1991
+%% Function Call
+%  tsn = Viessmann_Carnot_m_file_head(ts)
+%% Inputs
+%  ts - timeseries to be treated, time in s, data with one column
+%% Outputs
+%  tsn - result in a timeseries 
 
-% all comments above appear with 'help density_solid' 
-% ***********************************************************************
+% -> all comments till the first calculation appear with "help function"
+%% Calculations
+tsn = ts;                               % output is the input
+
+%% Copyright and Versions
 % This file is part of the CARNOT Blockset.
 % 
-% Copyright (c) 1998-2015, Solar-Institute Juelich of the FH Aachen.
+% Copyright (c) 1998-2016, Solar-Institute Juelich of the FH Aachen.
 % Additional Copyright for this file see list auf authors.
 % All rights reserved.
 % 
@@ -63,17 +56,11 @@
 % ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF 
 % THE POSSIBILITY OF SUCH DAMAGE.
 % **********************************************************************
-% D O C U M E N T A T I O N
-% * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-% Carnot model and function m-files should use a name which gives a 
-% hint to the model of function (avoid names like testfunction1.m).
-% 
-% author list:     xn -> Xaver Noname
+% author list:     hf -> Bernd Hafner
 %
 % version: CarnotVersion.MajorVersionOfFunction.SubversionOfFunction
 %
 % Version   Author  Changes                                     Date
-% 1.0.0     xn      created                                     35may1899
-% 6.1.0     xn      results verified (see report in MyThesis)   35jun1899
-%
+% 6.1.1     hf      created                                     18oct2016
 % * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+

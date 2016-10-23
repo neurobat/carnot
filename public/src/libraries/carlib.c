@@ -326,7 +326,7 @@ double solar_declination(double time)
     return b;
 }
 
-/* solar extraterrestrial radiation in W/m^2
+/* solar extraterrestrial radiation in W/m^2 on a normal surface
  * equation from Duffie, Beckman: Solar Engineering of Thermal Processes, 2006
  * (original source Spencer 1971) 
  */
