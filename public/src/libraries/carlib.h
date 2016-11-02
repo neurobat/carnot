@@ -25,6 +25,10 @@
  * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF 
  * THE POSSIBILITY OF SUCH DAMAGE.
+ * $Revision$
+ * $Author$
+ * $Date$
+ * $HeadURL$
  ***********************************************************************
  *  M O D E L    O R    F U N C T I O N
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -266,5 +270,6 @@ int           printmessage(const char *message, const char *origin,
 extern int    rangecheck(int, double, double, double, double);
 
 #endif
+
 
 

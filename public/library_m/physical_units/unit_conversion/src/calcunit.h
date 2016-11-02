@@ -25,6 +25,10 @@
  * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF 
  * THE POSSIBILITY OF SUCH DAMAGE.
+ * $Revision$
+ * $Author$
+ * $Date$
+ * $HeadURL$
  ***********************************************************************
  
   Function:  calculate_unit_factor
@@ -1096,3 +1100,4 @@ double calculate_unit_factor(char *inputunit,char *outputunit, int outputflag)
 
 
 #endif
+
