@@ -1,4 +1,8 @@
 % hot side thermal capacity
+% $Revision$
+% $Author$
+% $Date$
+% $HeadURL$
 Ch = [25e3 28e3 32e3 36e3 40e3];
 caph = Ch(hptype); 
 

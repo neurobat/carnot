@@ -1,4 +1,8 @@
 function [A,ffn,numHeader,repChar,hl,fpos] = txt2mat(varargin)
+% $Revision$
+% $Author$
+% $Date$
+% $HeadURL$
 
 % TXT2MAT read an ascii file and convert a data table to matrix
 %

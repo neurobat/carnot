@@ -1,4 +1,8 @@
 % Format of the THB - Thermo-Hydraulic-Bus
+% $Revision$
+% $Author$
+% $Date$
+% $HeadURL$
 % No.   name                physical_unit  remarks 
 % 1     ID                  none           identifier, set by the simulation
 % 2     Temperature         °C 

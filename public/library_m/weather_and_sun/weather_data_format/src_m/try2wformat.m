@@ -80,6 +80,10 @@ function outmat = try2wformat(infile,outfile,lat,long,long0,station,country,comm
 % CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
 % ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF 
 % THE POSSIBILITY OF SUCH DAMAGE.
+% $Revision$
+% $Author$
+% $Date$
+% $HeadURL$
 % ***********************************************************************
 % version: CarnotVersion.MajorVersionOfFunction.SubversionOfFunction
 % author list:  hf -> Bernd Hafner

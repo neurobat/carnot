@@ -44,6 +44,10 @@ function [v, s] = verify_WeatherFromWorkspace(varargin)
 % CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
 % ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF 
 % THE POSSIBILITY OF SUCH DAMAGE.
+% $Revision$
+% $Author$
+% $Date$
+% $HeadURL$
 % **********************************************************************
 % D O C U M E N T A T I O N
 % * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -178,5 +182,4 @@ if (show)
     ye = [ye1, ye2, ye3]; 
     display_verification_error(x, y, ye, st, sx, sy1, sleg1, sy2, sleg2, s)
 end
-
 

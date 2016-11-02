@@ -1,4 +1,8 @@
 function f_cl = clothing_area_factor(i_cl)
+% $Revision$
+% $Author$
+% $Date$
+% $HeadURL$
 % /* calculation of the clothing area factor - equation (4) of DIN EN ISO 7730:2005 */
 %  original name: calculate_f_cl
 if (i_cl<=0.078)

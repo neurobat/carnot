@@ -79,6 +79,10 @@ function outmat = Meteonorm2wformat(infile,outfile,lat,long,long0,station,countr
 % CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
 % ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF 
 % THE POSSIBILITY OF SUCH DAMAGE.
+% $Revision$
+% $Author$
+% $Date$
+% $HeadURL$
 % ***********************************************************************
 % Meteonorm is a commercial sóftware of Meteotest Genossenschaft, Bern, Switzerland 
 % ***********************************************************************

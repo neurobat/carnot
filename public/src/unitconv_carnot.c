@@ -25,6 +25,10 @@
  * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF 
  * THE POSSIBILITY OF SUCH DAMAGE.
+ * $Revision$
+ * $Author$
+ * $Date$
+ * $HeadURL$
  ***********************************************************************
  *  History
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -117,3 +121,4 @@ mexFunction(int nlhs,mxArray *plhs[],int nrhs,const mxArray *prhs[])
    }
 }
 /* END */
+

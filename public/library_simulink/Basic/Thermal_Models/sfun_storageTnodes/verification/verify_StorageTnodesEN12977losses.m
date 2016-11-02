@@ -48,6 +48,10 @@ function [v, s] = verify_StorageTnodesEN12977losses(varargin)
 % CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
 % ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF 
 % THE POSSIBILITY OF SUCH DAMAGE.
+% $Revision$
+% $Author$
+% $Date$
+% $HeadURL$
 % **********************************************************************
 % D O C U M E N T A T I O N
 % * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -236,4 +240,3 @@ if (show)
     %   ye - matrix with error values for each y-value
     display_verification_error(t0h/3600, [y0h, y1h, y2h], [ye1h,ye2h,ye3h], st, sx, sy1, sleg1, sy2, sleg2, s)
 end
-

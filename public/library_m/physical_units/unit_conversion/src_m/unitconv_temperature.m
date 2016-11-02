@@ -48,6 +48,10 @@ function temp_conv = unitconv_temperature(init_unit, final_unit, value)
 % CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
 % ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF 
 % THE POSSIBILITY OF SUCH DAMAGE.
+% $Revision$
+% $Author$
+% $Date$
+% $HeadURL$
 % ********************************************************************** 
 % Version  Author              Changes                             Date
 % 0.1.0    Gaelle Faure        created                            13jan11

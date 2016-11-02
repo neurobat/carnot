@@ -1,4 +1,8 @@
 % check parameter range for function calculate_power_for_heatex in the
+% $Revision$
+% $Author$
+% $Date$
+% $HeadURL$
 % file storage_heatechanger.c
 
 %     /* following equation is derived from

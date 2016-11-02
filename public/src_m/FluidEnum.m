@@ -1,4 +1,8 @@
 classdef FluidEnum < Simulink.IntEnumType
+% $Revision$
+% $Author$
+% $Date$
+% $HeadURL$
 	enumeration
 		WATER(1)
         AIR(2)

@@ -40,6 +40,10 @@ function p = path_carnot(ctrl)
 % CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
 % ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF 
 % THE POSSIBILITY OF SUCH DAMAGE.
+% $Revision$
+% $Author$
+% $Date$
+% $HeadURL$
 % **********************************************************************
 % Copyright (c) 1998-2014 Solar-Institut Juelich, Germany
 % 

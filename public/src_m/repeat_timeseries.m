@@ -45,6 +45,10 @@ function y = repeat_timeseries(u, n)
 % CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
 % ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF 
 % THE POSSIBILITY OF SUCH DAMAGE.
+% $Revision$
+% $Author$
+% $Date$
+% $HeadURL$
 % *************************************************************************
 % D O C U M E N T A T I O N
 % * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -85,5 +89,4 @@ tt = ones(nrow,1)*t0;
 tt = reshape(tt,[],1);
 
 y(:,1) = tt + y(:,1);
-
 

@@ -45,6 +45,10 @@ result = (35.7 - 0.028*(m-w) - i_cl*(aux1 + aux2) - t_cl).^2;
 % CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
 % ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF 
 % THE POSSIBILITY OF SUCH DAMAGE.
+% $Revision$
+% $Author$
+% $Date$
+% $HeadURL$
 % **********************************************************************
 % author list:      hf -> Bernd Hafner
 %                   aw -> Arnold Wohlfeil

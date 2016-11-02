@@ -48,6 +48,10 @@ ppd = 100 - 95*exp(-0.03353*(pmv.^4)-0.2179*(pmv.^2));
 % CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
 % ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF 
 % THE POSSIBILITY OF SUCH DAMAGE.
+% $Revision$
+% $Author$
+% $Date$
+% $HeadURL$
 % **********************************************************************
 % author list:     hf -> Bernd Hafner
 %
@@ -56,5 +60,4 @@ ppd = 100 - 95*exp(-0.03353*(pmv.^4)-0.2179*(pmv.^2));
 % Version   Author  Changes                                     Date
 % 6.1.0     hf      created form s-function comfortsfcn.c of aw     18oct2016
 % * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-
 

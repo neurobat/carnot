@@ -1,4 +1,8 @@
 % Definition of the fluid types                                            
+% $Revision$
+% $Author$
+% $Date$
+% $HeadURL$
 %  ID  FLUID           REMARKS
 %  1   water/steam --- fluid_mix is the vapourcontent in the 2-phase region
 %                      liquid water: temperature range  0°C to 374.15°C

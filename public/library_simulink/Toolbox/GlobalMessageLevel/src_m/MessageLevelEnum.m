@@ -1,4 +1,8 @@
 classdef MessageLevelEnum < Simulink.IntEnumType
+% $Revision$
+% $Author$
+% $Date$
+% $HeadURL$
 	enumeration
 		DEBUGLEVEL(1)
         INFOLEVEL(2)

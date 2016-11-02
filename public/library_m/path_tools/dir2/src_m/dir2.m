@@ -1,4 +1,8 @@
 function dout = dir2(dn,varargin)
+% $Revision$
+% $Author$
+% $Date$
+% $HeadURL$
 %DIR2 List directory.
 %   DIR2('directory_name') lists the files in a directory. Pathnames and
 %   wildcards may be used.  For example, DIR *.m lists all program files

@@ -1,4 +1,8 @@
 function result = clothing_surface_temperature(m, w, i_cl, v_ar, t_a, t_r, t_cl)
+% $Revision$
+% $Author$
+% $Date$
+% $HeadURL$
 % /* target function
 %  * surface temperature of the clothing - equation (2) of DIN EN ISO 7730:2005
 %  * minus t_cl in order to get a value of zero

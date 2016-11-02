@@ -1,4 +1,8 @@
 modelfile = 'create_verification_weather_file';
+% $Revision$
+% $Author$
+% $Date$
+% $HeadURL$
 load_system(modelfile)
 simOut = sim(modelfile);
 close_system(modelfile)

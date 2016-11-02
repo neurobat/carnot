@@ -1,4 +1,8 @@
 // mex function for m-file dir2(dn,varargin)
+ * $Revision$
+ * $Author$
+ * $Date$
+ * $HeadURL$
 // % Copyright (c) 2013, Jonathan Sullivan All rights reserved.
 // % 
 // % Redistribution and use in source and binary forms, with or without
@@ -389,3 +393,4 @@ fileparts fileSplit(const char *input)
 	
 	return(parts);
 }
+

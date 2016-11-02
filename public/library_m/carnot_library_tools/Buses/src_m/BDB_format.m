@@ -1,4 +1,8 @@
 
+% $Revision$
+% $Author$
+% $Date$
+% $HeadURL$
 % Format of the Building Data Bus BDB (former S-vector)
 % 1   Incoming solar power            Qdot_sol    W
 % 2   Power input by equipment        Qdot_equip  W   e.g. computers

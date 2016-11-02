@@ -1,4 +1,8 @@
 classdef PropertyEnum < Simulink.IntEnumType
+% $Revision$
+% $Author$
+% $Date$
+% $HeadURL$
 	enumeration
 		DENSITY(1)
 		HEAT_CAPACITY(2)
