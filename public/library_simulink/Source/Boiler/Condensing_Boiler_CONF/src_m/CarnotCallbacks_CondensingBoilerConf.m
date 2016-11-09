@@ -45,22 +45,20 @@ function B = CarnotCallbacks_CondensingBoilerConf(parameterfile)
 % CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
 % ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF 
 % THE POSSIBILITY OF SUCH DAMAGE.
-% $Revision$
-% $Author$
-% $Date$
-% $HeadURL$
 % **********************************************************************
 % D O C U M E N T A T I O N
 % * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 % Carnot model and function m-files should use a name which gives a 
 % hint to the model of function (avoid names like testfunction1.m).
 % 
-% author list:     hf -> Bernd Hafner
+% author list:      hf -> Bernd Hafner
+%                   js -> Jan Strubel
 %
 % version: CarnotVersion.MajorVersionOfFunction.SubversionOfFunction
 %
 % Version   Author  Changes                                     Date
 % 6.1.0     hf      created                                     26jun2015
+% 6.1.1     js      added try set_Param catch ...               08nov2016
 % * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
 % path definitions
@@ -86,5 +84,14 @@ end
 % set mask parameters for efficiency table temperature selector
 a = get_param([gcb '/Condensing_Boiler'],'DialogParameters');
 
-set_param([gcb '/Condensing_Boiler'], 'whichTforEfficiency', ...
-    a.whichTforEfficiency.Enum{B.whichTforEfficiency});
+try
+    set_param([gcb '/Condensing_Boiler'], 'whichTforEfficiency', ...
+        a.whichTforEfficiency.Enum{B.whichTforEfficiency});
+catch
+    disp('Could not finalize call to CarnotCallbacks_CondensingBoilerConf - trying a different way...')
+    hndl = getSimulinkBlockHandle([gcb '/Condensing_Boiler']);
+    tstr = a.whichTforEfficiency.Enum{B.whichTforEfficiency};
+    if ~strcmp(get_param(hndl, 'whichTforEfficiency'), a.whichTforEfficiency.Enum{B.whichTforEfficiency})    
+        set_param(hndl, 'whichTforEfficiency', tstr);
+    end
+end
