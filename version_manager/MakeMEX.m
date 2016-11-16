@@ -54,6 +54,8 @@ function MakeMEX
 %
 % Version   Author  Changes                                     Date
 % 6.1.0     aw      created                                     oct2015
+% 6.1.1		aw		changed call of mex for Linux gcc			16nov2016
+%					compability
 
     
     %%save currentdirectory
@@ -246,7 +248,7 @@ function CompileCFiles(cfiles, clibfiles, hlibfiles, mexdirectory)
     for Count = 1:numel(cfiles)
         fprintf('\t compiling %s \n', cfiles{Count});
         try
-        eval(['mex ', cfiles{Count}, ' ', LibraryFiles, ' -outdir ', mexdirectory, IncludeDirectories]);
+			eval(['mex CFLAGS="\$CFLAGS -std=c99" ', cfiles{Count}, ' ', LibraryFiles, ' -outdir ', mexdirectory, IncludeDirectories]);
         catch
             warning(['Unable to build mex file for ' cfiles{Count}]);
         end

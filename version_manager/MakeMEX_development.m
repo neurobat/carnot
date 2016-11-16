@@ -1,4 +1,3 @@
-function MakeMEX_development
 % MakeMEX_development is used to programmatically compile all of CARNOT's s-Functions.
 % It is supposed for development purposes as in its quality to copy the
 % carlib (and other libraries?) from public\library_c\carlib\src to the
@@ -54,6 +53,9 @@ function MakeMEX_development
 % aw        2015        created
 % PahM      2015-08-19  header added
 % aw		2015-10-13	library_m added
+% sw		2016-11-16	call of mex changed for Linux gcc compability
+function MakeMEX_development
+
     
     %%save currentdirectory
     VersionManagerDirectory = pwd;
@@ -242,7 +244,7 @@ function CompileCFiles(cfiles, clibfiles, hlibfiles, mexdirectory)
     for Count = 1:numel(cfiles)
         fprintf('\t compiling %s \n', cfiles{Count});
         try
-        eval(['mex ', cfiles{Count}, ' ', LibraryFiles, ' -outdir ', mexdirectory, IncludeDirectories]);
+			eval(['mex CFLAGS="\$CFLAGS -std=c99" ', cfiles{Count}, ' ', LibraryFiles, ' -outdir ', mexdirectory, IncludeDirectories]);
         catch
             warning(['Unable to build mex file for ' cfiles{Count}]);
         end
