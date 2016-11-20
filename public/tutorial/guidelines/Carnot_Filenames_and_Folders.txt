@@ -39,28 +39,30 @@ public\library_simulink             simulink blocks of carnot library
 public\library_simulink\<Lib_Name>\<BlockName>
 <Lib_Name>                          Name of the sub-library in Carnot
 <BlockName>                         Main folder for all files of the block	
+<BlockName>\data                    data files for the block, be copied to 
+                                    carnot\common\public\data on the matlab path
+<BlockName>\doc	                    help file, application manual, literature files will 
+                                    be copied to carnot\common\public\tutorial\doc
+<BlockName>\examples                Typical applications of this block. Examples named
+                                    'example_NN.mdl' or 'example_NN.slx' will be copied to 
+                                    carnot\common\public\tutorial\examples
 <BlockName>\library_atomic          mdl or slx file as library with the block "BlockName"
 <BlockName>\parameter_set           Data for the block and parameter sets 
                                     for the pull down menu of block.
-<BlockName>\verification            Verification reports, verification data and test files
-                                    folder must contain the verify_<BlockName> function
-                                    (see template_verify_Function.m in the 
-                                    tutorial/template folder).
+<BlockName>\scripts                 m-Functions or scripts related to the block creation
+                                    but not needed during block execution
+                                    (e.g. a fitting functions to create data for a 
+                                    look-up table.) (D)
 <BlockName>\specification           Data sheets and component specific documentation.
-<BlockName>\doc	                    help file, application manual, literature files will 
-                                    be copied to carnot\common\public\tutorial\doc
 <BlockName>\src	                    C-files of the model, files will 
                                     be copied to carnot\common\public\src folder.(D)
 <BlockName>\src_m                   m-functions or scripts related to Block execution 
                                     (Callbacks for example). The files will be copied to 
                                     common/src_m folder.(D)
-<BlockName>\scripts                 m-Functions or scripts related to the block creation
-                                    but not needed during block execution
-                                    (e.g. a fitting functions to create data for a 
-                                    look-up table.) (D)
-<BlockName>\examples                Typical applications of this block. Examples named
-                                    'example_NN.mdl' or 'example_NN.slx' will be copied to 
-                                    carnot\common\public\tutorial\examples
+<BlockName>\verification            Verification reports, verification data and test files
+                                    folder must contain the verify_<BlockName> function
+                                    (see template_verify_Function.m in the 
+                                    tutorial/template folder).
 
 public\library_m\<FunctionCategory>\<FunctionName>
 <FunctionCategory>                  Category of the function
@@ -148,5 +150,5 @@ version_manager                     files to create and manage carnot version (D
 * 6.1.4    hf      data folder in library_X removed, files will 23mar2015
 *                  be stored in parameter set, validation and specification
 * 6.1.5    hf      library_m structure corrected                17sep2015
-**********************************************************************
+* 6.1.6    hf      added <BlockName>\data 			20nov2016
 ********************************** E N D ************************************

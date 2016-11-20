@@ -41,8 +41,9 @@
  *     Syntax  [sys, x0] = unicol(t,x,u,flag,x(1),x(2),x(3),x0)
  *
  * Author list
- *  Bernd Hafner -> hf
- *  Gaelle Faure -> gf
+ *  Bernd Hafner  -> hf
+ *  Gaelle Faure  -> gf
+*   Patrick Kefer -> pk
  *
  * Version  Author  Changes                                     Date
  * 3.1.0    hf      created                                     20dec2008

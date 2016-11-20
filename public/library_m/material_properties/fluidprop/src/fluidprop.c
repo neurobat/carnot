@@ -29,6 +29,7 @@
  * $Author$
  * $Date$
  * $HeadURL$
+
  ***********************************************************************
  *  M O D E L    O R    F U N C T I O N
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -56,12 +57,14 @@
  * 4.1.2    hf      line319: case WATERGLYCOL:                      16mar2011
  *                  if (0 < t[id] -> changed to if (t[id] < 0
  * 4.1.3    pc      Tyfocor LS added                                20apr2011
- * 4.1.4    gf      test of too many iterations for                 08nov2011
- *                  enthalpy2temperature 
+ * 4.1.4    gf      test too many iterations enthalpy2temperature   08nov2011
  * 6.1.0    hf      revised warning 'vapourpressure only available  20oct2016
  *                  for water', function also available for air and
  *                  gylocol mixtures
- *
+ * 6.1.1    hf      included TEMPERATURE_CONDUCTIVITY               13nov2016
+ *                  removed error for negative values of enthalpy,   
+ *                  enthalpy can be negative
+ *                  
  * Copyright (c) 1998-2016 Solar-Institut Juelich, Germany
  *
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -293,9 +296,9 @@ void fluidprop(double x[], double ft[], double fm[], double t[], double p[],
                     case WATER:
                          if (p[id[1]] <= stateswitch)
                          {   /* water is vaporous */
-                             if (t[id[0]] < 50.0 || t[id[0]] > 450.0)
+                             if (t[id[0]] < -20.0 || t[id[0]] > 450.0)
                                  printf ("Warning in heat capacity: temperature out of range!\n"
-                                         "        Valid temperature range: 50°C to 450°C\n");
+                                         "        Valid temperature range: -20°C to 450°C\n");
                              if (p[id[1]] < 1.0e4 || p[id[1]] > 2.0e6)
                                  printf ("Warning in heat capacity: pressure out of range!\n"
                                          "        Valid pressure range 0,01 MPa to 2 MPa\n");  
@@ -350,6 +353,71 @@ void fluidprop(double x[], double ft[], double fm[], double t[], double p[],
                      mexErrMsgTxt ("An error occured while evaluation the heat capacity.\n" 
                                    "Check the range of the inputs.\n");
                 break;
+                
+            
+            case TEMPERATURE_CONDUCTIVITY:
+                 switch (material)
+                 {
+                    case WATER:                 
+                         if (p[id[1]] < stateswitch)
+                         {   /* water is vaporous */
+                            if (t[id[0]] < 0.0 || t[id[0]] > 400.0)
+                                printf ("Warning in temperature conductivity : temperature out of range!\n"
+                                        "Valid temperature range from 0°C to 400°C");
+                            if (p[id[1]] < 1.0e4 || p[id[1]] > 2.0e6)
+                                printf ("Warning in temperature conductivity: pressure out of range!\n"
+                                        "Valid pressure range from 0,01 MPa and 2 MPa");
+                         }else { /* water is liquid */
+                               if (t[id[0]] < 0.0 || t[id[0]] > 800.0)
+                                   printf ("Warning in temperature conductivity: temperature out of range!\n" 
+                                           "Valid temperature range from 0°C to 800°C");
+                               if (p[id[1]] < 1.0e5 || p[id[1]] > 1.0e7)
+                                   printf ("Warning in temperature conductivity: pressure out of range!\n"
+                                           "Valid pressure range from 0,1 MPa and 10 MPa");
+                         }
+                         break;
+                    case AIR:
+                         if (p[id[1]] < 0.9e5 || p[id[1]] > 1.1e5)
+                            printf("Warning in temperature conductivity:\n"
+                                   "        pressure is only valid for p = 1 bar!");
+                             
+                         if (fm[id[3]] == 0)
+                                {if (t[id[0]] < 0.0 || t[id[0]] > 400.0)
+                                      printf("Warning in temperature conductivity:\n"
+                                             "        Valid temperature range: t = 0°C to 400 °C");
+                                      
+                                }
+                         break;
+                    case COTOIL: case SILOIL:                 
+                         if (t[id[0]] > 250.0)
+                            printf ("Warning in temperature conductivity: temperature out of range!\n"
+                                    "Values are valid up to 250°C");
+                         if (p[id[1]] > 1.1e5 || p[id[1]] < 0.9e5)
+                             printf ("Warning in temperature conductivity: pressure out of range!\n"
+                                     "Valid pressure is 1e5 Pa\n");
+                            
+                         break;               
+                    case WATERGLYCOL:
+                         if (t[id[0]] > 100.0 || t[id[0]] < 10.0)
+                            printf ("Warning in temperature conductivity: temperature out of range of interpolation!\n"
+                                     "Values are interpolated  between 0°C and 100 °C");
+                         if (p[id[1]] > 1.1e5 || p[id[1]] < 0.9e5)
+                             printf ("Warning in temperature conductivity: pressure out of range!\n"
+                                     "Valid pressure is 1e5 Pa\n");
+                            
+                         break;
+                    case TYFOCOR_LS:
+                         if (t[id[0]] < -30.0 || t[id[0]] > 120.0)
+                             printf ("Warning in density: temperature out of range of interpolation!\n"
+                                     "        Values are interpolated  between -30°C and 120 °C");
+                         break;
+                 }  /* end switch material */
+                 x[n] = temperature_conductivity(ft[id[2]], fm[id[3]], t[id[0]], p[id[1]]);
+                 if (x[n] < 0.0)
+                     mexErrMsgTxt ("An error occured while evaluation the heat conductivity.\n" 
+                                   "Check the range of the inputs.");
+                 break;
+                        
             case THERMAL_CONDUCTIVITY:
                  switch (material)
                  {
@@ -395,7 +463,7 @@ void fluidprop(double x[], double ft[], double fm[], double t[], double p[],
                     case WATERGLYCOL:
                          if (t[id[0]] > 100.0 || t[id[0]] < 0.0)
                             printf ("Warning in thermal conductivity: temperature out of range of interpolation!\n"
-                                     "Values are interpolated  between 0°C and 100 °C");
+                                     "Values are interpolated  between 0°C and 100 °C\n");
                          if (p[id[1]] > 1.1e5 || p[id[1]] < 0.9e5)
                              printf ("Warning in thermal conductivity: pressure out of range!\n"
                                      "Valid pressure is 1e5 Pa\n");
@@ -521,9 +589,11 @@ void fluidprop(double x[], double ft[], double fm[], double t[], double p[],
                          break;
                  }  /* end switch material */
                  x[n] = enthalpy(ft[id[2]], fm[id[3]], t[id[0]], p[id[1]]);
-                 if (x[n] < 0.0)
-                     mexErrMsgTxt ("An error occured while evaluation the enthalpy.\n" 
-                                   "Check the range of the inputs.\n");
+                 /* if (x[n] < 0.0)
+                  *  mexErrMsgTxt ("An error occured while evaluation the enthalpy.\n" 
+                  *                "Check the range of the inputs.\n");
+                  *   comment out, enthalpy can be negative !  hf, 15nov2016 
+                  */
                  break;
 
             case ENTROPY:
@@ -717,10 +787,10 @@ void fluidprop(double x[], double ft[], double fm[], double t[], double p[],
                              printf ("Warning in vapour pressure: temperature out of range of interpolation!\n"
                                      "        Values are interpolated  between 40°C and 200 °C\n");
                          break;
-                    case AIR:
-                         break;   
-                    case COTOIL: case SILOIL: default:
+                    case COTOIL:
                          printf ("vapourpressure not available for cotton oil and silicon oil\n");        
+                         break;   
+                    case AIR: case SILOIL: default:
                          break;   
                 } /* end switch material */
                 x[n] = vapourpressure(ft[id[2]], fm[id[3]], t[id[0]], p[id[1]]);
@@ -735,21 +805,22 @@ void fluidprop(double x[], double ft[], double fm[], double t[], double p[],
                 switch (material)
                 {
                   case WATER: case AIR:
-                       if(p[id[1]] > PRESSKRIT)
+                      if(p[id[1]] > PRESSKRIT)
                           printf ("Warning: saturationtemperature is not defined for" 
                                   "pressures above the critical point!");
-                       if(t[id[0]] > TEMPKRIT)
+                      if(t[id[0]] > TEMPKRIT)
                           printf ("Warning: saturationtemperature is not defined for" 
                                   "temperatures above the critical point!");
-                       break;
+                      break;
                   case TYFOCOR_LS:
-                         if (t[id[0]]<40 || t[id[0]] > 200)
-                             printf ("Warning in density: temperature out of range of interpolation!\n"
-                                     "        Values are interpolated  between 40°C and 200 °C");
-                         break;
-                  case COTOIL: case SILOIL: case WATERGLYCOL:
-                       printf ("Error: saturationtemperature only available for water and moist air\n");        
-                       break;
+                      break;
+                  case COTOIL:
+                      printf ("Error: saturationtemperature not available for cotton oil\n");        
+                      break;
+                  case WATERGLYCOL:
+                      break;
+                  case SILOIL:
+                      break;
                 }  /* end switch material */
                 x[n] = saturationtemperature(ft[id[2]], fm[id[3]], t[id[0]], p[id[1]]);
                 if (x[n] < -273.15 || x[n]>1e20)
@@ -885,4 +956,3 @@ void mexFunction( int nlhs, mxArray *plhs[],
     
     return;
 }
-

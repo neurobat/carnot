@@ -12,6 +12,11 @@ function B = CarnotCallbacks_CondensingBoilerConf(parameterfile)
 % 
 % Literature: --
 
+% **********************************************************************
+% * $Revision$
+% * $Author$
+% * $Date$
+% * $HeadURL$
 % ***********************************************************************
 % This file is part of the CARNOT Blockset.
 % 
@@ -45,7 +50,7 @@ function B = CarnotCallbacks_CondensingBoilerConf(parameterfile)
 % CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
 % ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF 
 % THE POSSIBILITY OF SUCH DAMAGE.
-% **********************************************************************
+% ***********************************************************************
 % D O C U M E N T A T I O N
 % * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 % Carnot model and function m-files should use a name which gives a 
@@ -58,7 +63,7 @@ function B = CarnotCallbacks_CondensingBoilerConf(parameterfile)
 %
 % Version   Author  Changes                                     Date
 % 6.1.0     hf      created                                     26jun2015
-% 6.1.1     js      added try set_Param catch ...               08nov2016
+% 6.1.1     js      changed set_Param catch                     10nov2016
 % * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
 % path definitions
@@ -84,14 +89,12 @@ end
 % set mask parameters for efficiency table temperature selector
 a = get_param([gcb '/Condensing_Boiler'],'DialogParameters');
 
-try
-    set_param([gcb '/Condensing_Boiler'], 'whichTforEfficiency', ...
-        a.whichTforEfficiency.Enum{B.whichTforEfficiency});
-catch
-    disp('Could not finalize call to CarnotCallbacks_CondensingBoilerConf - trying a different way...')
-    hndl = getSimulinkBlockHandle([gcb '/Condensing_Boiler']);
-    tstr = a.whichTforEfficiency.Enum{B.whichTforEfficiency};
-    if ~strcmp(get_param(hndl, 'whichTforEfficiency'), a.whichTforEfficiency.Enum{B.whichTforEfficiency})    
-        set_param(hndl, 'whichTforEfficiency', tstr);
-    end
+%     set_param([gcb '/Condensing_Boiler'], 'whichTforEfficiency', ...
+%         a.whichTforEfficiency.Enum{B.whichTforEfficiency});
+disp('Could not finalize call to CarnotCallbacks_CondensingBoilerConf - trying a different way...')
+hndl = getSimulinkBlockHandle([gcb '/Condensing_Boiler']);
+tstr = a.whichTforEfficiency.Enum{B.whichTforEfficiency};
+if ~strcmp(get_param(hndl, 'whichTforEfficiency'), a.whichTforEfficiency.Enum{B.whichTforEfficiency})    
+    set_param(hndl, 'whichTforEfficiency', tstr);
+end
 end

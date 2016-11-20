@@ -29,6 +29,7 @@
  * $Author$
  * $Date$
  * $HeadURL$
+
  ***********************************************************************
  *  M O D E L    O R    F U N C T I O N
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -51,6 +52,8 @@
  * 6.1.2    aw              added                                 29jan2015
  *                          ssSetOptions(S,
  *                          SS_OPTION_DISALLOW_CONSTANT_SAMPLE_TIME)
+ * 6.1.3    hf              saturation temperature availabe         15nov2016
+ *                          for silicon oil, water_constant, air_constant
  */
 
 
@@ -191,10 +194,10 @@ static void mdlOutputs(SimStruct *S, int_T tid)
         mxd  = *mx[n];
         chk = (int_T)rangecheck(SATURATIONPROPERTY,idd,mxd,td,pd);
     
-        if ( ((int)(idd+0.5) < 1) || ((int)(idd+0.5) > 6) )
+        if ( ((int)(idd+0.5) < 1) || ((int)(idd+0.5) > 8) )
         {
-            ssSetErrorStatus(S,"Error in saturation_temperature (satutemp.c): function available only for water and humid air and water-glycol and Tyfocor LS");
-            sprintf(message,"Error in saturation_temperature (satutemp.c): function available only for water and humid air and water-glycol and Tyfocor LS\n");
+            ssSetErrorStatus(S,"Error in saturation_temperature: function not available for the fluid");
+            sprintf(message,"Error in saturation_temperature: function not available for the fluid\n");
 			messageset = printmessage(message, DWORK_ORIGIN, ssGetT(S), MESSAGELEVELERROR, MESSAGELEVELBLOCK, DWORK_PRINTEDTOTALMESSAGES, NOTOTALMESSAGES, DWORK_PRINTEDCONSECUTIVEMESSAGES, NOCONSECUTIVEMESSAGES, WRITETOFILE, DWORK_FILENAME);
             return;
         }
@@ -242,10 +245,7 @@ static void mdlOutputs(SimStruct *S, int_T tid)
                 return;
         
             case SILOIL: 
-                ssSetErrorStatus(S,"Error (satutemp.c): saturationtemperature not available for siliconoil!");
-                sprintf(message,"Error (satutemp.c): saturationtemperature not available for siliconoil!\n");
-                messageset = printmessage(message, DWORK_ORIGIN, ssGetT(S), MESSAGELEVELERROR, MESSAGELEVELBLOCK, DWORK_PRINTEDTOTALMESSAGES, NOTOTALMESSAGES, DWORK_PRINTEDCONSECUTIVEMESSAGES, NOCONSECUTIVEMESSAGES, WRITETOFILE, DWORK_FILENAME);
-                return;
+                break;
         
             case WATERGLYCOL:
                 break;
@@ -278,4 +278,3 @@ static void mdlTerminate(SimStruct *S)
 #else
 #include "cg_sfun.h"       /* Code generation registration function */
 #endif
-

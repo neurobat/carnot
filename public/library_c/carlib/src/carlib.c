@@ -25,6 +25,7 @@
  * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF 
  * THE POSSIBILITY OF SUCH DAMAGE.
+ ***********************************************************************
  * $Revision$
  * $Author$
  * $Date$
@@ -147,6 +148,9 @@
  *                  'vap_cont' used -> added default case
  * 6.3.0    hf      included solar_postion, removed global_memory   16sep2015
  *                  added float.h for DBL_EPSILON
+ * 6.3.1    hf      added equation thermal conductivity for silicon 15nov2016
+ *                  oil from H.Teichmann, FHD
+ *                  added values for WATER_CONSTANT and AIR_CONSTANT
  *
  * 2do:
  *    - include pressure in properties of air
@@ -395,8 +399,18 @@ double saturationtemperature(double id, double xi, double t, double p)
             /* fitted from output of vapourpressure, error < 3.5 %  */
             ts = 263.9257158*(1-exp(-pow(p/1e5/6.2299009,0.4022453)));
             break;
-        case COTOIL: case SILOIL:
+        case COTOIL: 
             ts = -1.0;
+            break;
+        case SILOIL:
+            if (p > 100.0)
+            {
+                lnp = log(p);
+                ts = (((0.0711440955480129*lnp-2.17481443031356)*lnp
+                    +26.1155694350263)*lnp-124.156908912854)*lnp+238.387144454680;
+            }
+            else
+                ts = p - 60;
             break;
 		case WATER_CONSTANT:
 			ts = 100.0;  /* condensation temperature of steam at 1013 hPa */
@@ -1339,10 +1353,14 @@ double thermal_conductivity(double id, double xi, double t, double p)
             break;
 			
 		case SILOIL:	/* silicon oil */
-			c = 0.16;
+			/* data from Teichmann: Bericht Carlib-Validierung HSD, 2016 
+             * (remark: equation c = 0.0017*t + 1.574; is wrong)
+             * Source: Syltherm 800 - Manufacturer DOW - Product information
+             */
+            c = -0.000188076923076923*t + 0.138770512820513;
             break;
 			
-		case WATERGLYCOL:
+		case WATERGLYCOL: /* fitted from Adunka91 data */
             xi = xi*100.0;   /* in percent */
 			c = t*(-8.273646532405401e-006 + xi*(-8.159028398563302e-007 +
                 xi*( 1.419387521066986e-008 + xi*(-6.011521361767284e-011))) +
@@ -1383,9 +1401,10 @@ double thermal_conductivity(double id, double xi, double t, double p)
 double temperature_conductivity(double id, double xi, double t, double p)
 {
     double a, aliquid, asteam;
-    int vp;
-
- 	switch((int)(id+0.5))
+    int vp, iid;
+    
+    iid = (int)(id+0.5);
+ 	switch(iid)
 	{
 		case WATER: /* deviations for high pressures and high temperature rise to 6 % */
 			if ((int)(t/MAXSATTEMPDEV) == (int) (saturationtemperature(1.0,1.0,t,p)/MAXSATTEMPDEV))
@@ -1416,26 +1435,11 @@ double temperature_conductivity(double id, double xi, double t, double p)
                 a = thermal_conductivity(1,0,t,p)/density(1,0,t,p)/heat_capacity(1,0,t,p);
             }
              break;
-		case AIR: /* only for 1e5 Pa for the moment */
-             a = thermal_conductivity(2,xi,t,p)/density(2,xi,t,p)/heat_capacity(2,xi,t,p);           
+		case AIR: case COTOIL: case SILOIL: case WATERGLYCOL: case TYFOCOR_LS:
+             a = thermal_conductivity(iid,xi,t,p)/density(iid,xi,t,p)/heat_capacity(iid,xi,t,p);           
              break;
-		case COTOIL:     /* cotton oil */
-			 a = thermal_conductivity(3,0,t,p)/density(3,0,t,p)/heat_capacity(3,0,t,p);
-             break;
-		case SILOIL:	/* silicon oil */
-			 a = thermal_conductivity(4,0,t,p)/density(4,0,t,p)/heat_capacity(4,0,t,p);
-             break;
-		case WATERGLYCOL:
-             a = thermal_conductivity(5,xi,t,p)/density(5,xi,t,p)/heat_capacity(5,xi,t,p);           
-             break;
-        case TYFOCOR_LS:
-             a = thermal_conductivity(6,xi,t,p)/density(6,xi,t,p)/heat_capacity(6,xi,t,p);           
-             break;
-		case WATER_CONSTANT:
-             a = thermal_conductivity(5,xi,t,p)/density(5,xi,t,p)/heat_capacity(5,xi,t,p);           
-             break;
-		case AIR_CONSTANT:
-             a = thermal_conductivity(5,xi,t,p)/density(5,xi,t,p)/heat_capacity(5,xi,t,p);           
+		case WATER_CONSTANT: case AIR_CONSTANT:
+             a = thermal_conductivity(iid,0.0,20,1013e2)/density(iid,0.0,20,1013e2)/heat_capacity(iid,0.0,20.0,1013e2);           
              break;
         default:
             a = -1.0;
@@ -1580,7 +1584,7 @@ double enthalpy(double id, double xi, double t, double p)
 			h = (935.0 - 0.6806 * t)*t;
             break;
 		case SILOIL:
-			h = (983.1 - 0.9232 * t)*t;
+			h = (983.1 - 0.9232*t)*t;
             break;
 		case WATERGLYCOL:    /* fitted from Adunka91 data */
 			xi = xi*100;   /* in percent */
@@ -1597,8 +1601,8 @@ double enthalpy(double id, double xi, double t, double p)
         case TYFOCOR_LS: /*only in monophasic liquid zone*/
 			h=heat_capacity(id,xi,t,p)*t;
 			break;
-		case WATER_CONSTANT:
-            h = 0.0;           
+		case WATER_CONSTANT:  /* Source: IAPWS97, values for pressure 1013 hPa, temperature 20°C */
+            h = 84013.0346245843;
             break;
 		case AIR_CONSTANT:
             h = 0.0;           
@@ -1694,8 +1698,8 @@ double entropy(double id, double xi, double t, double p)
         case TYFOCOR_LS:
             s=-1.0;/*no correlation yet*/
             break;
-		case WATER_CONSTANT:
-            s = 0.0;           
+		case WATER_CONSTANT: /* IAPWS97, values for pressure 1013 hPa, temperature 20°C */
+            s = 296.482651731789;           
             break;
 		case AIR_CONSTANT:
             s = 0.0;           
@@ -1726,7 +1730,10 @@ double evaporation_enthalpy(double id, double xi, double t, double p)
                 r = -1.0;
 			}
             break;
-        case AIR: case COTOIL: case SILOIL:	case WATERGLYCOL: case TYFOCOR_LS: case WATER_CONSTANT: case AIR_CONSTANT: default:
+        case WATER_CONSTANT:  /* % Source: IAPWS97, values for pressure 1013 hPa, temperature 20°C */
+            r = 2454158.62854583;
+            break;
+        case AIR: case COTOIL: case SILOIL:	case WATERGLYCOL: case TYFOCOR_LS: case AIR_CONSTANT: default:
             r = -1.0;
             break;
     } /* switch(id) */
@@ -2416,19 +2423,27 @@ double vapourpressure(double id, double xi, double t, double p)
                 vp = exp(((((43846605086720.0*negdivt + 626460434744.924)*negdivt + 3527025099.56357)*negdivt + 9523587.46742864)*negdivt + 16948.897414932)*negdivt + 30.183847582);
 			}
             else if (t == TEMPKRIT)
-			{
                 vp = PRESSKRIT;    
-			}
             else
-			{
                 vp = -1.0;
-			}
             break;
 		case AIR: /* partial pressure of water-vapour in moist air */
             vp = p*xi/(0.622+xi);
             break;
-        case COTOIL: case SILOIL: 
+		case AIR_CONSTANT: /* partial pressure of water-vapour in dry air at */
+            vp = 0.0;
+            break;
+		case WATER_CONSTANT: /* partial pressure of water-vapour in moist air in Pa */
+            vp = 2339.21476677690; /* value from IAPWS97 */
+            break;
+        case COTOIL:
             vp = -1.0;
+            break;
+        case SILOIL: 
+            if (t < 0.0)
+                vp = 0.0;
+            else
+                vp = 0.4953e-3*pow(t,3.631);
             break;
         case WATERGLYCOL:  /* for 20°C < T < 200°C */
             vp = (exp (-0.81264*log(t)*log(t)*xi*xi + 0.65201*log(t)*log(t)*xi
@@ -2586,4 +2601,3 @@ int printmessage(const char *message, const char *origin, double time, int level
 }
 
   
-
