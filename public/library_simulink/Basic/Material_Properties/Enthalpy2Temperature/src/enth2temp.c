@@ -55,6 +55,7 @@
  * 6.1.2    aw          added                                   29jan2015
  *                      ssSetOptions(S,
  *                      SS_OPTION_DISALLOW_CONSTANT_SAMPLE_TIME)
+ * 6.1.3.   aw          initialise poiter with NULL             06dec2016
  *                          
  */
 
@@ -189,7 +190,7 @@ static void mdlOutputs(SimStruct *S, int_T tid)
     real_T *y             = ssGetOutputPortRealSignal(S,0);
     int_T  width          = ssGetOutputPortWidth(S,0);
     real_T hd, pd, idd, mxd;
-    double *tab;
+    double *tab = NULL; /* memory will be allocated in enthalpy2temperature() */
     char message[500];
     int_T messageset = MESSAGEPRINTNONE;
     int_T n, chk;
