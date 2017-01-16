@@ -46,6 +46,7 @@
  * 6.2.0    hf      solar position calculated by carlib         18sep2015
  *                  function solar_position  
  *                  corrected if(ZENITH < -9998.0 ...
+ * 6.2.1    aw      unused variable xx deleted                  16jan2016
  *
  * Copyright (c) 2000-2015 Solar-Institut Juelich, Germany
  *
@@ -166,7 +167,7 @@ void declination(double time, double latitude, double longitude, double longitud
 {
     
     real_T SunHour, ClearIndex, delta, woz, HourAngle, sunangle, IextraDay;
-    real_T zenith, azimut, xx, coszenit;
+    real_T zenith, azimut, coszenit;
     real_T solpos[5];
 
     /* Besetzen diverser Variablen mit Default-Werten:*/

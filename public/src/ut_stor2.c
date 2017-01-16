@@ -51,6 +51,10 @@
  * 0.8.0    hf              new pressure drop calculation           03jul98
  *                          dp = dp0 + dp1*mdot + dp2*mdot^2
  *                          function has new outputs dp0, dp1, dp2
+ * 6.1.0    aw              re-definition of #define catched by     16jan17
+ *                          #ifndef check
+ *                          GRAV renamed to C_GRAVITATION as
+ *                          in carlib.h
  *
  *
  * Copyright (c) 1998 Solar-Institut Juelich, Germany
@@ -161,8 +165,12 @@
 #include "carlib.h"
 #include <math.h>
 
-#define PI       3.14159265358979
-#define GRAV     9.81
+#ifndef PI
+    #define PI       3.14159265358979
+#endif
+#ifndef C_GRAVITATION 
+    #define C_GRAVITATION      9.81
+#endif
 
 #define D_STORE     *mxGetPr(ssGetArg(S,0))  /* storage diameter [m] */
 #define H_STORE     *mxGetPr(ssGetArg(S,1))  /* storage depth    [m] */
@@ -352,7 +360,7 @@ static void mdlOutputs(real_T *y, const real_T *x, const real_T *u,
 
     /* average pipe temperature and static pressure */
     tmean = 0.0;
-    dirz = dz * GRAV; /* positive for downwards flow */
+    dirz = dz * C_GRAVITATION ; /* positive for downwards flow */
     p = PRESS;
     for (nz = 0; nz < 2*pipenodes; nz++) {
         tmean += TFLUID[nz];

@@ -46,6 +46,8 @@
  * 1.0.0    tw      created, copied from metrad_s.c             31mar2000
  * 4.1.0    hf      vectorized input and output                 05jan2011
  * 6.1.0    hf      call solar_position in carlib               18sep2015
+ * 6.1.1    aw      unused variable coszenit in declination()   17jan2017
+ *                  deleted
  *
  * Copyright (c) 1999-2015 Solar-Institut Juelich, Germany
  * 
@@ -123,7 +125,7 @@ void declination(real_T *time, real_T *latitude, real_T *longitude,
         real_T *out_zenith, real_T *out_azimuth, real_T *out_hourangle,
         mwSize n_cells)
 {
-    real_T delta, deltaangle, woz, HourAngle, coszenit,sunangle, IextraDay;
+    real_T delta, deltaangle, woz, HourAngle, sunangle, IextraDay;
     real_T azimut, zenith, lati;
     real_T solpos[5];
     int i;
