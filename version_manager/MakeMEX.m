@@ -246,12 +246,23 @@ function CompileCFiles(cfiles, clibfiles, hlibfiles, mexdirectory)
     
     %compile all files
     for Count = 1:numel(cfiles)
-        fprintf('\t compiling %s \n', cfiles{Count});
-        try
-			eval(['mex CFLAGS="\$CFLAGS -std=c99" ', cfiles{Count}, ' ', LibraryFiles, ' -outdir ', mexdirectory, IncludeDirectories]);
-        catch
-            warning(['Unable to build mex file for ' cfiles{Count}]);
+        fprintf('compiling %s \n', cfiles{Count});
+        if ispc || ismac
+            try
+                eval(['mex ', cfiles{Count}, ' ', LibraryFiles, ' -outdir ', mexdirectory, IncludeDirectories]);
+            catch
+                warning(['Unable to build mex file for ' cfiles{Count}]);
+            end
+        elseif isunix
+            try
+                eval(['mex CFLAGS="\$CFLAGS -std=c99"', cfiles{Count}, ' ', LibraryFiles, ' -v -largeArrayDims -outdir ', mexdirectory, IncludeDirectories]);
+            catch
+                warning(['Unable to build mex file for ' cfiles{Count}]);
+            end
+        else
+            %do nothing
         end
+        fprintf('\n');
     end
 end
 
