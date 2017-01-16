@@ -53,7 +53,7 @@
 % aw        2015        created
 % PahM      2015-08-19  header added
 % aw		2015-10-13	library_m added
-% sw		2016-11-16	call of mex changed for Linux gcc compability
+% aw		2016-11-16	call of mex changed for Linux gcc compability
 function MakeMEX_development
 
     
