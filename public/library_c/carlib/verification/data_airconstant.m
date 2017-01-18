@@ -1,4 +1,4 @@
-function [t, p, mix, dref, dsim0] = data_waterconstant(prop)
+function [t, p, mix, dref, dsim0] = data_airconstant(prop)
 % function [t, mix, dref, dsim0] = data_waterconstant(prop)
 % define the reference data from literature and simulation standard for 
 % constant fluid properites of water (at T=temperature 20°C, p=1013hPa), 

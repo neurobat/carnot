@@ -95,9 +95,9 @@ max_error = [   5e-4,  1e-7, 4e-3,  0.1,   2e-2,       1e-3,      4e-6,         
                 4e-3,  1e-7, 0.12,  0.1,   3e-2,       3e-3,      1e-3,          1e-7; ... % maximum error for heat_capacity
                 2e-2,  1e-7, 1e-7,  5e-4,  1e-7,       2e-3,      2e-3,          1e-7; ... % maximum error for thermal_conductivity
                 8e-3,  1e-7, 1e-7,  1e-7,  1e-7,       4e-2,      7e-4,          1e-7; ... % maximum error for kinematic_viscosity
-                4e-3,  1e-7, 1e-7,  6e-2,  1e-7,       0.16,      1e-7,          1e-7; ... % maximum error for vapourpressure
+                1100,  1e-7, 1e-7,  18e3,  1e-7,       6e4,       1e-7,          1e-7; ... % maximum error for vapourpressure
                 1.1e3, 1e-7, 1e-7,  1e-7,  1e-7,       1e-7,      1e-7,          1e-7; ... % maximum error for enthalpy
-                8e-3,  1e-7, 1e-7,  1e-7,  1e-7,       1e-7,      1e-7,          1e-7; ... % maximum error for entropy
+                40,    1e-7, 1e-7,  1e-7,  1e-7,       1e-7,      1e-7,          1e-7; ... % maximum error for entropy
                 1e-3,  1e-7, 1e-7,  1e-7,  1e-7,       1e-7,      4e-6,          1e-7; ... % maximum error for specific volume
                 7e-4,  1e-7, 1e-7,  1e-7,  1e-7,       1e-7,      1e-7,          1e-7; ... % maximum error for evaporation_enthalpy
                 2e-2,  1e-7, 1e-7,  1.2,   1e-7,       1e-7,      4e-2,          1e-7; ... % maximum error for saturation_temperature
@@ -107,9 +107,9 @@ error_type = {'relative', ...  % error evaluation type for density
               'relative', ...  % error evaluation type for heat_capacity
               'relative', ...  % error evaluation type for thermal_conductivity
               'relative', ...  % error evaluation type for kinematic_viscosity
-              'relative', ...  % error evaluation type for vapourpressure
+              'absolute', ...  % error evaluation type for vapourpressure
               'absolute', ...  % error evaluation type for enthalpy
-              'relative', ...  % error evaluation type for entropy
+              'absolute', ...  % error evaluation type for entropy
               'relative', ...  % error evaluation type for specific volume
               'relative', ...  % error evaluation type for evaporation_enthalpy
               'absolute', ...  % error evaluation type for saturation_temperature
