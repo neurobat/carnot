@@ -1,24 +1,13 @@
-Model {
-  Name			  "example_DHWconsumptionBasic"
+Library {
+  Name			  "Hot_Water_Consumption_basic"
   Version		  8.2
   MdlSubVersion		  0
   SavedCharacterEncoding  "windows-1252"
-  GraphicalInterface {
-    NumRootInports	    0
-    NumRootOutports	    0
-    ParameterArgumentNames  ""
-    ComputedModelVersion    "1.13"
-    NumModelReferences	    0
-    NumTestPointedSignals   0
-  }
+  LibraryType		  "BlockLibrary"
   SaveDefaultBlockParams  on
   ScopeRefreshTime	  0.035000
   OverrideScopeRefreshTime on
   DisableAllScopes	  off
-  DataTypeOverride	  "UseLocalSettings"
-  DataTypeOverrideAppliesTo "AllNumericTypes"
-  MinMaxOverflowLogging	  "UseLocalSettings"
-  MinMaxOverflowArchiveMode "Overwrite"
   FPTRunName		  "Run 1"
   MaxMDLFileLineLength	  120
   Object {
@@ -30,7 +19,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [80.0, 73.0, 909.0, 922.0]
+      Location		      [891.0, 55.0, 648.0, 657.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -39,7 +28,7 @@ Model {
 	DockPosition		"Left"
 	Width			[50]
 	Height			[50]
-	Filter			[9]
+	Filter			[8]
       }
       Object {
 	$PropName		"ExplorerBarInfo"
@@ -54,25 +43,25 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[859.0, 748.0]
+	Extents			[598.0, 491.0]
 	ZoomFactor		[1.0]
 	Offset			[0.0, 0.0]
       }
     }
   }
-  Created		  "Thu Oct 24 17:27:13 2013"
-  Creator		  "drhf"
+  Created		  "Wed Jul 09 08:59:22 2014"
+  Creator		  "lena.frank"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "drhf"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Tue Jul 21 14:59:40 2015"
-  RTWModifiedTimeStamp	  359391566
-  ModelVersionFormat	  "1.%<AutoIncrement:13>"
+  LastModifiedDate	  "Thu Jan 05 12:22:27 2017"
+  RTWModifiedTimeStamp	  405519745
+  ModelVersionFormat	  "1.%<AutoIncrement:2>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
-  LibraryLinkDisplay	  "all"
+  LibraryLinkDisplay	  "disabled"
   WideLines		  off
   ShowLineDimensions	  off
   ShowPortDataTypes	  off
@@ -102,30 +91,7 @@ Model {
   LinearizationMsg	  "none"
   Profile		  off
   ParamWorkspaceSource	  "MATLABWorkspace"
-  AccelSystemTargetFile	  "accel.tlc"
-  AccelTemplateMakefile	  "accel_default_tmf"
-  AccelMakeCommand	  "make_rtw"
-  TryForcingSFcnDF	  off
-  Object {
-    $PropName		    "DataLoggingOverride"
-    $ObjectID		    6
-    $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
-    model_		    "example_DHWconsumptionBasic"
-    Array {
-      Type		      "Cell"
-      Dimension		      1
-      Cell		      "example_DHWconsumptionBasic"
-      PropName		      "logAsSpecifiedByModels_"
-    }
-    Array {
-      Type		      "Cell"
-      Dimension		      1
-      Cell		      ""
-      PropName		      "logAsSpecifiedByModelsSSIDs_"
-    }
-  }
   RecordCoverage	  off
-  CovPath		  "/"
   CovSaveName		  "covdata"
   CovMetricSettings	  "dw"
   CovNameIncrementing	  off
@@ -134,7 +100,6 @@ Model {
   CovEnableCumulative	  on
   covSaveCumulativeToWorkspaceVar on
   CovSaveSingleToWorkspaceVar on
-  CovCumulativeVarName	  "covCumulativeData"
   CovCumulativeReport	  off
   CovReportOnPause	  on
   CovModelRefEnable	  "Off"
@@ -160,23 +125,22 @@ Model {
   ExtModeSkipDownloadWhenConnect off
   ExtModeLogAll		  on
   ExtModeAutoUpdateStatusClock on
-  BufferReuse		  on
   ShowModelReferenceBlockVersion off
   ShowModelReferenceBlockIO off
   Array {
     Type		    "Handle"
     Dimension		    1
     Simulink.ConfigSet {
-      $ObjectID		      7
+      $ObjectID		      6
       Version		      "1.13.1"
       Array {
 	Type			"Handle"
 	Dimension		8
 	Simulink.SolverCC {
-	  $ObjectID		  8
+	  $ObjectID		  7
 	  Version		  "1.13.1"
 	  StartTime		  "0.0"
-	  StopTime		  "24*3600"
+	  StopTime		  "10.0"
 	  AbsTol		  "auto"
 	  FixedStep		  "auto"
 	  InitialStep		  "auto"
@@ -208,7 +172,7 @@ Model {
 	  InsertRTBMode		  "Whenever possible"
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  9
+	  $ObjectID		  8
 	  Version		  "1.13.1"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
@@ -240,7 +204,7 @@ Model {
 	  Refine		  "1"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  10
+	  $ObjectID		  9
 	  Version		  "1.13.1"
 	  Array {
 	    Type		    "Cell"
@@ -298,7 +262,7 @@ Model {
 	  ParallelExecutionInRapidAccelerator on
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  11
+	  $ObjectID		  10
 	  Version		  "1.13.1"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
@@ -348,7 +312,7 @@ Model {
 	  UnnecessaryDatatypeConvMsg "none"
 	  VectorMatrixConversionMsg "none"
 	  InvalidFcnCallConnMsg	  "error"
-	  FcnCallInpInsideContextMsg "UseLocalSettings"
+	  FcnCallInpInsideContextMsg "EnableAllAsWarning"
 	  SignalLabelMismatchMsg  "none"
 	  UnconnectedInputMsg	  "warning"
 	  UnconnectedOutputMsg	  "warning"
@@ -388,7 +352,7 @@ Model {
 	  SFTransitionActionBeforeConditionDiag	"warning"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  12
+	  $ObjectID		  11
 	  Version		  "1.13.1"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
@@ -429,7 +393,7 @@ Model {
 	  ProdEqTarget		  on
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  13
+	  $ObjectID		  12
 	  Version		  "1.13.1"
 	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
 	  CheckModelReferenceTargetMessage "error"
@@ -444,7 +408,7 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  14
+	  $ObjectID		  13
 	  Version		  "1.13.1"
 	  SFSimEnableDebug	  on
 	  SFSimOverflowDetection  on
@@ -460,18 +424,20 @@ Model {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  15
+	  $ObjectID		  14
 	  Version		  "1.13.1"
 	  Array {
 	    Type		    "Cell"
-	    Dimension		    7
+	    Dimension		    9
 	    Cell		    "IncludeHyperlinkInReport"
 	    Cell		    "GenerateTraceInfo"
 	    Cell		    "GenerateTraceReport"
 	    Cell		    "GenerateTraceReportSl"
 	    Cell		    "GenerateTraceReportSf"
 	    Cell		    "GenerateTraceReportEml"
-	    Cell		    "GenerateSLWebview"
+	    Cell		    "GenerateWebview"
+	    Cell		    "GenerateCodeMetricsReport"
+	    Cell		    "GenerateCodeReplacementReport"
 	    PropName		    "DisabledProps"
 	  }
 	  SystemTargetFile	  "grt.tlc"
@@ -540,7 +506,7 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      16
+	      $ObjectID		      15
 	      Version		      "1.13.1"
 	      Array {
 		Type			"Cell"
@@ -608,7 +574,7 @@ Model {
 	    }
 	    Simulink.GRTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      17
+	      $ObjectID		      16
 	      Version		      "1.13.1"
 	      Array {
 		Type			"Cell"
@@ -694,23 +660,9 @@ Model {
       }
       Name		      "Configuration"
       CurrentDlgPage	      "Solver"
-      ConfigPrmDlgPosition     [ 400, 210, 1280, 840 ] 
+      ConfigPrmDlgPosition     [ 520, 225, 1400, 855 ] 
     }
     PropName		    "ConfigurationSets"
-  }
-  Simulink.ConfigSet {
-    $PropName		    "ActiveConfigurationSet"
-    $ObjectID		    7
-  }
-  Object {
-    $PropName		    "DataTransfer"
-    $ObjectID		    18
-    $ClassName		    "Simulink.GlobalDataTransfer"
-    DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
-    DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
-    DefaultTransitionBetweenContTasks "Ensure deterministic transfer (minimum delay)"
-    DefaultExtrapolationMethodBetweenContTasks "None"
-    AutoInsertRateTranBlk   [0]
   }
   ExplicitPartitioning	  off
   BlockDefaults {
@@ -778,38 +730,69 @@ Model {
       PreserveConstantTs      off
     }
     Block {
-      BlockType		      Mux
-      Inputs		      "4"
-      DisplayOption	      "none"
-      UseBusObject	      off
-      BusObject		      "BusObject"
-      NonVirtualBus	      off
-    }
-    Block {
-      BlockType		      Scope
-      ModelBased	      off
-      TickLabels	      "OneTimeTick"
-      ZoomMode		      "on"
-      Grid		      "on"
-      TimeRange		      "auto"
-      YMin		      "-5"
-      YMax		      "5"
-      SaveToWorkspace	      off
-      SaveName		      "ScopeData"
-      DataFormat	      "Array"
-      LimitDataPoints	      on
-      MaxDataPoints	      "5000"
-      Decimation	      "1"
-      SampleInput	      off
+      BlockType		      Inport
+      Port		      "1"
+      OutputFunctionCall      off
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
       SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchInputForFeedbackSignals off
+      Interpolate	      on
     }
     Block {
-      BlockType		      Terminator
+      BlockType		      Outport
+      Port		      "1"
+      OutMin		      "[]"
+      OutMax		      "[]"
+      OutDataTypeStr	      "Inherit: auto"
+      LockScale		      off
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      VarSizeSig	      "Inherit"
+      SampleTime	      "-1"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      SourceOfInitialOutputValue "Dialog"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      CheckFcnCallInpInsideContextMsg off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      FunctionInterfaceSpec   "void_void"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      DataTypeOverrideAppliesTo	"AllNumericTypes"
+      MinMaxOverflowLogging   "UseLocalSettings"
+      SFBlockType	      "NONE"
+      Variant		      off
+      GeneratePreprocessorConditionals off
+      ContentPreviewEnabled   off
     }
   }
   System {
-    Name		    "example_DHWconsumptionBasic"
-    Location		    [80, 73, 989, 995]
+    Name		    "Hot_Water_Consumption_basic"
+    Location		    [891, 55, 1539, 712]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -825,326 +808,237 @@ Model {
     ReportName		    "simulink-default.rpt"
     SIDHighWatermark	    "22"
     Block {
-      BlockType		      Constant
-      Name		      "Constant"
-      SID		      "17"
-      Position		      [460, 325, 490, 355]
-      ZOrder		      6
-      BlockMirror	      on
-      ShowName		      off
-      Value		      "20"
-    }
-    Block {
-      BlockType		      Reference
-      Name		      "Constant_THB"
-      SID		      "18"
-      Ports		      [0, 1]
-      Position		      [410, 408, 470, 432]
-      ZOrder		      5
-      BlockMirror	      on
-      BackgroundColor	      "red"
-      LibraryVersion	      "6.0.129"
-      SourceBlock	      "carnot/Source/Simple/Constant_THB"
-      SourceType	      "constant THB"
-      ContentPreviewEnabled   off
-      t			      "40"
-      mdot		      "0*100/3600"
-      p			      "1e5"
-      mID		      "No Pressure Drop"
-      fluid		      "Water"
-      mix		      "0"
-      dia		      "0.02"
-      hgt		      "0"
-    }
-    Block {
-      BlockType		      Reference
-      Name		      "Display_THB1"
-      SID		      "15"
-      Ports		      [2, 1]
-      Position		      [430, 173, 540, 217]
-      ZOrder		      -1
-      LibraryVersion	      "6.0.129"
-      SourceBlock	      "carnot/Outputs/Display_THB2"
-      SourceType	      "display THB"
-      ContentPreviewEnabled   off
-      t			      off
-      m			      on
-      p			      off
-      id		      off
-      mix		      off
-      d			      off
-    }
-    Block {
-      BlockType		      Reference
-      Name		      "Display_THB2"
-      SID		      "14"
-      Ports		      [2, 1]
-      Position		      [430, 50, 540, 110]
-      ZOrder		      -2
-      LibraryVersion	      "6.0.129"
-      SourceBlock	      "carnot/Outputs/Display_THB2"
-      SourceType	      "display THB"
-      ContentPreviewEnabled   off
-      t			      on
-      m			      off
-      p			      off
-      id		      off
-      mix		      off
-      d			      off
-    }
-    Block {
-      BlockType		      Reference
+      BlockType		      SubSystem
       Name		      "Hot_Water_Consumption_basic"
       SID		      "12"
       Ports		      [1, 3]
-      Position		      [225, 50, 335, 140]
-      ZOrder		      -3
-      BackgroundColor	      "lightBlue"
-      LibraryVersion	      "6.0.129"
-      SourceBlock	      "carnot/Load/Hot_Water_Tapping/Applications/Hot_Water_Consumption_basic"
-      SourceType	      ""
-      ShowPortLabels	      "FromPortIcon"
-      SystemSampleTime	      "-1"
-      FunctionWithSeparateData off
-      GeneratePreprocessorConditionals off
-      ContentPreviewEnabled   off
-    }
-    Block {
-      BlockType		      Mux
-      Name		      "Mux"
-      SID		      "8"
-      Ports		      [2, 1]
-      Position		      [580, 58, 585, 147]
-      ZOrder		      -4
-      ShowName		      off
-      Inputs		      "2"
-      DisplayOption	      "bar"
-    }
-    Block {
-      BlockType		      Scope
-      Name		      "Scope"
-      SID		      "6"
-      Ports		      [2]
-      Position		      [650, 85, 695, 160]
-      ZOrder		      -5
-      Floating		      off
-      Location		      [700, 134, 1275, 713]
-      Open		      on
-      NumInputPorts	      "2"
-      List {
-	ListType		AxesTitles
-	axes1			"%<SignalLabel>"
-	axes2			"%<SignalLabel>"
-      }
-      List {
-	ListType		ScopeGraphics
-	FigureColor		"[0.5 0.5 0.5]"
-	AxesColor		"[0 0 0]"
-	AxesTickColor		"[1 1 1]"
-	LineColors		"[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
-	LineStyles		"-|-|-|-|-|-"
-	LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
-	MarkerStyles		"none|none|none|none|none|none"
-      }
-      ShowLegends	      off
-      YMin		      "5~0"
-      YMax		      "55~0.12"
-      DataFormat	      "StructureWithTime"
-      SampleTime	      "0"
-    }
-    Block {
-      BlockType		      Reference
-      Name		      "Storage_Type_2"
-      SID		      "19"
-      Ports		      [3, 4]
-      Position		      [210, 317, 345, 443]
-      ZOrder		      4
-      BlockMirror	      on
-      BackgroundColor	      "red"
-      LibraryVersion	      "6.0.129"
-      SourceBlock	      "carnot/Storage/Thermal/Storage_Type_2"
-      SourceType	      "Multiport Storage"
-      ContentPreviewEnabled   off
-      uloss		      "1"
-      ubot		      "1"
-      utop		      "1"
-      cond		      "1"
-      t0		      "[46:55]"
-      volume		      "0.3"
-      dia		      "0.5"
-      pos		      "standing cylinder"
-      nconnect		      "2"
-      nodes		      "10"
-      mpoints		      "10"
-    }
-    Block {
-      BlockType		      Terminator
-      Name		      "Terminator"
-      SID		      "20"
-      Position		      [165, 325, 185, 345]
-      ZOrder		      3
-      BlockMirror	      on
-      ShowName		      off
-    }
-    Block {
-      BlockType		      Terminator
-      Name		      "Terminator1"
-      SID		      "21"
-      Position		      [165, 415, 185, 435]
-      ZOrder		      2
-      BlockMirror	      on
-      ShowName		      off
-    }
-    Block {
-      BlockType		      Scope
-      Name		      "Tnodes"
-      SID		      "22"
-      Ports		      [1]
-      Position		      [80, 349, 110, 381]
+      Position		      [125, 70, 235, 140]
       ZOrder		      1
-      BlockMirror	      on
-      Floating		      off
-      Location		      [188, 390, 865, 878]
-      Open		      on
-      NumInputPorts	      "1"
-      List {
-	ListType		AxesTitles
-	axes1			"%<SignalLabel>"
+      BackgroundColor	      "lightBlue"
+      MinAlgLoopOccurrences   off
+      PropExecContextOutsideSubsystem off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      Opaque		      off
+      RequestExecContextInheritance off
+      MaskHideContents	      off
+      Object {
+	$PropName		"MaskObject"
+	$ObjectID		17
+	$ClassName		"Simulink.Mask"
+	Display			"plot(0,0,140,130,[70,76,78,63,65,70,70,10],[80,78,74,74,78,80,100,100],[23,23,20,10],[43,47,50,50],[10,10,"
+	"20,28,30,10],[30,20,20,23,30,30],[22,17],[54,54],[20,20],[54,50],[90,90,50,50],[10,-0,-0,10],[63,64],[60,72],[61,62],"
+	"[38,50],[60,61],[13,27],[90,85,81,76,70,65,59,54,50],[6,4,6,4,6,4,5,3,5],[68,69],[56,68],[68,68],[32,44],[67,67],[13,"
+	"23],[73,73],[61,71],[73,73],[43,52],[74,73],[21,36],[78,77],[56,67],[79,79],[34,45],[78,77],[9,23],[82,81],[14,26])"
+	IconOpaque		"off"
       }
-      List {
-	ListType		ScopeGraphics
-	FigureColor		"[0.5 0.5 0.5]"
-	AxesColor		"[0 0 0]"
-	AxesTickColor		"[1 1 1]"
-	LineColors		"[1 1 0;1 0 1;0 1 1;1 0 0;0 1 0;0 0 1]"
-	LineStyles		"-|-|-|-|-|-"
-	LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
-	MarkerStyles		"none|none|none|none|none|none"
-      }
-      ShowLegends	      off
-      SaveName		      "ScopeData1"
-      DataFormat	      "StructureWithTime"
-      SampleTime	      "0"
-    }
-    Line {
-      FontName		      "Helvetica"
-      FontSize		      9
-      FontWeight	      "normal"
-      FontAngle		      "normal"
-      ZOrder		      7
-      SrcBlock		      "Hot_Water_Consumption_basic"
-      SrcPort		      2
-      Points		      [26, 0]
-      Branch {
-	ZOrder			36
-	Points			[0, 110]
-	DstBlock		"Display_THB1"
-	DstPort			2
-      }
-      Branch {
-	ZOrder			34
-	DstBlock		"Display_THB2"
-	DstPort			2
-      }
-    }
-    Line {
-      ZOrder		      10
-      SrcBlock		      "Display_THB2"
-      SrcPort		      1
-      DstBlock		      "Mux"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      11
-      SrcBlock		      "Hot_Water_Consumption_basic"
-      SrcPort		      3
-      Points		      [88, 0; 0, 10; 118, 0; 0, -10]
-      DstBlock		      "Mux"
-      DstPort		      2
-    }
-    Line {
-      ZOrder		      12
-      SrcBlock		      "Mux"
-      SrcPort		      1
-      DstBlock		      "Scope"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      13
-      SrcBlock		      "Display_THB1"
-      SrcPort		      1
-      Points		      [69, 0; 0, -55]
-      DstBlock		      "Scope"
-      DstPort		      2
-    }
-    Line {
-      ZOrder		      21
-      SrcBlock		      "Storage_Type_2"
-      SrcPort		      3
-      Points		      [-67, 0; 0, -300]
-      DstBlock		      "Hot_Water_Consumption_basic"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      2
-      SrcBlock		      "Hot_Water_Consumption_basic"
-      SrcPort		      1
-      Points		      [62, 0]
-      Branch {
-	ZOrder			37
-	Points			[0, 120]
-	Branch {
-	  ZOrder		  26
-	  Points		  [0, 195]
-	  DstBlock		  "Storage_Type_2"
-	  DstPort		  2
+      System {
+	Name			"Hot_Water_Consumption_basic"
+	Location		[121, 105, 1317, 985]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "THBhot"
+	  SID			  "13"
+	  Position		  [455, 208, 485, 222]
+	  ZOrder		  -1
+	  IconDisplay		  "Port number"
 	}
-	Branch {
-	  ZOrder		  25
-	  DstBlock		  "Display_THB1"
+	Block {
+	  BlockType		  Constant
+	  Name			  "T_cold_water_const"
+	  SID			  "14"
+	  Position		  [200, 90, 230, 120]
+	  ZOrder		  -2
+	  Value			  "10"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "T_hot_water"
+	  SID			  "15"
+	  Position		  [375, 310, 405, 340]
+	  ZOrder		  -3
+	  Value			  "45"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Water_Tap"
+	  SID			  "16"
+	  Ports			  [2, 1]
+	  Position		  [300, 67, 370, 118]
+	  ZOrder		  -4
+	  BackgroundColor	  "lightBlue"
+	  LibraryVersion	  "6.0.210"
+	  SourceBlock		  "carnot/Load/Hot_Water_Tapping/Water_Tap"
+	  SourceType		  "water tap"
+	  ContentPreviewEnabled	  off
+	  dia			  "0.02"
+	  p			  "2e5"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "flow_diverter"
+	  SID			  "17"
+	  Ports			  [2, 3]
+	  Position		  [415, 72, 505, 158]
+	  ZOrder		  -5
+	  BackgroundColor	  "cyan"
+	  LibraryVersion	  "6.0.210"
+	  SourceBlock		  "carnot/Hydraulics/Flow_Diverter"
+	  SourceType		  "flow diverter, fixed rate"
+	  ContentPreviewEnabled	  off
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "flow_mixer_thermostatic"
+	  SID			  "18"
+	  Ports			  [4, 2]
+	  Position		  [610, 207, 705, 283]
+	  ZOrder		  -6
+	  BackgroundColor	  "cyan"
+	  LibraryVersion	  "6.0.210"
+	  SourceBlock		  "carnot/Hydraulics/Flow_Mixer_Thermostatic"
+	  SourceType		  "thermostatic flow mixer"
+	  ContentPreviewEnabled	  off
+	  t			  "10"
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "mdot_40_20_40"
+	  SID			  "19"
+	  Ports			  [0, 1]
+	  Position		  [100, 59, 150, 101]
+	  ZOrder		  -7
+	  LibraryVersion	  "6.0.210"
+	  SourceBlock		  "carnot/Load/Hot_Water_Tapping/mdot_40_20_40"
+	  SourceType		  "Repeating Tapping Profile"
+	  ContentPreviewEnabled	  off
+	  period		  "24*3600"
+	  rep_seq_t		  "[7 12 19]*3600"
+	  rep_seq_d		  "[0.2 0.1 0.2]*3600"
+	  rep_seq_y		  "[1 1 1]*200/1800"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "THBcold"
+	  SID			  "20"
+	  Position		  [780, 78, 810, 92]
+	  ZOrder		  -8
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "THBwarm"
+	  SID			  "21"
+	  Position		  [765, 218, 795, 232]
+	  ZOrder		  -9
+	  Port			  "2"
+	  IconDisplay		  "Port number"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Tset"
+	  SID			  "22"
+	  Position		  [640, 318, 670, 332]
+	  ZOrder		  -10
+	  Port			  "3"
+	  IconDisplay		  "Port number"
+	}
+	Line {
+	  ZOrder		  1
+	  SrcBlock		  "mdot_40_20_40"
+	  SrcPort		  1
+	  DstBlock		  "Water_Tap"
 	  DstPort		  1
 	}
+	Line {
+	  ZOrder		  2
+	  SrcBlock		  "T_cold_water_const"
+	  SrcPort		  1
+	  DstBlock		  "Water_Tap"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  3
+	  SrcBlock		  "T_hot_water"
+	  SrcPort		  1
+	  Points		  [130, 0]
+	  Branch {
+	    ZOrder		    4
+	    Points		    [0, -50]
+	    DstBlock		    "flow_mixer_thermostatic"
+	    DstPort		    4
+	  }
+	  Branch {
+	    ZOrder		    5
+	    DstBlock		    "Tset"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  ZOrder		  6
+	  SrcBlock		  "Water_Tap"
+	  SrcPort		  1
+	  DstBlock		  "flow_diverter"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  7
+	  SrcBlock		  "flow_mixer_thermostatic"
+	  SrcPort		  2
+	  Points		  [9, 0; 0, -84; -319, 0]
+	  DstBlock		  "flow_diverter"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  8
+	  SrcBlock		  "flow_mixer_thermostatic"
+	  SrcPort		  1
+	  DstBlock		  "THBwarm"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  9
+	  SrcBlock		  "THBhot"
+	  SrcPort		  1
+	  DstBlock		  "flow_mixer_thermostatic"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  10
+	  SrcBlock		  "flow_diverter"
+	  SrcPort		  1
+	  DstBlock		  "THBcold"
+	  DstPort		  1
+	}
+	Line {
+	  ZOrder		  11
+	  SrcBlock		  "flow_diverter"
+	  SrcPort		  2
+	  Points		  [70, 0; 0, 120]
+	  DstBlock		  "flow_mixer_thermostatic"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  12
+	  SrcBlock		  "flow_diverter"
+	  SrcPort		  3
+	  Points		  [33, 0; 0, 110]
+	  DstBlock		  "flow_mixer_thermostatic"
+	  DstPort		  3
+	}
       }
-      Branch {
-	ZOrder			33
-	DstBlock		"Display_THB2"
-	DstPort			1
-      }
-    }
-    Line {
-      ZOrder		      16
-      SrcBlock		      "Storage_Type_2"
-      SrcPort		      1
-      DstBlock		      "Terminator"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      17
-      SrcBlock		      "Storage_Type_2"
-      SrcPort		      4
-      DstBlock		      "Terminator1"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      18
-      SrcBlock		      "Constant_THB"
-      SrcPort		      1
-      DstBlock		      "Storage_Type_2"
-      DstPort		      3
-    }
-    Line {
-      ZOrder		      19
-      SrcBlock		      "Constant"
-      SrcPort		      1
-      DstBlock		      "Storage_Type_2"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      20
-      SrcBlock		      "Storage_Type_2"
-      SrcPort		      2
-      DstBlock		      "Tnodes"
-      DstPort		      1
     }
   }
 }
