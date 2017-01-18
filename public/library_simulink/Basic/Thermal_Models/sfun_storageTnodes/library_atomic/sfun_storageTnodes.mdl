@@ -43,7 +43,7 @@ Library {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[542.0, 307.0]
+	Extents			[540.0, 287.0]
 	ZoomFactor		[1.0]
 	Offset			[0.0, 0.0]
       }
@@ -53,11 +53,11 @@ Library {
   Creator		  "drhf"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "drhf"
+  LastModifiedBy	  "awohlfei"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu May 28 13:12:36 2015"
-  RTWModifiedTimeStamp	  354719508
-  ModelVersionFormat	  "1.%<AutoIncrement:9>"
+  LastModifiedDate	  "Wed Jan 18 15:51:30 2017"
+  RTWModifiedTimeStamp	  406655479
+  ModelVersionFormat	  "1.%<AutoIncrement:10>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -823,11 +823,13 @@ Library {
 	"node) \n+ cond / dh2 * (Tnode_above - Tnode) \n+ cond / dh2 * (Tnode_below - Tnode) \n+ mdot_up * cp / Vnode * (Tnode"
 	"_below - Tnode) \n+ mdot_down * cp / Vnode * (Tnode_above - Tnode) \n+ Uhx * Ahx / Vnode * (Thx_node - Tnode)   \n"
 	Help			"web(fullfile(path_carnot('help'),'sfun_storageTnodes.html'),'-helpbrowser')"
-	Initialization		"if (floor(nodes)-nodes>eps(nodes)) || nodes < 1.0\n    error('The number of nodes must be a positve "
-	"integer!');\nend\n\nif (floor(nconnect)-nconnect>eps(nconnect)) || nconnect < 1.0\n    error('The number of ports mus"
-	"t be a positve integer!');\nend\n\n\n\nif numel(tini)==1\n    tini = ones(int32(nodes), 1)*tini;\nelse\n    if numel("
-	"tini)~=int32(nodes)\n        error('The initialisation temperature must be a scalar or a vector of size of number of "
-	"nodes!');\n    end\nend\n\nCarnotCallbacks_storage_Tnodes('InitCallback', gcb, nconnect);\n"
+	Initialization		"if numel(nodes)~=1\n    error('The number of nodes must be a positve integer!');\nend\nif (nodes-flo"
+	"or(nodes)>eps(nodes)) || nodes < 1.0\n    error('The number of nodes must be a positve integer!');\nend\n\nif numel(n"
+	"connect)~=1\n    error('The number of ports must be a positve integer!');\nend\nif (nconnect-floor(nconnect)>eps(ncon"
+	"nect)) || nconnect < 1.0\n    error('The number of ports must be a positve integer!');\nend\n\n\n\nif numel(tini)==1\n"
+	"    tini = ones(int32(nodes), 1)*tini;\nelse\n    if numel(tini)~=int32(nodes)\n        error('The initialisation tem"
+	"perature must be a scalar or a vector of size of number of nodes!');\n    end\nend\n\nCarnotCallbacks_storage_Tnodes("
+	"'InitCallback', gcb, nconnect);\n"
 	SelfModifiable		"on"
 	Array {
 	  Type			  "Simulink.MaskParameter"
