@@ -53,8 +53,13 @@
  *                  SimstateCompiliance and
  *                  MultipleExecInstances activated
  * 6.1.3    aw      implicit casts replaced by explicit casts   10sep2015
+ * 6.1.4    hf      ssSetInputPortDirectFeedThrough to 1        03jan2017
+ *                  for all inports
+ * 6.1.5    hf      ssSetInputPortDirectFeedThrough to 0        13jan2017
+ *                  for all inports, was not the reason for
+ *                  Matlab crash
  *
- * Copyright (c) 1998-2014 Solar-Institut Juelich, Germany
+ * Copyright (c) 1998-2017 Solar-Institut Juelich, Germany
  * additional copyright by the authors
  * 
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -192,7 +197,7 @@
 #define FLUID_PRESSURE  (*u1[5*nodes])
 #define FLUID_ID        (*u1[5*nodes+1])
 #define FLUID_MIX       (*u1[5*nodes+2])
-#define N_INPUTS            (5*(int_T)NODES+3)
+#define N_INPUTS        (5*(int_T)NODES+3)
 #define N_INPUT_PORTS   ((int_T)NCONNECT+1)
 
 
@@ -256,6 +261,7 @@
 static void mdlCheckParameters(SimStruct *S)
 {
       int_T sizet0 = (int_T)mxGetNumberOfElements(TINI);
+    // printf("start check param");   // *************
       /* */
       {
           if (DIA < 1.0e-3) {
@@ -326,6 +332,7 @@ static void mdlCheckParameters(SimStruct *S)
               return;
           }
       }
+    // printf("end check param");   // *************
 }
 #endif /* MDL_CHECK_PARAMETERS */
  
@@ -338,6 +345,8 @@ static void mdlCheckParameters(SimStruct *S)
 static void mdlInitializeSizes(SimStruct *S)
 {
     int_T n;
+
+    // printf("start initialize");   // *************
 
     ssSetNumSFcnParams(S, NPARAMS);
     #if defined(MATLAB_MEX_FILE)
@@ -362,20 +371,20 @@ static void mdlInitializeSizes(SimStruct *S)
 
     ssSetInputPortWidth(S, 0, 1);
     ssSetInputPortDirectFeedThrough(S, 0, 0);
+//     ssSetInputPortDirectFeedThrough(S, 0, 1);       // changed Hf, 03jan2017
 
     for (n = 1; n <= NCONNECT; n++)
     {
         ssSetInputPortWidth(S, n, N_INPUTS);
         ssSetInputPortDirectFeedThrough(S, n, 0);
+//         ssSetInputPortDirectFeedThrough(S, n, 1);   // changed Hf, 03jan2017
     }
 
     if (!ssSetNumOutputPorts(S, 2)) return;
     ssSetOutputPortWidth(S, 0, 2);
     ssSetOutputPortWidth(S, 1, (int_T)NODES);
-    //ssSetOutputPortWidth(S, 1, 3*(int_T)NODES);
     
     ssSetNumSampleTimes(S, 1);
-
 
     ssSetNumDWork(S, 15);
     ssSetDWorkWidth(S, 0, 1); /* heigth of one node */
@@ -448,6 +457,8 @@ static void mdlInitializeSizes(SimStruct *S)
     ssSetSimStateCompliance(S, USE_DEFAULT_SIM_STATE);
     ssSetSimStateVisibility(S, 1);
     ssSupportsMultipleExecInstances(S, true);
+
+    // printf("end initialize");   // *************
 } /* end mdlInitializeSizes */
 
 
@@ -489,7 +500,9 @@ static void mdlStart(SimStruct *S)
     
     int_T n;
     real_T Aloss, h1, a1, a2;
-    
+
+    // printf("start mdlStart");   // *************
+
     FLUID = 0.0;                /* no fluid in the storage at the beginning */
     
     /* height of one node */
@@ -534,6 +547,7 @@ static void mdlStart(SimStruct *S)
             /* bottom and top losses are not evaluated for lying cylinder */
         } /* end for */
     } /* end if ... else ... */
+    // printf("end mdlStart");   // *************
 } /* end mdl_start */
 #endif /*  MDL_START */
 
@@ -554,6 +568,7 @@ static void mdlInitializeConditions(SimStruct *S)
     int_T nodes = (int_T)NODES;                         /* numer of nodes as parameter */
     int_T n;
     
+    // printf("start mdlInitializeConditions");   // *************
     CHECK_FLUIDS = (uint8_T)1;               /* check incomming fluids once in mdlDerivatives */
     
     /* state-vector is initialized with TINI */
@@ -576,6 +591,7 @@ static void mdlInitializeConditions(SimStruct *S)
     {
         x0[n] = 0.0;                /* energy states are initialized with 0 */
     }
+    // printf("end mdlInitializeConditions");   // *************
 } /* end mdlInitializeConditions */
 #endif /* MDL_INITIALIZE_CONDITIONS */
 
@@ -594,6 +610,7 @@ static void mdlOutputs(SimStruct *S, int_T tid)
     real_T tmix, vol;
     int_T  n, i, inverse, ind;
     
+    // printf("start mdlOutputs");   // *************
     /*  port    index               use
      *  0       0                   internal change of energy
      *          1                   energy lost to ambient
@@ -661,6 +678,7 @@ static void mdlOutputs(SimStruct *S, int_T tid)
         } while (n > BOTTOM);
     } while (inverse); /* end do */
 
+    // printf("end mdlOutputs");   // *************
 } /* end mdlOutputs */
 
 
@@ -698,6 +716,8 @@ static void mdlDerivatives(SimStruct *S)
     int_T  standing = (int_T)STANDING;
     real_T uhx, loss;
     int_T  n, nc;
+
+    // printf("start mdlDerivatives");   // *************
 
     /* At the first function call: check the fluids entering the storage by a pipe connection */
     if (CHECK_FLUIDS)                           /* check incomming fluids once */
@@ -832,6 +852,7 @@ static void mdlDerivatives(SimStruct *S)
         DTDT(n) /= (RHO_NODE(n)*CP_NODE(n));            /* divide by density*capacity */
         //         printf("adjusted: QDOTIN(%i) %3.1f  DTDT(%i) %5.5f \n", n, QDOTIN(n), n, DTDT(n));
     }
+    // printf("end mdlDerivatives");   // *************
 } /* end mdlDerivatives */
 
 
