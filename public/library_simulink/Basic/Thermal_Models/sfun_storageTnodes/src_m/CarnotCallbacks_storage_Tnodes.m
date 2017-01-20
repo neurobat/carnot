@@ -1,4 +1,4 @@
-function varargout = Carnot_storage_Tnodes_Callbacks(varargin)
+function varargout = CarnotCallbacks_storage_Tnodes(varargin)
 % varargout = Carnot_storage_Tnodes_Callbacks(varargin)
 
 % This file is part of the CARNOT Blockset.
