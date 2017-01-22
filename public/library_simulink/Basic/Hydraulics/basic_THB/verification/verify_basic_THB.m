@@ -1,21 +1,18 @@
-function [v, s] = template_verify_Function(varargin)
-% Template for Simulink-Block or Matlab Function verification in the Carnot 
-% Toolbox. If your Block uses functions which may also be used as m-functions,
-% please use this template for both calls (Simulink-Block and m-function).
-% Change the name of the function to "verfiy_YourBlockName" otherwise it
-% will not be found be the verify_carnot.m skript in the version_manager
-% folder.
-% Syntax:   [v, s] = template_verify_Function(show)
+function [v, s] = verify_basic_THB(varargin)
+% verification of the basic_THB block in the Carnot 
+% Toolbox.
+% Syntax:   [v, s] = verify_basic_THB(show)
 % 
 % Inputs    show - optional flag for display 
 %               0 : show results only if verification fails
 %               1 : show results allways
 % Outputs:  v - true if verification passed, false otherwise
 %           s - text string with verification result
-%                                                                          
+% 
+% see also THB_format
 % Literature:   --
 
-% all comments above appear with 'help template_verify_Function' 
+% all comments above appear with 'help verify_basic_THB' 
 % ***********************************************************************
 % This file is part of the CARNOT Blockset.
 % Copyright (c) 1998-2015, Solar-Institute Juelich of the FH Aachen.
@@ -57,12 +54,7 @@ function [v, s] = template_verify_Function(varargin)
 % version: CarnotVersion.MajorVersionOfFunction.SubversionOfFunction
 %
 % Version   Author  Changes                                     Date
-% 6.1.0     hf      created                                     29may2014
-% 6.2.0     hf      return argument is [v, s]                   03oct2014
-% 6.2.1     hf      filename validate_ replaced by verify_      09jan2015
-% 6.2.2     hf      comments corrected                          18sep2015
-% 6.2.3     hf      added resampling of timeseries              27nov2015
-% 6.2.4     hf      close system without saving it              16may2016
+% 6.1.0     hf      created                                     22jan2017
 % * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
 % ---- check input arguments ----------------------------------------------
@@ -71,55 +63,35 @@ if nargin == 0
 elseif nargin == 1
     show = logical(varargin{1});
 else
-    error('template_verify_Function:%s',' too many input arguments')
+    error('verify_basic_THB:%s',' too many input arguments')
 end
 
 %% ---------- set your specific model or function parameters here
 % ----- set error tolerances ----------------------------------------------
-max_error = 0.2;        % max error between simulation and reference
-max_simu_error = 1e-7;  % max error between initial and current simu
+max_error = 1e-7;        % max error between simulation and reference
+max_simu_error = 1e-7;   % max error between initial and current simu
 
 % ---------- set model file or function name ------------------------------
-m_function = false; % set to 'true' if it is an m-function
-functionname = 'template_verify_SimulinkBlock_mdl';
-
-% m_function = true; % set to 'true' if it is an m-function
-% functionname = 'myM_Function_verificationDemo';
+functionname = 'verify_basic_THB_mdl';
 
 % ----------------- set the literature reference values -------------------
-u0 = 1:10;                  % reference input values
-% t0 = 0:10;                  % reference time vector
-y0 = 11:20;                 % reference results
+y0 = [1 20 0 1e5 1 0 0 0 0.02 0 0 0 0 0];   % reference results
 
 % ----------------- set reference values initial simulation ---------------
-y1 = 11.1:20.1;             % result from call at creation of function
+y1 = [1 20 0 100000 1 0 0 0 0.0200000000000000 0 0 0 0 0];        % result from call at creation of function
 
 %% ------------------------------------------------------------------------
 %  -------------- simulate the model or call the function -----------------
 %  ------------------------------------------------------------------------
-% y2 = zeros(length(t0),length(u0));
-if m_function
-    eval(['y2 = ' functionname '(u0);'])   %#ok<UNRCH> % current result
-else
-    y2 = zeros(1,length(u0));
-    load_system(functionname)
-    for n = 1:length(u0)
-        set_param([gcs, '/Constant'], 'Value', num2str(u0(n)));
-        simOut = sim(functionname, 'SrcWorkspace','current', ...
-            'SaveOutput','on','OutputSaveName','yout');
-        yy = simOut.get('yout'); % get the whole output vector (one value per simulation timestep)
-        % tt = simOut.get('tout'); % get the whole time vector from simu
-        % yy_ts = timeseries(yy,tt);
-        % yt = resample(yy_ts,t0);
-        y2(n) = yy(end);       % in this example, only the final value is interesting
-        % y2(:,n) = yt.data;     % in this example, the timedepandant output is interesting
-    end
-    close_system(functionname, 0)   % close system, but do not save it
-end
+load_system(functionname)
+simOut = sim(functionname, 'SrcWorkspace','current', ...
+    'SaveOutput','on','OutputSaveName','yout');
+yy = simOut.get('yout');        % get the whole output vector (one value per simulation timestep)
+y2 = yy(end,:);                 % only the last timestep is interesting
+close_system(functionname, 0)   % close system, but do not save it
 
 
 %% -------- calculate the errors -------------------------------------------
-
 %   r    - 'relative' error or 'absolute' error
 %   s    - 'sum' - e is the sum of the individual errors of ysim 
 %          'mean' - e is the mean of the individual errors of ysim
@@ -158,11 +130,7 @@ if (show)
     disp(s)
     disp(['Initial error = ', num2str(e1)])
     sx = 'x-label';                         % x-axis label
-    if m_function
-        st = 'm-Function verification';     %#ok<UNRCH>  % title
-    else
-        st = 'Simulink block verification';   % title
-    end
+    st = 'Simulink block verification';     % title
     sy1 = 'y-label up';                     % y-axis label in the upper plot
     sy2 = 'Difference';                     % y-axis label in the lower plot
     % upper legend
@@ -170,13 +138,11 @@ if (show)
     % lower legend
     sleg2 = {'ref. vs initial simu','ref. vs current simu','initial simu vs current'};
     %   x - vector with x values for the plot
-    x = reshape(u0,length(u0),1);
+    x = 1:14;
     %   y - matrix with y-values (reference values and result of the function call)
-    y = [reshape(y0,length(y0),1), reshape(y1,length(y1),1), reshape(y2,length(y2),1)];
-    % y = [y0, y1, y2]; 
+    y = [y0', y1', y2']; 
     %   ye - matrix with error values for each y-value
-    ye = [reshape(ye1,length(ye1),1), reshape(ye2,length(ye2),1), reshape(ye3,length(ye3),1)];
-    % ye = [ye1, ye2, ye3]; 
+    ye = [ye1', ye2', ye3']; 
     sz = strrep(s,'_',' ');
     display_verification_error(x, y, ye, st, sx, sy1, sleg1, sy2, sleg2, sz)
 end
